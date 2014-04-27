@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.stanford.compilers.cool/src-gen" editDirectory="/edu.stanford.compilers.cool.edit/src"
+    editorDirectory="/edu.stanford.compilers.cool.editor/src" modelPluginID="edu.stanford.compilers.cool"
+    forceOverwrite="true" modelName="Cool" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="edu.stanford.compilers.cool.edit"
+    editorPluginID="edu.stanford.compilers.cool.editor" runtimeVersion="2.10">
+  <genPackages prefix="Cool" basePackage="edu.stanford.compilers" disposableProviderFactory="true"
+      fileExtensions="cl" ecorePackage="Cool.ecore#/">
+    <genClasses ecoreClass="Cool.ecore#//Program">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//Program/classes"/>
+    </genClasses>
+    <genClasses ecoreClass="Cool.ecore#//Class_">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Cool.ecore#//Class_/parent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//Class_/features"/>
+    </genClasses>
+    <genClasses ecoreClass="Cool.ecore#//Feature_"/>
+    <genClasses ecoreClass="Cool.ecore#//Attr">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Cool.ecore#//Attr/type_decl"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//Attr/init"/>
+    </genClasses>
+    <genClasses ecoreClass="Cool.ecore#//Method">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//Method/formals"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Cool.ecore#//Method/return_type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//Method/expr"/>
+    </genClasses>
+    <genClasses ecoreClass="Cool.ecore#//Formal">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Cool.ecore#//Formal/type_decl"/>
+    </genClasses>
+    <genClasses ecoreClass="Cool.ecore#//Expression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//Expression/expr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cool.ecore#//Expression/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//Expression/ref"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//Expression/actual"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//Expression/pred"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//Expression/then_exp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//Expression/else_exp"/>
+    </genClasses>
+    <genClasses ecoreClass="Cool.ecore#//SelfTypeLiteral"/>
+    <genClasses ecoreClass="Cool.ecore#//IdentifierRefExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Cool.ecore#//IdentifierRefExpression/id"/>
+    </genClasses>
+    <genClasses ecoreClass="Cool.ecore#//Literal"/>
+    <genClasses ecoreClass="Cool.ecore#//NumberLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cool.ecore#//NumberLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Cool.ecore#//StringLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cool.ecore#//StringLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Cool.ecore#//BooleanLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cool.ecore#//BooleanLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Cool.ecore#//LoopExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//LoopExpression/body"/>
+    </genClasses>
+    <genClasses ecoreClass="Cool.ecore#//BlockExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//BlockExpression/body"/>
+    </genClasses>
+    <genClasses ecoreClass="Cool.ecore#//LetExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//LetExpression/declaration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//LetExpression/body"/>
+    </genClasses>
+    <genClasses ecoreClass="Cool.ecore#//LetDeclaration">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Cool.ecore#//LetDeclaration/type_decl"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//LetDeclaration/init"/>
+    </genClasses>
+    <genClasses ecoreClass="Cool.ecore#//CaseExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//CaseExpression/case"/>
+    </genClasses>
+    <genClasses ecoreClass="Cool.ecore#//Case">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cool.ecore#//Case/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Cool.ecore#//Case/type_decl"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//Case/expr"/>
+    </genClasses>
+    <genClasses ecoreClass="Cool.ecore#//NewExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Cool.ecore#//NewExpression/type_name"/>
+    </genClasses>
+    <genClasses ecoreClass="Cool.ecore#//Type"/>
+    <genClasses ecoreClass="Cool.ecore#//IdentifiableElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cool.ecore#//IdentifiableElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Cool.ecore#//DispatchExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Cool.ecore#//DispatchExpression/type_name"/>
+    </genClasses>
+    <genClasses ecoreClass="Cool.ecore#//CompareExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//CompareExpression/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cool.ecore#//CompareExpression/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//CompareExpression/right"/>
+    </genClasses>
+    <genClasses ecoreClass="Cool.ecore#//Plus">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//Plus/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//Plus/right"/>
+    </genClasses>
+    <genClasses ecoreClass="Cool.ecore#//Minus">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//Minus/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//Minus/right"/>
+    </genClasses>
+    <genClasses ecoreClass="Cool.ecore#//Multi">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//Multi/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//Multi/right"/>
+    </genClasses>
+    <genClasses ecoreClass="Cool.ecore#//Div">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//Div/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//Div/right"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

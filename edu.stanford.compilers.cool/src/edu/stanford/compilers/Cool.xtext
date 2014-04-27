@@ -1,0 +1,244 @@
+grammar edu.stanford.compilers.Cool hidden(WS, ML_COMMENT, SL_COMMENT)
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+generate cool "http://www.stanford.edu/compilers/Cool"
+
+Program:
+	classes+=Class_*
+;
+
+Class_:
+	'class' name=SYMBOL  ('inherits' parent=[Type])? '{'
+		features+=Feature_*
+		// filename : Symbol
+	'};'
+;
+
+Feature_:
+	Attr | Method
+;
+
+Attr:
+	name=SYMBOL ':' type_decl=[Type] ('<-' init=Expression)? ';'
+;
+
+Method:
+	name=SYMBOL '(' (formals+=Formal (',' formals+=Formal)*)? ')' ':' return_type=[Type] '{' expr=Expression '};'
+;
+
+Formal:
+	name=SYMBOL ':' type_decl=[Type]
+;
+
+//precedence
+//.					static dispatch
+//@					instance dispatch
+//~					Unary integer complement
+//isvoid			Unary isvoid
+//*  /				Multiplication
+//+  -				Addition
+//<=    <    =		Comparator
+//not				Negation
+//<-				Assignment
+
+Expression:
+	DispatchExpression
+;
+
+PrimaryExpression returns Expression:
+	ConditionalExpression |
+	LoopExpression |
+	BlockExpression |
+	LetExpression |
+	CaseExpression |
+	NewExpression |
+	IsvoidExpression |
+	AssignmentExpression |	
+	SelfTypeLiteral |
+	IdentifierRefExpression |
+	Literal |
+	ParenExpression |
+	NegationExpression |
+	IntegerComposite |
+	StaticDispatchExpression
+;
+
+SelfTypeLiteral:
+	{SelfTypeLiteral} 'self'
+;
+
+IdentifierRefExpression:
+	id=[IdentifiableElement]
+;
+
+Literal:
+	NumberLiteral | 
+	StringLiteral |
+	BooleanLiteral
+;
+
+NumberLiteral:
+	value=INT
+;
+
+StringLiteral:
+	value=STRING
+;
+
+BooleanLiteral:
+	value=BOOLEAN
+;
+
+ParenExpression returns Expression: 
+	'(' expr=Expression ')'
+;
+
+AssignmentExpression returns Expression:
+	name=SYMBOL '<-' expr=Expression
+;
+
+NegationExpression returns Expression:
+	'not' expr=Expression
+;
+
+IntegerComposite returns Expression:
+	'~' expr=Expression
+;
+
+DispatchExpression returns Expression:
+	CompareExpression
+	(=> ({DispatchExpression.expr = current} ('@' type_name=[Type])? '.' ref=IdentifierRefExpression) 
+	 '(' (actual+=Expression (',' actual+=Expression)*)? ')')?
+;
+
+StaticDispatchExpression returns Expression:
+ 	ref=IdentifierRefExpression '(' (actual+=Expression (',' actual+=Expression)*)? ')'
+;
+
+ConditionalExpression returns Expression:
+	'if' pred=Expression 'then' then_exp=Expression 'else' else_exp=Expression 'fi'
+;
+
+LoopExpression:
+	'while' pred=Expression 'loop' body=Expression 'pool'
+;
+
+BlockExpression: {BlockExpression}
+	'{' (body+=Expression ';')* '}'
+;
+
+LetExpression:
+	'let' declaration+=LetDeclaration+ 'in' body=Expression
+;
+
+LetDeclaration:
+	name=SYMBOL ':' type_decl=[Type] ('<-'  init=Expression)?
+;
+
+CaseExpression:
+	'case'  expr=Expression  'of'
+		case+=Case+
+	'esac'	
+;
+
+Case:
+	name=SYMBOL ':' type_decl=[Type] '=>' expr=Expression
+;
+
+NewExpression:
+	'new' type_name=[Type]
+;
+
+IsvoidExpression returns Expression:
+	'isvoid' expr=Expression
+;
+
+CompareExpression returns Expression:
+	AdditionExpression
+	(=> ({CompareExpression.left=current} op=CompareOperator) right=Expression)?
+;
+
+CompareOperator:
+	'<' | '<=' | '='
+;
+
+AdditionExpression returns Expression:
+	MultiplicationExpression 
+	(=> ({Plus.op=current} '+' | {Minus.op=current} '-') right=Expression)?
+;
+
+MultiplicationExpression returns Expression:
+	PrimaryExpression 
+	(=> ({Multi.op=current} '*' | {Div.op=current} '/') right=Expression)?
+;
+
+Type:
+	Class_
+;
+
+IdentifiableElement:
+	Class_ | Feature_ | Formal | LetDeclaration
+;
+	
+BOOLEAN:
+	'true' | 'false'
+;
+
+SYMBOL:
+	ID |
+//	'class' | 
+//	'else' | 
+//	'false' |
+//	'ﬁ' |
+//	'if' | 
+//	'in' |
+//	'inherits' | 
+//	'isvoid' |
+//	'let' |
+//	'loop' |
+//	'pool' |
+//	'then' |
+//	'while' |
+//	'case' |
+//	'esac' | 
+//	'new' | 
+//	'of' |
+//	'not' |
+//	'true' |
+	'self'
+;
+
+terminal ID: 
+	'^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*
+;
+
+terminal INT returns ecore::EInt: 
+	('0'..'9')+
+;
+
+terminal STRING: 
+	'"' ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"' |
+	"'" ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") )* "'"
+; 
+
+terminal ML_COMMENT: 
+	'(*' -> '*)'
+;
+
+terminal SL_COMMENT: 
+	'--' !('\n'|'\r')* ('\r'? '\n')?
+;
+
+terminal WS: 
+	(' '|'\t'|'\r'|'\n')+
+;
+
+terminal ANY_OTHER: 
+	.
+;
+
+//  -- Expressions
+//  constructor no_expr(): Expression;
+//  constructor object(name: Symbol): Expression;
+//end;
