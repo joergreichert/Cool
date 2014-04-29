@@ -47,15 +47,16 @@ public class CoolGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cFeaturesAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cFeaturesFeature_ParserRuleCall_4_0 = (RuleCall)cFeaturesAssignment_4.eContents().get(0);
-		private final Keyword cRightCurlyBracketSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Class_:
 		//	"class" name=SYMBOL ("inherits" parent=[Type])? "{" features+=Feature_* // filename : Symbol
-		//	"};";
+		//	"}" ";";
 		public ParserRule getRule() { return rule; }
 
 		//"class" name=SYMBOL ("inherits" parent=[Type])? "{" features+=Feature_* // filename : Symbol
-		//"};"
+		//"}" ";"
 		public Group getGroup() { return cGroup; }
 
 		//"class"
@@ -92,8 +93,11 @@ public class CoolGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getFeaturesFeature_ParserRuleCall_4_0() { return cFeaturesFeature_ParserRuleCall_4_0; }
 
 		//// filename : Symbol
-		//"};"
-		public Keyword getRightCurlyBracketSemicolonKeyword_5() { return cRightCurlyBracketSemicolonKeyword_5; }
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+
+		//";"
+		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
 	}
 
 	public class Feature_Elements extends AbstractParserRuleElementFinder {
@@ -193,13 +197,14 @@ public class CoolGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		private final Assignment cExprAssignment_7 = (Assignment)cGroup.eContents().get(7);
 		private final RuleCall cExprExpressionParserRuleCall_7_0 = (RuleCall)cExprAssignment_7.eContents().get(0);
-		private final Keyword cRightCurlyBracketSemicolonKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//Method:
-		//	name=SYMBOL "(" (formals+=Formal ("," formals+=Formal)*)? ")" ":" return_type=[Type] "{" expr=Expression "};";
+		//	name=SYMBOL "(" (formals+=Formal ("," formals+=Formal)*)? ")" ":" return_type=[Type] "{" expr=Expression "}" ";";
 		public ParserRule getRule() { return rule; }
 
-		//name=SYMBOL "(" (formals+=Formal ("," formals+=Formal)*)? ")" ":" return_type=[Type] "{" expr=Expression "};"
+		//name=SYMBOL "(" (formals+=Formal ("," formals+=Formal)*)? ")" ":" return_type=[Type] "{" expr=Expression "}" ";"
 		public Group getGroup() { return cGroup; }
 
 		//name=SYMBOL
@@ -256,8 +261,11 @@ public class CoolGrammarAccess extends AbstractGrammarElementFinder {
 		//Expression
 		public RuleCall getExprExpressionParserRuleCall_7_0() { return cExprExpressionParserRuleCall_7_0; }
 
-		//"};"
-		public Keyword getRightCurlyBracketSemicolonKeyword_8() { return cRightCurlyBracketSemicolonKeyword_8; }
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+
+		//";"
+		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
 	}
 
 	public class FormalElements extends AbstractParserRuleElementFinder {
@@ -782,16 +790,17 @@ public class CoolGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cThenKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cThen_expAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cThen_expExpressionParserRuleCall_3_0 = (RuleCall)cThen_expAssignment_3.eContents().get(0);
-		private final Keyword cElseKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cElse_expAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cElse_expExpressionParserRuleCall_5_0 = (RuleCall)cElse_expAssignment_5.eContents().get(0);
-		private final Keyword cFiKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cElseKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cElse_expAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cElse_expExpressionParserRuleCall_4_1_0 = (RuleCall)cElse_expAssignment_4_1.eContents().get(0);
+		private final Keyword cFiKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//ConditionalExpression returns Expression:
-		//	"if" pred=Expression "then" then_exp=Expression "else" else_exp=Expression "fi";
+		//	"if" pred=Expression "then" then_exp=Expression ("else" else_exp=Expression)? "fi";
 		public ParserRule getRule() { return rule; }
 
-		//"if" pred=Expression "then" then_exp=Expression "else" else_exp=Expression "fi"
+		//"if" pred=Expression "then" then_exp=Expression ("else" else_exp=Expression)? "fi"
 		public Group getGroup() { return cGroup; }
 
 		//"if"
@@ -812,17 +821,20 @@ public class CoolGrammarAccess extends AbstractGrammarElementFinder {
 		//Expression
 		public RuleCall getThen_expExpressionParserRuleCall_3_0() { return cThen_expExpressionParserRuleCall_3_0; }
 
-		//"else"
-		public Keyword getElseKeyword_4() { return cElseKeyword_4; }
+		//(=> "else" else_exp=Expression)?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//=> "else"
+		public Keyword getElseKeyword_4_0() { return cElseKeyword_4_0; }
 
 		//else_exp=Expression
-		public Assignment getElse_expAssignment_5() { return cElse_expAssignment_5; }
+		public Assignment getElse_expAssignment_4_1() { return cElse_expAssignment_4_1; }
 
 		//Expression
-		public RuleCall getElse_expExpressionParserRuleCall_5_0() { return cElse_expExpressionParserRuleCall_5_0; }
+		public RuleCall getElse_expExpressionParserRuleCall_4_1_0() { return cElse_expExpressionParserRuleCall_4_1_0; }
 
 		//"fi"
-		public Keyword getFiKeyword_6() { return cFiKeyword_6; }
+		public Keyword getFiKeyword_5() { return cFiKeyword_5; }
 	}
 
 	public class LoopExpressionElements extends AbstractParserRuleElementFinder {
@@ -911,34 +923,50 @@ public class CoolGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLetKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cDeclarationAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cDeclarationLetDeclarationParserRuleCall_1_0 = (RuleCall)cDeclarationAssignment_1.eContents().get(0);
-		private final Keyword cInKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cBodyAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cBodyExpressionParserRuleCall_3_0 = (RuleCall)cBodyAssignment_3.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cDeclarationAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cDeclarationLetDeclarationParserRuleCall_2_1_0 = (RuleCall)cDeclarationAssignment_2_1.eContents().get(0);
+		private final Keyword cInKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cBodyAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cBodyExpressionParserRuleCall_4_0 = (RuleCall)cBodyAssignment_4.eContents().get(0);
 		
 		//LetExpression:
-		//	"let" declaration+=LetDeclaration+ "in" body=Expression;
+		//	"let" declaration+=LetDeclaration ("," declaration+=LetDeclaration)* "in" body=Expression;
 		public ParserRule getRule() { return rule; }
 
-		//"let" declaration+=LetDeclaration+ "in" body=Expression
+		//"let" declaration+=LetDeclaration ("," declaration+=LetDeclaration)* "in" body=Expression
 		public Group getGroup() { return cGroup; }
 
 		//"let"
 		public Keyword getLetKeyword_0() { return cLetKeyword_0; }
 
-		//declaration+=LetDeclaration+
+		//declaration+=LetDeclaration
 		public Assignment getDeclarationAssignment_1() { return cDeclarationAssignment_1; }
 
 		//LetDeclaration
 		public RuleCall getDeclarationLetDeclarationParserRuleCall_1_0() { return cDeclarationLetDeclarationParserRuleCall_1_0; }
 
+		//("," declaration+=LetDeclaration)*
+		public Group getGroup_2() { return cGroup_2; }
+
+		//","
+		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
+
+		//declaration+=LetDeclaration
+		public Assignment getDeclarationAssignment_2_1() { return cDeclarationAssignment_2_1; }
+
+		//LetDeclaration
+		public RuleCall getDeclarationLetDeclarationParserRuleCall_2_1_0() { return cDeclarationLetDeclarationParserRuleCall_2_1_0; }
+
 		//"in"
-		public Keyword getInKeyword_2() { return cInKeyword_2; }
+		public Keyword getInKeyword_3() { return cInKeyword_3; }
 
 		//body=Expression
-		public Assignment getBodyAssignment_3() { return cBodyAssignment_3; }
+		public Assignment getBodyAssignment_4() { return cBodyAssignment_4; }
 
 		//Expression
-		public RuleCall getBodyExpressionParserRuleCall_3_0() { return cBodyExpressionParserRuleCall_3_0; }
+		public RuleCall getBodyExpressionParserRuleCall_4_0() { return cBodyExpressionParserRuleCall_4_0; }
 	}
 
 	public class LetDeclarationElements extends AbstractParserRuleElementFinder {
@@ -1000,15 +1028,17 @@ public class CoolGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cExprAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cExprExpressionParserRuleCall_1_0 = (RuleCall)cExprAssignment_1.eContents().get(0);
 		private final Keyword cOfKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cCaseAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cCaseCaseParserRuleCall_3_0 = (RuleCall)cCaseAssignment_3.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Assignment cCaseAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
+		private final RuleCall cCaseCaseParserRuleCall_3_0_0 = (RuleCall)cCaseAssignment_3_0.eContents().get(0);
+		private final Keyword cSemicolonKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
 		private final Keyword cEsacKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//CaseExpression:
-		//	"case" expr=Expression "of" case+=Case+ "esac";
+		//	"case" expr=Expression "of" (case+=Case ";")+ "esac";
 		public ParserRule getRule() { return rule; }
 
-		//"case" expr=Expression "of" case+=Case+ "esac"
+		//"case" expr=Expression "of" (case+=Case ";")+ "esac"
 		public Group getGroup() { return cGroup; }
 
 		//"case"
@@ -1023,11 +1053,17 @@ public class CoolGrammarAccess extends AbstractGrammarElementFinder {
 		//"of"
 		public Keyword getOfKeyword_2() { return cOfKeyword_2; }
 
-		//case+=Case+
-		public Assignment getCaseAssignment_3() { return cCaseAssignment_3; }
+		//(case+=Case ";")+
+		public Group getGroup_3() { return cGroup_3; }
+
+		//case+=Case
+		public Assignment getCaseAssignment_3_0() { return cCaseAssignment_3_0; }
 
 		//Case
-		public RuleCall getCaseCaseParserRuleCall_3_0() { return cCaseCaseParserRuleCall_3_0; }
+		public RuleCall getCaseCaseParserRuleCall_3_0_0() { return cCaseCaseParserRuleCall_3_0_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_3_1() { return cSemicolonKeyword_3_1; }
 
 		//"esac"
 		public Keyword getEsacKeyword_4() { return cEsacKeyword_4; }
@@ -1550,7 +1586,7 @@ public class CoolGrammarAccess extends AbstractGrammarElementFinder {
 
 	//Class_:
 	//	"class" name=SYMBOL ("inherits" parent=[Type])? "{" features+=Feature_* // filename : Symbol
-	//	"};";
+	//	"}" ";";
 	public Class_Elements getClass_Access() {
 		return (pClass_ != null) ? pClass_ : (pClass_ = new Class_Elements());
 	}
@@ -1580,7 +1616,7 @@ public class CoolGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Method:
-	//	name=SYMBOL "(" (formals+=Formal ("," formals+=Formal)*)? ")" ":" return_type=[Type] "{" expr=Expression "};";
+	//	name=SYMBOL "(" (formals+=Formal ("," formals+=Formal)*)? ")" ":" return_type=[Type] "{" expr=Expression "}" ";";
 	public MethodElements getMethodAccess() {
 		return (pMethod != null) ? pMethod : (pMethod = new MethodElements());
 	}
@@ -1753,7 +1789,7 @@ public class CoolGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ConditionalExpression returns Expression:
-	//	"if" pred=Expression "then" then_exp=Expression "else" else_exp=Expression "fi";
+	//	"if" pred=Expression "then" then_exp=Expression ("else" else_exp=Expression)? "fi";
 	public ConditionalExpressionElements getConditionalExpressionAccess() {
 		return (pConditionalExpression != null) ? pConditionalExpression : (pConditionalExpression = new ConditionalExpressionElements());
 	}
@@ -1783,7 +1819,7 @@ public class CoolGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//LetExpression:
-	//	"let" declaration+=LetDeclaration+ "in" body=Expression;
+	//	"let" declaration+=LetDeclaration ("," declaration+=LetDeclaration)* "in" body=Expression;
 	public LetExpressionElements getLetExpressionAccess() {
 		return (pLetExpression != null) ? pLetExpression : (pLetExpression = new LetExpressionElements());
 	}
@@ -1803,7 +1839,7 @@ public class CoolGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//CaseExpression:
-	//	"case" expr=Expression "of" case+=Case+ "esac";
+	//	"case" expr=Expression "of" (case+=Case ";")+ "esac";
 	public CaseExpressionElements getCaseExpressionAccess() {
 		return (pCaseExpression != null) ? pCaseExpression : (pCaseExpression = new CaseExpressionElements());
 	}

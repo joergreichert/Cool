@@ -4,8 +4,12 @@
 package edu.stanford.compilers;
 
 import org.eclipse.xtext.linking.ILinkingService;
+import org.eclipse.xtext.naming.IQualifiedNameProvider;
+import org.eclipse.xtext.scoping.IGlobalScopeProvider;
 
 import edu.stanford.compilers.linking.CoolLinkingService;
+import edu.stanford.compilers.naming.CoolQualifiedNameProvider;
+import edu.stanford.compilers.scoping.CoolGlobalScopeProvider;
 
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
@@ -14,5 +18,15 @@ public class CoolRuntimeModule extends edu.stanford.compilers.AbstractCoolRuntim
 
 	public Class<? extends ILinkingService> bindILinkingService() {
 		return CoolLinkingService.class;
+	}
+
+	@Override
+	public Class<? extends IGlobalScopeProvider> bindIGlobalScopeProvider() {
+		return CoolGlobalScopeProvider.class;
+	}
+	
+	@Override
+	public Class<? extends IQualifiedNameProvider> bindIQualifiedNameProvider() {
+		return CoolQualifiedNameProvider.class;
 	}
 }

@@ -417,7 +417,7 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	/**
 	 * Constraint:
 	 *     (
-	 *         (pred=Expression then_exp=Expression else_exp=Expression) | 
+	 *         (pred=Expression then_exp=Expression else_exp=Expression?) | 
 	 *         expr=Expression | 
 	 *         (name=SYMBOL expr=Expression) | 
 	 *         expr=Expression | 
@@ -518,7 +518,7 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (pred=Expression then_exp=Expression else_exp=Expression)
+	 *     (pred=Expression then_exp=Expression else_exp=Expression?)
 	 */
 	protected void sequence_ConditionalExpression(EObject context, Expression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -597,7 +597,7 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (declaration+=LetDeclaration+ body=Expression)
+	 *     (declaration+=LetDeclaration declaration+=LetDeclaration* body=Expression)
 	 */
 	protected void sequence_LetExpression(EObject context, LetExpression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -316,7 +316,7 @@
             point="org.eclipse.ui.ide.markerResolution">
         <markerResolutionGenerator
             class="edu.stanford.compilers.ui.CoolExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-            markerType="edu.stanford.compilers.ui.cool.check.fast">
+            markerType="edu.stanford.compilers.cool.ui.cool.check.fast">
             <attribute
                 name="FIXABLE_KEY"
                 value="true">
@@ -324,7 +324,7 @@
         </markerResolutionGenerator>
         <markerResolutionGenerator
             class="edu.stanford.compilers.ui.CoolExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-            markerType="edu.stanford.compilers.ui.cool.check.normal">
+            markerType="edu.stanford.compilers.cool.ui.cool.check.normal">
             <attribute
                 name="FIXABLE_KEY"
                 value="true">
@@ -332,7 +332,7 @@
         </markerResolutionGenerator>
         <markerResolutionGenerator
             class="edu.stanford.compilers.ui.CoolExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-            markerType="edu.stanford.compilers.ui.cool.check.expensive">
+            markerType="edu.stanford.compilers.cool.ui.cool.check.expensive">
             <attribute
                 name="FIXABLE_KEY"
                 value="true">

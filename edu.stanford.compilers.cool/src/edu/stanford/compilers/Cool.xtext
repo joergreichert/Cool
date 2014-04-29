@@ -12,7 +12,7 @@ Class_:
 	'class' name=SYMBOL  ('inherits' parent=[Type])? '{'
 		features+=Feature_*
 		// filename : Symbol
-	'};'
+	'}' ';'
 ;
 
 Feature_:
@@ -24,7 +24,7 @@ Attr:
 ;
 
 Method:
-	name=SYMBOL '(' (formals+=Formal (',' formals+=Formal)*)? ')' ':' return_type=[Type] '{' expr=Expression '};'
+	name=SYMBOL '(' (formals+=Formal (',' formals+=Formal)*)? ')' ':' return_type=[Type] '{' expr=Expression '}' ';'
 ;
 
 Formal:
@@ -117,7 +117,7 @@ StaticDispatchExpression returns Expression:
 ;
 
 ConditionalExpression returns Expression:
-	'if' pred=Expression 'then' then_exp=Expression 'else' else_exp=Expression 'fi'
+	'if' pred=Expression 'then' then_exp=Expression (=> 'else' else_exp=Expression)? 'fi'
 ;
 
 LoopExpression:
@@ -129,7 +129,7 @@ BlockExpression: {BlockExpression}
 ;
 
 LetExpression:
-	'let' declaration+=LetDeclaration+ 'in' body=Expression
+	'let' declaration+=LetDeclaration (',' declaration+=LetDeclaration)* 'in' body=Expression
 ;
 
 LetDeclaration:
@@ -138,7 +138,7 @@ LetDeclaration:
 
 CaseExpression:
 	'case'  expr=Expression  'of'
-		case+=Case+
+		(case+=Case ';')+
 	'esac'	
 ;
 

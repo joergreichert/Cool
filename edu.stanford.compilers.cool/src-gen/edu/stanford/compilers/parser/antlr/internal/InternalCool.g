@@ -177,9 +177,13 @@ ruleClass_ returns [EObject current=null]
 	    }
 
 )
-)*	otherlv_6='};' 
+)*	otherlv_6='}' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getClass_Access().getRightCurlyBracketSemicolonKeyword_5());
+    	newLeafNode(otherlv_6, grammarAccess.getClass_Access().getRightCurlyBracketKeyword_5());
+    }
+	otherlv_7=';' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getClass_Access().getSemicolonKeyword_6());
     }
 )
 ;
@@ -429,9 +433,13 @@ ruleMethod returns [EObject current=null]
 	    }
 
 )
-)	otherlv_10='};' 
+)	otherlv_10='}' 
     {
-    	newLeafNode(otherlv_10, grammarAccess.getMethodAccess().getRightCurlyBracketSemicolonKeyword_8());
+    	newLeafNode(otherlv_10, grammarAccess.getMethodAccess().getRightCurlyBracketKeyword_8());
+    }
+	otherlv_11=';' 
+    {
+    	newLeafNode(otherlv_11, grammarAccess.getMethodAccess().getSemicolonKeyword_9());
     }
 )
 ;
@@ -1402,14 +1410,15 @@ ruleConditionalExpression returns [EObject current=null]
 	    }
 
 )
-)	otherlv_4='else' 
+)(((	'else' 
+)=>	otherlv_4='else' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getConditionalExpressionAccess().getElseKeyword_4());
+    	newLeafNode(otherlv_4, grammarAccess.getConditionalExpressionAccess().getElseKeyword_4_0());
     }
-(
+)(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getConditionalExpressionAccess().getElse_expExpressionParserRuleCall_5_0()); 
+	        newCompositeNode(grammarAccess.getConditionalExpressionAccess().getElse_expExpressionParserRuleCall_4_1_0()); 
 	    }
 		lv_else_exp_5_0=ruleExpression		{
 	        if ($current==null) {
@@ -1424,9 +1433,9 @@ ruleConditionalExpression returns [EObject current=null]
 	    }
 
 )
-)	otherlv_6='fi' 
+))?	otherlv_6='fi' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getConditionalExpressionAccess().getFiKeyword_6());
+    	newLeafNode(otherlv_6, grammarAccess.getConditionalExpressionAccess().getFiKeyword_5());
     }
 )
 ;
@@ -1597,23 +1606,45 @@ ruleLetExpression returns [EObject current=null]
 	    }
 
 )
-)+	otherlv_2='in' 
+)(	otherlv_2=',' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getLetExpressionAccess().getInKeyword_2());
+    	newLeafNode(otherlv_2, grammarAccess.getLetExpressionAccess().getCommaKeyword_2_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getLetExpressionAccess().getBodyExpressionParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getLetExpressionAccess().getDeclarationLetDeclarationParserRuleCall_2_1_0()); 
 	    }
-		lv_body_3_0=ruleExpression		{
+		lv_declaration_3_0=ruleLetDeclaration		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getLetExpressionRule());
+	        }
+       		add(
+       			$current, 
+       			"declaration",
+        		lv_declaration_3_0, 
+        		"LetDeclaration");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))*	otherlv_4='in' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getLetExpressionAccess().getInKeyword_3());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getLetExpressionAccess().getBodyExpressionParserRuleCall_4_0()); 
+	    }
+		lv_body_5_0=ruleExpression		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getLetExpressionRule());
 	        }
        		set(
        			$current, 
        			"body",
-        		lv_body_3_0, 
+        		lv_body_5_0, 
         		"Expression");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -1744,10 +1775,10 @@ ruleCaseExpression returns [EObject current=null]
     {
     	newLeafNode(otherlv_2, grammarAccess.getCaseExpressionAccess().getOfKeyword_2());
     }
-(
+((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getCaseExpressionAccess().getCaseCaseParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getCaseExpressionAccess().getCaseCaseParserRuleCall_3_0_0()); 
 	    }
 		lv_case_3_0=ruleCase		{
 	        if ($current==null) {
@@ -1762,9 +1793,13 @@ ruleCaseExpression returns [EObject current=null]
 	    }
 
 )
-)+	otherlv_4='esac' 
+)	otherlv_4=';' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getCaseExpressionAccess().getEsacKeyword_4());
+    	newLeafNode(otherlv_4, grammarAccess.getCaseExpressionAccess().getSemicolonKeyword_3_1());
+    }
+)+	otherlv_5='esac' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getCaseExpressionAccess().getEsacKeyword_4());
     }
 )
 ;

@@ -12,19 +12,21 @@ import edu.stanford.compilers.cool.CoolPackage
 import edu.stanford.compilers.cool.DispatchExpression
 import edu.stanford.compilers.cool.Expression
 import edu.stanford.compilers.cool.Formal
+import edu.stanford.compilers.cool.IdentifiableElement
 import edu.stanford.compilers.cool.IdentifierRefExpression
 import edu.stanford.compilers.cool.LetDeclaration
 import edu.stanford.compilers.cool.LetExpression
 import edu.stanford.compilers.cool.Method
 import edu.stanford.compilers.cool.NewExpression
 import edu.stanford.compilers.cool.NumberLiteral
+import edu.stanford.compilers.cool.SelfTypeLiteral
 import edu.stanford.compilers.cool.StringLiteral
 import edu.stanford.compilers.cool.Type
 import java.util.List
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.EReference
 import org.eclipse.xtext.EcoreUtil2
-import org.eclipse.xtext.scoping.IGlobalScopeProvider
+import org.eclipse.xtext.nodemodel.util.NodeModelUtils
 import org.eclipse.xtext.scoping.IScope
 import org.eclipse.xtext.scoping.Scopes
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider
@@ -38,77 +40,133 @@ import org.eclipse.xtext.util.IResourceScopeCache
  *
  */
 class CoolScopeProvider extends AbstractDeclarativeScopeProvider {
-	@Inject 
-	private IGlobalScopeProvider globalScopeProvider
 	
 	@Inject
 	private IResourceScopeCache cache	
 
+	@Inject
+	private extension GlobalTypeAccessor globalTypeAccessor
+
 	override getScope(EObject context, EReference reference) {
 		if(reference == CoolPackage.Literals.IDENTIFIER_REF_EXPRESSION__ID) {
-			return collectVisibleIdentifiableElements(context, <EObject>newArrayList)
+			return collectVisibleIdentifiableElements(context, reference, <EObject>newArrayList, true)
 		}
 		return super.getScope(context, reference)
 	}
 
-	def private IScope collectVisibleIdentifiableElements(EObject context, List<EObject> eObjects) {
+	def private IScope collectVisibleIdentifiableElements(EObject context, EReference reference, List<EObject> eObjects, boolean respectType) {
 		var parent = context.eContainer
 		if(parent !== null) {
 			val dispatchExpression = EcoreUtil2.getContainerOfType(parent, DispatchExpression)
 			parent = if(dispatchExpression === null) {
 				parent
+			} else if(respectType) {
+				if(context.eContainingFeature === CoolPackage.Literals.EXPRESSION__REF) {
+					getType(dispatchExpression.expr, CoolPackage.Literals.IDENTIFIER_REF_EXPRESSION__ID)
+				} else {
+					parent
+				}
 			} else {
-				getType(dispatchExpression.expr)
+				parent
 			}
 			var letExpression = EcoreUtil2.getContainerOfType(parent, LetExpression)
 			if(letExpression != null) {
-				eObjects.addAll(letExpression)
-				collectVisibleIdentifiableElements(letExpression, eObjects)
+				if(!eObjects.contains(letExpression)) eObjects.add(letExpression)
+				collectVisibleIdentifiableElements(letExpression, reference, eObjects, respectType)
 			} else {
 				val method = EcoreUtil2.getContainerOfType(parent, Method)
 				if(method !== null) {
-					eObjects += method
-					collectVisibleIdentifiableElements(method, eObjects)
+					if(!eObjects.contains(method)) eObjects += method
+					collectVisibleIdentifiableElements(method, reference, eObjects, respectType)
 				} else {
 					val class_ = EcoreUtil2.getContainerOfType(parent, Class_)
 					if(class_ !== null) {
-						eObjects += class_
+						if(!eObjects.contains(class_)) eObjects += class_
 						var parentClass = class_.parent
-						while(parentClass !== null) {
-							eObjects += parentClass
-							parentClass = if(parentClass instanceof Class_) parentClass.parent else null
-						}
+						do {
+							parentClass = 
+								if (parentClass === null) {
+									val objectClazz = class_.getObject(reference)
+									if(objectClazz !== null && !eObjects.contains(objectClazz)) eObjects += objectClazz
+									null
+								} else if(parentClass instanceof Class_) { 
+									if(parentClass !== null && !eObjects.contains(parentClass)) eObjects += parentClass
+									parentClass.parent 
+								} else { 
+									null
+								}
+						} while(parentClass instanceof Class_)
 					}
 				}
 			}
 		}
-		return createScope(eObjects.reverse, IScope.NULLSCOPE)			
+		return createScope(context, reference, eObjects.reverse, IScope.NULLSCOPE)			
 	}
 	
-	def private IScope createScope(Iterable<EObject> eObjects, IScope parentScope) {
+	def private IScope createScope(EObject context, EReference reference, Iterable<EObject> eObjects, IScope parentScope) {
 		val element = eObjects.head
 		val scope = if(element instanceof LetExpression) {
 			Scopes.scopeFor(element.declaration, parentScope)
 		} else if(element instanceof Method) {
 			Scopes.scopeFor(element.formals, parentScope)
 		} else if(element instanceof Class_) {
-			Scopes.scopeFor(element.features, parentScope)
+			val features = <EObject>newArrayList
+			features.addAll(element.features)
+			if(element.parent === null) {
+				val object = BuiltInTypes.object
+				if(object instanceof Class_) {
+					val existing = element.features.map[name]
+					val featuresToAdd = object.features.filter[!existing.contains(it.name)]
+					features.addAll(featuresToAdd)
+				}
+			}
+			Scopes.scopeFor(features, parentScope)
 		} else {
 			null
 		}
-		if(scope !== null) createScope(eObjects.tail, scope) else parentScope
+		if(scope !== null) createScope(context, reference, eObjects.tail, scope) else parentScope
 	}
 	
-	def private Type getType(Expression expr) {
+	def private resolveElement(IdentifierRefExpression expr, EReference reference) {
+		val parent = expr
+		val eObjects = <EObject>newArrayList
+		val eObjects2 = <EObject>newArrayList
+		collectVisibleIdentifiableElements(parent, reference, eObjects, false)
+		for(element : eObjects) {
+			if(element instanceof LetExpression) {
+				eObjects2 += element.declaration
+			} else if(element instanceof Method) {
+				eObjects2.addAll(element.formals)
+			} else if(element instanceof Class_) {
+				val features = <EObject>newArrayList
+				features.addAll(element.features)
+				if(element.parent === null) {
+					val object = BuiltInTypes.object
+					if(object instanceof Class_) {
+						val existing = element.features.map[name]
+						val featuresToAdd = object.features.filter[!existing.contains(it.name)]
+						features.addAll(featuresToAdd)
+					}
+				}
+				eObjects2.addAll(element.features)
+			}
+		}
+		val node = NodeModelUtils.getNode(expr)
+		val text = node.text.trim
+		val id = eObjects2.filter(IdentifiableElement).findFirst[name == text]
+		id
+	}
+	
+	def private Type getType(Expression expr, EReference reference) {
 //	AssignmentExpression |	
 //	StaticDispatchExpression
 
-//		if(expr.expr !== null) {
-//			return expr.expr.getType
-//		}
-//		if(expr.ref !== null) {
-//			return expr.ref.getType
-//		}
+		if(expr.expr !== null) {
+			return expr.expr.getType(reference)
+		}
+		if(expr.ref !== null) {
+			return expr.ref.getType(reference)
+		}
 		//	NewExpression
 		if(expr instanceof NewExpression) {
 			if(!expr.type_name.eIsProxy) {
@@ -119,20 +177,20 @@ class CoolScopeProvider extends AbstractDeclarativeScopeProvider {
 		if(expr instanceof IdentifierRefExpression) {
 			val type = cache.get('getType' -> expr, expr.eResource,
 			[|
-//				val id = expr.id
-//				if(!id.eIsProxy) {
-//					if(id instanceof Type) {
-//						return id
-//					} else if(id instanceof Formal) {
-//						return id.type_decl
-//					} else if(id instanceof LetDeclaration) {
-//						return id.type_decl
-//					} else if(id instanceof Method) {
-//						return id.return_type
-//					} else if(id instanceof Attr) {
-//						return id.type_decl
-//					}
-//				}
+				val id = expr.resolveElement(reference)
+				if(id !== null && !id.eIsProxy) {
+					if(id instanceof Type) {
+						return id
+					} else if(id instanceof Formal) {
+						return id.type_decl
+					} else if(id instanceof LetDeclaration) {
+						return id.type_decl
+					} else if(id instanceof Method) {
+						return id.return_type
+					} else if(id instanceof Attr) {
+						return id.type_decl
+					}
+				}
 				null
 			])
 			if(type !== null) {
@@ -140,38 +198,22 @@ class CoolScopeProvider extends AbstractDeclarativeScopeProvider {
 			}
 		}
 		if(expr instanceof NumberLiteral) {
-			return expr.getInt
+			return expr.getInt(reference)
 		}
 		if(expr instanceof StringLiteral) {
-			return expr.getString
+			return expr.getString(reference)
 		}
 		if(expr instanceof BooleanLiteral) {
-			return expr.getBool
+			return expr.getBool(reference)
 		}
-//		if(expr instanceof SelfTypeLiteral) {
-//			val class_ = EcoreUtil2.getContainerOfType(expr, Class_)
-//			if(class_ !== null) {
-//				return class_
-//			}
-//		}
+		if(expr instanceof SelfTypeLiteral) {
+			val class_ = EcoreUtil2.getContainerOfType(expr, Class_)
+			if(class_ !== null) {
+				return class_
+			}
+		}
 		return CoolFactory.eINSTANCE.createType
 	}
+
 	
-	def private getBool(Expression expr) {
-		expr.getGlobalType("Bool")
-	}
-	
-	def private getString(Expression expr) {
-		expr.getGlobalType("String")
-	}	
-	
-	def private getInt(Expression expr) {
-		expr.getGlobalType("Int")
-	}	
-	
-	def private getGlobalType(Expression expr, String typeName) {
-		return globalScopeProvider.getScope(expr.eResource, null) [
-			return typeName.equals(it.getName())
-		].allElements.filter(Type).head 
-	}	
 }
