@@ -2,9 +2,9 @@
  */
 package edu.stanford.compilers.cool.impl;
 
+import edu.stanford.compilers.cool.AdditionExpression;
 import edu.stanford.compilers.cool.CoolPackage;
 import edu.stanford.compilers.cool.Expression;
-import edu.stanford.compilers.cool.Plus;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -16,29 +16,29 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Plus</b></em>'.
+ * An implementation of the model object '<em><b>Addition Expression</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link edu.stanford.compilers.cool.impl.PlusImpl#getOp <em>Op</em>}</li>
- *   <li>{@link edu.stanford.compilers.cool.impl.PlusImpl#getRight <em>Right</em>}</li>
+ *   <li>{@link edu.stanford.compilers.cool.impl.AdditionExpressionImpl#getLeft <em>Left</em>}</li>
+ *   <li>{@link edu.stanford.compilers.cool.impl.AdditionExpressionImpl#getRight <em>Right</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class PlusImpl extends ExpressionImpl implements Plus
+public class AdditionExpressionImpl extends ExpressionImpl implements AdditionExpression
 {
   /**
-   * The cached value of the '{@link #getOp() <em>Op</em>}' containment reference.
+   * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getOp()
+   * @see #getLeft()
    * @generated
    * @ordered
    */
-  protected Expression op;
+  protected Expression left;
 
   /**
    * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference.
@@ -55,7 +55,7 @@ public class PlusImpl extends ExpressionImpl implements Plus
    * <!-- end-user-doc -->
    * @generated
    */
-  protected PlusImpl()
+  protected AdditionExpressionImpl()
   {
     super();
   }
@@ -68,7 +68,7 @@ public class PlusImpl extends ExpressionImpl implements Plus
   @Override
   protected EClass eStaticClass()
   {
-    return CoolPackage.Literals.PLUS;
+    return CoolPackage.Literals.ADDITION_EXPRESSION;
   }
 
   /**
@@ -76,9 +76,9 @@ public class PlusImpl extends ExpressionImpl implements Plus
    * <!-- end-user-doc -->
    * @generated
    */
-  public Expression getOp()
+  public Expression getLeft()
   {
-    return op;
+    return left;
   }
 
   /**
@@ -86,13 +86,13 @@ public class PlusImpl extends ExpressionImpl implements Plus
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetOp(Expression newOp, NotificationChain msgs)
+  public NotificationChain basicSetLeft(Expression newLeft, NotificationChain msgs)
   {
-    Expression oldOp = op;
-    op = newOp;
+    Expression oldLeft = left;
+    left = newLeft;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CoolPackage.PLUS__OP, oldOp, newOp);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CoolPackage.ADDITION_EXPRESSION__LEFT, oldLeft, newLeft);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -103,20 +103,20 @@ public class PlusImpl extends ExpressionImpl implements Plus
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setOp(Expression newOp)
+  public void setLeft(Expression newLeft)
   {
-    if (newOp != op)
+    if (newLeft != left)
     {
       NotificationChain msgs = null;
-      if (op != null)
-        msgs = ((InternalEObject)op).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CoolPackage.PLUS__OP, null, msgs);
-      if (newOp != null)
-        msgs = ((InternalEObject)newOp).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CoolPackage.PLUS__OP, null, msgs);
-      msgs = basicSetOp(newOp, msgs);
+      if (left != null)
+        msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CoolPackage.ADDITION_EXPRESSION__LEFT, null, msgs);
+      if (newLeft != null)
+        msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CoolPackage.ADDITION_EXPRESSION__LEFT, null, msgs);
+      msgs = basicSetLeft(newLeft, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CoolPackage.PLUS__OP, newOp, newOp));
+      eNotify(new ENotificationImpl(this, Notification.SET, CoolPackage.ADDITION_EXPRESSION__LEFT, newLeft, newLeft));
   }
 
   /**
@@ -140,7 +140,7 @@ public class PlusImpl extends ExpressionImpl implements Plus
     right = newRight;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CoolPackage.PLUS__RIGHT, oldRight, newRight);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CoolPackage.ADDITION_EXPRESSION__RIGHT, oldRight, newRight);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -157,14 +157,14 @@ public class PlusImpl extends ExpressionImpl implements Plus
     {
       NotificationChain msgs = null;
       if (right != null)
-        msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CoolPackage.PLUS__RIGHT, null, msgs);
+        msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CoolPackage.ADDITION_EXPRESSION__RIGHT, null, msgs);
       if (newRight != null)
-        msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CoolPackage.PLUS__RIGHT, null, msgs);
+        msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CoolPackage.ADDITION_EXPRESSION__RIGHT, null, msgs);
       msgs = basicSetRight(newRight, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CoolPackage.PLUS__RIGHT, newRight, newRight));
+      eNotify(new ENotificationImpl(this, Notification.SET, CoolPackage.ADDITION_EXPRESSION__RIGHT, newRight, newRight));
   }
 
   /**
@@ -177,9 +177,9 @@ public class PlusImpl extends ExpressionImpl implements Plus
   {
     switch (featureID)
     {
-      case CoolPackage.PLUS__OP:
-        return basicSetOp(null, msgs);
-      case CoolPackage.PLUS__RIGHT:
+      case CoolPackage.ADDITION_EXPRESSION__LEFT:
+        return basicSetLeft(null, msgs);
+      case CoolPackage.ADDITION_EXPRESSION__RIGHT:
         return basicSetRight(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -195,9 +195,9 @@ public class PlusImpl extends ExpressionImpl implements Plus
   {
     switch (featureID)
     {
-      case CoolPackage.PLUS__OP:
-        return getOp();
-      case CoolPackage.PLUS__RIGHT:
+      case CoolPackage.ADDITION_EXPRESSION__LEFT:
+        return getLeft();
+      case CoolPackage.ADDITION_EXPRESSION__RIGHT:
         return getRight();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -213,10 +213,10 @@ public class PlusImpl extends ExpressionImpl implements Plus
   {
     switch (featureID)
     {
-      case CoolPackage.PLUS__OP:
-        setOp((Expression)newValue);
+      case CoolPackage.ADDITION_EXPRESSION__LEFT:
+        setLeft((Expression)newValue);
         return;
-      case CoolPackage.PLUS__RIGHT:
+      case CoolPackage.ADDITION_EXPRESSION__RIGHT:
         setRight((Expression)newValue);
         return;
     }
@@ -233,10 +233,10 @@ public class PlusImpl extends ExpressionImpl implements Plus
   {
     switch (featureID)
     {
-      case CoolPackage.PLUS__OP:
-        setOp((Expression)null);
+      case CoolPackage.ADDITION_EXPRESSION__LEFT:
+        setLeft((Expression)null);
         return;
-      case CoolPackage.PLUS__RIGHT:
+      case CoolPackage.ADDITION_EXPRESSION__RIGHT:
         setRight((Expression)null);
         return;
     }
@@ -253,12 +253,12 @@ public class PlusImpl extends ExpressionImpl implements Plus
   {
     switch (featureID)
     {
-      case CoolPackage.PLUS__OP:
-        return op != null;
-      case CoolPackage.PLUS__RIGHT:
+      case CoolPackage.ADDITION_EXPRESSION__LEFT:
+        return left != null;
+      case CoolPackage.ADDITION_EXPRESSION__RIGHT:
         return right != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //PlusImpl
+} //AdditionExpressionImpl

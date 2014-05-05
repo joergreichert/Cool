@@ -36,13 +36,16 @@ class BuiltInTypeEObjectDescriptionMap extends ForwardingMap<QualifiedName, IEOb
 	def createDescriptions() {
 		val result = <QualifiedName, IEObjectDescription>newHashMap()
 		val uri = URI.createURI("builtin.cl")
-		var resource = resourceSet.getResource(uri, true)
+		var resource = resourceSet.getResource(uri, false)
 		if(resource === null) {		
 			resource = resourceSet.createResource(URI.createURI("builtin.cl"))
-			resource.save(emptyMap)
+			for (type : BuiltInTypes.getBuiltInTypes) {
+				resource.contents.add(type)
+				val description = EObjectDescription.create((type as IdentifiableElement).getName(), type);
+				result.put(description.getName(), description);
+			}
 		}
-		for (type : BuiltInTypes.getBuiltInTypes) {
-			resource.contents.add(type)
+		for (type : resource.contents) {
 			val description = EObjectDescription.create((type as IdentifiableElement).getName(), type);
 			result.put(description.getName(), description);
 		}

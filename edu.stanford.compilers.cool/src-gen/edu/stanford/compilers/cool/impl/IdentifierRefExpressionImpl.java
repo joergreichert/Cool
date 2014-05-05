@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class IdentifierRefExpressionImpl extends ExpressionImpl implements IdentifierRefExpression
+public class IdentifierRefExpressionImpl extends PrimaryExpressionImpl implements IdentifierRefExpression
 {
   /**
    * The cached value of the '{@link #getId() <em>Id</em>}' reference.

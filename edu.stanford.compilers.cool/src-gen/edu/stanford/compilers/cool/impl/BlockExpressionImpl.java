@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class BlockExpressionImpl extends ExpressionImpl implements BlockExpression
+public class BlockExpressionImpl extends PrimaryExpressionImpl implements BlockExpression
 {
   /**
    * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference list.

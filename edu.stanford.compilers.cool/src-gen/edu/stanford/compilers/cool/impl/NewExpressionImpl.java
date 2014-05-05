@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class NewExpressionImpl extends ExpressionImpl implements NewExpression
+public class NewExpressionImpl extends PrimaryExpressionImpl implements NewExpression
 {
   /**
    * The cached value of the '{@link #getType_name() <em>Type name</em>}' reference.

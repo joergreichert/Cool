@@ -13,6 +13,6 @@ package edu.stanford.compilers.cool;
  * @model
  * @generated
  */
-public interface Literal extends Expression
+public interface Literal extends PrimaryExpression
 {
 } // Literal

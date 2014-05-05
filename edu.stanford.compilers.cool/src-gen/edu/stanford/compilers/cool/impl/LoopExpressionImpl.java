@@ -21,14 +21,25 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link edu.stanford.compilers.cool.impl.LoopExpressionImpl#getPred <em>Pred</em>}</li>
  *   <li>{@link edu.stanford.compilers.cool.impl.LoopExpressionImpl#getBody <em>Body</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class LoopExpressionImpl extends ExpressionImpl implements LoopExpression
+public class LoopExpressionImpl extends PrimaryExpressionImpl implements LoopExpression
 {
+  /**
+   * The cached value of the '{@link #getPred() <em>Pred</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPred()
+   * @generated
+   * @ordered
+   */
+  protected Expression pred;
+
   /**
    * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -58,6 +69,54 @@ public class LoopExpressionImpl extends ExpressionImpl implements LoopExpression
   protected EClass eStaticClass()
   {
     return CoolPackage.Literals.LOOP_EXPRESSION;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Expression getPred()
+  {
+    return pred;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetPred(Expression newPred, NotificationChain msgs)
+  {
+    Expression oldPred = pred;
+    pred = newPred;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CoolPackage.LOOP_EXPRESSION__PRED, oldPred, newPred);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setPred(Expression newPred)
+  {
+    if (newPred != pred)
+    {
+      NotificationChain msgs = null;
+      if (pred != null)
+        msgs = ((InternalEObject)pred).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CoolPackage.LOOP_EXPRESSION__PRED, null, msgs);
+      if (newPred != null)
+        msgs = ((InternalEObject)newPred).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CoolPackage.LOOP_EXPRESSION__PRED, null, msgs);
+      msgs = basicSetPred(newPred, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CoolPackage.LOOP_EXPRESSION__PRED, newPred, newPred));
   }
 
   /**
@@ -118,6 +177,8 @@ public class LoopExpressionImpl extends ExpressionImpl implements LoopExpression
   {
     switch (featureID)
     {
+      case CoolPackage.LOOP_EXPRESSION__PRED:
+        return basicSetPred(null, msgs);
       case CoolPackage.LOOP_EXPRESSION__BODY:
         return basicSetBody(null, msgs);
     }
@@ -134,6 +195,8 @@ public class LoopExpressionImpl extends ExpressionImpl implements LoopExpression
   {
     switch (featureID)
     {
+      case CoolPackage.LOOP_EXPRESSION__PRED:
+        return getPred();
       case CoolPackage.LOOP_EXPRESSION__BODY:
         return getBody();
     }
@@ -150,6 +213,9 @@ public class LoopExpressionImpl extends ExpressionImpl implements LoopExpression
   {
     switch (featureID)
     {
+      case CoolPackage.LOOP_EXPRESSION__PRED:
+        setPred((Expression)newValue);
+        return;
       case CoolPackage.LOOP_EXPRESSION__BODY:
         setBody((Expression)newValue);
         return;
@@ -167,6 +233,9 @@ public class LoopExpressionImpl extends ExpressionImpl implements LoopExpression
   {
     switch (featureID)
     {
+      case CoolPackage.LOOP_EXPRESSION__PRED:
+        setPred((Expression)null);
+        return;
       case CoolPackage.LOOP_EXPRESSION__BODY:
         setBody((Expression)null);
         return;
@@ -184,6 +253,8 @@ public class LoopExpressionImpl extends ExpressionImpl implements LoopExpression
   {
     switch (featureID)
     {
+      case CoolPackage.LOOP_EXPRESSION__PRED:
+        return pred != null;
       case CoolPackage.LOOP_EXPRESSION__BODY:
         return body != null;
     }

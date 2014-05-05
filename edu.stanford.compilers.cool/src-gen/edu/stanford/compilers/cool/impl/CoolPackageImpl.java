@@ -2,6 +2,8 @@
  */
 package edu.stanford.compilers.cool.impl;
 
+import edu.stanford.compilers.cool.AdditionExpression;
+import edu.stanford.compilers.cool.AssignmentExpression;
 import edu.stanford.compilers.cool.Attr;
 import edu.stanford.compilers.cool.BlockExpression;
 import edu.stanford.compilers.cool.BooleanLiteral;
@@ -9,6 +11,7 @@ import edu.stanford.compilers.cool.Case;
 import edu.stanford.compilers.cool.CaseExpression;
 import edu.stanford.compilers.cool.Class_;
 import edu.stanford.compilers.cool.CompareExpression;
+import edu.stanford.compilers.cool.ConditionalExpression;
 import edu.stanford.compilers.cool.CoolFactory;
 import edu.stanford.compilers.cool.CoolPackage;
 import edu.stanford.compilers.cool.DispatchExpression;
@@ -18,18 +21,23 @@ import edu.stanford.compilers.cool.Feature_;
 import edu.stanford.compilers.cool.Formal;
 import edu.stanford.compilers.cool.IdentifiableElement;
 import edu.stanford.compilers.cool.IdentifierRefExpression;
+import edu.stanford.compilers.cool.IntegerCompositeExpression;
+import edu.stanford.compilers.cool.IsvoidExpression;
 import edu.stanford.compilers.cool.LetDeclaration;
 import edu.stanford.compilers.cool.LetExpression;
 import edu.stanford.compilers.cool.Literal;
 import edu.stanford.compilers.cool.LoopExpression;
 import edu.stanford.compilers.cool.Method;
 import edu.stanford.compilers.cool.Minus;
-import edu.stanford.compilers.cool.Multi;
+import edu.stanford.compilers.cool.MultiplicationExpression;
+import edu.stanford.compilers.cool.NegationExpression;
 import edu.stanford.compilers.cool.NewExpression;
 import edu.stanford.compilers.cool.NumberLiteral;
-import edu.stanford.compilers.cool.Plus;
+import edu.stanford.compilers.cool.ParenExpression;
+import edu.stanford.compilers.cool.PrimaryExpression;
 import edu.stanford.compilers.cool.Program;
 import edu.stanford.compilers.cool.SelfTypeLiteral;
+import edu.stanford.compilers.cool.StaticDispatchExpression;
 import edu.stanford.compilers.cool.StringLiteral;
 import edu.stanford.compilers.cool.Type;
 
@@ -102,6 +110,13 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass primaryExpressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass selfTypeLiteralEClass = null;
 
   /**
@@ -144,6 +159,55 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass parenExpressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass assignmentExpressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass negationExpressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass integerCompositeExpressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass newExpressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass staticDispatchExpressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass conditionalExpressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass loopExpressionEClass = null;
 
   /**
@@ -152,6 +216,13 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * @generated
    */
   private EClass blockExpressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass isvoidExpressionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -186,13 +257,6 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass newExpressionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass typeEClass = null;
 
   /**
@@ -207,13 +271,6 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass dispatchExpressionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass compareExpressionEClass = null;
 
   /**
@@ -221,7 +278,7 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass plusEClass = null;
+  private EClass additionExpressionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -235,7 +292,7 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass multiEClass = null;
+  private EClass multiplicationExpressionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -243,6 +300,13 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * @generated
    */
   private EClass divEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dispatchExpressionEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -472,69 +536,9 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getExpression_Expr()
+  public EClass getPrimaryExpression()
   {
-    return (EReference)expressionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getExpression_Name()
-  {
-    return (EAttribute)expressionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExpression_Ref()
-  {
-    return (EReference)expressionEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExpression_Actual()
-  {
-    return (EReference)expressionEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExpression_Pred()
-  {
-    return (EReference)expressionEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExpression_Then_exp()
-  {
-    return (EReference)expressionEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExpression_Else_exp()
-  {
-    return (EReference)expressionEClass.getEStructuralFeatures().get(6);
+    return primaryExpressionEClass;
   }
 
   /**
@@ -642,6 +646,196 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getParenExpression()
+  {
+    return parenExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getParenExpression_Expr()
+  {
+    return (EReference)parenExpressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAssignmentExpression()
+  {
+    return assignmentExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAssignmentExpression_Name()
+  {
+    return (EAttribute)assignmentExpressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAssignmentExpression_Expr()
+  {
+    return (EReference)assignmentExpressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getNegationExpression()
+  {
+    return negationExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getNegationExpression_Expr()
+  {
+    return (EReference)negationExpressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getIntegerCompositeExpression()
+  {
+    return integerCompositeExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getIntegerCompositeExpression_Expr()
+  {
+    return (EReference)integerCompositeExpressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getNewExpression()
+  {
+    return newExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getNewExpression_Type_name()
+  {
+    return (EReference)newExpressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getStaticDispatchExpression()
+  {
+    return staticDispatchExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getStaticDispatchExpression_Ref()
+  {
+    return (EReference)staticDispatchExpressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getStaticDispatchExpression_Actual()
+  {
+    return (EReference)staticDispatchExpressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getStaticDispatchExpression_Chain()
+  {
+    return (EReference)staticDispatchExpressionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getConditionalExpression()
+  {
+    return conditionalExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getConditionalExpression_Pred()
+  {
+    return (EReference)conditionalExpressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getConditionalExpression_Then_exp()
+  {
+    return (EReference)conditionalExpressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getConditionalExpression_Else_exp()
+  {
+    return (EReference)conditionalExpressionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getLoopExpression()
   {
     return loopExpressionEClass;
@@ -652,9 +846,19 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getLoopExpression_Body()
+  public EReference getLoopExpression_Pred()
   {
     return (EReference)loopExpressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLoopExpression_Body()
+  {
+    return (EReference)loopExpressionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -675,6 +879,26 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
   public EReference getBlockExpression_Body()
   {
     return (EReference)blockExpressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getIsvoidExpression()
+  {
+    return isvoidExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getIsvoidExpression_Expr()
+  {
+    return (EReference)isvoidExpressionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -752,9 +976,19 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getCaseExpression_Case()
+  public EReference getCaseExpression_Expr()
   {
     return (EReference)caseExpressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getCaseExpression_Case()
+  {
+    return (EReference)caseExpressionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -772,19 +1006,9 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getCase_Name()
-  {
-    return (EAttribute)caseEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getCase_Type_decl()
   {
-    return (EReference)caseEClass.getEStructuralFeatures().get(1);
+    return (EReference)caseEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -794,27 +1018,7 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    */
   public EReference getCase_Expr()
   {
-    return (EReference)caseEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getNewExpression()
-  {
-    return newExpressionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getNewExpression_Type_name()
-  {
-    return (EReference)newExpressionEClass.getEStructuralFeatures().get(0);
+    return (EReference)caseEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -845,26 +1049,6 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
   public EAttribute getIdentifiableElement_Name()
   {
     return (EAttribute)identifiableElementEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getDispatchExpression()
-  {
-    return dispatchExpressionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getDispatchExpression_Type_name()
-  {
-    return (EReference)dispatchExpressionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -912,9 +1096,9 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getPlus()
+  public EClass getAdditionExpression()
   {
-    return plusEClass;
+    return additionExpressionEClass;
   }
 
   /**
@@ -922,9 +1106,9 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPlus_Op()
+  public EReference getAdditionExpression_Left()
   {
-    return (EReference)plusEClass.getEStructuralFeatures().get(0);
+    return (EReference)additionExpressionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -932,9 +1116,9 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPlus_Right()
+  public EReference getAdditionExpression_Right()
   {
-    return (EReference)plusEClass.getEStructuralFeatures().get(1);
+    return (EReference)additionExpressionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -972,9 +1156,9 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getMulti()
+  public EClass getMultiplicationExpression()
   {
-    return multiEClass;
+    return multiplicationExpressionEClass;
   }
 
   /**
@@ -982,9 +1166,9 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getMulti_Op()
+  public EReference getMultiplicationExpression_Left()
   {
-    return (EReference)multiEClass.getEStructuralFeatures().get(0);
+    return (EReference)multiplicationExpressionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -992,9 +1176,9 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getMulti_Right()
+  public EReference getMultiplicationExpression_Right()
   {
-    return (EReference)multiEClass.getEStructuralFeatures().get(1);
+    return (EReference)multiplicationExpressionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1025,6 +1209,66 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
   public EReference getDiv_Right()
   {
     return (EReference)divEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDispatchExpression()
+  {
+    return dispatchExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDispatchExpression_Left()
+  {
+    return (EReference)dispatchExpressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDispatchExpression_Type_name()
+  {
+    return (EReference)dispatchExpressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDispatchExpression_Ref()
+  {
+    return (EReference)dispatchExpressionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDispatchExpression_Actual()
+  {
+    return (EReference)dispatchExpressionEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDispatchExpression_Chain()
+  {
+    return (EReference)dispatchExpressionEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1079,13 +1323,8 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
     createEReference(formalEClass, FORMAL__TYPE_DECL);
 
     expressionEClass = createEClass(EXPRESSION);
-    createEReference(expressionEClass, EXPRESSION__EXPR);
-    createEAttribute(expressionEClass, EXPRESSION__NAME);
-    createEReference(expressionEClass, EXPRESSION__REF);
-    createEReference(expressionEClass, EXPRESSION__ACTUAL);
-    createEReference(expressionEClass, EXPRESSION__PRED);
-    createEReference(expressionEClass, EXPRESSION__THEN_EXP);
-    createEReference(expressionEClass, EXPRESSION__ELSE_EXP);
+
+    primaryExpressionEClass = createEClass(PRIMARY_EXPRESSION);
 
     selfTypeLiteralEClass = createEClass(SELF_TYPE_LITERAL);
 
@@ -1103,11 +1342,41 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
     booleanLiteralEClass = createEClass(BOOLEAN_LITERAL);
     createEAttribute(booleanLiteralEClass, BOOLEAN_LITERAL__VALUE);
 
+    parenExpressionEClass = createEClass(PAREN_EXPRESSION);
+    createEReference(parenExpressionEClass, PAREN_EXPRESSION__EXPR);
+
+    assignmentExpressionEClass = createEClass(ASSIGNMENT_EXPRESSION);
+    createEAttribute(assignmentExpressionEClass, ASSIGNMENT_EXPRESSION__NAME);
+    createEReference(assignmentExpressionEClass, ASSIGNMENT_EXPRESSION__EXPR);
+
+    negationExpressionEClass = createEClass(NEGATION_EXPRESSION);
+    createEReference(negationExpressionEClass, NEGATION_EXPRESSION__EXPR);
+
+    integerCompositeExpressionEClass = createEClass(INTEGER_COMPOSITE_EXPRESSION);
+    createEReference(integerCompositeExpressionEClass, INTEGER_COMPOSITE_EXPRESSION__EXPR);
+
+    newExpressionEClass = createEClass(NEW_EXPRESSION);
+    createEReference(newExpressionEClass, NEW_EXPRESSION__TYPE_NAME);
+
+    staticDispatchExpressionEClass = createEClass(STATIC_DISPATCH_EXPRESSION);
+    createEReference(staticDispatchExpressionEClass, STATIC_DISPATCH_EXPRESSION__REF);
+    createEReference(staticDispatchExpressionEClass, STATIC_DISPATCH_EXPRESSION__ACTUAL);
+    createEReference(staticDispatchExpressionEClass, STATIC_DISPATCH_EXPRESSION__CHAIN);
+
+    conditionalExpressionEClass = createEClass(CONDITIONAL_EXPRESSION);
+    createEReference(conditionalExpressionEClass, CONDITIONAL_EXPRESSION__PRED);
+    createEReference(conditionalExpressionEClass, CONDITIONAL_EXPRESSION__THEN_EXP);
+    createEReference(conditionalExpressionEClass, CONDITIONAL_EXPRESSION__ELSE_EXP);
+
     loopExpressionEClass = createEClass(LOOP_EXPRESSION);
+    createEReference(loopExpressionEClass, LOOP_EXPRESSION__PRED);
     createEReference(loopExpressionEClass, LOOP_EXPRESSION__BODY);
 
     blockExpressionEClass = createEClass(BLOCK_EXPRESSION);
     createEReference(blockExpressionEClass, BLOCK_EXPRESSION__BODY);
+
+    isvoidExpressionEClass = createEClass(ISVOID_EXPRESSION);
+    createEReference(isvoidExpressionEClass, ISVOID_EXPRESSION__EXPR);
 
     letExpressionEClass = createEClass(LET_EXPRESSION);
     createEReference(letExpressionEClass, LET_EXPRESSION__DECLARATION);
@@ -1118,44 +1387,45 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
     createEReference(letDeclarationEClass, LET_DECLARATION__INIT);
 
     caseExpressionEClass = createEClass(CASE_EXPRESSION);
+    createEReference(caseExpressionEClass, CASE_EXPRESSION__EXPR);
     createEReference(caseExpressionEClass, CASE_EXPRESSION__CASE);
 
     caseEClass = createEClass(CASE);
-    createEAttribute(caseEClass, CASE__NAME);
     createEReference(caseEClass, CASE__TYPE_DECL);
     createEReference(caseEClass, CASE__EXPR);
-
-    newExpressionEClass = createEClass(NEW_EXPRESSION);
-    createEReference(newExpressionEClass, NEW_EXPRESSION__TYPE_NAME);
 
     typeEClass = createEClass(TYPE);
 
     identifiableElementEClass = createEClass(IDENTIFIABLE_ELEMENT);
     createEAttribute(identifiableElementEClass, IDENTIFIABLE_ELEMENT__NAME);
 
-    dispatchExpressionEClass = createEClass(DISPATCH_EXPRESSION);
-    createEReference(dispatchExpressionEClass, DISPATCH_EXPRESSION__TYPE_NAME);
-
     compareExpressionEClass = createEClass(COMPARE_EXPRESSION);
     createEReference(compareExpressionEClass, COMPARE_EXPRESSION__LEFT);
     createEAttribute(compareExpressionEClass, COMPARE_EXPRESSION__OP);
     createEReference(compareExpressionEClass, COMPARE_EXPRESSION__RIGHT);
 
-    plusEClass = createEClass(PLUS);
-    createEReference(plusEClass, PLUS__OP);
-    createEReference(plusEClass, PLUS__RIGHT);
+    additionExpressionEClass = createEClass(ADDITION_EXPRESSION);
+    createEReference(additionExpressionEClass, ADDITION_EXPRESSION__LEFT);
+    createEReference(additionExpressionEClass, ADDITION_EXPRESSION__RIGHT);
 
     minusEClass = createEClass(MINUS);
     createEReference(minusEClass, MINUS__OP);
     createEReference(minusEClass, MINUS__RIGHT);
 
-    multiEClass = createEClass(MULTI);
-    createEReference(multiEClass, MULTI__OP);
-    createEReference(multiEClass, MULTI__RIGHT);
+    multiplicationExpressionEClass = createEClass(MULTIPLICATION_EXPRESSION);
+    createEReference(multiplicationExpressionEClass, MULTIPLICATION_EXPRESSION__LEFT);
+    createEReference(multiplicationExpressionEClass, MULTIPLICATION_EXPRESSION__RIGHT);
 
     divEClass = createEClass(DIV);
     createEReference(divEClass, DIV__OP);
     createEReference(divEClass, DIV__RIGHT);
+
+    dispatchExpressionEClass = createEClass(DISPATCH_EXPRESSION);
+    createEReference(dispatchExpressionEClass, DISPATCH_EXPRESSION__LEFT);
+    createEReference(dispatchExpressionEClass, DISPATCH_EXPRESSION__TYPE_NAME);
+    createEReference(dispatchExpressionEClass, DISPATCH_EXPRESSION__REF);
+    createEReference(dispatchExpressionEClass, DISPATCH_EXPRESSION__ACTUAL);
+    createEReference(dispatchExpressionEClass, DISPATCH_EXPRESSION__CHAIN);
   }
 
   /**
@@ -1193,24 +1463,33 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
     attrEClass.getESuperTypes().add(this.getFeature_());
     methodEClass.getESuperTypes().add(this.getFeature_());
     formalEClass.getESuperTypes().add(this.getIdentifiableElement());
-    selfTypeLiteralEClass.getESuperTypes().add(this.getExpression());
-    identifierRefExpressionEClass.getESuperTypes().add(this.getExpression());
-    literalEClass.getESuperTypes().add(this.getExpression());
+    primaryExpressionEClass.getESuperTypes().add(this.getExpression());
+    selfTypeLiteralEClass.getESuperTypes().add(this.getPrimaryExpression());
+    identifierRefExpressionEClass.getESuperTypes().add(this.getPrimaryExpression());
+    literalEClass.getESuperTypes().add(this.getPrimaryExpression());
     numberLiteralEClass.getESuperTypes().add(this.getLiteral());
     stringLiteralEClass.getESuperTypes().add(this.getLiteral());
     booleanLiteralEClass.getESuperTypes().add(this.getLiteral());
-    loopExpressionEClass.getESuperTypes().add(this.getExpression());
-    blockExpressionEClass.getESuperTypes().add(this.getExpression());
-    letExpressionEClass.getESuperTypes().add(this.getExpression());
+    parenExpressionEClass.getESuperTypes().add(this.getPrimaryExpression());
+    assignmentExpressionEClass.getESuperTypes().add(this.getPrimaryExpression());
+    negationExpressionEClass.getESuperTypes().add(this.getPrimaryExpression());
+    integerCompositeExpressionEClass.getESuperTypes().add(this.getPrimaryExpression());
+    newExpressionEClass.getESuperTypes().add(this.getPrimaryExpression());
+    staticDispatchExpressionEClass.getESuperTypes().add(this.getPrimaryExpression());
+    conditionalExpressionEClass.getESuperTypes().add(this.getPrimaryExpression());
+    loopExpressionEClass.getESuperTypes().add(this.getPrimaryExpression());
+    blockExpressionEClass.getESuperTypes().add(this.getPrimaryExpression());
+    isvoidExpressionEClass.getESuperTypes().add(this.getPrimaryExpression());
+    letExpressionEClass.getESuperTypes().add(this.getPrimaryExpression());
     letDeclarationEClass.getESuperTypes().add(this.getIdentifiableElement());
-    caseExpressionEClass.getESuperTypes().add(this.getExpression());
-    newExpressionEClass.getESuperTypes().add(this.getExpression());
-    dispatchExpressionEClass.getESuperTypes().add(this.getExpression());
+    caseExpressionEClass.getESuperTypes().add(this.getPrimaryExpression());
+    caseEClass.getESuperTypes().add(this.getIdentifiableElement());
     compareExpressionEClass.getESuperTypes().add(this.getExpression());
-    plusEClass.getESuperTypes().add(this.getExpression());
+    additionExpressionEClass.getESuperTypes().add(this.getExpression());
     minusEClass.getESuperTypes().add(this.getExpression());
-    multiEClass.getESuperTypes().add(this.getExpression());
+    multiplicationExpressionEClass.getESuperTypes().add(this.getExpression());
     divEClass.getESuperTypes().add(this.getExpression());
+    dispatchExpressionEClass.getESuperTypes().add(this.getExpression());
 
     // Initialize classes and features; add operations and parameters
     initEClass(programEClass, Program.class, "Program", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1235,13 +1514,8 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
     initEReference(getFormal_Type_decl(), this.getType(), null, "type_decl", null, 0, 1, Formal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getExpression_Expr(), this.getExpression(), null, "expr", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExpression_Name(), ecorePackage.getEString(), "name", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExpression_Ref(), this.getIdentifierRefExpression(), null, "ref", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExpression_Actual(), this.getExpression(), null, "actual", null, 0, -1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExpression_Pred(), this.getExpression(), null, "pred", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExpression_Then_exp(), this.getExpression(), null, "then_exp", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExpression_Else_exp(), this.getExpression(), null, "else_exp", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(primaryExpressionEClass, PrimaryExpression.class, "PrimaryExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(selfTypeLiteralEClass, SelfTypeLiteral.class, "SelfTypeLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1259,11 +1533,41 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
     initEClass(booleanLiteralEClass, BooleanLiteral.class, "BooleanLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getBooleanLiteral_Value(), ecorePackage.getEString(), "value", null, 0, 1, BooleanLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(parenExpressionEClass, ParenExpression.class, "ParenExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getParenExpression_Expr(), this.getExpression(), null, "expr", null, 0, 1, ParenExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(assignmentExpressionEClass, AssignmentExpression.class, "AssignmentExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAssignmentExpression_Name(), ecorePackage.getEString(), "name", null, 0, 1, AssignmentExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAssignmentExpression_Expr(), this.getExpression(), null, "expr", null, 0, 1, AssignmentExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(negationExpressionEClass, NegationExpression.class, "NegationExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getNegationExpression_Expr(), this.getExpression(), null, "expr", null, 0, 1, NegationExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(integerCompositeExpressionEClass, IntegerCompositeExpression.class, "IntegerCompositeExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getIntegerCompositeExpression_Expr(), this.getExpression(), null, "expr", null, 0, 1, IntegerCompositeExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(newExpressionEClass, NewExpression.class, "NewExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getNewExpression_Type_name(), this.getType(), null, "type_name", null, 0, 1, NewExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(staticDispatchExpressionEClass, StaticDispatchExpression.class, "StaticDispatchExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getStaticDispatchExpression_Ref(), this.getIdentifierRefExpression(), null, "ref", null, 0, 1, StaticDispatchExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getStaticDispatchExpression_Actual(), this.getExpression(), null, "actual", null, 0, -1, StaticDispatchExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getStaticDispatchExpression_Chain(), this.getStaticDispatchExpression(), null, "chain", null, 0, 1, StaticDispatchExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(conditionalExpressionEClass, ConditionalExpression.class, "ConditionalExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getConditionalExpression_Pred(), this.getExpression(), null, "pred", null, 0, 1, ConditionalExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getConditionalExpression_Then_exp(), this.getExpression(), null, "then_exp", null, 0, 1, ConditionalExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getConditionalExpression_Else_exp(), this.getExpression(), null, "else_exp", null, 0, 1, ConditionalExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(loopExpressionEClass, LoopExpression.class, "LoopExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getLoopExpression_Pred(), this.getExpression(), null, "pred", null, 0, 1, LoopExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getLoopExpression_Body(), this.getExpression(), null, "body", null, 0, 1, LoopExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(blockExpressionEClass, BlockExpression.class, "BlockExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getBlockExpression_Body(), this.getExpression(), null, "body", null, 0, -1, BlockExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(isvoidExpressionEClass, IsvoidExpression.class, "IsvoidExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getIsvoidExpression_Expr(), this.getExpression(), null, "expr", null, 0, 1, IsvoidExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(letExpressionEClass, LetExpression.class, "LetExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getLetExpression_Declaration(), this.getLetDeclaration(), null, "declaration", null, 0, -1, LetExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1274,44 +1578,45 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
     initEReference(getLetDeclaration_Init(), this.getExpression(), null, "init", null, 0, 1, LetDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(caseExpressionEClass, CaseExpression.class, "CaseExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getCaseExpression_Expr(), this.getExpression(), null, "expr", null, 0, 1, CaseExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getCaseExpression_Case(), this.getCase(), null, "case", null, 0, -1, CaseExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(caseEClass, Case.class, "Case", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getCase_Name(), ecorePackage.getEString(), "name", null, 0, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getCase_Type_decl(), this.getType(), null, "type_decl", null, 0, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getCase_Expr(), this.getExpression(), null, "expr", null, 0, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(newExpressionEClass, NewExpression.class, "NewExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getNewExpression_Type_name(), this.getType(), null, "type_name", null, 0, 1, NewExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(typeEClass, Type.class, "Type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(identifiableElementEClass, IdentifiableElement.class, "IdentifiableElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getIdentifiableElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, IdentifiableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(dispatchExpressionEClass, DispatchExpression.class, "DispatchExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getDispatchExpression_Type_name(), this.getType(), null, "type_name", null, 0, 1, DispatchExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(compareExpressionEClass, CompareExpression.class, "CompareExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getCompareExpression_Left(), this.getExpression(), null, "left", null, 0, 1, CompareExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getCompareExpression_Op(), ecorePackage.getEString(), "op", null, 0, 1, CompareExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getCompareExpression_Right(), this.getExpression(), null, "right", null, 0, 1, CompareExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(plusEClass, Plus.class, "Plus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getPlus_Op(), this.getExpression(), null, "op", null, 0, 1, Plus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPlus_Right(), this.getExpression(), null, "right", null, 0, 1, Plus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(additionExpressionEClass, AdditionExpression.class, "AdditionExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getAdditionExpression_Left(), this.getExpression(), null, "left", null, 0, 1, AdditionExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAdditionExpression_Right(), this.getExpression(), null, "right", null, 0, 1, AdditionExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(minusEClass, Minus.class, "Minus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getMinus_Op(), this.getExpression(), null, "op", null, 0, 1, Minus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMinus_Right(), this.getExpression(), null, "right", null, 0, 1, Minus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(multiEClass, Multi.class, "Multi", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getMulti_Op(), this.getExpression(), null, "op", null, 0, 1, Multi.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMulti_Right(), this.getExpression(), null, "right", null, 0, 1, Multi.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(multiplicationExpressionEClass, MultiplicationExpression.class, "MultiplicationExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getMultiplicationExpression_Left(), this.getExpression(), null, "left", null, 0, 1, MultiplicationExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMultiplicationExpression_Right(), this.getExpression(), null, "right", null, 0, 1, MultiplicationExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(divEClass, Div.class, "Div", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getDiv_Op(), this.getExpression(), null, "op", null, 0, 1, Div.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDiv_Right(), this.getExpression(), null, "right", null, 0, 1, Div.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(dispatchExpressionEClass, DispatchExpression.class, "DispatchExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDispatchExpression_Left(), this.getPrimaryExpression(), null, "left", null, 0, 1, DispatchExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDispatchExpression_Type_name(), this.getType(), null, "type_name", null, 0, 1, DispatchExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDispatchExpression_Ref(), this.getIdentifierRefExpression(), null, "ref", null, 0, 1, DispatchExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDispatchExpression_Actual(), this.getExpression(), null, "actual", null, 0, -1, DispatchExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDispatchExpression_Chain(), this.getStaticDispatchExpression(), null, "chain", null, 0, 1, DispatchExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

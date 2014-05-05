@@ -92,7 +92,7 @@ public interface CoolPackage extends EPackage
    * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getType()
    * @generated
    */
-  int TYPE = 20;
+  int TYPE = 28;
 
   /**
    * The number of structural features of the '<em>Type</em>' class.
@@ -157,7 +157,7 @@ public interface CoolPackage extends EPackage
    * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getIdentifiableElement()
    * @generated
    */
-  int IDENTIFIABLE_ELEMENT = 21;
+  int IDENTIFIABLE_ELEMENT = 29;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -354,76 +354,32 @@ public interface CoolPackage extends EPackage
   int EXPRESSION = 6;
 
   /**
-   * The feature id for the '<em><b>Expr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESSION__EXPR = 0;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESSION__NAME = 1;
-
-  /**
-   * The feature id for the '<em><b>Ref</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESSION__REF = 2;
-
-  /**
-   * The feature id for the '<em><b>Actual</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESSION__ACTUAL = 3;
-
-  /**
-   * The feature id for the '<em><b>Pred</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESSION__PRED = 4;
-
-  /**
-   * The feature id for the '<em><b>Then exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESSION__THEN_EXP = 5;
-
-  /**
-   * The feature id for the '<em><b>Else exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESSION__ELSE_EXP = 6;
-
-  /**
    * The number of structural features of the '<em>Expression</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXPRESSION_FEATURE_COUNT = 7;
+  int EXPRESSION_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link edu.stanford.compilers.cool.impl.PrimaryExpressionImpl <em>Primary Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see edu.stanford.compilers.cool.impl.PrimaryExpressionImpl
+   * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getPrimaryExpression()
+   * @generated
+   */
+  int PRIMARY_EXPRESSION = 7;
+
+  /**
+   * The number of structural features of the '<em>Primary Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRIMARY_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link edu.stanford.compilers.cool.impl.SelfTypeLiteralImpl <em>Self Type Literal</em>}' class.
@@ -433,70 +389,7 @@ public interface CoolPackage extends EPackage
    * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getSelfTypeLiteral()
    * @generated
    */
-  int SELF_TYPE_LITERAL = 7;
-
-  /**
-   * The feature id for the '<em><b>Expr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SELF_TYPE_LITERAL__EXPR = EXPRESSION__EXPR;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SELF_TYPE_LITERAL__NAME = EXPRESSION__NAME;
-
-  /**
-   * The feature id for the '<em><b>Ref</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SELF_TYPE_LITERAL__REF = EXPRESSION__REF;
-
-  /**
-   * The feature id for the '<em><b>Actual</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SELF_TYPE_LITERAL__ACTUAL = EXPRESSION__ACTUAL;
-
-  /**
-   * The feature id for the '<em><b>Pred</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SELF_TYPE_LITERAL__PRED = EXPRESSION__PRED;
-
-  /**
-   * The feature id for the '<em><b>Then exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SELF_TYPE_LITERAL__THEN_EXP = EXPRESSION__THEN_EXP;
-
-  /**
-   * The feature id for the '<em><b>Else exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SELF_TYPE_LITERAL__ELSE_EXP = EXPRESSION__ELSE_EXP;
+  int SELF_TYPE_LITERAL = 8;
 
   /**
    * The number of structural features of the '<em>Self Type Literal</em>' class.
@@ -505,7 +398,7 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SELF_TYPE_LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+  int SELF_TYPE_LITERAL_FEATURE_COUNT = PRIMARY_EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link edu.stanford.compilers.cool.impl.IdentifierRefExpressionImpl <em>Identifier Ref Expression</em>}' class.
@@ -515,70 +408,7 @@ public interface CoolPackage extends EPackage
    * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getIdentifierRefExpression()
    * @generated
    */
-  int IDENTIFIER_REF_EXPRESSION = 8;
-
-  /**
-   * The feature id for the '<em><b>Expr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IDENTIFIER_REF_EXPRESSION__EXPR = EXPRESSION__EXPR;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IDENTIFIER_REF_EXPRESSION__NAME = EXPRESSION__NAME;
-
-  /**
-   * The feature id for the '<em><b>Ref</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IDENTIFIER_REF_EXPRESSION__REF = EXPRESSION__REF;
-
-  /**
-   * The feature id for the '<em><b>Actual</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IDENTIFIER_REF_EXPRESSION__ACTUAL = EXPRESSION__ACTUAL;
-
-  /**
-   * The feature id for the '<em><b>Pred</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IDENTIFIER_REF_EXPRESSION__PRED = EXPRESSION__PRED;
-
-  /**
-   * The feature id for the '<em><b>Then exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IDENTIFIER_REF_EXPRESSION__THEN_EXP = EXPRESSION__THEN_EXP;
-
-  /**
-   * The feature id for the '<em><b>Else exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IDENTIFIER_REF_EXPRESSION__ELSE_EXP = EXPRESSION__ELSE_EXP;
+  int IDENTIFIER_REF_EXPRESSION = 9;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' reference.
@@ -587,7 +417,7 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IDENTIFIER_REF_EXPRESSION__ID = EXPRESSION_FEATURE_COUNT + 0;
+  int IDENTIFIER_REF_EXPRESSION__ID = PRIMARY_EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Identifier Ref Expression</em>' class.
@@ -596,7 +426,7 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IDENTIFIER_REF_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+  int IDENTIFIER_REF_EXPRESSION_FEATURE_COUNT = PRIMARY_EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link edu.stanford.compilers.cool.impl.LiteralImpl <em>Literal</em>}' class.
@@ -606,70 +436,7 @@ public interface CoolPackage extends EPackage
    * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getLiteral()
    * @generated
    */
-  int LITERAL = 9;
-
-  /**
-   * The feature id for the '<em><b>Expr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL__EXPR = EXPRESSION__EXPR;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL__NAME = EXPRESSION__NAME;
-
-  /**
-   * The feature id for the '<em><b>Ref</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL__REF = EXPRESSION__REF;
-
-  /**
-   * The feature id for the '<em><b>Actual</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL__ACTUAL = EXPRESSION__ACTUAL;
-
-  /**
-   * The feature id for the '<em><b>Pred</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL__PRED = EXPRESSION__PRED;
-
-  /**
-   * The feature id for the '<em><b>Then exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL__THEN_EXP = EXPRESSION__THEN_EXP;
-
-  /**
-   * The feature id for the '<em><b>Else exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL__ELSE_EXP = EXPRESSION__ELSE_EXP;
+  int LITERAL = 10;
 
   /**
    * The number of structural features of the '<em>Literal</em>' class.
@@ -678,7 +445,7 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+  int LITERAL_FEATURE_COUNT = PRIMARY_EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link edu.stanford.compilers.cool.impl.NumberLiteralImpl <em>Number Literal</em>}' class.
@@ -688,70 +455,7 @@ public interface CoolPackage extends EPackage
    * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getNumberLiteral()
    * @generated
    */
-  int NUMBER_LITERAL = 10;
-
-  /**
-   * The feature id for the '<em><b>Expr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NUMBER_LITERAL__EXPR = LITERAL__EXPR;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NUMBER_LITERAL__NAME = LITERAL__NAME;
-
-  /**
-   * The feature id for the '<em><b>Ref</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NUMBER_LITERAL__REF = LITERAL__REF;
-
-  /**
-   * The feature id for the '<em><b>Actual</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NUMBER_LITERAL__ACTUAL = LITERAL__ACTUAL;
-
-  /**
-   * The feature id for the '<em><b>Pred</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NUMBER_LITERAL__PRED = LITERAL__PRED;
-
-  /**
-   * The feature id for the '<em><b>Then exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NUMBER_LITERAL__THEN_EXP = LITERAL__THEN_EXP;
-
-  /**
-   * The feature id for the '<em><b>Else exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NUMBER_LITERAL__ELSE_EXP = LITERAL__ELSE_EXP;
+  int NUMBER_LITERAL = 11;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -779,70 +483,7 @@ public interface CoolPackage extends EPackage
    * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getStringLiteral()
    * @generated
    */
-  int STRING_LITERAL = 11;
-
-  /**
-   * The feature id for the '<em><b>Expr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STRING_LITERAL__EXPR = LITERAL__EXPR;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STRING_LITERAL__NAME = LITERAL__NAME;
-
-  /**
-   * The feature id for the '<em><b>Ref</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STRING_LITERAL__REF = LITERAL__REF;
-
-  /**
-   * The feature id for the '<em><b>Actual</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STRING_LITERAL__ACTUAL = LITERAL__ACTUAL;
-
-  /**
-   * The feature id for the '<em><b>Pred</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STRING_LITERAL__PRED = LITERAL__PRED;
-
-  /**
-   * The feature id for the '<em><b>Then exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STRING_LITERAL__THEN_EXP = LITERAL__THEN_EXP;
-
-  /**
-   * The feature id for the '<em><b>Else exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STRING_LITERAL__ELSE_EXP = LITERAL__ELSE_EXP;
+  int STRING_LITERAL = 12;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -870,70 +511,7 @@ public interface CoolPackage extends EPackage
    * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getBooleanLiteral()
    * @generated
    */
-  int BOOLEAN_LITERAL = 12;
-
-  /**
-   * The feature id for the '<em><b>Expr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BOOLEAN_LITERAL__EXPR = LITERAL__EXPR;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BOOLEAN_LITERAL__NAME = LITERAL__NAME;
-
-  /**
-   * The feature id for the '<em><b>Ref</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BOOLEAN_LITERAL__REF = LITERAL__REF;
-
-  /**
-   * The feature id for the '<em><b>Actual</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BOOLEAN_LITERAL__ACTUAL = LITERAL__ACTUAL;
-
-  /**
-   * The feature id for the '<em><b>Pred</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BOOLEAN_LITERAL__PRED = LITERAL__PRED;
-
-  /**
-   * The feature id for the '<em><b>Then exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BOOLEAN_LITERAL__THEN_EXP = LITERAL__THEN_EXP;
-
-  /**
-   * The feature id for the '<em><b>Else exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BOOLEAN_LITERAL__ELSE_EXP = LITERAL__ELSE_EXP;
+  int BOOLEAN_LITERAL = 13;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -954,14 +532,14 @@ public interface CoolPackage extends EPackage
   int BOOLEAN_LITERAL_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link edu.stanford.compilers.cool.impl.LoopExpressionImpl <em>Loop Expression</em>}' class.
+   * The meta object id for the '{@link edu.stanford.compilers.cool.impl.ParenExpressionImpl <em>Paren Expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see edu.stanford.compilers.cool.impl.LoopExpressionImpl
-   * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getLoopExpression()
+   * @see edu.stanford.compilers.cool.impl.ParenExpressionImpl
+   * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getParenExpression()
    * @generated
    */
-  int LOOP_EXPRESSION = 13;
+  int PAREN_EXPRESSION = 14;
 
   /**
    * The feature id for the '<em><b>Expr</b></em>' containment reference.
@@ -970,7 +548,26 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LOOP_EXPRESSION__EXPR = EXPRESSION__EXPR;
+  int PAREN_EXPRESSION__EXPR = PRIMARY_EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Paren Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PAREN_EXPRESSION_FEATURE_COUNT = PRIMARY_EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link edu.stanford.compilers.cool.impl.AssignmentExpressionImpl <em>Assignment Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see edu.stanford.compilers.cool.impl.AssignmentExpressionImpl
+   * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getAssignmentExpression()
+   * @generated
+   */
+  int ASSIGNMENT_EXPRESSION = 15;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -979,7 +576,119 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LOOP_EXPRESSION__NAME = EXPRESSION__NAME;
+  int ASSIGNMENT_EXPRESSION__NAME = PRIMARY_EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Expr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSIGNMENT_EXPRESSION__EXPR = PRIMARY_EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Assignment Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSIGNMENT_EXPRESSION_FEATURE_COUNT = PRIMARY_EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link edu.stanford.compilers.cool.impl.NegationExpressionImpl <em>Negation Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see edu.stanford.compilers.cool.impl.NegationExpressionImpl
+   * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getNegationExpression()
+   * @generated
+   */
+  int NEGATION_EXPRESSION = 16;
+
+  /**
+   * The feature id for the '<em><b>Expr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NEGATION_EXPRESSION__EXPR = PRIMARY_EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Negation Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NEGATION_EXPRESSION_FEATURE_COUNT = PRIMARY_EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link edu.stanford.compilers.cool.impl.IntegerCompositeExpressionImpl <em>Integer Composite Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see edu.stanford.compilers.cool.impl.IntegerCompositeExpressionImpl
+   * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getIntegerCompositeExpression()
+   * @generated
+   */
+  int INTEGER_COMPOSITE_EXPRESSION = 17;
+
+  /**
+   * The feature id for the '<em><b>Expr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTEGER_COMPOSITE_EXPRESSION__EXPR = PRIMARY_EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Integer Composite Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTEGER_COMPOSITE_EXPRESSION_FEATURE_COUNT = PRIMARY_EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link edu.stanford.compilers.cool.impl.NewExpressionImpl <em>New Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see edu.stanford.compilers.cool.impl.NewExpressionImpl
+   * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getNewExpression()
+   * @generated
+   */
+  int NEW_EXPRESSION = 18;
+
+  /**
+   * The feature id for the '<em><b>Type name</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NEW_EXPRESSION__TYPE_NAME = PRIMARY_EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>New Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NEW_EXPRESSION_FEATURE_COUNT = PRIMARY_EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link edu.stanford.compilers.cool.impl.StaticDispatchExpressionImpl <em>Static Dispatch Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see edu.stanford.compilers.cool.impl.StaticDispatchExpressionImpl
+   * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getStaticDispatchExpression()
+   * @generated
+   */
+  int STATIC_DISPATCH_EXPRESSION = 19;
 
   /**
    * The feature id for the '<em><b>Ref</b></em>' containment reference.
@@ -988,7 +697,7 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LOOP_EXPRESSION__REF = EXPRESSION__REF;
+  int STATIC_DISPATCH_EXPRESSION__REF = PRIMARY_EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Actual</b></em>' containment reference list.
@@ -997,7 +706,35 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LOOP_EXPRESSION__ACTUAL = EXPRESSION__ACTUAL;
+  int STATIC_DISPATCH_EXPRESSION__ACTUAL = PRIMARY_EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Chain</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STATIC_DISPATCH_EXPRESSION__CHAIN = PRIMARY_EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>Static Dispatch Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STATIC_DISPATCH_EXPRESSION_FEATURE_COUNT = PRIMARY_EXPRESSION_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link edu.stanford.compilers.cool.impl.ConditionalExpressionImpl <em>Conditional Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see edu.stanford.compilers.cool.impl.ConditionalExpressionImpl
+   * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getConditionalExpression()
+   * @generated
+   */
+  int CONDITIONAL_EXPRESSION = 20;
 
   /**
    * The feature id for the '<em><b>Pred</b></em>' containment reference.
@@ -1006,7 +743,7 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LOOP_EXPRESSION__PRED = EXPRESSION__PRED;
+  int CONDITIONAL_EXPRESSION__PRED = PRIMARY_EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Then exp</b></em>' containment reference.
@@ -1015,7 +752,7 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LOOP_EXPRESSION__THEN_EXP = EXPRESSION__THEN_EXP;
+  int CONDITIONAL_EXPRESSION__THEN_EXP = PRIMARY_EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Else exp</b></em>' containment reference.
@@ -1024,7 +761,35 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LOOP_EXPRESSION__ELSE_EXP = EXPRESSION__ELSE_EXP;
+  int CONDITIONAL_EXPRESSION__ELSE_EXP = PRIMARY_EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>Conditional Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITIONAL_EXPRESSION_FEATURE_COUNT = PRIMARY_EXPRESSION_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link edu.stanford.compilers.cool.impl.LoopExpressionImpl <em>Loop Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see edu.stanford.compilers.cool.impl.LoopExpressionImpl
+   * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getLoopExpression()
+   * @generated
+   */
+  int LOOP_EXPRESSION = 21;
+
+  /**
+   * The feature id for the '<em><b>Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOOP_EXPRESSION__PRED = PRIMARY_EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Body</b></em>' containment reference.
@@ -1033,7 +798,7 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LOOP_EXPRESSION__BODY = EXPRESSION_FEATURE_COUNT + 0;
+  int LOOP_EXPRESSION__BODY = PRIMARY_EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Loop Expression</em>' class.
@@ -1042,7 +807,7 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LOOP_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+  int LOOP_EXPRESSION_FEATURE_COUNT = PRIMARY_EXPRESSION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link edu.stanford.compilers.cool.impl.BlockExpressionImpl <em>Block Expression</em>}' class.
@@ -1052,70 +817,7 @@ public interface CoolPackage extends EPackage
    * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getBlockExpression()
    * @generated
    */
-  int BLOCK_EXPRESSION = 14;
-
-  /**
-   * The feature id for the '<em><b>Expr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BLOCK_EXPRESSION__EXPR = EXPRESSION__EXPR;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BLOCK_EXPRESSION__NAME = EXPRESSION__NAME;
-
-  /**
-   * The feature id for the '<em><b>Ref</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BLOCK_EXPRESSION__REF = EXPRESSION__REF;
-
-  /**
-   * The feature id for the '<em><b>Actual</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BLOCK_EXPRESSION__ACTUAL = EXPRESSION__ACTUAL;
-
-  /**
-   * The feature id for the '<em><b>Pred</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BLOCK_EXPRESSION__PRED = EXPRESSION__PRED;
-
-  /**
-   * The feature id for the '<em><b>Then exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BLOCK_EXPRESSION__THEN_EXP = EXPRESSION__THEN_EXP;
-
-  /**
-   * The feature id for the '<em><b>Else exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BLOCK_EXPRESSION__ELSE_EXP = EXPRESSION__ELSE_EXP;
+  int BLOCK_EXPRESSION = 22;
 
   /**
    * The feature id for the '<em><b>Body</b></em>' containment reference list.
@@ -1124,7 +826,7 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BLOCK_EXPRESSION__BODY = EXPRESSION_FEATURE_COUNT + 0;
+  int BLOCK_EXPRESSION__BODY = PRIMARY_EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Block Expression</em>' class.
@@ -1133,7 +835,35 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BLOCK_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+  int BLOCK_EXPRESSION_FEATURE_COUNT = PRIMARY_EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link edu.stanford.compilers.cool.impl.IsvoidExpressionImpl <em>Isvoid Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see edu.stanford.compilers.cool.impl.IsvoidExpressionImpl
+   * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getIsvoidExpression()
+   * @generated
+   */
+  int ISVOID_EXPRESSION = 23;
+
+  /**
+   * The feature id for the '<em><b>Expr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ISVOID_EXPRESSION__EXPR = PRIMARY_EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Isvoid Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ISVOID_EXPRESSION_FEATURE_COUNT = PRIMARY_EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link edu.stanford.compilers.cool.impl.LetExpressionImpl <em>Let Expression</em>}' class.
@@ -1143,70 +873,7 @@ public interface CoolPackage extends EPackage
    * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getLetExpression()
    * @generated
    */
-  int LET_EXPRESSION = 15;
-
-  /**
-   * The feature id for the '<em><b>Expr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LET_EXPRESSION__EXPR = EXPRESSION__EXPR;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LET_EXPRESSION__NAME = EXPRESSION__NAME;
-
-  /**
-   * The feature id for the '<em><b>Ref</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LET_EXPRESSION__REF = EXPRESSION__REF;
-
-  /**
-   * The feature id for the '<em><b>Actual</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LET_EXPRESSION__ACTUAL = EXPRESSION__ACTUAL;
-
-  /**
-   * The feature id for the '<em><b>Pred</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LET_EXPRESSION__PRED = EXPRESSION__PRED;
-
-  /**
-   * The feature id for the '<em><b>Then exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LET_EXPRESSION__THEN_EXP = EXPRESSION__THEN_EXP;
-
-  /**
-   * The feature id for the '<em><b>Else exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LET_EXPRESSION__ELSE_EXP = EXPRESSION__ELSE_EXP;
+  int LET_EXPRESSION = 24;
 
   /**
    * The feature id for the '<em><b>Declaration</b></em>' containment reference list.
@@ -1215,7 +882,7 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LET_EXPRESSION__DECLARATION = EXPRESSION_FEATURE_COUNT + 0;
+  int LET_EXPRESSION__DECLARATION = PRIMARY_EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Body</b></em>' containment reference.
@@ -1224,7 +891,7 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LET_EXPRESSION__BODY = EXPRESSION_FEATURE_COUNT + 1;
+  int LET_EXPRESSION__BODY = PRIMARY_EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Let Expression</em>' class.
@@ -1233,7 +900,7 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LET_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+  int LET_EXPRESSION_FEATURE_COUNT = PRIMARY_EXPRESSION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link edu.stanford.compilers.cool.impl.LetDeclarationImpl <em>Let Declaration</em>}' class.
@@ -1243,7 +910,7 @@ public interface CoolPackage extends EPackage
    * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getLetDeclaration()
    * @generated
    */
-  int LET_DECLARATION = 16;
+  int LET_DECLARATION = 25;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1289,7 +956,7 @@ public interface CoolPackage extends EPackage
    * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getCaseExpression()
    * @generated
    */
-  int CASE_EXPRESSION = 17;
+  int CASE_EXPRESSION = 26;
 
   /**
    * The feature id for the '<em><b>Expr</b></em>' containment reference.
@@ -1298,61 +965,7 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CASE_EXPRESSION__EXPR = EXPRESSION__EXPR;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CASE_EXPRESSION__NAME = EXPRESSION__NAME;
-
-  /**
-   * The feature id for the '<em><b>Ref</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CASE_EXPRESSION__REF = EXPRESSION__REF;
-
-  /**
-   * The feature id for the '<em><b>Actual</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CASE_EXPRESSION__ACTUAL = EXPRESSION__ACTUAL;
-
-  /**
-   * The feature id for the '<em><b>Pred</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CASE_EXPRESSION__PRED = EXPRESSION__PRED;
-
-  /**
-   * The feature id for the '<em><b>Then exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CASE_EXPRESSION__THEN_EXP = EXPRESSION__THEN_EXP;
-
-  /**
-   * The feature id for the '<em><b>Else exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CASE_EXPRESSION__ELSE_EXP = EXPRESSION__ELSE_EXP;
+  int CASE_EXPRESSION__EXPR = PRIMARY_EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Case</b></em>' containment reference list.
@@ -1361,7 +974,7 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CASE_EXPRESSION__CASE = EXPRESSION_FEATURE_COUNT + 0;
+  int CASE_EXPRESSION__CASE = PRIMARY_EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Case Expression</em>' class.
@@ -1370,7 +983,7 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CASE_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+  int CASE_EXPRESSION_FEATURE_COUNT = PRIMARY_EXPRESSION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link edu.stanford.compilers.cool.impl.CaseImpl <em>Case</em>}' class.
@@ -1380,7 +993,7 @@ public interface CoolPackage extends EPackage
    * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getCase()
    * @generated
    */
-  int CASE = 18;
+  int CASE = 27;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1389,7 +1002,7 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CASE__NAME = 0;
+  int CASE__NAME = IDENTIFIABLE_ELEMENT__NAME;
 
   /**
    * The feature id for the '<em><b>Type decl</b></em>' reference.
@@ -1398,7 +1011,7 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CASE__TYPE_DECL = 1;
+  int CASE__TYPE_DECL = IDENTIFIABLE_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Expr</b></em>' containment reference.
@@ -1407,7 +1020,7 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CASE__EXPR = 2;
+  int CASE__EXPR = IDENTIFIABLE_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Case</em>' class.
@@ -1416,189 +1029,7 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CASE_FEATURE_COUNT = 3;
-
-  /**
-   * The meta object id for the '{@link edu.stanford.compilers.cool.impl.NewExpressionImpl <em>New Expression</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see edu.stanford.compilers.cool.impl.NewExpressionImpl
-   * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getNewExpression()
-   * @generated
-   */
-  int NEW_EXPRESSION = 19;
-
-  /**
-   * The feature id for the '<em><b>Expr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NEW_EXPRESSION__EXPR = EXPRESSION__EXPR;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NEW_EXPRESSION__NAME = EXPRESSION__NAME;
-
-  /**
-   * The feature id for the '<em><b>Ref</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NEW_EXPRESSION__REF = EXPRESSION__REF;
-
-  /**
-   * The feature id for the '<em><b>Actual</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NEW_EXPRESSION__ACTUAL = EXPRESSION__ACTUAL;
-
-  /**
-   * The feature id for the '<em><b>Pred</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NEW_EXPRESSION__PRED = EXPRESSION__PRED;
-
-  /**
-   * The feature id for the '<em><b>Then exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NEW_EXPRESSION__THEN_EXP = EXPRESSION__THEN_EXP;
-
-  /**
-   * The feature id for the '<em><b>Else exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NEW_EXPRESSION__ELSE_EXP = EXPRESSION__ELSE_EXP;
-
-  /**
-   * The feature id for the '<em><b>Type name</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NEW_EXPRESSION__TYPE_NAME = EXPRESSION_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>New Expression</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NEW_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link edu.stanford.compilers.cool.impl.DispatchExpressionImpl <em>Dispatch Expression</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see edu.stanford.compilers.cool.impl.DispatchExpressionImpl
-   * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getDispatchExpression()
-   * @generated
-   */
-  int DISPATCH_EXPRESSION = 22;
-
-  /**
-   * The feature id for the '<em><b>Expr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DISPATCH_EXPRESSION__EXPR = EXPRESSION__EXPR;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DISPATCH_EXPRESSION__NAME = EXPRESSION__NAME;
-
-  /**
-   * The feature id for the '<em><b>Ref</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DISPATCH_EXPRESSION__REF = EXPRESSION__REF;
-
-  /**
-   * The feature id for the '<em><b>Actual</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DISPATCH_EXPRESSION__ACTUAL = EXPRESSION__ACTUAL;
-
-  /**
-   * The feature id for the '<em><b>Pred</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DISPATCH_EXPRESSION__PRED = EXPRESSION__PRED;
-
-  /**
-   * The feature id for the '<em><b>Then exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DISPATCH_EXPRESSION__THEN_EXP = EXPRESSION__THEN_EXP;
-
-  /**
-   * The feature id for the '<em><b>Else exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DISPATCH_EXPRESSION__ELSE_EXP = EXPRESSION__ELSE_EXP;
-
-  /**
-   * The feature id for the '<em><b>Type name</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DISPATCH_EXPRESSION__TYPE_NAME = EXPRESSION_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Dispatch Expression</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DISPATCH_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+  int CASE_FEATURE_COUNT = IDENTIFIABLE_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link edu.stanford.compilers.cool.impl.CompareExpressionImpl <em>Compare Expression</em>}' class.
@@ -1608,70 +1039,7 @@ public interface CoolPackage extends EPackage
    * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getCompareExpression()
    * @generated
    */
-  int COMPARE_EXPRESSION = 23;
-
-  /**
-   * The feature id for the '<em><b>Expr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMPARE_EXPRESSION__EXPR = EXPRESSION__EXPR;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMPARE_EXPRESSION__NAME = EXPRESSION__NAME;
-
-  /**
-   * The feature id for the '<em><b>Ref</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMPARE_EXPRESSION__REF = EXPRESSION__REF;
-
-  /**
-   * The feature id for the '<em><b>Actual</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMPARE_EXPRESSION__ACTUAL = EXPRESSION__ACTUAL;
-
-  /**
-   * The feature id for the '<em><b>Pred</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMPARE_EXPRESSION__PRED = EXPRESSION__PRED;
-
-  /**
-   * The feature id for the '<em><b>Then exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMPARE_EXPRESSION__THEN_EXP = EXPRESSION__THEN_EXP;
-
-  /**
-   * The feature id for the '<em><b>Else exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMPARE_EXPRESSION__ELSE_EXP = EXPRESSION__ELSE_EXP;
+  int COMPARE_EXPRESSION = 30;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1710,86 +1078,23 @@ public interface CoolPackage extends EPackage
   int COMPARE_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
 
   /**
-   * The meta object id for the '{@link edu.stanford.compilers.cool.impl.PlusImpl <em>Plus</em>}' class.
+   * The meta object id for the '{@link edu.stanford.compilers.cool.impl.AdditionExpressionImpl <em>Addition Expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see edu.stanford.compilers.cool.impl.PlusImpl
-   * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getPlus()
+   * @see edu.stanford.compilers.cool.impl.AdditionExpressionImpl
+   * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getAdditionExpression()
    * @generated
    */
-  int PLUS = 24;
+  int ADDITION_EXPRESSION = 31;
 
   /**
-   * The feature id for the '<em><b>Expr</b></em>' containment reference.
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PLUS__EXPR = EXPRESSION__EXPR;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PLUS__NAME = EXPRESSION__NAME;
-
-  /**
-   * The feature id for the '<em><b>Ref</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PLUS__REF = EXPRESSION__REF;
-
-  /**
-   * The feature id for the '<em><b>Actual</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PLUS__ACTUAL = EXPRESSION__ACTUAL;
-
-  /**
-   * The feature id for the '<em><b>Pred</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PLUS__PRED = EXPRESSION__PRED;
-
-  /**
-   * The feature id for the '<em><b>Then exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PLUS__THEN_EXP = EXPRESSION__THEN_EXP;
-
-  /**
-   * The feature id for the '<em><b>Else exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PLUS__ELSE_EXP = EXPRESSION__ELSE_EXP;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PLUS__OP = EXPRESSION_FEATURE_COUNT + 0;
+  int ADDITION_EXPRESSION__LEFT = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Right</b></em>' containment reference.
@@ -1798,16 +1103,16 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PLUS__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
+  int ADDITION_EXPRESSION__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
-   * The number of structural features of the '<em>Plus</em>' class.
+   * The number of structural features of the '<em>Addition Expression</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PLUS_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+  int ADDITION_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link edu.stanford.compilers.cool.impl.MinusImpl <em>Minus</em>}' class.
@@ -1817,70 +1122,7 @@ public interface CoolPackage extends EPackage
    * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getMinus()
    * @generated
    */
-  int MINUS = 25;
-
-  /**
-   * The feature id for the '<em><b>Expr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MINUS__EXPR = EXPRESSION__EXPR;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MINUS__NAME = EXPRESSION__NAME;
-
-  /**
-   * The feature id for the '<em><b>Ref</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MINUS__REF = EXPRESSION__REF;
-
-  /**
-   * The feature id for the '<em><b>Actual</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MINUS__ACTUAL = EXPRESSION__ACTUAL;
-
-  /**
-   * The feature id for the '<em><b>Pred</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MINUS__PRED = EXPRESSION__PRED;
-
-  /**
-   * The feature id for the '<em><b>Then exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MINUS__THEN_EXP = EXPRESSION__THEN_EXP;
-
-  /**
-   * The feature id for the '<em><b>Else exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MINUS__ELSE_EXP = EXPRESSION__ELSE_EXP;
+  int MINUS = 32;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' containment reference.
@@ -1910,86 +1152,23 @@ public interface CoolPackage extends EPackage
   int MINUS_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link edu.stanford.compilers.cool.impl.MultiImpl <em>Multi</em>}' class.
+   * The meta object id for the '{@link edu.stanford.compilers.cool.impl.MultiplicationExpressionImpl <em>Multiplication Expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see edu.stanford.compilers.cool.impl.MultiImpl
-   * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getMulti()
+   * @see edu.stanford.compilers.cool.impl.MultiplicationExpressionImpl
+   * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getMultiplicationExpression()
    * @generated
    */
-  int MULTI = 26;
+  int MULTIPLICATION_EXPRESSION = 33;
 
   /**
-   * The feature id for the '<em><b>Expr</b></em>' containment reference.
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MULTI__EXPR = EXPRESSION__EXPR;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MULTI__NAME = EXPRESSION__NAME;
-
-  /**
-   * The feature id for the '<em><b>Ref</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MULTI__REF = EXPRESSION__REF;
-
-  /**
-   * The feature id for the '<em><b>Actual</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MULTI__ACTUAL = EXPRESSION__ACTUAL;
-
-  /**
-   * The feature id for the '<em><b>Pred</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MULTI__PRED = EXPRESSION__PRED;
-
-  /**
-   * The feature id for the '<em><b>Then exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MULTI__THEN_EXP = EXPRESSION__THEN_EXP;
-
-  /**
-   * The feature id for the '<em><b>Else exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MULTI__ELSE_EXP = EXPRESSION__ELSE_EXP;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MULTI__OP = EXPRESSION_FEATURE_COUNT + 0;
+  int MULTIPLICATION_EXPRESSION__LEFT = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Right</b></em>' containment reference.
@@ -1998,16 +1177,16 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MULTI__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
+  int MULTIPLICATION_EXPRESSION__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
-   * The number of structural features of the '<em>Multi</em>' class.
+   * The number of structural features of the '<em>Multiplication Expression</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MULTI_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+  int MULTIPLICATION_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link edu.stanford.compilers.cool.impl.DivImpl <em>Div</em>}' class.
@@ -2017,70 +1196,7 @@ public interface CoolPackage extends EPackage
    * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getDiv()
    * @generated
    */
-  int DIV = 27;
-
-  /**
-   * The feature id for the '<em><b>Expr</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DIV__EXPR = EXPRESSION__EXPR;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DIV__NAME = EXPRESSION__NAME;
-
-  /**
-   * The feature id for the '<em><b>Ref</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DIV__REF = EXPRESSION__REF;
-
-  /**
-   * The feature id for the '<em><b>Actual</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DIV__ACTUAL = EXPRESSION__ACTUAL;
-
-  /**
-   * The feature id for the '<em><b>Pred</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DIV__PRED = EXPRESSION__PRED;
-
-  /**
-   * The feature id for the '<em><b>Then exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DIV__THEN_EXP = EXPRESSION__THEN_EXP;
-
-  /**
-   * The feature id for the '<em><b>Else exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DIV__ELSE_EXP = EXPRESSION__ELSE_EXP;
+  int DIV = 34;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' containment reference.
@@ -2108,6 +1224,70 @@ public interface CoolPackage extends EPackage
    * @ordered
    */
   int DIV_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link edu.stanford.compilers.cool.impl.DispatchExpressionImpl <em>Dispatch Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see edu.stanford.compilers.cool.impl.DispatchExpressionImpl
+   * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getDispatchExpression()
+   * @generated
+   */
+  int DISPATCH_EXPRESSION = 35;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DISPATCH_EXPRESSION__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Type name</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DISPATCH_EXPRESSION__TYPE_NAME = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Ref</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DISPATCH_EXPRESSION__REF = EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Actual</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DISPATCH_EXPRESSION__ACTUAL = EXPRESSION_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Chain</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DISPATCH_EXPRESSION__CHAIN = EXPRESSION_FEATURE_COUNT + 4;
+
+  /**
+   * The number of structural features of the '<em>Dispatch Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DISPATCH_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 5;
 
 
   /**
@@ -2280,81 +1460,14 @@ public interface CoolPackage extends EPackage
   EClass getExpression();
 
   /**
-   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.Expression#getExpr <em>Expr</em>}'.
+   * Returns the meta object for class '{@link edu.stanford.compilers.cool.PrimaryExpression <em>Primary Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Expr</em>'.
-   * @see edu.stanford.compilers.cool.Expression#getExpr()
-   * @see #getExpression()
+   * @return the meta object for class '<em>Primary Expression</em>'.
+   * @see edu.stanford.compilers.cool.PrimaryExpression
    * @generated
    */
-  EReference getExpression_Expr();
-
-  /**
-   * Returns the meta object for the attribute '{@link edu.stanford.compilers.cool.Expression#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see edu.stanford.compilers.cool.Expression#getName()
-   * @see #getExpression()
-   * @generated
-   */
-  EAttribute getExpression_Name();
-
-  /**
-   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.Expression#getRef <em>Ref</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Ref</em>'.
-   * @see edu.stanford.compilers.cool.Expression#getRef()
-   * @see #getExpression()
-   * @generated
-   */
-  EReference getExpression_Ref();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link edu.stanford.compilers.cool.Expression#getActual <em>Actual</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Actual</em>'.
-   * @see edu.stanford.compilers.cool.Expression#getActual()
-   * @see #getExpression()
-   * @generated
-   */
-  EReference getExpression_Actual();
-
-  /**
-   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.Expression#getPred <em>Pred</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Pred</em>'.
-   * @see edu.stanford.compilers.cool.Expression#getPred()
-   * @see #getExpression()
-   * @generated
-   */
-  EReference getExpression_Pred();
-
-  /**
-   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.Expression#getThen_exp <em>Then exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Then exp</em>'.
-   * @see edu.stanford.compilers.cool.Expression#getThen_exp()
-   * @see #getExpression()
-   * @generated
-   */
-  EReference getExpression_Then_exp();
-
-  /**
-   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.Expression#getElse_exp <em>Else exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Else exp</em>'.
-   * @see edu.stanford.compilers.cool.Expression#getElse_exp()
-   * @see #getExpression()
-   * @generated
-   */
-  EReference getExpression_Else_exp();
+  EClass getPrimaryExpression();
 
   /**
    * Returns the meta object for class '{@link edu.stanford.compilers.cool.SelfTypeLiteral <em>Self Type Literal</em>}'.
@@ -2461,6 +1574,208 @@ public interface CoolPackage extends EPackage
   EAttribute getBooleanLiteral_Value();
 
   /**
+   * Returns the meta object for class '{@link edu.stanford.compilers.cool.ParenExpression <em>Paren Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Paren Expression</em>'.
+   * @see edu.stanford.compilers.cool.ParenExpression
+   * @generated
+   */
+  EClass getParenExpression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.ParenExpression#getExpr <em>Expr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expr</em>'.
+   * @see edu.stanford.compilers.cool.ParenExpression#getExpr()
+   * @see #getParenExpression()
+   * @generated
+   */
+  EReference getParenExpression_Expr();
+
+  /**
+   * Returns the meta object for class '{@link edu.stanford.compilers.cool.AssignmentExpression <em>Assignment Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Assignment Expression</em>'.
+   * @see edu.stanford.compilers.cool.AssignmentExpression
+   * @generated
+   */
+  EClass getAssignmentExpression();
+
+  /**
+   * Returns the meta object for the attribute '{@link edu.stanford.compilers.cool.AssignmentExpression#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see edu.stanford.compilers.cool.AssignmentExpression#getName()
+   * @see #getAssignmentExpression()
+   * @generated
+   */
+  EAttribute getAssignmentExpression_Name();
+
+  /**
+   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.AssignmentExpression#getExpr <em>Expr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expr</em>'.
+   * @see edu.stanford.compilers.cool.AssignmentExpression#getExpr()
+   * @see #getAssignmentExpression()
+   * @generated
+   */
+  EReference getAssignmentExpression_Expr();
+
+  /**
+   * Returns the meta object for class '{@link edu.stanford.compilers.cool.NegationExpression <em>Negation Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Negation Expression</em>'.
+   * @see edu.stanford.compilers.cool.NegationExpression
+   * @generated
+   */
+  EClass getNegationExpression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.NegationExpression#getExpr <em>Expr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expr</em>'.
+   * @see edu.stanford.compilers.cool.NegationExpression#getExpr()
+   * @see #getNegationExpression()
+   * @generated
+   */
+  EReference getNegationExpression_Expr();
+
+  /**
+   * Returns the meta object for class '{@link edu.stanford.compilers.cool.IntegerCompositeExpression <em>Integer Composite Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Integer Composite Expression</em>'.
+   * @see edu.stanford.compilers.cool.IntegerCompositeExpression
+   * @generated
+   */
+  EClass getIntegerCompositeExpression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.IntegerCompositeExpression#getExpr <em>Expr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expr</em>'.
+   * @see edu.stanford.compilers.cool.IntegerCompositeExpression#getExpr()
+   * @see #getIntegerCompositeExpression()
+   * @generated
+   */
+  EReference getIntegerCompositeExpression_Expr();
+
+  /**
+   * Returns the meta object for class '{@link edu.stanford.compilers.cool.NewExpression <em>New Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>New Expression</em>'.
+   * @see edu.stanford.compilers.cool.NewExpression
+   * @generated
+   */
+  EClass getNewExpression();
+
+  /**
+   * Returns the meta object for the reference '{@link edu.stanford.compilers.cool.NewExpression#getType_name <em>Type name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Type name</em>'.
+   * @see edu.stanford.compilers.cool.NewExpression#getType_name()
+   * @see #getNewExpression()
+   * @generated
+   */
+  EReference getNewExpression_Type_name();
+
+  /**
+   * Returns the meta object for class '{@link edu.stanford.compilers.cool.StaticDispatchExpression <em>Static Dispatch Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Static Dispatch Expression</em>'.
+   * @see edu.stanford.compilers.cool.StaticDispatchExpression
+   * @generated
+   */
+  EClass getStaticDispatchExpression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.StaticDispatchExpression#getRef <em>Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Ref</em>'.
+   * @see edu.stanford.compilers.cool.StaticDispatchExpression#getRef()
+   * @see #getStaticDispatchExpression()
+   * @generated
+   */
+  EReference getStaticDispatchExpression_Ref();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link edu.stanford.compilers.cool.StaticDispatchExpression#getActual <em>Actual</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Actual</em>'.
+   * @see edu.stanford.compilers.cool.StaticDispatchExpression#getActual()
+   * @see #getStaticDispatchExpression()
+   * @generated
+   */
+  EReference getStaticDispatchExpression_Actual();
+
+  /**
+   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.StaticDispatchExpression#getChain <em>Chain</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Chain</em>'.
+   * @see edu.stanford.compilers.cool.StaticDispatchExpression#getChain()
+   * @see #getStaticDispatchExpression()
+   * @generated
+   */
+  EReference getStaticDispatchExpression_Chain();
+
+  /**
+   * Returns the meta object for class '{@link edu.stanford.compilers.cool.ConditionalExpression <em>Conditional Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Conditional Expression</em>'.
+   * @see edu.stanford.compilers.cool.ConditionalExpression
+   * @generated
+   */
+  EClass getConditionalExpression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.ConditionalExpression#getPred <em>Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Pred</em>'.
+   * @see edu.stanford.compilers.cool.ConditionalExpression#getPred()
+   * @see #getConditionalExpression()
+   * @generated
+   */
+  EReference getConditionalExpression_Pred();
+
+  /**
+   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.ConditionalExpression#getThen_exp <em>Then exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Then exp</em>'.
+   * @see edu.stanford.compilers.cool.ConditionalExpression#getThen_exp()
+   * @see #getConditionalExpression()
+   * @generated
+   */
+  EReference getConditionalExpression_Then_exp();
+
+  /**
+   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.ConditionalExpression#getElse_exp <em>Else exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Else exp</em>'.
+   * @see edu.stanford.compilers.cool.ConditionalExpression#getElse_exp()
+   * @see #getConditionalExpression()
+   * @generated
+   */
+  EReference getConditionalExpression_Else_exp();
+
+  /**
    * Returns the meta object for class '{@link edu.stanford.compilers.cool.LoopExpression <em>Loop Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2469,6 +1784,17 @@ public interface CoolPackage extends EPackage
    * @generated
    */
   EClass getLoopExpression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.LoopExpression#getPred <em>Pred</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Pred</em>'.
+   * @see edu.stanford.compilers.cool.LoopExpression#getPred()
+   * @see #getLoopExpression()
+   * @generated
+   */
+  EReference getLoopExpression_Pred();
 
   /**
    * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.LoopExpression#getBody <em>Body</em>}'.
@@ -2501,6 +1827,27 @@ public interface CoolPackage extends EPackage
    * @generated
    */
   EReference getBlockExpression_Body();
+
+  /**
+   * Returns the meta object for class '{@link edu.stanford.compilers.cool.IsvoidExpression <em>Isvoid Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Isvoid Expression</em>'.
+   * @see edu.stanford.compilers.cool.IsvoidExpression
+   * @generated
+   */
+  EClass getIsvoidExpression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.IsvoidExpression#getExpr <em>Expr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expr</em>'.
+   * @see edu.stanford.compilers.cool.IsvoidExpression#getExpr()
+   * @see #getIsvoidExpression()
+   * @generated
+   */
+  EReference getIsvoidExpression_Expr();
 
   /**
    * Returns the meta object for class '{@link edu.stanford.compilers.cool.LetExpression <em>Let Expression</em>}'.
@@ -2577,6 +1924,17 @@ public interface CoolPackage extends EPackage
   EClass getCaseExpression();
 
   /**
+   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.CaseExpression#getExpr <em>Expr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expr</em>'.
+   * @see edu.stanford.compilers.cool.CaseExpression#getExpr()
+   * @see #getCaseExpression()
+   * @generated
+   */
+  EReference getCaseExpression_Expr();
+
+  /**
    * Returns the meta object for the containment reference list '{@link edu.stanford.compilers.cool.CaseExpression#getCase <em>Case</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2596,17 +1954,6 @@ public interface CoolPackage extends EPackage
    * @generated
    */
   EClass getCase();
-
-  /**
-   * Returns the meta object for the attribute '{@link edu.stanford.compilers.cool.Case#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see edu.stanford.compilers.cool.Case#getName()
-   * @see #getCase()
-   * @generated
-   */
-  EAttribute getCase_Name();
 
   /**
    * Returns the meta object for the reference '{@link edu.stanford.compilers.cool.Case#getType_decl <em>Type decl</em>}'.
@@ -2629,27 +1976,6 @@ public interface CoolPackage extends EPackage
    * @generated
    */
   EReference getCase_Expr();
-
-  /**
-   * Returns the meta object for class '{@link edu.stanford.compilers.cool.NewExpression <em>New Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>New Expression</em>'.
-   * @see edu.stanford.compilers.cool.NewExpression
-   * @generated
-   */
-  EClass getNewExpression();
-
-  /**
-   * Returns the meta object for the reference '{@link edu.stanford.compilers.cool.NewExpression#getType_name <em>Type name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Type name</em>'.
-   * @see edu.stanford.compilers.cool.NewExpression#getType_name()
-   * @see #getNewExpression()
-   * @generated
-   */
-  EReference getNewExpression_Type_name();
 
   /**
    * Returns the meta object for class '{@link edu.stanford.compilers.cool.Type <em>Type</em>}'.
@@ -2681,27 +2007,6 @@ public interface CoolPackage extends EPackage
    * @generated
    */
   EAttribute getIdentifiableElement_Name();
-
-  /**
-   * Returns the meta object for class '{@link edu.stanford.compilers.cool.DispatchExpression <em>Dispatch Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Dispatch Expression</em>'.
-   * @see edu.stanford.compilers.cool.DispatchExpression
-   * @generated
-   */
-  EClass getDispatchExpression();
-
-  /**
-   * Returns the meta object for the reference '{@link edu.stanford.compilers.cool.DispatchExpression#getType_name <em>Type name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Type name</em>'.
-   * @see edu.stanford.compilers.cool.DispatchExpression#getType_name()
-   * @see #getDispatchExpression()
-   * @generated
-   */
-  EReference getDispatchExpression_Type_name();
 
   /**
    * Returns the meta object for class '{@link edu.stanford.compilers.cool.CompareExpression <em>Compare Expression</em>}'.
@@ -2747,36 +2052,36 @@ public interface CoolPackage extends EPackage
   EReference getCompareExpression_Right();
 
   /**
-   * Returns the meta object for class '{@link edu.stanford.compilers.cool.Plus <em>Plus</em>}'.
+   * Returns the meta object for class '{@link edu.stanford.compilers.cool.AdditionExpression <em>Addition Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Plus</em>'.
-   * @see edu.stanford.compilers.cool.Plus
+   * @return the meta object for class '<em>Addition Expression</em>'.
+   * @see edu.stanford.compilers.cool.AdditionExpression
    * @generated
    */
-  EClass getPlus();
+  EClass getAdditionExpression();
 
   /**
-   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.Plus#getOp <em>Op</em>}'.
+   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.AdditionExpression#getLeft <em>Left</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Op</em>'.
-   * @see edu.stanford.compilers.cool.Plus#getOp()
-   * @see #getPlus()
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see edu.stanford.compilers.cool.AdditionExpression#getLeft()
+   * @see #getAdditionExpression()
    * @generated
    */
-  EReference getPlus_Op();
+  EReference getAdditionExpression_Left();
 
   /**
-   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.Plus#getRight <em>Right</em>}'.
+   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.AdditionExpression#getRight <em>Right</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Right</em>'.
-   * @see edu.stanford.compilers.cool.Plus#getRight()
-   * @see #getPlus()
+   * @see edu.stanford.compilers.cool.AdditionExpression#getRight()
+   * @see #getAdditionExpression()
    * @generated
    */
-  EReference getPlus_Right();
+  EReference getAdditionExpression_Right();
 
   /**
    * Returns the meta object for class '{@link edu.stanford.compilers.cool.Minus <em>Minus</em>}'.
@@ -2811,36 +2116,36 @@ public interface CoolPackage extends EPackage
   EReference getMinus_Right();
 
   /**
-   * Returns the meta object for class '{@link edu.stanford.compilers.cool.Multi <em>Multi</em>}'.
+   * Returns the meta object for class '{@link edu.stanford.compilers.cool.MultiplicationExpression <em>Multiplication Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Multi</em>'.
-   * @see edu.stanford.compilers.cool.Multi
+   * @return the meta object for class '<em>Multiplication Expression</em>'.
+   * @see edu.stanford.compilers.cool.MultiplicationExpression
    * @generated
    */
-  EClass getMulti();
+  EClass getMultiplicationExpression();
 
   /**
-   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.Multi#getOp <em>Op</em>}'.
+   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.MultiplicationExpression#getLeft <em>Left</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Op</em>'.
-   * @see edu.stanford.compilers.cool.Multi#getOp()
-   * @see #getMulti()
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see edu.stanford.compilers.cool.MultiplicationExpression#getLeft()
+   * @see #getMultiplicationExpression()
    * @generated
    */
-  EReference getMulti_Op();
+  EReference getMultiplicationExpression_Left();
 
   /**
-   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.Multi#getRight <em>Right</em>}'.
+   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.MultiplicationExpression#getRight <em>Right</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Right</em>'.
-   * @see edu.stanford.compilers.cool.Multi#getRight()
-   * @see #getMulti()
+   * @see edu.stanford.compilers.cool.MultiplicationExpression#getRight()
+   * @see #getMultiplicationExpression()
    * @generated
    */
-  EReference getMulti_Right();
+  EReference getMultiplicationExpression_Right();
 
   /**
    * Returns the meta object for class '{@link edu.stanford.compilers.cool.Div <em>Div</em>}'.
@@ -2873,6 +2178,71 @@ public interface CoolPackage extends EPackage
    * @generated
    */
   EReference getDiv_Right();
+
+  /**
+   * Returns the meta object for class '{@link edu.stanford.compilers.cool.DispatchExpression <em>Dispatch Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Dispatch Expression</em>'.
+   * @see edu.stanford.compilers.cool.DispatchExpression
+   * @generated
+   */
+  EClass getDispatchExpression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.DispatchExpression#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see edu.stanford.compilers.cool.DispatchExpression#getLeft()
+   * @see #getDispatchExpression()
+   * @generated
+   */
+  EReference getDispatchExpression_Left();
+
+  /**
+   * Returns the meta object for the reference '{@link edu.stanford.compilers.cool.DispatchExpression#getType_name <em>Type name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Type name</em>'.
+   * @see edu.stanford.compilers.cool.DispatchExpression#getType_name()
+   * @see #getDispatchExpression()
+   * @generated
+   */
+  EReference getDispatchExpression_Type_name();
+
+  /**
+   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.DispatchExpression#getRef <em>Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Ref</em>'.
+   * @see edu.stanford.compilers.cool.DispatchExpression#getRef()
+   * @see #getDispatchExpression()
+   * @generated
+   */
+  EReference getDispatchExpression_Ref();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link edu.stanford.compilers.cool.DispatchExpression#getActual <em>Actual</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Actual</em>'.
+   * @see edu.stanford.compilers.cool.DispatchExpression#getActual()
+   * @see #getDispatchExpression()
+   * @generated
+   */
+  EReference getDispatchExpression_Actual();
+
+  /**
+   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.DispatchExpression#getChain <em>Chain</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Chain</em>'.
+   * @see edu.stanford.compilers.cool.DispatchExpression#getChain()
+   * @see #getDispatchExpression()
+   * @generated
+   */
+  EReference getDispatchExpression_Chain();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -3040,60 +2410,14 @@ public interface CoolPackage extends EPackage
     EClass EXPRESSION = eINSTANCE.getExpression();
 
     /**
-     * The meta object literal for the '<em><b>Expr</b></em>' containment reference feature.
+     * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.PrimaryExpressionImpl <em>Primary Expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see edu.stanford.compilers.cool.impl.PrimaryExpressionImpl
+     * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getPrimaryExpression()
      * @generated
      */
-    EReference EXPRESSION__EXPR = eINSTANCE.getExpression_Expr();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute EXPRESSION__NAME = eINSTANCE.getExpression_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Ref</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXPRESSION__REF = eINSTANCE.getExpression_Ref();
-
-    /**
-     * The meta object literal for the '<em><b>Actual</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXPRESSION__ACTUAL = eINSTANCE.getExpression_Actual();
-
-    /**
-     * The meta object literal for the '<em><b>Pred</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXPRESSION__PRED = eINSTANCE.getExpression_Pred();
-
-    /**
-     * The meta object literal for the '<em><b>Then exp</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXPRESSION__THEN_EXP = eINSTANCE.getExpression_Then_exp();
-
-    /**
-     * The meta object literal for the '<em><b>Else exp</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXPRESSION__ELSE_EXP = eINSTANCE.getExpression_Else_exp();
+    EClass PRIMARY_EXPRESSION = eINSTANCE.getPrimaryExpression();
 
     /**
      * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.SelfTypeLiteralImpl <em>Self Type Literal</em>}' class.
@@ -3188,6 +2512,172 @@ public interface CoolPackage extends EPackage
     EAttribute BOOLEAN_LITERAL__VALUE = eINSTANCE.getBooleanLiteral_Value();
 
     /**
+     * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.ParenExpressionImpl <em>Paren Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see edu.stanford.compilers.cool.impl.ParenExpressionImpl
+     * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getParenExpression()
+     * @generated
+     */
+    EClass PAREN_EXPRESSION = eINSTANCE.getParenExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Expr</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PAREN_EXPRESSION__EXPR = eINSTANCE.getParenExpression_Expr();
+
+    /**
+     * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.AssignmentExpressionImpl <em>Assignment Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see edu.stanford.compilers.cool.impl.AssignmentExpressionImpl
+     * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getAssignmentExpression()
+     * @generated
+     */
+    EClass ASSIGNMENT_EXPRESSION = eINSTANCE.getAssignmentExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ASSIGNMENT_EXPRESSION__NAME = eINSTANCE.getAssignmentExpression_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Expr</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ASSIGNMENT_EXPRESSION__EXPR = eINSTANCE.getAssignmentExpression_Expr();
+
+    /**
+     * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.NegationExpressionImpl <em>Negation Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see edu.stanford.compilers.cool.impl.NegationExpressionImpl
+     * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getNegationExpression()
+     * @generated
+     */
+    EClass NEGATION_EXPRESSION = eINSTANCE.getNegationExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Expr</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference NEGATION_EXPRESSION__EXPR = eINSTANCE.getNegationExpression_Expr();
+
+    /**
+     * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.IntegerCompositeExpressionImpl <em>Integer Composite Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see edu.stanford.compilers.cool.impl.IntegerCompositeExpressionImpl
+     * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getIntegerCompositeExpression()
+     * @generated
+     */
+    EClass INTEGER_COMPOSITE_EXPRESSION = eINSTANCE.getIntegerCompositeExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Expr</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INTEGER_COMPOSITE_EXPRESSION__EXPR = eINSTANCE.getIntegerCompositeExpression_Expr();
+
+    /**
+     * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.NewExpressionImpl <em>New Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see edu.stanford.compilers.cool.impl.NewExpressionImpl
+     * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getNewExpression()
+     * @generated
+     */
+    EClass NEW_EXPRESSION = eINSTANCE.getNewExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Type name</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference NEW_EXPRESSION__TYPE_NAME = eINSTANCE.getNewExpression_Type_name();
+
+    /**
+     * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.StaticDispatchExpressionImpl <em>Static Dispatch Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see edu.stanford.compilers.cool.impl.StaticDispatchExpressionImpl
+     * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getStaticDispatchExpression()
+     * @generated
+     */
+    EClass STATIC_DISPATCH_EXPRESSION = eINSTANCE.getStaticDispatchExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Ref</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STATIC_DISPATCH_EXPRESSION__REF = eINSTANCE.getStaticDispatchExpression_Ref();
+
+    /**
+     * The meta object literal for the '<em><b>Actual</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STATIC_DISPATCH_EXPRESSION__ACTUAL = eINSTANCE.getStaticDispatchExpression_Actual();
+
+    /**
+     * The meta object literal for the '<em><b>Chain</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STATIC_DISPATCH_EXPRESSION__CHAIN = eINSTANCE.getStaticDispatchExpression_Chain();
+
+    /**
+     * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.ConditionalExpressionImpl <em>Conditional Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see edu.stanford.compilers.cool.impl.ConditionalExpressionImpl
+     * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getConditionalExpression()
+     * @generated
+     */
+    EClass CONDITIONAL_EXPRESSION = eINSTANCE.getConditionalExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Pred</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONDITIONAL_EXPRESSION__PRED = eINSTANCE.getConditionalExpression_Pred();
+
+    /**
+     * The meta object literal for the '<em><b>Then exp</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONDITIONAL_EXPRESSION__THEN_EXP = eINSTANCE.getConditionalExpression_Then_exp();
+
+    /**
+     * The meta object literal for the '<em><b>Else exp</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONDITIONAL_EXPRESSION__ELSE_EXP = eINSTANCE.getConditionalExpression_Else_exp();
+
+    /**
      * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.LoopExpressionImpl <em>Loop Expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3196,6 +2686,14 @@ public interface CoolPackage extends EPackage
      * @generated
      */
     EClass LOOP_EXPRESSION = eINSTANCE.getLoopExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Pred</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LOOP_EXPRESSION__PRED = eINSTANCE.getLoopExpression_Pred();
 
     /**
      * The meta object literal for the '<em><b>Body</b></em>' containment reference feature.
@@ -3222,6 +2720,24 @@ public interface CoolPackage extends EPackage
      * @generated
      */
     EReference BLOCK_EXPRESSION__BODY = eINSTANCE.getBlockExpression_Body();
+
+    /**
+     * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.IsvoidExpressionImpl <em>Isvoid Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see edu.stanford.compilers.cool.impl.IsvoidExpressionImpl
+     * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getIsvoidExpression()
+     * @generated
+     */
+    EClass ISVOID_EXPRESSION = eINSTANCE.getIsvoidExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Expr</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ISVOID_EXPRESSION__EXPR = eINSTANCE.getIsvoidExpression_Expr();
 
     /**
      * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.LetExpressionImpl <em>Let Expression</em>}' class.
@@ -3286,6 +2802,14 @@ public interface CoolPackage extends EPackage
     EClass CASE_EXPRESSION = eINSTANCE.getCaseExpression();
 
     /**
+     * The meta object literal for the '<em><b>Expr</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CASE_EXPRESSION__EXPR = eINSTANCE.getCaseExpression_Expr();
+
+    /**
      * The meta object literal for the '<em><b>Case</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3304,14 +2828,6 @@ public interface CoolPackage extends EPackage
     EClass CASE = eINSTANCE.getCase();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute CASE__NAME = eINSTANCE.getCase_Name();
-
-    /**
      * The meta object literal for the '<em><b>Type decl</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3326,24 +2842,6 @@ public interface CoolPackage extends EPackage
      * @generated
      */
     EReference CASE__EXPR = eINSTANCE.getCase_Expr();
-
-    /**
-     * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.NewExpressionImpl <em>New Expression</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see edu.stanford.compilers.cool.impl.NewExpressionImpl
-     * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getNewExpression()
-     * @generated
-     */
-    EClass NEW_EXPRESSION = eINSTANCE.getNewExpression();
-
-    /**
-     * The meta object literal for the '<em><b>Type name</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference NEW_EXPRESSION__TYPE_NAME = eINSTANCE.getNewExpression_Type_name();
 
     /**
      * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.TypeImpl <em>Type</em>}' class.
@@ -3372,24 +2870,6 @@ public interface CoolPackage extends EPackage
      * @generated
      */
     EAttribute IDENTIFIABLE_ELEMENT__NAME = eINSTANCE.getIdentifiableElement_Name();
-
-    /**
-     * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.DispatchExpressionImpl <em>Dispatch Expression</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see edu.stanford.compilers.cool.impl.DispatchExpressionImpl
-     * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getDispatchExpression()
-     * @generated
-     */
-    EClass DISPATCH_EXPRESSION = eINSTANCE.getDispatchExpression();
-
-    /**
-     * The meta object literal for the '<em><b>Type name</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference DISPATCH_EXPRESSION__TYPE_NAME = eINSTANCE.getDispatchExpression_Type_name();
 
     /**
      * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.CompareExpressionImpl <em>Compare Expression</em>}' class.
@@ -3426,22 +2906,22 @@ public interface CoolPackage extends EPackage
     EReference COMPARE_EXPRESSION__RIGHT = eINSTANCE.getCompareExpression_Right();
 
     /**
-     * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.PlusImpl <em>Plus</em>}' class.
+     * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.AdditionExpressionImpl <em>Addition Expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see edu.stanford.compilers.cool.impl.PlusImpl
-     * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getPlus()
+     * @see edu.stanford.compilers.cool.impl.AdditionExpressionImpl
+     * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getAdditionExpression()
      * @generated
      */
-    EClass PLUS = eINSTANCE.getPlus();
+    EClass ADDITION_EXPRESSION = eINSTANCE.getAdditionExpression();
 
     /**
-     * The meta object literal for the '<em><b>Op</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PLUS__OP = eINSTANCE.getPlus_Op();
+    EReference ADDITION_EXPRESSION__LEFT = eINSTANCE.getAdditionExpression_Left();
 
     /**
      * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
@@ -3449,7 +2929,7 @@ public interface CoolPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PLUS__RIGHT = eINSTANCE.getPlus_Right();
+    EReference ADDITION_EXPRESSION__RIGHT = eINSTANCE.getAdditionExpression_Right();
 
     /**
      * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.MinusImpl <em>Minus</em>}' class.
@@ -3478,22 +2958,22 @@ public interface CoolPackage extends EPackage
     EReference MINUS__RIGHT = eINSTANCE.getMinus_Right();
 
     /**
-     * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.MultiImpl <em>Multi</em>}' class.
+     * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.MultiplicationExpressionImpl <em>Multiplication Expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see edu.stanford.compilers.cool.impl.MultiImpl
-     * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getMulti()
+     * @see edu.stanford.compilers.cool.impl.MultiplicationExpressionImpl
+     * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getMultiplicationExpression()
      * @generated
      */
-    EClass MULTI = eINSTANCE.getMulti();
+    EClass MULTIPLICATION_EXPRESSION = eINSTANCE.getMultiplicationExpression();
 
     /**
-     * The meta object literal for the '<em><b>Op</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference MULTI__OP = eINSTANCE.getMulti_Op();
+    EReference MULTIPLICATION_EXPRESSION__LEFT = eINSTANCE.getMultiplicationExpression_Left();
 
     /**
      * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
@@ -3501,7 +2981,7 @@ public interface CoolPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference MULTI__RIGHT = eINSTANCE.getMulti_Right();
+    EReference MULTIPLICATION_EXPRESSION__RIGHT = eINSTANCE.getMultiplicationExpression_Right();
 
     /**
      * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.DivImpl <em>Div</em>}' class.
@@ -3528,6 +3008,56 @@ public interface CoolPackage extends EPackage
      * @generated
      */
     EReference DIV__RIGHT = eINSTANCE.getDiv_Right();
+
+    /**
+     * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.DispatchExpressionImpl <em>Dispatch Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see edu.stanford.compilers.cool.impl.DispatchExpressionImpl
+     * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getDispatchExpression()
+     * @generated
+     */
+    EClass DISPATCH_EXPRESSION = eINSTANCE.getDispatchExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DISPATCH_EXPRESSION__LEFT = eINSTANCE.getDispatchExpression_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Type name</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DISPATCH_EXPRESSION__TYPE_NAME = eINSTANCE.getDispatchExpression_Type_name();
+
+    /**
+     * The meta object literal for the '<em><b>Ref</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DISPATCH_EXPRESSION__REF = eINSTANCE.getDispatchExpression_Ref();
+
+    /**
+     * The meta object literal for the '<em><b>Actual</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DISPATCH_EXPRESSION__ACTUAL = eINSTANCE.getDispatchExpression_Actual();
+
+    /**
+     * The meta object literal for the '<em><b>Chain</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DISPATCH_EXPRESSION__CHAIN = eINSTANCE.getDispatchExpression_Chain();
 
   }
 

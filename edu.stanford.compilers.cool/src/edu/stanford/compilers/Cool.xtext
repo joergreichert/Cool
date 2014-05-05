@@ -4,9 +4,7 @@ import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
 generate cool "http://www.stanford.edu/compilers/Cool"
 
-Program:
-	classes+=Class_*
-;
+Program:	classes+=Class_*;
 
 Class_:
 	'class' name=SYMBOL  ('inherits' parent=[Type])? '{'
@@ -15,21 +13,10 @@ Class_:
 	'}' ';'
 ;
 
-Feature_:
-	Attr | Method
-;
-
-Attr:
-	name=SYMBOL ':' type_decl=[Type] ('<-' init=Expression)? ';'
-;
-
-Method:
-	name=SYMBOL '(' (formals+=Formal (',' formals+=Formal)*)? ')' ':' return_type=[Type] '{' expr=Expression '}' ';'
-;
-
-Formal:
-	name=SYMBOL ':' type_decl=[Type]
-;
+Feature_:	Attr | Method;
+Attr:		name=SYMBOL ':' type_decl=[Type] ('<-' init=Expression)? ';';
+Method:		name=SYMBOL '(' (formals+=Formal (',' formals+=Formal)*)? ')' ':' return_type=[Type] '{' expr=Expression '}' ';';
+Formal:		name=SYMBOL ':' type_decl=[Type];
 
 //precedence
 //.					static dispatch
@@ -43,10 +30,10 @@ Formal:
 //<-				Assignment
 
 Expression:
-	DispatchExpression
+	CompareExpression
 ;
 
-PrimaryExpression returns Expression:
+PrimaryExpression:
 	ConditionalExpression |
 	LoopExpression |
 	BlockExpression |
@@ -60,7 +47,7 @@ PrimaryExpression returns Expression:
 	Literal |
 	ParenExpression |
 	NegationExpression |
-	IntegerComposite |
+	IntegerCompositeExpression |
 	StaticDispatchExpression
 ;
 
@@ -78,99 +65,54 @@ Literal:
 	BooleanLiteral
 ;
 
-NumberLiteral:
-	value=INT
-;
+NumberLiteral:  value=INT;
+StringLiteral:  value=STRING;
+BooleanLiteral: value=BOOLEAN;
 
-StringLiteral:
-	value=STRING
-;
+ParenExpression: 			'(' expr=Expression ')';
+AssignmentExpression: 		name=SYMBOL '<-' expr=Expression;
+NegationExpression:			'not' expr=Expression;
+IntegerCompositeExpression:	'~' expr=Expression;
+NewExpression: 				'new' type_name=[Type];
+StaticDispatchExpression:	ref=IdentifierRefExpression '(' (actual+=Expression (',' actual+=Expression)*)? ')' (=> '.' chain=StaticDispatchExpression)?;
 
-BooleanLiteral:
-	value=BOOLEAN
-;
+ConditionalExpression:		'if' pred=Expression 'then' then_exp=Expression (=> 'else' else_exp=Expression)? 'fi';
+LoopExpression:				'while' pred=Expression 'loop' body=Expression 'pool';
+BlockExpression: 			{BlockExpression} '{' (body+=Expression ';')* '}';
+IsvoidExpression: 			'isvoid' expr=Expression;
 
-ParenExpression returns Expression: 
-	'(' expr=Expression ')'
-;
-
-AssignmentExpression returns Expression:
-	name=SYMBOL '<-' expr=Expression
-;
-
-NegationExpression returns Expression:
-	'not' expr=Expression
-;
-
-IntegerComposite returns Expression:
-	'~' expr=Expression
-;
-
-DispatchExpression returns Expression:
-	CompareExpression
-	(=> ({DispatchExpression.expr = current} ('@' type_name=[Type])? '.' ref=IdentifierRefExpression) 
-	 '(' (actual+=Expression (',' actual+=Expression)*)? ')')?
-;
-
-StaticDispatchExpression returns Expression:
- 	ref=IdentifierRefExpression '(' (actual+=Expression (',' actual+=Expression)*)? ')'
-;
-
-ConditionalExpression returns Expression:
-	'if' pred=Expression 'then' then_exp=Expression (=> 'else' else_exp=Expression)? 'fi'
-;
-
-LoopExpression:
-	'while' pred=Expression 'loop' body=Expression 'pool'
-;
-
-BlockExpression: {BlockExpression}
-	'{' (body+=Expression ';')* '}'
-;
-
-LetExpression:
-	'let' declaration+=LetDeclaration (',' declaration+=LetDeclaration)* 'in' body=Expression
-;
-
-LetDeclaration:
-	name=SYMBOL ':' type_decl=[Type] ('<-'  init=Expression)?
-;
+LetExpression:				'let' declaration+=LetDeclaration (',' declaration+=LetDeclaration)* 'in' body=Expression;
+LetDeclaration:				name=SYMBOL ':' type_decl=[Type] ('<-'  init=Expression)?;
 
 CaseExpression:
 	'case'  expr=Expression  'of'
 		(case+=Case ';')+
-	'esac'	
+	'esac'
 ;
 
-Case:
-	name=SYMBOL ':' type_decl=[Type] '=>' expr=Expression
-;
-
-NewExpression:
-	'new' type_name=[Type]
-;
-
-IsvoidExpression returns Expression:
-	'isvoid' expr=Expression
-;
+Case: name=SYMBOL ':' type_decl=[Type] '=>' expr=Expression;
 
 CompareExpression returns Expression:
 	AdditionExpression
 	(=> ({CompareExpression.left=current} op=CompareOperator) right=Expression)?
 ;
 
-CompareOperator:
-	'<' | '<=' | '='
-;
+CompareOperator: '<' | '<=' | '=';
 
 AdditionExpression returns Expression:
 	MultiplicationExpression 
-	(=> ({Plus.op=current} '+' | {Minus.op=current} '-') right=Expression)?
+	(=> ({AdditionExpression.left=current} '+' | {Minus.op=current} '-') right=Expression)?
 ;
 
 MultiplicationExpression returns Expression:
-	PrimaryExpression 
-	(=> ({Multi.op=current} '*' | {Div.op=current} '/') right=Expression)?
+	DispatchExpression 
+	(=> ({MultiplicationExpression.left=current} '*' | {Div.op=current} '/') right=Expression)?
+;
+
+DispatchExpression returns Expression:
+	PrimaryExpression
+	(=> ({DispatchExpression.left = current} ('@' type_name=[Type])? '.' ref=IdentifierRefExpression) 
+	 '(' (actual+=Expression (',' actual+=Expression)*)? ')' (=> '.' chain=StaticDispatchExpression)?)?
 ;
 
 Type:
@@ -178,65 +120,24 @@ Type:
 ;
 
 IdentifiableElement:
-	Class_ | Feature_ | Formal | LetDeclaration
+	Class_ | Feature_ | Formal | LetDeclaration | Case
 ;
 	
-BOOLEAN:
-	'true' | 'false'
-;
+BOOLEAN:	'true' | 'false';
+SYMBOL:		ID | 'self';
 
-SYMBOL:
-	ID |
-//	'class' | 
-//	'else' | 
-//	'false' |
-//	'ﬁ' |
-//	'if' | 
-//	'in' |
-//	'inherits' | 
-//	'isvoid' |
-//	'let' |
-//	'loop' |
-//	'pool' |
-//	'then' |
-//	'while' |
-//	'case' |
-//	'esac' | 
-//	'new' | 
-//	'of' |
-//	'not' |
-//	'true' |
-	'self'
-;
-
-terminal ID: 
-	'^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*
-;
-
-terminal INT returns ecore::EInt: 
-	('0'..'9')+
-;
+terminal ID: 						'^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+terminal INT returns ecore::EInt: 	('0'..'9')+;
+terminal ML_COMMENT: 				'(*' -> '*)';
+terminal SL_COMMENT: 				'--' !('\n'|'\r')* ('\r'? '\n')?;
+terminal WS: 						(' '|'\t'|'\r'|'\n')+;
+terminal ANY_OTHER: 				.;
 
 terminal STRING: 
 	'"' ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"' |
 	"'" ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") )* "'"
 ; 
 
-terminal ML_COMMENT: 
-	'(*' -> '*)'
-;
-
-terminal SL_COMMENT: 
-	'--' !('\n'|'\r')* ('\r'? '\n')?
-;
-
-terminal WS: 
-	(' '|'\t'|'\r'|'\n')+
-;
-
-terminal ANY_OTHER: 
-	.
-;
 
 //  -- Expressions
 //  constructor no_expr(): Expression;

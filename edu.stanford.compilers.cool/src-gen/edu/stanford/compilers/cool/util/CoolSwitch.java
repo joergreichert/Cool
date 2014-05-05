@@ -129,10 +129,19 @@ public class CoolSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case CoolPackage.PRIMARY_EXPRESSION:
+      {
+        PrimaryExpression primaryExpression = (PrimaryExpression)theEObject;
+        T result = casePrimaryExpression(primaryExpression);
+        if (result == null) result = caseExpression(primaryExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case CoolPackage.SELF_TYPE_LITERAL:
       {
         SelfTypeLiteral selfTypeLiteral = (SelfTypeLiteral)theEObject;
         T result = caseSelfTypeLiteral(selfTypeLiteral);
+        if (result == null) result = casePrimaryExpression(selfTypeLiteral);
         if (result == null) result = caseExpression(selfTypeLiteral);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -141,6 +150,7 @@ public class CoolSwitch<T> extends Switch<T>
       {
         IdentifierRefExpression identifierRefExpression = (IdentifierRefExpression)theEObject;
         T result = caseIdentifierRefExpression(identifierRefExpression);
+        if (result == null) result = casePrimaryExpression(identifierRefExpression);
         if (result == null) result = caseExpression(identifierRefExpression);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -149,6 +159,7 @@ public class CoolSwitch<T> extends Switch<T>
       {
         Literal literal = (Literal)theEObject;
         T result = caseLiteral(literal);
+        if (result == null) result = casePrimaryExpression(literal);
         if (result == null) result = caseExpression(literal);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -158,6 +169,7 @@ public class CoolSwitch<T> extends Switch<T>
         NumberLiteral numberLiteral = (NumberLiteral)theEObject;
         T result = caseNumberLiteral(numberLiteral);
         if (result == null) result = caseLiteral(numberLiteral);
+        if (result == null) result = casePrimaryExpression(numberLiteral);
         if (result == null) result = caseExpression(numberLiteral);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -167,6 +179,7 @@ public class CoolSwitch<T> extends Switch<T>
         StringLiteral stringLiteral = (StringLiteral)theEObject;
         T result = caseStringLiteral(stringLiteral);
         if (result == null) result = caseLiteral(stringLiteral);
+        if (result == null) result = casePrimaryExpression(stringLiteral);
         if (result == null) result = caseExpression(stringLiteral);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -176,7 +189,71 @@ public class CoolSwitch<T> extends Switch<T>
         BooleanLiteral booleanLiteral = (BooleanLiteral)theEObject;
         T result = caseBooleanLiteral(booleanLiteral);
         if (result == null) result = caseLiteral(booleanLiteral);
+        if (result == null) result = casePrimaryExpression(booleanLiteral);
         if (result == null) result = caseExpression(booleanLiteral);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case CoolPackage.PAREN_EXPRESSION:
+      {
+        ParenExpression parenExpression = (ParenExpression)theEObject;
+        T result = caseParenExpression(parenExpression);
+        if (result == null) result = casePrimaryExpression(parenExpression);
+        if (result == null) result = caseExpression(parenExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case CoolPackage.ASSIGNMENT_EXPRESSION:
+      {
+        AssignmentExpression assignmentExpression = (AssignmentExpression)theEObject;
+        T result = caseAssignmentExpression(assignmentExpression);
+        if (result == null) result = casePrimaryExpression(assignmentExpression);
+        if (result == null) result = caseExpression(assignmentExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case CoolPackage.NEGATION_EXPRESSION:
+      {
+        NegationExpression negationExpression = (NegationExpression)theEObject;
+        T result = caseNegationExpression(negationExpression);
+        if (result == null) result = casePrimaryExpression(negationExpression);
+        if (result == null) result = caseExpression(negationExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case CoolPackage.INTEGER_COMPOSITE_EXPRESSION:
+      {
+        IntegerCompositeExpression integerCompositeExpression = (IntegerCompositeExpression)theEObject;
+        T result = caseIntegerCompositeExpression(integerCompositeExpression);
+        if (result == null) result = casePrimaryExpression(integerCompositeExpression);
+        if (result == null) result = caseExpression(integerCompositeExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case CoolPackage.NEW_EXPRESSION:
+      {
+        NewExpression newExpression = (NewExpression)theEObject;
+        T result = caseNewExpression(newExpression);
+        if (result == null) result = casePrimaryExpression(newExpression);
+        if (result == null) result = caseExpression(newExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case CoolPackage.STATIC_DISPATCH_EXPRESSION:
+      {
+        StaticDispatchExpression staticDispatchExpression = (StaticDispatchExpression)theEObject;
+        T result = caseStaticDispatchExpression(staticDispatchExpression);
+        if (result == null) result = casePrimaryExpression(staticDispatchExpression);
+        if (result == null) result = caseExpression(staticDispatchExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case CoolPackage.CONDITIONAL_EXPRESSION:
+      {
+        ConditionalExpression conditionalExpression = (ConditionalExpression)theEObject;
+        T result = caseConditionalExpression(conditionalExpression);
+        if (result == null) result = casePrimaryExpression(conditionalExpression);
+        if (result == null) result = caseExpression(conditionalExpression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -184,6 +261,7 @@ public class CoolSwitch<T> extends Switch<T>
       {
         LoopExpression loopExpression = (LoopExpression)theEObject;
         T result = caseLoopExpression(loopExpression);
+        if (result == null) result = casePrimaryExpression(loopExpression);
         if (result == null) result = caseExpression(loopExpression);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -192,7 +270,17 @@ public class CoolSwitch<T> extends Switch<T>
       {
         BlockExpression blockExpression = (BlockExpression)theEObject;
         T result = caseBlockExpression(blockExpression);
+        if (result == null) result = casePrimaryExpression(blockExpression);
         if (result == null) result = caseExpression(blockExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case CoolPackage.ISVOID_EXPRESSION:
+      {
+        IsvoidExpression isvoidExpression = (IsvoidExpression)theEObject;
+        T result = caseIsvoidExpression(isvoidExpression);
+        if (result == null) result = casePrimaryExpression(isvoidExpression);
+        if (result == null) result = caseExpression(isvoidExpression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -200,6 +288,7 @@ public class CoolSwitch<T> extends Switch<T>
       {
         LetExpression letExpression = (LetExpression)theEObject;
         T result = caseLetExpression(letExpression);
+        if (result == null) result = casePrimaryExpression(letExpression);
         if (result == null) result = caseExpression(letExpression);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -216,6 +305,7 @@ public class CoolSwitch<T> extends Switch<T>
       {
         CaseExpression caseExpression = (CaseExpression)theEObject;
         T result = caseCaseExpression(caseExpression);
+        if (result == null) result = casePrimaryExpression(caseExpression);
         if (result == null) result = caseExpression(caseExpression);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -224,14 +314,7 @@ public class CoolSwitch<T> extends Switch<T>
       {
         Case case_ = (Case)theEObject;
         T result = caseCase(case_);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case CoolPackage.NEW_EXPRESSION:
-      {
-        NewExpression newExpression = (NewExpression)theEObject;
-        T result = caseNewExpression(newExpression);
-        if (result == null) result = caseExpression(newExpression);
+        if (result == null) result = caseIdentifiableElement(case_);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -249,14 +332,6 @@ public class CoolSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case CoolPackage.DISPATCH_EXPRESSION:
-      {
-        DispatchExpression dispatchExpression = (DispatchExpression)theEObject;
-        T result = caseDispatchExpression(dispatchExpression);
-        if (result == null) result = caseExpression(dispatchExpression);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case CoolPackage.COMPARE_EXPRESSION:
       {
         CompareExpression compareExpression = (CompareExpression)theEObject;
@@ -265,11 +340,11 @@ public class CoolSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case CoolPackage.PLUS:
+      case CoolPackage.ADDITION_EXPRESSION:
       {
-        Plus plus = (Plus)theEObject;
-        T result = casePlus(plus);
-        if (result == null) result = caseExpression(plus);
+        AdditionExpression additionExpression = (AdditionExpression)theEObject;
+        T result = caseAdditionExpression(additionExpression);
+        if (result == null) result = caseExpression(additionExpression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -281,11 +356,11 @@ public class CoolSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case CoolPackage.MULTI:
+      case CoolPackage.MULTIPLICATION_EXPRESSION:
       {
-        Multi multi = (Multi)theEObject;
-        T result = caseMulti(multi);
-        if (result == null) result = caseExpression(multi);
+        MultiplicationExpression multiplicationExpression = (MultiplicationExpression)theEObject;
+        T result = caseMultiplicationExpression(multiplicationExpression);
+        if (result == null) result = caseExpression(multiplicationExpression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -294,6 +369,14 @@ public class CoolSwitch<T> extends Switch<T>
         Div div = (Div)theEObject;
         T result = caseDiv(div);
         if (result == null) result = caseExpression(div);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case CoolPackage.DISPATCH_EXPRESSION:
+      {
+        DispatchExpression dispatchExpression = (DispatchExpression)theEObject;
+        T result = caseDispatchExpression(dispatchExpression);
+        if (result == null) result = caseExpression(dispatchExpression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -414,6 +497,22 @@ public class CoolSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Primary Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Primary Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePrimaryExpression(PrimaryExpression object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Self Type Literal</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -510,6 +609,118 @@ public class CoolSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Paren Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Paren Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseParenExpression(ParenExpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Assignment Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Assignment Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAssignmentExpression(AssignmentExpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Negation Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Negation Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNegationExpression(NegationExpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Integer Composite Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Integer Composite Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIntegerCompositeExpression(IntegerCompositeExpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>New Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>New Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNewExpression(NewExpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Static Dispatch Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Static Dispatch Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStaticDispatchExpression(StaticDispatchExpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Conditional Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Conditional Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseConditionalExpression(ConditionalExpression object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Loop Expression</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -537,6 +748,22 @@ public class CoolSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseBlockExpression(BlockExpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Isvoid Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Isvoid Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIsvoidExpression(IsvoidExpression object)
   {
     return null;
   }
@@ -606,22 +833,6 @@ public class CoolSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>New Expression</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>New Expression</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseNewExpression(NewExpression object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -654,22 +865,6 @@ public class CoolSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Dispatch Expression</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Dispatch Expression</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseDispatchExpression(DispatchExpression object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Compare Expression</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -686,17 +881,17 @@ public class CoolSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Plus</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Addition Expression</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Plus</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Addition Expression</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casePlus(Plus object)
+  public T caseAdditionExpression(AdditionExpression object)
   {
     return null;
   }
@@ -718,17 +913,17 @@ public class CoolSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Multi</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Multiplication Expression</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Multi</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Multiplication Expression</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseMulti(Multi object)
+  public T caseMultiplicationExpression(MultiplicationExpression object)
   {
     return null;
   }
@@ -745,6 +940,22 @@ public class CoolSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseDiv(Div object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Dispatch Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Dispatch Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDispatchExpression(DispatchExpression object)
   {
     return null;
   }

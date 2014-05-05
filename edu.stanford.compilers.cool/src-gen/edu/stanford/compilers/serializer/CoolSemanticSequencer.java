@@ -2,6 +2,8 @@ package edu.stanford.compilers.serializer;
 
 import com.google.inject.Inject;
 import com.google.inject.Provider;
+import edu.stanford.compilers.cool.AdditionExpression;
+import edu.stanford.compilers.cool.AssignmentExpression;
 import edu.stanford.compilers.cool.Attr;
 import edu.stanford.compilers.cool.BlockExpression;
 import edu.stanford.compilers.cool.BooleanLiteral;
@@ -9,23 +11,27 @@ import edu.stanford.compilers.cool.Case;
 import edu.stanford.compilers.cool.CaseExpression;
 import edu.stanford.compilers.cool.Class_;
 import edu.stanford.compilers.cool.CompareExpression;
+import edu.stanford.compilers.cool.ConditionalExpression;
 import edu.stanford.compilers.cool.CoolPackage;
 import edu.stanford.compilers.cool.DispatchExpression;
 import edu.stanford.compilers.cool.Div;
-import edu.stanford.compilers.cool.Expression;
 import edu.stanford.compilers.cool.Formal;
 import edu.stanford.compilers.cool.IdentifierRefExpression;
+import edu.stanford.compilers.cool.IntegerCompositeExpression;
+import edu.stanford.compilers.cool.IsvoidExpression;
 import edu.stanford.compilers.cool.LetDeclaration;
 import edu.stanford.compilers.cool.LetExpression;
 import edu.stanford.compilers.cool.LoopExpression;
 import edu.stanford.compilers.cool.Method;
 import edu.stanford.compilers.cool.Minus;
-import edu.stanford.compilers.cool.Multi;
+import edu.stanford.compilers.cool.MultiplicationExpression;
+import edu.stanford.compilers.cool.NegationExpression;
 import edu.stanford.compilers.cool.NewExpression;
 import edu.stanford.compilers.cool.NumberLiteral;
-import edu.stanford.compilers.cool.Plus;
+import edu.stanford.compilers.cool.ParenExpression;
 import edu.stanford.compilers.cool.Program;
 import edu.stanford.compilers.cool.SelfTypeLiteral;
+import edu.stanford.compilers.cool.StaticDispatchExpression;
 import edu.stanford.compilers.cool.StringLiteral;
 import edu.stanford.compilers.services.CoolGrammarAccess;
 import org.eclipse.emf.ecore.EObject;
@@ -48,6 +54,33 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == CoolPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case CoolPackage.ADDITION_EXPRESSION:
+				if(context == grammarAccess.getAdditionExpressionRule() ||
+				   context == grammarAccess.getCompareExpressionRule() ||
+				   context == grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getExpressionRule()) {
+					sequence_AdditionExpression(context, (AdditionExpression) semanticObject); 
+					return; 
+				}
+				else break;
+			case CoolPackage.ASSIGNMENT_EXPRESSION:
+				if(context == grammarAccess.getAdditionExpressionRule() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getMinusOpAction_1_0_0_1_0() ||
+				   context == grammarAccess.getAssignmentExpressionRule() ||
+				   context == grammarAccess.getCompareExpressionRule() ||
+				   context == grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getDispatchExpressionRule() ||
+				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getMultiplicationExpressionRule() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getDivOpAction_1_0_0_1_0() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiplicationExpressionLeftAction_1_0_0_0_0() ||
+				   context == grammarAccess.getPrimaryExpressionRule()) {
+					sequence_AssignmentExpression(context, (AssignmentExpression) semanticObject); 
+					return; 
+				}
+				else break;
 			case CoolPackage.ATTR:
 				if(context == grammarAccess.getAttrRule() ||
 				   context == grammarAccess.getFeature_Rule() ||
@@ -58,17 +91,17 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				else break;
 			case CoolPackage.BLOCK_EXPRESSION:
 				if(context == grammarAccess.getAdditionExpressionRule() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0() ||
 				   context == grammarAccess.getAdditionExpressionAccess().getMinusOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getAdditionExpressionAccess().getPlusOpAction_1_0_0_0_0() ||
 				   context == grammarAccess.getBlockExpressionRule() ||
 				   context == grammarAccess.getCompareExpressionRule() ||
 				   context == grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getDispatchExpressionRule() ||
-				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionExprAction_1_0_0_0() ||
+				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getExpressionRule() ||
 				   context == grammarAccess.getMultiplicationExpressionRule() ||
 				   context == grammarAccess.getMultiplicationExpressionAccess().getDivOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiOpAction_1_0_0_0_0() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiplicationExpressionLeftAction_1_0_0_0_0() ||
 				   context == grammarAccess.getPrimaryExpressionRule()) {
 					sequence_BlockExpression(context, (BlockExpression) semanticObject); 
 					return; 
@@ -76,42 +109,43 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				else break;
 			case CoolPackage.BOOLEAN_LITERAL:
 				if(context == grammarAccess.getAdditionExpressionRule() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0() ||
 				   context == grammarAccess.getAdditionExpressionAccess().getMinusOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getAdditionExpressionAccess().getPlusOpAction_1_0_0_0_0() ||
 				   context == grammarAccess.getBooleanLiteralRule() ||
 				   context == grammarAccess.getCompareExpressionRule() ||
 				   context == grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getDispatchExpressionRule() ||
-				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionExprAction_1_0_0_0() ||
+				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getExpressionRule() ||
 				   context == grammarAccess.getLiteralRule() ||
 				   context == grammarAccess.getMultiplicationExpressionRule() ||
 				   context == grammarAccess.getMultiplicationExpressionAccess().getDivOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiOpAction_1_0_0_0_0() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiplicationExpressionLeftAction_1_0_0_0_0() ||
 				   context == grammarAccess.getPrimaryExpressionRule()) {
 					sequence_BooleanLiteral(context, (BooleanLiteral) semanticObject); 
 					return; 
 				}
 				else break;
 			case CoolPackage.CASE:
-				if(context == grammarAccess.getCaseRule()) {
+				if(context == grammarAccess.getCaseRule() ||
+				   context == grammarAccess.getIdentifiableElementRule()) {
 					sequence_Case(context, (Case) semanticObject); 
 					return; 
 				}
 				else break;
 			case CoolPackage.CASE_EXPRESSION:
 				if(context == grammarAccess.getAdditionExpressionRule() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0() ||
 				   context == grammarAccess.getAdditionExpressionAccess().getMinusOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getAdditionExpressionAccess().getPlusOpAction_1_0_0_0_0() ||
 				   context == grammarAccess.getCaseExpressionRule() ||
 				   context == grammarAccess.getCompareExpressionRule() ||
 				   context == grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getDispatchExpressionRule() ||
-				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionExprAction_1_0_0_0() ||
+				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getExpressionRule() ||
 				   context == grammarAccess.getMultiplicationExpressionRule() ||
 				   context == grammarAccess.getMultiplicationExpressionAccess().getDivOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiOpAction_1_0_0_0_0() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiplicationExpressionLeftAction_1_0_0_0_0() ||
 				   context == grammarAccess.getPrimaryExpressionRule()) {
 					sequence_CaseExpression(context, (CaseExpression) semanticObject); 
 					return; 
@@ -127,76 +161,53 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				else break;
 			case CoolPackage.COMPARE_EXPRESSION:
 				if(context == grammarAccess.getCompareExpressionRule() ||
-				   context == grammarAccess.getDispatchExpressionRule() ||
-				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionExprAction_1_0_0_0() ||
 				   context == grammarAccess.getExpressionRule()) {
 					sequence_CompareExpression(context, (CompareExpression) semanticObject); 
 					return; 
 				}
 				else break;
+			case CoolPackage.CONDITIONAL_EXPRESSION:
+				if(context == grammarAccess.getAdditionExpressionRule() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getMinusOpAction_1_0_0_1_0() ||
+				   context == grammarAccess.getCompareExpressionRule() ||
+				   context == grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getConditionalExpressionRule() ||
+				   context == grammarAccess.getDispatchExpressionRule() ||
+				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getMultiplicationExpressionRule() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getDivOpAction_1_0_0_1_0() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiplicationExpressionLeftAction_1_0_0_0_0() ||
+				   context == grammarAccess.getPrimaryExpressionRule()) {
+					sequence_ConditionalExpression(context, (ConditionalExpression) semanticObject); 
+					return; 
+				}
+				else break;
 			case CoolPackage.DISPATCH_EXPRESSION:
-				if(context == grammarAccess.getDispatchExpressionRule() ||
-				   context == grammarAccess.getExpressionRule()) {
+				if(context == grammarAccess.getAdditionExpressionRule() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getMinusOpAction_1_0_0_1_0() ||
+				   context == grammarAccess.getCompareExpressionRule() ||
+				   context == grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getDispatchExpressionRule() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getMultiplicationExpressionRule() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getDivOpAction_1_0_0_1_0() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiplicationExpressionLeftAction_1_0_0_0_0()) {
 					sequence_DispatchExpression(context, (DispatchExpression) semanticObject); 
 					return; 
 				}
 				else break;
 			case CoolPackage.DIV:
 				if(context == grammarAccess.getAdditionExpressionRule() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0() ||
 				   context == grammarAccess.getAdditionExpressionAccess().getMinusOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getAdditionExpressionAccess().getPlusOpAction_1_0_0_0_0() ||
 				   context == grammarAccess.getCompareExpressionRule() ||
 				   context == grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getDispatchExpressionRule() ||
-				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionExprAction_1_0_0_0() ||
 				   context == grammarAccess.getExpressionRule() ||
 				   context == grammarAccess.getMultiplicationExpressionRule()) {
 					sequence_MultiplicationExpression(context, (Div) semanticObject); 
-					return; 
-				}
-				else break;
-			case CoolPackage.EXPRESSION:
-				if(context == grammarAccess.getAdditionExpressionRule() ||
-				   context == grammarAccess.getAdditionExpressionAccess().getMinusOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getAdditionExpressionAccess().getPlusOpAction_1_0_0_0_0() ||
-				   context == grammarAccess.getCompareExpressionRule() ||
-				   context == grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getDispatchExpressionRule() ||
-				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionExprAction_1_0_0_0() ||
-				   context == grammarAccess.getExpressionRule() ||
-				   context == grammarAccess.getMultiplicationExpressionRule() ||
-				   context == grammarAccess.getMultiplicationExpressionAccess().getDivOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiOpAction_1_0_0_0_0() ||
-				   context == grammarAccess.getPrimaryExpressionRule()) {
-					sequence_AssignmentExpression_ConditionalExpression_IntegerComposite_IsvoidExpression_NegationExpression_ParenExpression_PrimaryExpression_StaticDispatchExpression(context, (Expression) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getAssignmentExpressionRule()) {
-					sequence_AssignmentExpression(context, (Expression) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getConditionalExpressionRule()) {
-					sequence_ConditionalExpression(context, (Expression) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getIntegerCompositeRule()) {
-					sequence_IntegerComposite(context, (Expression) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getIsvoidExpressionRule()) {
-					sequence_IsvoidExpression(context, (Expression) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getNegationExpressionRule()) {
-					sequence_NegationExpression(context, (Expression) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getParenExpressionRule()) {
-					sequence_ParenExpression(context, (Expression) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getStaticDispatchExpressionRule()) {
-					sequence_StaticDispatchExpression(context, (Expression) semanticObject); 
 					return; 
 				}
 				else break;
@@ -209,19 +220,55 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				else break;
 			case CoolPackage.IDENTIFIER_REF_EXPRESSION:
 				if(context == grammarAccess.getAdditionExpressionRule() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0() ||
 				   context == grammarAccess.getAdditionExpressionAccess().getMinusOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getAdditionExpressionAccess().getPlusOpAction_1_0_0_0_0() ||
 				   context == grammarAccess.getCompareExpressionRule() ||
 				   context == grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getDispatchExpressionRule() ||
-				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionExprAction_1_0_0_0() ||
+				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getExpressionRule() ||
 				   context == grammarAccess.getIdentifierRefExpressionRule() ||
 				   context == grammarAccess.getMultiplicationExpressionRule() ||
 				   context == grammarAccess.getMultiplicationExpressionAccess().getDivOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiOpAction_1_0_0_0_0() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiplicationExpressionLeftAction_1_0_0_0_0() ||
 				   context == grammarAccess.getPrimaryExpressionRule()) {
 					sequence_IdentifierRefExpression(context, (IdentifierRefExpression) semanticObject); 
+					return; 
+				}
+				else break;
+			case CoolPackage.INTEGER_COMPOSITE_EXPRESSION:
+				if(context == grammarAccess.getAdditionExpressionRule() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getMinusOpAction_1_0_0_1_0() ||
+				   context == grammarAccess.getCompareExpressionRule() ||
+				   context == grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getDispatchExpressionRule() ||
+				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getIntegerCompositeExpressionRule() ||
+				   context == grammarAccess.getMultiplicationExpressionRule() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getDivOpAction_1_0_0_1_0() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiplicationExpressionLeftAction_1_0_0_0_0() ||
+				   context == grammarAccess.getPrimaryExpressionRule()) {
+					sequence_IntegerCompositeExpression(context, (IntegerCompositeExpression) semanticObject); 
+					return; 
+				}
+				else break;
+			case CoolPackage.ISVOID_EXPRESSION:
+				if(context == grammarAccess.getAdditionExpressionRule() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getMinusOpAction_1_0_0_1_0() ||
+				   context == grammarAccess.getCompareExpressionRule() ||
+				   context == grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getDispatchExpressionRule() ||
+				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getIsvoidExpressionRule() ||
+				   context == grammarAccess.getMultiplicationExpressionRule() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getDivOpAction_1_0_0_1_0() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiplicationExpressionLeftAction_1_0_0_0_0() ||
+				   context == grammarAccess.getPrimaryExpressionRule()) {
+					sequence_IsvoidExpression(context, (IsvoidExpression) semanticObject); 
 					return; 
 				}
 				else break;
@@ -234,17 +281,17 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				else break;
 			case CoolPackage.LET_EXPRESSION:
 				if(context == grammarAccess.getAdditionExpressionRule() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0() ||
 				   context == grammarAccess.getAdditionExpressionAccess().getMinusOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getAdditionExpressionAccess().getPlusOpAction_1_0_0_0_0() ||
 				   context == grammarAccess.getCompareExpressionRule() ||
 				   context == grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getDispatchExpressionRule() ||
-				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionExprAction_1_0_0_0() ||
+				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getExpressionRule() ||
 				   context == grammarAccess.getLetExpressionRule() ||
 				   context == grammarAccess.getMultiplicationExpressionRule() ||
 				   context == grammarAccess.getMultiplicationExpressionAccess().getDivOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiOpAction_1_0_0_0_0() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiplicationExpressionLeftAction_1_0_0_0_0() ||
 				   context == grammarAccess.getPrimaryExpressionRule()) {
 					sequence_LetExpression(context, (LetExpression) semanticObject); 
 					return; 
@@ -252,17 +299,17 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				else break;
 			case CoolPackage.LOOP_EXPRESSION:
 				if(context == grammarAccess.getAdditionExpressionRule() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0() ||
 				   context == grammarAccess.getAdditionExpressionAccess().getMinusOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getAdditionExpressionAccess().getPlusOpAction_1_0_0_0_0() ||
 				   context == grammarAccess.getCompareExpressionRule() ||
 				   context == grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getDispatchExpressionRule() ||
-				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionExprAction_1_0_0_0() ||
+				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getExpressionRule() ||
 				   context == grammarAccess.getLoopExpressionRule() ||
 				   context == grammarAccess.getMultiplicationExpressionRule() ||
 				   context == grammarAccess.getMultiplicationExpressionAccess().getDivOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiOpAction_1_0_0_0_0() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiplicationExpressionLeftAction_1_0_0_0_0() ||
 				   context == grammarAccess.getPrimaryExpressionRule()) {
 					sequence_LoopExpression(context, (LoopExpression) semanticObject); 
 					return; 
@@ -280,39 +327,53 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				if(context == grammarAccess.getAdditionExpressionRule() ||
 				   context == grammarAccess.getCompareExpressionRule() ||
 				   context == grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getDispatchExpressionRule() ||
-				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionExprAction_1_0_0_0() ||
 				   context == grammarAccess.getExpressionRule()) {
 					sequence_AdditionExpression(context, (Minus) semanticObject); 
 					return; 
 				}
 				else break;
-			case CoolPackage.MULTI:
+			case CoolPackage.MULTIPLICATION_EXPRESSION:
 				if(context == grammarAccess.getAdditionExpressionRule() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0() ||
 				   context == grammarAccess.getAdditionExpressionAccess().getMinusOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getAdditionExpressionAccess().getPlusOpAction_1_0_0_0_0() ||
+				   context == grammarAccess.getCompareExpressionRule() ||
+				   context == grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getMultiplicationExpressionRule()) {
+					sequence_MultiplicationExpression(context, (MultiplicationExpression) semanticObject); 
+					return; 
+				}
+				else break;
+			case CoolPackage.NEGATION_EXPRESSION:
+				if(context == grammarAccess.getAdditionExpressionRule() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getMinusOpAction_1_0_0_1_0() ||
 				   context == grammarAccess.getCompareExpressionRule() ||
 				   context == grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getDispatchExpressionRule() ||
-				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionExprAction_1_0_0_0() ||
+				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getExpressionRule() ||
-				   context == grammarAccess.getMultiplicationExpressionRule()) {
-					sequence_MultiplicationExpression(context, (Multi) semanticObject); 
+				   context == grammarAccess.getMultiplicationExpressionRule() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getDivOpAction_1_0_0_1_0() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiplicationExpressionLeftAction_1_0_0_0_0() ||
+				   context == grammarAccess.getNegationExpressionRule() ||
+				   context == grammarAccess.getPrimaryExpressionRule()) {
+					sequence_NegationExpression(context, (NegationExpression) semanticObject); 
 					return; 
 				}
 				else break;
 			case CoolPackage.NEW_EXPRESSION:
 				if(context == grammarAccess.getAdditionExpressionRule() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0() ||
 				   context == grammarAccess.getAdditionExpressionAccess().getMinusOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getAdditionExpressionAccess().getPlusOpAction_1_0_0_0_0() ||
 				   context == grammarAccess.getCompareExpressionRule() ||
 				   context == grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getDispatchExpressionRule() ||
-				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionExprAction_1_0_0_0() ||
+				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getExpressionRule() ||
 				   context == grammarAccess.getMultiplicationExpressionRule() ||
 				   context == grammarAccess.getMultiplicationExpressionAccess().getDivOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiOpAction_1_0_0_0_0() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiplicationExpressionLeftAction_1_0_0_0_0() ||
 				   context == grammarAccess.getNewExpressionRule() ||
 				   context == grammarAccess.getPrimaryExpressionRule()) {
 					sequence_NewExpression(context, (NewExpression) semanticObject); 
@@ -321,31 +382,38 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				else break;
 			case CoolPackage.NUMBER_LITERAL:
 				if(context == grammarAccess.getAdditionExpressionRule() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0() ||
 				   context == grammarAccess.getAdditionExpressionAccess().getMinusOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getAdditionExpressionAccess().getPlusOpAction_1_0_0_0_0() ||
 				   context == grammarAccess.getCompareExpressionRule() ||
 				   context == grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getDispatchExpressionRule() ||
-				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionExprAction_1_0_0_0() ||
+				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getExpressionRule() ||
 				   context == grammarAccess.getLiteralRule() ||
 				   context == grammarAccess.getMultiplicationExpressionRule() ||
 				   context == grammarAccess.getMultiplicationExpressionAccess().getDivOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiOpAction_1_0_0_0_0() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiplicationExpressionLeftAction_1_0_0_0_0() ||
 				   context == grammarAccess.getNumberLiteralRule() ||
 				   context == grammarAccess.getPrimaryExpressionRule()) {
 					sequence_NumberLiteral(context, (NumberLiteral) semanticObject); 
 					return; 
 				}
 				else break;
-			case CoolPackage.PLUS:
+			case CoolPackage.PAREN_EXPRESSION:
 				if(context == grammarAccess.getAdditionExpressionRule() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getMinusOpAction_1_0_0_1_0() ||
 				   context == grammarAccess.getCompareExpressionRule() ||
 				   context == grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getDispatchExpressionRule() ||
-				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionExprAction_1_0_0_0() ||
-				   context == grammarAccess.getExpressionRule()) {
-					sequence_AdditionExpression(context, (Plus) semanticObject); 
+				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getMultiplicationExpressionRule() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getDivOpAction_1_0_0_1_0() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiplicationExpressionLeftAction_1_0_0_0_0() ||
+				   context == grammarAccess.getParenExpressionRule() ||
+				   context == grammarAccess.getPrimaryExpressionRule()) {
+					sequence_ParenExpression(context, (ParenExpression) semanticObject); 
 					return; 
 				}
 				else break;
@@ -357,35 +425,53 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				else break;
 			case CoolPackage.SELF_TYPE_LITERAL:
 				if(context == grammarAccess.getAdditionExpressionRule() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0() ||
 				   context == grammarAccess.getAdditionExpressionAccess().getMinusOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getAdditionExpressionAccess().getPlusOpAction_1_0_0_0_0() ||
 				   context == grammarAccess.getCompareExpressionRule() ||
 				   context == grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getDispatchExpressionRule() ||
-				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionExprAction_1_0_0_0() ||
+				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getExpressionRule() ||
 				   context == grammarAccess.getMultiplicationExpressionRule() ||
 				   context == grammarAccess.getMultiplicationExpressionAccess().getDivOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiOpAction_1_0_0_0_0() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiplicationExpressionLeftAction_1_0_0_0_0() ||
 				   context == grammarAccess.getPrimaryExpressionRule() ||
 				   context == grammarAccess.getSelfTypeLiteralRule()) {
 					sequence_SelfTypeLiteral(context, (SelfTypeLiteral) semanticObject); 
 					return; 
 				}
 				else break;
-			case CoolPackage.STRING_LITERAL:
+			case CoolPackage.STATIC_DISPATCH_EXPRESSION:
 				if(context == grammarAccess.getAdditionExpressionRule() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0() ||
 				   context == grammarAccess.getAdditionExpressionAccess().getMinusOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getAdditionExpressionAccess().getPlusOpAction_1_0_0_0_0() ||
 				   context == grammarAccess.getCompareExpressionRule() ||
 				   context == grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getDispatchExpressionRule() ||
-				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionExprAction_1_0_0_0() ||
+				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getMultiplicationExpressionRule() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getDivOpAction_1_0_0_1_0() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiplicationExpressionLeftAction_1_0_0_0_0() ||
+				   context == grammarAccess.getPrimaryExpressionRule() ||
+				   context == grammarAccess.getStaticDispatchExpressionRule()) {
+					sequence_StaticDispatchExpression(context, (StaticDispatchExpression) semanticObject); 
+					return; 
+				}
+				else break;
+			case CoolPackage.STRING_LITERAL:
+				if(context == grammarAccess.getAdditionExpressionRule() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0() ||
+				   context == grammarAccess.getAdditionExpressionAccess().getMinusOpAction_1_0_0_1_0() ||
+				   context == grammarAccess.getCompareExpressionRule() ||
+				   context == grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getDispatchExpressionRule() ||
+				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getExpressionRule() ||
 				   context == grammarAccess.getLiteralRule() ||
 				   context == grammarAccess.getMultiplicationExpressionRule() ||
 				   context == grammarAccess.getMultiplicationExpressionAccess().getDivOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiOpAction_1_0_0_0_0() ||
+				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiplicationExpressionLeftAction_1_0_0_0_0() ||
 				   context == grammarAccess.getPrimaryExpressionRule() ||
 				   context == grammarAccess.getStringLiteralRule()) {
 					sequence_StringLiteral(context, (StringLiteral) semanticObject); 
@@ -398,36 +484,39 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
+	 *     (left=AdditionExpression_AdditionExpression_1_0_0_0_0 right=Expression)
+	 */
+	protected void sequence_AdditionExpression(EObject context, AdditionExpression semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.ADDITION_EXPRESSION__LEFT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.ADDITION_EXPRESSION__LEFT));
+			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.ADDITION_EXPRESSION__RIGHT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.ADDITION_EXPRESSION__RIGHT));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0(), semanticObject.getLeft());
+		feeder.accept(grammarAccess.getAdditionExpressionAccess().getRightExpressionParserRuleCall_1_1_0(), semanticObject.getRight());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (op=AdditionExpression_Minus_1_0_0_1_0 right=Expression)
 	 */
 	protected void sequence_AdditionExpression(EObject context, Minus semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (op=AdditionExpression_Plus_1_0_0_0_0 right=Expression)
-	 */
-	protected void sequence_AdditionExpression(EObject context, Plus semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (
-	 *         (pred=Expression then_exp=Expression else_exp=Expression?) | 
-	 *         expr=Expression | 
-	 *         (name=SYMBOL expr=Expression) | 
-	 *         expr=Expression | 
-	 *         expr=Expression | 
-	 *         expr=Expression | 
-	 *         (ref=IdentifierRefExpression (actual+=Expression actual+=Expression*)?)
-	 *     )
-	 */
-	protected void sequence_AssignmentExpression_ConditionalExpression_IntegerComposite_IsvoidExpression_NegationExpression_ParenExpression_PrimaryExpression_StaticDispatchExpression(EObject context, Expression semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.MINUS__OP) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.MINUS__OP));
+			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.MINUS__RIGHT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.MINUS__RIGHT));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getAdditionExpressionAccess().getMinusOpAction_1_0_0_1_0(), semanticObject.getOp());
+		feeder.accept(grammarAccess.getAdditionExpressionAccess().getRightExpressionParserRuleCall_1_1_0(), semanticObject.getRight());
+		feeder.finish();
 	}
 	
 	
@@ -435,8 +524,18 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (name=SYMBOL expr=Expression)
 	 */
-	protected void sequence_AssignmentExpression(EObject context, Expression semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+	protected void sequence_AssignmentExpression(EObject context, AssignmentExpression semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.ASSIGNMENT_EXPRESSION__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.ASSIGNMENT_EXPRESSION__NAME));
+			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.ASSIGNMENT_EXPRESSION__EXPR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.ASSIGNMENT_EXPRESSION__EXPR));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getAssignmentExpressionAccess().getNameSYMBOLParserRuleCall_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getAssignmentExpressionAccess().getExprExpressionParserRuleCall_2_0(), semanticObject.getExpr());
+		feeder.finish();
 	}
 	
 	
@@ -463,7 +562,14 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     value=BOOLEAN
 	 */
 	protected void sequence_BooleanLiteral(EObject context, BooleanLiteral semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.BOOLEAN_LITERAL__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.BOOLEAN_LITERAL__VALUE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getBooleanLiteralAccess().getValueBOOLEANParserRuleCall_0(), semanticObject.getValue());
+		feeder.finish();
 	}
 	
 	
@@ -482,8 +588,8 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_Case(EObject context, Case semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.CASE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.CASE__NAME));
+			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.IDENTIFIABLE_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.IDENTIFIABLE_ELEMENT__NAME));
 			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.CASE__TYPE_DECL) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.CASE__TYPE_DECL));
 			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.CASE__EXPR) == ValueTransient.YES)
@@ -512,7 +618,20 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (left=CompareExpression_CompareExpression_1_0_0_0 op=CompareOperator right=Expression)
 	 */
 	protected void sequence_CompareExpression(EObject context, CompareExpression semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.COMPARE_EXPRESSION__LEFT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.COMPARE_EXPRESSION__LEFT));
+			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.COMPARE_EXPRESSION__OP) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.COMPARE_EXPRESSION__OP));
+			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.COMPARE_EXPRESSION__RIGHT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.COMPARE_EXPRESSION__RIGHT));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0(), semanticObject.getLeft());
+		feeder.accept(grammarAccess.getCompareExpressionAccess().getOpCompareOperatorParserRuleCall_1_0_0_1_0(), semanticObject.getOp());
+		feeder.accept(grammarAccess.getCompareExpressionAccess().getRightExpressionParserRuleCall_1_1_0(), semanticObject.getRight());
+		feeder.finish();
 	}
 	
 	
@@ -520,7 +639,7 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (pred=Expression then_exp=Expression else_exp=Expression?)
 	 */
-	protected void sequence_ConditionalExpression(EObject context, Expression semanticObject) {
+	protected void sequence_ConditionalExpression(EObject context, ConditionalExpression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -529,10 +648,11 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         (
-	 *             (expr=DispatchExpression_DispatchExpression_1_0_0_0 type_name=[Type|ID]? ref=IdentifierRefExpression) | 
-	 *             (expr=DispatchExpression_DispatchExpression_1_0_0_0 ref=IdentifierRefExpression)
+	 *             (left=DispatchExpression_DispatchExpression_1_0_0_0 type_name=[Type|ID]? ref=IdentifierRefExpression) | 
+	 *             (left=DispatchExpression_DispatchExpression_1_0_0_0 ref=IdentifierRefExpression)
 	 *         ) 
-	 *         (actual+=Expression actual+=Expression*)?
+	 *         (actual+=Expression actual+=Expression*)? 
+	 *         chain=StaticDispatchExpression?
 	 *     )
 	 */
 	protected void sequence_DispatchExpression(EObject context, DispatchExpression semanticObject) {
@@ -564,7 +684,14 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     id=[IdentifiableElement|ID]
 	 */
 	protected void sequence_IdentifierRefExpression(EObject context, IdentifierRefExpression semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.IDENTIFIER_REF_EXPRESSION__ID) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.IDENTIFIER_REF_EXPRESSION__ID));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getIdentifierRefExpressionAccess().getIdIdentifiableElementIDTerminalRuleCall_0_1(), semanticObject.getId());
+		feeder.finish();
 	}
 	
 	
@@ -572,8 +699,15 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     expr=Expression
 	 */
-	protected void sequence_IntegerComposite(EObject context, Expression semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+	protected void sequence_IntegerCompositeExpression(EObject context, IntegerCompositeExpression semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.INTEGER_COMPOSITE_EXPRESSION__EXPR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.INTEGER_COMPOSITE_EXPRESSION__EXPR));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getIntegerCompositeExpressionAccess().getExprExpressionParserRuleCall_1_0(), semanticObject.getExpr());
+		feeder.finish();
 	}
 	
 	
@@ -581,8 +715,15 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     expr=Expression
 	 */
-	protected void sequence_IsvoidExpression(EObject context, Expression semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+	protected void sequence_IsvoidExpression(EObject context, IsvoidExpression semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.ISVOID_EXPRESSION__EXPR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.ISVOID_EXPRESSION__EXPR));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getIsvoidExpressionAccess().getExprExpressionParserRuleCall_1_0(), semanticObject.getExpr());
+		feeder.finish();
 	}
 	
 	
@@ -609,7 +750,17 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (pred=Expression body=Expression)
 	 */
 	protected void sequence_LoopExpression(EObject context, LoopExpression semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.LOOP_EXPRESSION__PRED) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.LOOP_EXPRESSION__PRED));
+			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.LOOP_EXPRESSION__BODY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.LOOP_EXPRESSION__BODY));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getLoopExpressionAccess().getPredExpressionParserRuleCall_1_0(), semanticObject.getPred());
+		feeder.accept(grammarAccess.getLoopExpressionAccess().getBodyExpressionParserRuleCall_3_0(), semanticObject.getBody());
+		feeder.finish();
 	}
 	
 	
@@ -627,16 +778,36 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (op=MultiplicationExpression_Div_1_0_0_1_0 right=Expression)
 	 */
 	protected void sequence_MultiplicationExpression(EObject context, Div semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.DIV__OP) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.DIV__OP));
+			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.DIV__RIGHT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.DIV__RIGHT));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getMultiplicationExpressionAccess().getDivOpAction_1_0_0_1_0(), semanticObject.getOp());
+		feeder.accept(grammarAccess.getMultiplicationExpressionAccess().getRightExpressionParserRuleCall_1_1_0(), semanticObject.getRight());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (op=MultiplicationExpression_Multi_1_0_0_0_0 right=Expression)
+	 *     (left=MultiplicationExpression_MultiplicationExpression_1_0_0_0_0 right=Expression)
 	 */
-	protected void sequence_MultiplicationExpression(EObject context, Multi semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+	protected void sequence_MultiplicationExpression(EObject context, MultiplicationExpression semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.MULTIPLICATION_EXPRESSION__LEFT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.MULTIPLICATION_EXPRESSION__LEFT));
+			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.MULTIPLICATION_EXPRESSION__RIGHT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.MULTIPLICATION_EXPRESSION__RIGHT));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getMultiplicationExpressionAccess().getMultiplicationExpressionLeftAction_1_0_0_0_0(), semanticObject.getLeft());
+		feeder.accept(grammarAccess.getMultiplicationExpressionAccess().getRightExpressionParserRuleCall_1_1_0(), semanticObject.getRight());
+		feeder.finish();
 	}
 	
 	
@@ -644,8 +815,15 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     expr=Expression
 	 */
-	protected void sequence_NegationExpression(EObject context, Expression semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+	protected void sequence_NegationExpression(EObject context, NegationExpression semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.NEGATION_EXPRESSION__EXPR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.NEGATION_EXPRESSION__EXPR));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getNegationExpressionAccess().getExprExpressionParserRuleCall_1_0(), semanticObject.getExpr());
+		feeder.finish();
 	}
 	
 	
@@ -654,7 +832,14 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     type_name=[Type|ID]
 	 */
 	protected void sequence_NewExpression(EObject context, NewExpression semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.NEW_EXPRESSION__TYPE_NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.NEW_EXPRESSION__TYPE_NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getNewExpressionAccess().getType_nameTypeIDTerminalRuleCall_1_0_1(), semanticObject.getType_name());
+		feeder.finish();
 	}
 	
 	
@@ -663,7 +848,14 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     value=INT
 	 */
 	protected void sequence_NumberLiteral(EObject context, NumberLiteral semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.NUMBER_LITERAL__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.NUMBER_LITERAL__VALUE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getNumberLiteralAccess().getValueINTTerminalRuleCall_0(), semanticObject.getValue());
+		feeder.finish();
 	}
 	
 	
@@ -671,8 +863,15 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     expr=Expression
 	 */
-	protected void sequence_ParenExpression(EObject context, Expression semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+	protected void sequence_ParenExpression(EObject context, ParenExpression semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.PAREN_EXPRESSION__EXPR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.PAREN_EXPRESSION__EXPR));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getParenExpressionAccess().getExprExpressionParserRuleCall_1_0(), semanticObject.getExpr());
+		feeder.finish();
 	}
 	
 	
@@ -696,9 +895,9 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (ref=IdentifierRefExpression (actual+=Expression actual+=Expression*)?)
+	 *     (ref=IdentifierRefExpression (actual+=Expression actual+=Expression*)? chain=StaticDispatchExpression?)
 	 */
-	protected void sequence_StaticDispatchExpression(EObject context, Expression semanticObject) {
+	protected void sequence_StaticDispatchExpression(EObject context, StaticDispatchExpression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -708,6 +907,13 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     value=STRING
 	 */
 	protected void sequence_StringLiteral(EObject context, StringLiteral semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, CoolPackage.Literals.STRING_LITERAL__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CoolPackage.Literals.STRING_LITERAL__VALUE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getStringLiteralAccess().getValueSTRINGTerminalRuleCall_0(), semanticObject.getValue());
+		feeder.finish();
 	}
 }

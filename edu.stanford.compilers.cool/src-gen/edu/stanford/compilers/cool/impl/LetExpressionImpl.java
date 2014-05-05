@@ -36,7 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class LetExpressionImpl extends ExpressionImpl implements LetExpression
+public class LetExpressionImpl extends PrimaryExpressionImpl implements LetExpression
 {
   /**
    * The cached value of the '{@link #getDeclaration() <em>Declaration</em>}' containment reference list.

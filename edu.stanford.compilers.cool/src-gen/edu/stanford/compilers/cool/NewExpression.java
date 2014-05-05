@@ -19,7 +19,7 @@ package edu.stanford.compilers.cool;
  * @model
  * @generated
  */
-public interface NewExpression extends Expression
+public interface NewExpression extends PrimaryExpression
 {
   /**
    * Returns the value of the '<em><b>Type name</b></em>' reference.

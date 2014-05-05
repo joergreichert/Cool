@@ -4,7 +4,7 @@ package edu.stanford.compilers.cool.impl;
 
 import edu.stanford.compilers.cool.CoolPackage;
 import edu.stanford.compilers.cool.Expression;
-import edu.stanford.compilers.cool.Multi;
+import edu.stanford.compilers.cool.MultiplicationExpression;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -16,29 +16,29 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Multi</b></em>'.
+ * An implementation of the model object '<em><b>Multiplication Expression</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link edu.stanford.compilers.cool.impl.MultiImpl#getOp <em>Op</em>}</li>
- *   <li>{@link edu.stanford.compilers.cool.impl.MultiImpl#getRight <em>Right</em>}</li>
+ *   <li>{@link edu.stanford.compilers.cool.impl.MultiplicationExpressionImpl#getLeft <em>Left</em>}</li>
+ *   <li>{@link edu.stanford.compilers.cool.impl.MultiplicationExpressionImpl#getRight <em>Right</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class MultiImpl extends ExpressionImpl implements Multi
+public class MultiplicationExpressionImpl extends ExpressionImpl implements MultiplicationExpression
 {
   /**
-   * The cached value of the '{@link #getOp() <em>Op</em>}' containment reference.
+   * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getOp()
+   * @see #getLeft()
    * @generated
    * @ordered
    */
-  protected Expression op;
+  protected Expression left;
 
   /**
    * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference.
@@ -55,7 +55,7 @@ public class MultiImpl extends ExpressionImpl implements Multi
    * <!-- end-user-doc -->
    * @generated
    */
-  protected MultiImpl()
+  protected MultiplicationExpressionImpl()
   {
     super();
   }
@@ -68,7 +68,7 @@ public class MultiImpl extends ExpressionImpl implements Multi
   @Override
   protected EClass eStaticClass()
   {
-    return CoolPackage.Literals.MULTI;
+    return CoolPackage.Literals.MULTIPLICATION_EXPRESSION;
   }
 
   /**
@@ -76,9 +76,9 @@ public class MultiImpl extends ExpressionImpl implements Multi
    * <!-- end-user-doc -->
    * @generated
    */
-  public Expression getOp()
+  public Expression getLeft()
   {
-    return op;
+    return left;
   }
 
   /**
@@ -86,13 +86,13 @@ public class MultiImpl extends ExpressionImpl implements Multi
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetOp(Expression newOp, NotificationChain msgs)
+  public NotificationChain basicSetLeft(Expression newLeft, NotificationChain msgs)
   {
-    Expression oldOp = op;
-    op = newOp;
+    Expression oldLeft = left;
+    left = newLeft;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CoolPackage.MULTI__OP, oldOp, newOp);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CoolPackage.MULTIPLICATION_EXPRESSION__LEFT, oldLeft, newLeft);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -103,20 +103,20 @@ public class MultiImpl extends ExpressionImpl implements Multi
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setOp(Expression newOp)
+  public void setLeft(Expression newLeft)
   {
-    if (newOp != op)
+    if (newLeft != left)
     {
       NotificationChain msgs = null;
-      if (op != null)
-        msgs = ((InternalEObject)op).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CoolPackage.MULTI__OP, null, msgs);
-      if (newOp != null)
-        msgs = ((InternalEObject)newOp).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CoolPackage.MULTI__OP, null, msgs);
-      msgs = basicSetOp(newOp, msgs);
+      if (left != null)
+        msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CoolPackage.MULTIPLICATION_EXPRESSION__LEFT, null, msgs);
+      if (newLeft != null)
+        msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CoolPackage.MULTIPLICATION_EXPRESSION__LEFT, null, msgs);
+      msgs = basicSetLeft(newLeft, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CoolPackage.MULTI__OP, newOp, newOp));
+      eNotify(new ENotificationImpl(this, Notification.SET, CoolPackage.MULTIPLICATION_EXPRESSION__LEFT, newLeft, newLeft));
   }
 
   /**
@@ -140,7 +140,7 @@ public class MultiImpl extends ExpressionImpl implements Multi
     right = newRight;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CoolPackage.MULTI__RIGHT, oldRight, newRight);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CoolPackage.MULTIPLICATION_EXPRESSION__RIGHT, oldRight, newRight);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -157,14 +157,14 @@ public class MultiImpl extends ExpressionImpl implements Multi
     {
       NotificationChain msgs = null;
       if (right != null)
-        msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CoolPackage.MULTI__RIGHT, null, msgs);
+        msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CoolPackage.MULTIPLICATION_EXPRESSION__RIGHT, null, msgs);
       if (newRight != null)
-        msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CoolPackage.MULTI__RIGHT, null, msgs);
+        msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CoolPackage.MULTIPLICATION_EXPRESSION__RIGHT, null, msgs);
       msgs = basicSetRight(newRight, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CoolPackage.MULTI__RIGHT, newRight, newRight));
+      eNotify(new ENotificationImpl(this, Notification.SET, CoolPackage.MULTIPLICATION_EXPRESSION__RIGHT, newRight, newRight));
   }
 
   /**
@@ -177,9 +177,9 @@ public class MultiImpl extends ExpressionImpl implements Multi
   {
     switch (featureID)
     {
-      case CoolPackage.MULTI__OP:
-        return basicSetOp(null, msgs);
-      case CoolPackage.MULTI__RIGHT:
+      case CoolPackage.MULTIPLICATION_EXPRESSION__LEFT:
+        return basicSetLeft(null, msgs);
+      case CoolPackage.MULTIPLICATION_EXPRESSION__RIGHT:
         return basicSetRight(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -195,9 +195,9 @@ public class MultiImpl extends ExpressionImpl implements Multi
   {
     switch (featureID)
     {
-      case CoolPackage.MULTI__OP:
-        return getOp();
-      case CoolPackage.MULTI__RIGHT:
+      case CoolPackage.MULTIPLICATION_EXPRESSION__LEFT:
+        return getLeft();
+      case CoolPackage.MULTIPLICATION_EXPRESSION__RIGHT:
         return getRight();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -213,10 +213,10 @@ public class MultiImpl extends ExpressionImpl implements Multi
   {
     switch (featureID)
     {
-      case CoolPackage.MULTI__OP:
-        setOp((Expression)newValue);
+      case CoolPackage.MULTIPLICATION_EXPRESSION__LEFT:
+        setLeft((Expression)newValue);
         return;
-      case CoolPackage.MULTI__RIGHT:
+      case CoolPackage.MULTIPLICATION_EXPRESSION__RIGHT:
         setRight((Expression)newValue);
         return;
     }
@@ -233,10 +233,10 @@ public class MultiImpl extends ExpressionImpl implements Multi
   {
     switch (featureID)
     {
-      case CoolPackage.MULTI__OP:
-        setOp((Expression)null);
+      case CoolPackage.MULTIPLICATION_EXPRESSION__LEFT:
+        setLeft((Expression)null);
         return;
-      case CoolPackage.MULTI__RIGHT:
+      case CoolPackage.MULTIPLICATION_EXPRESSION__RIGHT:
         setRight((Expression)null);
         return;
     }
@@ -253,12 +253,12 @@ public class MultiImpl extends ExpressionImpl implements Multi
   {
     switch (featureID)
     {
-      case CoolPackage.MULTI__OP:
-        return op != null;
-      case CoolPackage.MULTI__RIGHT:
+      case CoolPackage.MULTIPLICATION_EXPRESSION__LEFT:
+        return left != null;
+      case CoolPackage.MULTIPLICATION_EXPRESSION__RIGHT:
         return right != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //MultiImpl
+} //MultiplicationExpressionImpl

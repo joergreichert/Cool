@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface BlockExpression extends Expression
+public interface BlockExpression extends PrimaryExpression
 {
   /**
    * Returns the value of the '<em><b>Body</b></em>' containment reference list.

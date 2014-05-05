@@ -19,7 +19,7 @@ package edu.stanford.compilers.cool;
  * @model
  * @generated
  */
-public interface IdentifierRefExpression extends Expression
+public interface IdentifierRefExpression extends PrimaryExpression
 {
   /**
    * Returns the value of the '<em><b>Id</b></em>' reference.

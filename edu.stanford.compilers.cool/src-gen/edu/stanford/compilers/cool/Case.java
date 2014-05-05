@@ -2,7 +2,6 @@
  */
 package edu.stanford.compilers.cool;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,7 +11,6 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link edu.stanford.compilers.cool.Case#getName <em>Name</em>}</li>
  *   <li>{@link edu.stanford.compilers.cool.Case#getType_decl <em>Type decl</em>}</li>
  *   <li>{@link edu.stanford.compilers.cool.Case#getExpr <em>Expr</em>}</li>
  * </ul>
@@ -22,34 +20,8 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Case extends EObject
+public interface Case extends IdentifiableElement
 {
-  /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see edu.stanford.compilers.cool.CoolPackage#getCase_Name()
-   * @model
-   * @generated
-   */
-  String getName();
-
-  /**
-   * Sets the value of the '{@link edu.stanford.compilers.cool.Case#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
-   * @generated
-   */
-  void setName(String value);
-
   /**
    * Returns the value of the '<em><b>Type decl</b></em>' reference.
    * <!-- begin-user-doc -->

@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface LetExpression extends Expression
+public interface LetExpression extends PrimaryExpression
 {
   /**
    * Returns the value of the '<em><b>Declaration</b></em>' containment reference list.

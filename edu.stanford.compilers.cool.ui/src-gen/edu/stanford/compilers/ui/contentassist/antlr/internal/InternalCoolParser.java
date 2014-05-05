@@ -23,7 +23,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalCoolParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'<'", "'<='", "'='", "'true'", "'false'", "'self'", "'class'", "'{'", "'}'", "';'", "'inherits'", "':'", "'<-'", "'('", "')'", "','", "'not'", "'~'", "'.'", "'@'", "'if'", "'then'", "'fi'", "'else'", "'while'", "'loop'", "'pool'", "'let'", "'in'", "'case'", "'of'", "'esac'", "'=>'", "'new'", "'isvoid'", "'+'", "'-'", "'*'", "'/'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'<'", "'<='", "'='", "'true'", "'false'", "'self'", "'class'", "'{'", "'}'", "';'", "'inherits'", "':'", "'<-'", "'('", "')'", "','", "'not'", "'~'", "'new'", "'.'", "'if'", "'then'", "'fi'", "'else'", "'while'", "'loop'", "'pool'", "'isvoid'", "'let'", "'in'", "'case'", "'of'", "'esac'", "'=>'", "'+'", "'-'", "'*'", "'/'", "'@'"
     };
     public static final int RULE_ID=4;
     public static final int T__29=29;
@@ -673,28 +673,28 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleExpression"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:238:1: ruleExpression : ( ruleDispatchExpression ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:238:1: ruleExpression : ( ruleCompareExpression ) ;
     public final void ruleExpression() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:242:2: ( ( ruleDispatchExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:243:1: ( ruleDispatchExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:242:2: ( ( ruleCompareExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:243:1: ( ruleCompareExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:243:1: ( ruleDispatchExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:244:1: ruleDispatchExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:243:1: ( ruleCompareExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:244:1: ruleCompareExpression
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExpressionAccess().getDispatchExpressionParserRuleCall()); 
+               before(grammarAccess.getExpressionAccess().getCompareExpressionParserRuleCall()); 
             }
-            pushFollow(FOLLOW_ruleDispatchExpression_in_ruleExpression461);
-            ruleDispatchExpression();
+            pushFollow(FOLLOW_ruleCompareExpression_in_ruleExpression461);
+            ruleCompareExpression();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExpressionAccess().getDispatchExpressionParserRuleCall()); 
+               after(grammarAccess.getExpressionAccess().getCompareExpressionParserRuleCall()); 
             }
 
             }
@@ -1567,25 +1567,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleNegationExpression"
 
 
-    // $ANTLR start "entryRuleIntegerComposite"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:537:1: entryRuleIntegerComposite : ruleIntegerComposite EOF ;
-    public final void entryRuleIntegerComposite() throws RecognitionException {
+    // $ANTLR start "entryRuleIntegerCompositeExpression"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:537:1: entryRuleIntegerCompositeExpression : ruleIntegerCompositeExpression EOF ;
+    public final void entryRuleIntegerCompositeExpression() throws RecognitionException {
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:538:1: ( ruleIntegerComposite EOF )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:539:1: ruleIntegerComposite EOF
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:538:1: ( ruleIntegerCompositeExpression EOF )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:539:1: ruleIntegerCompositeExpression EOF
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getIntegerCompositeRule()); 
+               before(grammarAccess.getIntegerCompositeExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleIntegerComposite_in_entryRuleIntegerComposite1087);
-            ruleIntegerComposite();
+            pushFollow(FOLLOW_ruleIntegerCompositeExpression_in_entryRuleIntegerCompositeExpression1087);
+            ruleIntegerCompositeExpression();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getIntegerCompositeRule()); 
+               after(grammarAccess.getIntegerCompositeExpressionRule()); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleIntegerComposite1094); if (state.failed) return ;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleIntegerCompositeExpression1094); if (state.failed) return ;
 
             }
 
@@ -1598,30 +1598,30 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleIntegerComposite"
+    // $ANTLR end "entryRuleIntegerCompositeExpression"
 
 
-    // $ANTLR start "ruleIntegerComposite"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:546:1: ruleIntegerComposite : ( ( rule__IntegerComposite__Group__0 ) ) ;
-    public final void ruleIntegerComposite() throws RecognitionException {
+    // $ANTLR start "ruleIntegerCompositeExpression"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:546:1: ruleIntegerCompositeExpression : ( ( rule__IntegerCompositeExpression__Group__0 ) ) ;
+    public final void ruleIntegerCompositeExpression() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:550:2: ( ( ( rule__IntegerComposite__Group__0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:551:1: ( ( rule__IntegerComposite__Group__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:550:2: ( ( ( rule__IntegerCompositeExpression__Group__0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:551:1: ( ( rule__IntegerCompositeExpression__Group__0 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:551:1: ( ( rule__IntegerComposite__Group__0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:552:1: ( rule__IntegerComposite__Group__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:551:1: ( ( rule__IntegerCompositeExpression__Group__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:552:1: ( rule__IntegerCompositeExpression__Group__0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getIntegerCompositeAccess().getGroup()); 
+               before(grammarAccess.getIntegerCompositeExpressionAccess().getGroup()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:553:1: ( rule__IntegerComposite__Group__0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:553:2: rule__IntegerComposite__Group__0
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:553:1: ( rule__IntegerCompositeExpression__Group__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:553:2: rule__IntegerCompositeExpression__Group__0
             {
-            pushFollow(FOLLOW_rule__IntegerComposite__Group__0_in_ruleIntegerComposite1120);
-            rule__IntegerComposite__Group__0();
+            pushFollow(FOLLOW_rule__IntegerCompositeExpression__Group__0_in_ruleIntegerCompositeExpression1120);
+            rule__IntegerCompositeExpression__Group__0();
 
             state._fsp--;
             if (state.failed) return ;
@@ -1629,7 +1629,7 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getIntegerCompositeAccess().getGroup()); 
+               after(grammarAccess.getIntegerCompositeExpressionAccess().getGroup()); 
             }
 
             }
@@ -1649,28 +1649,28 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleIntegerComposite"
+    // $ANTLR end "ruleIntegerCompositeExpression"
 
 
-    // $ANTLR start "entryRuleDispatchExpression"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:565:1: entryRuleDispatchExpression : ruleDispatchExpression EOF ;
-    public final void entryRuleDispatchExpression() throws RecognitionException {
+    // $ANTLR start "entryRuleNewExpression"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:565:1: entryRuleNewExpression : ruleNewExpression EOF ;
+    public final void entryRuleNewExpression() throws RecognitionException {
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:566:1: ( ruleDispatchExpression EOF )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:567:1: ruleDispatchExpression EOF
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:566:1: ( ruleNewExpression EOF )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:567:1: ruleNewExpression EOF
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDispatchExpressionRule()); 
+               before(grammarAccess.getNewExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleDispatchExpression_in_entryRuleDispatchExpression1147);
-            ruleDispatchExpression();
+            pushFollow(FOLLOW_ruleNewExpression_in_entryRuleNewExpression1147);
+            ruleNewExpression();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDispatchExpressionRule()); 
+               after(grammarAccess.getNewExpressionRule()); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDispatchExpression1154); if (state.failed) return ;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNewExpression1154); if (state.failed) return ;
 
             }
 
@@ -1683,30 +1683,30 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleDispatchExpression"
+    // $ANTLR end "entryRuleNewExpression"
 
 
-    // $ANTLR start "ruleDispatchExpression"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:574:1: ruleDispatchExpression : ( ( rule__DispatchExpression__Group__0 ) ) ;
-    public final void ruleDispatchExpression() throws RecognitionException {
+    // $ANTLR start "ruleNewExpression"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:574:1: ruleNewExpression : ( ( rule__NewExpression__Group__0 ) ) ;
+    public final void ruleNewExpression() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:578:2: ( ( ( rule__DispatchExpression__Group__0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:579:1: ( ( rule__DispatchExpression__Group__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:578:2: ( ( ( rule__NewExpression__Group__0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:579:1: ( ( rule__NewExpression__Group__0 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:579:1: ( ( rule__DispatchExpression__Group__0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:580:1: ( rule__DispatchExpression__Group__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:579:1: ( ( rule__NewExpression__Group__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:580:1: ( rule__NewExpression__Group__0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDispatchExpressionAccess().getGroup()); 
+               before(grammarAccess.getNewExpressionAccess().getGroup()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:581:1: ( rule__DispatchExpression__Group__0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:581:2: rule__DispatchExpression__Group__0
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:581:1: ( rule__NewExpression__Group__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:581:2: rule__NewExpression__Group__0
             {
-            pushFollow(FOLLOW_rule__DispatchExpression__Group__0_in_ruleDispatchExpression1180);
-            rule__DispatchExpression__Group__0();
+            pushFollow(FOLLOW_rule__NewExpression__Group__0_in_ruleNewExpression1180);
+            rule__NewExpression__Group__0();
 
             state._fsp--;
             if (state.failed) return ;
@@ -1714,7 +1714,7 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDispatchExpressionAccess().getGroup()); 
+               after(grammarAccess.getNewExpressionAccess().getGroup()); 
             }
 
             }
@@ -1734,7 +1734,7 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleDispatchExpression"
+    // $ANTLR end "ruleNewExpression"
 
 
     // $ANTLR start "entryRuleStaticDispatchExpression"
@@ -2077,17 +2077,102 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleBlockExpression"
 
 
+    // $ANTLR start "entryRuleIsvoidExpression"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:705:1: entryRuleIsvoidExpression : ruleIsvoidExpression EOF ;
+    public final void entryRuleIsvoidExpression() throws RecognitionException {
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:706:1: ( ruleIsvoidExpression EOF )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:707:1: ruleIsvoidExpression EOF
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getIsvoidExpressionRule()); 
+            }
+            pushFollow(FOLLOW_ruleIsvoidExpression_in_entryRuleIsvoidExpression1447);
+            ruleIsvoidExpression();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getIsvoidExpressionRule()); 
+            }
+            match(input,EOF,FOLLOW_EOF_in_entryRuleIsvoidExpression1454); if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleIsvoidExpression"
+
+
+    // $ANTLR start "ruleIsvoidExpression"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:714:1: ruleIsvoidExpression : ( ( rule__IsvoidExpression__Group__0 ) ) ;
+    public final void ruleIsvoidExpression() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:718:2: ( ( ( rule__IsvoidExpression__Group__0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:719:1: ( ( rule__IsvoidExpression__Group__0 ) )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:719:1: ( ( rule__IsvoidExpression__Group__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:720:1: ( rule__IsvoidExpression__Group__0 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getIsvoidExpressionAccess().getGroup()); 
+            }
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:721:1: ( rule__IsvoidExpression__Group__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:721:2: rule__IsvoidExpression__Group__0
+            {
+            pushFollow(FOLLOW_rule__IsvoidExpression__Group__0_in_ruleIsvoidExpression1480);
+            rule__IsvoidExpression__Group__0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getIsvoidExpressionAccess().getGroup()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleIsvoidExpression"
+
+
     // $ANTLR start "entryRuleLetExpression"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:705:1: entryRuleLetExpression : ruleLetExpression EOF ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:733:1: entryRuleLetExpression : ruleLetExpression EOF ;
     public final void entryRuleLetExpression() throws RecognitionException {
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:706:1: ( ruleLetExpression EOF )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:707:1: ruleLetExpression EOF
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:734:1: ( ruleLetExpression EOF )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:735:1: ruleLetExpression EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleLetExpression_in_entryRuleLetExpression1447);
+            pushFollow(FOLLOW_ruleLetExpression_in_entryRuleLetExpression1507);
             ruleLetExpression();
 
             state._fsp--;
@@ -2095,7 +2180,7 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLetExpressionRule()); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLetExpression1454); if (state.failed) return ;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLetExpression1514); if (state.failed) return ;
 
             }
 
@@ -2112,25 +2197,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleLetExpression"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:714:1: ruleLetExpression : ( ( rule__LetExpression__Group__0 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:742:1: ruleLetExpression : ( ( rule__LetExpression__Group__0 ) ) ;
     public final void ruleLetExpression() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:718:2: ( ( ( rule__LetExpression__Group__0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:719:1: ( ( rule__LetExpression__Group__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:746:2: ( ( ( rule__LetExpression__Group__0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:747:1: ( ( rule__LetExpression__Group__0 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:719:1: ( ( rule__LetExpression__Group__0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:720:1: ( rule__LetExpression__Group__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:747:1: ( ( rule__LetExpression__Group__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:748:1: ( rule__LetExpression__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetExpressionAccess().getGroup()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:721:1: ( rule__LetExpression__Group__0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:721:2: rule__LetExpression__Group__0
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:749:1: ( rule__LetExpression__Group__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:749:2: rule__LetExpression__Group__0
             {
-            pushFollow(FOLLOW_rule__LetExpression__Group__0_in_ruleLetExpression1480);
+            pushFollow(FOLLOW_rule__LetExpression__Group__0_in_ruleLetExpression1540);
             rule__LetExpression__Group__0();
 
             state._fsp--;
@@ -2163,16 +2248,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleLetDeclaration"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:733:1: entryRuleLetDeclaration : ruleLetDeclaration EOF ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:761:1: entryRuleLetDeclaration : ruleLetDeclaration EOF ;
     public final void entryRuleLetDeclaration() throws RecognitionException {
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:734:1: ( ruleLetDeclaration EOF )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:735:1: ruleLetDeclaration EOF
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:762:1: ( ruleLetDeclaration EOF )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:763:1: ruleLetDeclaration EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetDeclarationRule()); 
             }
-            pushFollow(FOLLOW_ruleLetDeclaration_in_entryRuleLetDeclaration1507);
+            pushFollow(FOLLOW_ruleLetDeclaration_in_entryRuleLetDeclaration1567);
             ruleLetDeclaration();
 
             state._fsp--;
@@ -2180,7 +2265,7 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLetDeclarationRule()); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLetDeclaration1514); if (state.failed) return ;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLetDeclaration1574); if (state.failed) return ;
 
             }
 
@@ -2197,25 +2282,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleLetDeclaration"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:742:1: ruleLetDeclaration : ( ( rule__LetDeclaration__Group__0 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:770:1: ruleLetDeclaration : ( ( rule__LetDeclaration__Group__0 ) ) ;
     public final void ruleLetDeclaration() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:746:2: ( ( ( rule__LetDeclaration__Group__0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:747:1: ( ( rule__LetDeclaration__Group__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:774:2: ( ( ( rule__LetDeclaration__Group__0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:775:1: ( ( rule__LetDeclaration__Group__0 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:747:1: ( ( rule__LetDeclaration__Group__0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:748:1: ( rule__LetDeclaration__Group__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:775:1: ( ( rule__LetDeclaration__Group__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:776:1: ( rule__LetDeclaration__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetDeclarationAccess().getGroup()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:749:1: ( rule__LetDeclaration__Group__0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:749:2: rule__LetDeclaration__Group__0
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:777:1: ( rule__LetDeclaration__Group__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:777:2: rule__LetDeclaration__Group__0
             {
-            pushFollow(FOLLOW_rule__LetDeclaration__Group__0_in_ruleLetDeclaration1540);
+            pushFollow(FOLLOW_rule__LetDeclaration__Group__0_in_ruleLetDeclaration1600);
             rule__LetDeclaration__Group__0();
 
             state._fsp--;
@@ -2248,16 +2333,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleCaseExpression"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:761:1: entryRuleCaseExpression : ruleCaseExpression EOF ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:789:1: entryRuleCaseExpression : ruleCaseExpression EOF ;
     public final void entryRuleCaseExpression() throws RecognitionException {
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:762:1: ( ruleCaseExpression EOF )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:763:1: ruleCaseExpression EOF
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:790:1: ( ruleCaseExpression EOF )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:791:1: ruleCaseExpression EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleCaseExpression_in_entryRuleCaseExpression1567);
+            pushFollow(FOLLOW_ruleCaseExpression_in_entryRuleCaseExpression1627);
             ruleCaseExpression();
 
             state._fsp--;
@@ -2265,7 +2350,7 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCaseExpressionRule()); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCaseExpression1574); if (state.failed) return ;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCaseExpression1634); if (state.failed) return ;
 
             }
 
@@ -2282,25 +2367,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleCaseExpression"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:770:1: ruleCaseExpression : ( ( rule__CaseExpression__Group__0 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:798:1: ruleCaseExpression : ( ( rule__CaseExpression__Group__0 ) ) ;
     public final void ruleCaseExpression() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:774:2: ( ( ( rule__CaseExpression__Group__0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:775:1: ( ( rule__CaseExpression__Group__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:802:2: ( ( ( rule__CaseExpression__Group__0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:803:1: ( ( rule__CaseExpression__Group__0 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:775:1: ( ( rule__CaseExpression__Group__0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:776:1: ( rule__CaseExpression__Group__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:803:1: ( ( rule__CaseExpression__Group__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:804:1: ( rule__CaseExpression__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseExpressionAccess().getGroup()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:777:1: ( rule__CaseExpression__Group__0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:777:2: rule__CaseExpression__Group__0
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:805:1: ( rule__CaseExpression__Group__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:805:2: rule__CaseExpression__Group__0
             {
-            pushFollow(FOLLOW_rule__CaseExpression__Group__0_in_ruleCaseExpression1600);
+            pushFollow(FOLLOW_rule__CaseExpression__Group__0_in_ruleCaseExpression1660);
             rule__CaseExpression__Group__0();
 
             state._fsp--;
@@ -2333,16 +2418,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleCase"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:789:1: entryRuleCase : ruleCase EOF ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:817:1: entryRuleCase : ruleCase EOF ;
     public final void entryRuleCase() throws RecognitionException {
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:790:1: ( ruleCase EOF )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:791:1: ruleCase EOF
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:818:1: ( ruleCase EOF )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:819:1: ruleCase EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseRule()); 
             }
-            pushFollow(FOLLOW_ruleCase_in_entryRuleCase1627);
+            pushFollow(FOLLOW_ruleCase_in_entryRuleCase1687);
             ruleCase();
 
             state._fsp--;
@@ -2350,7 +2435,7 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCaseRule()); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCase1634); if (state.failed) return ;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCase1694); if (state.failed) return ;
 
             }
 
@@ -2367,25 +2452,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleCase"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:798:1: ruleCase : ( ( rule__Case__Group__0 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:826:1: ruleCase : ( ( rule__Case__Group__0 ) ) ;
     public final void ruleCase() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:802:2: ( ( ( rule__Case__Group__0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:803:1: ( ( rule__Case__Group__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:830:2: ( ( ( rule__Case__Group__0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:831:1: ( ( rule__Case__Group__0 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:803:1: ( ( rule__Case__Group__0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:804:1: ( rule__Case__Group__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:831:1: ( ( rule__Case__Group__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:832:1: ( rule__Case__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseAccess().getGroup()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:805:1: ( rule__Case__Group__0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:805:2: rule__Case__Group__0
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:833:1: ( rule__Case__Group__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:833:2: rule__Case__Group__0
             {
-            pushFollow(FOLLOW_rule__Case__Group__0_in_ruleCase1660);
+            pushFollow(FOLLOW_rule__Case__Group__0_in_ruleCase1720);
             rule__Case__Group__0();
 
             state._fsp--;
@@ -2417,187 +2502,17 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleCase"
 
 
-    // $ANTLR start "entryRuleNewExpression"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:817:1: entryRuleNewExpression : ruleNewExpression EOF ;
-    public final void entryRuleNewExpression() throws RecognitionException {
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:818:1: ( ruleNewExpression EOF )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:819:1: ruleNewExpression EOF
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getNewExpressionRule()); 
-            }
-            pushFollow(FOLLOW_ruleNewExpression_in_entryRuleNewExpression1687);
-            ruleNewExpression();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getNewExpressionRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNewExpression1694); if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-        }
-        return ;
-    }
-    // $ANTLR end "entryRuleNewExpression"
-
-
-    // $ANTLR start "ruleNewExpression"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:826:1: ruleNewExpression : ( ( rule__NewExpression__Group__0 ) ) ;
-    public final void ruleNewExpression() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:830:2: ( ( ( rule__NewExpression__Group__0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:831:1: ( ( rule__NewExpression__Group__0 ) )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:831:1: ( ( rule__NewExpression__Group__0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:832:1: ( rule__NewExpression__Group__0 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getNewExpressionAccess().getGroup()); 
-            }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:833:1: ( rule__NewExpression__Group__0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:833:2: rule__NewExpression__Group__0
-            {
-            pushFollow(FOLLOW_rule__NewExpression__Group__0_in_ruleNewExpression1720);
-            rule__NewExpression__Group__0();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getNewExpressionAccess().getGroup()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "ruleNewExpression"
-
-
-    // $ANTLR start "entryRuleIsvoidExpression"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:845:1: entryRuleIsvoidExpression : ruleIsvoidExpression EOF ;
-    public final void entryRuleIsvoidExpression() throws RecognitionException {
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:846:1: ( ruleIsvoidExpression EOF )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:847:1: ruleIsvoidExpression EOF
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getIsvoidExpressionRule()); 
-            }
-            pushFollow(FOLLOW_ruleIsvoidExpression_in_entryRuleIsvoidExpression1747);
-            ruleIsvoidExpression();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getIsvoidExpressionRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleIsvoidExpression1754); if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-        }
-        return ;
-    }
-    // $ANTLR end "entryRuleIsvoidExpression"
-
-
-    // $ANTLR start "ruleIsvoidExpression"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:854:1: ruleIsvoidExpression : ( ( rule__IsvoidExpression__Group__0 ) ) ;
-    public final void ruleIsvoidExpression() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:858:2: ( ( ( rule__IsvoidExpression__Group__0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:859:1: ( ( rule__IsvoidExpression__Group__0 ) )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:859:1: ( ( rule__IsvoidExpression__Group__0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:860:1: ( rule__IsvoidExpression__Group__0 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getIsvoidExpressionAccess().getGroup()); 
-            }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:861:1: ( rule__IsvoidExpression__Group__0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:861:2: rule__IsvoidExpression__Group__0
-            {
-            pushFollow(FOLLOW_rule__IsvoidExpression__Group__0_in_ruleIsvoidExpression1780);
-            rule__IsvoidExpression__Group__0();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getIsvoidExpressionAccess().getGroup()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "ruleIsvoidExpression"
-
-
     // $ANTLR start "entryRuleCompareExpression"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:873:1: entryRuleCompareExpression : ruleCompareExpression EOF ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:845:1: entryRuleCompareExpression : ruleCompareExpression EOF ;
     public final void entryRuleCompareExpression() throws RecognitionException {
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:874:1: ( ruleCompareExpression EOF )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:875:1: ruleCompareExpression EOF
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:846:1: ( ruleCompareExpression EOF )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:847:1: ruleCompareExpression EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCompareExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleCompareExpression_in_entryRuleCompareExpression1807);
+            pushFollow(FOLLOW_ruleCompareExpression_in_entryRuleCompareExpression1747);
             ruleCompareExpression();
 
             state._fsp--;
@@ -2605,7 +2520,7 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCompareExpressionRule()); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCompareExpression1814); if (state.failed) return ;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCompareExpression1754); if (state.failed) return ;
 
             }
 
@@ -2622,25 +2537,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleCompareExpression"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:882:1: ruleCompareExpression : ( ( rule__CompareExpression__Group__0 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:854:1: ruleCompareExpression : ( ( rule__CompareExpression__Group__0 ) ) ;
     public final void ruleCompareExpression() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:886:2: ( ( ( rule__CompareExpression__Group__0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:887:1: ( ( rule__CompareExpression__Group__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:858:2: ( ( ( rule__CompareExpression__Group__0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:859:1: ( ( rule__CompareExpression__Group__0 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:887:1: ( ( rule__CompareExpression__Group__0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:888:1: ( rule__CompareExpression__Group__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:859:1: ( ( rule__CompareExpression__Group__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:860:1: ( rule__CompareExpression__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCompareExpressionAccess().getGroup()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:889:1: ( rule__CompareExpression__Group__0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:889:2: rule__CompareExpression__Group__0
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:861:1: ( rule__CompareExpression__Group__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:861:2: rule__CompareExpression__Group__0
             {
-            pushFollow(FOLLOW_rule__CompareExpression__Group__0_in_ruleCompareExpression1840);
+            pushFollow(FOLLOW_rule__CompareExpression__Group__0_in_ruleCompareExpression1780);
             rule__CompareExpression__Group__0();
 
             state._fsp--;
@@ -2673,16 +2588,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleCompareOperator"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:901:1: entryRuleCompareOperator : ruleCompareOperator EOF ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:873:1: entryRuleCompareOperator : ruleCompareOperator EOF ;
     public final void entryRuleCompareOperator() throws RecognitionException {
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:902:1: ( ruleCompareOperator EOF )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:903:1: ruleCompareOperator EOF
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:874:1: ( ruleCompareOperator EOF )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:875:1: ruleCompareOperator EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCompareOperatorRule()); 
             }
-            pushFollow(FOLLOW_ruleCompareOperator_in_entryRuleCompareOperator1867);
+            pushFollow(FOLLOW_ruleCompareOperator_in_entryRuleCompareOperator1807);
             ruleCompareOperator();
 
             state._fsp--;
@@ -2690,7 +2605,7 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCompareOperatorRule()); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCompareOperator1874); if (state.failed) return ;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCompareOperator1814); if (state.failed) return ;
 
             }
 
@@ -2707,25 +2622,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleCompareOperator"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:910:1: ruleCompareOperator : ( ( rule__CompareOperator__Alternatives ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:882:1: ruleCompareOperator : ( ( rule__CompareOperator__Alternatives ) ) ;
     public final void ruleCompareOperator() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:914:2: ( ( ( rule__CompareOperator__Alternatives ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:915:1: ( ( rule__CompareOperator__Alternatives ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:886:2: ( ( ( rule__CompareOperator__Alternatives ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:887:1: ( ( rule__CompareOperator__Alternatives ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:915:1: ( ( rule__CompareOperator__Alternatives ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:916:1: ( rule__CompareOperator__Alternatives )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:887:1: ( ( rule__CompareOperator__Alternatives ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:888:1: ( rule__CompareOperator__Alternatives )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCompareOperatorAccess().getAlternatives()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:917:1: ( rule__CompareOperator__Alternatives )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:917:2: rule__CompareOperator__Alternatives
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:889:1: ( rule__CompareOperator__Alternatives )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:889:2: rule__CompareOperator__Alternatives
             {
-            pushFollow(FOLLOW_rule__CompareOperator__Alternatives_in_ruleCompareOperator1900);
+            pushFollow(FOLLOW_rule__CompareOperator__Alternatives_in_ruleCompareOperator1840);
             rule__CompareOperator__Alternatives();
 
             state._fsp--;
@@ -2758,16 +2673,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleAdditionExpression"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:929:1: entryRuleAdditionExpression : ruleAdditionExpression EOF ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:901:1: entryRuleAdditionExpression : ruleAdditionExpression EOF ;
     public final void entryRuleAdditionExpression() throws RecognitionException {
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:930:1: ( ruleAdditionExpression EOF )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:931:1: ruleAdditionExpression EOF
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:902:1: ( ruleAdditionExpression EOF )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:903:1: ruleAdditionExpression EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditionExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleAdditionExpression_in_entryRuleAdditionExpression1927);
+            pushFollow(FOLLOW_ruleAdditionExpression_in_entryRuleAdditionExpression1867);
             ruleAdditionExpression();
 
             state._fsp--;
@@ -2775,7 +2690,7 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAdditionExpressionRule()); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAdditionExpression1934); if (state.failed) return ;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAdditionExpression1874); if (state.failed) return ;
 
             }
 
@@ -2792,25 +2707,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleAdditionExpression"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:938:1: ruleAdditionExpression : ( ( rule__AdditionExpression__Group__0 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:910:1: ruleAdditionExpression : ( ( rule__AdditionExpression__Group__0 ) ) ;
     public final void ruleAdditionExpression() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:942:2: ( ( ( rule__AdditionExpression__Group__0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:943:1: ( ( rule__AdditionExpression__Group__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:914:2: ( ( ( rule__AdditionExpression__Group__0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:915:1: ( ( rule__AdditionExpression__Group__0 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:943:1: ( ( rule__AdditionExpression__Group__0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:944:1: ( rule__AdditionExpression__Group__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:915:1: ( ( rule__AdditionExpression__Group__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:916:1: ( rule__AdditionExpression__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditionExpressionAccess().getGroup()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:945:1: ( rule__AdditionExpression__Group__0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:945:2: rule__AdditionExpression__Group__0
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:917:1: ( rule__AdditionExpression__Group__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:917:2: rule__AdditionExpression__Group__0
             {
-            pushFollow(FOLLOW_rule__AdditionExpression__Group__0_in_ruleAdditionExpression1960);
+            pushFollow(FOLLOW_rule__AdditionExpression__Group__0_in_ruleAdditionExpression1900);
             rule__AdditionExpression__Group__0();
 
             state._fsp--;
@@ -2843,16 +2758,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleMultiplicationExpression"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:957:1: entryRuleMultiplicationExpression : ruleMultiplicationExpression EOF ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:929:1: entryRuleMultiplicationExpression : ruleMultiplicationExpression EOF ;
     public final void entryRuleMultiplicationExpression() throws RecognitionException {
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:958:1: ( ruleMultiplicationExpression EOF )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:959:1: ruleMultiplicationExpression EOF
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:930:1: ( ruleMultiplicationExpression EOF )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:931:1: ruleMultiplicationExpression EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicationExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleMultiplicationExpression_in_entryRuleMultiplicationExpression1987);
+            pushFollow(FOLLOW_ruleMultiplicationExpression_in_entryRuleMultiplicationExpression1927);
             ruleMultiplicationExpression();
 
             state._fsp--;
@@ -2860,7 +2775,7 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMultiplicationExpressionRule()); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMultiplicationExpression1994); if (state.failed) return ;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMultiplicationExpression1934); if (state.failed) return ;
 
             }
 
@@ -2877,25 +2792,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleMultiplicationExpression"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:966:1: ruleMultiplicationExpression : ( ( rule__MultiplicationExpression__Group__0 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:938:1: ruleMultiplicationExpression : ( ( rule__MultiplicationExpression__Group__0 ) ) ;
     public final void ruleMultiplicationExpression() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:970:2: ( ( ( rule__MultiplicationExpression__Group__0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:971:1: ( ( rule__MultiplicationExpression__Group__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:942:2: ( ( ( rule__MultiplicationExpression__Group__0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:943:1: ( ( rule__MultiplicationExpression__Group__0 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:971:1: ( ( rule__MultiplicationExpression__Group__0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:972:1: ( rule__MultiplicationExpression__Group__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:943:1: ( ( rule__MultiplicationExpression__Group__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:944:1: ( rule__MultiplicationExpression__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicationExpressionAccess().getGroup()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:973:1: ( rule__MultiplicationExpression__Group__0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:973:2: rule__MultiplicationExpression__Group__0
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:945:1: ( rule__MultiplicationExpression__Group__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:945:2: rule__MultiplicationExpression__Group__0
             {
-            pushFollow(FOLLOW_rule__MultiplicationExpression__Group__0_in_ruleMultiplicationExpression2020);
+            pushFollow(FOLLOW_rule__MultiplicationExpression__Group__0_in_ruleMultiplicationExpression1960);
             rule__MultiplicationExpression__Group__0();
 
             state._fsp--;
@@ -2925,6 +2840,91 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
         return ;
     }
     // $ANTLR end "ruleMultiplicationExpression"
+
+
+    // $ANTLR start "entryRuleDispatchExpression"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:957:1: entryRuleDispatchExpression : ruleDispatchExpression EOF ;
+    public final void entryRuleDispatchExpression() throws RecognitionException {
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:958:1: ( ruleDispatchExpression EOF )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:959:1: ruleDispatchExpression EOF
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionRule()); 
+            }
+            pushFollow(FOLLOW_ruleDispatchExpression_in_entryRuleDispatchExpression1987);
+            ruleDispatchExpression();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionRule()); 
+            }
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDispatchExpression1994); if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleDispatchExpression"
+
+
+    // $ANTLR start "ruleDispatchExpression"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:966:1: ruleDispatchExpression : ( ( rule__DispatchExpression__Group__0 ) ) ;
+    public final void ruleDispatchExpression() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:970:2: ( ( ( rule__DispatchExpression__Group__0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:971:1: ( ( rule__DispatchExpression__Group__0 ) )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:971:1: ( ( rule__DispatchExpression__Group__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:972:1: ( rule__DispatchExpression__Group__0 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getGroup()); 
+            }
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:973:1: ( rule__DispatchExpression__Group__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:973:2: rule__DispatchExpression__Group__0
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__Group__0_in_ruleDispatchExpression2020);
+            rule__DispatchExpression__Group__0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getGroup()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleDispatchExpression"
 
 
     // $ANTLR start "entryRuleBOOLEAN"
@@ -3111,11 +3111,11 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
             if ( (LA2_0==RULE_ID) ) {
                 int LA2_1 = input.LA(2);
 
-                if ( (LA2_1==24) ) {
-                    alt2=2;
-                }
-                else if ( (LA2_1==22) ) {
+                if ( (LA2_1==22) ) {
                     alt2=1;
+                }
+                else if ( (LA2_1==24) ) {
+                    alt2=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
@@ -3214,13 +3214,13 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimaryExpression__Alternatives"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:1067:1: rule__PrimaryExpression__Alternatives : ( ( ruleConditionalExpression ) | ( ruleLoopExpression ) | ( ruleBlockExpression ) | ( ruleLetExpression ) | ( ruleCaseExpression ) | ( ruleNewExpression ) | ( ruleIsvoidExpression ) | ( ruleAssignmentExpression ) | ( ruleSelfTypeLiteral ) | ( ruleIdentifierRefExpression ) | ( ruleLiteral ) | ( ruleParenExpression ) | ( ruleNegationExpression ) | ( ruleIntegerComposite ) | ( ruleStaticDispatchExpression ) );
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:1067:1: rule__PrimaryExpression__Alternatives : ( ( ruleConditionalExpression ) | ( ruleLoopExpression ) | ( ruleBlockExpression ) | ( ruleLetExpression ) | ( ruleCaseExpression ) | ( ruleNewExpression ) | ( ruleIsvoidExpression ) | ( ruleAssignmentExpression ) | ( ruleSelfTypeLiteral ) | ( ruleIdentifierRefExpression ) | ( ruleLiteral ) | ( ruleParenExpression ) | ( ruleNegationExpression ) | ( ruleIntegerCompositeExpression ) | ( ruleStaticDispatchExpression ) );
     public final void rule__PrimaryExpression__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:1071:1: ( ( ruleConditionalExpression ) | ( ruleLoopExpression ) | ( ruleBlockExpression ) | ( ruleLetExpression ) | ( ruleCaseExpression ) | ( ruleNewExpression ) | ( ruleIsvoidExpression ) | ( ruleAssignmentExpression ) | ( ruleSelfTypeLiteral ) | ( ruleIdentifierRefExpression ) | ( ruleLiteral ) | ( ruleParenExpression ) | ( ruleNegationExpression ) | ( ruleIntegerComposite ) | ( ruleStaticDispatchExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:1071:1: ( ( ruleConditionalExpression ) | ( ruleLoopExpression ) | ( ruleBlockExpression ) | ( ruleLetExpression ) | ( ruleCaseExpression ) | ( ruleNewExpression ) | ( ruleIsvoidExpression ) | ( ruleAssignmentExpression ) | ( ruleSelfTypeLiteral ) | ( ruleIdentifierRefExpression ) | ( ruleLiteral ) | ( ruleParenExpression ) | ( ruleNegationExpression ) | ( ruleIntegerCompositeExpression ) | ( ruleStaticDispatchExpression ) )
             int alt3=15;
             alt3 = dfa3.predict(input);
             switch (alt3) {
@@ -3524,21 +3524,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 14 :
-                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:1150:6: ( ruleIntegerComposite )
+                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:1150:6: ( ruleIntegerCompositeExpression )
                     {
-                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:1150:6: ( ruleIntegerComposite )
-                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:1151:1: ruleIntegerComposite
+                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:1150:6: ( ruleIntegerCompositeExpression )
+                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:1151:1: ruleIntegerCompositeExpression
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getPrimaryExpressionAccess().getIntegerCompositeParserRuleCall_13()); 
+                       before(grammarAccess.getPrimaryExpressionAccess().getIntegerCompositeExpressionParserRuleCall_13()); 
                     }
-                    pushFollow(FOLLOW_ruleIntegerComposite_in_rule__PrimaryExpression__Alternatives2450);
-                    ruleIntegerComposite();
+                    pushFollow(FOLLOW_ruleIntegerCompositeExpression_in_rule__PrimaryExpression__Alternatives2450);
+                    ruleIntegerCompositeExpression();
 
                     state._fsp--;
                     if (state.failed) return ;
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getPrimaryExpressionAccess().getIntegerCompositeParserRuleCall_13()); 
+                       after(grammarAccess.getPrimaryExpressionAccess().getIntegerCompositeExpressionParserRuleCall_13()); 
                     }
 
                     }
@@ -3826,10 +3826,10 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
             int alt6=2;
             int LA6_0 = input.LA(1);
 
-            if ( (LA6_0==46) ) {
+            if ( (LA6_0==45) ) {
                 alt6=1;
             }
-            else if ( (LA6_0==47) ) {
+            else if ( (LA6_0==46) ) {
                 alt6=2;
             }
             else {
@@ -3926,10 +3926,10 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
             int alt7=2;
             int LA7_0 = input.LA(1);
 
-            if ( (LA7_0==48) ) {
+            if ( (LA7_0==47) ) {
                 alt7=1;
             }
-            else if ( (LA7_0==49) ) {
+            else if ( (LA7_0==48) ) {
                 alt7=2;
             }
             else {
@@ -7791,23 +7791,23 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__NegationExpression__Group__1__Impl"
 
 
-    // $ANTLR start "rule__IntegerComposite__Group__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2691:1: rule__IntegerComposite__Group__0 : rule__IntegerComposite__Group__0__Impl rule__IntegerComposite__Group__1 ;
-    public final void rule__IntegerComposite__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__IntegerCompositeExpression__Group__0"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2691:1: rule__IntegerCompositeExpression__Group__0 : rule__IntegerCompositeExpression__Group__0__Impl rule__IntegerCompositeExpression__Group__1 ;
+    public final void rule__IntegerCompositeExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2695:1: ( rule__IntegerComposite__Group__0__Impl rule__IntegerComposite__Group__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2696:2: rule__IntegerComposite__Group__0__Impl rule__IntegerComposite__Group__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2695:1: ( rule__IntegerCompositeExpression__Group__0__Impl rule__IntegerCompositeExpression__Group__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2696:2: rule__IntegerCompositeExpression__Group__0__Impl rule__IntegerCompositeExpression__Group__1
             {
-            pushFollow(FOLLOW_rule__IntegerComposite__Group__0__Impl_in_rule__IntegerComposite__Group__05526);
-            rule__IntegerComposite__Group__0__Impl();
+            pushFollow(FOLLOW_rule__IntegerCompositeExpression__Group__0__Impl_in_rule__IntegerCompositeExpression__Group__05526);
+            rule__IntegerCompositeExpression__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__IntegerComposite__Group__1_in_rule__IntegerComposite__Group__05529);
-            rule__IntegerComposite__Group__1();
+            pushFollow(FOLLOW_rule__IntegerCompositeExpression__Group__1_in_rule__IntegerCompositeExpression__Group__05529);
+            rule__IntegerCompositeExpression__Group__1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -7826,12 +7826,12 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__IntegerComposite__Group__0"
+    // $ANTLR end "rule__IntegerCompositeExpression__Group__0"
 
 
-    // $ANTLR start "rule__IntegerComposite__Group__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2703:1: rule__IntegerComposite__Group__0__Impl : ( '~' ) ;
-    public final void rule__IntegerComposite__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__IntegerCompositeExpression__Group__0__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2703:1: rule__IntegerCompositeExpression__Group__0__Impl : ( '~' ) ;
+    public final void rule__IntegerCompositeExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -7843,11 +7843,11 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
             // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2709:1: '~'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getIntegerCompositeAccess().getTildeKeyword_0()); 
+               before(grammarAccess.getIntegerCompositeExpressionAccess().getTildeKeyword_0()); 
             }
-            match(input,28,FOLLOW_28_in_rule__IntegerComposite__Group__0__Impl5557); if (state.failed) return ;
+            match(input,28,FOLLOW_28_in_rule__IntegerCompositeExpression__Group__0__Impl5557); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getIntegerCompositeAccess().getTildeKeyword_0()); 
+               after(grammarAccess.getIntegerCompositeExpressionAccess().getTildeKeyword_0()); 
             }
 
             }
@@ -7867,21 +7867,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__IntegerComposite__Group__0__Impl"
+    // $ANTLR end "rule__IntegerCompositeExpression__Group__0__Impl"
 
 
-    // $ANTLR start "rule__IntegerComposite__Group__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2722:1: rule__IntegerComposite__Group__1 : rule__IntegerComposite__Group__1__Impl ;
-    public final void rule__IntegerComposite__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__IntegerCompositeExpression__Group__1"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2722:1: rule__IntegerCompositeExpression__Group__1 : rule__IntegerCompositeExpression__Group__1__Impl ;
+    public final void rule__IntegerCompositeExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2726:1: ( rule__IntegerComposite__Group__1__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2727:2: rule__IntegerComposite__Group__1__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2726:1: ( rule__IntegerCompositeExpression__Group__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2727:2: rule__IntegerCompositeExpression__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__IntegerComposite__Group__1__Impl_in_rule__IntegerComposite__Group__15588);
-            rule__IntegerComposite__Group__1__Impl();
+            pushFollow(FOLLOW_rule__IntegerCompositeExpression__Group__1__Impl_in_rule__IntegerCompositeExpression__Group__15588);
+            rule__IntegerCompositeExpression__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
@@ -7900,121 +7900,38 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__IntegerComposite__Group__1"
+    // $ANTLR end "rule__IntegerCompositeExpression__Group__1"
 
 
-    // $ANTLR start "rule__IntegerComposite__Group__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2733:1: rule__IntegerComposite__Group__1__Impl : ( ( rule__IntegerComposite__ExprAssignment_1 ) ) ;
-    public final void rule__IntegerComposite__Group__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2737:1: ( ( ( rule__IntegerComposite__ExprAssignment_1 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2738:1: ( ( rule__IntegerComposite__ExprAssignment_1 ) )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2738:1: ( ( rule__IntegerComposite__ExprAssignment_1 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2739:1: ( rule__IntegerComposite__ExprAssignment_1 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getIntegerCompositeAccess().getExprAssignment_1()); 
-            }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2740:1: ( rule__IntegerComposite__ExprAssignment_1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2740:2: rule__IntegerComposite__ExprAssignment_1
-            {
-            pushFollow(FOLLOW_rule__IntegerComposite__ExprAssignment_1_in_rule__IntegerComposite__Group__1__Impl5615);
-            rule__IntegerComposite__ExprAssignment_1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getIntegerCompositeAccess().getExprAssignment_1()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__IntegerComposite__Group__1__Impl"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2754:1: rule__DispatchExpression__Group__0 : rule__DispatchExpression__Group__0__Impl rule__DispatchExpression__Group__1 ;
-    public final void rule__DispatchExpression__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__IntegerCompositeExpression__Group__1__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2733:1: rule__IntegerCompositeExpression__Group__1__Impl : ( ( rule__IntegerCompositeExpression__ExprAssignment_1 ) ) ;
+    public final void rule__IntegerCompositeExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2758:1: ( rule__DispatchExpression__Group__0__Impl rule__DispatchExpression__Group__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2759:2: rule__DispatchExpression__Group__0__Impl rule__DispatchExpression__Group__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2737:1: ( ( ( rule__IntegerCompositeExpression__ExprAssignment_1 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2738:1: ( ( rule__IntegerCompositeExpression__ExprAssignment_1 ) )
             {
-            pushFollow(FOLLOW_rule__DispatchExpression__Group__0__Impl_in_rule__DispatchExpression__Group__05649);
-            rule__DispatchExpression__Group__0__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__DispatchExpression__Group__1_in_rule__DispatchExpression__Group__05652);
-            rule__DispatchExpression__Group__1();
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2738:1: ( ( rule__IntegerCompositeExpression__ExprAssignment_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2739:1: ( rule__IntegerCompositeExpression__ExprAssignment_1 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getIntegerCompositeExpressionAccess().getExprAssignment_1()); 
+            }
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2740:1: ( rule__IntegerCompositeExpression__ExprAssignment_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2740:2: rule__IntegerCompositeExpression__ExprAssignment_1
+            {
+            pushFollow(FOLLOW_rule__IntegerCompositeExpression__ExprAssignment_1_in_rule__IntegerCompositeExpression__Group__1__Impl5615);
+            rule__IntegerCompositeExpression__ExprAssignment_1();
 
             state._fsp--;
             if (state.failed) return ;
 
             }
 
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group__0"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2766:1: rule__DispatchExpression__Group__0__Impl : ( ruleCompareExpression ) ;
-    public final void rule__DispatchExpression__Group__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2770:1: ( ( ruleCompareExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2771:1: ( ruleCompareExpression )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2771:1: ( ruleCompareExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2772:1: ruleCompareExpression
-            {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDispatchExpressionAccess().getCompareExpressionParserRuleCall_0()); 
-            }
-            pushFollow(FOLLOW_ruleCompareExpression_in_rule__DispatchExpression__Group__0__Impl5679);
-            ruleCompareExpression();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getDispatchExpressionAccess().getCompareExpressionParserRuleCall_0()); 
+               after(grammarAccess.getIntegerCompositeExpressionAccess().getExprAssignment_1()); 
             }
 
             }
@@ -8034,21 +7951,26 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__DispatchExpression__Group__0__Impl"
+    // $ANTLR end "rule__IntegerCompositeExpression__Group__1__Impl"
 
 
-    // $ANTLR start "rule__DispatchExpression__Group__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2783:1: rule__DispatchExpression__Group__1 : rule__DispatchExpression__Group__1__Impl ;
-    public final void rule__DispatchExpression__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__NewExpression__Group__0"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2754:1: rule__NewExpression__Group__0 : rule__NewExpression__Group__0__Impl rule__NewExpression__Group__1 ;
+    public final void rule__NewExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2787:1: ( rule__DispatchExpression__Group__1__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2788:2: rule__DispatchExpression__Group__1__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2758:1: ( rule__NewExpression__Group__0__Impl rule__NewExpression__Group__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2759:2: rule__NewExpression__Group__0__Impl rule__NewExpression__Group__1
             {
-            pushFollow(FOLLOW_rule__DispatchExpression__Group__1__Impl_in_rule__DispatchExpression__Group__15708);
-            rule__DispatchExpression__Group__1__Impl();
+            pushFollow(FOLLOW_rule__NewExpression__Group__0__Impl_in_rule__NewExpression__Group__05649);
+            rule__NewExpression__Group__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__NewExpression__Group__1_in_rule__NewExpression__Group__05652);
+            rule__NewExpression__Group__1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -8067,60 +7989,28 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__DispatchExpression__Group__1"
+    // $ANTLR end "rule__NewExpression__Group__0"
 
 
-    // $ANTLR start "rule__DispatchExpression__Group__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2794:1: rule__DispatchExpression__Group__1__Impl : ( ( rule__DispatchExpression__Group_1__0 )? ) ;
-    public final void rule__DispatchExpression__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__NewExpression__Group__0__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2766:1: rule__NewExpression__Group__0__Impl : ( 'new' ) ;
+    public final void rule__NewExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2798:1: ( ( ( rule__DispatchExpression__Group_1__0 )? ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2799:1: ( ( rule__DispatchExpression__Group_1__0 )? )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2770:1: ( ( 'new' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2771:1: ( 'new' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2799:1: ( ( rule__DispatchExpression__Group_1__0 )? )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2800:1: ( rule__DispatchExpression__Group_1__0 )?
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2771:1: ( 'new' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2772:1: 'new'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDispatchExpressionAccess().getGroup_1()); 
+               before(grammarAccess.getNewExpressionAccess().getNewKeyword_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2801:1: ( rule__DispatchExpression__Group_1__0 )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
-
-            if ( (LA15_0==30) ) {
-                int LA15_1 = input.LA(2);
-
-                if ( (synpred30_InternalCool()) ) {
-                    alt15=1;
-                }
-            }
-            else if ( (LA15_0==29) ) {
-                int LA15_2 = input.LA(2);
-
-                if ( (synpred30_InternalCool()) ) {
-                    alt15=1;
-                }
-            }
-            switch (alt15) {
-                case 1 :
-                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2801:2: rule__DispatchExpression__Group_1__0
-                    {
-                    pushFollow(FOLLOW_rule__DispatchExpression__Group_1__0_in_rule__DispatchExpression__Group__1__Impl5735);
-                    rule__DispatchExpression__Group_1__0();
-
-                    state._fsp--;
-                    if (state.failed) return ;
-
-                    }
-                    break;
-
-            }
-
+            match(input,29,FOLLOW_29_in_rule__NewExpression__Group__0__Impl5680); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDispatchExpressionAccess().getGroup_1()); 
+               after(grammarAccess.getNewExpressionAccess().getNewKeyword_0()); 
             }
 
             }
@@ -8140,26 +8030,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__DispatchExpression__Group__1__Impl"
+    // $ANTLR end "rule__NewExpression__Group__0__Impl"
 
 
-    // $ANTLR start "rule__DispatchExpression__Group_1__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2815:1: rule__DispatchExpression__Group_1__0 : rule__DispatchExpression__Group_1__0__Impl rule__DispatchExpression__Group_1__1 ;
-    public final void rule__DispatchExpression__Group_1__0() throws RecognitionException {
+    // $ANTLR start "rule__NewExpression__Group__1"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2785:1: rule__NewExpression__Group__1 : rule__NewExpression__Group__1__Impl ;
+    public final void rule__NewExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2819:1: ( rule__DispatchExpression__Group_1__0__Impl rule__DispatchExpression__Group_1__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2820:2: rule__DispatchExpression__Group_1__0__Impl rule__DispatchExpression__Group_1__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2789:1: ( rule__NewExpression__Group__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2790:2: rule__NewExpression__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1__0__Impl_in_rule__DispatchExpression__Group_1__05770);
-            rule__DispatchExpression__Group_1__0__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1__1_in_rule__DispatchExpression__Group_1__05773);
-            rule__DispatchExpression__Group_1__1();
+            pushFollow(FOLLOW_rule__NewExpression__Group__1__Impl_in_rule__NewExpression__Group__15711);
+            rule__NewExpression__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
@@ -8178,30 +8063,30 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__DispatchExpression__Group_1__0"
+    // $ANTLR end "rule__NewExpression__Group__1"
 
 
-    // $ANTLR start "rule__DispatchExpression__Group_1__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2827:1: rule__DispatchExpression__Group_1__0__Impl : ( ( rule__DispatchExpression__Group_1_0__0 ) ) ;
-    public final void rule__DispatchExpression__Group_1__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__NewExpression__Group__1__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2796:1: rule__NewExpression__Group__1__Impl : ( ( rule__NewExpression__Type_nameAssignment_1 ) ) ;
+    public final void rule__NewExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2831:1: ( ( ( rule__DispatchExpression__Group_1_0__0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2832:1: ( ( rule__DispatchExpression__Group_1_0__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2800:1: ( ( ( rule__NewExpression__Type_nameAssignment_1 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2801:1: ( ( rule__NewExpression__Type_nameAssignment_1 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2832:1: ( ( rule__DispatchExpression__Group_1_0__0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2833:1: ( rule__DispatchExpression__Group_1_0__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2801:1: ( ( rule__NewExpression__Type_nameAssignment_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2802:1: ( rule__NewExpression__Type_nameAssignment_1 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDispatchExpressionAccess().getGroup_1_0()); 
+               before(grammarAccess.getNewExpressionAccess().getType_nameAssignment_1()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2834:1: ( rule__DispatchExpression__Group_1_0__0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2834:2: rule__DispatchExpression__Group_1_0__0
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2803:1: ( rule__NewExpression__Type_nameAssignment_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2803:2: rule__NewExpression__Type_nameAssignment_1
             {
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0__0_in_rule__DispatchExpression__Group_1__0__Impl5800);
-            rule__DispatchExpression__Group_1_0__0();
+            pushFollow(FOLLOW_rule__NewExpression__Type_nameAssignment_1_in_rule__NewExpression__Group__1__Impl5738);
+            rule__NewExpression__Type_nameAssignment_1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -8209,86 +8094,7 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDispatchExpressionAccess().getGroup_1_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1__0__Impl"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2844:1: rule__DispatchExpression__Group_1__1 : rule__DispatchExpression__Group_1__1__Impl rule__DispatchExpression__Group_1__2 ;
-    public final void rule__DispatchExpression__Group_1__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2848:1: ( rule__DispatchExpression__Group_1__1__Impl rule__DispatchExpression__Group_1__2 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2849:2: rule__DispatchExpression__Group_1__1__Impl rule__DispatchExpression__Group_1__2
-            {
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1__1__Impl_in_rule__DispatchExpression__Group_1__15830);
-            rule__DispatchExpression__Group_1__1__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1__2_in_rule__DispatchExpression__Group_1__15833);
-            rule__DispatchExpression__Group_1__2();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1__1"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2856:1: rule__DispatchExpression__Group_1__1__Impl : ( '(' ) ;
-    public final void rule__DispatchExpression__Group_1__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2860:1: ( ( '(' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2861:1: ( '(' )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2861:1: ( '(' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2862:1: '('
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getDispatchExpressionAccess().getLeftParenthesisKeyword_1_1()); 
-            }
-            match(input,24,FOLLOW_24_in_rule__DispatchExpression__Group_1__1__Impl5861); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getDispatchExpressionAccess().getLeftParenthesisKeyword_1_1()); 
+               after(grammarAccess.getNewExpressionAccess().getType_nameAssignment_1()); 
             }
 
             }
@@ -8308,1142 +8114,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__DispatchExpression__Group_1__1__Impl"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1__2"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2875:1: rule__DispatchExpression__Group_1__2 : rule__DispatchExpression__Group_1__2__Impl rule__DispatchExpression__Group_1__3 ;
-    public final void rule__DispatchExpression__Group_1__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2879:1: ( rule__DispatchExpression__Group_1__2__Impl rule__DispatchExpression__Group_1__3 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2880:2: rule__DispatchExpression__Group_1__2__Impl rule__DispatchExpression__Group_1__3
-            {
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1__2__Impl_in_rule__DispatchExpression__Group_1__25892);
-            rule__DispatchExpression__Group_1__2__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1__3_in_rule__DispatchExpression__Group_1__25895);
-            rule__DispatchExpression__Group_1__3();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1__2"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1__2__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2887:1: rule__DispatchExpression__Group_1__2__Impl : ( ( rule__DispatchExpression__Group_1_2__0 )? ) ;
-    public final void rule__DispatchExpression__Group_1__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2891:1: ( ( ( rule__DispatchExpression__Group_1_2__0 )? ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2892:1: ( ( rule__DispatchExpression__Group_1_2__0 )? )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2892:1: ( ( rule__DispatchExpression__Group_1_2__0 )? )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2893:1: ( rule__DispatchExpression__Group_1_2__0 )?
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getDispatchExpressionAccess().getGroup_1_2()); 
-            }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2894:1: ( rule__DispatchExpression__Group_1_2__0 )?
-            int alt16=2;
-            int LA16_0 = input.LA(1);
-
-            if ( ((LA16_0>=RULE_ID && LA16_0<=RULE_STRING)||(LA16_0>=14 && LA16_0<=16)||LA16_0==18||LA16_0==24||(LA16_0>=27 && LA16_0<=28)||LA16_0==31||LA16_0==35||LA16_0==38||LA16_0==40||(LA16_0>=44 && LA16_0<=45)) ) {
-                alt16=1;
-            }
-            switch (alt16) {
-                case 1 :
-                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2894:2: rule__DispatchExpression__Group_1_2__0
-                    {
-                    pushFollow(FOLLOW_rule__DispatchExpression__Group_1_2__0_in_rule__DispatchExpression__Group_1__2__Impl5922);
-                    rule__DispatchExpression__Group_1_2__0();
-
-                    state._fsp--;
-                    if (state.failed) return ;
-
-                    }
-                    break;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getDispatchExpressionAccess().getGroup_1_2()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1__2__Impl"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1__3"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2904:1: rule__DispatchExpression__Group_1__3 : rule__DispatchExpression__Group_1__3__Impl ;
-    public final void rule__DispatchExpression__Group_1__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2908:1: ( rule__DispatchExpression__Group_1__3__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2909:2: rule__DispatchExpression__Group_1__3__Impl
-            {
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1__3__Impl_in_rule__DispatchExpression__Group_1__35953);
-            rule__DispatchExpression__Group_1__3__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1__3"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1__3__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2915:1: rule__DispatchExpression__Group_1__3__Impl : ( ')' ) ;
-    public final void rule__DispatchExpression__Group_1__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2919:1: ( ( ')' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2920:1: ( ')' )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2920:1: ( ')' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2921:1: ')'
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getDispatchExpressionAccess().getRightParenthesisKeyword_1_3()); 
-            }
-            match(input,25,FOLLOW_25_in_rule__DispatchExpression__Group_1__3__Impl5981); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getDispatchExpressionAccess().getRightParenthesisKeyword_1_3()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1__3__Impl"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1_0__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2942:1: rule__DispatchExpression__Group_1_0__0 : rule__DispatchExpression__Group_1_0__0__Impl ;
-    public final void rule__DispatchExpression__Group_1_0__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2946:1: ( rule__DispatchExpression__Group_1_0__0__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2947:2: rule__DispatchExpression__Group_1_0__0__Impl
-            {
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0__0__Impl_in_rule__DispatchExpression__Group_1_0__06020);
-            rule__DispatchExpression__Group_1_0__0__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1_0__0"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1_0__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2953:1: rule__DispatchExpression__Group_1_0__0__Impl : ( ( rule__DispatchExpression__Group_1_0_0__0 ) ) ;
-    public final void rule__DispatchExpression__Group_1_0__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2957:1: ( ( ( rule__DispatchExpression__Group_1_0_0__0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2958:1: ( ( rule__DispatchExpression__Group_1_0_0__0 ) )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2958:1: ( ( rule__DispatchExpression__Group_1_0_0__0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2959:1: ( rule__DispatchExpression__Group_1_0_0__0 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getDispatchExpressionAccess().getGroup_1_0_0()); 
-            }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2960:1: ( rule__DispatchExpression__Group_1_0_0__0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2960:2: rule__DispatchExpression__Group_1_0_0__0
-            {
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0_0__0_in_rule__DispatchExpression__Group_1_0__0__Impl6047);
-            rule__DispatchExpression__Group_1_0_0__0();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getDispatchExpressionAccess().getGroup_1_0_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1_0__0__Impl"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1_0_0__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2972:1: rule__DispatchExpression__Group_1_0_0__0 : rule__DispatchExpression__Group_1_0_0__0__Impl rule__DispatchExpression__Group_1_0_0__1 ;
-    public final void rule__DispatchExpression__Group_1_0_0__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2976:1: ( rule__DispatchExpression__Group_1_0_0__0__Impl rule__DispatchExpression__Group_1_0_0__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2977:2: rule__DispatchExpression__Group_1_0_0__0__Impl rule__DispatchExpression__Group_1_0_0__1
-            {
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0_0__0__Impl_in_rule__DispatchExpression__Group_1_0_0__06079);
-            rule__DispatchExpression__Group_1_0_0__0__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0_0__1_in_rule__DispatchExpression__Group_1_0_0__06082);
-            rule__DispatchExpression__Group_1_0_0__1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1_0_0__0"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1_0_0__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2984:1: rule__DispatchExpression__Group_1_0_0__0__Impl : ( () ) ;
-    public final void rule__DispatchExpression__Group_1_0_0__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2988:1: ( ( () ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2989:1: ( () )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2989:1: ( () )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2990:1: ()
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getDispatchExpressionAccess().getDispatchExpressionExprAction_1_0_0_0()); 
-            }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2991:1: ()
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2993:1: 
-            {
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getDispatchExpressionAccess().getDispatchExpressionExprAction_1_0_0_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1_0_0__0__Impl"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1_0_0__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3003:1: rule__DispatchExpression__Group_1_0_0__1 : rule__DispatchExpression__Group_1_0_0__1__Impl rule__DispatchExpression__Group_1_0_0__2 ;
-    public final void rule__DispatchExpression__Group_1_0_0__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3007:1: ( rule__DispatchExpression__Group_1_0_0__1__Impl rule__DispatchExpression__Group_1_0_0__2 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3008:2: rule__DispatchExpression__Group_1_0_0__1__Impl rule__DispatchExpression__Group_1_0_0__2
-            {
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0_0__1__Impl_in_rule__DispatchExpression__Group_1_0_0__16140);
-            rule__DispatchExpression__Group_1_0_0__1__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0_0__2_in_rule__DispatchExpression__Group_1_0_0__16143);
-            rule__DispatchExpression__Group_1_0_0__2();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1_0_0__1"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1_0_0__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3015:1: rule__DispatchExpression__Group_1_0_0__1__Impl : ( ( rule__DispatchExpression__Group_1_0_0_1__0 )? ) ;
-    public final void rule__DispatchExpression__Group_1_0_0__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3019:1: ( ( ( rule__DispatchExpression__Group_1_0_0_1__0 )? ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3020:1: ( ( rule__DispatchExpression__Group_1_0_0_1__0 )? )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3020:1: ( ( rule__DispatchExpression__Group_1_0_0_1__0 )? )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3021:1: ( rule__DispatchExpression__Group_1_0_0_1__0 )?
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getDispatchExpressionAccess().getGroup_1_0_0_1()); 
-            }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3022:1: ( rule__DispatchExpression__Group_1_0_0_1__0 )?
-            int alt17=2;
-            int LA17_0 = input.LA(1);
-
-            if ( (LA17_0==30) ) {
-                alt17=1;
-            }
-            switch (alt17) {
-                case 1 :
-                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3022:2: rule__DispatchExpression__Group_1_0_0_1__0
-                    {
-                    pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0_0_1__0_in_rule__DispatchExpression__Group_1_0_0__1__Impl6170);
-                    rule__DispatchExpression__Group_1_0_0_1__0();
-
-                    state._fsp--;
-                    if (state.failed) return ;
-
-                    }
-                    break;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getDispatchExpressionAccess().getGroup_1_0_0_1()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1_0_0__1__Impl"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1_0_0__2"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3032:1: rule__DispatchExpression__Group_1_0_0__2 : rule__DispatchExpression__Group_1_0_0__2__Impl rule__DispatchExpression__Group_1_0_0__3 ;
-    public final void rule__DispatchExpression__Group_1_0_0__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3036:1: ( rule__DispatchExpression__Group_1_0_0__2__Impl rule__DispatchExpression__Group_1_0_0__3 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3037:2: rule__DispatchExpression__Group_1_0_0__2__Impl rule__DispatchExpression__Group_1_0_0__3
-            {
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0_0__2__Impl_in_rule__DispatchExpression__Group_1_0_0__26201);
-            rule__DispatchExpression__Group_1_0_0__2__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0_0__3_in_rule__DispatchExpression__Group_1_0_0__26204);
-            rule__DispatchExpression__Group_1_0_0__3();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1_0_0__2"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1_0_0__2__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3044:1: rule__DispatchExpression__Group_1_0_0__2__Impl : ( '.' ) ;
-    public final void rule__DispatchExpression__Group_1_0_0__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3048:1: ( ( '.' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3049:1: ( '.' )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3049:1: ( '.' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3050:1: '.'
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getDispatchExpressionAccess().getFullStopKeyword_1_0_0_2()); 
-            }
-            match(input,29,FOLLOW_29_in_rule__DispatchExpression__Group_1_0_0__2__Impl6232); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getDispatchExpressionAccess().getFullStopKeyword_1_0_0_2()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1_0_0__2__Impl"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1_0_0__3"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3063:1: rule__DispatchExpression__Group_1_0_0__3 : rule__DispatchExpression__Group_1_0_0__3__Impl ;
-    public final void rule__DispatchExpression__Group_1_0_0__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3067:1: ( rule__DispatchExpression__Group_1_0_0__3__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3068:2: rule__DispatchExpression__Group_1_0_0__3__Impl
-            {
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0_0__3__Impl_in_rule__DispatchExpression__Group_1_0_0__36263);
-            rule__DispatchExpression__Group_1_0_0__3__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1_0_0__3"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1_0_0__3__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3074:1: rule__DispatchExpression__Group_1_0_0__3__Impl : ( ( rule__DispatchExpression__RefAssignment_1_0_0_3 ) ) ;
-    public final void rule__DispatchExpression__Group_1_0_0__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3078:1: ( ( ( rule__DispatchExpression__RefAssignment_1_0_0_3 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3079:1: ( ( rule__DispatchExpression__RefAssignment_1_0_0_3 ) )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3079:1: ( ( rule__DispatchExpression__RefAssignment_1_0_0_3 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3080:1: ( rule__DispatchExpression__RefAssignment_1_0_0_3 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getDispatchExpressionAccess().getRefAssignment_1_0_0_3()); 
-            }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3081:1: ( rule__DispatchExpression__RefAssignment_1_0_0_3 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3081:2: rule__DispatchExpression__RefAssignment_1_0_0_3
-            {
-            pushFollow(FOLLOW_rule__DispatchExpression__RefAssignment_1_0_0_3_in_rule__DispatchExpression__Group_1_0_0__3__Impl6290);
-            rule__DispatchExpression__RefAssignment_1_0_0_3();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getDispatchExpressionAccess().getRefAssignment_1_0_0_3()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1_0_0__3__Impl"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1_0_0_1__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3099:1: rule__DispatchExpression__Group_1_0_0_1__0 : rule__DispatchExpression__Group_1_0_0_1__0__Impl rule__DispatchExpression__Group_1_0_0_1__1 ;
-    public final void rule__DispatchExpression__Group_1_0_0_1__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3103:1: ( rule__DispatchExpression__Group_1_0_0_1__0__Impl rule__DispatchExpression__Group_1_0_0_1__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3104:2: rule__DispatchExpression__Group_1_0_0_1__0__Impl rule__DispatchExpression__Group_1_0_0_1__1
-            {
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0_0_1__0__Impl_in_rule__DispatchExpression__Group_1_0_0_1__06328);
-            rule__DispatchExpression__Group_1_0_0_1__0__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0_0_1__1_in_rule__DispatchExpression__Group_1_0_0_1__06331);
-            rule__DispatchExpression__Group_1_0_0_1__1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1_0_0_1__0"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1_0_0_1__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3111:1: rule__DispatchExpression__Group_1_0_0_1__0__Impl : ( '@' ) ;
-    public final void rule__DispatchExpression__Group_1_0_0_1__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3115:1: ( ( '@' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3116:1: ( '@' )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3116:1: ( '@' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3117:1: '@'
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getDispatchExpressionAccess().getCommercialAtKeyword_1_0_0_1_0()); 
-            }
-            match(input,30,FOLLOW_30_in_rule__DispatchExpression__Group_1_0_0_1__0__Impl6359); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getDispatchExpressionAccess().getCommercialAtKeyword_1_0_0_1_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1_0_0_1__0__Impl"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1_0_0_1__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3130:1: rule__DispatchExpression__Group_1_0_0_1__1 : rule__DispatchExpression__Group_1_0_0_1__1__Impl ;
-    public final void rule__DispatchExpression__Group_1_0_0_1__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3134:1: ( rule__DispatchExpression__Group_1_0_0_1__1__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3135:2: rule__DispatchExpression__Group_1_0_0_1__1__Impl
-            {
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0_0_1__1__Impl_in_rule__DispatchExpression__Group_1_0_0_1__16390);
-            rule__DispatchExpression__Group_1_0_0_1__1__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1_0_0_1__1"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1_0_0_1__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3141:1: rule__DispatchExpression__Group_1_0_0_1__1__Impl : ( ( rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1 ) ) ;
-    public final void rule__DispatchExpression__Group_1_0_0_1__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3145:1: ( ( ( rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3146:1: ( ( rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1 ) )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3146:1: ( ( rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3147:1: ( rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getDispatchExpressionAccess().getType_nameAssignment_1_0_0_1_1()); 
-            }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3148:1: ( rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3148:2: rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1
-            {
-            pushFollow(FOLLOW_rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1_in_rule__DispatchExpression__Group_1_0_0_1__1__Impl6417);
-            rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getDispatchExpressionAccess().getType_nameAssignment_1_0_0_1_1()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1_0_0_1__1__Impl"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1_2__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3162:1: rule__DispatchExpression__Group_1_2__0 : rule__DispatchExpression__Group_1_2__0__Impl rule__DispatchExpression__Group_1_2__1 ;
-    public final void rule__DispatchExpression__Group_1_2__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3166:1: ( rule__DispatchExpression__Group_1_2__0__Impl rule__DispatchExpression__Group_1_2__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3167:2: rule__DispatchExpression__Group_1_2__0__Impl rule__DispatchExpression__Group_1_2__1
-            {
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_2__0__Impl_in_rule__DispatchExpression__Group_1_2__06451);
-            rule__DispatchExpression__Group_1_2__0__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_2__1_in_rule__DispatchExpression__Group_1_2__06454);
-            rule__DispatchExpression__Group_1_2__1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1_2__0"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1_2__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3174:1: rule__DispatchExpression__Group_1_2__0__Impl : ( ( rule__DispatchExpression__ActualAssignment_1_2_0 ) ) ;
-    public final void rule__DispatchExpression__Group_1_2__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3178:1: ( ( ( rule__DispatchExpression__ActualAssignment_1_2_0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3179:1: ( ( rule__DispatchExpression__ActualAssignment_1_2_0 ) )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3179:1: ( ( rule__DispatchExpression__ActualAssignment_1_2_0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3180:1: ( rule__DispatchExpression__ActualAssignment_1_2_0 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getDispatchExpressionAccess().getActualAssignment_1_2_0()); 
-            }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3181:1: ( rule__DispatchExpression__ActualAssignment_1_2_0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3181:2: rule__DispatchExpression__ActualAssignment_1_2_0
-            {
-            pushFollow(FOLLOW_rule__DispatchExpression__ActualAssignment_1_2_0_in_rule__DispatchExpression__Group_1_2__0__Impl6481);
-            rule__DispatchExpression__ActualAssignment_1_2_0();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getDispatchExpressionAccess().getActualAssignment_1_2_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1_2__0__Impl"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1_2__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3191:1: rule__DispatchExpression__Group_1_2__1 : rule__DispatchExpression__Group_1_2__1__Impl ;
-    public final void rule__DispatchExpression__Group_1_2__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3195:1: ( rule__DispatchExpression__Group_1_2__1__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3196:2: rule__DispatchExpression__Group_1_2__1__Impl
-            {
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_2__1__Impl_in_rule__DispatchExpression__Group_1_2__16511);
-            rule__DispatchExpression__Group_1_2__1__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1_2__1"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1_2__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3202:1: rule__DispatchExpression__Group_1_2__1__Impl : ( ( rule__DispatchExpression__Group_1_2_1__0 )* ) ;
-    public final void rule__DispatchExpression__Group_1_2__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3206:1: ( ( ( rule__DispatchExpression__Group_1_2_1__0 )* ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3207:1: ( ( rule__DispatchExpression__Group_1_2_1__0 )* )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3207:1: ( ( rule__DispatchExpression__Group_1_2_1__0 )* )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3208:1: ( rule__DispatchExpression__Group_1_2_1__0 )*
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getDispatchExpressionAccess().getGroup_1_2_1()); 
-            }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3209:1: ( rule__DispatchExpression__Group_1_2_1__0 )*
-            loop18:
-            do {
-                int alt18=2;
-                int LA18_0 = input.LA(1);
-
-                if ( (LA18_0==26) ) {
-                    alt18=1;
-                }
-
-
-                switch (alt18) {
-            	case 1 :
-            	    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3209:2: rule__DispatchExpression__Group_1_2_1__0
-            	    {
-            	    pushFollow(FOLLOW_rule__DispatchExpression__Group_1_2_1__0_in_rule__DispatchExpression__Group_1_2__1__Impl6538);
-            	    rule__DispatchExpression__Group_1_2_1__0();
-
-            	    state._fsp--;
-            	    if (state.failed) return ;
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop18;
-                }
-            } while (true);
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getDispatchExpressionAccess().getGroup_1_2_1()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1_2__1__Impl"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1_2_1__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3223:1: rule__DispatchExpression__Group_1_2_1__0 : rule__DispatchExpression__Group_1_2_1__0__Impl rule__DispatchExpression__Group_1_2_1__1 ;
-    public final void rule__DispatchExpression__Group_1_2_1__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3227:1: ( rule__DispatchExpression__Group_1_2_1__0__Impl rule__DispatchExpression__Group_1_2_1__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3228:2: rule__DispatchExpression__Group_1_2_1__0__Impl rule__DispatchExpression__Group_1_2_1__1
-            {
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_2_1__0__Impl_in_rule__DispatchExpression__Group_1_2_1__06573);
-            rule__DispatchExpression__Group_1_2_1__0__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_2_1__1_in_rule__DispatchExpression__Group_1_2_1__06576);
-            rule__DispatchExpression__Group_1_2_1__1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1_2_1__0"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1_2_1__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3235:1: rule__DispatchExpression__Group_1_2_1__0__Impl : ( ',' ) ;
-    public final void rule__DispatchExpression__Group_1_2_1__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3239:1: ( ( ',' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3240:1: ( ',' )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3240:1: ( ',' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3241:1: ','
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getDispatchExpressionAccess().getCommaKeyword_1_2_1_0()); 
-            }
-            match(input,26,FOLLOW_26_in_rule__DispatchExpression__Group_1_2_1__0__Impl6604); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getDispatchExpressionAccess().getCommaKeyword_1_2_1_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1_2_1__0__Impl"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1_2_1__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3254:1: rule__DispatchExpression__Group_1_2_1__1 : rule__DispatchExpression__Group_1_2_1__1__Impl ;
-    public final void rule__DispatchExpression__Group_1_2_1__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3258:1: ( rule__DispatchExpression__Group_1_2_1__1__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3259:2: rule__DispatchExpression__Group_1_2_1__1__Impl
-            {
-            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_2_1__1__Impl_in_rule__DispatchExpression__Group_1_2_1__16635);
-            rule__DispatchExpression__Group_1_2_1__1__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1_2_1__1"
-
-
-    // $ANTLR start "rule__DispatchExpression__Group_1_2_1__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3265:1: rule__DispatchExpression__Group_1_2_1__1__Impl : ( ( rule__DispatchExpression__ActualAssignment_1_2_1_1 ) ) ;
-    public final void rule__DispatchExpression__Group_1_2_1__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3269:1: ( ( ( rule__DispatchExpression__ActualAssignment_1_2_1_1 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3270:1: ( ( rule__DispatchExpression__ActualAssignment_1_2_1_1 ) )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3270:1: ( ( rule__DispatchExpression__ActualAssignment_1_2_1_1 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3271:1: ( rule__DispatchExpression__ActualAssignment_1_2_1_1 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getDispatchExpressionAccess().getActualAssignment_1_2_1_1()); 
-            }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3272:1: ( rule__DispatchExpression__ActualAssignment_1_2_1_1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3272:2: rule__DispatchExpression__ActualAssignment_1_2_1_1
-            {
-            pushFollow(FOLLOW_rule__DispatchExpression__ActualAssignment_1_2_1_1_in_rule__DispatchExpression__Group_1_2_1__1__Impl6662);
-            rule__DispatchExpression__ActualAssignment_1_2_1_1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getDispatchExpressionAccess().getActualAssignment_1_2_1_1()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__Group_1_2_1__1__Impl"
+    // $ANTLR end "rule__NewExpression__Group__1__Impl"
 
 
     // $ANTLR start "rule__StaticDispatchExpression__Group__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3286:1: rule__StaticDispatchExpression__Group__0 : rule__StaticDispatchExpression__Group__0__Impl rule__StaticDispatchExpression__Group__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2817:1: rule__StaticDispatchExpression__Group__0 : rule__StaticDispatchExpression__Group__0__Impl rule__StaticDispatchExpression__Group__1 ;
     public final void rule__StaticDispatchExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3290:1: ( rule__StaticDispatchExpression__Group__0__Impl rule__StaticDispatchExpression__Group__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3291:2: rule__StaticDispatchExpression__Group__0__Impl rule__StaticDispatchExpression__Group__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2821:1: ( rule__StaticDispatchExpression__Group__0__Impl rule__StaticDispatchExpression__Group__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2822:2: rule__StaticDispatchExpression__Group__0__Impl rule__StaticDispatchExpression__Group__1
             {
-            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group__0__Impl_in_rule__StaticDispatchExpression__Group__06696);
+            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group__0__Impl_in_rule__StaticDispatchExpression__Group__05772);
             rule__StaticDispatchExpression__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group__1_in_rule__StaticDispatchExpression__Group__06699);
+            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group__1_in_rule__StaticDispatchExpression__Group__05775);
             rule__StaticDispatchExpression__Group__1();
 
             state._fsp--;
@@ -9467,25 +8156,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StaticDispatchExpression__Group__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3298:1: rule__StaticDispatchExpression__Group__0__Impl : ( ( rule__StaticDispatchExpression__RefAssignment_0 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2829:1: rule__StaticDispatchExpression__Group__0__Impl : ( ( rule__StaticDispatchExpression__RefAssignment_0 ) ) ;
     public final void rule__StaticDispatchExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3302:1: ( ( ( rule__StaticDispatchExpression__RefAssignment_0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3303:1: ( ( rule__StaticDispatchExpression__RefAssignment_0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2833:1: ( ( ( rule__StaticDispatchExpression__RefAssignment_0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2834:1: ( ( rule__StaticDispatchExpression__RefAssignment_0 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3303:1: ( ( rule__StaticDispatchExpression__RefAssignment_0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3304:1: ( rule__StaticDispatchExpression__RefAssignment_0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2834:1: ( ( rule__StaticDispatchExpression__RefAssignment_0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2835:1: ( rule__StaticDispatchExpression__RefAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStaticDispatchExpressionAccess().getRefAssignment_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3305:1: ( rule__StaticDispatchExpression__RefAssignment_0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3305:2: rule__StaticDispatchExpression__RefAssignment_0
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2836:1: ( rule__StaticDispatchExpression__RefAssignment_0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2836:2: rule__StaticDispatchExpression__RefAssignment_0
             {
-            pushFollow(FOLLOW_rule__StaticDispatchExpression__RefAssignment_0_in_rule__StaticDispatchExpression__Group__0__Impl6726);
+            pushFollow(FOLLOW_rule__StaticDispatchExpression__RefAssignment_0_in_rule__StaticDispatchExpression__Group__0__Impl5802);
             rule__StaticDispatchExpression__RefAssignment_0();
 
             state._fsp--;
@@ -9518,21 +8207,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StaticDispatchExpression__Group__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3315:1: rule__StaticDispatchExpression__Group__1 : rule__StaticDispatchExpression__Group__1__Impl rule__StaticDispatchExpression__Group__2 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2846:1: rule__StaticDispatchExpression__Group__1 : rule__StaticDispatchExpression__Group__1__Impl rule__StaticDispatchExpression__Group__2 ;
     public final void rule__StaticDispatchExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3319:1: ( rule__StaticDispatchExpression__Group__1__Impl rule__StaticDispatchExpression__Group__2 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3320:2: rule__StaticDispatchExpression__Group__1__Impl rule__StaticDispatchExpression__Group__2
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2850:1: ( rule__StaticDispatchExpression__Group__1__Impl rule__StaticDispatchExpression__Group__2 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2851:2: rule__StaticDispatchExpression__Group__1__Impl rule__StaticDispatchExpression__Group__2
             {
-            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group__1__Impl_in_rule__StaticDispatchExpression__Group__16756);
+            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group__1__Impl_in_rule__StaticDispatchExpression__Group__15832);
             rule__StaticDispatchExpression__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group__2_in_rule__StaticDispatchExpression__Group__16759);
+            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group__2_in_rule__StaticDispatchExpression__Group__15835);
             rule__StaticDispatchExpression__Group__2();
 
             state._fsp--;
@@ -9556,22 +8245,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StaticDispatchExpression__Group__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3327:1: rule__StaticDispatchExpression__Group__1__Impl : ( '(' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2858:1: rule__StaticDispatchExpression__Group__1__Impl : ( '(' ) ;
     public final void rule__StaticDispatchExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3331:1: ( ( '(' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3332:1: ( '(' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2862:1: ( ( '(' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2863:1: ( '(' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3332:1: ( '(' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3333:1: '('
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2863:1: ( '(' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2864:1: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStaticDispatchExpressionAccess().getLeftParenthesisKeyword_1()); 
             }
-            match(input,24,FOLLOW_24_in_rule__StaticDispatchExpression__Group__1__Impl6787); if (state.failed) return ;
+            match(input,24,FOLLOW_24_in_rule__StaticDispatchExpression__Group__1__Impl5863); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getStaticDispatchExpressionAccess().getLeftParenthesisKeyword_1()); 
             }
@@ -9597,21 +8286,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StaticDispatchExpression__Group__2"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3346:1: rule__StaticDispatchExpression__Group__2 : rule__StaticDispatchExpression__Group__2__Impl rule__StaticDispatchExpression__Group__3 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2877:1: rule__StaticDispatchExpression__Group__2 : rule__StaticDispatchExpression__Group__2__Impl rule__StaticDispatchExpression__Group__3 ;
     public final void rule__StaticDispatchExpression__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3350:1: ( rule__StaticDispatchExpression__Group__2__Impl rule__StaticDispatchExpression__Group__3 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3351:2: rule__StaticDispatchExpression__Group__2__Impl rule__StaticDispatchExpression__Group__3
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2881:1: ( rule__StaticDispatchExpression__Group__2__Impl rule__StaticDispatchExpression__Group__3 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2882:2: rule__StaticDispatchExpression__Group__2__Impl rule__StaticDispatchExpression__Group__3
             {
-            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group__2__Impl_in_rule__StaticDispatchExpression__Group__26818);
+            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group__2__Impl_in_rule__StaticDispatchExpression__Group__25894);
             rule__StaticDispatchExpression__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group__3_in_rule__StaticDispatchExpression__Group__26821);
+            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group__3_in_rule__StaticDispatchExpression__Group__25897);
             rule__StaticDispatchExpression__Group__3();
 
             state._fsp--;
@@ -9635,33 +8324,33 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StaticDispatchExpression__Group__2__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3358:1: rule__StaticDispatchExpression__Group__2__Impl : ( ( rule__StaticDispatchExpression__Group_2__0 )? ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2889:1: rule__StaticDispatchExpression__Group__2__Impl : ( ( rule__StaticDispatchExpression__Group_2__0 )? ) ;
     public final void rule__StaticDispatchExpression__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3362:1: ( ( ( rule__StaticDispatchExpression__Group_2__0 )? ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3363:1: ( ( rule__StaticDispatchExpression__Group_2__0 )? )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2893:1: ( ( ( rule__StaticDispatchExpression__Group_2__0 )? ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2894:1: ( ( rule__StaticDispatchExpression__Group_2__0 )? )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3363:1: ( ( rule__StaticDispatchExpression__Group_2__0 )? )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3364:1: ( rule__StaticDispatchExpression__Group_2__0 )?
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2894:1: ( ( rule__StaticDispatchExpression__Group_2__0 )? )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2895:1: ( rule__StaticDispatchExpression__Group_2__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStaticDispatchExpressionAccess().getGroup_2()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3365:1: ( rule__StaticDispatchExpression__Group_2__0 )?
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2896:1: ( rule__StaticDispatchExpression__Group_2__0 )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( ((LA19_0>=RULE_ID && LA19_0<=RULE_STRING)||(LA19_0>=14 && LA19_0<=16)||LA19_0==18||LA19_0==24||(LA19_0>=27 && LA19_0<=28)||LA19_0==31||LA19_0==35||LA19_0==38||LA19_0==40||(LA19_0>=44 && LA19_0<=45)) ) {
-                alt19=1;
+            if ( ((LA15_0>=RULE_ID && LA15_0<=RULE_STRING)||(LA15_0>=14 && LA15_0<=16)||LA15_0==18||LA15_0==24||(LA15_0>=27 && LA15_0<=29)||LA15_0==31||LA15_0==35||(LA15_0>=38 && LA15_0<=39)||LA15_0==41) ) {
+                alt15=1;
             }
-            switch (alt19) {
+            switch (alt15) {
                 case 1 :
-                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3365:2: rule__StaticDispatchExpression__Group_2__0
+                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2896:2: rule__StaticDispatchExpression__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__StaticDispatchExpression__Group_2__0_in_rule__StaticDispatchExpression__Group__2__Impl6848);
+                    pushFollow(FOLLOW_rule__StaticDispatchExpression__Group_2__0_in_rule__StaticDispatchExpression__Group__2__Impl5924);
                     rule__StaticDispatchExpression__Group_2__0();
 
                     state._fsp--;
@@ -9697,17 +8386,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StaticDispatchExpression__Group__3"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3375:1: rule__StaticDispatchExpression__Group__3 : rule__StaticDispatchExpression__Group__3__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2906:1: rule__StaticDispatchExpression__Group__3 : rule__StaticDispatchExpression__Group__3__Impl rule__StaticDispatchExpression__Group__4 ;
     public final void rule__StaticDispatchExpression__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3379:1: ( rule__StaticDispatchExpression__Group__3__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3380:2: rule__StaticDispatchExpression__Group__3__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2910:1: ( rule__StaticDispatchExpression__Group__3__Impl rule__StaticDispatchExpression__Group__4 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2911:2: rule__StaticDispatchExpression__Group__3__Impl rule__StaticDispatchExpression__Group__4
             {
-            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group__3__Impl_in_rule__StaticDispatchExpression__Group__36879);
+            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group__3__Impl_in_rule__StaticDispatchExpression__Group__35955);
             rule__StaticDispatchExpression__Group__3__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group__4_in_rule__StaticDispatchExpression__Group__35958);
+            rule__StaticDispatchExpression__Group__4();
 
             state._fsp--;
             if (state.failed) return ;
@@ -9730,22 +8424,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StaticDispatchExpression__Group__3__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3386:1: rule__StaticDispatchExpression__Group__3__Impl : ( ')' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2918:1: rule__StaticDispatchExpression__Group__3__Impl : ( ')' ) ;
     public final void rule__StaticDispatchExpression__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3390:1: ( ( ')' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3391:1: ( ')' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2922:1: ( ( ')' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2923:1: ( ')' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3391:1: ( ')' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3392:1: ')'
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2923:1: ( ')' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2924:1: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStaticDispatchExpressionAccess().getRightParenthesisKeyword_3()); 
             }
-            match(input,25,FOLLOW_25_in_rule__StaticDispatchExpression__Group__3__Impl6907); if (state.failed) return ;
+            match(input,25,FOLLOW_25_in_rule__StaticDispatchExpression__Group__3__Impl5986); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getStaticDispatchExpressionAccess().getRightParenthesisKeyword_3()); 
             }
@@ -9770,22 +8464,113 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__StaticDispatchExpression__Group__3__Impl"
 
 
+    // $ANTLR start "rule__StaticDispatchExpression__Group__4"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2937:1: rule__StaticDispatchExpression__Group__4 : rule__StaticDispatchExpression__Group__4__Impl ;
+    public final void rule__StaticDispatchExpression__Group__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2941:1: ( rule__StaticDispatchExpression__Group__4__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2942:2: rule__StaticDispatchExpression__Group__4__Impl
+            {
+            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group__4__Impl_in_rule__StaticDispatchExpression__Group__46017);
+            rule__StaticDispatchExpression__Group__4__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__StaticDispatchExpression__Group__4"
+
+
+    // $ANTLR start "rule__StaticDispatchExpression__Group__4__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2948:1: rule__StaticDispatchExpression__Group__4__Impl : ( ( rule__StaticDispatchExpression__Group_4__0 )? ) ;
+    public final void rule__StaticDispatchExpression__Group__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2952:1: ( ( ( rule__StaticDispatchExpression__Group_4__0 )? ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2953:1: ( ( rule__StaticDispatchExpression__Group_4__0 )? )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2953:1: ( ( rule__StaticDispatchExpression__Group_4__0 )? )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2954:1: ( rule__StaticDispatchExpression__Group_4__0 )?
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getStaticDispatchExpressionAccess().getGroup_4()); 
+            }
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2955:1: ( rule__StaticDispatchExpression__Group_4__0 )?
+            int alt16=2;
+            alt16 = dfa16.predict(input);
+            switch (alt16) {
+                case 1 :
+                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2955:2: rule__StaticDispatchExpression__Group_4__0
+                    {
+                    pushFollow(FOLLOW_rule__StaticDispatchExpression__Group_4__0_in_rule__StaticDispatchExpression__Group__4__Impl6044);
+                    rule__StaticDispatchExpression__Group_4__0();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+                    break;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getStaticDispatchExpressionAccess().getGroup_4()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__StaticDispatchExpression__Group__4__Impl"
+
+
     // $ANTLR start "rule__StaticDispatchExpression__Group_2__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3413:1: rule__StaticDispatchExpression__Group_2__0 : rule__StaticDispatchExpression__Group_2__0__Impl rule__StaticDispatchExpression__Group_2__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2975:1: rule__StaticDispatchExpression__Group_2__0 : rule__StaticDispatchExpression__Group_2__0__Impl rule__StaticDispatchExpression__Group_2__1 ;
     public final void rule__StaticDispatchExpression__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3417:1: ( rule__StaticDispatchExpression__Group_2__0__Impl rule__StaticDispatchExpression__Group_2__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3418:2: rule__StaticDispatchExpression__Group_2__0__Impl rule__StaticDispatchExpression__Group_2__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2979:1: ( rule__StaticDispatchExpression__Group_2__0__Impl rule__StaticDispatchExpression__Group_2__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2980:2: rule__StaticDispatchExpression__Group_2__0__Impl rule__StaticDispatchExpression__Group_2__1
             {
-            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group_2__0__Impl_in_rule__StaticDispatchExpression__Group_2__06946);
+            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group_2__0__Impl_in_rule__StaticDispatchExpression__Group_2__06085);
             rule__StaticDispatchExpression__Group_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group_2__1_in_rule__StaticDispatchExpression__Group_2__06949);
+            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group_2__1_in_rule__StaticDispatchExpression__Group_2__06088);
             rule__StaticDispatchExpression__Group_2__1();
 
             state._fsp--;
@@ -9809,25 +8594,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StaticDispatchExpression__Group_2__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3425:1: rule__StaticDispatchExpression__Group_2__0__Impl : ( ( rule__StaticDispatchExpression__ActualAssignment_2_0 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2987:1: rule__StaticDispatchExpression__Group_2__0__Impl : ( ( rule__StaticDispatchExpression__ActualAssignment_2_0 ) ) ;
     public final void rule__StaticDispatchExpression__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3429:1: ( ( ( rule__StaticDispatchExpression__ActualAssignment_2_0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3430:1: ( ( rule__StaticDispatchExpression__ActualAssignment_2_0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2991:1: ( ( ( rule__StaticDispatchExpression__ActualAssignment_2_0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2992:1: ( ( rule__StaticDispatchExpression__ActualAssignment_2_0 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3430:1: ( ( rule__StaticDispatchExpression__ActualAssignment_2_0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3431:1: ( rule__StaticDispatchExpression__ActualAssignment_2_0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2992:1: ( ( rule__StaticDispatchExpression__ActualAssignment_2_0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2993:1: ( rule__StaticDispatchExpression__ActualAssignment_2_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStaticDispatchExpressionAccess().getActualAssignment_2_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3432:1: ( rule__StaticDispatchExpression__ActualAssignment_2_0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3432:2: rule__StaticDispatchExpression__ActualAssignment_2_0
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2994:1: ( rule__StaticDispatchExpression__ActualAssignment_2_0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2994:2: rule__StaticDispatchExpression__ActualAssignment_2_0
             {
-            pushFollow(FOLLOW_rule__StaticDispatchExpression__ActualAssignment_2_0_in_rule__StaticDispatchExpression__Group_2__0__Impl6976);
+            pushFollow(FOLLOW_rule__StaticDispatchExpression__ActualAssignment_2_0_in_rule__StaticDispatchExpression__Group_2__0__Impl6115);
             rule__StaticDispatchExpression__ActualAssignment_2_0();
 
             state._fsp--;
@@ -9860,16 +8645,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StaticDispatchExpression__Group_2__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3442:1: rule__StaticDispatchExpression__Group_2__1 : rule__StaticDispatchExpression__Group_2__1__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3004:1: rule__StaticDispatchExpression__Group_2__1 : rule__StaticDispatchExpression__Group_2__1__Impl ;
     public final void rule__StaticDispatchExpression__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3446:1: ( rule__StaticDispatchExpression__Group_2__1__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3447:2: rule__StaticDispatchExpression__Group_2__1__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3008:1: ( rule__StaticDispatchExpression__Group_2__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3009:2: rule__StaticDispatchExpression__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group_2__1__Impl_in_rule__StaticDispatchExpression__Group_2__17006);
+            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group_2__1__Impl_in_rule__StaticDispatchExpression__Group_2__16145);
             rule__StaticDispatchExpression__Group_2__1__Impl();
 
             state._fsp--;
@@ -9893,37 +8678,37 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StaticDispatchExpression__Group_2__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3453:1: rule__StaticDispatchExpression__Group_2__1__Impl : ( ( rule__StaticDispatchExpression__Group_2_1__0 )* ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3015:1: rule__StaticDispatchExpression__Group_2__1__Impl : ( ( rule__StaticDispatchExpression__Group_2_1__0 )* ) ;
     public final void rule__StaticDispatchExpression__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3457:1: ( ( ( rule__StaticDispatchExpression__Group_2_1__0 )* ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3458:1: ( ( rule__StaticDispatchExpression__Group_2_1__0 )* )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3019:1: ( ( ( rule__StaticDispatchExpression__Group_2_1__0 )* ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3020:1: ( ( rule__StaticDispatchExpression__Group_2_1__0 )* )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3458:1: ( ( rule__StaticDispatchExpression__Group_2_1__0 )* )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3459:1: ( rule__StaticDispatchExpression__Group_2_1__0 )*
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3020:1: ( ( rule__StaticDispatchExpression__Group_2_1__0 )* )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3021:1: ( rule__StaticDispatchExpression__Group_2_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStaticDispatchExpressionAccess().getGroup_2_1()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3460:1: ( rule__StaticDispatchExpression__Group_2_1__0 )*
-            loop20:
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3022:1: ( rule__StaticDispatchExpression__Group_2_1__0 )*
+            loop17:
             do {
-                int alt20=2;
-                int LA20_0 = input.LA(1);
+                int alt17=2;
+                int LA17_0 = input.LA(1);
 
-                if ( (LA20_0==26) ) {
-                    alt20=1;
+                if ( (LA17_0==26) ) {
+                    alt17=1;
                 }
 
 
-                switch (alt20) {
+                switch (alt17) {
             	case 1 :
-            	    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3460:2: rule__StaticDispatchExpression__Group_2_1__0
+            	    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3022:2: rule__StaticDispatchExpression__Group_2_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__StaticDispatchExpression__Group_2_1__0_in_rule__StaticDispatchExpression__Group_2__1__Impl7033);
+            	    pushFollow(FOLLOW_rule__StaticDispatchExpression__Group_2_1__0_in_rule__StaticDispatchExpression__Group_2__1__Impl6172);
             	    rule__StaticDispatchExpression__Group_2_1__0();
 
             	    state._fsp--;
@@ -9933,7 +8718,7 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop20;
+            	    break loop17;
                 }
             } while (true);
 
@@ -9962,21 +8747,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StaticDispatchExpression__Group_2_1__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3474:1: rule__StaticDispatchExpression__Group_2_1__0 : rule__StaticDispatchExpression__Group_2_1__0__Impl rule__StaticDispatchExpression__Group_2_1__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3036:1: rule__StaticDispatchExpression__Group_2_1__0 : rule__StaticDispatchExpression__Group_2_1__0__Impl rule__StaticDispatchExpression__Group_2_1__1 ;
     public final void rule__StaticDispatchExpression__Group_2_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3478:1: ( rule__StaticDispatchExpression__Group_2_1__0__Impl rule__StaticDispatchExpression__Group_2_1__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3479:2: rule__StaticDispatchExpression__Group_2_1__0__Impl rule__StaticDispatchExpression__Group_2_1__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3040:1: ( rule__StaticDispatchExpression__Group_2_1__0__Impl rule__StaticDispatchExpression__Group_2_1__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3041:2: rule__StaticDispatchExpression__Group_2_1__0__Impl rule__StaticDispatchExpression__Group_2_1__1
             {
-            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group_2_1__0__Impl_in_rule__StaticDispatchExpression__Group_2_1__07068);
+            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group_2_1__0__Impl_in_rule__StaticDispatchExpression__Group_2_1__06207);
             rule__StaticDispatchExpression__Group_2_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group_2_1__1_in_rule__StaticDispatchExpression__Group_2_1__07071);
+            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group_2_1__1_in_rule__StaticDispatchExpression__Group_2_1__06210);
             rule__StaticDispatchExpression__Group_2_1__1();
 
             state._fsp--;
@@ -10000,22 +8785,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StaticDispatchExpression__Group_2_1__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3486:1: rule__StaticDispatchExpression__Group_2_1__0__Impl : ( ',' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3048:1: rule__StaticDispatchExpression__Group_2_1__0__Impl : ( ',' ) ;
     public final void rule__StaticDispatchExpression__Group_2_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3490:1: ( ( ',' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3491:1: ( ',' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3052:1: ( ( ',' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3053:1: ( ',' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3491:1: ( ',' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3492:1: ','
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3053:1: ( ',' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3054:1: ','
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStaticDispatchExpressionAccess().getCommaKeyword_2_1_0()); 
             }
-            match(input,26,FOLLOW_26_in_rule__StaticDispatchExpression__Group_2_1__0__Impl7099); if (state.failed) return ;
+            match(input,26,FOLLOW_26_in_rule__StaticDispatchExpression__Group_2_1__0__Impl6238); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getStaticDispatchExpressionAccess().getCommaKeyword_2_1_0()); 
             }
@@ -10041,16 +8826,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StaticDispatchExpression__Group_2_1__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3505:1: rule__StaticDispatchExpression__Group_2_1__1 : rule__StaticDispatchExpression__Group_2_1__1__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3067:1: rule__StaticDispatchExpression__Group_2_1__1 : rule__StaticDispatchExpression__Group_2_1__1__Impl ;
     public final void rule__StaticDispatchExpression__Group_2_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3509:1: ( rule__StaticDispatchExpression__Group_2_1__1__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3510:2: rule__StaticDispatchExpression__Group_2_1__1__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3071:1: ( rule__StaticDispatchExpression__Group_2_1__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3072:2: rule__StaticDispatchExpression__Group_2_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group_2_1__1__Impl_in_rule__StaticDispatchExpression__Group_2_1__17130);
+            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group_2_1__1__Impl_in_rule__StaticDispatchExpression__Group_2_1__16269);
             rule__StaticDispatchExpression__Group_2_1__1__Impl();
 
             state._fsp--;
@@ -10074,25 +8859,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StaticDispatchExpression__Group_2_1__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3516:1: rule__StaticDispatchExpression__Group_2_1__1__Impl : ( ( rule__StaticDispatchExpression__ActualAssignment_2_1_1 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3078:1: rule__StaticDispatchExpression__Group_2_1__1__Impl : ( ( rule__StaticDispatchExpression__ActualAssignment_2_1_1 ) ) ;
     public final void rule__StaticDispatchExpression__Group_2_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3520:1: ( ( ( rule__StaticDispatchExpression__ActualAssignment_2_1_1 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3521:1: ( ( rule__StaticDispatchExpression__ActualAssignment_2_1_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3082:1: ( ( ( rule__StaticDispatchExpression__ActualAssignment_2_1_1 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3083:1: ( ( rule__StaticDispatchExpression__ActualAssignment_2_1_1 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3521:1: ( ( rule__StaticDispatchExpression__ActualAssignment_2_1_1 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3522:1: ( rule__StaticDispatchExpression__ActualAssignment_2_1_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3083:1: ( ( rule__StaticDispatchExpression__ActualAssignment_2_1_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3084:1: ( rule__StaticDispatchExpression__ActualAssignment_2_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStaticDispatchExpressionAccess().getActualAssignment_2_1_1()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3523:1: ( rule__StaticDispatchExpression__ActualAssignment_2_1_1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3523:2: rule__StaticDispatchExpression__ActualAssignment_2_1_1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3085:1: ( rule__StaticDispatchExpression__ActualAssignment_2_1_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3085:2: rule__StaticDispatchExpression__ActualAssignment_2_1_1
             {
-            pushFollow(FOLLOW_rule__StaticDispatchExpression__ActualAssignment_2_1_1_in_rule__StaticDispatchExpression__Group_2_1__1__Impl7157);
+            pushFollow(FOLLOW_rule__StaticDispatchExpression__ActualAssignment_2_1_1_in_rule__StaticDispatchExpression__Group_2_1__1__Impl6296);
             rule__StaticDispatchExpression__ActualAssignment_2_1_1();
 
             state._fsp--;
@@ -10124,22 +8909,191 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__StaticDispatchExpression__Group_2_1__1__Impl"
 
 
+    // $ANTLR start "rule__StaticDispatchExpression__Group_4__0"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3099:1: rule__StaticDispatchExpression__Group_4__0 : rule__StaticDispatchExpression__Group_4__0__Impl rule__StaticDispatchExpression__Group_4__1 ;
+    public final void rule__StaticDispatchExpression__Group_4__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3103:1: ( rule__StaticDispatchExpression__Group_4__0__Impl rule__StaticDispatchExpression__Group_4__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3104:2: rule__StaticDispatchExpression__Group_4__0__Impl rule__StaticDispatchExpression__Group_4__1
+            {
+            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group_4__0__Impl_in_rule__StaticDispatchExpression__Group_4__06330);
+            rule__StaticDispatchExpression__Group_4__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group_4__1_in_rule__StaticDispatchExpression__Group_4__06333);
+            rule__StaticDispatchExpression__Group_4__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__StaticDispatchExpression__Group_4__0"
+
+
+    // $ANTLR start "rule__StaticDispatchExpression__Group_4__0__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3111:1: rule__StaticDispatchExpression__Group_4__0__Impl : ( ( '.' ) ) ;
+    public final void rule__StaticDispatchExpression__Group_4__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3115:1: ( ( ( '.' ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3116:1: ( ( '.' ) )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3116:1: ( ( '.' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3117:1: ( '.' )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getStaticDispatchExpressionAccess().getFullStopKeyword_4_0()); 
+            }
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3118:1: ( '.' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3119:2: '.'
+            {
+            match(input,30,FOLLOW_30_in_rule__StaticDispatchExpression__Group_4__0__Impl6362); if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getStaticDispatchExpressionAccess().getFullStopKeyword_4_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__StaticDispatchExpression__Group_4__0__Impl"
+
+
+    // $ANTLR start "rule__StaticDispatchExpression__Group_4__1"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3130:1: rule__StaticDispatchExpression__Group_4__1 : rule__StaticDispatchExpression__Group_4__1__Impl ;
+    public final void rule__StaticDispatchExpression__Group_4__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3134:1: ( rule__StaticDispatchExpression__Group_4__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3135:2: rule__StaticDispatchExpression__Group_4__1__Impl
+            {
+            pushFollow(FOLLOW_rule__StaticDispatchExpression__Group_4__1__Impl_in_rule__StaticDispatchExpression__Group_4__16394);
+            rule__StaticDispatchExpression__Group_4__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__StaticDispatchExpression__Group_4__1"
+
+
+    // $ANTLR start "rule__StaticDispatchExpression__Group_4__1__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3141:1: rule__StaticDispatchExpression__Group_4__1__Impl : ( ( rule__StaticDispatchExpression__ChainAssignment_4_1 ) ) ;
+    public final void rule__StaticDispatchExpression__Group_4__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3145:1: ( ( ( rule__StaticDispatchExpression__ChainAssignment_4_1 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3146:1: ( ( rule__StaticDispatchExpression__ChainAssignment_4_1 ) )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3146:1: ( ( rule__StaticDispatchExpression__ChainAssignment_4_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3147:1: ( rule__StaticDispatchExpression__ChainAssignment_4_1 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getStaticDispatchExpressionAccess().getChainAssignment_4_1()); 
+            }
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3148:1: ( rule__StaticDispatchExpression__ChainAssignment_4_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3148:2: rule__StaticDispatchExpression__ChainAssignment_4_1
+            {
+            pushFollow(FOLLOW_rule__StaticDispatchExpression__ChainAssignment_4_1_in_rule__StaticDispatchExpression__Group_4__1__Impl6421);
+            rule__StaticDispatchExpression__ChainAssignment_4_1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getStaticDispatchExpressionAccess().getChainAssignment_4_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__StaticDispatchExpression__Group_4__1__Impl"
+
+
     // $ANTLR start "rule__ConditionalExpression__Group__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3537:1: rule__ConditionalExpression__Group__0 : rule__ConditionalExpression__Group__0__Impl rule__ConditionalExpression__Group__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3162:1: rule__ConditionalExpression__Group__0 : rule__ConditionalExpression__Group__0__Impl rule__ConditionalExpression__Group__1 ;
     public final void rule__ConditionalExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3541:1: ( rule__ConditionalExpression__Group__0__Impl rule__ConditionalExpression__Group__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3542:2: rule__ConditionalExpression__Group__0__Impl rule__ConditionalExpression__Group__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3166:1: ( rule__ConditionalExpression__Group__0__Impl rule__ConditionalExpression__Group__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3167:2: rule__ConditionalExpression__Group__0__Impl rule__ConditionalExpression__Group__1
             {
-            pushFollow(FOLLOW_rule__ConditionalExpression__Group__0__Impl_in_rule__ConditionalExpression__Group__07191);
+            pushFollow(FOLLOW_rule__ConditionalExpression__Group__0__Impl_in_rule__ConditionalExpression__Group__06455);
             rule__ConditionalExpression__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ConditionalExpression__Group__1_in_rule__ConditionalExpression__Group__07194);
+            pushFollow(FOLLOW_rule__ConditionalExpression__Group__1_in_rule__ConditionalExpression__Group__06458);
             rule__ConditionalExpression__Group__1();
 
             state._fsp--;
@@ -10163,22 +9117,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionalExpression__Group__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3549:1: rule__ConditionalExpression__Group__0__Impl : ( 'if' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3174:1: rule__ConditionalExpression__Group__0__Impl : ( 'if' ) ;
     public final void rule__ConditionalExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3553:1: ( ( 'if' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3554:1: ( 'if' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3178:1: ( ( 'if' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3179:1: ( 'if' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3554:1: ( 'if' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3555:1: 'if'
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3179:1: ( 'if' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3180:1: 'if'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditionalExpressionAccess().getIfKeyword_0()); 
             }
-            match(input,31,FOLLOW_31_in_rule__ConditionalExpression__Group__0__Impl7222); if (state.failed) return ;
+            match(input,31,FOLLOW_31_in_rule__ConditionalExpression__Group__0__Impl6486); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getConditionalExpressionAccess().getIfKeyword_0()); 
             }
@@ -10204,21 +9158,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionalExpression__Group__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3568:1: rule__ConditionalExpression__Group__1 : rule__ConditionalExpression__Group__1__Impl rule__ConditionalExpression__Group__2 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3193:1: rule__ConditionalExpression__Group__1 : rule__ConditionalExpression__Group__1__Impl rule__ConditionalExpression__Group__2 ;
     public final void rule__ConditionalExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3572:1: ( rule__ConditionalExpression__Group__1__Impl rule__ConditionalExpression__Group__2 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3573:2: rule__ConditionalExpression__Group__1__Impl rule__ConditionalExpression__Group__2
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3197:1: ( rule__ConditionalExpression__Group__1__Impl rule__ConditionalExpression__Group__2 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3198:2: rule__ConditionalExpression__Group__1__Impl rule__ConditionalExpression__Group__2
             {
-            pushFollow(FOLLOW_rule__ConditionalExpression__Group__1__Impl_in_rule__ConditionalExpression__Group__17253);
+            pushFollow(FOLLOW_rule__ConditionalExpression__Group__1__Impl_in_rule__ConditionalExpression__Group__16517);
             rule__ConditionalExpression__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ConditionalExpression__Group__2_in_rule__ConditionalExpression__Group__17256);
+            pushFollow(FOLLOW_rule__ConditionalExpression__Group__2_in_rule__ConditionalExpression__Group__16520);
             rule__ConditionalExpression__Group__2();
 
             state._fsp--;
@@ -10242,25 +9196,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionalExpression__Group__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3580:1: rule__ConditionalExpression__Group__1__Impl : ( ( rule__ConditionalExpression__PredAssignment_1 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3205:1: rule__ConditionalExpression__Group__1__Impl : ( ( rule__ConditionalExpression__PredAssignment_1 ) ) ;
     public final void rule__ConditionalExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3584:1: ( ( ( rule__ConditionalExpression__PredAssignment_1 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3585:1: ( ( rule__ConditionalExpression__PredAssignment_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3209:1: ( ( ( rule__ConditionalExpression__PredAssignment_1 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3210:1: ( ( rule__ConditionalExpression__PredAssignment_1 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3585:1: ( ( rule__ConditionalExpression__PredAssignment_1 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3586:1: ( rule__ConditionalExpression__PredAssignment_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3210:1: ( ( rule__ConditionalExpression__PredAssignment_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3211:1: ( rule__ConditionalExpression__PredAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditionalExpressionAccess().getPredAssignment_1()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3587:1: ( rule__ConditionalExpression__PredAssignment_1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3587:2: rule__ConditionalExpression__PredAssignment_1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3212:1: ( rule__ConditionalExpression__PredAssignment_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3212:2: rule__ConditionalExpression__PredAssignment_1
             {
-            pushFollow(FOLLOW_rule__ConditionalExpression__PredAssignment_1_in_rule__ConditionalExpression__Group__1__Impl7283);
+            pushFollow(FOLLOW_rule__ConditionalExpression__PredAssignment_1_in_rule__ConditionalExpression__Group__1__Impl6547);
             rule__ConditionalExpression__PredAssignment_1();
 
             state._fsp--;
@@ -10293,21 +9247,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionalExpression__Group__2"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3597:1: rule__ConditionalExpression__Group__2 : rule__ConditionalExpression__Group__2__Impl rule__ConditionalExpression__Group__3 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3222:1: rule__ConditionalExpression__Group__2 : rule__ConditionalExpression__Group__2__Impl rule__ConditionalExpression__Group__3 ;
     public final void rule__ConditionalExpression__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3601:1: ( rule__ConditionalExpression__Group__2__Impl rule__ConditionalExpression__Group__3 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3602:2: rule__ConditionalExpression__Group__2__Impl rule__ConditionalExpression__Group__3
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3226:1: ( rule__ConditionalExpression__Group__2__Impl rule__ConditionalExpression__Group__3 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3227:2: rule__ConditionalExpression__Group__2__Impl rule__ConditionalExpression__Group__3
             {
-            pushFollow(FOLLOW_rule__ConditionalExpression__Group__2__Impl_in_rule__ConditionalExpression__Group__27313);
+            pushFollow(FOLLOW_rule__ConditionalExpression__Group__2__Impl_in_rule__ConditionalExpression__Group__26577);
             rule__ConditionalExpression__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ConditionalExpression__Group__3_in_rule__ConditionalExpression__Group__27316);
+            pushFollow(FOLLOW_rule__ConditionalExpression__Group__3_in_rule__ConditionalExpression__Group__26580);
             rule__ConditionalExpression__Group__3();
 
             state._fsp--;
@@ -10331,22 +9285,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionalExpression__Group__2__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3609:1: rule__ConditionalExpression__Group__2__Impl : ( 'then' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3234:1: rule__ConditionalExpression__Group__2__Impl : ( 'then' ) ;
     public final void rule__ConditionalExpression__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3613:1: ( ( 'then' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3614:1: ( 'then' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3238:1: ( ( 'then' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3239:1: ( 'then' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3614:1: ( 'then' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3615:1: 'then'
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3239:1: ( 'then' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3240:1: 'then'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditionalExpressionAccess().getThenKeyword_2()); 
             }
-            match(input,32,FOLLOW_32_in_rule__ConditionalExpression__Group__2__Impl7344); if (state.failed) return ;
+            match(input,32,FOLLOW_32_in_rule__ConditionalExpression__Group__2__Impl6608); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getConditionalExpressionAccess().getThenKeyword_2()); 
             }
@@ -10372,21 +9326,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionalExpression__Group__3"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3628:1: rule__ConditionalExpression__Group__3 : rule__ConditionalExpression__Group__3__Impl rule__ConditionalExpression__Group__4 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3253:1: rule__ConditionalExpression__Group__3 : rule__ConditionalExpression__Group__3__Impl rule__ConditionalExpression__Group__4 ;
     public final void rule__ConditionalExpression__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3632:1: ( rule__ConditionalExpression__Group__3__Impl rule__ConditionalExpression__Group__4 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3633:2: rule__ConditionalExpression__Group__3__Impl rule__ConditionalExpression__Group__4
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3257:1: ( rule__ConditionalExpression__Group__3__Impl rule__ConditionalExpression__Group__4 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3258:2: rule__ConditionalExpression__Group__3__Impl rule__ConditionalExpression__Group__4
             {
-            pushFollow(FOLLOW_rule__ConditionalExpression__Group__3__Impl_in_rule__ConditionalExpression__Group__37375);
+            pushFollow(FOLLOW_rule__ConditionalExpression__Group__3__Impl_in_rule__ConditionalExpression__Group__36639);
             rule__ConditionalExpression__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ConditionalExpression__Group__4_in_rule__ConditionalExpression__Group__37378);
+            pushFollow(FOLLOW_rule__ConditionalExpression__Group__4_in_rule__ConditionalExpression__Group__36642);
             rule__ConditionalExpression__Group__4();
 
             state._fsp--;
@@ -10410,25 +9364,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionalExpression__Group__3__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3640:1: rule__ConditionalExpression__Group__3__Impl : ( ( rule__ConditionalExpression__Then_expAssignment_3 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3265:1: rule__ConditionalExpression__Group__3__Impl : ( ( rule__ConditionalExpression__Then_expAssignment_3 ) ) ;
     public final void rule__ConditionalExpression__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3644:1: ( ( ( rule__ConditionalExpression__Then_expAssignment_3 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3645:1: ( ( rule__ConditionalExpression__Then_expAssignment_3 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3269:1: ( ( ( rule__ConditionalExpression__Then_expAssignment_3 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3270:1: ( ( rule__ConditionalExpression__Then_expAssignment_3 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3645:1: ( ( rule__ConditionalExpression__Then_expAssignment_3 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3646:1: ( rule__ConditionalExpression__Then_expAssignment_3 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3270:1: ( ( rule__ConditionalExpression__Then_expAssignment_3 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3271:1: ( rule__ConditionalExpression__Then_expAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditionalExpressionAccess().getThen_expAssignment_3()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3647:1: ( rule__ConditionalExpression__Then_expAssignment_3 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3647:2: rule__ConditionalExpression__Then_expAssignment_3
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3272:1: ( rule__ConditionalExpression__Then_expAssignment_3 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3272:2: rule__ConditionalExpression__Then_expAssignment_3
             {
-            pushFollow(FOLLOW_rule__ConditionalExpression__Then_expAssignment_3_in_rule__ConditionalExpression__Group__3__Impl7405);
+            pushFollow(FOLLOW_rule__ConditionalExpression__Then_expAssignment_3_in_rule__ConditionalExpression__Group__3__Impl6669);
             rule__ConditionalExpression__Then_expAssignment_3();
 
             state._fsp--;
@@ -10461,21 +9415,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionalExpression__Group__4"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3657:1: rule__ConditionalExpression__Group__4 : rule__ConditionalExpression__Group__4__Impl rule__ConditionalExpression__Group__5 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3282:1: rule__ConditionalExpression__Group__4 : rule__ConditionalExpression__Group__4__Impl rule__ConditionalExpression__Group__5 ;
     public final void rule__ConditionalExpression__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3661:1: ( rule__ConditionalExpression__Group__4__Impl rule__ConditionalExpression__Group__5 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3662:2: rule__ConditionalExpression__Group__4__Impl rule__ConditionalExpression__Group__5
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3286:1: ( rule__ConditionalExpression__Group__4__Impl rule__ConditionalExpression__Group__5 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3287:2: rule__ConditionalExpression__Group__4__Impl rule__ConditionalExpression__Group__5
             {
-            pushFollow(FOLLOW_rule__ConditionalExpression__Group__4__Impl_in_rule__ConditionalExpression__Group__47435);
+            pushFollow(FOLLOW_rule__ConditionalExpression__Group__4__Impl_in_rule__ConditionalExpression__Group__46699);
             rule__ConditionalExpression__Group__4__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ConditionalExpression__Group__5_in_rule__ConditionalExpression__Group__47438);
+            pushFollow(FOLLOW_rule__ConditionalExpression__Group__5_in_rule__ConditionalExpression__Group__46702);
             rule__ConditionalExpression__Group__5();
 
             state._fsp--;
@@ -10499,33 +9453,33 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionalExpression__Group__4__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3669:1: rule__ConditionalExpression__Group__4__Impl : ( ( rule__ConditionalExpression__Group_4__0 )? ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3294:1: rule__ConditionalExpression__Group__4__Impl : ( ( rule__ConditionalExpression__Group_4__0 )? ) ;
     public final void rule__ConditionalExpression__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3673:1: ( ( ( rule__ConditionalExpression__Group_4__0 )? ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3674:1: ( ( rule__ConditionalExpression__Group_4__0 )? )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3298:1: ( ( ( rule__ConditionalExpression__Group_4__0 )? ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3299:1: ( ( rule__ConditionalExpression__Group_4__0 )? )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3674:1: ( ( rule__ConditionalExpression__Group_4__0 )? )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3675:1: ( rule__ConditionalExpression__Group_4__0 )?
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3299:1: ( ( rule__ConditionalExpression__Group_4__0 )? )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3300:1: ( rule__ConditionalExpression__Group_4__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditionalExpressionAccess().getGroup_4()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3676:1: ( rule__ConditionalExpression__Group_4__0 )?
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3301:1: ( rule__ConditionalExpression__Group_4__0 )?
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            if ( (LA21_0==34) ) {
-                alt21=1;
+            if ( (LA18_0==34) ) {
+                alt18=1;
             }
-            switch (alt21) {
+            switch (alt18) {
                 case 1 :
-                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3676:2: rule__ConditionalExpression__Group_4__0
+                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3301:2: rule__ConditionalExpression__Group_4__0
                     {
-                    pushFollow(FOLLOW_rule__ConditionalExpression__Group_4__0_in_rule__ConditionalExpression__Group__4__Impl7465);
+                    pushFollow(FOLLOW_rule__ConditionalExpression__Group_4__0_in_rule__ConditionalExpression__Group__4__Impl6729);
                     rule__ConditionalExpression__Group_4__0();
 
                     state._fsp--;
@@ -10561,16 +9515,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionalExpression__Group__5"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3686:1: rule__ConditionalExpression__Group__5 : rule__ConditionalExpression__Group__5__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3311:1: rule__ConditionalExpression__Group__5 : rule__ConditionalExpression__Group__5__Impl ;
     public final void rule__ConditionalExpression__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3690:1: ( rule__ConditionalExpression__Group__5__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3691:2: rule__ConditionalExpression__Group__5__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3315:1: ( rule__ConditionalExpression__Group__5__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3316:2: rule__ConditionalExpression__Group__5__Impl
             {
-            pushFollow(FOLLOW_rule__ConditionalExpression__Group__5__Impl_in_rule__ConditionalExpression__Group__57496);
+            pushFollow(FOLLOW_rule__ConditionalExpression__Group__5__Impl_in_rule__ConditionalExpression__Group__56760);
             rule__ConditionalExpression__Group__5__Impl();
 
             state._fsp--;
@@ -10594,22 +9548,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionalExpression__Group__5__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3697:1: rule__ConditionalExpression__Group__5__Impl : ( 'fi' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3322:1: rule__ConditionalExpression__Group__5__Impl : ( 'fi' ) ;
     public final void rule__ConditionalExpression__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3701:1: ( ( 'fi' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3702:1: ( 'fi' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3326:1: ( ( 'fi' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3327:1: ( 'fi' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3702:1: ( 'fi' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3703:1: 'fi'
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3327:1: ( 'fi' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3328:1: 'fi'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditionalExpressionAccess().getFiKeyword_5()); 
             }
-            match(input,33,FOLLOW_33_in_rule__ConditionalExpression__Group__5__Impl7524); if (state.failed) return ;
+            match(input,33,FOLLOW_33_in_rule__ConditionalExpression__Group__5__Impl6788); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getConditionalExpressionAccess().getFiKeyword_5()); 
             }
@@ -10635,21 +9589,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionalExpression__Group_4__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3728:1: rule__ConditionalExpression__Group_4__0 : rule__ConditionalExpression__Group_4__0__Impl rule__ConditionalExpression__Group_4__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3353:1: rule__ConditionalExpression__Group_4__0 : rule__ConditionalExpression__Group_4__0__Impl rule__ConditionalExpression__Group_4__1 ;
     public final void rule__ConditionalExpression__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3732:1: ( rule__ConditionalExpression__Group_4__0__Impl rule__ConditionalExpression__Group_4__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3733:2: rule__ConditionalExpression__Group_4__0__Impl rule__ConditionalExpression__Group_4__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3357:1: ( rule__ConditionalExpression__Group_4__0__Impl rule__ConditionalExpression__Group_4__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3358:2: rule__ConditionalExpression__Group_4__0__Impl rule__ConditionalExpression__Group_4__1
             {
-            pushFollow(FOLLOW_rule__ConditionalExpression__Group_4__0__Impl_in_rule__ConditionalExpression__Group_4__07567);
+            pushFollow(FOLLOW_rule__ConditionalExpression__Group_4__0__Impl_in_rule__ConditionalExpression__Group_4__06831);
             rule__ConditionalExpression__Group_4__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ConditionalExpression__Group_4__1_in_rule__ConditionalExpression__Group_4__07570);
+            pushFollow(FOLLOW_rule__ConditionalExpression__Group_4__1_in_rule__ConditionalExpression__Group_4__06834);
             rule__ConditionalExpression__Group_4__1();
 
             state._fsp--;
@@ -10673,25 +9627,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionalExpression__Group_4__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3740:1: rule__ConditionalExpression__Group_4__0__Impl : ( ( 'else' ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3365:1: rule__ConditionalExpression__Group_4__0__Impl : ( ( 'else' ) ) ;
     public final void rule__ConditionalExpression__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3744:1: ( ( ( 'else' ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3745:1: ( ( 'else' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3369:1: ( ( ( 'else' ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3370:1: ( ( 'else' ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3745:1: ( ( 'else' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3746:1: ( 'else' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3370:1: ( ( 'else' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3371:1: ( 'else' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditionalExpressionAccess().getElseKeyword_4_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3747:1: ( 'else' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3748:2: 'else'
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3372:1: ( 'else' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3373:2: 'else'
             {
-            match(input,34,FOLLOW_34_in_rule__ConditionalExpression__Group_4__0__Impl7599); if (state.failed) return ;
+            match(input,34,FOLLOW_34_in_rule__ConditionalExpression__Group_4__0__Impl6863); if (state.failed) return ;
 
             }
 
@@ -10720,16 +9674,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionalExpression__Group_4__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3759:1: rule__ConditionalExpression__Group_4__1 : rule__ConditionalExpression__Group_4__1__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3384:1: rule__ConditionalExpression__Group_4__1 : rule__ConditionalExpression__Group_4__1__Impl ;
     public final void rule__ConditionalExpression__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3763:1: ( rule__ConditionalExpression__Group_4__1__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3764:2: rule__ConditionalExpression__Group_4__1__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3388:1: ( rule__ConditionalExpression__Group_4__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3389:2: rule__ConditionalExpression__Group_4__1__Impl
             {
-            pushFollow(FOLLOW_rule__ConditionalExpression__Group_4__1__Impl_in_rule__ConditionalExpression__Group_4__17631);
+            pushFollow(FOLLOW_rule__ConditionalExpression__Group_4__1__Impl_in_rule__ConditionalExpression__Group_4__16895);
             rule__ConditionalExpression__Group_4__1__Impl();
 
             state._fsp--;
@@ -10753,25 +9707,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionalExpression__Group_4__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3770:1: rule__ConditionalExpression__Group_4__1__Impl : ( ( rule__ConditionalExpression__Else_expAssignment_4_1 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3395:1: rule__ConditionalExpression__Group_4__1__Impl : ( ( rule__ConditionalExpression__Else_expAssignment_4_1 ) ) ;
     public final void rule__ConditionalExpression__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3774:1: ( ( ( rule__ConditionalExpression__Else_expAssignment_4_1 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3775:1: ( ( rule__ConditionalExpression__Else_expAssignment_4_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3399:1: ( ( ( rule__ConditionalExpression__Else_expAssignment_4_1 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3400:1: ( ( rule__ConditionalExpression__Else_expAssignment_4_1 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3775:1: ( ( rule__ConditionalExpression__Else_expAssignment_4_1 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3776:1: ( rule__ConditionalExpression__Else_expAssignment_4_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3400:1: ( ( rule__ConditionalExpression__Else_expAssignment_4_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3401:1: ( rule__ConditionalExpression__Else_expAssignment_4_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditionalExpressionAccess().getElse_expAssignment_4_1()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3777:1: ( rule__ConditionalExpression__Else_expAssignment_4_1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3777:2: rule__ConditionalExpression__Else_expAssignment_4_1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3402:1: ( rule__ConditionalExpression__Else_expAssignment_4_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3402:2: rule__ConditionalExpression__Else_expAssignment_4_1
             {
-            pushFollow(FOLLOW_rule__ConditionalExpression__Else_expAssignment_4_1_in_rule__ConditionalExpression__Group_4__1__Impl7658);
+            pushFollow(FOLLOW_rule__ConditionalExpression__Else_expAssignment_4_1_in_rule__ConditionalExpression__Group_4__1__Impl6922);
             rule__ConditionalExpression__Else_expAssignment_4_1();
 
             state._fsp--;
@@ -10804,21 +9758,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LoopExpression__Group__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3791:1: rule__LoopExpression__Group__0 : rule__LoopExpression__Group__0__Impl rule__LoopExpression__Group__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3416:1: rule__LoopExpression__Group__0 : rule__LoopExpression__Group__0__Impl rule__LoopExpression__Group__1 ;
     public final void rule__LoopExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3795:1: ( rule__LoopExpression__Group__0__Impl rule__LoopExpression__Group__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3796:2: rule__LoopExpression__Group__0__Impl rule__LoopExpression__Group__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3420:1: ( rule__LoopExpression__Group__0__Impl rule__LoopExpression__Group__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3421:2: rule__LoopExpression__Group__0__Impl rule__LoopExpression__Group__1
             {
-            pushFollow(FOLLOW_rule__LoopExpression__Group__0__Impl_in_rule__LoopExpression__Group__07692);
+            pushFollow(FOLLOW_rule__LoopExpression__Group__0__Impl_in_rule__LoopExpression__Group__06956);
             rule__LoopExpression__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__LoopExpression__Group__1_in_rule__LoopExpression__Group__07695);
+            pushFollow(FOLLOW_rule__LoopExpression__Group__1_in_rule__LoopExpression__Group__06959);
             rule__LoopExpression__Group__1();
 
             state._fsp--;
@@ -10842,22 +9796,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LoopExpression__Group__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3803:1: rule__LoopExpression__Group__0__Impl : ( 'while' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3428:1: rule__LoopExpression__Group__0__Impl : ( 'while' ) ;
     public final void rule__LoopExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3807:1: ( ( 'while' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3808:1: ( 'while' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3432:1: ( ( 'while' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3433:1: ( 'while' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3808:1: ( 'while' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3809:1: 'while'
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3433:1: ( 'while' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3434:1: 'while'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLoopExpressionAccess().getWhileKeyword_0()); 
             }
-            match(input,35,FOLLOW_35_in_rule__LoopExpression__Group__0__Impl7723); if (state.failed) return ;
+            match(input,35,FOLLOW_35_in_rule__LoopExpression__Group__0__Impl6987); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLoopExpressionAccess().getWhileKeyword_0()); 
             }
@@ -10883,21 +9837,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LoopExpression__Group__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3822:1: rule__LoopExpression__Group__1 : rule__LoopExpression__Group__1__Impl rule__LoopExpression__Group__2 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3447:1: rule__LoopExpression__Group__1 : rule__LoopExpression__Group__1__Impl rule__LoopExpression__Group__2 ;
     public final void rule__LoopExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3826:1: ( rule__LoopExpression__Group__1__Impl rule__LoopExpression__Group__2 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3827:2: rule__LoopExpression__Group__1__Impl rule__LoopExpression__Group__2
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3451:1: ( rule__LoopExpression__Group__1__Impl rule__LoopExpression__Group__2 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3452:2: rule__LoopExpression__Group__1__Impl rule__LoopExpression__Group__2
             {
-            pushFollow(FOLLOW_rule__LoopExpression__Group__1__Impl_in_rule__LoopExpression__Group__17754);
+            pushFollow(FOLLOW_rule__LoopExpression__Group__1__Impl_in_rule__LoopExpression__Group__17018);
             rule__LoopExpression__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__LoopExpression__Group__2_in_rule__LoopExpression__Group__17757);
+            pushFollow(FOLLOW_rule__LoopExpression__Group__2_in_rule__LoopExpression__Group__17021);
             rule__LoopExpression__Group__2();
 
             state._fsp--;
@@ -10921,25 +9875,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LoopExpression__Group__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3834:1: rule__LoopExpression__Group__1__Impl : ( ( rule__LoopExpression__PredAssignment_1 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3459:1: rule__LoopExpression__Group__1__Impl : ( ( rule__LoopExpression__PredAssignment_1 ) ) ;
     public final void rule__LoopExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3838:1: ( ( ( rule__LoopExpression__PredAssignment_1 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3839:1: ( ( rule__LoopExpression__PredAssignment_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3463:1: ( ( ( rule__LoopExpression__PredAssignment_1 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3464:1: ( ( rule__LoopExpression__PredAssignment_1 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3839:1: ( ( rule__LoopExpression__PredAssignment_1 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3840:1: ( rule__LoopExpression__PredAssignment_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3464:1: ( ( rule__LoopExpression__PredAssignment_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3465:1: ( rule__LoopExpression__PredAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLoopExpressionAccess().getPredAssignment_1()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3841:1: ( rule__LoopExpression__PredAssignment_1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3841:2: rule__LoopExpression__PredAssignment_1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3466:1: ( rule__LoopExpression__PredAssignment_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3466:2: rule__LoopExpression__PredAssignment_1
             {
-            pushFollow(FOLLOW_rule__LoopExpression__PredAssignment_1_in_rule__LoopExpression__Group__1__Impl7784);
+            pushFollow(FOLLOW_rule__LoopExpression__PredAssignment_1_in_rule__LoopExpression__Group__1__Impl7048);
             rule__LoopExpression__PredAssignment_1();
 
             state._fsp--;
@@ -10972,21 +9926,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LoopExpression__Group__2"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3851:1: rule__LoopExpression__Group__2 : rule__LoopExpression__Group__2__Impl rule__LoopExpression__Group__3 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3476:1: rule__LoopExpression__Group__2 : rule__LoopExpression__Group__2__Impl rule__LoopExpression__Group__3 ;
     public final void rule__LoopExpression__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3855:1: ( rule__LoopExpression__Group__2__Impl rule__LoopExpression__Group__3 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3856:2: rule__LoopExpression__Group__2__Impl rule__LoopExpression__Group__3
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3480:1: ( rule__LoopExpression__Group__2__Impl rule__LoopExpression__Group__3 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3481:2: rule__LoopExpression__Group__2__Impl rule__LoopExpression__Group__3
             {
-            pushFollow(FOLLOW_rule__LoopExpression__Group__2__Impl_in_rule__LoopExpression__Group__27814);
+            pushFollow(FOLLOW_rule__LoopExpression__Group__2__Impl_in_rule__LoopExpression__Group__27078);
             rule__LoopExpression__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__LoopExpression__Group__3_in_rule__LoopExpression__Group__27817);
+            pushFollow(FOLLOW_rule__LoopExpression__Group__3_in_rule__LoopExpression__Group__27081);
             rule__LoopExpression__Group__3();
 
             state._fsp--;
@@ -11010,22 +9964,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LoopExpression__Group__2__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3863:1: rule__LoopExpression__Group__2__Impl : ( 'loop' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3488:1: rule__LoopExpression__Group__2__Impl : ( 'loop' ) ;
     public final void rule__LoopExpression__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3867:1: ( ( 'loop' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3868:1: ( 'loop' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3492:1: ( ( 'loop' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3493:1: ( 'loop' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3868:1: ( 'loop' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3869:1: 'loop'
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3493:1: ( 'loop' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3494:1: 'loop'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLoopExpressionAccess().getLoopKeyword_2()); 
             }
-            match(input,36,FOLLOW_36_in_rule__LoopExpression__Group__2__Impl7845); if (state.failed) return ;
+            match(input,36,FOLLOW_36_in_rule__LoopExpression__Group__2__Impl7109); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLoopExpressionAccess().getLoopKeyword_2()); 
             }
@@ -11051,21 +10005,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LoopExpression__Group__3"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3882:1: rule__LoopExpression__Group__3 : rule__LoopExpression__Group__3__Impl rule__LoopExpression__Group__4 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3507:1: rule__LoopExpression__Group__3 : rule__LoopExpression__Group__3__Impl rule__LoopExpression__Group__4 ;
     public final void rule__LoopExpression__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3886:1: ( rule__LoopExpression__Group__3__Impl rule__LoopExpression__Group__4 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3887:2: rule__LoopExpression__Group__3__Impl rule__LoopExpression__Group__4
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3511:1: ( rule__LoopExpression__Group__3__Impl rule__LoopExpression__Group__4 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3512:2: rule__LoopExpression__Group__3__Impl rule__LoopExpression__Group__4
             {
-            pushFollow(FOLLOW_rule__LoopExpression__Group__3__Impl_in_rule__LoopExpression__Group__37876);
+            pushFollow(FOLLOW_rule__LoopExpression__Group__3__Impl_in_rule__LoopExpression__Group__37140);
             rule__LoopExpression__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__LoopExpression__Group__4_in_rule__LoopExpression__Group__37879);
+            pushFollow(FOLLOW_rule__LoopExpression__Group__4_in_rule__LoopExpression__Group__37143);
             rule__LoopExpression__Group__4();
 
             state._fsp--;
@@ -11089,25 +10043,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LoopExpression__Group__3__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3894:1: rule__LoopExpression__Group__3__Impl : ( ( rule__LoopExpression__BodyAssignment_3 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3519:1: rule__LoopExpression__Group__3__Impl : ( ( rule__LoopExpression__BodyAssignment_3 ) ) ;
     public final void rule__LoopExpression__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3898:1: ( ( ( rule__LoopExpression__BodyAssignment_3 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3899:1: ( ( rule__LoopExpression__BodyAssignment_3 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3523:1: ( ( ( rule__LoopExpression__BodyAssignment_3 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3524:1: ( ( rule__LoopExpression__BodyAssignment_3 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3899:1: ( ( rule__LoopExpression__BodyAssignment_3 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3900:1: ( rule__LoopExpression__BodyAssignment_3 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3524:1: ( ( rule__LoopExpression__BodyAssignment_3 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3525:1: ( rule__LoopExpression__BodyAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLoopExpressionAccess().getBodyAssignment_3()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3901:1: ( rule__LoopExpression__BodyAssignment_3 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3901:2: rule__LoopExpression__BodyAssignment_3
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3526:1: ( rule__LoopExpression__BodyAssignment_3 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3526:2: rule__LoopExpression__BodyAssignment_3
             {
-            pushFollow(FOLLOW_rule__LoopExpression__BodyAssignment_3_in_rule__LoopExpression__Group__3__Impl7906);
+            pushFollow(FOLLOW_rule__LoopExpression__BodyAssignment_3_in_rule__LoopExpression__Group__3__Impl7170);
             rule__LoopExpression__BodyAssignment_3();
 
             state._fsp--;
@@ -11140,16 +10094,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LoopExpression__Group__4"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3911:1: rule__LoopExpression__Group__4 : rule__LoopExpression__Group__4__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3536:1: rule__LoopExpression__Group__4 : rule__LoopExpression__Group__4__Impl ;
     public final void rule__LoopExpression__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3915:1: ( rule__LoopExpression__Group__4__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3916:2: rule__LoopExpression__Group__4__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3540:1: ( rule__LoopExpression__Group__4__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3541:2: rule__LoopExpression__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__LoopExpression__Group__4__Impl_in_rule__LoopExpression__Group__47936);
+            pushFollow(FOLLOW_rule__LoopExpression__Group__4__Impl_in_rule__LoopExpression__Group__47200);
             rule__LoopExpression__Group__4__Impl();
 
             state._fsp--;
@@ -11173,22 +10127,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LoopExpression__Group__4__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3922:1: rule__LoopExpression__Group__4__Impl : ( 'pool' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3547:1: rule__LoopExpression__Group__4__Impl : ( 'pool' ) ;
     public final void rule__LoopExpression__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3926:1: ( ( 'pool' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3927:1: ( 'pool' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3551:1: ( ( 'pool' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3552:1: ( 'pool' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3927:1: ( 'pool' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3928:1: 'pool'
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3552:1: ( 'pool' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3553:1: 'pool'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLoopExpressionAccess().getPoolKeyword_4()); 
             }
-            match(input,37,FOLLOW_37_in_rule__LoopExpression__Group__4__Impl7964); if (state.failed) return ;
+            match(input,37,FOLLOW_37_in_rule__LoopExpression__Group__4__Impl7228); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLoopExpressionAccess().getPoolKeyword_4()); 
             }
@@ -11214,21 +10168,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BlockExpression__Group__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3951:1: rule__BlockExpression__Group__0 : rule__BlockExpression__Group__0__Impl rule__BlockExpression__Group__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3576:1: rule__BlockExpression__Group__0 : rule__BlockExpression__Group__0__Impl rule__BlockExpression__Group__1 ;
     public final void rule__BlockExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3955:1: ( rule__BlockExpression__Group__0__Impl rule__BlockExpression__Group__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3956:2: rule__BlockExpression__Group__0__Impl rule__BlockExpression__Group__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3580:1: ( rule__BlockExpression__Group__0__Impl rule__BlockExpression__Group__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3581:2: rule__BlockExpression__Group__0__Impl rule__BlockExpression__Group__1
             {
-            pushFollow(FOLLOW_rule__BlockExpression__Group__0__Impl_in_rule__BlockExpression__Group__08005);
+            pushFollow(FOLLOW_rule__BlockExpression__Group__0__Impl_in_rule__BlockExpression__Group__07269);
             rule__BlockExpression__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__BlockExpression__Group__1_in_rule__BlockExpression__Group__08008);
+            pushFollow(FOLLOW_rule__BlockExpression__Group__1_in_rule__BlockExpression__Group__07272);
             rule__BlockExpression__Group__1();
 
             state._fsp--;
@@ -11252,23 +10206,23 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BlockExpression__Group__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3963:1: rule__BlockExpression__Group__0__Impl : ( () ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3588:1: rule__BlockExpression__Group__0__Impl : ( () ) ;
     public final void rule__BlockExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3967:1: ( ( () ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3968:1: ( () )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3592:1: ( ( () ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3593:1: ( () )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3968:1: ( () )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3969:1: ()
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3593:1: ( () )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3594:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBlockExpressionAccess().getBlockExpressionAction_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3970:1: ()
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3972:1: 
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3595:1: ()
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3597:1: 
             {
             }
 
@@ -11293,21 +10247,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BlockExpression__Group__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3982:1: rule__BlockExpression__Group__1 : rule__BlockExpression__Group__1__Impl rule__BlockExpression__Group__2 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3607:1: rule__BlockExpression__Group__1 : rule__BlockExpression__Group__1__Impl rule__BlockExpression__Group__2 ;
     public final void rule__BlockExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3986:1: ( rule__BlockExpression__Group__1__Impl rule__BlockExpression__Group__2 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3987:2: rule__BlockExpression__Group__1__Impl rule__BlockExpression__Group__2
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3611:1: ( rule__BlockExpression__Group__1__Impl rule__BlockExpression__Group__2 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3612:2: rule__BlockExpression__Group__1__Impl rule__BlockExpression__Group__2
             {
-            pushFollow(FOLLOW_rule__BlockExpression__Group__1__Impl_in_rule__BlockExpression__Group__18066);
+            pushFollow(FOLLOW_rule__BlockExpression__Group__1__Impl_in_rule__BlockExpression__Group__17330);
             rule__BlockExpression__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__BlockExpression__Group__2_in_rule__BlockExpression__Group__18069);
+            pushFollow(FOLLOW_rule__BlockExpression__Group__2_in_rule__BlockExpression__Group__17333);
             rule__BlockExpression__Group__2();
 
             state._fsp--;
@@ -11331,22 +10285,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BlockExpression__Group__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3994:1: rule__BlockExpression__Group__1__Impl : ( '{' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3619:1: rule__BlockExpression__Group__1__Impl : ( '{' ) ;
     public final void rule__BlockExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3998:1: ( ( '{' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3999:1: ( '{' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3623:1: ( ( '{' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3624:1: ( '{' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3999:1: ( '{' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4000:1: '{'
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3624:1: ( '{' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3625:1: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBlockExpressionAccess().getLeftCurlyBracketKeyword_1()); 
             }
-            match(input,18,FOLLOW_18_in_rule__BlockExpression__Group__1__Impl8097); if (state.failed) return ;
+            match(input,18,FOLLOW_18_in_rule__BlockExpression__Group__1__Impl7361); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBlockExpressionAccess().getLeftCurlyBracketKeyword_1()); 
             }
@@ -11372,21 +10326,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BlockExpression__Group__2"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4013:1: rule__BlockExpression__Group__2 : rule__BlockExpression__Group__2__Impl rule__BlockExpression__Group__3 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3638:1: rule__BlockExpression__Group__2 : rule__BlockExpression__Group__2__Impl rule__BlockExpression__Group__3 ;
     public final void rule__BlockExpression__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4017:1: ( rule__BlockExpression__Group__2__Impl rule__BlockExpression__Group__3 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4018:2: rule__BlockExpression__Group__2__Impl rule__BlockExpression__Group__3
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3642:1: ( rule__BlockExpression__Group__2__Impl rule__BlockExpression__Group__3 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3643:2: rule__BlockExpression__Group__2__Impl rule__BlockExpression__Group__3
             {
-            pushFollow(FOLLOW_rule__BlockExpression__Group__2__Impl_in_rule__BlockExpression__Group__28128);
+            pushFollow(FOLLOW_rule__BlockExpression__Group__2__Impl_in_rule__BlockExpression__Group__27392);
             rule__BlockExpression__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__BlockExpression__Group__3_in_rule__BlockExpression__Group__28131);
+            pushFollow(FOLLOW_rule__BlockExpression__Group__3_in_rule__BlockExpression__Group__27395);
             rule__BlockExpression__Group__3();
 
             state._fsp--;
@@ -11410,37 +10364,37 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BlockExpression__Group__2__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4025:1: rule__BlockExpression__Group__2__Impl : ( ( rule__BlockExpression__Group_2__0 )* ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3650:1: rule__BlockExpression__Group__2__Impl : ( ( rule__BlockExpression__Group_2__0 )* ) ;
     public final void rule__BlockExpression__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4029:1: ( ( ( rule__BlockExpression__Group_2__0 )* ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4030:1: ( ( rule__BlockExpression__Group_2__0 )* )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3654:1: ( ( ( rule__BlockExpression__Group_2__0 )* ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3655:1: ( ( rule__BlockExpression__Group_2__0 )* )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4030:1: ( ( rule__BlockExpression__Group_2__0 )* )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4031:1: ( rule__BlockExpression__Group_2__0 )*
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3655:1: ( ( rule__BlockExpression__Group_2__0 )* )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3656:1: ( rule__BlockExpression__Group_2__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBlockExpressionAccess().getGroup_2()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4032:1: ( rule__BlockExpression__Group_2__0 )*
-            loop22:
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3657:1: ( rule__BlockExpression__Group_2__0 )*
+            loop19:
             do {
-                int alt22=2;
-                int LA22_0 = input.LA(1);
+                int alt19=2;
+                int LA19_0 = input.LA(1);
 
-                if ( ((LA22_0>=RULE_ID && LA22_0<=RULE_STRING)||(LA22_0>=14 && LA22_0<=16)||LA22_0==18||LA22_0==24||(LA22_0>=27 && LA22_0<=28)||LA22_0==31||LA22_0==35||LA22_0==38||LA22_0==40||(LA22_0>=44 && LA22_0<=45)) ) {
-                    alt22=1;
+                if ( ((LA19_0>=RULE_ID && LA19_0<=RULE_STRING)||(LA19_0>=14 && LA19_0<=16)||LA19_0==18||LA19_0==24||(LA19_0>=27 && LA19_0<=29)||LA19_0==31||LA19_0==35||(LA19_0>=38 && LA19_0<=39)||LA19_0==41) ) {
+                    alt19=1;
                 }
 
 
-                switch (alt22) {
+                switch (alt19) {
             	case 1 :
-            	    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4032:2: rule__BlockExpression__Group_2__0
+            	    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3657:2: rule__BlockExpression__Group_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__BlockExpression__Group_2__0_in_rule__BlockExpression__Group__2__Impl8158);
+            	    pushFollow(FOLLOW_rule__BlockExpression__Group_2__0_in_rule__BlockExpression__Group__2__Impl7422);
             	    rule__BlockExpression__Group_2__0();
 
             	    state._fsp--;
@@ -11450,7 +10404,7 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop22;
+            	    break loop19;
                 }
             } while (true);
 
@@ -11479,16 +10433,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BlockExpression__Group__3"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4042:1: rule__BlockExpression__Group__3 : rule__BlockExpression__Group__3__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3667:1: rule__BlockExpression__Group__3 : rule__BlockExpression__Group__3__Impl ;
     public final void rule__BlockExpression__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4046:1: ( rule__BlockExpression__Group__3__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4047:2: rule__BlockExpression__Group__3__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3671:1: ( rule__BlockExpression__Group__3__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3672:2: rule__BlockExpression__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__BlockExpression__Group__3__Impl_in_rule__BlockExpression__Group__38189);
+            pushFollow(FOLLOW_rule__BlockExpression__Group__3__Impl_in_rule__BlockExpression__Group__37453);
             rule__BlockExpression__Group__3__Impl();
 
             state._fsp--;
@@ -11512,22 +10466,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BlockExpression__Group__3__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4053:1: rule__BlockExpression__Group__3__Impl : ( '}' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3678:1: rule__BlockExpression__Group__3__Impl : ( '}' ) ;
     public final void rule__BlockExpression__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4057:1: ( ( '}' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4058:1: ( '}' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3682:1: ( ( '}' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3683:1: ( '}' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4058:1: ( '}' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4059:1: '}'
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3683:1: ( '}' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3684:1: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBlockExpressionAccess().getRightCurlyBracketKeyword_3()); 
             }
-            match(input,19,FOLLOW_19_in_rule__BlockExpression__Group__3__Impl8217); if (state.failed) return ;
+            match(input,19,FOLLOW_19_in_rule__BlockExpression__Group__3__Impl7481); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBlockExpressionAccess().getRightCurlyBracketKeyword_3()); 
             }
@@ -11553,21 +10507,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BlockExpression__Group_2__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4080:1: rule__BlockExpression__Group_2__0 : rule__BlockExpression__Group_2__0__Impl rule__BlockExpression__Group_2__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3705:1: rule__BlockExpression__Group_2__0 : rule__BlockExpression__Group_2__0__Impl rule__BlockExpression__Group_2__1 ;
     public final void rule__BlockExpression__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4084:1: ( rule__BlockExpression__Group_2__0__Impl rule__BlockExpression__Group_2__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4085:2: rule__BlockExpression__Group_2__0__Impl rule__BlockExpression__Group_2__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3709:1: ( rule__BlockExpression__Group_2__0__Impl rule__BlockExpression__Group_2__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3710:2: rule__BlockExpression__Group_2__0__Impl rule__BlockExpression__Group_2__1
             {
-            pushFollow(FOLLOW_rule__BlockExpression__Group_2__0__Impl_in_rule__BlockExpression__Group_2__08256);
+            pushFollow(FOLLOW_rule__BlockExpression__Group_2__0__Impl_in_rule__BlockExpression__Group_2__07520);
             rule__BlockExpression__Group_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__BlockExpression__Group_2__1_in_rule__BlockExpression__Group_2__08259);
+            pushFollow(FOLLOW_rule__BlockExpression__Group_2__1_in_rule__BlockExpression__Group_2__07523);
             rule__BlockExpression__Group_2__1();
 
             state._fsp--;
@@ -11591,25 +10545,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BlockExpression__Group_2__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4092:1: rule__BlockExpression__Group_2__0__Impl : ( ( rule__BlockExpression__BodyAssignment_2_0 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3717:1: rule__BlockExpression__Group_2__0__Impl : ( ( rule__BlockExpression__BodyAssignment_2_0 ) ) ;
     public final void rule__BlockExpression__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4096:1: ( ( ( rule__BlockExpression__BodyAssignment_2_0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4097:1: ( ( rule__BlockExpression__BodyAssignment_2_0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3721:1: ( ( ( rule__BlockExpression__BodyAssignment_2_0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3722:1: ( ( rule__BlockExpression__BodyAssignment_2_0 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4097:1: ( ( rule__BlockExpression__BodyAssignment_2_0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4098:1: ( rule__BlockExpression__BodyAssignment_2_0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3722:1: ( ( rule__BlockExpression__BodyAssignment_2_0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3723:1: ( rule__BlockExpression__BodyAssignment_2_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBlockExpressionAccess().getBodyAssignment_2_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4099:1: ( rule__BlockExpression__BodyAssignment_2_0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4099:2: rule__BlockExpression__BodyAssignment_2_0
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3724:1: ( rule__BlockExpression__BodyAssignment_2_0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3724:2: rule__BlockExpression__BodyAssignment_2_0
             {
-            pushFollow(FOLLOW_rule__BlockExpression__BodyAssignment_2_0_in_rule__BlockExpression__Group_2__0__Impl8286);
+            pushFollow(FOLLOW_rule__BlockExpression__BodyAssignment_2_0_in_rule__BlockExpression__Group_2__0__Impl7550);
             rule__BlockExpression__BodyAssignment_2_0();
 
             state._fsp--;
@@ -11642,16 +10596,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BlockExpression__Group_2__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4109:1: rule__BlockExpression__Group_2__1 : rule__BlockExpression__Group_2__1__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3734:1: rule__BlockExpression__Group_2__1 : rule__BlockExpression__Group_2__1__Impl ;
     public final void rule__BlockExpression__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4113:1: ( rule__BlockExpression__Group_2__1__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4114:2: rule__BlockExpression__Group_2__1__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3738:1: ( rule__BlockExpression__Group_2__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3739:2: rule__BlockExpression__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__BlockExpression__Group_2__1__Impl_in_rule__BlockExpression__Group_2__18316);
+            pushFollow(FOLLOW_rule__BlockExpression__Group_2__1__Impl_in_rule__BlockExpression__Group_2__17580);
             rule__BlockExpression__Group_2__1__Impl();
 
             state._fsp--;
@@ -11675,22 +10629,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BlockExpression__Group_2__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4120:1: rule__BlockExpression__Group_2__1__Impl : ( ';' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3745:1: rule__BlockExpression__Group_2__1__Impl : ( ';' ) ;
     public final void rule__BlockExpression__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4124:1: ( ( ';' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4125:1: ( ';' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3749:1: ( ( ';' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3750:1: ( ';' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4125:1: ( ';' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4126:1: ';'
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3750:1: ( ';' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3751:1: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBlockExpressionAccess().getSemicolonKeyword_2_1()); 
             }
-            match(input,20,FOLLOW_20_in_rule__BlockExpression__Group_2__1__Impl8344); if (state.failed) return ;
+            match(input,20,FOLLOW_20_in_rule__BlockExpression__Group_2__1__Impl7608); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBlockExpressionAccess().getSemicolonKeyword_2_1()); 
             }
@@ -11715,22 +10669,185 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__BlockExpression__Group_2__1__Impl"
 
 
+    // $ANTLR start "rule__IsvoidExpression__Group__0"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3768:1: rule__IsvoidExpression__Group__0 : rule__IsvoidExpression__Group__0__Impl rule__IsvoidExpression__Group__1 ;
+    public final void rule__IsvoidExpression__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3772:1: ( rule__IsvoidExpression__Group__0__Impl rule__IsvoidExpression__Group__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3773:2: rule__IsvoidExpression__Group__0__Impl rule__IsvoidExpression__Group__1
+            {
+            pushFollow(FOLLOW_rule__IsvoidExpression__Group__0__Impl_in_rule__IsvoidExpression__Group__07643);
+            rule__IsvoidExpression__Group__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__IsvoidExpression__Group__1_in_rule__IsvoidExpression__Group__07646);
+            rule__IsvoidExpression__Group__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__IsvoidExpression__Group__0"
+
+
+    // $ANTLR start "rule__IsvoidExpression__Group__0__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3780:1: rule__IsvoidExpression__Group__0__Impl : ( 'isvoid' ) ;
+    public final void rule__IsvoidExpression__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3784:1: ( ( 'isvoid' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3785:1: ( 'isvoid' )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3785:1: ( 'isvoid' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3786:1: 'isvoid'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getIsvoidExpressionAccess().getIsvoidKeyword_0()); 
+            }
+            match(input,38,FOLLOW_38_in_rule__IsvoidExpression__Group__0__Impl7674); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getIsvoidExpressionAccess().getIsvoidKeyword_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__IsvoidExpression__Group__0__Impl"
+
+
+    // $ANTLR start "rule__IsvoidExpression__Group__1"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3799:1: rule__IsvoidExpression__Group__1 : rule__IsvoidExpression__Group__1__Impl ;
+    public final void rule__IsvoidExpression__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3803:1: ( rule__IsvoidExpression__Group__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3804:2: rule__IsvoidExpression__Group__1__Impl
+            {
+            pushFollow(FOLLOW_rule__IsvoidExpression__Group__1__Impl_in_rule__IsvoidExpression__Group__17705);
+            rule__IsvoidExpression__Group__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__IsvoidExpression__Group__1"
+
+
+    // $ANTLR start "rule__IsvoidExpression__Group__1__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3810:1: rule__IsvoidExpression__Group__1__Impl : ( ( rule__IsvoidExpression__ExprAssignment_1 ) ) ;
+    public final void rule__IsvoidExpression__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3814:1: ( ( ( rule__IsvoidExpression__ExprAssignment_1 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3815:1: ( ( rule__IsvoidExpression__ExprAssignment_1 ) )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3815:1: ( ( rule__IsvoidExpression__ExprAssignment_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3816:1: ( rule__IsvoidExpression__ExprAssignment_1 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getIsvoidExpressionAccess().getExprAssignment_1()); 
+            }
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3817:1: ( rule__IsvoidExpression__ExprAssignment_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3817:2: rule__IsvoidExpression__ExprAssignment_1
+            {
+            pushFollow(FOLLOW_rule__IsvoidExpression__ExprAssignment_1_in_rule__IsvoidExpression__Group__1__Impl7732);
+            rule__IsvoidExpression__ExprAssignment_1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getIsvoidExpressionAccess().getExprAssignment_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__IsvoidExpression__Group__1__Impl"
+
+
     // $ANTLR start "rule__LetExpression__Group__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4143:1: rule__LetExpression__Group__0 : rule__LetExpression__Group__0__Impl rule__LetExpression__Group__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3831:1: rule__LetExpression__Group__0 : rule__LetExpression__Group__0__Impl rule__LetExpression__Group__1 ;
     public final void rule__LetExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4147:1: ( rule__LetExpression__Group__0__Impl rule__LetExpression__Group__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4148:2: rule__LetExpression__Group__0__Impl rule__LetExpression__Group__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3835:1: ( rule__LetExpression__Group__0__Impl rule__LetExpression__Group__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3836:2: rule__LetExpression__Group__0__Impl rule__LetExpression__Group__1
             {
-            pushFollow(FOLLOW_rule__LetExpression__Group__0__Impl_in_rule__LetExpression__Group__08379);
+            pushFollow(FOLLOW_rule__LetExpression__Group__0__Impl_in_rule__LetExpression__Group__07766);
             rule__LetExpression__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__LetExpression__Group__1_in_rule__LetExpression__Group__08382);
+            pushFollow(FOLLOW_rule__LetExpression__Group__1_in_rule__LetExpression__Group__07769);
             rule__LetExpression__Group__1();
 
             state._fsp--;
@@ -11754,22 +10871,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetExpression__Group__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4155:1: rule__LetExpression__Group__0__Impl : ( 'let' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3843:1: rule__LetExpression__Group__0__Impl : ( 'let' ) ;
     public final void rule__LetExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4159:1: ( ( 'let' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4160:1: ( 'let' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3847:1: ( ( 'let' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3848:1: ( 'let' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4160:1: ( 'let' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4161:1: 'let'
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3848:1: ( 'let' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3849:1: 'let'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetExpressionAccess().getLetKeyword_0()); 
             }
-            match(input,38,FOLLOW_38_in_rule__LetExpression__Group__0__Impl8410); if (state.failed) return ;
+            match(input,39,FOLLOW_39_in_rule__LetExpression__Group__0__Impl7797); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLetExpressionAccess().getLetKeyword_0()); 
             }
@@ -11795,21 +10912,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetExpression__Group__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4174:1: rule__LetExpression__Group__1 : rule__LetExpression__Group__1__Impl rule__LetExpression__Group__2 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3862:1: rule__LetExpression__Group__1 : rule__LetExpression__Group__1__Impl rule__LetExpression__Group__2 ;
     public final void rule__LetExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4178:1: ( rule__LetExpression__Group__1__Impl rule__LetExpression__Group__2 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4179:2: rule__LetExpression__Group__1__Impl rule__LetExpression__Group__2
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3866:1: ( rule__LetExpression__Group__1__Impl rule__LetExpression__Group__2 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3867:2: rule__LetExpression__Group__1__Impl rule__LetExpression__Group__2
             {
-            pushFollow(FOLLOW_rule__LetExpression__Group__1__Impl_in_rule__LetExpression__Group__18441);
+            pushFollow(FOLLOW_rule__LetExpression__Group__1__Impl_in_rule__LetExpression__Group__17828);
             rule__LetExpression__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__LetExpression__Group__2_in_rule__LetExpression__Group__18444);
+            pushFollow(FOLLOW_rule__LetExpression__Group__2_in_rule__LetExpression__Group__17831);
             rule__LetExpression__Group__2();
 
             state._fsp--;
@@ -11833,25 +10950,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetExpression__Group__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4186:1: rule__LetExpression__Group__1__Impl : ( ( rule__LetExpression__DeclarationAssignment_1 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3874:1: rule__LetExpression__Group__1__Impl : ( ( rule__LetExpression__DeclarationAssignment_1 ) ) ;
     public final void rule__LetExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4190:1: ( ( ( rule__LetExpression__DeclarationAssignment_1 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4191:1: ( ( rule__LetExpression__DeclarationAssignment_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3878:1: ( ( ( rule__LetExpression__DeclarationAssignment_1 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3879:1: ( ( rule__LetExpression__DeclarationAssignment_1 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4191:1: ( ( rule__LetExpression__DeclarationAssignment_1 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4192:1: ( rule__LetExpression__DeclarationAssignment_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3879:1: ( ( rule__LetExpression__DeclarationAssignment_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3880:1: ( rule__LetExpression__DeclarationAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetExpressionAccess().getDeclarationAssignment_1()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4193:1: ( rule__LetExpression__DeclarationAssignment_1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4193:2: rule__LetExpression__DeclarationAssignment_1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3881:1: ( rule__LetExpression__DeclarationAssignment_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3881:2: rule__LetExpression__DeclarationAssignment_1
             {
-            pushFollow(FOLLOW_rule__LetExpression__DeclarationAssignment_1_in_rule__LetExpression__Group__1__Impl8471);
+            pushFollow(FOLLOW_rule__LetExpression__DeclarationAssignment_1_in_rule__LetExpression__Group__1__Impl7858);
             rule__LetExpression__DeclarationAssignment_1();
 
             state._fsp--;
@@ -11884,21 +11001,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetExpression__Group__2"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4203:1: rule__LetExpression__Group__2 : rule__LetExpression__Group__2__Impl rule__LetExpression__Group__3 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3891:1: rule__LetExpression__Group__2 : rule__LetExpression__Group__2__Impl rule__LetExpression__Group__3 ;
     public final void rule__LetExpression__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4207:1: ( rule__LetExpression__Group__2__Impl rule__LetExpression__Group__3 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4208:2: rule__LetExpression__Group__2__Impl rule__LetExpression__Group__3
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3895:1: ( rule__LetExpression__Group__2__Impl rule__LetExpression__Group__3 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3896:2: rule__LetExpression__Group__2__Impl rule__LetExpression__Group__3
             {
-            pushFollow(FOLLOW_rule__LetExpression__Group__2__Impl_in_rule__LetExpression__Group__28501);
+            pushFollow(FOLLOW_rule__LetExpression__Group__2__Impl_in_rule__LetExpression__Group__27888);
             rule__LetExpression__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__LetExpression__Group__3_in_rule__LetExpression__Group__28504);
+            pushFollow(FOLLOW_rule__LetExpression__Group__3_in_rule__LetExpression__Group__27891);
             rule__LetExpression__Group__3();
 
             state._fsp--;
@@ -11922,37 +11039,37 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetExpression__Group__2__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4215:1: rule__LetExpression__Group__2__Impl : ( ( rule__LetExpression__Group_2__0 )* ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3903:1: rule__LetExpression__Group__2__Impl : ( ( rule__LetExpression__Group_2__0 )* ) ;
     public final void rule__LetExpression__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4219:1: ( ( ( rule__LetExpression__Group_2__0 )* ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4220:1: ( ( rule__LetExpression__Group_2__0 )* )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3907:1: ( ( ( rule__LetExpression__Group_2__0 )* ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3908:1: ( ( rule__LetExpression__Group_2__0 )* )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4220:1: ( ( rule__LetExpression__Group_2__0 )* )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4221:1: ( rule__LetExpression__Group_2__0 )*
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3908:1: ( ( rule__LetExpression__Group_2__0 )* )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3909:1: ( rule__LetExpression__Group_2__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetExpressionAccess().getGroup_2()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4222:1: ( rule__LetExpression__Group_2__0 )*
-            loop23:
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3910:1: ( rule__LetExpression__Group_2__0 )*
+            loop20:
             do {
-                int alt23=2;
-                int LA23_0 = input.LA(1);
+                int alt20=2;
+                int LA20_0 = input.LA(1);
 
-                if ( (LA23_0==26) ) {
-                    alt23=1;
+                if ( (LA20_0==26) ) {
+                    alt20=1;
                 }
 
 
-                switch (alt23) {
+                switch (alt20) {
             	case 1 :
-            	    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4222:2: rule__LetExpression__Group_2__0
+            	    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3910:2: rule__LetExpression__Group_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__LetExpression__Group_2__0_in_rule__LetExpression__Group__2__Impl8531);
+            	    pushFollow(FOLLOW_rule__LetExpression__Group_2__0_in_rule__LetExpression__Group__2__Impl7918);
             	    rule__LetExpression__Group_2__0();
 
             	    state._fsp--;
@@ -11962,7 +11079,7 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop23;
+            	    break loop20;
                 }
             } while (true);
 
@@ -11991,21 +11108,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetExpression__Group__3"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4232:1: rule__LetExpression__Group__3 : rule__LetExpression__Group__3__Impl rule__LetExpression__Group__4 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3920:1: rule__LetExpression__Group__3 : rule__LetExpression__Group__3__Impl rule__LetExpression__Group__4 ;
     public final void rule__LetExpression__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4236:1: ( rule__LetExpression__Group__3__Impl rule__LetExpression__Group__4 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4237:2: rule__LetExpression__Group__3__Impl rule__LetExpression__Group__4
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3924:1: ( rule__LetExpression__Group__3__Impl rule__LetExpression__Group__4 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3925:2: rule__LetExpression__Group__3__Impl rule__LetExpression__Group__4
             {
-            pushFollow(FOLLOW_rule__LetExpression__Group__3__Impl_in_rule__LetExpression__Group__38562);
+            pushFollow(FOLLOW_rule__LetExpression__Group__3__Impl_in_rule__LetExpression__Group__37949);
             rule__LetExpression__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__LetExpression__Group__4_in_rule__LetExpression__Group__38565);
+            pushFollow(FOLLOW_rule__LetExpression__Group__4_in_rule__LetExpression__Group__37952);
             rule__LetExpression__Group__4();
 
             state._fsp--;
@@ -12029,22 +11146,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetExpression__Group__3__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4244:1: rule__LetExpression__Group__3__Impl : ( 'in' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3932:1: rule__LetExpression__Group__3__Impl : ( 'in' ) ;
     public final void rule__LetExpression__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4248:1: ( ( 'in' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4249:1: ( 'in' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3936:1: ( ( 'in' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3937:1: ( 'in' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4249:1: ( 'in' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4250:1: 'in'
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3937:1: ( 'in' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3938:1: 'in'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetExpressionAccess().getInKeyword_3()); 
             }
-            match(input,39,FOLLOW_39_in_rule__LetExpression__Group__3__Impl8593); if (state.failed) return ;
+            match(input,40,FOLLOW_40_in_rule__LetExpression__Group__3__Impl7980); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLetExpressionAccess().getInKeyword_3()); 
             }
@@ -12070,16 +11187,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetExpression__Group__4"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4263:1: rule__LetExpression__Group__4 : rule__LetExpression__Group__4__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3951:1: rule__LetExpression__Group__4 : rule__LetExpression__Group__4__Impl ;
     public final void rule__LetExpression__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4267:1: ( rule__LetExpression__Group__4__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4268:2: rule__LetExpression__Group__4__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3955:1: ( rule__LetExpression__Group__4__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3956:2: rule__LetExpression__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__LetExpression__Group__4__Impl_in_rule__LetExpression__Group__48624);
+            pushFollow(FOLLOW_rule__LetExpression__Group__4__Impl_in_rule__LetExpression__Group__48011);
             rule__LetExpression__Group__4__Impl();
 
             state._fsp--;
@@ -12103,25 +11220,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetExpression__Group__4__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4274:1: rule__LetExpression__Group__4__Impl : ( ( rule__LetExpression__BodyAssignment_4 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3962:1: rule__LetExpression__Group__4__Impl : ( ( rule__LetExpression__BodyAssignment_4 ) ) ;
     public final void rule__LetExpression__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4278:1: ( ( ( rule__LetExpression__BodyAssignment_4 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4279:1: ( ( rule__LetExpression__BodyAssignment_4 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3966:1: ( ( ( rule__LetExpression__BodyAssignment_4 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3967:1: ( ( rule__LetExpression__BodyAssignment_4 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4279:1: ( ( rule__LetExpression__BodyAssignment_4 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4280:1: ( rule__LetExpression__BodyAssignment_4 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3967:1: ( ( rule__LetExpression__BodyAssignment_4 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3968:1: ( rule__LetExpression__BodyAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetExpressionAccess().getBodyAssignment_4()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4281:1: ( rule__LetExpression__BodyAssignment_4 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4281:2: rule__LetExpression__BodyAssignment_4
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3969:1: ( rule__LetExpression__BodyAssignment_4 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3969:2: rule__LetExpression__BodyAssignment_4
             {
-            pushFollow(FOLLOW_rule__LetExpression__BodyAssignment_4_in_rule__LetExpression__Group__4__Impl8651);
+            pushFollow(FOLLOW_rule__LetExpression__BodyAssignment_4_in_rule__LetExpression__Group__4__Impl8038);
             rule__LetExpression__BodyAssignment_4();
 
             state._fsp--;
@@ -12154,21 +11271,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetExpression__Group_2__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4301:1: rule__LetExpression__Group_2__0 : rule__LetExpression__Group_2__0__Impl rule__LetExpression__Group_2__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3989:1: rule__LetExpression__Group_2__0 : rule__LetExpression__Group_2__0__Impl rule__LetExpression__Group_2__1 ;
     public final void rule__LetExpression__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4305:1: ( rule__LetExpression__Group_2__0__Impl rule__LetExpression__Group_2__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4306:2: rule__LetExpression__Group_2__0__Impl rule__LetExpression__Group_2__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3993:1: ( rule__LetExpression__Group_2__0__Impl rule__LetExpression__Group_2__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:3994:2: rule__LetExpression__Group_2__0__Impl rule__LetExpression__Group_2__1
             {
-            pushFollow(FOLLOW_rule__LetExpression__Group_2__0__Impl_in_rule__LetExpression__Group_2__08691);
+            pushFollow(FOLLOW_rule__LetExpression__Group_2__0__Impl_in_rule__LetExpression__Group_2__08078);
             rule__LetExpression__Group_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__LetExpression__Group_2__1_in_rule__LetExpression__Group_2__08694);
+            pushFollow(FOLLOW_rule__LetExpression__Group_2__1_in_rule__LetExpression__Group_2__08081);
             rule__LetExpression__Group_2__1();
 
             state._fsp--;
@@ -12192,22 +11309,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetExpression__Group_2__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4313:1: rule__LetExpression__Group_2__0__Impl : ( ',' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4001:1: rule__LetExpression__Group_2__0__Impl : ( ',' ) ;
     public final void rule__LetExpression__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4317:1: ( ( ',' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4318:1: ( ',' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4005:1: ( ( ',' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4006:1: ( ',' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4318:1: ( ',' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4319:1: ','
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4006:1: ( ',' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4007:1: ','
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetExpressionAccess().getCommaKeyword_2_0()); 
             }
-            match(input,26,FOLLOW_26_in_rule__LetExpression__Group_2__0__Impl8722); if (state.failed) return ;
+            match(input,26,FOLLOW_26_in_rule__LetExpression__Group_2__0__Impl8109); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLetExpressionAccess().getCommaKeyword_2_0()); 
             }
@@ -12233,16 +11350,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetExpression__Group_2__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4332:1: rule__LetExpression__Group_2__1 : rule__LetExpression__Group_2__1__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4020:1: rule__LetExpression__Group_2__1 : rule__LetExpression__Group_2__1__Impl ;
     public final void rule__LetExpression__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4336:1: ( rule__LetExpression__Group_2__1__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4337:2: rule__LetExpression__Group_2__1__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4024:1: ( rule__LetExpression__Group_2__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4025:2: rule__LetExpression__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__LetExpression__Group_2__1__Impl_in_rule__LetExpression__Group_2__18753);
+            pushFollow(FOLLOW_rule__LetExpression__Group_2__1__Impl_in_rule__LetExpression__Group_2__18140);
             rule__LetExpression__Group_2__1__Impl();
 
             state._fsp--;
@@ -12266,25 +11383,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetExpression__Group_2__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4343:1: rule__LetExpression__Group_2__1__Impl : ( ( rule__LetExpression__DeclarationAssignment_2_1 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4031:1: rule__LetExpression__Group_2__1__Impl : ( ( rule__LetExpression__DeclarationAssignment_2_1 ) ) ;
     public final void rule__LetExpression__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4347:1: ( ( ( rule__LetExpression__DeclarationAssignment_2_1 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4348:1: ( ( rule__LetExpression__DeclarationAssignment_2_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4035:1: ( ( ( rule__LetExpression__DeclarationAssignment_2_1 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4036:1: ( ( rule__LetExpression__DeclarationAssignment_2_1 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4348:1: ( ( rule__LetExpression__DeclarationAssignment_2_1 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4349:1: ( rule__LetExpression__DeclarationAssignment_2_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4036:1: ( ( rule__LetExpression__DeclarationAssignment_2_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4037:1: ( rule__LetExpression__DeclarationAssignment_2_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetExpressionAccess().getDeclarationAssignment_2_1()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4350:1: ( rule__LetExpression__DeclarationAssignment_2_1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4350:2: rule__LetExpression__DeclarationAssignment_2_1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4038:1: ( rule__LetExpression__DeclarationAssignment_2_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4038:2: rule__LetExpression__DeclarationAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__LetExpression__DeclarationAssignment_2_1_in_rule__LetExpression__Group_2__1__Impl8780);
+            pushFollow(FOLLOW_rule__LetExpression__DeclarationAssignment_2_1_in_rule__LetExpression__Group_2__1__Impl8167);
             rule__LetExpression__DeclarationAssignment_2_1();
 
             state._fsp--;
@@ -12317,21 +11434,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetDeclaration__Group__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4364:1: rule__LetDeclaration__Group__0 : rule__LetDeclaration__Group__0__Impl rule__LetDeclaration__Group__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4052:1: rule__LetDeclaration__Group__0 : rule__LetDeclaration__Group__0__Impl rule__LetDeclaration__Group__1 ;
     public final void rule__LetDeclaration__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4368:1: ( rule__LetDeclaration__Group__0__Impl rule__LetDeclaration__Group__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4369:2: rule__LetDeclaration__Group__0__Impl rule__LetDeclaration__Group__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4056:1: ( rule__LetDeclaration__Group__0__Impl rule__LetDeclaration__Group__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4057:2: rule__LetDeclaration__Group__0__Impl rule__LetDeclaration__Group__1
             {
-            pushFollow(FOLLOW_rule__LetDeclaration__Group__0__Impl_in_rule__LetDeclaration__Group__08814);
+            pushFollow(FOLLOW_rule__LetDeclaration__Group__0__Impl_in_rule__LetDeclaration__Group__08201);
             rule__LetDeclaration__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__LetDeclaration__Group__1_in_rule__LetDeclaration__Group__08817);
+            pushFollow(FOLLOW_rule__LetDeclaration__Group__1_in_rule__LetDeclaration__Group__08204);
             rule__LetDeclaration__Group__1();
 
             state._fsp--;
@@ -12355,25 +11472,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetDeclaration__Group__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4376:1: rule__LetDeclaration__Group__0__Impl : ( ( rule__LetDeclaration__NameAssignment_0 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4064:1: rule__LetDeclaration__Group__0__Impl : ( ( rule__LetDeclaration__NameAssignment_0 ) ) ;
     public final void rule__LetDeclaration__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4380:1: ( ( ( rule__LetDeclaration__NameAssignment_0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4381:1: ( ( rule__LetDeclaration__NameAssignment_0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4068:1: ( ( ( rule__LetDeclaration__NameAssignment_0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4069:1: ( ( rule__LetDeclaration__NameAssignment_0 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4381:1: ( ( rule__LetDeclaration__NameAssignment_0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4382:1: ( rule__LetDeclaration__NameAssignment_0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4069:1: ( ( rule__LetDeclaration__NameAssignment_0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4070:1: ( rule__LetDeclaration__NameAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetDeclarationAccess().getNameAssignment_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4383:1: ( rule__LetDeclaration__NameAssignment_0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4383:2: rule__LetDeclaration__NameAssignment_0
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4071:1: ( rule__LetDeclaration__NameAssignment_0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4071:2: rule__LetDeclaration__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__LetDeclaration__NameAssignment_0_in_rule__LetDeclaration__Group__0__Impl8844);
+            pushFollow(FOLLOW_rule__LetDeclaration__NameAssignment_0_in_rule__LetDeclaration__Group__0__Impl8231);
             rule__LetDeclaration__NameAssignment_0();
 
             state._fsp--;
@@ -12406,21 +11523,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetDeclaration__Group__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4393:1: rule__LetDeclaration__Group__1 : rule__LetDeclaration__Group__1__Impl rule__LetDeclaration__Group__2 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4081:1: rule__LetDeclaration__Group__1 : rule__LetDeclaration__Group__1__Impl rule__LetDeclaration__Group__2 ;
     public final void rule__LetDeclaration__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4397:1: ( rule__LetDeclaration__Group__1__Impl rule__LetDeclaration__Group__2 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4398:2: rule__LetDeclaration__Group__1__Impl rule__LetDeclaration__Group__2
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4085:1: ( rule__LetDeclaration__Group__1__Impl rule__LetDeclaration__Group__2 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4086:2: rule__LetDeclaration__Group__1__Impl rule__LetDeclaration__Group__2
             {
-            pushFollow(FOLLOW_rule__LetDeclaration__Group__1__Impl_in_rule__LetDeclaration__Group__18874);
+            pushFollow(FOLLOW_rule__LetDeclaration__Group__1__Impl_in_rule__LetDeclaration__Group__18261);
             rule__LetDeclaration__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__LetDeclaration__Group__2_in_rule__LetDeclaration__Group__18877);
+            pushFollow(FOLLOW_rule__LetDeclaration__Group__2_in_rule__LetDeclaration__Group__18264);
             rule__LetDeclaration__Group__2();
 
             state._fsp--;
@@ -12444,22 +11561,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetDeclaration__Group__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4405:1: rule__LetDeclaration__Group__1__Impl : ( ':' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4093:1: rule__LetDeclaration__Group__1__Impl : ( ':' ) ;
     public final void rule__LetDeclaration__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4409:1: ( ( ':' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4410:1: ( ':' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4097:1: ( ( ':' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4098:1: ( ':' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4410:1: ( ':' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4411:1: ':'
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4098:1: ( ':' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4099:1: ':'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetDeclarationAccess().getColonKeyword_1()); 
             }
-            match(input,22,FOLLOW_22_in_rule__LetDeclaration__Group__1__Impl8905); if (state.failed) return ;
+            match(input,22,FOLLOW_22_in_rule__LetDeclaration__Group__1__Impl8292); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLetDeclarationAccess().getColonKeyword_1()); 
             }
@@ -12485,21 +11602,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetDeclaration__Group__2"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4424:1: rule__LetDeclaration__Group__2 : rule__LetDeclaration__Group__2__Impl rule__LetDeclaration__Group__3 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4112:1: rule__LetDeclaration__Group__2 : rule__LetDeclaration__Group__2__Impl rule__LetDeclaration__Group__3 ;
     public final void rule__LetDeclaration__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4428:1: ( rule__LetDeclaration__Group__2__Impl rule__LetDeclaration__Group__3 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4429:2: rule__LetDeclaration__Group__2__Impl rule__LetDeclaration__Group__3
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4116:1: ( rule__LetDeclaration__Group__2__Impl rule__LetDeclaration__Group__3 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4117:2: rule__LetDeclaration__Group__2__Impl rule__LetDeclaration__Group__3
             {
-            pushFollow(FOLLOW_rule__LetDeclaration__Group__2__Impl_in_rule__LetDeclaration__Group__28936);
+            pushFollow(FOLLOW_rule__LetDeclaration__Group__2__Impl_in_rule__LetDeclaration__Group__28323);
             rule__LetDeclaration__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__LetDeclaration__Group__3_in_rule__LetDeclaration__Group__28939);
+            pushFollow(FOLLOW_rule__LetDeclaration__Group__3_in_rule__LetDeclaration__Group__28326);
             rule__LetDeclaration__Group__3();
 
             state._fsp--;
@@ -12523,25 +11640,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetDeclaration__Group__2__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4436:1: rule__LetDeclaration__Group__2__Impl : ( ( rule__LetDeclaration__Type_declAssignment_2 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4124:1: rule__LetDeclaration__Group__2__Impl : ( ( rule__LetDeclaration__Type_declAssignment_2 ) ) ;
     public final void rule__LetDeclaration__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4440:1: ( ( ( rule__LetDeclaration__Type_declAssignment_2 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4441:1: ( ( rule__LetDeclaration__Type_declAssignment_2 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4128:1: ( ( ( rule__LetDeclaration__Type_declAssignment_2 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4129:1: ( ( rule__LetDeclaration__Type_declAssignment_2 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4441:1: ( ( rule__LetDeclaration__Type_declAssignment_2 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4442:1: ( rule__LetDeclaration__Type_declAssignment_2 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4129:1: ( ( rule__LetDeclaration__Type_declAssignment_2 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4130:1: ( rule__LetDeclaration__Type_declAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetDeclarationAccess().getType_declAssignment_2()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4443:1: ( rule__LetDeclaration__Type_declAssignment_2 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4443:2: rule__LetDeclaration__Type_declAssignment_2
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4131:1: ( rule__LetDeclaration__Type_declAssignment_2 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4131:2: rule__LetDeclaration__Type_declAssignment_2
             {
-            pushFollow(FOLLOW_rule__LetDeclaration__Type_declAssignment_2_in_rule__LetDeclaration__Group__2__Impl8966);
+            pushFollow(FOLLOW_rule__LetDeclaration__Type_declAssignment_2_in_rule__LetDeclaration__Group__2__Impl8353);
             rule__LetDeclaration__Type_declAssignment_2();
 
             state._fsp--;
@@ -12574,16 +11691,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetDeclaration__Group__3"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4453:1: rule__LetDeclaration__Group__3 : rule__LetDeclaration__Group__3__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4141:1: rule__LetDeclaration__Group__3 : rule__LetDeclaration__Group__3__Impl ;
     public final void rule__LetDeclaration__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4457:1: ( rule__LetDeclaration__Group__3__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4458:2: rule__LetDeclaration__Group__3__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4145:1: ( rule__LetDeclaration__Group__3__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4146:2: rule__LetDeclaration__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__LetDeclaration__Group__3__Impl_in_rule__LetDeclaration__Group__38996);
+            pushFollow(FOLLOW_rule__LetDeclaration__Group__3__Impl_in_rule__LetDeclaration__Group__38383);
             rule__LetDeclaration__Group__3__Impl();
 
             state._fsp--;
@@ -12607,33 +11724,33 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetDeclaration__Group__3__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4464:1: rule__LetDeclaration__Group__3__Impl : ( ( rule__LetDeclaration__Group_3__0 )? ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4152:1: rule__LetDeclaration__Group__3__Impl : ( ( rule__LetDeclaration__Group_3__0 )? ) ;
     public final void rule__LetDeclaration__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4468:1: ( ( ( rule__LetDeclaration__Group_3__0 )? ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4469:1: ( ( rule__LetDeclaration__Group_3__0 )? )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4156:1: ( ( ( rule__LetDeclaration__Group_3__0 )? ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4157:1: ( ( rule__LetDeclaration__Group_3__0 )? )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4469:1: ( ( rule__LetDeclaration__Group_3__0 )? )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4470:1: ( rule__LetDeclaration__Group_3__0 )?
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4157:1: ( ( rule__LetDeclaration__Group_3__0 )? )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4158:1: ( rule__LetDeclaration__Group_3__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetDeclarationAccess().getGroup_3()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4471:1: ( rule__LetDeclaration__Group_3__0 )?
-            int alt24=2;
-            int LA24_0 = input.LA(1);
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4159:1: ( rule__LetDeclaration__Group_3__0 )?
+            int alt21=2;
+            int LA21_0 = input.LA(1);
 
-            if ( (LA24_0==23) ) {
-                alt24=1;
+            if ( (LA21_0==23) ) {
+                alt21=1;
             }
-            switch (alt24) {
+            switch (alt21) {
                 case 1 :
-                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4471:2: rule__LetDeclaration__Group_3__0
+                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4159:2: rule__LetDeclaration__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__LetDeclaration__Group_3__0_in_rule__LetDeclaration__Group__3__Impl9023);
+                    pushFollow(FOLLOW_rule__LetDeclaration__Group_3__0_in_rule__LetDeclaration__Group__3__Impl8410);
                     rule__LetDeclaration__Group_3__0();
 
                     state._fsp--;
@@ -12669,21 +11786,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetDeclaration__Group_3__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4489:1: rule__LetDeclaration__Group_3__0 : rule__LetDeclaration__Group_3__0__Impl rule__LetDeclaration__Group_3__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4177:1: rule__LetDeclaration__Group_3__0 : rule__LetDeclaration__Group_3__0__Impl rule__LetDeclaration__Group_3__1 ;
     public final void rule__LetDeclaration__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4493:1: ( rule__LetDeclaration__Group_3__0__Impl rule__LetDeclaration__Group_3__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4494:2: rule__LetDeclaration__Group_3__0__Impl rule__LetDeclaration__Group_3__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4181:1: ( rule__LetDeclaration__Group_3__0__Impl rule__LetDeclaration__Group_3__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4182:2: rule__LetDeclaration__Group_3__0__Impl rule__LetDeclaration__Group_3__1
             {
-            pushFollow(FOLLOW_rule__LetDeclaration__Group_3__0__Impl_in_rule__LetDeclaration__Group_3__09062);
+            pushFollow(FOLLOW_rule__LetDeclaration__Group_3__0__Impl_in_rule__LetDeclaration__Group_3__08449);
             rule__LetDeclaration__Group_3__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__LetDeclaration__Group_3__1_in_rule__LetDeclaration__Group_3__09065);
+            pushFollow(FOLLOW_rule__LetDeclaration__Group_3__1_in_rule__LetDeclaration__Group_3__08452);
             rule__LetDeclaration__Group_3__1();
 
             state._fsp--;
@@ -12707,22 +11824,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetDeclaration__Group_3__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4501:1: rule__LetDeclaration__Group_3__0__Impl : ( '<-' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4189:1: rule__LetDeclaration__Group_3__0__Impl : ( '<-' ) ;
     public final void rule__LetDeclaration__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4505:1: ( ( '<-' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4506:1: ( '<-' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4193:1: ( ( '<-' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4194:1: ( '<-' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4506:1: ( '<-' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4507:1: '<-'
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4194:1: ( '<-' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4195:1: '<-'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetDeclarationAccess().getLessThanSignHyphenMinusKeyword_3_0()); 
             }
-            match(input,23,FOLLOW_23_in_rule__LetDeclaration__Group_3__0__Impl9093); if (state.failed) return ;
+            match(input,23,FOLLOW_23_in_rule__LetDeclaration__Group_3__0__Impl8480); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLetDeclarationAccess().getLessThanSignHyphenMinusKeyword_3_0()); 
             }
@@ -12748,16 +11865,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetDeclaration__Group_3__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4520:1: rule__LetDeclaration__Group_3__1 : rule__LetDeclaration__Group_3__1__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4208:1: rule__LetDeclaration__Group_3__1 : rule__LetDeclaration__Group_3__1__Impl ;
     public final void rule__LetDeclaration__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4524:1: ( rule__LetDeclaration__Group_3__1__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4525:2: rule__LetDeclaration__Group_3__1__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4212:1: ( rule__LetDeclaration__Group_3__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4213:2: rule__LetDeclaration__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__LetDeclaration__Group_3__1__Impl_in_rule__LetDeclaration__Group_3__19124);
+            pushFollow(FOLLOW_rule__LetDeclaration__Group_3__1__Impl_in_rule__LetDeclaration__Group_3__18511);
             rule__LetDeclaration__Group_3__1__Impl();
 
             state._fsp--;
@@ -12781,25 +11898,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetDeclaration__Group_3__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4531:1: rule__LetDeclaration__Group_3__1__Impl : ( ( rule__LetDeclaration__InitAssignment_3_1 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4219:1: rule__LetDeclaration__Group_3__1__Impl : ( ( rule__LetDeclaration__InitAssignment_3_1 ) ) ;
     public final void rule__LetDeclaration__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4535:1: ( ( ( rule__LetDeclaration__InitAssignment_3_1 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4536:1: ( ( rule__LetDeclaration__InitAssignment_3_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4223:1: ( ( ( rule__LetDeclaration__InitAssignment_3_1 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4224:1: ( ( rule__LetDeclaration__InitAssignment_3_1 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4536:1: ( ( rule__LetDeclaration__InitAssignment_3_1 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4537:1: ( rule__LetDeclaration__InitAssignment_3_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4224:1: ( ( rule__LetDeclaration__InitAssignment_3_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4225:1: ( rule__LetDeclaration__InitAssignment_3_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetDeclarationAccess().getInitAssignment_3_1()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4538:1: ( rule__LetDeclaration__InitAssignment_3_1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4538:2: rule__LetDeclaration__InitAssignment_3_1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4226:1: ( rule__LetDeclaration__InitAssignment_3_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4226:2: rule__LetDeclaration__InitAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__LetDeclaration__InitAssignment_3_1_in_rule__LetDeclaration__Group_3__1__Impl9151);
+            pushFollow(FOLLOW_rule__LetDeclaration__InitAssignment_3_1_in_rule__LetDeclaration__Group_3__1__Impl8538);
             rule__LetDeclaration__InitAssignment_3_1();
 
             state._fsp--;
@@ -12832,21 +11949,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CaseExpression__Group__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4552:1: rule__CaseExpression__Group__0 : rule__CaseExpression__Group__0__Impl rule__CaseExpression__Group__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4240:1: rule__CaseExpression__Group__0 : rule__CaseExpression__Group__0__Impl rule__CaseExpression__Group__1 ;
     public final void rule__CaseExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4556:1: ( rule__CaseExpression__Group__0__Impl rule__CaseExpression__Group__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4557:2: rule__CaseExpression__Group__0__Impl rule__CaseExpression__Group__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4244:1: ( rule__CaseExpression__Group__0__Impl rule__CaseExpression__Group__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4245:2: rule__CaseExpression__Group__0__Impl rule__CaseExpression__Group__1
             {
-            pushFollow(FOLLOW_rule__CaseExpression__Group__0__Impl_in_rule__CaseExpression__Group__09185);
+            pushFollow(FOLLOW_rule__CaseExpression__Group__0__Impl_in_rule__CaseExpression__Group__08572);
             rule__CaseExpression__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CaseExpression__Group__1_in_rule__CaseExpression__Group__09188);
+            pushFollow(FOLLOW_rule__CaseExpression__Group__1_in_rule__CaseExpression__Group__08575);
             rule__CaseExpression__Group__1();
 
             state._fsp--;
@@ -12870,22 +11987,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CaseExpression__Group__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4564:1: rule__CaseExpression__Group__0__Impl : ( 'case' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4252:1: rule__CaseExpression__Group__0__Impl : ( 'case' ) ;
     public final void rule__CaseExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4568:1: ( ( 'case' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4569:1: ( 'case' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4256:1: ( ( 'case' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4257:1: ( 'case' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4569:1: ( 'case' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4570:1: 'case'
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4257:1: ( 'case' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4258:1: 'case'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseExpressionAccess().getCaseKeyword_0()); 
             }
-            match(input,40,FOLLOW_40_in_rule__CaseExpression__Group__0__Impl9216); if (state.failed) return ;
+            match(input,41,FOLLOW_41_in_rule__CaseExpression__Group__0__Impl8603); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCaseExpressionAccess().getCaseKeyword_0()); 
             }
@@ -12911,21 +12028,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CaseExpression__Group__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4583:1: rule__CaseExpression__Group__1 : rule__CaseExpression__Group__1__Impl rule__CaseExpression__Group__2 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4271:1: rule__CaseExpression__Group__1 : rule__CaseExpression__Group__1__Impl rule__CaseExpression__Group__2 ;
     public final void rule__CaseExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4587:1: ( rule__CaseExpression__Group__1__Impl rule__CaseExpression__Group__2 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4588:2: rule__CaseExpression__Group__1__Impl rule__CaseExpression__Group__2
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4275:1: ( rule__CaseExpression__Group__1__Impl rule__CaseExpression__Group__2 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4276:2: rule__CaseExpression__Group__1__Impl rule__CaseExpression__Group__2
             {
-            pushFollow(FOLLOW_rule__CaseExpression__Group__1__Impl_in_rule__CaseExpression__Group__19247);
+            pushFollow(FOLLOW_rule__CaseExpression__Group__1__Impl_in_rule__CaseExpression__Group__18634);
             rule__CaseExpression__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CaseExpression__Group__2_in_rule__CaseExpression__Group__19250);
+            pushFollow(FOLLOW_rule__CaseExpression__Group__2_in_rule__CaseExpression__Group__18637);
             rule__CaseExpression__Group__2();
 
             state._fsp--;
@@ -12949,25 +12066,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CaseExpression__Group__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4595:1: rule__CaseExpression__Group__1__Impl : ( ( rule__CaseExpression__ExprAssignment_1 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4283:1: rule__CaseExpression__Group__1__Impl : ( ( rule__CaseExpression__ExprAssignment_1 ) ) ;
     public final void rule__CaseExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4599:1: ( ( ( rule__CaseExpression__ExprAssignment_1 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4600:1: ( ( rule__CaseExpression__ExprAssignment_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4287:1: ( ( ( rule__CaseExpression__ExprAssignment_1 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4288:1: ( ( rule__CaseExpression__ExprAssignment_1 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4600:1: ( ( rule__CaseExpression__ExprAssignment_1 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4601:1: ( rule__CaseExpression__ExprAssignment_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4288:1: ( ( rule__CaseExpression__ExprAssignment_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4289:1: ( rule__CaseExpression__ExprAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseExpressionAccess().getExprAssignment_1()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4602:1: ( rule__CaseExpression__ExprAssignment_1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4602:2: rule__CaseExpression__ExprAssignment_1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4290:1: ( rule__CaseExpression__ExprAssignment_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4290:2: rule__CaseExpression__ExprAssignment_1
             {
-            pushFollow(FOLLOW_rule__CaseExpression__ExprAssignment_1_in_rule__CaseExpression__Group__1__Impl9277);
+            pushFollow(FOLLOW_rule__CaseExpression__ExprAssignment_1_in_rule__CaseExpression__Group__1__Impl8664);
             rule__CaseExpression__ExprAssignment_1();
 
             state._fsp--;
@@ -13000,21 +12117,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CaseExpression__Group__2"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4612:1: rule__CaseExpression__Group__2 : rule__CaseExpression__Group__2__Impl rule__CaseExpression__Group__3 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4300:1: rule__CaseExpression__Group__2 : rule__CaseExpression__Group__2__Impl rule__CaseExpression__Group__3 ;
     public final void rule__CaseExpression__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4616:1: ( rule__CaseExpression__Group__2__Impl rule__CaseExpression__Group__3 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4617:2: rule__CaseExpression__Group__2__Impl rule__CaseExpression__Group__3
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4304:1: ( rule__CaseExpression__Group__2__Impl rule__CaseExpression__Group__3 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4305:2: rule__CaseExpression__Group__2__Impl rule__CaseExpression__Group__3
             {
-            pushFollow(FOLLOW_rule__CaseExpression__Group__2__Impl_in_rule__CaseExpression__Group__29307);
+            pushFollow(FOLLOW_rule__CaseExpression__Group__2__Impl_in_rule__CaseExpression__Group__28694);
             rule__CaseExpression__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CaseExpression__Group__3_in_rule__CaseExpression__Group__29310);
+            pushFollow(FOLLOW_rule__CaseExpression__Group__3_in_rule__CaseExpression__Group__28697);
             rule__CaseExpression__Group__3();
 
             state._fsp--;
@@ -13038,22 +12155,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CaseExpression__Group__2__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4624:1: rule__CaseExpression__Group__2__Impl : ( 'of' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4312:1: rule__CaseExpression__Group__2__Impl : ( 'of' ) ;
     public final void rule__CaseExpression__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4628:1: ( ( 'of' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4629:1: ( 'of' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4316:1: ( ( 'of' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4317:1: ( 'of' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4629:1: ( 'of' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4630:1: 'of'
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4317:1: ( 'of' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4318:1: 'of'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseExpressionAccess().getOfKeyword_2()); 
             }
-            match(input,41,FOLLOW_41_in_rule__CaseExpression__Group__2__Impl9338); if (state.failed) return ;
+            match(input,42,FOLLOW_42_in_rule__CaseExpression__Group__2__Impl8725); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCaseExpressionAccess().getOfKeyword_2()); 
             }
@@ -13079,21 +12196,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CaseExpression__Group__3"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4643:1: rule__CaseExpression__Group__3 : rule__CaseExpression__Group__3__Impl rule__CaseExpression__Group__4 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4331:1: rule__CaseExpression__Group__3 : rule__CaseExpression__Group__3__Impl rule__CaseExpression__Group__4 ;
     public final void rule__CaseExpression__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4647:1: ( rule__CaseExpression__Group__3__Impl rule__CaseExpression__Group__4 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4648:2: rule__CaseExpression__Group__3__Impl rule__CaseExpression__Group__4
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4335:1: ( rule__CaseExpression__Group__3__Impl rule__CaseExpression__Group__4 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4336:2: rule__CaseExpression__Group__3__Impl rule__CaseExpression__Group__4
             {
-            pushFollow(FOLLOW_rule__CaseExpression__Group__3__Impl_in_rule__CaseExpression__Group__39369);
+            pushFollow(FOLLOW_rule__CaseExpression__Group__3__Impl_in_rule__CaseExpression__Group__38756);
             rule__CaseExpression__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CaseExpression__Group__4_in_rule__CaseExpression__Group__39372);
+            pushFollow(FOLLOW_rule__CaseExpression__Group__4_in_rule__CaseExpression__Group__38759);
             rule__CaseExpression__Group__4();
 
             state._fsp--;
@@ -13117,28 +12234,28 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CaseExpression__Group__3__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4655:1: rule__CaseExpression__Group__3__Impl : ( ( ( rule__CaseExpression__Group_3__0 ) ) ( ( rule__CaseExpression__Group_3__0 )* ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4343:1: rule__CaseExpression__Group__3__Impl : ( ( ( rule__CaseExpression__Group_3__0 ) ) ( ( rule__CaseExpression__Group_3__0 )* ) ) ;
     public final void rule__CaseExpression__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4659:1: ( ( ( ( rule__CaseExpression__Group_3__0 ) ) ( ( rule__CaseExpression__Group_3__0 )* ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4660:1: ( ( ( rule__CaseExpression__Group_3__0 ) ) ( ( rule__CaseExpression__Group_3__0 )* ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4347:1: ( ( ( ( rule__CaseExpression__Group_3__0 ) ) ( ( rule__CaseExpression__Group_3__0 )* ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4348:1: ( ( ( rule__CaseExpression__Group_3__0 ) ) ( ( rule__CaseExpression__Group_3__0 )* ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4660:1: ( ( ( rule__CaseExpression__Group_3__0 ) ) ( ( rule__CaseExpression__Group_3__0 )* ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4661:1: ( ( rule__CaseExpression__Group_3__0 ) ) ( ( rule__CaseExpression__Group_3__0 )* )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4348:1: ( ( ( rule__CaseExpression__Group_3__0 ) ) ( ( rule__CaseExpression__Group_3__0 )* ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4349:1: ( ( rule__CaseExpression__Group_3__0 ) ) ( ( rule__CaseExpression__Group_3__0 )* )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4661:1: ( ( rule__CaseExpression__Group_3__0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4662:1: ( rule__CaseExpression__Group_3__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4349:1: ( ( rule__CaseExpression__Group_3__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4350:1: ( rule__CaseExpression__Group_3__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseExpressionAccess().getGroup_3()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4663:1: ( rule__CaseExpression__Group_3__0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4663:2: rule__CaseExpression__Group_3__0
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4351:1: ( rule__CaseExpression__Group_3__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4351:2: rule__CaseExpression__Group_3__0
             {
-            pushFollow(FOLLOW_rule__CaseExpression__Group_3__0_in_rule__CaseExpression__Group__3__Impl9401);
+            pushFollow(FOLLOW_rule__CaseExpression__Group_3__0_in_rule__CaseExpression__Group__3__Impl8788);
             rule__CaseExpression__Group_3__0();
 
             state._fsp--;
@@ -13152,28 +12269,28 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
             }
 
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4666:1: ( ( rule__CaseExpression__Group_3__0 )* )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4667:1: ( rule__CaseExpression__Group_3__0 )*
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4354:1: ( ( rule__CaseExpression__Group_3__0 )* )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4355:1: ( rule__CaseExpression__Group_3__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseExpressionAccess().getGroup_3()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4668:1: ( rule__CaseExpression__Group_3__0 )*
-            loop25:
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4356:1: ( rule__CaseExpression__Group_3__0 )*
+            loop22:
             do {
-                int alt25=2;
-                int LA25_0 = input.LA(1);
+                int alt22=2;
+                int LA22_0 = input.LA(1);
 
-                if ( (LA25_0==RULE_ID||LA25_0==16) ) {
-                    alt25=1;
+                if ( (LA22_0==RULE_ID||LA22_0==16) ) {
+                    alt22=1;
                 }
 
 
-                switch (alt25) {
+                switch (alt22) {
             	case 1 :
-            	    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4668:2: rule__CaseExpression__Group_3__0
+            	    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4356:2: rule__CaseExpression__Group_3__0
             	    {
-            	    pushFollow(FOLLOW_rule__CaseExpression__Group_3__0_in_rule__CaseExpression__Group__3__Impl9413);
+            	    pushFollow(FOLLOW_rule__CaseExpression__Group_3__0_in_rule__CaseExpression__Group__3__Impl8800);
             	    rule__CaseExpression__Group_3__0();
 
             	    state._fsp--;
@@ -13183,7 +12300,7 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop25;
+            	    break loop22;
                 }
             } while (true);
 
@@ -13215,16 +12332,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CaseExpression__Group__4"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4679:1: rule__CaseExpression__Group__4 : rule__CaseExpression__Group__4__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4367:1: rule__CaseExpression__Group__4 : rule__CaseExpression__Group__4__Impl ;
     public final void rule__CaseExpression__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4683:1: ( rule__CaseExpression__Group__4__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4684:2: rule__CaseExpression__Group__4__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4371:1: ( rule__CaseExpression__Group__4__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4372:2: rule__CaseExpression__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__CaseExpression__Group__4__Impl_in_rule__CaseExpression__Group__49446);
+            pushFollow(FOLLOW_rule__CaseExpression__Group__4__Impl_in_rule__CaseExpression__Group__48833);
             rule__CaseExpression__Group__4__Impl();
 
             state._fsp--;
@@ -13248,22 +12365,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CaseExpression__Group__4__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4690:1: rule__CaseExpression__Group__4__Impl : ( 'esac' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4378:1: rule__CaseExpression__Group__4__Impl : ( 'esac' ) ;
     public final void rule__CaseExpression__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4694:1: ( ( 'esac' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4695:1: ( 'esac' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4382:1: ( ( 'esac' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4383:1: ( 'esac' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4695:1: ( 'esac' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4696:1: 'esac'
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4383:1: ( 'esac' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4384:1: 'esac'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseExpressionAccess().getEsacKeyword_4()); 
             }
-            match(input,42,FOLLOW_42_in_rule__CaseExpression__Group__4__Impl9474); if (state.failed) return ;
+            match(input,43,FOLLOW_43_in_rule__CaseExpression__Group__4__Impl8861); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCaseExpressionAccess().getEsacKeyword_4()); 
             }
@@ -13289,21 +12406,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CaseExpression__Group_3__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4719:1: rule__CaseExpression__Group_3__0 : rule__CaseExpression__Group_3__0__Impl rule__CaseExpression__Group_3__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4407:1: rule__CaseExpression__Group_3__0 : rule__CaseExpression__Group_3__0__Impl rule__CaseExpression__Group_3__1 ;
     public final void rule__CaseExpression__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4723:1: ( rule__CaseExpression__Group_3__0__Impl rule__CaseExpression__Group_3__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4724:2: rule__CaseExpression__Group_3__0__Impl rule__CaseExpression__Group_3__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4411:1: ( rule__CaseExpression__Group_3__0__Impl rule__CaseExpression__Group_3__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4412:2: rule__CaseExpression__Group_3__0__Impl rule__CaseExpression__Group_3__1
             {
-            pushFollow(FOLLOW_rule__CaseExpression__Group_3__0__Impl_in_rule__CaseExpression__Group_3__09515);
+            pushFollow(FOLLOW_rule__CaseExpression__Group_3__0__Impl_in_rule__CaseExpression__Group_3__08902);
             rule__CaseExpression__Group_3__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CaseExpression__Group_3__1_in_rule__CaseExpression__Group_3__09518);
+            pushFollow(FOLLOW_rule__CaseExpression__Group_3__1_in_rule__CaseExpression__Group_3__08905);
             rule__CaseExpression__Group_3__1();
 
             state._fsp--;
@@ -13327,25 +12444,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CaseExpression__Group_3__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4731:1: rule__CaseExpression__Group_3__0__Impl : ( ( rule__CaseExpression__CaseAssignment_3_0 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4419:1: rule__CaseExpression__Group_3__0__Impl : ( ( rule__CaseExpression__CaseAssignment_3_0 ) ) ;
     public final void rule__CaseExpression__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4735:1: ( ( ( rule__CaseExpression__CaseAssignment_3_0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4736:1: ( ( rule__CaseExpression__CaseAssignment_3_0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4423:1: ( ( ( rule__CaseExpression__CaseAssignment_3_0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4424:1: ( ( rule__CaseExpression__CaseAssignment_3_0 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4736:1: ( ( rule__CaseExpression__CaseAssignment_3_0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4737:1: ( rule__CaseExpression__CaseAssignment_3_0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4424:1: ( ( rule__CaseExpression__CaseAssignment_3_0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4425:1: ( rule__CaseExpression__CaseAssignment_3_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseExpressionAccess().getCaseAssignment_3_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4738:1: ( rule__CaseExpression__CaseAssignment_3_0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4738:2: rule__CaseExpression__CaseAssignment_3_0
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4426:1: ( rule__CaseExpression__CaseAssignment_3_0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4426:2: rule__CaseExpression__CaseAssignment_3_0
             {
-            pushFollow(FOLLOW_rule__CaseExpression__CaseAssignment_3_0_in_rule__CaseExpression__Group_3__0__Impl9545);
+            pushFollow(FOLLOW_rule__CaseExpression__CaseAssignment_3_0_in_rule__CaseExpression__Group_3__0__Impl8932);
             rule__CaseExpression__CaseAssignment_3_0();
 
             state._fsp--;
@@ -13378,16 +12495,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CaseExpression__Group_3__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4748:1: rule__CaseExpression__Group_3__1 : rule__CaseExpression__Group_3__1__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4436:1: rule__CaseExpression__Group_3__1 : rule__CaseExpression__Group_3__1__Impl ;
     public final void rule__CaseExpression__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4752:1: ( rule__CaseExpression__Group_3__1__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4753:2: rule__CaseExpression__Group_3__1__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4440:1: ( rule__CaseExpression__Group_3__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4441:2: rule__CaseExpression__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__CaseExpression__Group_3__1__Impl_in_rule__CaseExpression__Group_3__19575);
+            pushFollow(FOLLOW_rule__CaseExpression__Group_3__1__Impl_in_rule__CaseExpression__Group_3__18962);
             rule__CaseExpression__Group_3__1__Impl();
 
             state._fsp--;
@@ -13411,22 +12528,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CaseExpression__Group_3__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4759:1: rule__CaseExpression__Group_3__1__Impl : ( ';' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4447:1: rule__CaseExpression__Group_3__1__Impl : ( ';' ) ;
     public final void rule__CaseExpression__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4763:1: ( ( ';' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4764:1: ( ';' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4451:1: ( ( ';' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4452:1: ( ';' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4764:1: ( ';' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4765:1: ';'
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4452:1: ( ';' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4453:1: ';'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseExpressionAccess().getSemicolonKeyword_3_1()); 
             }
-            match(input,20,FOLLOW_20_in_rule__CaseExpression__Group_3__1__Impl9603); if (state.failed) return ;
+            match(input,20,FOLLOW_20_in_rule__CaseExpression__Group_3__1__Impl8990); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCaseExpressionAccess().getSemicolonKeyword_3_1()); 
             }
@@ -13452,21 +12569,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case__Group__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4782:1: rule__Case__Group__0 : rule__Case__Group__0__Impl rule__Case__Group__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4470:1: rule__Case__Group__0 : rule__Case__Group__0__Impl rule__Case__Group__1 ;
     public final void rule__Case__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4786:1: ( rule__Case__Group__0__Impl rule__Case__Group__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4787:2: rule__Case__Group__0__Impl rule__Case__Group__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4474:1: ( rule__Case__Group__0__Impl rule__Case__Group__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4475:2: rule__Case__Group__0__Impl rule__Case__Group__1
             {
-            pushFollow(FOLLOW_rule__Case__Group__0__Impl_in_rule__Case__Group__09638);
+            pushFollow(FOLLOW_rule__Case__Group__0__Impl_in_rule__Case__Group__09025);
             rule__Case__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Case__Group__1_in_rule__Case__Group__09641);
+            pushFollow(FOLLOW_rule__Case__Group__1_in_rule__Case__Group__09028);
             rule__Case__Group__1();
 
             state._fsp--;
@@ -13490,25 +12607,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case__Group__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4794:1: rule__Case__Group__0__Impl : ( ( rule__Case__NameAssignment_0 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4482:1: rule__Case__Group__0__Impl : ( ( rule__Case__NameAssignment_0 ) ) ;
     public final void rule__Case__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4798:1: ( ( ( rule__Case__NameAssignment_0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4799:1: ( ( rule__Case__NameAssignment_0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4486:1: ( ( ( rule__Case__NameAssignment_0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4487:1: ( ( rule__Case__NameAssignment_0 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4799:1: ( ( rule__Case__NameAssignment_0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4800:1: ( rule__Case__NameAssignment_0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4487:1: ( ( rule__Case__NameAssignment_0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4488:1: ( rule__Case__NameAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseAccess().getNameAssignment_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4801:1: ( rule__Case__NameAssignment_0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4801:2: rule__Case__NameAssignment_0
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4489:1: ( rule__Case__NameAssignment_0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4489:2: rule__Case__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__Case__NameAssignment_0_in_rule__Case__Group__0__Impl9668);
+            pushFollow(FOLLOW_rule__Case__NameAssignment_0_in_rule__Case__Group__0__Impl9055);
             rule__Case__NameAssignment_0();
 
             state._fsp--;
@@ -13541,21 +12658,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case__Group__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4811:1: rule__Case__Group__1 : rule__Case__Group__1__Impl rule__Case__Group__2 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4499:1: rule__Case__Group__1 : rule__Case__Group__1__Impl rule__Case__Group__2 ;
     public final void rule__Case__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4815:1: ( rule__Case__Group__1__Impl rule__Case__Group__2 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4816:2: rule__Case__Group__1__Impl rule__Case__Group__2
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4503:1: ( rule__Case__Group__1__Impl rule__Case__Group__2 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4504:2: rule__Case__Group__1__Impl rule__Case__Group__2
             {
-            pushFollow(FOLLOW_rule__Case__Group__1__Impl_in_rule__Case__Group__19698);
+            pushFollow(FOLLOW_rule__Case__Group__1__Impl_in_rule__Case__Group__19085);
             rule__Case__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Case__Group__2_in_rule__Case__Group__19701);
+            pushFollow(FOLLOW_rule__Case__Group__2_in_rule__Case__Group__19088);
             rule__Case__Group__2();
 
             state._fsp--;
@@ -13579,22 +12696,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case__Group__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4823:1: rule__Case__Group__1__Impl : ( ':' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4511:1: rule__Case__Group__1__Impl : ( ':' ) ;
     public final void rule__Case__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4827:1: ( ( ':' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4828:1: ( ':' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4515:1: ( ( ':' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4516:1: ( ':' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4828:1: ( ':' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4829:1: ':'
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4516:1: ( ':' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4517:1: ':'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseAccess().getColonKeyword_1()); 
             }
-            match(input,22,FOLLOW_22_in_rule__Case__Group__1__Impl9729); if (state.failed) return ;
+            match(input,22,FOLLOW_22_in_rule__Case__Group__1__Impl9116); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCaseAccess().getColonKeyword_1()); 
             }
@@ -13620,21 +12737,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case__Group__2"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4842:1: rule__Case__Group__2 : rule__Case__Group__2__Impl rule__Case__Group__3 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4530:1: rule__Case__Group__2 : rule__Case__Group__2__Impl rule__Case__Group__3 ;
     public final void rule__Case__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4846:1: ( rule__Case__Group__2__Impl rule__Case__Group__3 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4847:2: rule__Case__Group__2__Impl rule__Case__Group__3
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4534:1: ( rule__Case__Group__2__Impl rule__Case__Group__3 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4535:2: rule__Case__Group__2__Impl rule__Case__Group__3
             {
-            pushFollow(FOLLOW_rule__Case__Group__2__Impl_in_rule__Case__Group__29760);
+            pushFollow(FOLLOW_rule__Case__Group__2__Impl_in_rule__Case__Group__29147);
             rule__Case__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Case__Group__3_in_rule__Case__Group__29763);
+            pushFollow(FOLLOW_rule__Case__Group__3_in_rule__Case__Group__29150);
             rule__Case__Group__3();
 
             state._fsp--;
@@ -13658,25 +12775,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case__Group__2__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4854:1: rule__Case__Group__2__Impl : ( ( rule__Case__Type_declAssignment_2 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4542:1: rule__Case__Group__2__Impl : ( ( rule__Case__Type_declAssignment_2 ) ) ;
     public final void rule__Case__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4858:1: ( ( ( rule__Case__Type_declAssignment_2 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4859:1: ( ( rule__Case__Type_declAssignment_2 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4546:1: ( ( ( rule__Case__Type_declAssignment_2 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4547:1: ( ( rule__Case__Type_declAssignment_2 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4859:1: ( ( rule__Case__Type_declAssignment_2 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4860:1: ( rule__Case__Type_declAssignment_2 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4547:1: ( ( rule__Case__Type_declAssignment_2 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4548:1: ( rule__Case__Type_declAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseAccess().getType_declAssignment_2()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4861:1: ( rule__Case__Type_declAssignment_2 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4861:2: rule__Case__Type_declAssignment_2
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4549:1: ( rule__Case__Type_declAssignment_2 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4549:2: rule__Case__Type_declAssignment_2
             {
-            pushFollow(FOLLOW_rule__Case__Type_declAssignment_2_in_rule__Case__Group__2__Impl9790);
+            pushFollow(FOLLOW_rule__Case__Type_declAssignment_2_in_rule__Case__Group__2__Impl9177);
             rule__Case__Type_declAssignment_2();
 
             state._fsp--;
@@ -13709,21 +12826,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case__Group__3"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4871:1: rule__Case__Group__3 : rule__Case__Group__3__Impl rule__Case__Group__4 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4559:1: rule__Case__Group__3 : rule__Case__Group__3__Impl rule__Case__Group__4 ;
     public final void rule__Case__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4875:1: ( rule__Case__Group__3__Impl rule__Case__Group__4 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4876:2: rule__Case__Group__3__Impl rule__Case__Group__4
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4563:1: ( rule__Case__Group__3__Impl rule__Case__Group__4 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4564:2: rule__Case__Group__3__Impl rule__Case__Group__4
             {
-            pushFollow(FOLLOW_rule__Case__Group__3__Impl_in_rule__Case__Group__39820);
+            pushFollow(FOLLOW_rule__Case__Group__3__Impl_in_rule__Case__Group__39207);
             rule__Case__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Case__Group__4_in_rule__Case__Group__39823);
+            pushFollow(FOLLOW_rule__Case__Group__4_in_rule__Case__Group__39210);
             rule__Case__Group__4();
 
             state._fsp--;
@@ -13747,22 +12864,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case__Group__3__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4883:1: rule__Case__Group__3__Impl : ( '=>' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4571:1: rule__Case__Group__3__Impl : ( '=>' ) ;
     public final void rule__Case__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4887:1: ( ( '=>' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4888:1: ( '=>' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4575:1: ( ( '=>' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4576:1: ( '=>' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4888:1: ( '=>' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4889:1: '=>'
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4576:1: ( '=>' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4577:1: '=>'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseAccess().getEqualsSignGreaterThanSignKeyword_3()); 
             }
-            match(input,43,FOLLOW_43_in_rule__Case__Group__3__Impl9851); if (state.failed) return ;
+            match(input,44,FOLLOW_44_in_rule__Case__Group__3__Impl9238); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCaseAccess().getEqualsSignGreaterThanSignKeyword_3()); 
             }
@@ -13788,16 +12905,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case__Group__4"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4902:1: rule__Case__Group__4 : rule__Case__Group__4__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4590:1: rule__Case__Group__4 : rule__Case__Group__4__Impl ;
     public final void rule__Case__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4906:1: ( rule__Case__Group__4__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4907:2: rule__Case__Group__4__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4594:1: ( rule__Case__Group__4__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4595:2: rule__Case__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__Case__Group__4__Impl_in_rule__Case__Group__49882);
+            pushFollow(FOLLOW_rule__Case__Group__4__Impl_in_rule__Case__Group__49269);
             rule__Case__Group__4__Impl();
 
             state._fsp--;
@@ -13821,25 +12938,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case__Group__4__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4913:1: rule__Case__Group__4__Impl : ( ( rule__Case__ExprAssignment_4 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4601:1: rule__Case__Group__4__Impl : ( ( rule__Case__ExprAssignment_4 ) ) ;
     public final void rule__Case__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4917:1: ( ( ( rule__Case__ExprAssignment_4 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4918:1: ( ( rule__Case__ExprAssignment_4 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4605:1: ( ( ( rule__Case__ExprAssignment_4 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4606:1: ( ( rule__Case__ExprAssignment_4 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4918:1: ( ( rule__Case__ExprAssignment_4 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4919:1: ( rule__Case__ExprAssignment_4 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4606:1: ( ( rule__Case__ExprAssignment_4 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4607:1: ( rule__Case__ExprAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseAccess().getExprAssignment_4()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4920:1: ( rule__Case__ExprAssignment_4 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4920:2: rule__Case__ExprAssignment_4
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4608:1: ( rule__Case__ExprAssignment_4 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4608:2: rule__Case__ExprAssignment_4
             {
-            pushFollow(FOLLOW_rule__Case__ExprAssignment_4_in_rule__Case__Group__4__Impl9909);
+            pushFollow(FOLLOW_rule__Case__ExprAssignment_4_in_rule__Case__Group__4__Impl9296);
             rule__Case__ExprAssignment_4();
 
             state._fsp--;
@@ -13871,348 +12988,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Case__Group__4__Impl"
 
 
-    // $ANTLR start "rule__NewExpression__Group__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4940:1: rule__NewExpression__Group__0 : rule__NewExpression__Group__0__Impl rule__NewExpression__Group__1 ;
-    public final void rule__NewExpression__Group__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4944:1: ( rule__NewExpression__Group__0__Impl rule__NewExpression__Group__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4945:2: rule__NewExpression__Group__0__Impl rule__NewExpression__Group__1
-            {
-            pushFollow(FOLLOW_rule__NewExpression__Group__0__Impl_in_rule__NewExpression__Group__09949);
-            rule__NewExpression__Group__0__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__NewExpression__Group__1_in_rule__NewExpression__Group__09952);
-            rule__NewExpression__Group__1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__NewExpression__Group__0"
-
-
-    // $ANTLR start "rule__NewExpression__Group__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4952:1: rule__NewExpression__Group__0__Impl : ( 'new' ) ;
-    public final void rule__NewExpression__Group__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4956:1: ( ( 'new' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4957:1: ( 'new' )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4957:1: ( 'new' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4958:1: 'new'
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getNewExpressionAccess().getNewKeyword_0()); 
-            }
-            match(input,44,FOLLOW_44_in_rule__NewExpression__Group__0__Impl9980); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getNewExpressionAccess().getNewKeyword_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__NewExpression__Group__0__Impl"
-
-
-    // $ANTLR start "rule__NewExpression__Group__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4971:1: rule__NewExpression__Group__1 : rule__NewExpression__Group__1__Impl ;
-    public final void rule__NewExpression__Group__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4975:1: ( rule__NewExpression__Group__1__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4976:2: rule__NewExpression__Group__1__Impl
-            {
-            pushFollow(FOLLOW_rule__NewExpression__Group__1__Impl_in_rule__NewExpression__Group__110011);
-            rule__NewExpression__Group__1__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__NewExpression__Group__1"
-
-
-    // $ANTLR start "rule__NewExpression__Group__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4982:1: rule__NewExpression__Group__1__Impl : ( ( rule__NewExpression__Type_nameAssignment_1 ) ) ;
-    public final void rule__NewExpression__Group__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4986:1: ( ( ( rule__NewExpression__Type_nameAssignment_1 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4987:1: ( ( rule__NewExpression__Type_nameAssignment_1 ) )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4987:1: ( ( rule__NewExpression__Type_nameAssignment_1 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4988:1: ( rule__NewExpression__Type_nameAssignment_1 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getNewExpressionAccess().getType_nameAssignment_1()); 
-            }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4989:1: ( rule__NewExpression__Type_nameAssignment_1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4989:2: rule__NewExpression__Type_nameAssignment_1
-            {
-            pushFollow(FOLLOW_rule__NewExpression__Type_nameAssignment_1_in_rule__NewExpression__Group__1__Impl10038);
-            rule__NewExpression__Type_nameAssignment_1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getNewExpressionAccess().getType_nameAssignment_1()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__NewExpression__Group__1__Impl"
-
-
-    // $ANTLR start "rule__IsvoidExpression__Group__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5003:1: rule__IsvoidExpression__Group__0 : rule__IsvoidExpression__Group__0__Impl rule__IsvoidExpression__Group__1 ;
-    public final void rule__IsvoidExpression__Group__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5007:1: ( rule__IsvoidExpression__Group__0__Impl rule__IsvoidExpression__Group__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5008:2: rule__IsvoidExpression__Group__0__Impl rule__IsvoidExpression__Group__1
-            {
-            pushFollow(FOLLOW_rule__IsvoidExpression__Group__0__Impl_in_rule__IsvoidExpression__Group__010072);
-            rule__IsvoidExpression__Group__0__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__IsvoidExpression__Group__1_in_rule__IsvoidExpression__Group__010075);
-            rule__IsvoidExpression__Group__1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__IsvoidExpression__Group__0"
-
-
-    // $ANTLR start "rule__IsvoidExpression__Group__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5015:1: rule__IsvoidExpression__Group__0__Impl : ( 'isvoid' ) ;
-    public final void rule__IsvoidExpression__Group__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5019:1: ( ( 'isvoid' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5020:1: ( 'isvoid' )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5020:1: ( 'isvoid' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5021:1: 'isvoid'
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getIsvoidExpressionAccess().getIsvoidKeyword_0()); 
-            }
-            match(input,45,FOLLOW_45_in_rule__IsvoidExpression__Group__0__Impl10103); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getIsvoidExpressionAccess().getIsvoidKeyword_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__IsvoidExpression__Group__0__Impl"
-
-
-    // $ANTLR start "rule__IsvoidExpression__Group__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5034:1: rule__IsvoidExpression__Group__1 : rule__IsvoidExpression__Group__1__Impl ;
-    public final void rule__IsvoidExpression__Group__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5038:1: ( rule__IsvoidExpression__Group__1__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5039:2: rule__IsvoidExpression__Group__1__Impl
-            {
-            pushFollow(FOLLOW_rule__IsvoidExpression__Group__1__Impl_in_rule__IsvoidExpression__Group__110134);
-            rule__IsvoidExpression__Group__1__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__IsvoidExpression__Group__1"
-
-
-    // $ANTLR start "rule__IsvoidExpression__Group__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5045:1: rule__IsvoidExpression__Group__1__Impl : ( ( rule__IsvoidExpression__ExprAssignment_1 ) ) ;
-    public final void rule__IsvoidExpression__Group__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5049:1: ( ( ( rule__IsvoidExpression__ExprAssignment_1 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5050:1: ( ( rule__IsvoidExpression__ExprAssignment_1 ) )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5050:1: ( ( rule__IsvoidExpression__ExprAssignment_1 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5051:1: ( rule__IsvoidExpression__ExprAssignment_1 )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getIsvoidExpressionAccess().getExprAssignment_1()); 
-            }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5052:1: ( rule__IsvoidExpression__ExprAssignment_1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5052:2: rule__IsvoidExpression__ExprAssignment_1
-            {
-            pushFollow(FOLLOW_rule__IsvoidExpression__ExprAssignment_1_in_rule__IsvoidExpression__Group__1__Impl10161);
-            rule__IsvoidExpression__ExprAssignment_1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getIsvoidExpressionAccess().getExprAssignment_1()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__IsvoidExpression__Group__1__Impl"
-
-
     // $ANTLR start "rule__CompareExpression__Group__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5066:1: rule__CompareExpression__Group__0 : rule__CompareExpression__Group__0__Impl rule__CompareExpression__Group__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4628:1: rule__CompareExpression__Group__0 : rule__CompareExpression__Group__0__Impl rule__CompareExpression__Group__1 ;
     public final void rule__CompareExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5070:1: ( rule__CompareExpression__Group__0__Impl rule__CompareExpression__Group__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5071:2: rule__CompareExpression__Group__0__Impl rule__CompareExpression__Group__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4632:1: ( rule__CompareExpression__Group__0__Impl rule__CompareExpression__Group__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4633:2: rule__CompareExpression__Group__0__Impl rule__CompareExpression__Group__1
             {
-            pushFollow(FOLLOW_rule__CompareExpression__Group__0__Impl_in_rule__CompareExpression__Group__010195);
+            pushFollow(FOLLOW_rule__CompareExpression__Group__0__Impl_in_rule__CompareExpression__Group__09336);
             rule__CompareExpression__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CompareExpression__Group__1_in_rule__CompareExpression__Group__010198);
+            pushFollow(FOLLOW_rule__CompareExpression__Group__1_in_rule__CompareExpression__Group__09339);
             rule__CompareExpression__Group__1();
 
             state._fsp--;
@@ -14236,22 +13027,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpression__Group__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5078:1: rule__CompareExpression__Group__0__Impl : ( ruleAdditionExpression ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4640:1: rule__CompareExpression__Group__0__Impl : ( ruleAdditionExpression ) ;
     public final void rule__CompareExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5082:1: ( ( ruleAdditionExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5083:1: ( ruleAdditionExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4644:1: ( ( ruleAdditionExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4645:1: ( ruleAdditionExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5083:1: ( ruleAdditionExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5084:1: ruleAdditionExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4645:1: ( ruleAdditionExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4646:1: ruleAdditionExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCompareExpressionAccess().getAdditionExpressionParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleAdditionExpression_in_rule__CompareExpression__Group__0__Impl10225);
+            pushFollow(FOLLOW_ruleAdditionExpression_in_rule__CompareExpression__Group__0__Impl9366);
             ruleAdditionExpression();
 
             state._fsp--;
@@ -14281,16 +13072,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpression__Group__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5095:1: rule__CompareExpression__Group__1 : rule__CompareExpression__Group__1__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4657:1: rule__CompareExpression__Group__1 : rule__CompareExpression__Group__1__Impl ;
     public final void rule__CompareExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5099:1: ( rule__CompareExpression__Group__1__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5100:2: rule__CompareExpression__Group__1__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4661:1: ( rule__CompareExpression__Group__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4662:2: rule__CompareExpression__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__CompareExpression__Group__1__Impl_in_rule__CompareExpression__Group__110254);
+            pushFollow(FOLLOW_rule__CompareExpression__Group__1__Impl_in_rule__CompareExpression__Group__19395);
             rule__CompareExpression__Group__1__Impl();
 
             state._fsp--;
@@ -14314,58 +13105,58 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpression__Group__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5106:1: rule__CompareExpression__Group__1__Impl : ( ( rule__CompareExpression__Group_1__0 )? ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4668:1: rule__CompareExpression__Group__1__Impl : ( ( rule__CompareExpression__Group_1__0 )? ) ;
     public final void rule__CompareExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5110:1: ( ( ( rule__CompareExpression__Group_1__0 )? ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5111:1: ( ( rule__CompareExpression__Group_1__0 )? )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4672:1: ( ( ( rule__CompareExpression__Group_1__0 )? ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4673:1: ( ( rule__CompareExpression__Group_1__0 )? )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5111:1: ( ( rule__CompareExpression__Group_1__0 )? )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5112:1: ( rule__CompareExpression__Group_1__0 )?
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4673:1: ( ( rule__CompareExpression__Group_1__0 )? )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4674:1: ( rule__CompareExpression__Group_1__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCompareExpressionAccess().getGroup_1()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5113:1: ( rule__CompareExpression__Group_1__0 )?
-            int alt26=2;
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4675:1: ( rule__CompareExpression__Group_1__0 )?
+            int alt23=2;
             switch ( input.LA(1) ) {
                 case 11:
                     {
-                    int LA26_1 = input.LA(2);
+                    int LA23_1 = input.LA(2);
 
-                    if ( (synpred41_InternalCool()) ) {
-                        alt26=1;
+                    if ( (synpred38_InternalCool()) ) {
+                        alt23=1;
                     }
                     }
                     break;
                 case 12:
                     {
-                    int LA26_2 = input.LA(2);
+                    int LA23_2 = input.LA(2);
 
-                    if ( (synpred41_InternalCool()) ) {
-                        alt26=1;
+                    if ( (synpred38_InternalCool()) ) {
+                        alt23=1;
                     }
                     }
                     break;
                 case 13:
                     {
-                    int LA26_3 = input.LA(2);
+                    int LA23_3 = input.LA(2);
 
-                    if ( (synpred41_InternalCool()) ) {
-                        alt26=1;
+                    if ( (synpred38_InternalCool()) ) {
+                        alt23=1;
                     }
                     }
                     break;
             }
 
-            switch (alt26) {
+            switch (alt23) {
                 case 1 :
-                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5113:2: rule__CompareExpression__Group_1__0
+                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4675:2: rule__CompareExpression__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__CompareExpression__Group_1__0_in_rule__CompareExpression__Group__1__Impl10281);
+                    pushFollow(FOLLOW_rule__CompareExpression__Group_1__0_in_rule__CompareExpression__Group__1__Impl9422);
                     rule__CompareExpression__Group_1__0();
 
                     state._fsp--;
@@ -14401,21 +13192,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpression__Group_1__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5127:1: rule__CompareExpression__Group_1__0 : rule__CompareExpression__Group_1__0__Impl rule__CompareExpression__Group_1__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4689:1: rule__CompareExpression__Group_1__0 : rule__CompareExpression__Group_1__0__Impl rule__CompareExpression__Group_1__1 ;
     public final void rule__CompareExpression__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5131:1: ( rule__CompareExpression__Group_1__0__Impl rule__CompareExpression__Group_1__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5132:2: rule__CompareExpression__Group_1__0__Impl rule__CompareExpression__Group_1__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4693:1: ( rule__CompareExpression__Group_1__0__Impl rule__CompareExpression__Group_1__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4694:2: rule__CompareExpression__Group_1__0__Impl rule__CompareExpression__Group_1__1
             {
-            pushFollow(FOLLOW_rule__CompareExpression__Group_1__0__Impl_in_rule__CompareExpression__Group_1__010316);
+            pushFollow(FOLLOW_rule__CompareExpression__Group_1__0__Impl_in_rule__CompareExpression__Group_1__09457);
             rule__CompareExpression__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CompareExpression__Group_1__1_in_rule__CompareExpression__Group_1__010319);
+            pushFollow(FOLLOW_rule__CompareExpression__Group_1__1_in_rule__CompareExpression__Group_1__09460);
             rule__CompareExpression__Group_1__1();
 
             state._fsp--;
@@ -14439,25 +13230,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpression__Group_1__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5139:1: rule__CompareExpression__Group_1__0__Impl : ( ( rule__CompareExpression__Group_1_0__0 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4701:1: rule__CompareExpression__Group_1__0__Impl : ( ( rule__CompareExpression__Group_1_0__0 ) ) ;
     public final void rule__CompareExpression__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5143:1: ( ( ( rule__CompareExpression__Group_1_0__0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5144:1: ( ( rule__CompareExpression__Group_1_0__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4705:1: ( ( ( rule__CompareExpression__Group_1_0__0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4706:1: ( ( rule__CompareExpression__Group_1_0__0 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5144:1: ( ( rule__CompareExpression__Group_1_0__0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5145:1: ( rule__CompareExpression__Group_1_0__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4706:1: ( ( rule__CompareExpression__Group_1_0__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4707:1: ( rule__CompareExpression__Group_1_0__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCompareExpressionAccess().getGroup_1_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5146:1: ( rule__CompareExpression__Group_1_0__0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5146:2: rule__CompareExpression__Group_1_0__0
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4708:1: ( rule__CompareExpression__Group_1_0__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4708:2: rule__CompareExpression__Group_1_0__0
             {
-            pushFollow(FOLLOW_rule__CompareExpression__Group_1_0__0_in_rule__CompareExpression__Group_1__0__Impl10346);
+            pushFollow(FOLLOW_rule__CompareExpression__Group_1_0__0_in_rule__CompareExpression__Group_1__0__Impl9487);
             rule__CompareExpression__Group_1_0__0();
 
             state._fsp--;
@@ -14490,16 +13281,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpression__Group_1__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5156:1: rule__CompareExpression__Group_1__1 : rule__CompareExpression__Group_1__1__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4718:1: rule__CompareExpression__Group_1__1 : rule__CompareExpression__Group_1__1__Impl ;
     public final void rule__CompareExpression__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5160:1: ( rule__CompareExpression__Group_1__1__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5161:2: rule__CompareExpression__Group_1__1__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4722:1: ( rule__CompareExpression__Group_1__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4723:2: rule__CompareExpression__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__CompareExpression__Group_1__1__Impl_in_rule__CompareExpression__Group_1__110376);
+            pushFollow(FOLLOW_rule__CompareExpression__Group_1__1__Impl_in_rule__CompareExpression__Group_1__19517);
             rule__CompareExpression__Group_1__1__Impl();
 
             state._fsp--;
@@ -14523,25 +13314,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpression__Group_1__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5167:1: rule__CompareExpression__Group_1__1__Impl : ( ( rule__CompareExpression__RightAssignment_1_1 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4729:1: rule__CompareExpression__Group_1__1__Impl : ( ( rule__CompareExpression__RightAssignment_1_1 ) ) ;
     public final void rule__CompareExpression__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5171:1: ( ( ( rule__CompareExpression__RightAssignment_1_1 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5172:1: ( ( rule__CompareExpression__RightAssignment_1_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4733:1: ( ( ( rule__CompareExpression__RightAssignment_1_1 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4734:1: ( ( rule__CompareExpression__RightAssignment_1_1 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5172:1: ( ( rule__CompareExpression__RightAssignment_1_1 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5173:1: ( rule__CompareExpression__RightAssignment_1_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4734:1: ( ( rule__CompareExpression__RightAssignment_1_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4735:1: ( rule__CompareExpression__RightAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCompareExpressionAccess().getRightAssignment_1_1()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5174:1: ( rule__CompareExpression__RightAssignment_1_1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5174:2: rule__CompareExpression__RightAssignment_1_1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4736:1: ( rule__CompareExpression__RightAssignment_1_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4736:2: rule__CompareExpression__RightAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__CompareExpression__RightAssignment_1_1_in_rule__CompareExpression__Group_1__1__Impl10403);
+            pushFollow(FOLLOW_rule__CompareExpression__RightAssignment_1_1_in_rule__CompareExpression__Group_1__1__Impl9544);
             rule__CompareExpression__RightAssignment_1_1();
 
             state._fsp--;
@@ -14574,16 +13365,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpression__Group_1_0__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5188:1: rule__CompareExpression__Group_1_0__0 : rule__CompareExpression__Group_1_0__0__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4750:1: rule__CompareExpression__Group_1_0__0 : rule__CompareExpression__Group_1_0__0__Impl ;
     public final void rule__CompareExpression__Group_1_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5192:1: ( rule__CompareExpression__Group_1_0__0__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5193:2: rule__CompareExpression__Group_1_0__0__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4754:1: ( rule__CompareExpression__Group_1_0__0__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4755:2: rule__CompareExpression__Group_1_0__0__Impl
             {
-            pushFollow(FOLLOW_rule__CompareExpression__Group_1_0__0__Impl_in_rule__CompareExpression__Group_1_0__010437);
+            pushFollow(FOLLOW_rule__CompareExpression__Group_1_0__0__Impl_in_rule__CompareExpression__Group_1_0__09578);
             rule__CompareExpression__Group_1_0__0__Impl();
 
             state._fsp--;
@@ -14607,25 +13398,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpression__Group_1_0__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5199:1: rule__CompareExpression__Group_1_0__0__Impl : ( ( rule__CompareExpression__Group_1_0_0__0 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4761:1: rule__CompareExpression__Group_1_0__0__Impl : ( ( rule__CompareExpression__Group_1_0_0__0 ) ) ;
     public final void rule__CompareExpression__Group_1_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5203:1: ( ( ( rule__CompareExpression__Group_1_0_0__0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5204:1: ( ( rule__CompareExpression__Group_1_0_0__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4765:1: ( ( ( rule__CompareExpression__Group_1_0_0__0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4766:1: ( ( rule__CompareExpression__Group_1_0_0__0 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5204:1: ( ( rule__CompareExpression__Group_1_0_0__0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5205:1: ( rule__CompareExpression__Group_1_0_0__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4766:1: ( ( rule__CompareExpression__Group_1_0_0__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4767:1: ( rule__CompareExpression__Group_1_0_0__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCompareExpressionAccess().getGroup_1_0_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5206:1: ( rule__CompareExpression__Group_1_0_0__0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5206:2: rule__CompareExpression__Group_1_0_0__0
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4768:1: ( rule__CompareExpression__Group_1_0_0__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4768:2: rule__CompareExpression__Group_1_0_0__0
             {
-            pushFollow(FOLLOW_rule__CompareExpression__Group_1_0_0__0_in_rule__CompareExpression__Group_1_0__0__Impl10464);
+            pushFollow(FOLLOW_rule__CompareExpression__Group_1_0_0__0_in_rule__CompareExpression__Group_1_0__0__Impl9605);
             rule__CompareExpression__Group_1_0_0__0();
 
             state._fsp--;
@@ -14658,21 +13449,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpression__Group_1_0_0__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5218:1: rule__CompareExpression__Group_1_0_0__0 : rule__CompareExpression__Group_1_0_0__0__Impl rule__CompareExpression__Group_1_0_0__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4780:1: rule__CompareExpression__Group_1_0_0__0 : rule__CompareExpression__Group_1_0_0__0__Impl rule__CompareExpression__Group_1_0_0__1 ;
     public final void rule__CompareExpression__Group_1_0_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5222:1: ( rule__CompareExpression__Group_1_0_0__0__Impl rule__CompareExpression__Group_1_0_0__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5223:2: rule__CompareExpression__Group_1_0_0__0__Impl rule__CompareExpression__Group_1_0_0__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4784:1: ( rule__CompareExpression__Group_1_0_0__0__Impl rule__CompareExpression__Group_1_0_0__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4785:2: rule__CompareExpression__Group_1_0_0__0__Impl rule__CompareExpression__Group_1_0_0__1
             {
-            pushFollow(FOLLOW_rule__CompareExpression__Group_1_0_0__0__Impl_in_rule__CompareExpression__Group_1_0_0__010496);
+            pushFollow(FOLLOW_rule__CompareExpression__Group_1_0_0__0__Impl_in_rule__CompareExpression__Group_1_0_0__09637);
             rule__CompareExpression__Group_1_0_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CompareExpression__Group_1_0_0__1_in_rule__CompareExpression__Group_1_0_0__010499);
+            pushFollow(FOLLOW_rule__CompareExpression__Group_1_0_0__1_in_rule__CompareExpression__Group_1_0_0__09640);
             rule__CompareExpression__Group_1_0_0__1();
 
             state._fsp--;
@@ -14696,23 +13487,23 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpression__Group_1_0_0__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5230:1: rule__CompareExpression__Group_1_0_0__0__Impl : ( () ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4792:1: rule__CompareExpression__Group_1_0_0__0__Impl : ( () ) ;
     public final void rule__CompareExpression__Group_1_0_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5234:1: ( ( () ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5235:1: ( () )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4796:1: ( ( () ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4797:1: ( () )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5235:1: ( () )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5236:1: ()
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4797:1: ( () )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4798:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5237:1: ()
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5239:1: 
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4799:1: ()
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4801:1: 
             {
             }
 
@@ -14737,16 +13528,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpression__Group_1_0_0__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5249:1: rule__CompareExpression__Group_1_0_0__1 : rule__CompareExpression__Group_1_0_0__1__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4811:1: rule__CompareExpression__Group_1_0_0__1 : rule__CompareExpression__Group_1_0_0__1__Impl ;
     public final void rule__CompareExpression__Group_1_0_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5253:1: ( rule__CompareExpression__Group_1_0_0__1__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5254:2: rule__CompareExpression__Group_1_0_0__1__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4815:1: ( rule__CompareExpression__Group_1_0_0__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4816:2: rule__CompareExpression__Group_1_0_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__CompareExpression__Group_1_0_0__1__Impl_in_rule__CompareExpression__Group_1_0_0__110557);
+            pushFollow(FOLLOW_rule__CompareExpression__Group_1_0_0__1__Impl_in_rule__CompareExpression__Group_1_0_0__19698);
             rule__CompareExpression__Group_1_0_0__1__Impl();
 
             state._fsp--;
@@ -14770,25 +13561,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpression__Group_1_0_0__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5260:1: rule__CompareExpression__Group_1_0_0__1__Impl : ( ( rule__CompareExpression__OpAssignment_1_0_0_1 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4822:1: rule__CompareExpression__Group_1_0_0__1__Impl : ( ( rule__CompareExpression__OpAssignment_1_0_0_1 ) ) ;
     public final void rule__CompareExpression__Group_1_0_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5264:1: ( ( ( rule__CompareExpression__OpAssignment_1_0_0_1 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5265:1: ( ( rule__CompareExpression__OpAssignment_1_0_0_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4826:1: ( ( ( rule__CompareExpression__OpAssignment_1_0_0_1 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4827:1: ( ( rule__CompareExpression__OpAssignment_1_0_0_1 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5265:1: ( ( rule__CompareExpression__OpAssignment_1_0_0_1 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5266:1: ( rule__CompareExpression__OpAssignment_1_0_0_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4827:1: ( ( rule__CompareExpression__OpAssignment_1_0_0_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4828:1: ( rule__CompareExpression__OpAssignment_1_0_0_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCompareExpressionAccess().getOpAssignment_1_0_0_1()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5267:1: ( rule__CompareExpression__OpAssignment_1_0_0_1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5267:2: rule__CompareExpression__OpAssignment_1_0_0_1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4829:1: ( rule__CompareExpression__OpAssignment_1_0_0_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4829:2: rule__CompareExpression__OpAssignment_1_0_0_1
             {
-            pushFollow(FOLLOW_rule__CompareExpression__OpAssignment_1_0_0_1_in_rule__CompareExpression__Group_1_0_0__1__Impl10584);
+            pushFollow(FOLLOW_rule__CompareExpression__OpAssignment_1_0_0_1_in_rule__CompareExpression__Group_1_0_0__1__Impl9725);
             rule__CompareExpression__OpAssignment_1_0_0_1();
 
             state._fsp--;
@@ -14821,21 +13612,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5281:1: rule__AdditionExpression__Group__0 : rule__AdditionExpression__Group__0__Impl rule__AdditionExpression__Group__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4843:1: rule__AdditionExpression__Group__0 : rule__AdditionExpression__Group__0__Impl rule__AdditionExpression__Group__1 ;
     public final void rule__AdditionExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5285:1: ( rule__AdditionExpression__Group__0__Impl rule__AdditionExpression__Group__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5286:2: rule__AdditionExpression__Group__0__Impl rule__AdditionExpression__Group__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4847:1: ( rule__AdditionExpression__Group__0__Impl rule__AdditionExpression__Group__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4848:2: rule__AdditionExpression__Group__0__Impl rule__AdditionExpression__Group__1
             {
-            pushFollow(FOLLOW_rule__AdditionExpression__Group__0__Impl_in_rule__AdditionExpression__Group__010618);
+            pushFollow(FOLLOW_rule__AdditionExpression__Group__0__Impl_in_rule__AdditionExpression__Group__09759);
             rule__AdditionExpression__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__AdditionExpression__Group__1_in_rule__AdditionExpression__Group__010621);
+            pushFollow(FOLLOW_rule__AdditionExpression__Group__1_in_rule__AdditionExpression__Group__09762);
             rule__AdditionExpression__Group__1();
 
             state._fsp--;
@@ -14859,22 +13650,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5293:1: rule__AdditionExpression__Group__0__Impl : ( ruleMultiplicationExpression ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4855:1: rule__AdditionExpression__Group__0__Impl : ( ruleMultiplicationExpression ) ;
     public final void rule__AdditionExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5297:1: ( ( ruleMultiplicationExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5298:1: ( ruleMultiplicationExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4859:1: ( ( ruleMultiplicationExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4860:1: ( ruleMultiplicationExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5298:1: ( ruleMultiplicationExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5299:1: ruleMultiplicationExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4860:1: ( ruleMultiplicationExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4861:1: ruleMultiplicationExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditionExpressionAccess().getMultiplicationExpressionParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleMultiplicationExpression_in_rule__AdditionExpression__Group__0__Impl10648);
+            pushFollow(FOLLOW_ruleMultiplicationExpression_in_rule__AdditionExpression__Group__0__Impl9789);
             ruleMultiplicationExpression();
 
             state._fsp--;
@@ -14904,16 +13695,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5310:1: rule__AdditionExpression__Group__1 : rule__AdditionExpression__Group__1__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4872:1: rule__AdditionExpression__Group__1 : rule__AdditionExpression__Group__1__Impl ;
     public final void rule__AdditionExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5314:1: ( rule__AdditionExpression__Group__1__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5315:2: rule__AdditionExpression__Group__1__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4876:1: ( rule__AdditionExpression__Group__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4877:2: rule__AdditionExpression__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__AdditionExpression__Group__1__Impl_in_rule__AdditionExpression__Group__110677);
+            pushFollow(FOLLOW_rule__AdditionExpression__Group__1__Impl_in_rule__AdditionExpression__Group__19818);
             rule__AdditionExpression__Group__1__Impl();
 
             state._fsp--;
@@ -14937,44 +13728,44 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5321:1: rule__AdditionExpression__Group__1__Impl : ( ( rule__AdditionExpression__Group_1__0 )? ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4883:1: rule__AdditionExpression__Group__1__Impl : ( ( rule__AdditionExpression__Group_1__0 )? ) ;
     public final void rule__AdditionExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5325:1: ( ( ( rule__AdditionExpression__Group_1__0 )? ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5326:1: ( ( rule__AdditionExpression__Group_1__0 )? )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4887:1: ( ( ( rule__AdditionExpression__Group_1__0 )? ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4888:1: ( ( rule__AdditionExpression__Group_1__0 )? )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5326:1: ( ( rule__AdditionExpression__Group_1__0 )? )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5327:1: ( rule__AdditionExpression__Group_1__0 )?
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4888:1: ( ( rule__AdditionExpression__Group_1__0 )? )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4889:1: ( rule__AdditionExpression__Group_1__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditionExpressionAccess().getGroup_1()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5328:1: ( rule__AdditionExpression__Group_1__0 )?
-            int alt27=2;
-            int LA27_0 = input.LA(1);
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4890:1: ( rule__AdditionExpression__Group_1__0 )?
+            int alt24=2;
+            int LA24_0 = input.LA(1);
 
-            if ( (LA27_0==46) ) {
-                int LA27_1 = input.LA(2);
+            if ( (LA24_0==45) ) {
+                int LA24_1 = input.LA(2);
 
-                if ( (synpred42_InternalCool()) ) {
-                    alt27=1;
+                if ( (synpred39_InternalCool()) ) {
+                    alt24=1;
                 }
             }
-            else if ( (LA27_0==47) ) {
-                int LA27_2 = input.LA(2);
+            else if ( (LA24_0==46) ) {
+                int LA24_2 = input.LA(2);
 
-                if ( (synpred42_InternalCool()) ) {
-                    alt27=1;
+                if ( (synpred39_InternalCool()) ) {
+                    alt24=1;
                 }
             }
-            switch (alt27) {
+            switch (alt24) {
                 case 1 :
-                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5328:2: rule__AdditionExpression__Group_1__0
+                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4890:2: rule__AdditionExpression__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__AdditionExpression__Group_1__0_in_rule__AdditionExpression__Group__1__Impl10704);
+                    pushFollow(FOLLOW_rule__AdditionExpression__Group_1__0_in_rule__AdditionExpression__Group__1__Impl9845);
                     rule__AdditionExpression__Group_1__0();
 
                     state._fsp--;
@@ -15010,21 +13801,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group_1__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5342:1: rule__AdditionExpression__Group_1__0 : rule__AdditionExpression__Group_1__0__Impl rule__AdditionExpression__Group_1__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4904:1: rule__AdditionExpression__Group_1__0 : rule__AdditionExpression__Group_1__0__Impl rule__AdditionExpression__Group_1__1 ;
     public final void rule__AdditionExpression__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5346:1: ( rule__AdditionExpression__Group_1__0__Impl rule__AdditionExpression__Group_1__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5347:2: rule__AdditionExpression__Group_1__0__Impl rule__AdditionExpression__Group_1__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4908:1: ( rule__AdditionExpression__Group_1__0__Impl rule__AdditionExpression__Group_1__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4909:2: rule__AdditionExpression__Group_1__0__Impl rule__AdditionExpression__Group_1__1
             {
-            pushFollow(FOLLOW_rule__AdditionExpression__Group_1__0__Impl_in_rule__AdditionExpression__Group_1__010739);
+            pushFollow(FOLLOW_rule__AdditionExpression__Group_1__0__Impl_in_rule__AdditionExpression__Group_1__09880);
             rule__AdditionExpression__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__AdditionExpression__Group_1__1_in_rule__AdditionExpression__Group_1__010742);
+            pushFollow(FOLLOW_rule__AdditionExpression__Group_1__1_in_rule__AdditionExpression__Group_1__09883);
             rule__AdditionExpression__Group_1__1();
 
             state._fsp--;
@@ -15048,25 +13839,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group_1__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5354:1: rule__AdditionExpression__Group_1__0__Impl : ( ( rule__AdditionExpression__Group_1_0__0 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4916:1: rule__AdditionExpression__Group_1__0__Impl : ( ( rule__AdditionExpression__Group_1_0__0 ) ) ;
     public final void rule__AdditionExpression__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5358:1: ( ( ( rule__AdditionExpression__Group_1_0__0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5359:1: ( ( rule__AdditionExpression__Group_1_0__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4920:1: ( ( ( rule__AdditionExpression__Group_1_0__0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4921:1: ( ( rule__AdditionExpression__Group_1_0__0 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5359:1: ( ( rule__AdditionExpression__Group_1_0__0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5360:1: ( rule__AdditionExpression__Group_1_0__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4921:1: ( ( rule__AdditionExpression__Group_1_0__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4922:1: ( rule__AdditionExpression__Group_1_0__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditionExpressionAccess().getGroup_1_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5361:1: ( rule__AdditionExpression__Group_1_0__0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5361:2: rule__AdditionExpression__Group_1_0__0
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4923:1: ( rule__AdditionExpression__Group_1_0__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4923:2: rule__AdditionExpression__Group_1_0__0
             {
-            pushFollow(FOLLOW_rule__AdditionExpression__Group_1_0__0_in_rule__AdditionExpression__Group_1__0__Impl10769);
+            pushFollow(FOLLOW_rule__AdditionExpression__Group_1_0__0_in_rule__AdditionExpression__Group_1__0__Impl9910);
             rule__AdditionExpression__Group_1_0__0();
 
             state._fsp--;
@@ -15099,16 +13890,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group_1__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5371:1: rule__AdditionExpression__Group_1__1 : rule__AdditionExpression__Group_1__1__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4933:1: rule__AdditionExpression__Group_1__1 : rule__AdditionExpression__Group_1__1__Impl ;
     public final void rule__AdditionExpression__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5375:1: ( rule__AdditionExpression__Group_1__1__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5376:2: rule__AdditionExpression__Group_1__1__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4937:1: ( rule__AdditionExpression__Group_1__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4938:2: rule__AdditionExpression__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__AdditionExpression__Group_1__1__Impl_in_rule__AdditionExpression__Group_1__110799);
+            pushFollow(FOLLOW_rule__AdditionExpression__Group_1__1__Impl_in_rule__AdditionExpression__Group_1__19940);
             rule__AdditionExpression__Group_1__1__Impl();
 
             state._fsp--;
@@ -15132,25 +13923,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group_1__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5382:1: rule__AdditionExpression__Group_1__1__Impl : ( ( rule__AdditionExpression__RightAssignment_1_1 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4944:1: rule__AdditionExpression__Group_1__1__Impl : ( ( rule__AdditionExpression__RightAssignment_1_1 ) ) ;
     public final void rule__AdditionExpression__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5386:1: ( ( ( rule__AdditionExpression__RightAssignment_1_1 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5387:1: ( ( rule__AdditionExpression__RightAssignment_1_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4948:1: ( ( ( rule__AdditionExpression__RightAssignment_1_1 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4949:1: ( ( rule__AdditionExpression__RightAssignment_1_1 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5387:1: ( ( rule__AdditionExpression__RightAssignment_1_1 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5388:1: ( rule__AdditionExpression__RightAssignment_1_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4949:1: ( ( rule__AdditionExpression__RightAssignment_1_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4950:1: ( rule__AdditionExpression__RightAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditionExpressionAccess().getRightAssignment_1_1()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5389:1: ( rule__AdditionExpression__RightAssignment_1_1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5389:2: rule__AdditionExpression__RightAssignment_1_1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4951:1: ( rule__AdditionExpression__RightAssignment_1_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4951:2: rule__AdditionExpression__RightAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__AdditionExpression__RightAssignment_1_1_in_rule__AdditionExpression__Group_1__1__Impl10826);
+            pushFollow(FOLLOW_rule__AdditionExpression__RightAssignment_1_1_in_rule__AdditionExpression__Group_1__1__Impl9967);
             rule__AdditionExpression__RightAssignment_1_1();
 
             state._fsp--;
@@ -15183,16 +13974,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group_1_0__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5403:1: rule__AdditionExpression__Group_1_0__0 : rule__AdditionExpression__Group_1_0__0__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4965:1: rule__AdditionExpression__Group_1_0__0 : rule__AdditionExpression__Group_1_0__0__Impl ;
     public final void rule__AdditionExpression__Group_1_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5407:1: ( rule__AdditionExpression__Group_1_0__0__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5408:2: rule__AdditionExpression__Group_1_0__0__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4969:1: ( rule__AdditionExpression__Group_1_0__0__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4970:2: rule__AdditionExpression__Group_1_0__0__Impl
             {
-            pushFollow(FOLLOW_rule__AdditionExpression__Group_1_0__0__Impl_in_rule__AdditionExpression__Group_1_0__010860);
+            pushFollow(FOLLOW_rule__AdditionExpression__Group_1_0__0__Impl_in_rule__AdditionExpression__Group_1_0__010001);
             rule__AdditionExpression__Group_1_0__0__Impl();
 
             state._fsp--;
@@ -15216,25 +14007,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group_1_0__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5414:1: rule__AdditionExpression__Group_1_0__0__Impl : ( ( rule__AdditionExpression__Alternatives_1_0_0 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4976:1: rule__AdditionExpression__Group_1_0__0__Impl : ( ( rule__AdditionExpression__Alternatives_1_0_0 ) ) ;
     public final void rule__AdditionExpression__Group_1_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5418:1: ( ( ( rule__AdditionExpression__Alternatives_1_0_0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5419:1: ( ( rule__AdditionExpression__Alternatives_1_0_0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4980:1: ( ( ( rule__AdditionExpression__Alternatives_1_0_0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4981:1: ( ( rule__AdditionExpression__Alternatives_1_0_0 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5419:1: ( ( rule__AdditionExpression__Alternatives_1_0_0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5420:1: ( rule__AdditionExpression__Alternatives_1_0_0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4981:1: ( ( rule__AdditionExpression__Alternatives_1_0_0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4982:1: ( rule__AdditionExpression__Alternatives_1_0_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditionExpressionAccess().getAlternatives_1_0_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5421:1: ( rule__AdditionExpression__Alternatives_1_0_0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5421:2: rule__AdditionExpression__Alternatives_1_0_0
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4983:1: ( rule__AdditionExpression__Alternatives_1_0_0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4983:2: rule__AdditionExpression__Alternatives_1_0_0
             {
-            pushFollow(FOLLOW_rule__AdditionExpression__Alternatives_1_0_0_in_rule__AdditionExpression__Group_1_0__0__Impl10887);
+            pushFollow(FOLLOW_rule__AdditionExpression__Alternatives_1_0_0_in_rule__AdditionExpression__Group_1_0__0__Impl10028);
             rule__AdditionExpression__Alternatives_1_0_0();
 
             state._fsp--;
@@ -15267,21 +14058,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group_1_0_0_0__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5433:1: rule__AdditionExpression__Group_1_0_0_0__0 : rule__AdditionExpression__Group_1_0_0_0__0__Impl rule__AdditionExpression__Group_1_0_0_0__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4995:1: rule__AdditionExpression__Group_1_0_0_0__0 : rule__AdditionExpression__Group_1_0_0_0__0__Impl rule__AdditionExpression__Group_1_0_0_0__1 ;
     public final void rule__AdditionExpression__Group_1_0_0_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5437:1: ( rule__AdditionExpression__Group_1_0_0_0__0__Impl rule__AdditionExpression__Group_1_0_0_0__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5438:2: rule__AdditionExpression__Group_1_0_0_0__0__Impl rule__AdditionExpression__Group_1_0_0_0__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4999:1: ( rule__AdditionExpression__Group_1_0_0_0__0__Impl rule__AdditionExpression__Group_1_0_0_0__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5000:2: rule__AdditionExpression__Group_1_0_0_0__0__Impl rule__AdditionExpression__Group_1_0_0_0__1
             {
-            pushFollow(FOLLOW_rule__AdditionExpression__Group_1_0_0_0__0__Impl_in_rule__AdditionExpression__Group_1_0_0_0__010919);
+            pushFollow(FOLLOW_rule__AdditionExpression__Group_1_0_0_0__0__Impl_in_rule__AdditionExpression__Group_1_0_0_0__010060);
             rule__AdditionExpression__Group_1_0_0_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__AdditionExpression__Group_1_0_0_0__1_in_rule__AdditionExpression__Group_1_0_0_0__010922);
+            pushFollow(FOLLOW_rule__AdditionExpression__Group_1_0_0_0__1_in_rule__AdditionExpression__Group_1_0_0_0__010063);
             rule__AdditionExpression__Group_1_0_0_0__1();
 
             state._fsp--;
@@ -15305,28 +14096,28 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group_1_0_0_0__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5445:1: rule__AdditionExpression__Group_1_0_0_0__0__Impl : ( () ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5007:1: rule__AdditionExpression__Group_1_0_0_0__0__Impl : ( () ) ;
     public final void rule__AdditionExpression__Group_1_0_0_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5449:1: ( ( () ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5450:1: ( () )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5011:1: ( ( () ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5012:1: ( () )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5450:1: ( () )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5451:1: ()
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5012:1: ( () )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5013:1: ()
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getAdditionExpressionAccess().getPlusOpAction_1_0_0_0_0()); 
+               before(grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5452:1: ()
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5454:1: 
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5014:1: ()
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5016:1: 
             {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getAdditionExpressionAccess().getPlusOpAction_1_0_0_0_0()); 
+               after(grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0()); 
             }
 
             }
@@ -15346,16 +14137,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group_1_0_0_0__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5464:1: rule__AdditionExpression__Group_1_0_0_0__1 : rule__AdditionExpression__Group_1_0_0_0__1__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5026:1: rule__AdditionExpression__Group_1_0_0_0__1 : rule__AdditionExpression__Group_1_0_0_0__1__Impl ;
     public final void rule__AdditionExpression__Group_1_0_0_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5468:1: ( rule__AdditionExpression__Group_1_0_0_0__1__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5469:2: rule__AdditionExpression__Group_1_0_0_0__1__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5030:1: ( rule__AdditionExpression__Group_1_0_0_0__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5031:2: rule__AdditionExpression__Group_1_0_0_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__AdditionExpression__Group_1_0_0_0__1__Impl_in_rule__AdditionExpression__Group_1_0_0_0__110980);
+            pushFollow(FOLLOW_rule__AdditionExpression__Group_1_0_0_0__1__Impl_in_rule__AdditionExpression__Group_1_0_0_0__110121);
             rule__AdditionExpression__Group_1_0_0_0__1__Impl();
 
             state._fsp--;
@@ -15379,22 +14170,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group_1_0_0_0__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5475:1: rule__AdditionExpression__Group_1_0_0_0__1__Impl : ( '+' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5037:1: rule__AdditionExpression__Group_1_0_0_0__1__Impl : ( '+' ) ;
     public final void rule__AdditionExpression__Group_1_0_0_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5479:1: ( ( '+' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5480:1: ( '+' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5041:1: ( ( '+' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5042:1: ( '+' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5480:1: ( '+' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5481:1: '+'
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5042:1: ( '+' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5043:1: '+'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditionExpressionAccess().getPlusSignKeyword_1_0_0_0_1()); 
             }
-            match(input,46,FOLLOW_46_in_rule__AdditionExpression__Group_1_0_0_0__1__Impl11008); if (state.failed) return ;
+            match(input,45,FOLLOW_45_in_rule__AdditionExpression__Group_1_0_0_0__1__Impl10149); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAdditionExpressionAccess().getPlusSignKeyword_1_0_0_0_1()); 
             }
@@ -15420,21 +14211,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group_1_0_0_1__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5498:1: rule__AdditionExpression__Group_1_0_0_1__0 : rule__AdditionExpression__Group_1_0_0_1__0__Impl rule__AdditionExpression__Group_1_0_0_1__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5060:1: rule__AdditionExpression__Group_1_0_0_1__0 : rule__AdditionExpression__Group_1_0_0_1__0__Impl rule__AdditionExpression__Group_1_0_0_1__1 ;
     public final void rule__AdditionExpression__Group_1_0_0_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5502:1: ( rule__AdditionExpression__Group_1_0_0_1__0__Impl rule__AdditionExpression__Group_1_0_0_1__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5503:2: rule__AdditionExpression__Group_1_0_0_1__0__Impl rule__AdditionExpression__Group_1_0_0_1__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5064:1: ( rule__AdditionExpression__Group_1_0_0_1__0__Impl rule__AdditionExpression__Group_1_0_0_1__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5065:2: rule__AdditionExpression__Group_1_0_0_1__0__Impl rule__AdditionExpression__Group_1_0_0_1__1
             {
-            pushFollow(FOLLOW_rule__AdditionExpression__Group_1_0_0_1__0__Impl_in_rule__AdditionExpression__Group_1_0_0_1__011043);
+            pushFollow(FOLLOW_rule__AdditionExpression__Group_1_0_0_1__0__Impl_in_rule__AdditionExpression__Group_1_0_0_1__010184);
             rule__AdditionExpression__Group_1_0_0_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__AdditionExpression__Group_1_0_0_1__1_in_rule__AdditionExpression__Group_1_0_0_1__011046);
+            pushFollow(FOLLOW_rule__AdditionExpression__Group_1_0_0_1__1_in_rule__AdditionExpression__Group_1_0_0_1__010187);
             rule__AdditionExpression__Group_1_0_0_1__1();
 
             state._fsp--;
@@ -15458,23 +14249,23 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group_1_0_0_1__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5510:1: rule__AdditionExpression__Group_1_0_0_1__0__Impl : ( () ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5072:1: rule__AdditionExpression__Group_1_0_0_1__0__Impl : ( () ) ;
     public final void rule__AdditionExpression__Group_1_0_0_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5514:1: ( ( () ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5515:1: ( () )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5076:1: ( ( () ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5077:1: ( () )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5515:1: ( () )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5516:1: ()
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5077:1: ( () )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5078:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditionExpressionAccess().getMinusOpAction_1_0_0_1_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5517:1: ()
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5519:1: 
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5079:1: ()
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5081:1: 
             {
             }
 
@@ -15499,16 +14290,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group_1_0_0_1__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5529:1: rule__AdditionExpression__Group_1_0_0_1__1 : rule__AdditionExpression__Group_1_0_0_1__1__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5091:1: rule__AdditionExpression__Group_1_0_0_1__1 : rule__AdditionExpression__Group_1_0_0_1__1__Impl ;
     public final void rule__AdditionExpression__Group_1_0_0_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5533:1: ( rule__AdditionExpression__Group_1_0_0_1__1__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5534:2: rule__AdditionExpression__Group_1_0_0_1__1__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5095:1: ( rule__AdditionExpression__Group_1_0_0_1__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5096:2: rule__AdditionExpression__Group_1_0_0_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__AdditionExpression__Group_1_0_0_1__1__Impl_in_rule__AdditionExpression__Group_1_0_0_1__111104);
+            pushFollow(FOLLOW_rule__AdditionExpression__Group_1_0_0_1__1__Impl_in_rule__AdditionExpression__Group_1_0_0_1__110245);
             rule__AdditionExpression__Group_1_0_0_1__1__Impl();
 
             state._fsp--;
@@ -15532,22 +14323,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__Group_1_0_0_1__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5540:1: rule__AdditionExpression__Group_1_0_0_1__1__Impl : ( '-' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5102:1: rule__AdditionExpression__Group_1_0_0_1__1__Impl : ( '-' ) ;
     public final void rule__AdditionExpression__Group_1_0_0_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5544:1: ( ( '-' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5545:1: ( '-' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5106:1: ( ( '-' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5107:1: ( '-' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5545:1: ( '-' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5546:1: '-'
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5107:1: ( '-' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5108:1: '-'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditionExpressionAccess().getHyphenMinusKeyword_1_0_0_1_1()); 
             }
-            match(input,47,FOLLOW_47_in_rule__AdditionExpression__Group_1_0_0_1__1__Impl11132); if (state.failed) return ;
+            match(input,46,FOLLOW_46_in_rule__AdditionExpression__Group_1_0_0_1__1__Impl10273); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAdditionExpressionAccess().getHyphenMinusKeyword_1_0_0_1_1()); 
             }
@@ -15573,21 +14364,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5563:1: rule__MultiplicationExpression__Group__0 : rule__MultiplicationExpression__Group__0__Impl rule__MultiplicationExpression__Group__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5125:1: rule__MultiplicationExpression__Group__0 : rule__MultiplicationExpression__Group__0__Impl rule__MultiplicationExpression__Group__1 ;
     public final void rule__MultiplicationExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5567:1: ( rule__MultiplicationExpression__Group__0__Impl rule__MultiplicationExpression__Group__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5568:2: rule__MultiplicationExpression__Group__0__Impl rule__MultiplicationExpression__Group__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5129:1: ( rule__MultiplicationExpression__Group__0__Impl rule__MultiplicationExpression__Group__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5130:2: rule__MultiplicationExpression__Group__0__Impl rule__MultiplicationExpression__Group__1
             {
-            pushFollow(FOLLOW_rule__MultiplicationExpression__Group__0__Impl_in_rule__MultiplicationExpression__Group__011167);
+            pushFollow(FOLLOW_rule__MultiplicationExpression__Group__0__Impl_in_rule__MultiplicationExpression__Group__010308);
             rule__MultiplicationExpression__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__MultiplicationExpression__Group__1_in_rule__MultiplicationExpression__Group__011170);
+            pushFollow(FOLLOW_rule__MultiplicationExpression__Group__1_in_rule__MultiplicationExpression__Group__010311);
             rule__MultiplicationExpression__Group__1();
 
             state._fsp--;
@@ -15611,28 +14402,28 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5575:1: rule__MultiplicationExpression__Group__0__Impl : ( rulePrimaryExpression ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5137:1: rule__MultiplicationExpression__Group__0__Impl : ( ruleDispatchExpression ) ;
     public final void rule__MultiplicationExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5579:1: ( ( rulePrimaryExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5580:1: ( rulePrimaryExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5141:1: ( ( ruleDispatchExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5142:1: ( ruleDispatchExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5580:1: ( rulePrimaryExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5581:1: rulePrimaryExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5142:1: ( ruleDispatchExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5143:1: ruleDispatchExpression
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getMultiplicationExpressionAccess().getPrimaryExpressionParserRuleCall_0()); 
+               before(grammarAccess.getMultiplicationExpressionAccess().getDispatchExpressionParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_rulePrimaryExpression_in_rule__MultiplicationExpression__Group__0__Impl11197);
-            rulePrimaryExpression();
+            pushFollow(FOLLOW_ruleDispatchExpression_in_rule__MultiplicationExpression__Group__0__Impl10338);
+            ruleDispatchExpression();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getMultiplicationExpressionAccess().getPrimaryExpressionParserRuleCall_0()); 
+               after(grammarAccess.getMultiplicationExpressionAccess().getDispatchExpressionParserRuleCall_0()); 
             }
 
             }
@@ -15656,16 +14447,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5592:1: rule__MultiplicationExpression__Group__1 : rule__MultiplicationExpression__Group__1__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5154:1: rule__MultiplicationExpression__Group__1 : rule__MultiplicationExpression__Group__1__Impl ;
     public final void rule__MultiplicationExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5596:1: ( rule__MultiplicationExpression__Group__1__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5597:2: rule__MultiplicationExpression__Group__1__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5158:1: ( rule__MultiplicationExpression__Group__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5159:2: rule__MultiplicationExpression__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__MultiplicationExpression__Group__1__Impl_in_rule__MultiplicationExpression__Group__111226);
+            pushFollow(FOLLOW_rule__MultiplicationExpression__Group__1__Impl_in_rule__MultiplicationExpression__Group__110367);
             rule__MultiplicationExpression__Group__1__Impl();
 
             state._fsp--;
@@ -15689,44 +14480,44 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5603:1: rule__MultiplicationExpression__Group__1__Impl : ( ( rule__MultiplicationExpression__Group_1__0 )? ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5165:1: rule__MultiplicationExpression__Group__1__Impl : ( ( rule__MultiplicationExpression__Group_1__0 )? ) ;
     public final void rule__MultiplicationExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5607:1: ( ( ( rule__MultiplicationExpression__Group_1__0 )? ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5608:1: ( ( rule__MultiplicationExpression__Group_1__0 )? )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5169:1: ( ( ( rule__MultiplicationExpression__Group_1__0 )? ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5170:1: ( ( rule__MultiplicationExpression__Group_1__0 )? )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5608:1: ( ( rule__MultiplicationExpression__Group_1__0 )? )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5609:1: ( rule__MultiplicationExpression__Group_1__0 )?
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5170:1: ( ( rule__MultiplicationExpression__Group_1__0 )? )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5171:1: ( rule__MultiplicationExpression__Group_1__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicationExpressionAccess().getGroup_1()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5610:1: ( rule__MultiplicationExpression__Group_1__0 )?
-            int alt28=2;
-            int LA28_0 = input.LA(1);
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5172:1: ( rule__MultiplicationExpression__Group_1__0 )?
+            int alt25=2;
+            int LA25_0 = input.LA(1);
 
-            if ( (LA28_0==48) ) {
-                int LA28_1 = input.LA(2);
+            if ( (LA25_0==47) ) {
+                int LA25_1 = input.LA(2);
 
-                if ( (synpred43_InternalCool()) ) {
-                    alt28=1;
+                if ( (synpred40_InternalCool()) ) {
+                    alt25=1;
                 }
             }
-            else if ( (LA28_0==49) ) {
-                int LA28_2 = input.LA(2);
+            else if ( (LA25_0==48) ) {
+                int LA25_2 = input.LA(2);
 
-                if ( (synpred43_InternalCool()) ) {
-                    alt28=1;
+                if ( (synpred40_InternalCool()) ) {
+                    alt25=1;
                 }
             }
-            switch (alt28) {
+            switch (alt25) {
                 case 1 :
-                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5610:2: rule__MultiplicationExpression__Group_1__0
+                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5172:2: rule__MultiplicationExpression__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1__0_in_rule__MultiplicationExpression__Group__1__Impl11253);
+                    pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1__0_in_rule__MultiplicationExpression__Group__1__Impl10394);
                     rule__MultiplicationExpression__Group_1__0();
 
                     state._fsp--;
@@ -15762,21 +14553,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group_1__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5624:1: rule__MultiplicationExpression__Group_1__0 : rule__MultiplicationExpression__Group_1__0__Impl rule__MultiplicationExpression__Group_1__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5186:1: rule__MultiplicationExpression__Group_1__0 : rule__MultiplicationExpression__Group_1__0__Impl rule__MultiplicationExpression__Group_1__1 ;
     public final void rule__MultiplicationExpression__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5628:1: ( rule__MultiplicationExpression__Group_1__0__Impl rule__MultiplicationExpression__Group_1__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5629:2: rule__MultiplicationExpression__Group_1__0__Impl rule__MultiplicationExpression__Group_1__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5190:1: ( rule__MultiplicationExpression__Group_1__0__Impl rule__MultiplicationExpression__Group_1__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5191:2: rule__MultiplicationExpression__Group_1__0__Impl rule__MultiplicationExpression__Group_1__1
             {
-            pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1__0__Impl_in_rule__MultiplicationExpression__Group_1__011288);
+            pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1__0__Impl_in_rule__MultiplicationExpression__Group_1__010429);
             rule__MultiplicationExpression__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1__1_in_rule__MultiplicationExpression__Group_1__011291);
+            pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1__1_in_rule__MultiplicationExpression__Group_1__010432);
             rule__MultiplicationExpression__Group_1__1();
 
             state._fsp--;
@@ -15800,25 +14591,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group_1__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5636:1: rule__MultiplicationExpression__Group_1__0__Impl : ( ( rule__MultiplicationExpression__Group_1_0__0 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5198:1: rule__MultiplicationExpression__Group_1__0__Impl : ( ( rule__MultiplicationExpression__Group_1_0__0 ) ) ;
     public final void rule__MultiplicationExpression__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5640:1: ( ( ( rule__MultiplicationExpression__Group_1_0__0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5641:1: ( ( rule__MultiplicationExpression__Group_1_0__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5202:1: ( ( ( rule__MultiplicationExpression__Group_1_0__0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5203:1: ( ( rule__MultiplicationExpression__Group_1_0__0 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5641:1: ( ( rule__MultiplicationExpression__Group_1_0__0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5642:1: ( rule__MultiplicationExpression__Group_1_0__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5203:1: ( ( rule__MultiplicationExpression__Group_1_0__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5204:1: ( rule__MultiplicationExpression__Group_1_0__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicationExpressionAccess().getGroup_1_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5643:1: ( rule__MultiplicationExpression__Group_1_0__0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5643:2: rule__MultiplicationExpression__Group_1_0__0
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5205:1: ( rule__MultiplicationExpression__Group_1_0__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5205:2: rule__MultiplicationExpression__Group_1_0__0
             {
-            pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1_0__0_in_rule__MultiplicationExpression__Group_1__0__Impl11318);
+            pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1_0__0_in_rule__MultiplicationExpression__Group_1__0__Impl10459);
             rule__MultiplicationExpression__Group_1_0__0();
 
             state._fsp--;
@@ -15851,16 +14642,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group_1__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5653:1: rule__MultiplicationExpression__Group_1__1 : rule__MultiplicationExpression__Group_1__1__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5215:1: rule__MultiplicationExpression__Group_1__1 : rule__MultiplicationExpression__Group_1__1__Impl ;
     public final void rule__MultiplicationExpression__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5657:1: ( rule__MultiplicationExpression__Group_1__1__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5658:2: rule__MultiplicationExpression__Group_1__1__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5219:1: ( rule__MultiplicationExpression__Group_1__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5220:2: rule__MultiplicationExpression__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1__1__Impl_in_rule__MultiplicationExpression__Group_1__111348);
+            pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1__1__Impl_in_rule__MultiplicationExpression__Group_1__110489);
             rule__MultiplicationExpression__Group_1__1__Impl();
 
             state._fsp--;
@@ -15884,25 +14675,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group_1__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5664:1: rule__MultiplicationExpression__Group_1__1__Impl : ( ( rule__MultiplicationExpression__RightAssignment_1_1 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5226:1: rule__MultiplicationExpression__Group_1__1__Impl : ( ( rule__MultiplicationExpression__RightAssignment_1_1 ) ) ;
     public final void rule__MultiplicationExpression__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5668:1: ( ( ( rule__MultiplicationExpression__RightAssignment_1_1 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5669:1: ( ( rule__MultiplicationExpression__RightAssignment_1_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5230:1: ( ( ( rule__MultiplicationExpression__RightAssignment_1_1 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5231:1: ( ( rule__MultiplicationExpression__RightAssignment_1_1 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5669:1: ( ( rule__MultiplicationExpression__RightAssignment_1_1 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5670:1: ( rule__MultiplicationExpression__RightAssignment_1_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5231:1: ( ( rule__MultiplicationExpression__RightAssignment_1_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5232:1: ( rule__MultiplicationExpression__RightAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicationExpressionAccess().getRightAssignment_1_1()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5671:1: ( rule__MultiplicationExpression__RightAssignment_1_1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5671:2: rule__MultiplicationExpression__RightAssignment_1_1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5233:1: ( rule__MultiplicationExpression__RightAssignment_1_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5233:2: rule__MultiplicationExpression__RightAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__MultiplicationExpression__RightAssignment_1_1_in_rule__MultiplicationExpression__Group_1__1__Impl11375);
+            pushFollow(FOLLOW_rule__MultiplicationExpression__RightAssignment_1_1_in_rule__MultiplicationExpression__Group_1__1__Impl10516);
             rule__MultiplicationExpression__RightAssignment_1_1();
 
             state._fsp--;
@@ -15935,16 +14726,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group_1_0__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5685:1: rule__MultiplicationExpression__Group_1_0__0 : rule__MultiplicationExpression__Group_1_0__0__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5247:1: rule__MultiplicationExpression__Group_1_0__0 : rule__MultiplicationExpression__Group_1_0__0__Impl ;
     public final void rule__MultiplicationExpression__Group_1_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5689:1: ( rule__MultiplicationExpression__Group_1_0__0__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5690:2: rule__MultiplicationExpression__Group_1_0__0__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5251:1: ( rule__MultiplicationExpression__Group_1_0__0__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5252:2: rule__MultiplicationExpression__Group_1_0__0__Impl
             {
-            pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1_0__0__Impl_in_rule__MultiplicationExpression__Group_1_0__011409);
+            pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1_0__0__Impl_in_rule__MultiplicationExpression__Group_1_0__010550);
             rule__MultiplicationExpression__Group_1_0__0__Impl();
 
             state._fsp--;
@@ -15968,25 +14759,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group_1_0__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5696:1: rule__MultiplicationExpression__Group_1_0__0__Impl : ( ( rule__MultiplicationExpression__Alternatives_1_0_0 ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5258:1: rule__MultiplicationExpression__Group_1_0__0__Impl : ( ( rule__MultiplicationExpression__Alternatives_1_0_0 ) ) ;
     public final void rule__MultiplicationExpression__Group_1_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5700:1: ( ( ( rule__MultiplicationExpression__Alternatives_1_0_0 ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5701:1: ( ( rule__MultiplicationExpression__Alternatives_1_0_0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5262:1: ( ( ( rule__MultiplicationExpression__Alternatives_1_0_0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5263:1: ( ( rule__MultiplicationExpression__Alternatives_1_0_0 ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5701:1: ( ( rule__MultiplicationExpression__Alternatives_1_0_0 ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5702:1: ( rule__MultiplicationExpression__Alternatives_1_0_0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5263:1: ( ( rule__MultiplicationExpression__Alternatives_1_0_0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5264:1: ( rule__MultiplicationExpression__Alternatives_1_0_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicationExpressionAccess().getAlternatives_1_0_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5703:1: ( rule__MultiplicationExpression__Alternatives_1_0_0 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5703:2: rule__MultiplicationExpression__Alternatives_1_0_0
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5265:1: ( rule__MultiplicationExpression__Alternatives_1_0_0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5265:2: rule__MultiplicationExpression__Alternatives_1_0_0
             {
-            pushFollow(FOLLOW_rule__MultiplicationExpression__Alternatives_1_0_0_in_rule__MultiplicationExpression__Group_1_0__0__Impl11436);
+            pushFollow(FOLLOW_rule__MultiplicationExpression__Alternatives_1_0_0_in_rule__MultiplicationExpression__Group_1_0__0__Impl10577);
             rule__MultiplicationExpression__Alternatives_1_0_0();
 
             state._fsp--;
@@ -16019,21 +14810,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group_1_0_0_0__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5715:1: rule__MultiplicationExpression__Group_1_0_0_0__0 : rule__MultiplicationExpression__Group_1_0_0_0__0__Impl rule__MultiplicationExpression__Group_1_0_0_0__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5277:1: rule__MultiplicationExpression__Group_1_0_0_0__0 : rule__MultiplicationExpression__Group_1_0_0_0__0__Impl rule__MultiplicationExpression__Group_1_0_0_0__1 ;
     public final void rule__MultiplicationExpression__Group_1_0_0_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5719:1: ( rule__MultiplicationExpression__Group_1_0_0_0__0__Impl rule__MultiplicationExpression__Group_1_0_0_0__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5720:2: rule__MultiplicationExpression__Group_1_0_0_0__0__Impl rule__MultiplicationExpression__Group_1_0_0_0__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5281:1: ( rule__MultiplicationExpression__Group_1_0_0_0__0__Impl rule__MultiplicationExpression__Group_1_0_0_0__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5282:2: rule__MultiplicationExpression__Group_1_0_0_0__0__Impl rule__MultiplicationExpression__Group_1_0_0_0__1
             {
-            pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1_0_0_0__0__Impl_in_rule__MultiplicationExpression__Group_1_0_0_0__011468);
+            pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1_0_0_0__0__Impl_in_rule__MultiplicationExpression__Group_1_0_0_0__010609);
             rule__MultiplicationExpression__Group_1_0_0_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1_0_0_0__1_in_rule__MultiplicationExpression__Group_1_0_0_0__011471);
+            pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1_0_0_0__1_in_rule__MultiplicationExpression__Group_1_0_0_0__010612);
             rule__MultiplicationExpression__Group_1_0_0_0__1();
 
             state._fsp--;
@@ -16057,28 +14848,28 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group_1_0_0_0__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5727:1: rule__MultiplicationExpression__Group_1_0_0_0__0__Impl : ( () ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5289:1: rule__MultiplicationExpression__Group_1_0_0_0__0__Impl : ( () ) ;
     public final void rule__MultiplicationExpression__Group_1_0_0_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5731:1: ( ( () ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5732:1: ( () )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5293:1: ( ( () ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5294:1: ( () )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5732:1: ( () )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5733:1: ()
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5294:1: ( () )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5295:1: ()
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getMultiplicationExpressionAccess().getMultiOpAction_1_0_0_0_0()); 
+               before(grammarAccess.getMultiplicationExpressionAccess().getMultiplicationExpressionLeftAction_1_0_0_0_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5734:1: ()
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5736:1: 
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5296:1: ()
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5298:1: 
             {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getMultiplicationExpressionAccess().getMultiOpAction_1_0_0_0_0()); 
+               after(grammarAccess.getMultiplicationExpressionAccess().getMultiplicationExpressionLeftAction_1_0_0_0_0()); 
             }
 
             }
@@ -16098,16 +14889,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group_1_0_0_0__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5746:1: rule__MultiplicationExpression__Group_1_0_0_0__1 : rule__MultiplicationExpression__Group_1_0_0_0__1__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5308:1: rule__MultiplicationExpression__Group_1_0_0_0__1 : rule__MultiplicationExpression__Group_1_0_0_0__1__Impl ;
     public final void rule__MultiplicationExpression__Group_1_0_0_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5750:1: ( rule__MultiplicationExpression__Group_1_0_0_0__1__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5751:2: rule__MultiplicationExpression__Group_1_0_0_0__1__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5312:1: ( rule__MultiplicationExpression__Group_1_0_0_0__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5313:2: rule__MultiplicationExpression__Group_1_0_0_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1_0_0_0__1__Impl_in_rule__MultiplicationExpression__Group_1_0_0_0__111529);
+            pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1_0_0_0__1__Impl_in_rule__MultiplicationExpression__Group_1_0_0_0__110670);
             rule__MultiplicationExpression__Group_1_0_0_0__1__Impl();
 
             state._fsp--;
@@ -16131,22 +14922,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group_1_0_0_0__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5757:1: rule__MultiplicationExpression__Group_1_0_0_0__1__Impl : ( '*' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5319:1: rule__MultiplicationExpression__Group_1_0_0_0__1__Impl : ( '*' ) ;
     public final void rule__MultiplicationExpression__Group_1_0_0_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5761:1: ( ( '*' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5762:1: ( '*' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5323:1: ( ( '*' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5324:1: ( '*' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5762:1: ( '*' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5763:1: '*'
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5324:1: ( '*' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5325:1: '*'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicationExpressionAccess().getAsteriskKeyword_1_0_0_0_1()); 
             }
-            match(input,48,FOLLOW_48_in_rule__MultiplicationExpression__Group_1_0_0_0__1__Impl11557); if (state.failed) return ;
+            match(input,47,FOLLOW_47_in_rule__MultiplicationExpression__Group_1_0_0_0__1__Impl10698); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMultiplicationExpressionAccess().getAsteriskKeyword_1_0_0_0_1()); 
             }
@@ -16172,21 +14963,21 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group_1_0_0_1__0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5780:1: rule__MultiplicationExpression__Group_1_0_0_1__0 : rule__MultiplicationExpression__Group_1_0_0_1__0__Impl rule__MultiplicationExpression__Group_1_0_0_1__1 ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5342:1: rule__MultiplicationExpression__Group_1_0_0_1__0 : rule__MultiplicationExpression__Group_1_0_0_1__0__Impl rule__MultiplicationExpression__Group_1_0_0_1__1 ;
     public final void rule__MultiplicationExpression__Group_1_0_0_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5784:1: ( rule__MultiplicationExpression__Group_1_0_0_1__0__Impl rule__MultiplicationExpression__Group_1_0_0_1__1 )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5785:2: rule__MultiplicationExpression__Group_1_0_0_1__0__Impl rule__MultiplicationExpression__Group_1_0_0_1__1
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5346:1: ( rule__MultiplicationExpression__Group_1_0_0_1__0__Impl rule__MultiplicationExpression__Group_1_0_0_1__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5347:2: rule__MultiplicationExpression__Group_1_0_0_1__0__Impl rule__MultiplicationExpression__Group_1_0_0_1__1
             {
-            pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1_0_0_1__0__Impl_in_rule__MultiplicationExpression__Group_1_0_0_1__011592);
+            pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1_0_0_1__0__Impl_in_rule__MultiplicationExpression__Group_1_0_0_1__010733);
             rule__MultiplicationExpression__Group_1_0_0_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1_0_0_1__1_in_rule__MultiplicationExpression__Group_1_0_0_1__011595);
+            pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1_0_0_1__1_in_rule__MultiplicationExpression__Group_1_0_0_1__010736);
             rule__MultiplicationExpression__Group_1_0_0_1__1();
 
             state._fsp--;
@@ -16210,23 +15001,23 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group_1_0_0_1__0__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5792:1: rule__MultiplicationExpression__Group_1_0_0_1__0__Impl : ( () ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5354:1: rule__MultiplicationExpression__Group_1_0_0_1__0__Impl : ( () ) ;
     public final void rule__MultiplicationExpression__Group_1_0_0_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5796:1: ( ( () ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5797:1: ( () )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5358:1: ( ( () ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5359:1: ( () )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5797:1: ( () )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5798:1: ()
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5359:1: ( () )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5360:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicationExpressionAccess().getDivOpAction_1_0_0_1_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5799:1: ()
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5801:1: 
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5361:1: ()
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5363:1: 
             {
             }
 
@@ -16251,16 +15042,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group_1_0_0_1__1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5811:1: rule__MultiplicationExpression__Group_1_0_0_1__1 : rule__MultiplicationExpression__Group_1_0_0_1__1__Impl ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5373:1: rule__MultiplicationExpression__Group_1_0_0_1__1 : rule__MultiplicationExpression__Group_1_0_0_1__1__Impl ;
     public final void rule__MultiplicationExpression__Group_1_0_0_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5815:1: ( rule__MultiplicationExpression__Group_1_0_0_1__1__Impl )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5816:2: rule__MultiplicationExpression__Group_1_0_0_1__1__Impl
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5377:1: ( rule__MultiplicationExpression__Group_1_0_0_1__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5378:2: rule__MultiplicationExpression__Group_1_0_0_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1_0_0_1__1__Impl_in_rule__MultiplicationExpression__Group_1_0_0_1__111653);
+            pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1_0_0_1__1__Impl_in_rule__MultiplicationExpression__Group_1_0_0_1__110794);
             rule__MultiplicationExpression__Group_1_0_0_1__1__Impl();
 
             state._fsp--;
@@ -16284,22 +15075,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__Group_1_0_0_1__1__Impl"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5822:1: rule__MultiplicationExpression__Group_1_0_0_1__1__Impl : ( '/' ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5384:1: rule__MultiplicationExpression__Group_1_0_0_1__1__Impl : ( '/' ) ;
     public final void rule__MultiplicationExpression__Group_1_0_0_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5826:1: ( ( '/' ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5827:1: ( '/' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5388:1: ( ( '/' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5389:1: ( '/' )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5827:1: ( '/' )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5828:1: '/'
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5389:1: ( '/' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5390:1: '/'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicationExpressionAccess().getSolidusKeyword_1_0_0_1_1()); 
             }
-            match(input,49,FOLLOW_49_in_rule__MultiplicationExpression__Group_1_0_0_1__1__Impl11681); if (state.failed) return ;
+            match(input,48,FOLLOW_48_in_rule__MultiplicationExpression__Group_1_0_0_1__1__Impl10822); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMultiplicationExpressionAccess().getSolidusKeyword_1_0_0_1_1()); 
             }
@@ -16324,23 +15115,1762 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__MultiplicationExpression__Group_1_0_0_1__1__Impl"
 
 
+    // $ANTLR start "rule__DispatchExpression__Group__0"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5407:1: rule__DispatchExpression__Group__0 : rule__DispatchExpression__Group__0__Impl rule__DispatchExpression__Group__1 ;
+    public final void rule__DispatchExpression__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5411:1: ( rule__DispatchExpression__Group__0__Impl rule__DispatchExpression__Group__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5412:2: rule__DispatchExpression__Group__0__Impl rule__DispatchExpression__Group__1
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__Group__0__Impl_in_rule__DispatchExpression__Group__010857);
+            rule__DispatchExpression__Group__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__DispatchExpression__Group__1_in_rule__DispatchExpression__Group__010860);
+            rule__DispatchExpression__Group__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group__0"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group__0__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5419:1: rule__DispatchExpression__Group__0__Impl : ( rulePrimaryExpression ) ;
+    public final void rule__DispatchExpression__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5423:1: ( ( rulePrimaryExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5424:1: ( rulePrimaryExpression )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5424:1: ( rulePrimaryExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5425:1: rulePrimaryExpression
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getPrimaryExpressionParserRuleCall_0()); 
+            }
+            pushFollow(FOLLOW_rulePrimaryExpression_in_rule__DispatchExpression__Group__0__Impl10887);
+            rulePrimaryExpression();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getPrimaryExpressionParserRuleCall_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group__0__Impl"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group__1"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5436:1: rule__DispatchExpression__Group__1 : rule__DispatchExpression__Group__1__Impl ;
+    public final void rule__DispatchExpression__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5440:1: ( rule__DispatchExpression__Group__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5441:2: rule__DispatchExpression__Group__1__Impl
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__Group__1__Impl_in_rule__DispatchExpression__Group__110916);
+            rule__DispatchExpression__Group__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group__1"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group__1__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5447:1: rule__DispatchExpression__Group__1__Impl : ( ( rule__DispatchExpression__Group_1__0 )? ) ;
+    public final void rule__DispatchExpression__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5451:1: ( ( ( rule__DispatchExpression__Group_1__0 )? ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5452:1: ( ( rule__DispatchExpression__Group_1__0 )? )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5452:1: ( ( rule__DispatchExpression__Group_1__0 )? )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5453:1: ( rule__DispatchExpression__Group_1__0 )?
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getGroup_1()); 
+            }
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5454:1: ( rule__DispatchExpression__Group_1__0 )?
+            int alt26=2;
+            int LA26_0 = input.LA(1);
+
+            if ( (LA26_0==49) ) {
+                int LA26_1 = input.LA(2);
+
+                if ( (synpred41_InternalCool()) ) {
+                    alt26=1;
+                }
+            }
+            else if ( (LA26_0==30) ) {
+                int LA26_2 = input.LA(2);
+
+                if ( (synpred41_InternalCool()) ) {
+                    alt26=1;
+                }
+            }
+            switch (alt26) {
+                case 1 :
+                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5454:2: rule__DispatchExpression__Group_1__0
+                    {
+                    pushFollow(FOLLOW_rule__DispatchExpression__Group_1__0_in_rule__DispatchExpression__Group__1__Impl10943);
+                    rule__DispatchExpression__Group_1__0();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+                    break;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getGroup_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group__1__Impl"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1__0"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5468:1: rule__DispatchExpression__Group_1__0 : rule__DispatchExpression__Group_1__0__Impl rule__DispatchExpression__Group_1__1 ;
+    public final void rule__DispatchExpression__Group_1__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5472:1: ( rule__DispatchExpression__Group_1__0__Impl rule__DispatchExpression__Group_1__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5473:2: rule__DispatchExpression__Group_1__0__Impl rule__DispatchExpression__Group_1__1
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1__0__Impl_in_rule__DispatchExpression__Group_1__010978);
+            rule__DispatchExpression__Group_1__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1__1_in_rule__DispatchExpression__Group_1__010981);
+            rule__DispatchExpression__Group_1__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1__0"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1__0__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5480:1: rule__DispatchExpression__Group_1__0__Impl : ( ( rule__DispatchExpression__Group_1_0__0 ) ) ;
+    public final void rule__DispatchExpression__Group_1__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5484:1: ( ( ( rule__DispatchExpression__Group_1_0__0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5485:1: ( ( rule__DispatchExpression__Group_1_0__0 ) )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5485:1: ( ( rule__DispatchExpression__Group_1_0__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5486:1: ( rule__DispatchExpression__Group_1_0__0 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getGroup_1_0()); 
+            }
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5487:1: ( rule__DispatchExpression__Group_1_0__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5487:2: rule__DispatchExpression__Group_1_0__0
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0__0_in_rule__DispatchExpression__Group_1__0__Impl11008);
+            rule__DispatchExpression__Group_1_0__0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getGroup_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1__0__Impl"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1__1"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5497:1: rule__DispatchExpression__Group_1__1 : rule__DispatchExpression__Group_1__1__Impl rule__DispatchExpression__Group_1__2 ;
+    public final void rule__DispatchExpression__Group_1__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5501:1: ( rule__DispatchExpression__Group_1__1__Impl rule__DispatchExpression__Group_1__2 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5502:2: rule__DispatchExpression__Group_1__1__Impl rule__DispatchExpression__Group_1__2
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1__1__Impl_in_rule__DispatchExpression__Group_1__111038);
+            rule__DispatchExpression__Group_1__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1__2_in_rule__DispatchExpression__Group_1__111041);
+            rule__DispatchExpression__Group_1__2();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1__1"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1__1__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5509:1: rule__DispatchExpression__Group_1__1__Impl : ( '(' ) ;
+    public final void rule__DispatchExpression__Group_1__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5513:1: ( ( '(' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5514:1: ( '(' )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5514:1: ( '(' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5515:1: '('
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getLeftParenthesisKeyword_1_1()); 
+            }
+            match(input,24,FOLLOW_24_in_rule__DispatchExpression__Group_1__1__Impl11069); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getLeftParenthesisKeyword_1_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1__1__Impl"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1__2"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5528:1: rule__DispatchExpression__Group_1__2 : rule__DispatchExpression__Group_1__2__Impl rule__DispatchExpression__Group_1__3 ;
+    public final void rule__DispatchExpression__Group_1__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5532:1: ( rule__DispatchExpression__Group_1__2__Impl rule__DispatchExpression__Group_1__3 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5533:2: rule__DispatchExpression__Group_1__2__Impl rule__DispatchExpression__Group_1__3
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1__2__Impl_in_rule__DispatchExpression__Group_1__211100);
+            rule__DispatchExpression__Group_1__2__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1__3_in_rule__DispatchExpression__Group_1__211103);
+            rule__DispatchExpression__Group_1__3();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1__2"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1__2__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5540:1: rule__DispatchExpression__Group_1__2__Impl : ( ( rule__DispatchExpression__Group_1_2__0 )? ) ;
+    public final void rule__DispatchExpression__Group_1__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5544:1: ( ( ( rule__DispatchExpression__Group_1_2__0 )? ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5545:1: ( ( rule__DispatchExpression__Group_1_2__0 )? )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5545:1: ( ( rule__DispatchExpression__Group_1_2__0 )? )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5546:1: ( rule__DispatchExpression__Group_1_2__0 )?
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getGroup_1_2()); 
+            }
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5547:1: ( rule__DispatchExpression__Group_1_2__0 )?
+            int alt27=2;
+            int LA27_0 = input.LA(1);
+
+            if ( ((LA27_0>=RULE_ID && LA27_0<=RULE_STRING)||(LA27_0>=14 && LA27_0<=16)||LA27_0==18||LA27_0==24||(LA27_0>=27 && LA27_0<=29)||LA27_0==31||LA27_0==35||(LA27_0>=38 && LA27_0<=39)||LA27_0==41) ) {
+                alt27=1;
+            }
+            switch (alt27) {
+                case 1 :
+                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5547:2: rule__DispatchExpression__Group_1_2__0
+                    {
+                    pushFollow(FOLLOW_rule__DispatchExpression__Group_1_2__0_in_rule__DispatchExpression__Group_1__2__Impl11130);
+                    rule__DispatchExpression__Group_1_2__0();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+                    break;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getGroup_1_2()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1__2__Impl"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1__3"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5557:1: rule__DispatchExpression__Group_1__3 : rule__DispatchExpression__Group_1__3__Impl rule__DispatchExpression__Group_1__4 ;
+    public final void rule__DispatchExpression__Group_1__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5561:1: ( rule__DispatchExpression__Group_1__3__Impl rule__DispatchExpression__Group_1__4 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5562:2: rule__DispatchExpression__Group_1__3__Impl rule__DispatchExpression__Group_1__4
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1__3__Impl_in_rule__DispatchExpression__Group_1__311161);
+            rule__DispatchExpression__Group_1__3__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1__4_in_rule__DispatchExpression__Group_1__311164);
+            rule__DispatchExpression__Group_1__4();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1__3"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1__3__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5569:1: rule__DispatchExpression__Group_1__3__Impl : ( ')' ) ;
+    public final void rule__DispatchExpression__Group_1__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5573:1: ( ( ')' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5574:1: ( ')' )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5574:1: ( ')' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5575:1: ')'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getRightParenthesisKeyword_1_3()); 
+            }
+            match(input,25,FOLLOW_25_in_rule__DispatchExpression__Group_1__3__Impl11192); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getRightParenthesisKeyword_1_3()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1__3__Impl"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1__4"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5588:1: rule__DispatchExpression__Group_1__4 : rule__DispatchExpression__Group_1__4__Impl ;
+    public final void rule__DispatchExpression__Group_1__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5592:1: ( rule__DispatchExpression__Group_1__4__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5593:2: rule__DispatchExpression__Group_1__4__Impl
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1__4__Impl_in_rule__DispatchExpression__Group_1__411223);
+            rule__DispatchExpression__Group_1__4__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1__4"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1__4__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5599:1: rule__DispatchExpression__Group_1__4__Impl : ( ( rule__DispatchExpression__Group_1_4__0 )? ) ;
+    public final void rule__DispatchExpression__Group_1__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5603:1: ( ( ( rule__DispatchExpression__Group_1_4__0 )? ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5604:1: ( ( rule__DispatchExpression__Group_1_4__0 )? )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5604:1: ( ( rule__DispatchExpression__Group_1_4__0 )? )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5605:1: ( rule__DispatchExpression__Group_1_4__0 )?
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getGroup_1_4()); 
+            }
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5606:1: ( rule__DispatchExpression__Group_1_4__0 )?
+            int alt28=2;
+            alt28 = dfa28.predict(input);
+            switch (alt28) {
+                case 1 :
+                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5606:2: rule__DispatchExpression__Group_1_4__0
+                    {
+                    pushFollow(FOLLOW_rule__DispatchExpression__Group_1_4__0_in_rule__DispatchExpression__Group_1__4__Impl11250);
+                    rule__DispatchExpression__Group_1_4__0();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+                    break;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getGroup_1_4()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1__4__Impl"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_0__0"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5626:1: rule__DispatchExpression__Group_1_0__0 : rule__DispatchExpression__Group_1_0__0__Impl ;
+    public final void rule__DispatchExpression__Group_1_0__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5630:1: ( rule__DispatchExpression__Group_1_0__0__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5631:2: rule__DispatchExpression__Group_1_0__0__Impl
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0__0__Impl_in_rule__DispatchExpression__Group_1_0__011291);
+            rule__DispatchExpression__Group_1_0__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_0__0"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_0__0__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5637:1: rule__DispatchExpression__Group_1_0__0__Impl : ( ( rule__DispatchExpression__Group_1_0_0__0 ) ) ;
+    public final void rule__DispatchExpression__Group_1_0__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5641:1: ( ( ( rule__DispatchExpression__Group_1_0_0__0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5642:1: ( ( rule__DispatchExpression__Group_1_0_0__0 ) )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5642:1: ( ( rule__DispatchExpression__Group_1_0_0__0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5643:1: ( rule__DispatchExpression__Group_1_0_0__0 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getGroup_1_0_0()); 
+            }
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5644:1: ( rule__DispatchExpression__Group_1_0_0__0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5644:2: rule__DispatchExpression__Group_1_0_0__0
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0_0__0_in_rule__DispatchExpression__Group_1_0__0__Impl11318);
+            rule__DispatchExpression__Group_1_0_0__0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getGroup_1_0_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_0__0__Impl"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_0_0__0"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5656:1: rule__DispatchExpression__Group_1_0_0__0 : rule__DispatchExpression__Group_1_0_0__0__Impl rule__DispatchExpression__Group_1_0_0__1 ;
+    public final void rule__DispatchExpression__Group_1_0_0__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5660:1: ( rule__DispatchExpression__Group_1_0_0__0__Impl rule__DispatchExpression__Group_1_0_0__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5661:2: rule__DispatchExpression__Group_1_0_0__0__Impl rule__DispatchExpression__Group_1_0_0__1
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0_0__0__Impl_in_rule__DispatchExpression__Group_1_0_0__011350);
+            rule__DispatchExpression__Group_1_0_0__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0_0__1_in_rule__DispatchExpression__Group_1_0_0__011353);
+            rule__DispatchExpression__Group_1_0_0__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_0_0__0"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_0_0__0__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5668:1: rule__DispatchExpression__Group_1_0_0__0__Impl : ( () ) ;
+    public final void rule__DispatchExpression__Group_1_0_0__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5672:1: ( ( () ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5673:1: ( () )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5673:1: ( () )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5674:1: ()
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getDispatchExpressionLeftAction_1_0_0_0()); 
+            }
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5675:1: ()
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5677:1: 
+            {
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getDispatchExpressionLeftAction_1_0_0_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_0_0__0__Impl"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_0_0__1"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5687:1: rule__DispatchExpression__Group_1_0_0__1 : rule__DispatchExpression__Group_1_0_0__1__Impl rule__DispatchExpression__Group_1_0_0__2 ;
+    public final void rule__DispatchExpression__Group_1_0_0__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5691:1: ( rule__DispatchExpression__Group_1_0_0__1__Impl rule__DispatchExpression__Group_1_0_0__2 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5692:2: rule__DispatchExpression__Group_1_0_0__1__Impl rule__DispatchExpression__Group_1_0_0__2
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0_0__1__Impl_in_rule__DispatchExpression__Group_1_0_0__111411);
+            rule__DispatchExpression__Group_1_0_0__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0_0__2_in_rule__DispatchExpression__Group_1_0_0__111414);
+            rule__DispatchExpression__Group_1_0_0__2();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_0_0__1"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_0_0__1__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5699:1: rule__DispatchExpression__Group_1_0_0__1__Impl : ( ( rule__DispatchExpression__Group_1_0_0_1__0 )? ) ;
+    public final void rule__DispatchExpression__Group_1_0_0__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5703:1: ( ( ( rule__DispatchExpression__Group_1_0_0_1__0 )? ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5704:1: ( ( rule__DispatchExpression__Group_1_0_0_1__0 )? )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5704:1: ( ( rule__DispatchExpression__Group_1_0_0_1__0 )? )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5705:1: ( rule__DispatchExpression__Group_1_0_0_1__0 )?
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getGroup_1_0_0_1()); 
+            }
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5706:1: ( rule__DispatchExpression__Group_1_0_0_1__0 )?
+            int alt29=2;
+            int LA29_0 = input.LA(1);
+
+            if ( (LA29_0==49) ) {
+                alt29=1;
+            }
+            switch (alt29) {
+                case 1 :
+                    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5706:2: rule__DispatchExpression__Group_1_0_0_1__0
+                    {
+                    pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0_0_1__0_in_rule__DispatchExpression__Group_1_0_0__1__Impl11441);
+                    rule__DispatchExpression__Group_1_0_0_1__0();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+                    break;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getGroup_1_0_0_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_0_0__1__Impl"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_0_0__2"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5716:1: rule__DispatchExpression__Group_1_0_0__2 : rule__DispatchExpression__Group_1_0_0__2__Impl rule__DispatchExpression__Group_1_0_0__3 ;
+    public final void rule__DispatchExpression__Group_1_0_0__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5720:1: ( rule__DispatchExpression__Group_1_0_0__2__Impl rule__DispatchExpression__Group_1_0_0__3 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5721:2: rule__DispatchExpression__Group_1_0_0__2__Impl rule__DispatchExpression__Group_1_0_0__3
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0_0__2__Impl_in_rule__DispatchExpression__Group_1_0_0__211472);
+            rule__DispatchExpression__Group_1_0_0__2__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0_0__3_in_rule__DispatchExpression__Group_1_0_0__211475);
+            rule__DispatchExpression__Group_1_0_0__3();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_0_0__2"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_0_0__2__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5728:1: rule__DispatchExpression__Group_1_0_0__2__Impl : ( '.' ) ;
+    public final void rule__DispatchExpression__Group_1_0_0__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5732:1: ( ( '.' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5733:1: ( '.' )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5733:1: ( '.' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5734:1: '.'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getFullStopKeyword_1_0_0_2()); 
+            }
+            match(input,30,FOLLOW_30_in_rule__DispatchExpression__Group_1_0_0__2__Impl11503); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getFullStopKeyword_1_0_0_2()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_0_0__2__Impl"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_0_0__3"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5747:1: rule__DispatchExpression__Group_1_0_0__3 : rule__DispatchExpression__Group_1_0_0__3__Impl ;
+    public final void rule__DispatchExpression__Group_1_0_0__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5751:1: ( rule__DispatchExpression__Group_1_0_0__3__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5752:2: rule__DispatchExpression__Group_1_0_0__3__Impl
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0_0__3__Impl_in_rule__DispatchExpression__Group_1_0_0__311534);
+            rule__DispatchExpression__Group_1_0_0__3__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_0_0__3"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_0_0__3__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5758:1: rule__DispatchExpression__Group_1_0_0__3__Impl : ( ( rule__DispatchExpression__RefAssignment_1_0_0_3 ) ) ;
+    public final void rule__DispatchExpression__Group_1_0_0__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5762:1: ( ( ( rule__DispatchExpression__RefAssignment_1_0_0_3 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5763:1: ( ( rule__DispatchExpression__RefAssignment_1_0_0_3 ) )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5763:1: ( ( rule__DispatchExpression__RefAssignment_1_0_0_3 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5764:1: ( rule__DispatchExpression__RefAssignment_1_0_0_3 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getRefAssignment_1_0_0_3()); 
+            }
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5765:1: ( rule__DispatchExpression__RefAssignment_1_0_0_3 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5765:2: rule__DispatchExpression__RefAssignment_1_0_0_3
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__RefAssignment_1_0_0_3_in_rule__DispatchExpression__Group_1_0_0__3__Impl11561);
+            rule__DispatchExpression__RefAssignment_1_0_0_3();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getRefAssignment_1_0_0_3()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_0_0__3__Impl"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_0_0_1__0"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5783:1: rule__DispatchExpression__Group_1_0_0_1__0 : rule__DispatchExpression__Group_1_0_0_1__0__Impl rule__DispatchExpression__Group_1_0_0_1__1 ;
+    public final void rule__DispatchExpression__Group_1_0_0_1__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5787:1: ( rule__DispatchExpression__Group_1_0_0_1__0__Impl rule__DispatchExpression__Group_1_0_0_1__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5788:2: rule__DispatchExpression__Group_1_0_0_1__0__Impl rule__DispatchExpression__Group_1_0_0_1__1
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0_0_1__0__Impl_in_rule__DispatchExpression__Group_1_0_0_1__011599);
+            rule__DispatchExpression__Group_1_0_0_1__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0_0_1__1_in_rule__DispatchExpression__Group_1_0_0_1__011602);
+            rule__DispatchExpression__Group_1_0_0_1__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_0_0_1__0"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_0_0_1__0__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5795:1: rule__DispatchExpression__Group_1_0_0_1__0__Impl : ( '@' ) ;
+    public final void rule__DispatchExpression__Group_1_0_0_1__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5799:1: ( ( '@' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5800:1: ( '@' )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5800:1: ( '@' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5801:1: '@'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getCommercialAtKeyword_1_0_0_1_0()); 
+            }
+            match(input,49,FOLLOW_49_in_rule__DispatchExpression__Group_1_0_0_1__0__Impl11630); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getCommercialAtKeyword_1_0_0_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_0_0_1__0__Impl"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_0_0_1__1"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5814:1: rule__DispatchExpression__Group_1_0_0_1__1 : rule__DispatchExpression__Group_1_0_0_1__1__Impl ;
+    public final void rule__DispatchExpression__Group_1_0_0_1__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5818:1: ( rule__DispatchExpression__Group_1_0_0_1__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5819:2: rule__DispatchExpression__Group_1_0_0_1__1__Impl
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_0_0_1__1__Impl_in_rule__DispatchExpression__Group_1_0_0_1__111661);
+            rule__DispatchExpression__Group_1_0_0_1__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_0_0_1__1"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_0_0_1__1__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5825:1: rule__DispatchExpression__Group_1_0_0_1__1__Impl : ( ( rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1 ) ) ;
+    public final void rule__DispatchExpression__Group_1_0_0_1__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5829:1: ( ( ( rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5830:1: ( ( rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1 ) )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5830:1: ( ( rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5831:1: ( rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getType_nameAssignment_1_0_0_1_1()); 
+            }
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5832:1: ( rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5832:2: rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1_in_rule__DispatchExpression__Group_1_0_0_1__1__Impl11688);
+            rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getType_nameAssignment_1_0_0_1_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_0_0_1__1__Impl"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_2__0"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5846:1: rule__DispatchExpression__Group_1_2__0 : rule__DispatchExpression__Group_1_2__0__Impl rule__DispatchExpression__Group_1_2__1 ;
+    public final void rule__DispatchExpression__Group_1_2__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5850:1: ( rule__DispatchExpression__Group_1_2__0__Impl rule__DispatchExpression__Group_1_2__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5851:2: rule__DispatchExpression__Group_1_2__0__Impl rule__DispatchExpression__Group_1_2__1
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_2__0__Impl_in_rule__DispatchExpression__Group_1_2__011722);
+            rule__DispatchExpression__Group_1_2__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_2__1_in_rule__DispatchExpression__Group_1_2__011725);
+            rule__DispatchExpression__Group_1_2__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_2__0"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_2__0__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5858:1: rule__DispatchExpression__Group_1_2__0__Impl : ( ( rule__DispatchExpression__ActualAssignment_1_2_0 ) ) ;
+    public final void rule__DispatchExpression__Group_1_2__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5862:1: ( ( ( rule__DispatchExpression__ActualAssignment_1_2_0 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5863:1: ( ( rule__DispatchExpression__ActualAssignment_1_2_0 ) )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5863:1: ( ( rule__DispatchExpression__ActualAssignment_1_2_0 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5864:1: ( rule__DispatchExpression__ActualAssignment_1_2_0 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getActualAssignment_1_2_0()); 
+            }
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5865:1: ( rule__DispatchExpression__ActualAssignment_1_2_0 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5865:2: rule__DispatchExpression__ActualAssignment_1_2_0
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__ActualAssignment_1_2_0_in_rule__DispatchExpression__Group_1_2__0__Impl11752);
+            rule__DispatchExpression__ActualAssignment_1_2_0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getActualAssignment_1_2_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_2__0__Impl"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_2__1"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5875:1: rule__DispatchExpression__Group_1_2__1 : rule__DispatchExpression__Group_1_2__1__Impl ;
+    public final void rule__DispatchExpression__Group_1_2__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5879:1: ( rule__DispatchExpression__Group_1_2__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5880:2: rule__DispatchExpression__Group_1_2__1__Impl
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_2__1__Impl_in_rule__DispatchExpression__Group_1_2__111782);
+            rule__DispatchExpression__Group_1_2__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_2__1"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_2__1__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5886:1: rule__DispatchExpression__Group_1_2__1__Impl : ( ( rule__DispatchExpression__Group_1_2_1__0 )* ) ;
+    public final void rule__DispatchExpression__Group_1_2__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5890:1: ( ( ( rule__DispatchExpression__Group_1_2_1__0 )* ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5891:1: ( ( rule__DispatchExpression__Group_1_2_1__0 )* )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5891:1: ( ( rule__DispatchExpression__Group_1_2_1__0 )* )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5892:1: ( rule__DispatchExpression__Group_1_2_1__0 )*
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getGroup_1_2_1()); 
+            }
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5893:1: ( rule__DispatchExpression__Group_1_2_1__0 )*
+            loop30:
+            do {
+                int alt30=2;
+                int LA30_0 = input.LA(1);
+
+                if ( (LA30_0==26) ) {
+                    alt30=1;
+                }
+
+
+                switch (alt30) {
+            	case 1 :
+            	    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5893:2: rule__DispatchExpression__Group_1_2_1__0
+            	    {
+            	    pushFollow(FOLLOW_rule__DispatchExpression__Group_1_2_1__0_in_rule__DispatchExpression__Group_1_2__1__Impl11809);
+            	    rule__DispatchExpression__Group_1_2_1__0();
+
+            	    state._fsp--;
+            	    if (state.failed) return ;
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop30;
+                }
+            } while (true);
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getGroup_1_2_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_2__1__Impl"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_2_1__0"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5907:1: rule__DispatchExpression__Group_1_2_1__0 : rule__DispatchExpression__Group_1_2_1__0__Impl rule__DispatchExpression__Group_1_2_1__1 ;
+    public final void rule__DispatchExpression__Group_1_2_1__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5911:1: ( rule__DispatchExpression__Group_1_2_1__0__Impl rule__DispatchExpression__Group_1_2_1__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5912:2: rule__DispatchExpression__Group_1_2_1__0__Impl rule__DispatchExpression__Group_1_2_1__1
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_2_1__0__Impl_in_rule__DispatchExpression__Group_1_2_1__011844);
+            rule__DispatchExpression__Group_1_2_1__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_2_1__1_in_rule__DispatchExpression__Group_1_2_1__011847);
+            rule__DispatchExpression__Group_1_2_1__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_2_1__0"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_2_1__0__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5919:1: rule__DispatchExpression__Group_1_2_1__0__Impl : ( ',' ) ;
+    public final void rule__DispatchExpression__Group_1_2_1__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5923:1: ( ( ',' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5924:1: ( ',' )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5924:1: ( ',' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5925:1: ','
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getCommaKeyword_1_2_1_0()); 
+            }
+            match(input,26,FOLLOW_26_in_rule__DispatchExpression__Group_1_2_1__0__Impl11875); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getCommaKeyword_1_2_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_2_1__0__Impl"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_2_1__1"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5938:1: rule__DispatchExpression__Group_1_2_1__1 : rule__DispatchExpression__Group_1_2_1__1__Impl ;
+    public final void rule__DispatchExpression__Group_1_2_1__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5942:1: ( rule__DispatchExpression__Group_1_2_1__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5943:2: rule__DispatchExpression__Group_1_2_1__1__Impl
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_2_1__1__Impl_in_rule__DispatchExpression__Group_1_2_1__111906);
+            rule__DispatchExpression__Group_1_2_1__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_2_1__1"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_2_1__1__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5949:1: rule__DispatchExpression__Group_1_2_1__1__Impl : ( ( rule__DispatchExpression__ActualAssignment_1_2_1_1 ) ) ;
+    public final void rule__DispatchExpression__Group_1_2_1__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5953:1: ( ( ( rule__DispatchExpression__ActualAssignment_1_2_1_1 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5954:1: ( ( rule__DispatchExpression__ActualAssignment_1_2_1_1 ) )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5954:1: ( ( rule__DispatchExpression__ActualAssignment_1_2_1_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5955:1: ( rule__DispatchExpression__ActualAssignment_1_2_1_1 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getActualAssignment_1_2_1_1()); 
+            }
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5956:1: ( rule__DispatchExpression__ActualAssignment_1_2_1_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5956:2: rule__DispatchExpression__ActualAssignment_1_2_1_1
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__ActualAssignment_1_2_1_1_in_rule__DispatchExpression__Group_1_2_1__1__Impl11933);
+            rule__DispatchExpression__ActualAssignment_1_2_1_1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getActualAssignment_1_2_1_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_2_1__1__Impl"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_4__0"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5970:1: rule__DispatchExpression__Group_1_4__0 : rule__DispatchExpression__Group_1_4__0__Impl rule__DispatchExpression__Group_1_4__1 ;
+    public final void rule__DispatchExpression__Group_1_4__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5974:1: ( rule__DispatchExpression__Group_1_4__0__Impl rule__DispatchExpression__Group_1_4__1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5975:2: rule__DispatchExpression__Group_1_4__0__Impl rule__DispatchExpression__Group_1_4__1
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_4__0__Impl_in_rule__DispatchExpression__Group_1_4__011967);
+            rule__DispatchExpression__Group_1_4__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_4__1_in_rule__DispatchExpression__Group_1_4__011970);
+            rule__DispatchExpression__Group_1_4__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_4__0"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_4__0__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5982:1: rule__DispatchExpression__Group_1_4__0__Impl : ( ( '.' ) ) ;
+    public final void rule__DispatchExpression__Group_1_4__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5986:1: ( ( ( '.' ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5987:1: ( ( '.' ) )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5987:1: ( ( '.' ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5988:1: ( '.' )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getFullStopKeyword_1_4_0()); 
+            }
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5989:1: ( '.' )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5990:2: '.'
+            {
+            match(input,30,FOLLOW_30_in_rule__DispatchExpression__Group_1_4__0__Impl11999); if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getFullStopKeyword_1_4_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_4__0__Impl"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_4__1"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6001:1: rule__DispatchExpression__Group_1_4__1 : rule__DispatchExpression__Group_1_4__1__Impl ;
+    public final void rule__DispatchExpression__Group_1_4__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6005:1: ( rule__DispatchExpression__Group_1_4__1__Impl )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6006:2: rule__DispatchExpression__Group_1_4__1__Impl
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__Group_1_4__1__Impl_in_rule__DispatchExpression__Group_1_4__112031);
+            rule__DispatchExpression__Group_1_4__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_4__1"
+
+
+    // $ANTLR start "rule__DispatchExpression__Group_1_4__1__Impl"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6012:1: rule__DispatchExpression__Group_1_4__1__Impl : ( ( rule__DispatchExpression__ChainAssignment_1_4_1 ) ) ;
+    public final void rule__DispatchExpression__Group_1_4__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6016:1: ( ( ( rule__DispatchExpression__ChainAssignment_1_4_1 ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6017:1: ( ( rule__DispatchExpression__ChainAssignment_1_4_1 ) )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6017:1: ( ( rule__DispatchExpression__ChainAssignment_1_4_1 ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6018:1: ( rule__DispatchExpression__ChainAssignment_1_4_1 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getChainAssignment_1_4_1()); 
+            }
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6019:1: ( rule__DispatchExpression__ChainAssignment_1_4_1 )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6019:2: rule__DispatchExpression__ChainAssignment_1_4_1
+            {
+            pushFollow(FOLLOW_rule__DispatchExpression__ChainAssignment_1_4_1_in_rule__DispatchExpression__Group_1_4__1__Impl12058);
+            rule__DispatchExpression__ChainAssignment_1_4_1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getChainAssignment_1_4_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Group_1_4__1__Impl"
+
+
     // $ANTLR start "rule__Program__ClassesAssignment"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5846:1: rule__Program__ClassesAssignment : ( ruleClass_ ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6034:1: rule__Program__ClassesAssignment : ( ruleClass_ ) ;
     public final void rule__Program__ClassesAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5850:1: ( ( ruleClass_ ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5851:1: ( ruleClass_ )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6038:1: ( ( ruleClass_ ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6039:1: ( ruleClass_ )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5851:1: ( ruleClass_ )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5852:1: ruleClass_
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6039:1: ( ruleClass_ )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6040:1: ruleClass_
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProgramAccess().getClassesClass_ParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleClass__in_rule__Program__ClassesAssignment11721);
+            pushFollow(FOLLOW_ruleClass__in_rule__Program__ClassesAssignment12097);
             ruleClass_();
 
             state._fsp--;
@@ -16370,22 +16900,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class___NameAssignment_1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5861:1: rule__Class___NameAssignment_1 : ( ruleSYMBOL ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6049:1: rule__Class___NameAssignment_1 : ( ruleSYMBOL ) ;
     public final void rule__Class___NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5865:1: ( ( ruleSYMBOL ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5866:1: ( ruleSYMBOL )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6053:1: ( ( ruleSYMBOL ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6054:1: ( ruleSYMBOL )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5866:1: ( ruleSYMBOL )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5867:1: ruleSYMBOL
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6054:1: ( ruleSYMBOL )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6055:1: ruleSYMBOL
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getClass_Access().getNameSYMBOLParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleSYMBOL_in_rule__Class___NameAssignment_111752);
+            pushFollow(FOLLOW_ruleSYMBOL_in_rule__Class___NameAssignment_112128);
             ruleSYMBOL();
 
             state._fsp--;
@@ -16415,28 +16945,28 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class___ParentAssignment_2_1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5876:1: rule__Class___ParentAssignment_2_1 : ( ( RULE_ID ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6064:1: rule__Class___ParentAssignment_2_1 : ( ( RULE_ID ) ) ;
     public final void rule__Class___ParentAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5880:1: ( ( ( RULE_ID ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5881:1: ( ( RULE_ID ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6068:1: ( ( ( RULE_ID ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6069:1: ( ( RULE_ID ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5881:1: ( ( RULE_ID ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5882:1: ( RULE_ID )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6069:1: ( ( RULE_ID ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6070:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getClass_Access().getParentTypeCrossReference_2_1_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5883:1: ( RULE_ID )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5884:1: RULE_ID
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6071:1: ( RULE_ID )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6072:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getClass_Access().getParentTypeIDTerminalRuleCall_2_1_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Class___ParentAssignment_2_111787); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Class___ParentAssignment_2_112163); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getClass_Access().getParentTypeIDTerminalRuleCall_2_1_0_1()); 
             }
@@ -16468,22 +16998,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Class___FeaturesAssignment_4"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5895:1: rule__Class___FeaturesAssignment_4 : ( ruleFeature_ ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6083:1: rule__Class___FeaturesAssignment_4 : ( ruleFeature_ ) ;
     public final void rule__Class___FeaturesAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5899:1: ( ( ruleFeature_ ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5900:1: ( ruleFeature_ )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6087:1: ( ( ruleFeature_ ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6088:1: ( ruleFeature_ )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5900:1: ( ruleFeature_ )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5901:1: ruleFeature_
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6088:1: ( ruleFeature_ )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6089:1: ruleFeature_
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getClass_Access().getFeaturesFeature_ParserRuleCall_4_0()); 
             }
-            pushFollow(FOLLOW_ruleFeature__in_rule__Class___FeaturesAssignment_411822);
+            pushFollow(FOLLOW_ruleFeature__in_rule__Class___FeaturesAssignment_412198);
             ruleFeature_();
 
             state._fsp--;
@@ -16513,22 +17043,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Attr__NameAssignment_0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5910:1: rule__Attr__NameAssignment_0 : ( ruleSYMBOL ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6098:1: rule__Attr__NameAssignment_0 : ( ruleSYMBOL ) ;
     public final void rule__Attr__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5914:1: ( ( ruleSYMBOL ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5915:1: ( ruleSYMBOL )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6102:1: ( ( ruleSYMBOL ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6103:1: ( ruleSYMBOL )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5915:1: ( ruleSYMBOL )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5916:1: ruleSYMBOL
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6103:1: ( ruleSYMBOL )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6104:1: ruleSYMBOL
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAttrAccess().getNameSYMBOLParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleSYMBOL_in_rule__Attr__NameAssignment_011853);
+            pushFollow(FOLLOW_ruleSYMBOL_in_rule__Attr__NameAssignment_012229);
             ruleSYMBOL();
 
             state._fsp--;
@@ -16558,28 +17088,28 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Attr__Type_declAssignment_2"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5925:1: rule__Attr__Type_declAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6113:1: rule__Attr__Type_declAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__Attr__Type_declAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5929:1: ( ( ( RULE_ID ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5930:1: ( ( RULE_ID ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6117:1: ( ( ( RULE_ID ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6118:1: ( ( RULE_ID ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5930:1: ( ( RULE_ID ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5931:1: ( RULE_ID )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6118:1: ( ( RULE_ID ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6119:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAttrAccess().getType_declTypeCrossReference_2_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5932:1: ( RULE_ID )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5933:1: RULE_ID
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6120:1: ( RULE_ID )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6121:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAttrAccess().getType_declTypeIDTerminalRuleCall_2_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Attr__Type_declAssignment_211888); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Attr__Type_declAssignment_212264); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAttrAccess().getType_declTypeIDTerminalRuleCall_2_0_1()); 
             }
@@ -16611,22 +17141,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Attr__InitAssignment_3_1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5944:1: rule__Attr__InitAssignment_3_1 : ( ruleExpression ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6132:1: rule__Attr__InitAssignment_3_1 : ( ruleExpression ) ;
     public final void rule__Attr__InitAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5948:1: ( ( ruleExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5949:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6136:1: ( ( ruleExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6137:1: ( ruleExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5949:1: ( ruleExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5950:1: ruleExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6137:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6138:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAttrAccess().getInitExpressionParserRuleCall_3_1_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__Attr__InitAssignment_3_111923);
+            pushFollow(FOLLOW_ruleExpression_in_rule__Attr__InitAssignment_3_112299);
             ruleExpression();
 
             state._fsp--;
@@ -16656,22 +17186,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Method__NameAssignment_0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5959:1: rule__Method__NameAssignment_0 : ( ruleSYMBOL ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6147:1: rule__Method__NameAssignment_0 : ( ruleSYMBOL ) ;
     public final void rule__Method__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5963:1: ( ( ruleSYMBOL ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5964:1: ( ruleSYMBOL )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6151:1: ( ( ruleSYMBOL ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6152:1: ( ruleSYMBOL )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5964:1: ( ruleSYMBOL )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5965:1: ruleSYMBOL
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6152:1: ( ruleSYMBOL )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6153:1: ruleSYMBOL
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodAccess().getNameSYMBOLParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleSYMBOL_in_rule__Method__NameAssignment_011954);
+            pushFollow(FOLLOW_ruleSYMBOL_in_rule__Method__NameAssignment_012330);
             ruleSYMBOL();
 
             state._fsp--;
@@ -16701,22 +17231,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Method__FormalsAssignment_2_0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5974:1: rule__Method__FormalsAssignment_2_0 : ( ruleFormal ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6162:1: rule__Method__FormalsAssignment_2_0 : ( ruleFormal ) ;
     public final void rule__Method__FormalsAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5978:1: ( ( ruleFormal ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5979:1: ( ruleFormal )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6166:1: ( ( ruleFormal ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6167:1: ( ruleFormal )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5979:1: ( ruleFormal )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5980:1: ruleFormal
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6167:1: ( ruleFormal )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6168:1: ruleFormal
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodAccess().getFormalsFormalParserRuleCall_2_0_0()); 
             }
-            pushFollow(FOLLOW_ruleFormal_in_rule__Method__FormalsAssignment_2_011985);
+            pushFollow(FOLLOW_ruleFormal_in_rule__Method__FormalsAssignment_2_012361);
             ruleFormal();
 
             state._fsp--;
@@ -16746,22 +17276,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Method__FormalsAssignment_2_1_1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5989:1: rule__Method__FormalsAssignment_2_1_1 : ( ruleFormal ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6177:1: rule__Method__FormalsAssignment_2_1_1 : ( ruleFormal ) ;
     public final void rule__Method__FormalsAssignment_2_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5993:1: ( ( ruleFormal ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5994:1: ( ruleFormal )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6181:1: ( ( ruleFormal ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6182:1: ( ruleFormal )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5994:1: ( ruleFormal )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5995:1: ruleFormal
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6182:1: ( ruleFormal )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6183:1: ruleFormal
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodAccess().getFormalsFormalParserRuleCall_2_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleFormal_in_rule__Method__FormalsAssignment_2_1_112016);
+            pushFollow(FOLLOW_ruleFormal_in_rule__Method__FormalsAssignment_2_1_112392);
             ruleFormal();
 
             state._fsp--;
@@ -16791,28 +17321,28 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Method__Return_typeAssignment_5"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6004:1: rule__Method__Return_typeAssignment_5 : ( ( RULE_ID ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6192:1: rule__Method__Return_typeAssignment_5 : ( ( RULE_ID ) ) ;
     public final void rule__Method__Return_typeAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6008:1: ( ( ( RULE_ID ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6009:1: ( ( RULE_ID ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6196:1: ( ( ( RULE_ID ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6197:1: ( ( RULE_ID ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6009:1: ( ( RULE_ID ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6010:1: ( RULE_ID )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6197:1: ( ( RULE_ID ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6198:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodAccess().getReturn_typeTypeCrossReference_5_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6011:1: ( RULE_ID )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6012:1: RULE_ID
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6199:1: ( RULE_ID )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6200:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodAccess().getReturn_typeTypeIDTerminalRuleCall_5_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Method__Return_typeAssignment_512051); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Method__Return_typeAssignment_512427); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMethodAccess().getReturn_typeTypeIDTerminalRuleCall_5_0_1()); 
             }
@@ -16844,22 +17374,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Method__ExprAssignment_7"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6023:1: rule__Method__ExprAssignment_7 : ( ruleExpression ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6211:1: rule__Method__ExprAssignment_7 : ( ruleExpression ) ;
     public final void rule__Method__ExprAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6027:1: ( ( ruleExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6028:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6215:1: ( ( ruleExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6216:1: ( ruleExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6028:1: ( ruleExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6029:1: ruleExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6216:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6217:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodAccess().getExprExpressionParserRuleCall_7_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__Method__ExprAssignment_712086);
+            pushFollow(FOLLOW_ruleExpression_in_rule__Method__ExprAssignment_712462);
             ruleExpression();
 
             state._fsp--;
@@ -16889,22 +17419,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Formal__NameAssignment_0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6038:1: rule__Formal__NameAssignment_0 : ( ruleSYMBOL ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6226:1: rule__Formal__NameAssignment_0 : ( ruleSYMBOL ) ;
     public final void rule__Formal__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6042:1: ( ( ruleSYMBOL ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6043:1: ( ruleSYMBOL )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6230:1: ( ( ruleSYMBOL ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6231:1: ( ruleSYMBOL )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6043:1: ( ruleSYMBOL )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6044:1: ruleSYMBOL
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6231:1: ( ruleSYMBOL )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6232:1: ruleSYMBOL
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFormalAccess().getNameSYMBOLParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleSYMBOL_in_rule__Formal__NameAssignment_012117);
+            pushFollow(FOLLOW_ruleSYMBOL_in_rule__Formal__NameAssignment_012493);
             ruleSYMBOL();
 
             state._fsp--;
@@ -16934,28 +17464,28 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Formal__Type_declAssignment_2"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6053:1: rule__Formal__Type_declAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6241:1: rule__Formal__Type_declAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__Formal__Type_declAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6057:1: ( ( ( RULE_ID ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6058:1: ( ( RULE_ID ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6245:1: ( ( ( RULE_ID ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6246:1: ( ( RULE_ID ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6058:1: ( ( RULE_ID ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6059:1: ( RULE_ID )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6246:1: ( ( RULE_ID ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6247:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFormalAccess().getType_declTypeCrossReference_2_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6060:1: ( RULE_ID )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6061:1: RULE_ID
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6248:1: ( RULE_ID )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6249:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFormalAccess().getType_declTypeIDTerminalRuleCall_2_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Formal__Type_declAssignment_212152); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Formal__Type_declAssignment_212528); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFormalAccess().getType_declTypeIDTerminalRuleCall_2_0_1()); 
             }
@@ -16987,28 +17517,28 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IdentifierRefExpression__IdAssignment"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6072:1: rule__IdentifierRefExpression__IdAssignment : ( ( RULE_ID ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6260:1: rule__IdentifierRefExpression__IdAssignment : ( ( RULE_ID ) ) ;
     public final void rule__IdentifierRefExpression__IdAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6076:1: ( ( ( RULE_ID ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6077:1: ( ( RULE_ID ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6264:1: ( ( ( RULE_ID ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6265:1: ( ( RULE_ID ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6077:1: ( ( RULE_ID ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6078:1: ( RULE_ID )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6265:1: ( ( RULE_ID ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6266:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIdentifierRefExpressionAccess().getIdIdentifiableElementCrossReference_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6079:1: ( RULE_ID )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6080:1: RULE_ID
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6267:1: ( RULE_ID )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6268:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIdentifierRefExpressionAccess().getIdIdentifiableElementIDTerminalRuleCall_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__IdentifierRefExpression__IdAssignment12191); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__IdentifierRefExpression__IdAssignment12567); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIdentifierRefExpressionAccess().getIdIdentifiableElementIDTerminalRuleCall_0_1()); 
             }
@@ -17040,22 +17570,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NumberLiteral__ValueAssignment"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6091:1: rule__NumberLiteral__ValueAssignment : ( RULE_INT ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6279:1: rule__NumberLiteral__ValueAssignment : ( RULE_INT ) ;
     public final void rule__NumberLiteral__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6095:1: ( ( RULE_INT ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6096:1: ( RULE_INT )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6283:1: ( ( RULE_INT ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6284:1: ( RULE_INT )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6096:1: ( RULE_INT )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6097:1: RULE_INT
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6284:1: ( RULE_INT )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6285:1: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumberLiteralAccess().getValueINTTerminalRuleCall_0()); 
             }
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__NumberLiteral__ValueAssignment12226); if (state.failed) return ;
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__NumberLiteral__ValueAssignment12602); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNumberLiteralAccess().getValueINTTerminalRuleCall_0()); 
             }
@@ -17081,22 +17611,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StringLiteral__ValueAssignment"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6106:1: rule__StringLiteral__ValueAssignment : ( RULE_STRING ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6294:1: rule__StringLiteral__ValueAssignment : ( RULE_STRING ) ;
     public final void rule__StringLiteral__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6110:1: ( ( RULE_STRING ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6111:1: ( RULE_STRING )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6298:1: ( ( RULE_STRING ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6299:1: ( RULE_STRING )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6111:1: ( RULE_STRING )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6112:1: RULE_STRING
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6299:1: ( RULE_STRING )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6300:1: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStringLiteralAccess().getValueSTRINGTerminalRuleCall_0()); 
             }
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__StringLiteral__ValueAssignment12257); if (state.failed) return ;
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__StringLiteral__ValueAssignment12633); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getStringLiteralAccess().getValueSTRINGTerminalRuleCall_0()); 
             }
@@ -17122,22 +17652,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BooleanLiteral__ValueAssignment"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6121:1: rule__BooleanLiteral__ValueAssignment : ( ruleBOOLEAN ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6309:1: rule__BooleanLiteral__ValueAssignment : ( ruleBOOLEAN ) ;
     public final void rule__BooleanLiteral__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6125:1: ( ( ruleBOOLEAN ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6126:1: ( ruleBOOLEAN )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6313:1: ( ( ruleBOOLEAN ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6314:1: ( ruleBOOLEAN )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6126:1: ( ruleBOOLEAN )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6127:1: ruleBOOLEAN
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6314:1: ( ruleBOOLEAN )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6315:1: ruleBOOLEAN
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBooleanLiteralAccess().getValueBOOLEANParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleBOOLEAN_in_rule__BooleanLiteral__ValueAssignment12288);
+            pushFollow(FOLLOW_ruleBOOLEAN_in_rule__BooleanLiteral__ValueAssignment12664);
             ruleBOOLEAN();
 
             state._fsp--;
@@ -17167,22 +17697,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ParenExpression__ExprAssignment_1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6136:1: rule__ParenExpression__ExprAssignment_1 : ( ruleExpression ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6324:1: rule__ParenExpression__ExprAssignment_1 : ( ruleExpression ) ;
     public final void rule__ParenExpression__ExprAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6140:1: ( ( ruleExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6141:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6328:1: ( ( ruleExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6329:1: ( ruleExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6141:1: ( ruleExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6142:1: ruleExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6329:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6330:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParenExpressionAccess().getExprExpressionParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__ParenExpression__ExprAssignment_112319);
+            pushFollow(FOLLOW_ruleExpression_in_rule__ParenExpression__ExprAssignment_112695);
             ruleExpression();
 
             state._fsp--;
@@ -17212,22 +17742,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AssignmentExpression__NameAssignment_0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6151:1: rule__AssignmentExpression__NameAssignment_0 : ( ruleSYMBOL ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6339:1: rule__AssignmentExpression__NameAssignment_0 : ( ruleSYMBOL ) ;
     public final void rule__AssignmentExpression__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6155:1: ( ( ruleSYMBOL ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6156:1: ( ruleSYMBOL )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6343:1: ( ( ruleSYMBOL ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6344:1: ( ruleSYMBOL )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6156:1: ( ruleSYMBOL )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6157:1: ruleSYMBOL
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6344:1: ( ruleSYMBOL )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6345:1: ruleSYMBOL
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssignmentExpressionAccess().getNameSYMBOLParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleSYMBOL_in_rule__AssignmentExpression__NameAssignment_012350);
+            pushFollow(FOLLOW_ruleSYMBOL_in_rule__AssignmentExpression__NameAssignment_012726);
             ruleSYMBOL();
 
             state._fsp--;
@@ -17257,22 +17787,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AssignmentExpression__ExprAssignment_2"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6166:1: rule__AssignmentExpression__ExprAssignment_2 : ( ruleExpression ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6354:1: rule__AssignmentExpression__ExprAssignment_2 : ( ruleExpression ) ;
     public final void rule__AssignmentExpression__ExprAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6170:1: ( ( ruleExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6171:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6358:1: ( ( ruleExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6359:1: ( ruleExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6171:1: ( ruleExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6172:1: ruleExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6359:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6360:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssignmentExpressionAccess().getExprExpressionParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__AssignmentExpression__ExprAssignment_212381);
+            pushFollow(FOLLOW_ruleExpression_in_rule__AssignmentExpression__ExprAssignment_212757);
             ruleExpression();
 
             state._fsp--;
@@ -17302,22 +17832,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NegationExpression__ExprAssignment_1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6181:1: rule__NegationExpression__ExprAssignment_1 : ( ruleExpression ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6369:1: rule__NegationExpression__ExprAssignment_1 : ( ruleExpression ) ;
     public final void rule__NegationExpression__ExprAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6185:1: ( ( ruleExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6186:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6373:1: ( ( ruleExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6374:1: ( ruleExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6186:1: ( ruleExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6187:1: ruleExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6374:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6375:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNegationExpressionAccess().getExprExpressionParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__NegationExpression__ExprAssignment_112412);
+            pushFollow(FOLLOW_ruleExpression_in_rule__NegationExpression__ExprAssignment_112788);
             ruleExpression();
 
             state._fsp--;
@@ -17346,29 +17876,29 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__NegationExpression__ExprAssignment_1"
 
 
-    // $ANTLR start "rule__IntegerComposite__ExprAssignment_1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6196:1: rule__IntegerComposite__ExprAssignment_1 : ( ruleExpression ) ;
-    public final void rule__IntegerComposite__ExprAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__IntegerCompositeExpression__ExprAssignment_1"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6384:1: rule__IntegerCompositeExpression__ExprAssignment_1 : ( ruleExpression ) ;
+    public final void rule__IntegerCompositeExpression__ExprAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6200:1: ( ( ruleExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6201:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6388:1: ( ( ruleExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6389:1: ( ruleExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6201:1: ( ruleExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6202:1: ruleExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6389:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6390:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getIntegerCompositeAccess().getExprExpressionParserRuleCall_1_0()); 
+               before(grammarAccess.getIntegerCompositeExpressionAccess().getExprExpressionParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__IntegerComposite__ExprAssignment_112443);
+            pushFollow(FOLLOW_ruleExpression_in_rule__IntegerCompositeExpression__ExprAssignment_112819);
             ruleExpression();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getIntegerCompositeAccess().getExprExpressionParserRuleCall_1_0()); 
+               after(grammarAccess.getIntegerCompositeExpressionAccess().getExprExpressionParserRuleCall_1_0()); 
             }
 
             }
@@ -17388,40 +17918,40 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__IntegerComposite__ExprAssignment_1"
+    // $ANTLR end "rule__IntegerCompositeExpression__ExprAssignment_1"
 
 
-    // $ANTLR start "rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6211:1: rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1 : ( ( RULE_ID ) ) ;
-    public final void rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1() throws RecognitionException {
+    // $ANTLR start "rule__NewExpression__Type_nameAssignment_1"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6399:1: rule__NewExpression__Type_nameAssignment_1 : ( ( RULE_ID ) ) ;
+    public final void rule__NewExpression__Type_nameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6215:1: ( ( ( RULE_ID ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6216:1: ( ( RULE_ID ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6403:1: ( ( ( RULE_ID ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6404:1: ( ( RULE_ID ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6216:1: ( ( RULE_ID ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6217:1: ( RULE_ID )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6404:1: ( ( RULE_ID ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6405:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDispatchExpressionAccess().getType_nameTypeCrossReference_1_0_0_1_1_0()); 
+               before(grammarAccess.getNewExpressionAccess().getType_nameTypeCrossReference_1_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6218:1: ( RULE_ID )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6219:1: RULE_ID
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6406:1: ( RULE_ID )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6407:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDispatchExpressionAccess().getType_nameTypeIDTerminalRuleCall_1_0_0_1_1_0_1()); 
+               before(grammarAccess.getNewExpressionAccess().getType_nameTypeIDTerminalRuleCall_1_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DispatchExpression__Type_nameAssignment_1_0_0_1_112478); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__NewExpression__Type_nameAssignment_112854); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDispatchExpressionAccess().getType_nameTypeIDTerminalRuleCall_1_0_0_1_1_0_1()); 
+               after(grammarAccess.getNewExpressionAccess().getType_nameTypeIDTerminalRuleCall_1_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDispatchExpressionAccess().getType_nameTypeCrossReference_1_0_0_1_1_0()); 
+               after(grammarAccess.getNewExpressionAccess().getType_nameTypeCrossReference_1_0()); 
             }
 
             }
@@ -17441,161 +17971,26 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1"
-
-
-    // $ANTLR start "rule__DispatchExpression__RefAssignment_1_0_0_3"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6230:1: rule__DispatchExpression__RefAssignment_1_0_0_3 : ( ruleIdentifierRefExpression ) ;
-    public final void rule__DispatchExpression__RefAssignment_1_0_0_3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6234:1: ( ( ruleIdentifierRefExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6235:1: ( ruleIdentifierRefExpression )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6235:1: ( ruleIdentifierRefExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6236:1: ruleIdentifierRefExpression
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getDispatchExpressionAccess().getRefIdentifierRefExpressionParserRuleCall_1_0_0_3_0()); 
-            }
-            pushFollow(FOLLOW_ruleIdentifierRefExpression_in_rule__DispatchExpression__RefAssignment_1_0_0_312513);
-            ruleIdentifierRefExpression();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getDispatchExpressionAccess().getRefIdentifierRefExpressionParserRuleCall_1_0_0_3_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__RefAssignment_1_0_0_3"
-
-
-    // $ANTLR start "rule__DispatchExpression__ActualAssignment_1_2_0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6245:1: rule__DispatchExpression__ActualAssignment_1_2_0 : ( ruleExpression ) ;
-    public final void rule__DispatchExpression__ActualAssignment_1_2_0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6249:1: ( ( ruleExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6250:1: ( ruleExpression )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6250:1: ( ruleExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6251:1: ruleExpression
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getDispatchExpressionAccess().getActualExpressionParserRuleCall_1_2_0_0()); 
-            }
-            pushFollow(FOLLOW_ruleExpression_in_rule__DispatchExpression__ActualAssignment_1_2_012544);
-            ruleExpression();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getDispatchExpressionAccess().getActualExpressionParserRuleCall_1_2_0_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__ActualAssignment_1_2_0"
-
-
-    // $ANTLR start "rule__DispatchExpression__ActualAssignment_1_2_1_1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6260:1: rule__DispatchExpression__ActualAssignment_1_2_1_1 : ( ruleExpression ) ;
-    public final void rule__DispatchExpression__ActualAssignment_1_2_1_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6264:1: ( ( ruleExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6265:1: ( ruleExpression )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6265:1: ( ruleExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6266:1: ruleExpression
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getDispatchExpressionAccess().getActualExpressionParserRuleCall_1_2_1_1_0()); 
-            }
-            pushFollow(FOLLOW_ruleExpression_in_rule__DispatchExpression__ActualAssignment_1_2_1_112575);
-            ruleExpression();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getDispatchExpressionAccess().getActualExpressionParserRuleCall_1_2_1_1_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DispatchExpression__ActualAssignment_1_2_1_1"
+    // $ANTLR end "rule__NewExpression__Type_nameAssignment_1"
 
 
     // $ANTLR start "rule__StaticDispatchExpression__RefAssignment_0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6275:1: rule__StaticDispatchExpression__RefAssignment_0 : ( ruleIdentifierRefExpression ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6418:1: rule__StaticDispatchExpression__RefAssignment_0 : ( ruleIdentifierRefExpression ) ;
     public final void rule__StaticDispatchExpression__RefAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6279:1: ( ( ruleIdentifierRefExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6280:1: ( ruleIdentifierRefExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6422:1: ( ( ruleIdentifierRefExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6423:1: ( ruleIdentifierRefExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6280:1: ( ruleIdentifierRefExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6281:1: ruleIdentifierRefExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6423:1: ( ruleIdentifierRefExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6424:1: ruleIdentifierRefExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStaticDispatchExpressionAccess().getRefIdentifierRefExpressionParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleIdentifierRefExpression_in_rule__StaticDispatchExpression__RefAssignment_012606);
+            pushFollow(FOLLOW_ruleIdentifierRefExpression_in_rule__StaticDispatchExpression__RefAssignment_012889);
             ruleIdentifierRefExpression();
 
             state._fsp--;
@@ -17625,22 +18020,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StaticDispatchExpression__ActualAssignment_2_0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6290:1: rule__StaticDispatchExpression__ActualAssignment_2_0 : ( ruleExpression ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6433:1: rule__StaticDispatchExpression__ActualAssignment_2_0 : ( ruleExpression ) ;
     public final void rule__StaticDispatchExpression__ActualAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6294:1: ( ( ruleExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6295:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6437:1: ( ( ruleExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6438:1: ( ruleExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6295:1: ( ruleExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6296:1: ruleExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6438:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6439:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStaticDispatchExpressionAccess().getActualExpressionParserRuleCall_2_0_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__StaticDispatchExpression__ActualAssignment_2_012637);
+            pushFollow(FOLLOW_ruleExpression_in_rule__StaticDispatchExpression__ActualAssignment_2_012920);
             ruleExpression();
 
             state._fsp--;
@@ -17670,22 +18065,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StaticDispatchExpression__ActualAssignment_2_1_1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6305:1: rule__StaticDispatchExpression__ActualAssignment_2_1_1 : ( ruleExpression ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6448:1: rule__StaticDispatchExpression__ActualAssignment_2_1_1 : ( ruleExpression ) ;
     public final void rule__StaticDispatchExpression__ActualAssignment_2_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6309:1: ( ( ruleExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6310:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6452:1: ( ( ruleExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6453:1: ( ruleExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6310:1: ( ruleExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6311:1: ruleExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6453:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6454:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStaticDispatchExpressionAccess().getActualExpressionParserRuleCall_2_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__StaticDispatchExpression__ActualAssignment_2_1_112668);
+            pushFollow(FOLLOW_ruleExpression_in_rule__StaticDispatchExpression__ActualAssignment_2_1_112951);
             ruleExpression();
 
             state._fsp--;
@@ -17714,23 +18109,68 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__StaticDispatchExpression__ActualAssignment_2_1_1"
 
 
+    // $ANTLR start "rule__StaticDispatchExpression__ChainAssignment_4_1"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6463:1: rule__StaticDispatchExpression__ChainAssignment_4_1 : ( ruleStaticDispatchExpression ) ;
+    public final void rule__StaticDispatchExpression__ChainAssignment_4_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6467:1: ( ( ruleStaticDispatchExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6468:1: ( ruleStaticDispatchExpression )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6468:1: ( ruleStaticDispatchExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6469:1: ruleStaticDispatchExpression
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getStaticDispatchExpressionAccess().getChainStaticDispatchExpressionParserRuleCall_4_1_0()); 
+            }
+            pushFollow(FOLLOW_ruleStaticDispatchExpression_in_rule__StaticDispatchExpression__ChainAssignment_4_112982);
+            ruleStaticDispatchExpression();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getStaticDispatchExpressionAccess().getChainStaticDispatchExpressionParserRuleCall_4_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__StaticDispatchExpression__ChainAssignment_4_1"
+
+
     // $ANTLR start "rule__ConditionalExpression__PredAssignment_1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6320:1: rule__ConditionalExpression__PredAssignment_1 : ( ruleExpression ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6478:1: rule__ConditionalExpression__PredAssignment_1 : ( ruleExpression ) ;
     public final void rule__ConditionalExpression__PredAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6324:1: ( ( ruleExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6325:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6482:1: ( ( ruleExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6483:1: ( ruleExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6325:1: ( ruleExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6326:1: ruleExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6483:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6484:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditionalExpressionAccess().getPredExpressionParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__ConditionalExpression__PredAssignment_112699);
+            pushFollow(FOLLOW_ruleExpression_in_rule__ConditionalExpression__PredAssignment_113013);
             ruleExpression();
 
             state._fsp--;
@@ -17760,22 +18200,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionalExpression__Then_expAssignment_3"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6335:1: rule__ConditionalExpression__Then_expAssignment_3 : ( ruleExpression ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6493:1: rule__ConditionalExpression__Then_expAssignment_3 : ( ruleExpression ) ;
     public final void rule__ConditionalExpression__Then_expAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6339:1: ( ( ruleExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6340:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6497:1: ( ( ruleExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6498:1: ( ruleExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6340:1: ( ruleExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6341:1: ruleExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6498:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6499:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditionalExpressionAccess().getThen_expExpressionParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__ConditionalExpression__Then_expAssignment_312730);
+            pushFollow(FOLLOW_ruleExpression_in_rule__ConditionalExpression__Then_expAssignment_313044);
             ruleExpression();
 
             state._fsp--;
@@ -17805,22 +18245,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConditionalExpression__Else_expAssignment_4_1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6350:1: rule__ConditionalExpression__Else_expAssignment_4_1 : ( ruleExpression ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6508:1: rule__ConditionalExpression__Else_expAssignment_4_1 : ( ruleExpression ) ;
     public final void rule__ConditionalExpression__Else_expAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6354:1: ( ( ruleExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6355:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6512:1: ( ( ruleExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6513:1: ( ruleExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6355:1: ( ruleExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6356:1: ruleExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6513:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6514:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditionalExpressionAccess().getElse_expExpressionParserRuleCall_4_1_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__ConditionalExpression__Else_expAssignment_4_112761);
+            pushFollow(FOLLOW_ruleExpression_in_rule__ConditionalExpression__Else_expAssignment_4_113075);
             ruleExpression();
 
             state._fsp--;
@@ -17850,22 +18290,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LoopExpression__PredAssignment_1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6365:1: rule__LoopExpression__PredAssignment_1 : ( ruleExpression ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6523:1: rule__LoopExpression__PredAssignment_1 : ( ruleExpression ) ;
     public final void rule__LoopExpression__PredAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6369:1: ( ( ruleExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6370:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6527:1: ( ( ruleExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6528:1: ( ruleExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6370:1: ( ruleExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6371:1: ruleExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6528:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6529:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLoopExpressionAccess().getPredExpressionParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__LoopExpression__PredAssignment_112792);
+            pushFollow(FOLLOW_ruleExpression_in_rule__LoopExpression__PredAssignment_113106);
             ruleExpression();
 
             state._fsp--;
@@ -17895,22 +18335,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LoopExpression__BodyAssignment_3"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6380:1: rule__LoopExpression__BodyAssignment_3 : ( ruleExpression ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6538:1: rule__LoopExpression__BodyAssignment_3 : ( ruleExpression ) ;
     public final void rule__LoopExpression__BodyAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6384:1: ( ( ruleExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6385:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6542:1: ( ( ruleExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6543:1: ( ruleExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6385:1: ( ruleExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6386:1: ruleExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6543:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6544:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLoopExpressionAccess().getBodyExpressionParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__LoopExpression__BodyAssignment_312823);
+            pushFollow(FOLLOW_ruleExpression_in_rule__LoopExpression__BodyAssignment_313137);
             ruleExpression();
 
             state._fsp--;
@@ -17940,22 +18380,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BlockExpression__BodyAssignment_2_0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6395:1: rule__BlockExpression__BodyAssignment_2_0 : ( ruleExpression ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6553:1: rule__BlockExpression__BodyAssignment_2_0 : ( ruleExpression ) ;
     public final void rule__BlockExpression__BodyAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6399:1: ( ( ruleExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6400:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6557:1: ( ( ruleExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6558:1: ( ruleExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6400:1: ( ruleExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6401:1: ruleExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6558:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6559:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBlockExpressionAccess().getBodyExpressionParserRuleCall_2_0_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__BlockExpression__BodyAssignment_2_012854);
+            pushFollow(FOLLOW_ruleExpression_in_rule__BlockExpression__BodyAssignment_2_013168);
             ruleExpression();
 
             state._fsp--;
@@ -17984,23 +18424,68 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__BlockExpression__BodyAssignment_2_0"
 
 
+    // $ANTLR start "rule__IsvoidExpression__ExprAssignment_1"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6568:1: rule__IsvoidExpression__ExprAssignment_1 : ( ruleExpression ) ;
+    public final void rule__IsvoidExpression__ExprAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6572:1: ( ( ruleExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6573:1: ( ruleExpression )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6573:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6574:1: ruleExpression
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getIsvoidExpressionAccess().getExprExpressionParserRuleCall_1_0()); 
+            }
+            pushFollow(FOLLOW_ruleExpression_in_rule__IsvoidExpression__ExprAssignment_113199);
+            ruleExpression();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getIsvoidExpressionAccess().getExprExpressionParserRuleCall_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__IsvoidExpression__ExprAssignment_1"
+
+
     // $ANTLR start "rule__LetExpression__DeclarationAssignment_1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6410:1: rule__LetExpression__DeclarationAssignment_1 : ( ruleLetDeclaration ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6583:1: rule__LetExpression__DeclarationAssignment_1 : ( ruleLetDeclaration ) ;
     public final void rule__LetExpression__DeclarationAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6414:1: ( ( ruleLetDeclaration ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6415:1: ( ruleLetDeclaration )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6587:1: ( ( ruleLetDeclaration ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6588:1: ( ruleLetDeclaration )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6415:1: ( ruleLetDeclaration )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6416:1: ruleLetDeclaration
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6588:1: ( ruleLetDeclaration )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6589:1: ruleLetDeclaration
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetExpressionAccess().getDeclarationLetDeclarationParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleLetDeclaration_in_rule__LetExpression__DeclarationAssignment_112885);
+            pushFollow(FOLLOW_ruleLetDeclaration_in_rule__LetExpression__DeclarationAssignment_113230);
             ruleLetDeclaration();
 
             state._fsp--;
@@ -18030,22 +18515,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetExpression__DeclarationAssignment_2_1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6425:1: rule__LetExpression__DeclarationAssignment_2_1 : ( ruleLetDeclaration ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6598:1: rule__LetExpression__DeclarationAssignment_2_1 : ( ruleLetDeclaration ) ;
     public final void rule__LetExpression__DeclarationAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6429:1: ( ( ruleLetDeclaration ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6430:1: ( ruleLetDeclaration )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6602:1: ( ( ruleLetDeclaration ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6603:1: ( ruleLetDeclaration )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6430:1: ( ruleLetDeclaration )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6431:1: ruleLetDeclaration
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6603:1: ( ruleLetDeclaration )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6604:1: ruleLetDeclaration
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetExpressionAccess().getDeclarationLetDeclarationParserRuleCall_2_1_0()); 
             }
-            pushFollow(FOLLOW_ruleLetDeclaration_in_rule__LetExpression__DeclarationAssignment_2_112916);
+            pushFollow(FOLLOW_ruleLetDeclaration_in_rule__LetExpression__DeclarationAssignment_2_113261);
             ruleLetDeclaration();
 
             state._fsp--;
@@ -18075,22 +18560,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetExpression__BodyAssignment_4"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6440:1: rule__LetExpression__BodyAssignment_4 : ( ruleExpression ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6613:1: rule__LetExpression__BodyAssignment_4 : ( ruleExpression ) ;
     public final void rule__LetExpression__BodyAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6444:1: ( ( ruleExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6445:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6617:1: ( ( ruleExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6618:1: ( ruleExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6445:1: ( ruleExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6446:1: ruleExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6618:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6619:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetExpressionAccess().getBodyExpressionParserRuleCall_4_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__LetExpression__BodyAssignment_412947);
+            pushFollow(FOLLOW_ruleExpression_in_rule__LetExpression__BodyAssignment_413292);
             ruleExpression();
 
             state._fsp--;
@@ -18120,22 +18605,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetDeclaration__NameAssignment_0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6455:1: rule__LetDeclaration__NameAssignment_0 : ( ruleSYMBOL ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6628:1: rule__LetDeclaration__NameAssignment_0 : ( ruleSYMBOL ) ;
     public final void rule__LetDeclaration__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6459:1: ( ( ruleSYMBOL ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6460:1: ( ruleSYMBOL )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6632:1: ( ( ruleSYMBOL ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6633:1: ( ruleSYMBOL )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6460:1: ( ruleSYMBOL )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6461:1: ruleSYMBOL
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6633:1: ( ruleSYMBOL )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6634:1: ruleSYMBOL
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetDeclarationAccess().getNameSYMBOLParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleSYMBOL_in_rule__LetDeclaration__NameAssignment_012978);
+            pushFollow(FOLLOW_ruleSYMBOL_in_rule__LetDeclaration__NameAssignment_013323);
             ruleSYMBOL();
 
             state._fsp--;
@@ -18165,28 +18650,28 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetDeclaration__Type_declAssignment_2"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6470:1: rule__LetDeclaration__Type_declAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6643:1: rule__LetDeclaration__Type_declAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__LetDeclaration__Type_declAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6474:1: ( ( ( RULE_ID ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6475:1: ( ( RULE_ID ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6647:1: ( ( ( RULE_ID ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6648:1: ( ( RULE_ID ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6475:1: ( ( RULE_ID ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6476:1: ( RULE_ID )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6648:1: ( ( RULE_ID ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6649:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetDeclarationAccess().getType_declTypeCrossReference_2_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6477:1: ( RULE_ID )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6478:1: RULE_ID
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6650:1: ( RULE_ID )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6651:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetDeclarationAccess().getType_declTypeIDTerminalRuleCall_2_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__LetDeclaration__Type_declAssignment_213013); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__LetDeclaration__Type_declAssignment_213358); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLetDeclarationAccess().getType_declTypeIDTerminalRuleCall_2_0_1()); 
             }
@@ -18218,22 +18703,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LetDeclaration__InitAssignment_3_1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6489:1: rule__LetDeclaration__InitAssignment_3_1 : ( ruleExpression ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6662:1: rule__LetDeclaration__InitAssignment_3_1 : ( ruleExpression ) ;
     public final void rule__LetDeclaration__InitAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6493:1: ( ( ruleExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6494:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6666:1: ( ( ruleExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6667:1: ( ruleExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6494:1: ( ruleExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6495:1: ruleExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6667:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6668:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLetDeclarationAccess().getInitExpressionParserRuleCall_3_1_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__LetDeclaration__InitAssignment_3_113048);
+            pushFollow(FOLLOW_ruleExpression_in_rule__LetDeclaration__InitAssignment_3_113393);
             ruleExpression();
 
             state._fsp--;
@@ -18263,22 +18748,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CaseExpression__ExprAssignment_1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6504:1: rule__CaseExpression__ExprAssignment_1 : ( ruleExpression ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6677:1: rule__CaseExpression__ExprAssignment_1 : ( ruleExpression ) ;
     public final void rule__CaseExpression__ExprAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6508:1: ( ( ruleExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6509:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6681:1: ( ( ruleExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6682:1: ( ruleExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6509:1: ( ruleExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6510:1: ruleExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6682:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6683:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseExpressionAccess().getExprExpressionParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__CaseExpression__ExprAssignment_113079);
+            pushFollow(FOLLOW_ruleExpression_in_rule__CaseExpression__ExprAssignment_113424);
             ruleExpression();
 
             state._fsp--;
@@ -18308,22 +18793,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CaseExpression__CaseAssignment_3_0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6519:1: rule__CaseExpression__CaseAssignment_3_0 : ( ruleCase ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6692:1: rule__CaseExpression__CaseAssignment_3_0 : ( ruleCase ) ;
     public final void rule__CaseExpression__CaseAssignment_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6523:1: ( ( ruleCase ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6524:1: ( ruleCase )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6696:1: ( ( ruleCase ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6697:1: ( ruleCase )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6524:1: ( ruleCase )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6525:1: ruleCase
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6697:1: ( ruleCase )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6698:1: ruleCase
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseExpressionAccess().getCaseCaseParserRuleCall_3_0_0()); 
             }
-            pushFollow(FOLLOW_ruleCase_in_rule__CaseExpression__CaseAssignment_3_013110);
+            pushFollow(FOLLOW_ruleCase_in_rule__CaseExpression__CaseAssignment_3_013455);
             ruleCase();
 
             state._fsp--;
@@ -18353,22 +18838,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case__NameAssignment_0"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6534:1: rule__Case__NameAssignment_0 : ( ruleSYMBOL ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6707:1: rule__Case__NameAssignment_0 : ( ruleSYMBOL ) ;
     public final void rule__Case__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6538:1: ( ( ruleSYMBOL ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6539:1: ( ruleSYMBOL )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6711:1: ( ( ruleSYMBOL ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6712:1: ( ruleSYMBOL )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6539:1: ( ruleSYMBOL )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6540:1: ruleSYMBOL
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6712:1: ( ruleSYMBOL )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6713:1: ruleSYMBOL
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseAccess().getNameSYMBOLParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleSYMBOL_in_rule__Case__NameAssignment_013141);
+            pushFollow(FOLLOW_ruleSYMBOL_in_rule__Case__NameAssignment_013486);
             ruleSYMBOL();
 
             state._fsp--;
@@ -18398,28 +18883,28 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case__Type_declAssignment_2"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6549:1: rule__Case__Type_declAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6722:1: rule__Case__Type_declAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__Case__Type_declAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6553:1: ( ( ( RULE_ID ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6554:1: ( ( RULE_ID ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6726:1: ( ( ( RULE_ID ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6727:1: ( ( RULE_ID ) )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6554:1: ( ( RULE_ID ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6555:1: ( RULE_ID )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6727:1: ( ( RULE_ID ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6728:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseAccess().getType_declTypeCrossReference_2_0()); 
             }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6556:1: ( RULE_ID )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6557:1: RULE_ID
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6729:1: ( RULE_ID )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6730:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseAccess().getType_declTypeIDTerminalRuleCall_2_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Case__Type_declAssignment_213176); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Case__Type_declAssignment_213521); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCaseAccess().getType_declTypeIDTerminalRuleCall_2_0_1()); 
             }
@@ -18451,22 +18936,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case__ExprAssignment_4"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6568:1: rule__Case__ExprAssignment_4 : ( ruleExpression ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6741:1: rule__Case__ExprAssignment_4 : ( ruleExpression ) ;
     public final void rule__Case__ExprAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6572:1: ( ( ruleExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6573:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6745:1: ( ( ruleExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6746:1: ( ruleExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6573:1: ( ruleExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6574:1: ruleExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6746:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6747:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseAccess().getExprExpressionParserRuleCall_4_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__Case__ExprAssignment_413211);
+            pushFollow(FOLLOW_ruleExpression_in_rule__Case__ExprAssignment_413556);
             ruleExpression();
 
             state._fsp--;
@@ -18495,121 +18980,23 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Case__ExprAssignment_4"
 
 
-    // $ANTLR start "rule__NewExpression__Type_nameAssignment_1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6583:1: rule__NewExpression__Type_nameAssignment_1 : ( ( RULE_ID ) ) ;
-    public final void rule__NewExpression__Type_nameAssignment_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6587:1: ( ( ( RULE_ID ) ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6588:1: ( ( RULE_ID ) )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6588:1: ( ( RULE_ID ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6589:1: ( RULE_ID )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getNewExpressionAccess().getType_nameTypeCrossReference_1_0()); 
-            }
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6590:1: ( RULE_ID )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6591:1: RULE_ID
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getNewExpressionAccess().getType_nameTypeIDTerminalRuleCall_1_0_1()); 
-            }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__NewExpression__Type_nameAssignment_113246); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getNewExpressionAccess().getType_nameTypeIDTerminalRuleCall_1_0_1()); 
-            }
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getNewExpressionAccess().getType_nameTypeCrossReference_1_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__NewExpression__Type_nameAssignment_1"
-
-
-    // $ANTLR start "rule__IsvoidExpression__ExprAssignment_1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6602:1: rule__IsvoidExpression__ExprAssignment_1 : ( ruleExpression ) ;
-    public final void rule__IsvoidExpression__ExprAssignment_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6606:1: ( ( ruleExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6607:1: ( ruleExpression )
-            {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6607:1: ( ruleExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6608:1: ruleExpression
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getIsvoidExpressionAccess().getExprExpressionParserRuleCall_1_0()); 
-            }
-            pushFollow(FOLLOW_ruleExpression_in_rule__IsvoidExpression__ExprAssignment_113281);
-            ruleExpression();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getIsvoidExpressionAccess().getExprExpressionParserRuleCall_1_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__IsvoidExpression__ExprAssignment_1"
-
-
     // $ANTLR start "rule__CompareExpression__OpAssignment_1_0_0_1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6617:1: rule__CompareExpression__OpAssignment_1_0_0_1 : ( ruleCompareOperator ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6756:1: rule__CompareExpression__OpAssignment_1_0_0_1 : ( ruleCompareOperator ) ;
     public final void rule__CompareExpression__OpAssignment_1_0_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6621:1: ( ( ruleCompareOperator ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6622:1: ( ruleCompareOperator )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6760:1: ( ( ruleCompareOperator ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6761:1: ( ruleCompareOperator )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6622:1: ( ruleCompareOperator )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6623:1: ruleCompareOperator
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6761:1: ( ruleCompareOperator )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6762:1: ruleCompareOperator
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCompareExpressionAccess().getOpCompareOperatorParserRuleCall_1_0_0_1_0()); 
             }
-            pushFollow(FOLLOW_ruleCompareOperator_in_rule__CompareExpression__OpAssignment_1_0_0_113312);
+            pushFollow(FOLLOW_ruleCompareOperator_in_rule__CompareExpression__OpAssignment_1_0_0_113587);
             ruleCompareOperator();
 
             state._fsp--;
@@ -18639,22 +19026,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CompareExpression__RightAssignment_1_1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6632:1: rule__CompareExpression__RightAssignment_1_1 : ( ruleExpression ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6771:1: rule__CompareExpression__RightAssignment_1_1 : ( ruleExpression ) ;
     public final void rule__CompareExpression__RightAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6636:1: ( ( ruleExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6637:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6775:1: ( ( ruleExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6776:1: ( ruleExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6637:1: ( ruleExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6638:1: ruleExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6776:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6777:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCompareExpressionAccess().getRightExpressionParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__CompareExpression__RightAssignment_1_113343);
+            pushFollow(FOLLOW_ruleExpression_in_rule__CompareExpression__RightAssignment_1_113618);
             ruleExpression();
 
             state._fsp--;
@@ -18684,22 +19071,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AdditionExpression__RightAssignment_1_1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6647:1: rule__AdditionExpression__RightAssignment_1_1 : ( ruleExpression ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6786:1: rule__AdditionExpression__RightAssignment_1_1 : ( ruleExpression ) ;
     public final void rule__AdditionExpression__RightAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6651:1: ( ( ruleExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6652:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6790:1: ( ( ruleExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6791:1: ( ruleExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6652:1: ( ruleExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6653:1: ruleExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6791:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6792:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditionExpressionAccess().getRightExpressionParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__AdditionExpression__RightAssignment_1_113374);
+            pushFollow(FOLLOW_ruleExpression_in_rule__AdditionExpression__RightAssignment_1_113649);
             ruleExpression();
 
             state._fsp--;
@@ -18729,22 +19116,22 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultiplicationExpression__RightAssignment_1_1"
-    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6662:1: rule__MultiplicationExpression__RightAssignment_1_1 : ( ruleExpression ) ;
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6801:1: rule__MultiplicationExpression__RightAssignment_1_1 : ( ruleExpression ) ;
     public final void rule__MultiplicationExpression__RightAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6666:1: ( ( ruleExpression ) )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6667:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6805:1: ( ( ruleExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6806:1: ( ruleExpression )
             {
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6667:1: ( ruleExpression )
-            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6668:1: ruleExpression
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6806:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6807:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicationExpressionAccess().getRightExpressionParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__MultiplicationExpression__RightAssignment_1_113405);
+            pushFollow(FOLLOW_ruleExpression_in_rule__MultiplicationExpression__RightAssignment_1_113680);
             ruleExpression();
 
             state._fsp--;
@@ -18772,28 +19159,306 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
     }
     // $ANTLR end "rule__MultiplicationExpression__RightAssignment_1_1"
 
-    // $ANTLR start synpred30_InternalCool
-    public final void synpred30_InternalCool_fragment() throws RecognitionException {   
-        // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2801:2: ( rule__DispatchExpression__Group_1__0 )
-        // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2801:2: rule__DispatchExpression__Group_1__0
+
+    // $ANTLR start "rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6816:1: rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1 : ( ( RULE_ID ) ) ;
+    public final void rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6820:1: ( ( ( RULE_ID ) ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6821:1: ( ( RULE_ID ) )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6821:1: ( ( RULE_ID ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6822:1: ( RULE_ID )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getType_nameTypeCrossReference_1_0_0_1_1_0()); 
+            }
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6823:1: ( RULE_ID )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6824:1: RULE_ID
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getType_nameTypeIDTerminalRuleCall_1_0_0_1_1_0_1()); 
+            }
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DispatchExpression__Type_nameAssignment_1_0_0_1_113715); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getType_nameTypeIDTerminalRuleCall_1_0_0_1_1_0_1()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getType_nameTypeCrossReference_1_0_0_1_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1"
+
+
+    // $ANTLR start "rule__DispatchExpression__RefAssignment_1_0_0_3"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6835:1: rule__DispatchExpression__RefAssignment_1_0_0_3 : ( ruleIdentifierRefExpression ) ;
+    public final void rule__DispatchExpression__RefAssignment_1_0_0_3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6839:1: ( ( ruleIdentifierRefExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6840:1: ( ruleIdentifierRefExpression )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6840:1: ( ruleIdentifierRefExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6841:1: ruleIdentifierRefExpression
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getRefIdentifierRefExpressionParserRuleCall_1_0_0_3_0()); 
+            }
+            pushFollow(FOLLOW_ruleIdentifierRefExpression_in_rule__DispatchExpression__RefAssignment_1_0_0_313750);
+            ruleIdentifierRefExpression();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getRefIdentifierRefExpressionParserRuleCall_1_0_0_3_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__RefAssignment_1_0_0_3"
+
+
+    // $ANTLR start "rule__DispatchExpression__ActualAssignment_1_2_0"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6850:1: rule__DispatchExpression__ActualAssignment_1_2_0 : ( ruleExpression ) ;
+    public final void rule__DispatchExpression__ActualAssignment_1_2_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6854:1: ( ( ruleExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6855:1: ( ruleExpression )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6855:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6856:1: ruleExpression
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getActualExpressionParserRuleCall_1_2_0_0()); 
+            }
+            pushFollow(FOLLOW_ruleExpression_in_rule__DispatchExpression__ActualAssignment_1_2_013781);
+            ruleExpression();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getActualExpressionParserRuleCall_1_2_0_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__ActualAssignment_1_2_0"
+
+
+    // $ANTLR start "rule__DispatchExpression__ActualAssignment_1_2_1_1"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6865:1: rule__DispatchExpression__ActualAssignment_1_2_1_1 : ( ruleExpression ) ;
+    public final void rule__DispatchExpression__ActualAssignment_1_2_1_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6869:1: ( ( ruleExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6870:1: ( ruleExpression )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6870:1: ( ruleExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6871:1: ruleExpression
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getActualExpressionParserRuleCall_1_2_1_1_0()); 
+            }
+            pushFollow(FOLLOW_ruleExpression_in_rule__DispatchExpression__ActualAssignment_1_2_1_113812);
+            ruleExpression();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getActualExpressionParserRuleCall_1_2_1_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__ActualAssignment_1_2_1_1"
+
+
+    // $ANTLR start "rule__DispatchExpression__ChainAssignment_1_4_1"
+    // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6880:1: rule__DispatchExpression__ChainAssignment_1_4_1 : ( ruleStaticDispatchExpression ) ;
+    public final void rule__DispatchExpression__ChainAssignment_1_4_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6884:1: ( ( ruleStaticDispatchExpression ) )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6885:1: ( ruleStaticDispatchExpression )
+            {
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6885:1: ( ruleStaticDispatchExpression )
+            // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:6886:1: ruleStaticDispatchExpression
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDispatchExpressionAccess().getChainStaticDispatchExpressionParserRuleCall_1_4_1_0()); 
+            }
+            pushFollow(FOLLOW_ruleStaticDispatchExpression_in_rule__DispatchExpression__ChainAssignment_1_4_113843);
+            ruleStaticDispatchExpression();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDispatchExpressionAccess().getChainStaticDispatchExpressionParserRuleCall_1_4_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DispatchExpression__ChainAssignment_1_4_1"
+
+    // $ANTLR start synpred31_InternalCool
+    public final void synpred31_InternalCool_fragment() throws RecognitionException {   
+        // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2955:2: ( rule__StaticDispatchExpression__Group_4__0 )
+        // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:2955:2: rule__StaticDispatchExpression__Group_4__0
         {
-        pushFollow(FOLLOW_rule__DispatchExpression__Group_1__0_in_synpred30_InternalCool5735);
-        rule__DispatchExpression__Group_1__0();
+        pushFollow(FOLLOW_rule__StaticDispatchExpression__Group_4__0_in_synpred31_InternalCool6044);
+        rule__StaticDispatchExpression__Group_4__0();
 
         state._fsp--;
         if (state.failed) return ;
 
         }
     }
-    // $ANTLR end synpred30_InternalCool
+    // $ANTLR end synpred31_InternalCool
+
+    // $ANTLR start synpred38_InternalCool
+    public final void synpred38_InternalCool_fragment() throws RecognitionException {   
+        // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4675:2: ( rule__CompareExpression__Group_1__0 )
+        // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4675:2: rule__CompareExpression__Group_1__0
+        {
+        pushFollow(FOLLOW_rule__CompareExpression__Group_1__0_in_synpred38_InternalCool9422);
+        rule__CompareExpression__Group_1__0();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+    }
+    // $ANTLR end synpred38_InternalCool
+
+    // $ANTLR start synpred39_InternalCool
+    public final void synpred39_InternalCool_fragment() throws RecognitionException {   
+        // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4890:2: ( rule__AdditionExpression__Group_1__0 )
+        // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:4890:2: rule__AdditionExpression__Group_1__0
+        {
+        pushFollow(FOLLOW_rule__AdditionExpression__Group_1__0_in_synpred39_InternalCool9845);
+        rule__AdditionExpression__Group_1__0();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+    }
+    // $ANTLR end synpred39_InternalCool
+
+    // $ANTLR start synpred40_InternalCool
+    public final void synpred40_InternalCool_fragment() throws RecognitionException {   
+        // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5172:2: ( rule__MultiplicationExpression__Group_1__0 )
+        // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5172:2: rule__MultiplicationExpression__Group_1__0
+        {
+        pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1__0_in_synpred40_InternalCool10394);
+        rule__MultiplicationExpression__Group_1__0();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+    }
+    // $ANTLR end synpred40_InternalCool
 
     // $ANTLR start synpred41_InternalCool
     public final void synpred41_InternalCool_fragment() throws RecognitionException {   
-        // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5113:2: ( rule__CompareExpression__Group_1__0 )
-        // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5113:2: rule__CompareExpression__Group_1__0
+        // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5454:2: ( rule__DispatchExpression__Group_1__0 )
+        // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5454:2: rule__DispatchExpression__Group_1__0
         {
-        pushFollow(FOLLOW_rule__CompareExpression__Group_1__0_in_synpred41_InternalCool10281);
-        rule__CompareExpression__Group_1__0();
+        pushFollow(FOLLOW_rule__DispatchExpression__Group_1__0_in_synpred41_InternalCool10943);
+        rule__DispatchExpression__Group_1__0();
 
         state._fsp--;
         if (state.failed) return ;
@@ -18802,28 +19467,13 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
     }
     // $ANTLR end synpred41_InternalCool
 
-    // $ANTLR start synpred42_InternalCool
-    public final void synpred42_InternalCool_fragment() throws RecognitionException {   
-        // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5328:2: ( rule__AdditionExpression__Group_1__0 )
-        // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5328:2: rule__AdditionExpression__Group_1__0
-        {
-        pushFollow(FOLLOW_rule__AdditionExpression__Group_1__0_in_synpred42_InternalCool10704);
-        rule__AdditionExpression__Group_1__0();
-
-        state._fsp--;
-        if (state.failed) return ;
-
-        }
-    }
-    // $ANTLR end synpred42_InternalCool
-
     // $ANTLR start synpred43_InternalCool
     public final void synpred43_InternalCool_fragment() throws RecognitionException {   
-        // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5610:2: ( rule__MultiplicationExpression__Group_1__0 )
-        // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5610:2: rule__MultiplicationExpression__Group_1__0
+        // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5606:2: ( rule__DispatchExpression__Group_1_4__0 )
+        // ../edu.stanford.compilers.cool.ui/src-gen/edu/stanford/compilers/ui/contentassist/antlr/internal/InternalCool.g:5606:2: rule__DispatchExpression__Group_1_4__0
         {
-        pushFollow(FOLLOW_rule__MultiplicationExpression__Group_1__0_in_synpred43_InternalCool11253);
-        rule__MultiplicationExpression__Group_1__0();
+        pushFollow(FOLLOW_rule__DispatchExpression__Group_1_4__0_in_synpred43_InternalCool11250);
+        rule__DispatchExpression__Group_1_4__0();
 
         state._fsp--;
         if (state.failed) return ;
@@ -18834,11 +19484,11 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
     // Delegated rules
 
-    public final boolean synpred30_InternalCool() {
+    public final boolean synpred41_InternalCool() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred30_InternalCool_fragment(); // can never throw exception
+            synpred41_InternalCool_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -18848,11 +19498,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred41_InternalCool() {
+    public final boolean synpred38_InternalCool() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred41_InternalCool_fragment(); // can never throw exception
+            synpred38_InternalCool_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred31_InternalCool() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred31_InternalCool_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -18876,11 +19540,25 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred42_InternalCool() {
+    public final boolean synpred39_InternalCool() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred42_InternalCool_fragment(); // can never throw exception
+            synpred39_InternalCool_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred40_InternalCool() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred40_InternalCool_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -18893,6 +19571,8 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
 
 
     protected DFA3 dfa3 = new DFA3(this);
+    protected DFA16 dfa16 = new DFA16(this);
+    protected DFA28 dfa28 = new DFA28(this);
     static final String DFA3_eotS =
         "\22\uffff";
     static final String DFA3_eofS =
@@ -18900,16 +19580,16 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
     static final String DFA3_minS =
         "\1\4\7\uffff\2\13\10\uffff";
     static final String DFA3_maxS =
-        "\1\55\7\uffff\2\61\10\uffff";
+        "\1\51\7\uffff\2\61\10\uffff";
     static final String DFA3_acceptS =
         "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\2\uffff\1\13\1\14\1\15\1\16"+
-        "\1\10\1\17\1\12\1\11";
+        "\1\17\1\10\1\12\1\11";
     static final String DFA3_specialS =
         "\22\uffff}>";
     static final String[] DFA3_transitionS = {
             "\1\10\2\12\7\uffff\2\12\1\11\1\uffff\1\3\5\uffff\1\13\2\uffff"+
-            "\1\14\1\15\2\uffff\1\1\3\uffff\1\2\2\uffff\1\4\1\uffff\1\5\3"+
-            "\uffff\1\6\1\7",
+            "\1\14\1\15\1\6\1\uffff\1\1\3\uffff\1\2\2\uffff\1\7\1\4\1\uffff"+
+            "\1\5",
             "",
             "",
             "",
@@ -18917,11 +19597,11 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
             "",
             "",
             "",
-            "\3\20\5\uffff\2\20\2\uffff\1\16\1\17\2\20\2\uffff\2\20\1\uffff"+
-            "\3\20\1\uffff\2\20\1\uffff\1\20\1\uffff\1\20\4\uffff\4\20",
-            "\3\21\5\uffff\2\21\2\uffff\1\16\1\uffff\2\21\2\uffff\2\21"+
-            "\1\uffff\3\21\1\uffff\2\21\1\uffff\1\21\1\uffff\1\21\4\uffff"+
-            "\4\21",
+            "\3\20\5\uffff\2\20\2\uffff\1\17\1\16\2\20\3\uffff\1\20\1\uffff"+
+            "\3\20\1\uffff\2\20\2\uffff\1\20\1\uffff\1\20\2\uffff\5\20",
+            "\3\21\5\uffff\2\21\2\uffff\1\17\1\uffff\2\21\3\uffff\1\21"+
+            "\1\uffff\3\21\1\uffff\2\21\2\uffff\1\21\1\uffff\1\21\2\uffff"+
+            "\5\21",
             "",
             "",
             "",
@@ -18962,7 +19642,203 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
             this.transition = DFA3_transition;
         }
         public String getDescription() {
-            return "1067:1: rule__PrimaryExpression__Alternatives : ( ( ruleConditionalExpression ) | ( ruleLoopExpression ) | ( ruleBlockExpression ) | ( ruleLetExpression ) | ( ruleCaseExpression ) | ( ruleNewExpression ) | ( ruleIsvoidExpression ) | ( ruleAssignmentExpression ) | ( ruleSelfTypeLiteral ) | ( ruleIdentifierRefExpression ) | ( ruleLiteral ) | ( ruleParenExpression ) | ( ruleNegationExpression ) | ( ruleIntegerComposite ) | ( ruleStaticDispatchExpression ) );";
+            return "1067:1: rule__PrimaryExpression__Alternatives : ( ( ruleConditionalExpression ) | ( ruleLoopExpression ) | ( ruleBlockExpression ) | ( ruleLetExpression ) | ( ruleCaseExpression ) | ( ruleNewExpression ) | ( ruleIsvoidExpression ) | ( ruleAssignmentExpression ) | ( ruleSelfTypeLiteral ) | ( ruleIdentifierRefExpression ) | ( ruleLiteral ) | ( ruleParenExpression ) | ( ruleNegationExpression ) | ( ruleIntegerCompositeExpression ) | ( ruleStaticDispatchExpression ) );";
+        }
+    }
+    static final String DFA16_eotS =
+        "\27\uffff";
+    static final String DFA16_eofS =
+        "\1\2\26\uffff";
+    static final String DFA16_minS =
+        "\1\13\1\0\25\uffff";
+    static final String DFA16_maxS =
+        "\1\61\1\0\25\uffff";
+    static final String DFA16_acceptS =
+        "\2\uffff\1\2\23\uffff\1\1";
+    static final String DFA16_specialS =
+        "\1\uffff\1\0\25\uffff}>";
+    static final String[] DFA16_transitionS = {
+            "\3\2\5\uffff\2\2\4\uffff\2\2\3\uffff\1\1\1\uffff\3\2\1\uffff"+
+            "\2\2\2\uffff\1\2\1\uffff\1\2\2\uffff\5\2",
+            "\1\uffff",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] DFA16_eot = DFA.unpackEncodedString(DFA16_eotS);
+    static final short[] DFA16_eof = DFA.unpackEncodedString(DFA16_eofS);
+    static final char[] DFA16_min = DFA.unpackEncodedStringToUnsignedChars(DFA16_minS);
+    static final char[] DFA16_max = DFA.unpackEncodedStringToUnsignedChars(DFA16_maxS);
+    static final short[] DFA16_accept = DFA.unpackEncodedString(DFA16_acceptS);
+    static final short[] DFA16_special = DFA.unpackEncodedString(DFA16_specialS);
+    static final short[][] DFA16_transition;
+
+    static {
+        int numStates = DFA16_transitionS.length;
+        DFA16_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA16_transition[i] = DFA.unpackEncodedString(DFA16_transitionS[i]);
+        }
+    }
+
+    class DFA16 extends DFA {
+
+        public DFA16(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 16;
+            this.eot = DFA16_eot;
+            this.eof = DFA16_eof;
+            this.min = DFA16_min;
+            this.max = DFA16_max;
+            this.accept = DFA16_accept;
+            this.special = DFA16_special;
+            this.transition = DFA16_transition;
+        }
+        public String getDescription() {
+            return "2955:1: ( rule__StaticDispatchExpression__Group_4__0 )?";
+        }
+        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
+            TokenStream input = (TokenStream)_input;
+        	int _s = s;
+            switch ( s ) {
+                    case 0 : 
+                        int LA16_1 = input.LA(1);
+
+                         
+                        int index16_1 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred31_InternalCool()) ) {s = 22;}
+
+                        else if ( (true) ) {s = 2;}
+
+                         
+                        input.seek(index16_1);
+                        if ( s>=0 ) return s;
+                        break;
+            }
+            if (state.backtracking>0) {state.failed=true; return -1;}
+            NoViableAltException nvae =
+                new NoViableAltException(getDescription(), 16, _s, input);
+            error(nvae);
+            throw nvae;
+        }
+    }
+    static final String DFA28_eotS =
+        "\27\uffff";
+    static final String DFA28_eofS =
+        "\1\2\26\uffff";
+    static final String DFA28_minS =
+        "\1\13\1\0\25\uffff";
+    static final String DFA28_maxS =
+        "\1\61\1\0\25\uffff";
+    static final String DFA28_acceptS =
+        "\2\uffff\1\2\23\uffff\1\1";
+    static final String DFA28_specialS =
+        "\1\uffff\1\0\25\uffff}>";
+    static final String[] DFA28_transitionS = {
+            "\3\2\5\uffff\2\2\4\uffff\2\2\3\uffff\1\1\1\uffff\3\2\1\uffff"+
+            "\2\2\2\uffff\1\2\1\uffff\1\2\2\uffff\5\2",
+            "\1\uffff",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] DFA28_eot = DFA.unpackEncodedString(DFA28_eotS);
+    static final short[] DFA28_eof = DFA.unpackEncodedString(DFA28_eofS);
+    static final char[] DFA28_min = DFA.unpackEncodedStringToUnsignedChars(DFA28_minS);
+    static final char[] DFA28_max = DFA.unpackEncodedStringToUnsignedChars(DFA28_maxS);
+    static final short[] DFA28_accept = DFA.unpackEncodedString(DFA28_acceptS);
+    static final short[] DFA28_special = DFA.unpackEncodedString(DFA28_specialS);
+    static final short[][] DFA28_transition;
+
+    static {
+        int numStates = DFA28_transitionS.length;
+        DFA28_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA28_transition[i] = DFA.unpackEncodedString(DFA28_transitionS[i]);
+        }
+    }
+
+    class DFA28 extends DFA {
+
+        public DFA28(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 28;
+            this.eot = DFA28_eot;
+            this.eof = DFA28_eof;
+            this.min = DFA28_min;
+            this.max = DFA28_max;
+            this.accept = DFA28_accept;
+            this.special = DFA28_special;
+            this.transition = DFA28_transition;
+        }
+        public String getDescription() {
+            return "5606:1: ( rule__DispatchExpression__Group_1_4__0 )?";
+        }
+        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
+            TokenStream input = (TokenStream)_input;
+        	int _s = s;
+            switch ( s ) {
+                    case 0 : 
+                        int LA28_1 = input.LA(1);
+
+                         
+                        int index28_1 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred43_InternalCool()) ) {s = 22;}
+
+                        else if ( (true) ) {s = 2;}
+
+                         
+                        input.seek(index28_1);
+                        if ( s>=0 ) return s;
+                        break;
+            }
+            if (state.backtracking>0) {state.failed=true; return -1;}
+            NoViableAltException nvae =
+                new NoViableAltException(getDescription(), 28, _s, input);
+            error(nvae);
+            throw nvae;
         }
     }
  
@@ -18987,7 +19863,7 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__Formal__Group__0_in_ruleFormal401 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExpression_in_entryRuleExpression428 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleExpression435 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDispatchExpression_in_ruleExpression461 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCompareExpression_in_ruleExpression461 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulePrimaryExpression_in_entryRulePrimaryExpression487 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulePrimaryExpression494 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__PrimaryExpression__Alternatives_in_rulePrimaryExpression520 = new BitSet(new long[]{0x0000000000000002L});
@@ -19018,12 +19894,12 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleNegationExpression_in_entryRuleNegationExpression1027 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleNegationExpression1034 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__NegationExpression__Group__0_in_ruleNegationExpression1060 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIntegerComposite_in_entryRuleIntegerComposite1087 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleIntegerComposite1094 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IntegerComposite__Group__0_in_ruleIntegerComposite1120 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDispatchExpression_in_entryRuleDispatchExpression1147 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDispatchExpression1154 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group__0_in_ruleDispatchExpression1180 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIntegerCompositeExpression_in_entryRuleIntegerCompositeExpression1087 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleIntegerCompositeExpression1094 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IntegerCompositeExpression__Group__0_in_ruleIntegerCompositeExpression1120 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNewExpression_in_entryRuleNewExpression1147 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNewExpression1154 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewExpression__Group__0_in_ruleNewExpression1180 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleStaticDispatchExpression_in_entryRuleStaticDispatchExpression1207 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleStaticDispatchExpression1214 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group__0_in_ruleStaticDispatchExpression1240 = new BitSet(new long[]{0x0000000000000002L});
@@ -19036,36 +19912,36 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleBlockExpression_in_entryRuleBlockExpression1387 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleBlockExpression1394 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__BlockExpression__Group__0_in_ruleBlockExpression1420 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLetExpression_in_entryRuleLetExpression1447 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLetExpression1454 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LetExpression__Group__0_in_ruleLetExpression1480 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLetDeclaration_in_entryRuleLetDeclaration1507 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLetDeclaration1514 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LetDeclaration__Group__0_in_ruleLetDeclaration1540 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCaseExpression_in_entryRuleCaseExpression1567 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCaseExpression1574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CaseExpression__Group__0_in_ruleCaseExpression1600 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCase_in_entryRuleCase1627 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCase1634 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Case__Group__0_in_ruleCase1660 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNewExpression_in_entryRuleNewExpression1687 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNewExpression1694 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NewExpression__Group__0_in_ruleNewExpression1720 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIsvoidExpression_in_entryRuleIsvoidExpression1747 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleIsvoidExpression1754 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IsvoidExpression__Group__0_in_ruleIsvoidExpression1780 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompareExpression_in_entryRuleCompareExpression1807 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCompareExpression1814 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompareExpression__Group__0_in_ruleCompareExpression1840 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompareOperator_in_entryRuleCompareOperator1867 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCompareOperator1874 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompareOperator__Alternatives_in_ruleCompareOperator1900 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAdditionExpression_in_entryRuleAdditionExpression1927 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAdditionExpression1934 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditionExpression__Group__0_in_ruleAdditionExpression1960 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultiplicationExpression_in_entryRuleMultiplicationExpression1987 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMultiplicationExpression1994 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group__0_in_ruleMultiplicationExpression2020 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIsvoidExpression_in_entryRuleIsvoidExpression1447 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleIsvoidExpression1454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IsvoidExpression__Group__0_in_ruleIsvoidExpression1480 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLetExpression_in_entryRuleLetExpression1507 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLetExpression1514 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LetExpression__Group__0_in_ruleLetExpression1540 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLetDeclaration_in_entryRuleLetDeclaration1567 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLetDeclaration1574 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LetDeclaration__Group__0_in_ruleLetDeclaration1600 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCaseExpression_in_entryRuleCaseExpression1627 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCaseExpression1634 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CaseExpression__Group__0_in_ruleCaseExpression1660 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCase_in_entryRuleCase1687 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCase1694 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Case__Group__0_in_ruleCase1720 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCompareExpression_in_entryRuleCompareExpression1747 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCompareExpression1754 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompareExpression__Group__0_in_ruleCompareExpression1780 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCompareOperator_in_entryRuleCompareOperator1807 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCompareOperator1814 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompareOperator__Alternatives_in_ruleCompareOperator1840 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAdditionExpression_in_entryRuleAdditionExpression1867 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAdditionExpression1874 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditionExpression__Group__0_in_ruleAdditionExpression1900 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultiplicationExpression_in_entryRuleMultiplicationExpression1927 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMultiplicationExpression1934 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group__0_in_ruleMultiplicationExpression1960 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDispatchExpression_in_entryRuleDispatchExpression1987 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDispatchExpression1994 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group__0_in_ruleDispatchExpression2020 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleBOOLEAN_in_entryRuleBOOLEAN2051 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleBOOLEAN2058 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__BOOLEAN__Alternatives_in_ruleBOOLEAN2084 = new BitSet(new long[]{0x0000000000000002L});
@@ -19087,7 +19963,7 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleLiteral_in_rule__PrimaryExpression__Alternatives2399 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleParenExpression_in_rule__PrimaryExpression__Alternatives2416 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleNegationExpression_in_rule__PrimaryExpression__Alternatives2433 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIntegerComposite_in_rule__PrimaryExpression__Alternatives2450 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIntegerCompositeExpression_in_rule__PrimaryExpression__Alternatives2450 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleStaticDispatchExpression_in_rule__PrimaryExpression__Alternatives2467 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleNumberLiteral_in_rule__Literal__Alternatives2499 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleStringLiteral_in_rule__Literal__Alternatives2516 = new BitSet(new long[]{0x0000000000000002L});
@@ -19142,7 +20018,7 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__Attr__Group_3__0_in_rule__Attr__Group__3__Impl3624 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Attr__Group__4__Impl_in_rule__Attr__Group__43655 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_20_in_rule__Attr__Group__4__Impl3683 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Attr__Group_3__0__Impl_in_rule__Attr__Group_3__03724 = new BitSet(new long[]{0x000031489905C070L});
+    public static final BitSet FOLLOW_rule__Attr__Group_3__0__Impl_in_rule__Attr__Group_3__03724 = new BitSet(new long[]{0x000002C8B905C070L});
     public static final BitSet FOLLOW_rule__Attr__Group_3__1_in_rule__Attr__Group_3__03727 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_23_in_rule__Attr__Group_3__0__Impl3755 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Attr__Group_3__1__Impl_in_rule__Attr__Group_3__13786 = new BitSet(new long[]{0x0000000000000002L});
@@ -19165,7 +20041,7 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__Method__Group__5__Impl_in_rule__Method__Group__54154 = new BitSet(new long[]{0x0000000000040000L});
     public static final BitSet FOLLOW_rule__Method__Group__6_in_rule__Method__Group__54157 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Method__Return_typeAssignment_5_in_rule__Method__Group__5__Impl4184 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Method__Group__6__Impl_in_rule__Method__Group__64214 = new BitSet(new long[]{0x000031489905C070L});
+    public static final BitSet FOLLOW_rule__Method__Group__6__Impl_in_rule__Method__Group__64214 = new BitSet(new long[]{0x000002C8B905C070L});
     public static final BitSet FOLLOW_rule__Method__Group__7_in_rule__Method__Group__64217 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_18_in_rule__Method__Group__6__Impl4245 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Method__Group__7__Impl_in_rule__Method__Group__74276 = new BitSet(new long[]{0x0000000000080000L});
@@ -19198,7 +20074,7 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__SelfTypeLiteral__Group__1_in_rule__SelfTypeLiteral__Group__04910 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__SelfTypeLiteral__Group__1__Impl_in_rule__SelfTypeLiteral__Group__14968 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_16_in_rule__SelfTypeLiteral__Group__1__Impl4996 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ParenExpression__Group__0__Impl_in_rule__ParenExpression__Group__05031 = new BitSet(new long[]{0x000031489905C070L});
+    public static final BitSet FOLLOW_rule__ParenExpression__Group__0__Impl_in_rule__ParenExpression__Group__05031 = new BitSet(new long[]{0x000002C8B905C070L});
     public static final BitSet FOLLOW_rule__ParenExpression__Group__1_in_rule__ParenExpression__Group__05034 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_24_in_rule__ParenExpression__Group__0__Impl5062 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ParenExpression__Group__1__Impl_in_rule__ParenExpression__Group__15093 = new BitSet(new long[]{0x0000000002000000L});
@@ -19209,327 +20085,347 @@ public class InternalCoolParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__AssignmentExpression__Group__0__Impl_in_rule__AssignmentExpression__Group__05218 = new BitSet(new long[]{0x0000000000800000L});
     public static final BitSet FOLLOW_rule__AssignmentExpression__Group__1_in_rule__AssignmentExpression__Group__05221 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__AssignmentExpression__NameAssignment_0_in_rule__AssignmentExpression__Group__0__Impl5248 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AssignmentExpression__Group__1__Impl_in_rule__AssignmentExpression__Group__15278 = new BitSet(new long[]{0x000031489905C070L});
+    public static final BitSet FOLLOW_rule__AssignmentExpression__Group__1__Impl_in_rule__AssignmentExpression__Group__15278 = new BitSet(new long[]{0x000002C8B905C070L});
     public static final BitSet FOLLOW_rule__AssignmentExpression__Group__2_in_rule__AssignmentExpression__Group__15281 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_23_in_rule__AssignmentExpression__Group__1__Impl5309 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__AssignmentExpression__Group__2__Impl_in_rule__AssignmentExpression__Group__25340 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__AssignmentExpression__ExprAssignment_2_in_rule__AssignmentExpression__Group__2__Impl5367 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NegationExpression__Group__0__Impl_in_rule__NegationExpression__Group__05403 = new BitSet(new long[]{0x000031489905C070L});
+    public static final BitSet FOLLOW_rule__NegationExpression__Group__0__Impl_in_rule__NegationExpression__Group__05403 = new BitSet(new long[]{0x000002C8B905C070L});
     public static final BitSet FOLLOW_rule__NegationExpression__Group__1_in_rule__NegationExpression__Group__05406 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_27_in_rule__NegationExpression__Group__0__Impl5434 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__NegationExpression__Group__1__Impl_in_rule__NegationExpression__Group__15465 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__NegationExpression__ExprAssignment_1_in_rule__NegationExpression__Group__1__Impl5492 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IntegerComposite__Group__0__Impl_in_rule__IntegerComposite__Group__05526 = new BitSet(new long[]{0x000031489905C070L});
-    public static final BitSet FOLLOW_rule__IntegerComposite__Group__1_in_rule__IntegerComposite__Group__05529 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__IntegerComposite__Group__0__Impl5557 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IntegerComposite__Group__1__Impl_in_rule__IntegerComposite__Group__15588 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IntegerComposite__ExprAssignment_1_in_rule__IntegerComposite__Group__1__Impl5615 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group__0__Impl_in_rule__DispatchExpression__Group__05649 = new BitSet(new long[]{0x0000000060000000L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group__1_in_rule__DispatchExpression__Group__05652 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompareExpression_in_rule__DispatchExpression__Group__0__Impl5679 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group__1__Impl_in_rule__DispatchExpression__Group__15708 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1__0_in_rule__DispatchExpression__Group__1__Impl5735 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1__0__Impl_in_rule__DispatchExpression__Group_1__05770 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1__1_in_rule__DispatchExpression__Group_1__05773 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0__0_in_rule__DispatchExpression__Group_1__0__Impl5800 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1__1__Impl_in_rule__DispatchExpression__Group_1__15830 = new BitSet(new long[]{0x000031489B05C070L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1__2_in_rule__DispatchExpression__Group_1__15833 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__DispatchExpression__Group_1__1__Impl5861 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1__2__Impl_in_rule__DispatchExpression__Group_1__25892 = new BitSet(new long[]{0x000031489B05C070L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1__3_in_rule__DispatchExpression__Group_1__25895 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_2__0_in_rule__DispatchExpression__Group_1__2__Impl5922 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1__3__Impl_in_rule__DispatchExpression__Group_1__35953 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__DispatchExpression__Group_1__3__Impl5981 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0__0__Impl_in_rule__DispatchExpression__Group_1_0__06020 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0_0__0_in_rule__DispatchExpression__Group_1_0__0__Impl6047 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0_0__0__Impl_in_rule__DispatchExpression__Group_1_0_0__06079 = new BitSet(new long[]{0x0000000060000000L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0_0__1_in_rule__DispatchExpression__Group_1_0_0__06082 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0_0__1__Impl_in_rule__DispatchExpression__Group_1_0_0__16140 = new BitSet(new long[]{0x0000000060000000L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0_0__2_in_rule__DispatchExpression__Group_1_0_0__16143 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0_0_1__0_in_rule__DispatchExpression__Group_1_0_0__1__Impl6170 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0_0__2__Impl_in_rule__DispatchExpression__Group_1_0_0__26201 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0_0__3_in_rule__DispatchExpression__Group_1_0_0__26204 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__DispatchExpression__Group_1_0_0__2__Impl6232 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0_0__3__Impl_in_rule__DispatchExpression__Group_1_0_0__36263 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__RefAssignment_1_0_0_3_in_rule__DispatchExpression__Group_1_0_0__3__Impl6290 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0_0_1__0__Impl_in_rule__DispatchExpression__Group_1_0_0_1__06328 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0_0_1__1_in_rule__DispatchExpression__Group_1_0_0_1__06331 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__DispatchExpression__Group_1_0_0_1__0__Impl6359 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0_0_1__1__Impl_in_rule__DispatchExpression__Group_1_0_0_1__16390 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1_in_rule__DispatchExpression__Group_1_0_0_1__1__Impl6417 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_2__0__Impl_in_rule__DispatchExpression__Group_1_2__06451 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_2__1_in_rule__DispatchExpression__Group_1_2__06454 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__ActualAssignment_1_2_0_in_rule__DispatchExpression__Group_1_2__0__Impl6481 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_2__1__Impl_in_rule__DispatchExpression__Group_1_2__16511 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_2_1__0_in_rule__DispatchExpression__Group_1_2__1__Impl6538 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_2_1__0__Impl_in_rule__DispatchExpression__Group_1_2_1__06573 = new BitSet(new long[]{0x000031489905C070L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_2_1__1_in_rule__DispatchExpression__Group_1_2_1__06576 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__DispatchExpression__Group_1_2_1__0__Impl6604 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_2_1__1__Impl_in_rule__DispatchExpression__Group_1_2_1__16635 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__ActualAssignment_1_2_1_1_in_rule__DispatchExpression__Group_1_2_1__1__Impl6662 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group__0__Impl_in_rule__StaticDispatchExpression__Group__06696 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group__1_in_rule__StaticDispatchExpression__Group__06699 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__StaticDispatchExpression__RefAssignment_0_in_rule__StaticDispatchExpression__Group__0__Impl6726 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group__1__Impl_in_rule__StaticDispatchExpression__Group__16756 = new BitSet(new long[]{0x000031489B05C070L});
-    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group__2_in_rule__StaticDispatchExpression__Group__16759 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__StaticDispatchExpression__Group__1__Impl6787 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group__2__Impl_in_rule__StaticDispatchExpression__Group__26818 = new BitSet(new long[]{0x000031489B05C070L});
-    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group__3_in_rule__StaticDispatchExpression__Group__26821 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group_2__0_in_rule__StaticDispatchExpression__Group__2__Impl6848 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group__3__Impl_in_rule__StaticDispatchExpression__Group__36879 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__StaticDispatchExpression__Group__3__Impl6907 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group_2__0__Impl_in_rule__StaticDispatchExpression__Group_2__06946 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group_2__1_in_rule__StaticDispatchExpression__Group_2__06949 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__StaticDispatchExpression__ActualAssignment_2_0_in_rule__StaticDispatchExpression__Group_2__0__Impl6976 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group_2__1__Impl_in_rule__StaticDispatchExpression__Group_2__17006 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group_2_1__0_in_rule__StaticDispatchExpression__Group_2__1__Impl7033 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group_2_1__0__Impl_in_rule__StaticDispatchExpression__Group_2_1__07068 = new BitSet(new long[]{0x000031489905C070L});
-    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group_2_1__1_in_rule__StaticDispatchExpression__Group_2_1__07071 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__StaticDispatchExpression__Group_2_1__0__Impl7099 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group_2_1__1__Impl_in_rule__StaticDispatchExpression__Group_2_1__17130 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__StaticDispatchExpression__ActualAssignment_2_1_1_in_rule__StaticDispatchExpression__Group_2_1__1__Impl7157 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ConditionalExpression__Group__0__Impl_in_rule__ConditionalExpression__Group__07191 = new BitSet(new long[]{0x000031489905C070L});
-    public static final BitSet FOLLOW_rule__ConditionalExpression__Group__1_in_rule__ConditionalExpression__Group__07194 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__ConditionalExpression__Group__0__Impl7222 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ConditionalExpression__Group__1__Impl_in_rule__ConditionalExpression__Group__17253 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__ConditionalExpression__Group__2_in_rule__ConditionalExpression__Group__17256 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ConditionalExpression__PredAssignment_1_in_rule__ConditionalExpression__Group__1__Impl7283 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ConditionalExpression__Group__2__Impl_in_rule__ConditionalExpression__Group__27313 = new BitSet(new long[]{0x000031489905C070L});
-    public static final BitSet FOLLOW_rule__ConditionalExpression__Group__3_in_rule__ConditionalExpression__Group__27316 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__ConditionalExpression__Group__2__Impl7344 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ConditionalExpression__Group__3__Impl_in_rule__ConditionalExpression__Group__37375 = new BitSet(new long[]{0x0000000600000000L});
-    public static final BitSet FOLLOW_rule__ConditionalExpression__Group__4_in_rule__ConditionalExpression__Group__37378 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ConditionalExpression__Then_expAssignment_3_in_rule__ConditionalExpression__Group__3__Impl7405 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ConditionalExpression__Group__4__Impl_in_rule__ConditionalExpression__Group__47435 = new BitSet(new long[]{0x0000000600000000L});
-    public static final BitSet FOLLOW_rule__ConditionalExpression__Group__5_in_rule__ConditionalExpression__Group__47438 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ConditionalExpression__Group_4__0_in_rule__ConditionalExpression__Group__4__Impl7465 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ConditionalExpression__Group__5__Impl_in_rule__ConditionalExpression__Group__57496 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__ConditionalExpression__Group__5__Impl7524 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ConditionalExpression__Group_4__0__Impl_in_rule__ConditionalExpression__Group_4__07567 = new BitSet(new long[]{0x000031489905C070L});
-    public static final BitSet FOLLOW_rule__ConditionalExpression__Group_4__1_in_rule__ConditionalExpression__Group_4__07570 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__ConditionalExpression__Group_4__0__Impl7599 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ConditionalExpression__Group_4__1__Impl_in_rule__ConditionalExpression__Group_4__17631 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ConditionalExpression__Else_expAssignment_4_1_in_rule__ConditionalExpression__Group_4__1__Impl7658 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LoopExpression__Group__0__Impl_in_rule__LoopExpression__Group__07692 = new BitSet(new long[]{0x000031489905C070L});
-    public static final BitSet FOLLOW_rule__LoopExpression__Group__1_in_rule__LoopExpression__Group__07695 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__LoopExpression__Group__0__Impl7723 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LoopExpression__Group__1__Impl_in_rule__LoopExpression__Group__17754 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_rule__LoopExpression__Group__2_in_rule__LoopExpression__Group__17757 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LoopExpression__PredAssignment_1_in_rule__LoopExpression__Group__1__Impl7784 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LoopExpression__Group__2__Impl_in_rule__LoopExpression__Group__27814 = new BitSet(new long[]{0x000031489905C070L});
-    public static final BitSet FOLLOW_rule__LoopExpression__Group__3_in_rule__LoopExpression__Group__27817 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__LoopExpression__Group__2__Impl7845 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LoopExpression__Group__3__Impl_in_rule__LoopExpression__Group__37876 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_rule__LoopExpression__Group__4_in_rule__LoopExpression__Group__37879 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LoopExpression__BodyAssignment_3_in_rule__LoopExpression__Group__3__Impl7906 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LoopExpression__Group__4__Impl_in_rule__LoopExpression__Group__47936 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rule__LoopExpression__Group__4__Impl7964 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BlockExpression__Group__0__Impl_in_rule__BlockExpression__Group__08005 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__BlockExpression__Group__1_in_rule__BlockExpression__Group__08008 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BlockExpression__Group__1__Impl_in_rule__BlockExpression__Group__18066 = new BitSet(new long[]{0x00003148990DC070L});
-    public static final BitSet FOLLOW_rule__BlockExpression__Group__2_in_rule__BlockExpression__Group__18069 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__BlockExpression__Group__1__Impl8097 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BlockExpression__Group__2__Impl_in_rule__BlockExpression__Group__28128 = new BitSet(new long[]{0x00003148990DC070L});
-    public static final BitSet FOLLOW_rule__BlockExpression__Group__3_in_rule__BlockExpression__Group__28131 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BlockExpression__Group_2__0_in_rule__BlockExpression__Group__2__Impl8158 = new BitSet(new long[]{0x000031489905C072L});
-    public static final BitSet FOLLOW_rule__BlockExpression__Group__3__Impl_in_rule__BlockExpression__Group__38189 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__BlockExpression__Group__3__Impl8217 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BlockExpression__Group_2__0__Impl_in_rule__BlockExpression__Group_2__08256 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_rule__BlockExpression__Group_2__1_in_rule__BlockExpression__Group_2__08259 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BlockExpression__BodyAssignment_2_0_in_rule__BlockExpression__Group_2__0__Impl8286 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BlockExpression__Group_2__1__Impl_in_rule__BlockExpression__Group_2__18316 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__BlockExpression__Group_2__1__Impl8344 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LetExpression__Group__0__Impl_in_rule__LetExpression__Group__08379 = new BitSet(new long[]{0x0000000000010010L});
-    public static final BitSet FOLLOW_rule__LetExpression__Group__1_in_rule__LetExpression__Group__08382 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__LetExpression__Group__0__Impl8410 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LetExpression__Group__1__Impl_in_rule__LetExpression__Group__18441 = new BitSet(new long[]{0x0000008004000000L});
-    public static final BitSet FOLLOW_rule__LetExpression__Group__2_in_rule__LetExpression__Group__18444 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LetExpression__DeclarationAssignment_1_in_rule__LetExpression__Group__1__Impl8471 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LetExpression__Group__2__Impl_in_rule__LetExpression__Group__28501 = new BitSet(new long[]{0x0000008004000000L});
-    public static final BitSet FOLLOW_rule__LetExpression__Group__3_in_rule__LetExpression__Group__28504 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LetExpression__Group_2__0_in_rule__LetExpression__Group__2__Impl8531 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_rule__LetExpression__Group__3__Impl_in_rule__LetExpression__Group__38562 = new BitSet(new long[]{0x000031489905C070L});
-    public static final BitSet FOLLOW_rule__LetExpression__Group__4_in_rule__LetExpression__Group__38565 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_rule__LetExpression__Group__3__Impl8593 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LetExpression__Group__4__Impl_in_rule__LetExpression__Group__48624 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LetExpression__BodyAssignment_4_in_rule__LetExpression__Group__4__Impl8651 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LetExpression__Group_2__0__Impl_in_rule__LetExpression__Group_2__08691 = new BitSet(new long[]{0x0000000000010010L});
-    public static final BitSet FOLLOW_rule__LetExpression__Group_2__1_in_rule__LetExpression__Group_2__08694 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__LetExpression__Group_2__0__Impl8722 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LetExpression__Group_2__1__Impl_in_rule__LetExpression__Group_2__18753 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LetExpression__DeclarationAssignment_2_1_in_rule__LetExpression__Group_2__1__Impl8780 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LetDeclaration__Group__0__Impl_in_rule__LetDeclaration__Group__08814 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_rule__LetDeclaration__Group__1_in_rule__LetDeclaration__Group__08817 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LetDeclaration__NameAssignment_0_in_rule__LetDeclaration__Group__0__Impl8844 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LetDeclaration__Group__1__Impl_in_rule__LetDeclaration__Group__18874 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__LetDeclaration__Group__2_in_rule__LetDeclaration__Group__18877 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__LetDeclaration__Group__1__Impl8905 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LetDeclaration__Group__2__Impl_in_rule__LetDeclaration__Group__28936 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__LetDeclaration__Group__3_in_rule__LetDeclaration__Group__28939 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LetDeclaration__Type_declAssignment_2_in_rule__LetDeclaration__Group__2__Impl8966 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LetDeclaration__Group__3__Impl_in_rule__LetDeclaration__Group__38996 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LetDeclaration__Group_3__0_in_rule__LetDeclaration__Group__3__Impl9023 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LetDeclaration__Group_3__0__Impl_in_rule__LetDeclaration__Group_3__09062 = new BitSet(new long[]{0x000031489905C070L});
-    public static final BitSet FOLLOW_rule__LetDeclaration__Group_3__1_in_rule__LetDeclaration__Group_3__09065 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__LetDeclaration__Group_3__0__Impl9093 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LetDeclaration__Group_3__1__Impl_in_rule__LetDeclaration__Group_3__19124 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LetDeclaration__InitAssignment_3_1_in_rule__LetDeclaration__Group_3__1__Impl9151 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CaseExpression__Group__0__Impl_in_rule__CaseExpression__Group__09185 = new BitSet(new long[]{0x000031489905C070L});
-    public static final BitSet FOLLOW_rule__CaseExpression__Group__1_in_rule__CaseExpression__Group__09188 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__CaseExpression__Group__0__Impl9216 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CaseExpression__Group__1__Impl_in_rule__CaseExpression__Group__19247 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_rule__CaseExpression__Group__2_in_rule__CaseExpression__Group__19250 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CaseExpression__ExprAssignment_1_in_rule__CaseExpression__Group__1__Impl9277 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CaseExpression__Group__2__Impl_in_rule__CaseExpression__Group__29307 = new BitSet(new long[]{0x0000000000010010L});
-    public static final BitSet FOLLOW_rule__CaseExpression__Group__3_in_rule__CaseExpression__Group__29310 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__CaseExpression__Group__2__Impl9338 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CaseExpression__Group__3__Impl_in_rule__CaseExpression__Group__39369 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_rule__CaseExpression__Group__4_in_rule__CaseExpression__Group__39372 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CaseExpression__Group_3__0_in_rule__CaseExpression__Group__3__Impl9401 = new BitSet(new long[]{0x0000000000010012L});
-    public static final BitSet FOLLOW_rule__CaseExpression__Group_3__0_in_rule__CaseExpression__Group__3__Impl9413 = new BitSet(new long[]{0x0000000000010012L});
-    public static final BitSet FOLLOW_rule__CaseExpression__Group__4__Impl_in_rule__CaseExpression__Group__49446 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_rule__CaseExpression__Group__4__Impl9474 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CaseExpression__Group_3__0__Impl_in_rule__CaseExpression__Group_3__09515 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_rule__CaseExpression__Group_3__1_in_rule__CaseExpression__Group_3__09518 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CaseExpression__CaseAssignment_3_0_in_rule__CaseExpression__Group_3__0__Impl9545 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CaseExpression__Group_3__1__Impl_in_rule__CaseExpression__Group_3__19575 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__CaseExpression__Group_3__1__Impl9603 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Case__Group__0__Impl_in_rule__Case__Group__09638 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_rule__Case__Group__1_in_rule__Case__Group__09641 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Case__NameAssignment_0_in_rule__Case__Group__0__Impl9668 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Case__Group__1__Impl_in_rule__Case__Group__19698 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Case__Group__2_in_rule__Case__Group__19701 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__Case__Group__1__Impl9729 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Case__Group__2__Impl_in_rule__Case__Group__29760 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_rule__Case__Group__3_in_rule__Case__Group__29763 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Case__Type_declAssignment_2_in_rule__Case__Group__2__Impl9790 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Case__Group__3__Impl_in_rule__Case__Group__39820 = new BitSet(new long[]{0x000031489905C070L});
-    public static final BitSet FOLLOW_rule__Case__Group__4_in_rule__Case__Group__39823 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_rule__Case__Group__3__Impl9851 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Case__Group__4__Impl_in_rule__Case__Group__49882 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Case__ExprAssignment_4_in_rule__Case__Group__4__Impl9909 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NewExpression__Group__0__Impl_in_rule__NewExpression__Group__09949 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__NewExpression__Group__1_in_rule__NewExpression__Group__09952 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_rule__NewExpression__Group__0__Impl9980 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NewExpression__Group__1__Impl_in_rule__NewExpression__Group__110011 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NewExpression__Type_nameAssignment_1_in_rule__NewExpression__Group__1__Impl10038 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IsvoidExpression__Group__0__Impl_in_rule__IsvoidExpression__Group__010072 = new BitSet(new long[]{0x000031489905C070L});
-    public static final BitSet FOLLOW_rule__IsvoidExpression__Group__1_in_rule__IsvoidExpression__Group__010075 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_rule__IsvoidExpression__Group__0__Impl10103 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IsvoidExpression__Group__1__Impl_in_rule__IsvoidExpression__Group__110134 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IsvoidExpression__ExprAssignment_1_in_rule__IsvoidExpression__Group__1__Impl10161 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompareExpression__Group__0__Impl_in_rule__CompareExpression__Group__010195 = new BitSet(new long[]{0x0000000000003800L});
-    public static final BitSet FOLLOW_rule__CompareExpression__Group__1_in_rule__CompareExpression__Group__010198 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAdditionExpression_in_rule__CompareExpression__Group__0__Impl10225 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompareExpression__Group__1__Impl_in_rule__CompareExpression__Group__110254 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompareExpression__Group_1__0_in_rule__CompareExpression__Group__1__Impl10281 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompareExpression__Group_1__0__Impl_in_rule__CompareExpression__Group_1__010316 = new BitSet(new long[]{0x000031489905C070L});
-    public static final BitSet FOLLOW_rule__CompareExpression__Group_1__1_in_rule__CompareExpression__Group_1__010319 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompareExpression__Group_1_0__0_in_rule__CompareExpression__Group_1__0__Impl10346 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompareExpression__Group_1__1__Impl_in_rule__CompareExpression__Group_1__110376 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompareExpression__RightAssignment_1_1_in_rule__CompareExpression__Group_1__1__Impl10403 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompareExpression__Group_1_0__0__Impl_in_rule__CompareExpression__Group_1_0__010437 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompareExpression__Group_1_0_0__0_in_rule__CompareExpression__Group_1_0__0__Impl10464 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompareExpression__Group_1_0_0__0__Impl_in_rule__CompareExpression__Group_1_0_0__010496 = new BitSet(new long[]{0x0000000000003800L});
-    public static final BitSet FOLLOW_rule__CompareExpression__Group_1_0_0__1_in_rule__CompareExpression__Group_1_0_0__010499 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompareExpression__Group_1_0_0__1__Impl_in_rule__CompareExpression__Group_1_0_0__110557 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompareExpression__OpAssignment_1_0_0_1_in_rule__CompareExpression__Group_1_0_0__1__Impl10584 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditionExpression__Group__0__Impl_in_rule__AdditionExpression__Group__010618 = new BitSet(new long[]{0x0000C00000000000L});
-    public static final BitSet FOLLOW_rule__AdditionExpression__Group__1_in_rule__AdditionExpression__Group__010621 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultiplicationExpression_in_rule__AdditionExpression__Group__0__Impl10648 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditionExpression__Group__1__Impl_in_rule__AdditionExpression__Group__110677 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1__0_in_rule__AdditionExpression__Group__1__Impl10704 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1__0__Impl_in_rule__AdditionExpression__Group_1__010739 = new BitSet(new long[]{0x000031489905C070L});
-    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1__1_in_rule__AdditionExpression__Group_1__010742 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1_0__0_in_rule__AdditionExpression__Group_1__0__Impl10769 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1__1__Impl_in_rule__AdditionExpression__Group_1__110799 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditionExpression__RightAssignment_1_1_in_rule__AdditionExpression__Group_1__1__Impl10826 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1_0__0__Impl_in_rule__AdditionExpression__Group_1_0__010860 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditionExpression__Alternatives_1_0_0_in_rule__AdditionExpression__Group_1_0__0__Impl10887 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1_0_0_0__0__Impl_in_rule__AdditionExpression__Group_1_0_0_0__010919 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1_0_0_0__1_in_rule__AdditionExpression__Group_1_0_0_0__010922 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1_0_0_0__1__Impl_in_rule__AdditionExpression__Group_1_0_0_0__110980 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_rule__AdditionExpression__Group_1_0_0_0__1__Impl11008 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1_0_0_1__0__Impl_in_rule__AdditionExpression__Group_1_0_0_1__011043 = new BitSet(new long[]{0x0000C00000000000L});
-    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1_0_0_1__1_in_rule__AdditionExpression__Group_1_0_0_1__011046 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1_0_0_1__1__Impl_in_rule__AdditionExpression__Group_1_0_0_1__111104 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_rule__AdditionExpression__Group_1_0_0_1__1__Impl11132 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group__0__Impl_in_rule__MultiplicationExpression__Group__011167 = new BitSet(new long[]{0x0003000000000000L});
-    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group__1_in_rule__MultiplicationExpression__Group__011170 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrimaryExpression_in_rule__MultiplicationExpression__Group__0__Impl11197 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group__1__Impl_in_rule__MultiplicationExpression__Group__111226 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1__0_in_rule__MultiplicationExpression__Group__1__Impl11253 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1__0__Impl_in_rule__MultiplicationExpression__Group_1__011288 = new BitSet(new long[]{0x000031489905C070L});
-    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1__1_in_rule__MultiplicationExpression__Group_1__011291 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1_0__0_in_rule__MultiplicationExpression__Group_1__0__Impl11318 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1__1__Impl_in_rule__MultiplicationExpression__Group_1__111348 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicationExpression__RightAssignment_1_1_in_rule__MultiplicationExpression__Group_1__1__Impl11375 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1_0__0__Impl_in_rule__MultiplicationExpression__Group_1_0__011409 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicationExpression__Alternatives_1_0_0_in_rule__MultiplicationExpression__Group_1_0__0__Impl11436 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1_0_0_0__0__Impl_in_rule__MultiplicationExpression__Group_1_0_0_0__011468 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1_0_0_0__1_in_rule__MultiplicationExpression__Group_1_0_0_0__011471 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1_0_0_0__1__Impl_in_rule__MultiplicationExpression__Group_1_0_0_0__111529 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_rule__MultiplicationExpression__Group_1_0_0_0__1__Impl11557 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1_0_0_1__0__Impl_in_rule__MultiplicationExpression__Group_1_0_0_1__011592 = new BitSet(new long[]{0x0003000000000000L});
-    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1_0_0_1__1_in_rule__MultiplicationExpression__Group_1_0_0_1__011595 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1_0_0_1__1__Impl_in_rule__MultiplicationExpression__Group_1_0_0_1__111653 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_rule__MultiplicationExpression__Group_1_0_0_1__1__Impl11681 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleClass__in_rule__Program__ClassesAssignment11721 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSYMBOL_in_rule__Class___NameAssignment_111752 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Class___ParentAssignment_2_111787 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFeature__in_rule__Class___FeaturesAssignment_411822 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSYMBOL_in_rule__Attr__NameAssignment_011853 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Attr__Type_declAssignment_211888 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__Attr__InitAssignment_3_111923 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSYMBOL_in_rule__Method__NameAssignment_011954 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFormal_in_rule__Method__FormalsAssignment_2_011985 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFormal_in_rule__Method__FormalsAssignment_2_1_112016 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Method__Return_typeAssignment_512051 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__Method__ExprAssignment_712086 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSYMBOL_in_rule__Formal__NameAssignment_012117 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Formal__Type_declAssignment_212152 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__IdentifierRefExpression__IdAssignment12191 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__NumberLiteral__ValueAssignment12226 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__StringLiteral__ValueAssignment12257 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBOOLEAN_in_rule__BooleanLiteral__ValueAssignment12288 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__ParenExpression__ExprAssignment_112319 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSYMBOL_in_rule__AssignmentExpression__NameAssignment_012350 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__AssignmentExpression__ExprAssignment_212381 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__NegationExpression__ExprAssignment_112412 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__IntegerComposite__ExprAssignment_112443 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__DispatchExpression__Type_nameAssignment_1_0_0_1_112478 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdentifierRefExpression_in_rule__DispatchExpression__RefAssignment_1_0_0_312513 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__DispatchExpression__ActualAssignment_1_2_012544 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__DispatchExpression__ActualAssignment_1_2_1_112575 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdentifierRefExpression_in_rule__StaticDispatchExpression__RefAssignment_012606 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__StaticDispatchExpression__ActualAssignment_2_012637 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__StaticDispatchExpression__ActualAssignment_2_1_112668 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__ConditionalExpression__PredAssignment_112699 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__ConditionalExpression__Then_expAssignment_312730 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__ConditionalExpression__Else_expAssignment_4_112761 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__LoopExpression__PredAssignment_112792 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__LoopExpression__BodyAssignment_312823 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__BlockExpression__BodyAssignment_2_012854 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLetDeclaration_in_rule__LetExpression__DeclarationAssignment_112885 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLetDeclaration_in_rule__LetExpression__DeclarationAssignment_2_112916 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__LetExpression__BodyAssignment_412947 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSYMBOL_in_rule__LetDeclaration__NameAssignment_012978 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__LetDeclaration__Type_declAssignment_213013 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__LetDeclaration__InitAssignment_3_113048 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__CaseExpression__ExprAssignment_113079 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCase_in_rule__CaseExpression__CaseAssignment_3_013110 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSYMBOL_in_rule__Case__NameAssignment_013141 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Case__Type_declAssignment_213176 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__Case__ExprAssignment_413211 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__NewExpression__Type_nameAssignment_113246 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__IsvoidExpression__ExprAssignment_113281 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompareOperator_in_rule__CompareExpression__OpAssignment_1_0_0_113312 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__CompareExpression__RightAssignment_1_113343 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__AdditionExpression__RightAssignment_1_113374 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__MultiplicationExpression__RightAssignment_1_113405 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1__0_in_synpred30_InternalCool5735 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CompareExpression__Group_1__0_in_synpred41_InternalCool10281 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1__0_in_synpred42_InternalCool10704 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1__0_in_synpred43_InternalCool11253 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IntegerCompositeExpression__Group__0__Impl_in_rule__IntegerCompositeExpression__Group__05526 = new BitSet(new long[]{0x000002C8B905C070L});
+    public static final BitSet FOLLOW_rule__IntegerCompositeExpression__Group__1_in_rule__IntegerCompositeExpression__Group__05529 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__IntegerCompositeExpression__Group__0__Impl5557 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IntegerCompositeExpression__Group__1__Impl_in_rule__IntegerCompositeExpression__Group__15588 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IntegerCompositeExpression__ExprAssignment_1_in_rule__IntegerCompositeExpression__Group__1__Impl5615 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewExpression__Group__0__Impl_in_rule__NewExpression__Group__05649 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__NewExpression__Group__1_in_rule__NewExpression__Group__05652 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__NewExpression__Group__0__Impl5680 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewExpression__Group__1__Impl_in_rule__NewExpression__Group__15711 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NewExpression__Type_nameAssignment_1_in_rule__NewExpression__Group__1__Impl5738 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group__0__Impl_in_rule__StaticDispatchExpression__Group__05772 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group__1_in_rule__StaticDispatchExpression__Group__05775 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__RefAssignment_0_in_rule__StaticDispatchExpression__Group__0__Impl5802 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group__1__Impl_in_rule__StaticDispatchExpression__Group__15832 = new BitSet(new long[]{0x000002C8BB05C070L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group__2_in_rule__StaticDispatchExpression__Group__15835 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__StaticDispatchExpression__Group__1__Impl5863 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group__2__Impl_in_rule__StaticDispatchExpression__Group__25894 = new BitSet(new long[]{0x000002C8BB05C070L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group__3_in_rule__StaticDispatchExpression__Group__25897 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group_2__0_in_rule__StaticDispatchExpression__Group__2__Impl5924 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group__3__Impl_in_rule__StaticDispatchExpression__Group__35955 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group__4_in_rule__StaticDispatchExpression__Group__35958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__StaticDispatchExpression__Group__3__Impl5986 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group__4__Impl_in_rule__StaticDispatchExpression__Group__46017 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group_4__0_in_rule__StaticDispatchExpression__Group__4__Impl6044 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group_2__0__Impl_in_rule__StaticDispatchExpression__Group_2__06085 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group_2__1_in_rule__StaticDispatchExpression__Group_2__06088 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__ActualAssignment_2_0_in_rule__StaticDispatchExpression__Group_2__0__Impl6115 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group_2__1__Impl_in_rule__StaticDispatchExpression__Group_2__16145 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group_2_1__0_in_rule__StaticDispatchExpression__Group_2__1__Impl6172 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group_2_1__0__Impl_in_rule__StaticDispatchExpression__Group_2_1__06207 = new BitSet(new long[]{0x000002C8B905C070L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group_2_1__1_in_rule__StaticDispatchExpression__Group_2_1__06210 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__StaticDispatchExpression__Group_2_1__0__Impl6238 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group_2_1__1__Impl_in_rule__StaticDispatchExpression__Group_2_1__16269 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__ActualAssignment_2_1_1_in_rule__StaticDispatchExpression__Group_2_1__1__Impl6296 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group_4__0__Impl_in_rule__StaticDispatchExpression__Group_4__06330 = new BitSet(new long[]{0x000002C8B905C070L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group_4__1_in_rule__StaticDispatchExpression__Group_4__06333 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__StaticDispatchExpression__Group_4__0__Impl6362 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group_4__1__Impl_in_rule__StaticDispatchExpression__Group_4__16394 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__ChainAssignment_4_1_in_rule__StaticDispatchExpression__Group_4__1__Impl6421 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ConditionalExpression__Group__0__Impl_in_rule__ConditionalExpression__Group__06455 = new BitSet(new long[]{0x000002C8B905C070L});
+    public static final BitSet FOLLOW_rule__ConditionalExpression__Group__1_in_rule__ConditionalExpression__Group__06458 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__ConditionalExpression__Group__0__Impl6486 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ConditionalExpression__Group__1__Impl_in_rule__ConditionalExpression__Group__16517 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__ConditionalExpression__Group__2_in_rule__ConditionalExpression__Group__16520 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ConditionalExpression__PredAssignment_1_in_rule__ConditionalExpression__Group__1__Impl6547 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ConditionalExpression__Group__2__Impl_in_rule__ConditionalExpression__Group__26577 = new BitSet(new long[]{0x000002C8B905C070L});
+    public static final BitSet FOLLOW_rule__ConditionalExpression__Group__3_in_rule__ConditionalExpression__Group__26580 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__ConditionalExpression__Group__2__Impl6608 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ConditionalExpression__Group__3__Impl_in_rule__ConditionalExpression__Group__36639 = new BitSet(new long[]{0x0000000600000000L});
+    public static final BitSet FOLLOW_rule__ConditionalExpression__Group__4_in_rule__ConditionalExpression__Group__36642 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ConditionalExpression__Then_expAssignment_3_in_rule__ConditionalExpression__Group__3__Impl6669 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ConditionalExpression__Group__4__Impl_in_rule__ConditionalExpression__Group__46699 = new BitSet(new long[]{0x0000000600000000L});
+    public static final BitSet FOLLOW_rule__ConditionalExpression__Group__5_in_rule__ConditionalExpression__Group__46702 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ConditionalExpression__Group_4__0_in_rule__ConditionalExpression__Group__4__Impl6729 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ConditionalExpression__Group__5__Impl_in_rule__ConditionalExpression__Group__56760 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__ConditionalExpression__Group__5__Impl6788 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ConditionalExpression__Group_4__0__Impl_in_rule__ConditionalExpression__Group_4__06831 = new BitSet(new long[]{0x000002C8B905C070L});
+    public static final BitSet FOLLOW_rule__ConditionalExpression__Group_4__1_in_rule__ConditionalExpression__Group_4__06834 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__ConditionalExpression__Group_4__0__Impl6863 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ConditionalExpression__Group_4__1__Impl_in_rule__ConditionalExpression__Group_4__16895 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ConditionalExpression__Else_expAssignment_4_1_in_rule__ConditionalExpression__Group_4__1__Impl6922 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LoopExpression__Group__0__Impl_in_rule__LoopExpression__Group__06956 = new BitSet(new long[]{0x000002C8B905C070L});
+    public static final BitSet FOLLOW_rule__LoopExpression__Group__1_in_rule__LoopExpression__Group__06959 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__LoopExpression__Group__0__Impl6987 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LoopExpression__Group__1__Impl_in_rule__LoopExpression__Group__17018 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_rule__LoopExpression__Group__2_in_rule__LoopExpression__Group__17021 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LoopExpression__PredAssignment_1_in_rule__LoopExpression__Group__1__Impl7048 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LoopExpression__Group__2__Impl_in_rule__LoopExpression__Group__27078 = new BitSet(new long[]{0x000002C8B905C070L});
+    public static final BitSet FOLLOW_rule__LoopExpression__Group__3_in_rule__LoopExpression__Group__27081 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__LoopExpression__Group__2__Impl7109 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LoopExpression__Group__3__Impl_in_rule__LoopExpression__Group__37140 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_rule__LoopExpression__Group__4_in_rule__LoopExpression__Group__37143 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LoopExpression__BodyAssignment_3_in_rule__LoopExpression__Group__3__Impl7170 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LoopExpression__Group__4__Impl_in_rule__LoopExpression__Group__47200 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__LoopExpression__Group__4__Impl7228 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BlockExpression__Group__0__Impl_in_rule__BlockExpression__Group__07269 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_rule__BlockExpression__Group__1_in_rule__BlockExpression__Group__07272 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BlockExpression__Group__1__Impl_in_rule__BlockExpression__Group__17330 = new BitSet(new long[]{0x000002C8B90DC070L});
+    public static final BitSet FOLLOW_rule__BlockExpression__Group__2_in_rule__BlockExpression__Group__17333 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__BlockExpression__Group__1__Impl7361 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BlockExpression__Group__2__Impl_in_rule__BlockExpression__Group__27392 = new BitSet(new long[]{0x000002C8B90DC070L});
+    public static final BitSet FOLLOW_rule__BlockExpression__Group__3_in_rule__BlockExpression__Group__27395 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BlockExpression__Group_2__0_in_rule__BlockExpression__Group__2__Impl7422 = new BitSet(new long[]{0x000002C8B905C072L});
+    public static final BitSet FOLLOW_rule__BlockExpression__Group__3__Impl_in_rule__BlockExpression__Group__37453 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__BlockExpression__Group__3__Impl7481 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BlockExpression__Group_2__0__Impl_in_rule__BlockExpression__Group_2__07520 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_rule__BlockExpression__Group_2__1_in_rule__BlockExpression__Group_2__07523 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BlockExpression__BodyAssignment_2_0_in_rule__BlockExpression__Group_2__0__Impl7550 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BlockExpression__Group_2__1__Impl_in_rule__BlockExpression__Group_2__17580 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__BlockExpression__Group_2__1__Impl7608 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IsvoidExpression__Group__0__Impl_in_rule__IsvoidExpression__Group__07643 = new BitSet(new long[]{0x000002C8B905C070L});
+    public static final BitSet FOLLOW_rule__IsvoidExpression__Group__1_in_rule__IsvoidExpression__Group__07646 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__IsvoidExpression__Group__0__Impl7674 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IsvoidExpression__Group__1__Impl_in_rule__IsvoidExpression__Group__17705 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__IsvoidExpression__ExprAssignment_1_in_rule__IsvoidExpression__Group__1__Impl7732 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LetExpression__Group__0__Impl_in_rule__LetExpression__Group__07766 = new BitSet(new long[]{0x0000000000010010L});
+    public static final BitSet FOLLOW_rule__LetExpression__Group__1_in_rule__LetExpression__Group__07769 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_rule__LetExpression__Group__0__Impl7797 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LetExpression__Group__1__Impl_in_rule__LetExpression__Group__17828 = new BitSet(new long[]{0x0000010004000000L});
+    public static final BitSet FOLLOW_rule__LetExpression__Group__2_in_rule__LetExpression__Group__17831 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LetExpression__DeclarationAssignment_1_in_rule__LetExpression__Group__1__Impl7858 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LetExpression__Group__2__Impl_in_rule__LetExpression__Group__27888 = new BitSet(new long[]{0x0000010004000000L});
+    public static final BitSet FOLLOW_rule__LetExpression__Group__3_in_rule__LetExpression__Group__27891 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LetExpression__Group_2__0_in_rule__LetExpression__Group__2__Impl7918 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_rule__LetExpression__Group__3__Impl_in_rule__LetExpression__Group__37949 = new BitSet(new long[]{0x000002C8B905C070L});
+    public static final BitSet FOLLOW_rule__LetExpression__Group__4_in_rule__LetExpression__Group__37952 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__LetExpression__Group__3__Impl7980 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LetExpression__Group__4__Impl_in_rule__LetExpression__Group__48011 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LetExpression__BodyAssignment_4_in_rule__LetExpression__Group__4__Impl8038 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LetExpression__Group_2__0__Impl_in_rule__LetExpression__Group_2__08078 = new BitSet(new long[]{0x0000000000010010L});
+    public static final BitSet FOLLOW_rule__LetExpression__Group_2__1_in_rule__LetExpression__Group_2__08081 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__LetExpression__Group_2__0__Impl8109 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LetExpression__Group_2__1__Impl_in_rule__LetExpression__Group_2__18140 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LetExpression__DeclarationAssignment_2_1_in_rule__LetExpression__Group_2__1__Impl8167 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LetDeclaration__Group__0__Impl_in_rule__LetDeclaration__Group__08201 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_rule__LetDeclaration__Group__1_in_rule__LetDeclaration__Group__08204 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LetDeclaration__NameAssignment_0_in_rule__LetDeclaration__Group__0__Impl8231 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LetDeclaration__Group__1__Impl_in_rule__LetDeclaration__Group__18261 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__LetDeclaration__Group__2_in_rule__LetDeclaration__Group__18264 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__LetDeclaration__Group__1__Impl8292 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LetDeclaration__Group__2__Impl_in_rule__LetDeclaration__Group__28323 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_rule__LetDeclaration__Group__3_in_rule__LetDeclaration__Group__28326 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LetDeclaration__Type_declAssignment_2_in_rule__LetDeclaration__Group__2__Impl8353 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LetDeclaration__Group__3__Impl_in_rule__LetDeclaration__Group__38383 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LetDeclaration__Group_3__0_in_rule__LetDeclaration__Group__3__Impl8410 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LetDeclaration__Group_3__0__Impl_in_rule__LetDeclaration__Group_3__08449 = new BitSet(new long[]{0x000002C8B905C070L});
+    public static final BitSet FOLLOW_rule__LetDeclaration__Group_3__1_in_rule__LetDeclaration__Group_3__08452 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__LetDeclaration__Group_3__0__Impl8480 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LetDeclaration__Group_3__1__Impl_in_rule__LetDeclaration__Group_3__18511 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LetDeclaration__InitAssignment_3_1_in_rule__LetDeclaration__Group_3__1__Impl8538 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CaseExpression__Group__0__Impl_in_rule__CaseExpression__Group__08572 = new BitSet(new long[]{0x000002C8B905C070L});
+    public static final BitSet FOLLOW_rule__CaseExpression__Group__1_in_rule__CaseExpression__Group__08575 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__CaseExpression__Group__0__Impl8603 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CaseExpression__Group__1__Impl_in_rule__CaseExpression__Group__18634 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_rule__CaseExpression__Group__2_in_rule__CaseExpression__Group__18637 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CaseExpression__ExprAssignment_1_in_rule__CaseExpression__Group__1__Impl8664 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CaseExpression__Group__2__Impl_in_rule__CaseExpression__Group__28694 = new BitSet(new long[]{0x0000000000010010L});
+    public static final BitSet FOLLOW_rule__CaseExpression__Group__3_in_rule__CaseExpression__Group__28697 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rule__CaseExpression__Group__2__Impl8725 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CaseExpression__Group__3__Impl_in_rule__CaseExpression__Group__38756 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_rule__CaseExpression__Group__4_in_rule__CaseExpression__Group__38759 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CaseExpression__Group_3__0_in_rule__CaseExpression__Group__3__Impl8788 = new BitSet(new long[]{0x0000000000010012L});
+    public static final BitSet FOLLOW_rule__CaseExpression__Group_3__0_in_rule__CaseExpression__Group__3__Impl8800 = new BitSet(new long[]{0x0000000000010012L});
+    public static final BitSet FOLLOW_rule__CaseExpression__Group__4__Impl_in_rule__CaseExpression__Group__48833 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_rule__CaseExpression__Group__4__Impl8861 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CaseExpression__Group_3__0__Impl_in_rule__CaseExpression__Group_3__08902 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_rule__CaseExpression__Group_3__1_in_rule__CaseExpression__Group_3__08905 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CaseExpression__CaseAssignment_3_0_in_rule__CaseExpression__Group_3__0__Impl8932 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CaseExpression__Group_3__1__Impl_in_rule__CaseExpression__Group_3__18962 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__CaseExpression__Group_3__1__Impl8990 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Case__Group__0__Impl_in_rule__Case__Group__09025 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_rule__Case__Group__1_in_rule__Case__Group__09028 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Case__NameAssignment_0_in_rule__Case__Group__0__Impl9055 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Case__Group__1__Impl_in_rule__Case__Group__19085 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Case__Group__2_in_rule__Case__Group__19088 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__Case__Group__1__Impl9116 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Case__Group__2__Impl_in_rule__Case__Group__29147 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_rule__Case__Group__3_in_rule__Case__Group__29150 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Case__Type_declAssignment_2_in_rule__Case__Group__2__Impl9177 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Case__Group__3__Impl_in_rule__Case__Group__39207 = new BitSet(new long[]{0x000002C8B905C070L});
+    public static final BitSet FOLLOW_rule__Case__Group__4_in_rule__Case__Group__39210 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_rule__Case__Group__3__Impl9238 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Case__Group__4__Impl_in_rule__Case__Group__49269 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Case__ExprAssignment_4_in_rule__Case__Group__4__Impl9296 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompareExpression__Group__0__Impl_in_rule__CompareExpression__Group__09336 = new BitSet(new long[]{0x0000000000003800L});
+    public static final BitSet FOLLOW_rule__CompareExpression__Group__1_in_rule__CompareExpression__Group__09339 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAdditionExpression_in_rule__CompareExpression__Group__0__Impl9366 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompareExpression__Group__1__Impl_in_rule__CompareExpression__Group__19395 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompareExpression__Group_1__0_in_rule__CompareExpression__Group__1__Impl9422 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompareExpression__Group_1__0__Impl_in_rule__CompareExpression__Group_1__09457 = new BitSet(new long[]{0x000002C8B905C070L});
+    public static final BitSet FOLLOW_rule__CompareExpression__Group_1__1_in_rule__CompareExpression__Group_1__09460 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompareExpression__Group_1_0__0_in_rule__CompareExpression__Group_1__0__Impl9487 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompareExpression__Group_1__1__Impl_in_rule__CompareExpression__Group_1__19517 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompareExpression__RightAssignment_1_1_in_rule__CompareExpression__Group_1__1__Impl9544 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompareExpression__Group_1_0__0__Impl_in_rule__CompareExpression__Group_1_0__09578 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompareExpression__Group_1_0_0__0_in_rule__CompareExpression__Group_1_0__0__Impl9605 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompareExpression__Group_1_0_0__0__Impl_in_rule__CompareExpression__Group_1_0_0__09637 = new BitSet(new long[]{0x0000000000003800L});
+    public static final BitSet FOLLOW_rule__CompareExpression__Group_1_0_0__1_in_rule__CompareExpression__Group_1_0_0__09640 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompareExpression__Group_1_0_0__1__Impl_in_rule__CompareExpression__Group_1_0_0__19698 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompareExpression__OpAssignment_1_0_0_1_in_rule__CompareExpression__Group_1_0_0__1__Impl9725 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditionExpression__Group__0__Impl_in_rule__AdditionExpression__Group__09759 = new BitSet(new long[]{0x0000600000000000L});
+    public static final BitSet FOLLOW_rule__AdditionExpression__Group__1_in_rule__AdditionExpression__Group__09762 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultiplicationExpression_in_rule__AdditionExpression__Group__0__Impl9789 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditionExpression__Group__1__Impl_in_rule__AdditionExpression__Group__19818 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1__0_in_rule__AdditionExpression__Group__1__Impl9845 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1__0__Impl_in_rule__AdditionExpression__Group_1__09880 = new BitSet(new long[]{0x000002C8B905C070L});
+    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1__1_in_rule__AdditionExpression__Group_1__09883 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1_0__0_in_rule__AdditionExpression__Group_1__0__Impl9910 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1__1__Impl_in_rule__AdditionExpression__Group_1__19940 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditionExpression__RightAssignment_1_1_in_rule__AdditionExpression__Group_1__1__Impl9967 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1_0__0__Impl_in_rule__AdditionExpression__Group_1_0__010001 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditionExpression__Alternatives_1_0_0_in_rule__AdditionExpression__Group_1_0__0__Impl10028 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1_0_0_0__0__Impl_in_rule__AdditionExpression__Group_1_0_0_0__010060 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1_0_0_0__1_in_rule__AdditionExpression__Group_1_0_0_0__010063 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1_0_0_0__1__Impl_in_rule__AdditionExpression__Group_1_0_0_0__110121 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_rule__AdditionExpression__Group_1_0_0_0__1__Impl10149 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1_0_0_1__0__Impl_in_rule__AdditionExpression__Group_1_0_0_1__010184 = new BitSet(new long[]{0x0000600000000000L});
+    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1_0_0_1__1_in_rule__AdditionExpression__Group_1_0_0_1__010187 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1_0_0_1__1__Impl_in_rule__AdditionExpression__Group_1_0_0_1__110245 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_46_in_rule__AdditionExpression__Group_1_0_0_1__1__Impl10273 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group__0__Impl_in_rule__MultiplicationExpression__Group__010308 = new BitSet(new long[]{0x0001800000000000L});
+    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group__1_in_rule__MultiplicationExpression__Group__010311 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDispatchExpression_in_rule__MultiplicationExpression__Group__0__Impl10338 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group__1__Impl_in_rule__MultiplicationExpression__Group__110367 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1__0_in_rule__MultiplicationExpression__Group__1__Impl10394 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1__0__Impl_in_rule__MultiplicationExpression__Group_1__010429 = new BitSet(new long[]{0x000002C8B905C070L});
+    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1__1_in_rule__MultiplicationExpression__Group_1__010432 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1_0__0_in_rule__MultiplicationExpression__Group_1__0__Impl10459 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1__1__Impl_in_rule__MultiplicationExpression__Group_1__110489 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicationExpression__RightAssignment_1_1_in_rule__MultiplicationExpression__Group_1__1__Impl10516 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1_0__0__Impl_in_rule__MultiplicationExpression__Group_1_0__010550 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicationExpression__Alternatives_1_0_0_in_rule__MultiplicationExpression__Group_1_0__0__Impl10577 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1_0_0_0__0__Impl_in_rule__MultiplicationExpression__Group_1_0_0_0__010609 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1_0_0_0__1_in_rule__MultiplicationExpression__Group_1_0_0_0__010612 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1_0_0_0__1__Impl_in_rule__MultiplicationExpression__Group_1_0_0_0__110670 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_rule__MultiplicationExpression__Group_1_0_0_0__1__Impl10698 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1_0_0_1__0__Impl_in_rule__MultiplicationExpression__Group_1_0_0_1__010733 = new BitSet(new long[]{0x0001800000000000L});
+    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1_0_0_1__1_in_rule__MultiplicationExpression__Group_1_0_0_1__010736 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1_0_0_1__1__Impl_in_rule__MultiplicationExpression__Group_1_0_0_1__110794 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_rule__MultiplicationExpression__Group_1_0_0_1__1__Impl10822 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group__0__Impl_in_rule__DispatchExpression__Group__010857 = new BitSet(new long[]{0x0002000040000000L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group__1_in_rule__DispatchExpression__Group__010860 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrimaryExpression_in_rule__DispatchExpression__Group__0__Impl10887 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group__1__Impl_in_rule__DispatchExpression__Group__110916 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1__0_in_rule__DispatchExpression__Group__1__Impl10943 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1__0__Impl_in_rule__DispatchExpression__Group_1__010978 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1__1_in_rule__DispatchExpression__Group_1__010981 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0__0_in_rule__DispatchExpression__Group_1__0__Impl11008 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1__1__Impl_in_rule__DispatchExpression__Group_1__111038 = new BitSet(new long[]{0x000002C8BB05C070L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1__2_in_rule__DispatchExpression__Group_1__111041 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__DispatchExpression__Group_1__1__Impl11069 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1__2__Impl_in_rule__DispatchExpression__Group_1__211100 = new BitSet(new long[]{0x000002C8BB05C070L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1__3_in_rule__DispatchExpression__Group_1__211103 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_2__0_in_rule__DispatchExpression__Group_1__2__Impl11130 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1__3__Impl_in_rule__DispatchExpression__Group_1__311161 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1__4_in_rule__DispatchExpression__Group_1__311164 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__DispatchExpression__Group_1__3__Impl11192 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1__4__Impl_in_rule__DispatchExpression__Group_1__411223 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_4__0_in_rule__DispatchExpression__Group_1__4__Impl11250 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0__0__Impl_in_rule__DispatchExpression__Group_1_0__011291 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0_0__0_in_rule__DispatchExpression__Group_1_0__0__Impl11318 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0_0__0__Impl_in_rule__DispatchExpression__Group_1_0_0__011350 = new BitSet(new long[]{0x0002000040000000L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0_0__1_in_rule__DispatchExpression__Group_1_0_0__011353 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0_0__1__Impl_in_rule__DispatchExpression__Group_1_0_0__111411 = new BitSet(new long[]{0x0002000040000000L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0_0__2_in_rule__DispatchExpression__Group_1_0_0__111414 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0_0_1__0_in_rule__DispatchExpression__Group_1_0_0__1__Impl11441 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0_0__2__Impl_in_rule__DispatchExpression__Group_1_0_0__211472 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0_0__3_in_rule__DispatchExpression__Group_1_0_0__211475 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__DispatchExpression__Group_1_0_0__2__Impl11503 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0_0__3__Impl_in_rule__DispatchExpression__Group_1_0_0__311534 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__RefAssignment_1_0_0_3_in_rule__DispatchExpression__Group_1_0_0__3__Impl11561 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0_0_1__0__Impl_in_rule__DispatchExpression__Group_1_0_0_1__011599 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0_0_1__1_in_rule__DispatchExpression__Group_1_0_0_1__011602 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_rule__DispatchExpression__Group_1_0_0_1__0__Impl11630 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_0_0_1__1__Impl_in_rule__DispatchExpression__Group_1_0_0_1__111661 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Type_nameAssignment_1_0_0_1_1_in_rule__DispatchExpression__Group_1_0_0_1__1__Impl11688 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_2__0__Impl_in_rule__DispatchExpression__Group_1_2__011722 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_2__1_in_rule__DispatchExpression__Group_1_2__011725 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__ActualAssignment_1_2_0_in_rule__DispatchExpression__Group_1_2__0__Impl11752 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_2__1__Impl_in_rule__DispatchExpression__Group_1_2__111782 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_2_1__0_in_rule__DispatchExpression__Group_1_2__1__Impl11809 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_2_1__0__Impl_in_rule__DispatchExpression__Group_1_2_1__011844 = new BitSet(new long[]{0x000002C8B905C070L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_2_1__1_in_rule__DispatchExpression__Group_1_2_1__011847 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__DispatchExpression__Group_1_2_1__0__Impl11875 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_2_1__1__Impl_in_rule__DispatchExpression__Group_1_2_1__111906 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__ActualAssignment_1_2_1_1_in_rule__DispatchExpression__Group_1_2_1__1__Impl11933 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_4__0__Impl_in_rule__DispatchExpression__Group_1_4__011967 = new BitSet(new long[]{0x000002C8B905C070L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_4__1_in_rule__DispatchExpression__Group_1_4__011970 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__DispatchExpression__Group_1_4__0__Impl11999 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_4__1__Impl_in_rule__DispatchExpression__Group_1_4__112031 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__ChainAssignment_1_4_1_in_rule__DispatchExpression__Group_1_4__1__Impl12058 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleClass__in_rule__Program__ClassesAssignment12097 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSYMBOL_in_rule__Class___NameAssignment_112128 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Class___ParentAssignment_2_112163 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFeature__in_rule__Class___FeaturesAssignment_412198 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSYMBOL_in_rule__Attr__NameAssignment_012229 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Attr__Type_declAssignment_212264 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__Attr__InitAssignment_3_112299 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSYMBOL_in_rule__Method__NameAssignment_012330 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFormal_in_rule__Method__FormalsAssignment_2_012361 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFormal_in_rule__Method__FormalsAssignment_2_1_112392 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Method__Return_typeAssignment_512427 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__Method__ExprAssignment_712462 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSYMBOL_in_rule__Formal__NameAssignment_012493 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Formal__Type_declAssignment_212528 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__IdentifierRefExpression__IdAssignment12567 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__NumberLiteral__ValueAssignment12602 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__StringLiteral__ValueAssignment12633 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBOOLEAN_in_rule__BooleanLiteral__ValueAssignment12664 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__ParenExpression__ExprAssignment_112695 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSYMBOL_in_rule__AssignmentExpression__NameAssignment_012726 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__AssignmentExpression__ExprAssignment_212757 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__NegationExpression__ExprAssignment_112788 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__IntegerCompositeExpression__ExprAssignment_112819 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__NewExpression__Type_nameAssignment_112854 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIdentifierRefExpression_in_rule__StaticDispatchExpression__RefAssignment_012889 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__StaticDispatchExpression__ActualAssignment_2_012920 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__StaticDispatchExpression__ActualAssignment_2_1_112951 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStaticDispatchExpression_in_rule__StaticDispatchExpression__ChainAssignment_4_112982 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__ConditionalExpression__PredAssignment_113013 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__ConditionalExpression__Then_expAssignment_313044 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__ConditionalExpression__Else_expAssignment_4_113075 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__LoopExpression__PredAssignment_113106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__LoopExpression__BodyAssignment_313137 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__BlockExpression__BodyAssignment_2_013168 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__IsvoidExpression__ExprAssignment_113199 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLetDeclaration_in_rule__LetExpression__DeclarationAssignment_113230 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLetDeclaration_in_rule__LetExpression__DeclarationAssignment_2_113261 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__LetExpression__BodyAssignment_413292 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSYMBOL_in_rule__LetDeclaration__NameAssignment_013323 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__LetDeclaration__Type_declAssignment_213358 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__LetDeclaration__InitAssignment_3_113393 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__CaseExpression__ExprAssignment_113424 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCase_in_rule__CaseExpression__CaseAssignment_3_013455 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSYMBOL_in_rule__Case__NameAssignment_013486 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Case__Type_declAssignment_213521 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__Case__ExprAssignment_413556 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCompareOperator_in_rule__CompareExpression__OpAssignment_1_0_0_113587 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__CompareExpression__RightAssignment_1_113618 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__AdditionExpression__RightAssignment_1_113649 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__MultiplicationExpression__RightAssignment_1_113680 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DispatchExpression__Type_nameAssignment_1_0_0_1_113715 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIdentifierRefExpression_in_rule__DispatchExpression__RefAssignment_1_0_0_313750 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__DispatchExpression__ActualAssignment_1_2_013781 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__DispatchExpression__ActualAssignment_1_2_1_113812 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStaticDispatchExpression_in_rule__DispatchExpression__ChainAssignment_1_4_113843 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__StaticDispatchExpression__Group_4__0_in_synpred31_InternalCool6044 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CompareExpression__Group_1__0_in_synpred38_InternalCool9422 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditionExpression__Group_1__0_in_synpred39_InternalCool9845 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicationExpression__Group_1__0_in_synpred40_InternalCool10394 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1__0_in_synpred41_InternalCool10943 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DispatchExpression__Group_1_4__0_in_synpred43_InternalCool11250 = new BitSet(new long[]{0x0000000000000002L});
 
 }

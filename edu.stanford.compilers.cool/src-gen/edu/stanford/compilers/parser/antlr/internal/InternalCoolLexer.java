@@ -343,10 +343,11 @@ public class InternalCoolLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:24:7: ( '@' )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:24:9: '@'
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:24:7: ( 'new' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:24:9: 'new'
             {
-            match('@'); 
+            match("new"); 
+
 
             }
 
@@ -530,10 +531,10 @@ public class InternalCoolLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:33:7: ( 'let' )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:33:9: 'let'
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:33:7: ( 'isvoid' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:33:9: 'isvoid'
             {
-            match("let"); 
+            match("isvoid"); 
 
 
             }
@@ -551,10 +552,10 @@ public class InternalCoolLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:34:7: ( 'in' )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:34:9: 'in'
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:34:7: ( 'let' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:34:9: 'let'
             {
-            match("in"); 
+            match("let"); 
 
 
             }
@@ -572,10 +573,10 @@ public class InternalCoolLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:35:7: ( 'case' )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:35:9: 'case'
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:35:7: ( 'in' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:35:9: 'in'
             {
-            match("case"); 
+            match("in"); 
 
 
             }
@@ -593,10 +594,10 @@ public class InternalCoolLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:36:7: ( 'of' )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:36:9: 'of'
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:36:7: ( 'case' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:36:9: 'case'
             {
-            match("of"); 
+            match("case"); 
 
 
             }
@@ -614,10 +615,10 @@ public class InternalCoolLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:37:7: ( 'esac' )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:37:9: 'esac'
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:37:7: ( 'of' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:37:9: 'of'
             {
-            match("esac"); 
+            match("of"); 
 
 
             }
@@ -635,10 +636,10 @@ public class InternalCoolLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:38:7: ( '=>' )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:38:9: '=>'
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:38:7: ( 'esac' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:38:9: 'esac'
             {
-            match("=>"); 
+            match("esac"); 
 
 
             }
@@ -656,10 +657,10 @@ public class InternalCoolLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:39:7: ( 'new' )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:39:9: 'new'
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:39:7: ( '=>' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:39:9: '=>'
             {
-            match("new"); 
+            match("=>"); 
 
 
             }
@@ -677,11 +678,10 @@ public class InternalCoolLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:40:7: ( 'isvoid' )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:40:9: 'isvoid'
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:40:7: ( '<' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:40:9: '<'
             {
-            match("isvoid"); 
-
+            match('<'); 
 
             }
 
@@ -698,10 +698,11 @@ public class InternalCoolLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:41:7: ( '<' )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:41:9: '<'
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:41:7: ( '<=' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:41:9: '<='
             {
-            match('<'); 
+            match("<="); 
+
 
             }
 
@@ -718,11 +719,10 @@ public class InternalCoolLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:42:7: ( '<=' )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:42:9: '<='
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:42:7: ( '=' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:42:9: '='
             {
-            match("<="); 
-
+            match('='); 
 
             }
 
@@ -739,10 +739,10 @@ public class InternalCoolLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:43:7: ( '=' )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:43:9: '='
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:43:7: ( '+' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:43:9: '+'
             {
-            match('='); 
+            match('+'); 
 
             }
 
@@ -759,10 +759,10 @@ public class InternalCoolLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:44:7: ( '+' )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:44:9: '+'
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:44:7: ( '-' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:44:9: '-'
             {
-            match('+'); 
+            match('-'); 
 
             }
 
@@ -779,10 +779,10 @@ public class InternalCoolLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:45:7: ( '-' )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:45:9: '-'
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:45:7: ( '*' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:45:9: '*'
             {
-            match('-'); 
+            match('*'); 
 
             }
 
@@ -799,10 +799,10 @@ public class InternalCoolLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:46:7: ( '*' )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:46:9: '*'
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:46:7: ( '/' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:46:9: '/'
             {
-            match('*'); 
+            match('/'); 
 
             }
 
@@ -819,10 +819,10 @@ public class InternalCoolLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:47:7: ( '/' )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:47:9: '/'
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:47:7: ( '@' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:47:9: '@'
             {
-            match('/'); 
+            match('@'); 
 
             }
 
@@ -881,10 +881,10 @@ public class InternalCoolLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2309:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2309:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2355:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2355:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2309:11: ( '^' )?
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2355:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -893,7 +893,7 @@ public class InternalCoolLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2309:11: '^'
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2355:11: '^'
                     {
                     match('^'); 
 
@@ -911,7 +911,7 @@ public class InternalCoolLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2309:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2355:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -960,10 +960,10 @@ public class InternalCoolLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2311:10: ( ( '0' .. '9' )+ )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2311:12: ( '0' .. '9' )+
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2357:10: ( ( '0' .. '9' )+ )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2357:12: ( '0' .. '9' )+
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2311:12: ( '0' .. '9' )+
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2357:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -977,7 +977,7 @@ public class InternalCoolLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2311:13: '0' .. '9'
+            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2357:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1004,201 +1004,42 @@ public class InternalCoolLexer extends Lexer {
     }
     // $ANTLR end "RULE_INT"
 
-    // $ANTLR start "RULE_STRING"
-    public final void mRULE_STRING() throws RecognitionException {
-        try {
-            int _type = RULE_STRING;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2313:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2313:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
-            {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2313:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
-            int alt6=2;
-            int LA6_0 = input.LA(1);
-
-            if ( (LA6_0=='\"') ) {
-                alt6=1;
-            }
-            else if ( (LA6_0=='\'') ) {
-                alt6=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 6, 0, input);
-
-                throw nvae;
-            }
-            switch (alt6) {
-                case 1 :
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2313:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
-                    {
-                    match('\"'); 
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2313:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
-                    loop4:
-                    do {
-                        int alt4=3;
-                        int LA4_0 = input.LA(1);
-
-                        if ( (LA4_0=='\\') ) {
-                            alt4=1;
-                        }
-                        else if ( ((LA4_0>='\u0000' && LA4_0<='!')||(LA4_0>='#' && LA4_0<='[')||(LA4_0>=']' && LA4_0<='\uFFFF')) ) {
-                            alt4=2;
-                        }
-
-
-                        switch (alt4) {
-                    	case 1 :
-                    	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2313:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
-                    	    {
-                    	    match('\\'); 
-                    	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
-                    	        input.consume();
-
-                    	    }
-                    	    else {
-                    	        MismatchedSetException mse = new MismatchedSetException(null,input);
-                    	        recover(mse);
-                    	        throw mse;}
-
-
-                    	    }
-                    	    break;
-                    	case 2 :
-                    	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2313:66: ~ ( ( '\\\\' | '\"' ) )
-                    	    {
-                    	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
-                    	        input.consume();
-
-                    	    }
-                    	    else {
-                    	        MismatchedSetException mse = new MismatchedSetException(null,input);
-                    	        recover(mse);
-                    	        throw mse;}
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop4;
-                        }
-                    } while (true);
-
-                    match('\"'); 
-
-                    }
-                    break;
-                case 2 :
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2313:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
-                    {
-                    match('\''); 
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2313:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
-                    loop5:
-                    do {
-                        int alt5=3;
-                        int LA5_0 = input.LA(1);
-
-                        if ( (LA5_0=='\\') ) {
-                            alt5=1;
-                        }
-                        else if ( ((LA5_0>='\u0000' && LA5_0<='&')||(LA5_0>='(' && LA5_0<='[')||(LA5_0>=']' && LA5_0<='\uFFFF')) ) {
-                            alt5=2;
-                        }
-
-
-                        switch (alt5) {
-                    	case 1 :
-                    	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2313:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
-                    	    {
-                    	    match('\\'); 
-                    	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
-                    	        input.consume();
-
-                    	    }
-                    	    else {
-                    	        MismatchedSetException mse = new MismatchedSetException(null,input);
-                    	        recover(mse);
-                    	        throw mse;}
-
-
-                    	    }
-                    	    break;
-                    	case 2 :
-                    	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2313:137: ~ ( ( '\\\\' | '\\'' ) )
-                    	    {
-                    	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
-                    	        input.consume();
-
-                    	    }
-                    	    else {
-                    	        MismatchedSetException mse = new MismatchedSetException(null,input);
-                    	        recover(mse);
-                    	        throw mse;}
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop5;
-                        }
-                    } while (true);
-
-                    match('\''); 
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_STRING"
-
     // $ANTLR start "RULE_ML_COMMENT"
     public final void mRULE_ML_COMMENT() throws RecognitionException {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2315:17: ( '(*' ( options {greedy=false; } : . )* '*)' )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2315:19: '(*' ( options {greedy=false; } : . )* '*)'
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2359:17: ( '(*' ( options {greedy=false; } : . )* '*)' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2359:19: '(*' ( options {greedy=false; } : . )* '*)'
             {
             match("(*"); 
 
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2315:24: ( options {greedy=false; } : . )*
-            loop7:
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2359:24: ( options {greedy=false; } : . )*
+            loop4:
             do {
-                int alt7=2;
-                int LA7_0 = input.LA(1);
+                int alt4=2;
+                int LA4_0 = input.LA(1);
 
-                if ( (LA7_0=='*') ) {
-                    int LA7_1 = input.LA(2);
+                if ( (LA4_0=='*') ) {
+                    int LA4_1 = input.LA(2);
 
-                    if ( (LA7_1==')') ) {
-                        alt7=2;
+                    if ( (LA4_1==')') ) {
+                        alt4=2;
                     }
-                    else if ( ((LA7_1>='\u0000' && LA7_1<='(')||(LA7_1>='*' && LA7_1<='\uFFFF')) ) {
-                        alt7=1;
+                    else if ( ((LA4_1>='\u0000' && LA4_1<='(')||(LA4_1>='*' && LA4_1<='\uFFFF')) ) {
+                        alt4=1;
                     }
 
 
                 }
-                else if ( ((LA7_0>='\u0000' && LA7_0<=')')||(LA7_0>='+' && LA7_0<='\uFFFF')) ) {
-                    alt7=1;
+                else if ( ((LA4_0>='\u0000' && LA4_0<=')')||(LA4_0>='+' && LA4_0<='\uFFFF')) ) {
+                    alt4=1;
                 }
 
 
-                switch (alt7) {
+                switch (alt4) {
             	case 1 :
-            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2315:52: .
+            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2359:52: .
             	    {
             	    matchAny(); 
 
@@ -1206,7 +1047,7 @@ public class InternalCoolLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop7;
+            	    break loop4;
                 }
             } while (true);
 
@@ -1228,25 +1069,25 @@ public class InternalCoolLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2317:17: ( '--' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2317:19: '--' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2361:17: ( '--' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2361:19: '--' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("--"); 
 
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2317:24: (~ ( ( '\\n' | '\\r' ) ) )*
-            loop8:
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2361:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            loop5:
             do {
-                int alt8=2;
-                int LA8_0 = input.LA(1);
+                int alt5=2;
+                int LA5_0 = input.LA(1);
 
-                if ( ((LA8_0>='\u0000' && LA8_0<='\t')||(LA8_0>='\u000B' && LA8_0<='\f')||(LA8_0>='\u000E' && LA8_0<='\uFFFF')) ) {
-                    alt8=1;
+                if ( ((LA5_0>='\u0000' && LA5_0<='\t')||(LA5_0>='\u000B' && LA5_0<='\f')||(LA5_0>='\u000E' && LA5_0<='\uFFFF')) ) {
+                    alt5=1;
                 }
 
 
-                switch (alt8) {
+                switch (alt5) {
             	case 1 :
-            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2317:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2361:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1262,31 +1103,31 @@ public class InternalCoolLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop8;
+            	    break loop5;
                 }
             } while (true);
 
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2317:40: ( ( '\\r' )? '\\n' )?
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2361:40: ( ( '\\r' )? '\\n' )?
+            int alt7=2;
+            int LA7_0 = input.LA(1);
 
-            if ( (LA10_0=='\n'||LA10_0=='\r') ) {
-                alt10=1;
+            if ( (LA7_0=='\n'||LA7_0=='\r') ) {
+                alt7=1;
             }
-            switch (alt10) {
+            switch (alt7) {
                 case 1 :
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2317:41: ( '\\r' )? '\\n'
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2361:41: ( '\\r' )? '\\n'
                     {
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2317:41: ( '\\r' )?
-                    int alt9=2;
-                    int LA9_0 = input.LA(1);
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2361:41: ( '\\r' )?
+                    int alt6=2;
+                    int LA6_0 = input.LA(1);
 
-                    if ( (LA9_0=='\r') ) {
-                        alt9=1;
+                    if ( (LA6_0=='\r') ) {
+                        alt6=1;
                     }
-                    switch (alt9) {
+                    switch (alt6) {
                         case 1 :
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2317:41: '\\r'
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2361:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1318,22 +1159,22 @@ public class InternalCoolLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2319:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2319:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2363:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2363:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2319:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
-            int cnt11=0;
-            loop11:
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2363:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            int cnt8=0;
+            loop8:
             do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
+                int alt8=2;
+                int LA8_0 = input.LA(1);
 
-                if ( ((LA11_0>='\t' && LA11_0<='\n')||LA11_0=='\r'||LA11_0==' ') ) {
-                    alt11=1;
+                if ( ((LA8_0>='\t' && LA8_0<='\n')||LA8_0=='\r'||LA8_0==' ') ) {
+                    alt8=1;
                 }
 
 
-                switch (alt11) {
+                switch (alt8) {
             	case 1 :
             	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:
             	    {
@@ -1351,12 +1192,12 @@ public class InternalCoolLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt11 >= 1 ) break loop11;
+            	    if ( cnt8 >= 1 ) break loop8;
                         EarlyExitException eee =
-                            new EarlyExitException(11, input);
+                            new EarlyExitException(8, input);
                         throw eee;
                 }
-                cnt11++;
+                cnt8++;
             } while (true);
 
 
@@ -1375,8 +1216,8 @@ public class InternalCoolLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2321:16: ( . )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2321:18: .
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2365:16: ( . )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2365:18: .
             {
             matchAny(); 
 
@@ -1390,8 +1231,167 @@ public class InternalCoolLexer extends Lexer {
     }
     // $ANTLR end "RULE_ANY_OTHER"
 
+    // $ANTLR start "RULE_STRING"
+    public final void mRULE_STRING() throws RecognitionException {
+        try {
+            int _type = RULE_STRING;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2367:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2367:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            {
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2367:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            int alt11=2;
+            int LA11_0 = input.LA(1);
+
+            if ( (LA11_0=='\"') ) {
+                alt11=1;
+            }
+            else if ( (LA11_0=='\'') ) {
+                alt11=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 11, 0, input);
+
+                throw nvae;
+            }
+            switch (alt11) {
+                case 1 :
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2367:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    {
+                    match('\"'); 
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2367:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    loop9:
+                    do {
+                        int alt9=3;
+                        int LA9_0 = input.LA(1);
+
+                        if ( (LA9_0=='\\') ) {
+                            alt9=1;
+                        }
+                        else if ( ((LA9_0>='\u0000' && LA9_0<='!')||(LA9_0>='#' && LA9_0<='[')||(LA9_0>=']' && LA9_0<='\uFFFF')) ) {
+                            alt9=2;
+                        }
+
+
+                        switch (alt9) {
+                    	case 1 :
+                    	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2367:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    {
+                    	    match('\\'); 
+                    	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
+                    	        input.consume();
+
+                    	    }
+                    	    else {
+                    	        MismatchedSetException mse = new MismatchedSetException(null,input);
+                    	        recover(mse);
+                    	        throw mse;}
+
+
+                    	    }
+                    	    break;
+                    	case 2 :
+                    	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2367:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    {
+                    	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
+                    	        input.consume();
+
+                    	    }
+                    	    else {
+                    	        MismatchedSetException mse = new MismatchedSetException(null,input);
+                    	        recover(mse);
+                    	        throw mse;}
+
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop9;
+                        }
+                    } while (true);
+
+                    match('\"'); 
+
+                    }
+                    break;
+                case 2 :
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2367:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    {
+                    match('\''); 
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2367:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    loop10:
+                    do {
+                        int alt10=3;
+                        int LA10_0 = input.LA(1);
+
+                        if ( (LA10_0=='\\') ) {
+                            alt10=1;
+                        }
+                        else if ( ((LA10_0>='\u0000' && LA10_0<='&')||(LA10_0>='(' && LA10_0<='[')||(LA10_0>=']' && LA10_0<='\uFFFF')) ) {
+                            alt10=2;
+                        }
+
+
+                        switch (alt10) {
+                    	case 1 :
+                    	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2367:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    {
+                    	    match('\\'); 
+                    	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
+                    	        input.consume();
+
+                    	    }
+                    	    else {
+                    	        MismatchedSetException mse = new MismatchedSetException(null,input);
+                    	        recover(mse);
+                    	        throw mse;}
+
+
+                    	    }
+                    	    break;
+                    	case 2 :
+                    	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2367:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    {
+                    	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
+                    	        input.consume();
+
+                    	    }
+                    	    else {
+                    	        MismatchedSetException mse = new MismatchedSetException(null,input);
+                    	        recover(mse);
+                    	        throw mse;}
+
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop10;
+                        }
+                    } while (true);
+
+                    match('\''); 
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_STRING"
+
     public void mTokens() throws RecognitionException {
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | RULE_ID | RULE_INT | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER | RULE_STRING )
         int alt12=46;
         alt12 = dfa12.predict(input);
         switch (alt12) {
@@ -1683,37 +1683,37 @@ public class InternalCoolLexer extends Lexer {
                 }
                 break;
             case 42 :
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1:261: RULE_STRING
-                {
-                mRULE_STRING(); 
-
-                }
-                break;
-            case 43 :
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1:273: RULE_ML_COMMENT
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1:261: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 44 :
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1:289: RULE_SL_COMMENT
+            case 43 :
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1:277: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 45 :
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1:305: RULE_WS
+            case 44 :
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1:293: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 46 :
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1:313: RULE_ANY_OTHER
+            case 45 :
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1:301: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
+
+                }
+                break;
+            case 46 :
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1:316: RULE_STRING
+                {
+                mRULE_STRING(); 
 
                 }
                 break;
@@ -1725,9 +1725,9 @@ public class InternalCoolLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\2\45\4\uffff\1\57\1\61\2\uffff\2\45\3\uffff\7\45\1\106"+
-        "\1\uffff\1\111\2\uffff\1\42\2\uffff\2\42\2\uffff\2\45\1\uffff\1"+
-        "\122\1\123\1\45\13\uffff\3\45\3\uffff\4\45\1\134\5\45\1\142\12\uffff"+
+        "\1\uffff\2\45\4\uffff\1\57\1\61\2\uffff\2\45\2\uffff\7\45\1\105"+
+        "\1\uffff\1\110\3\uffff\1\42\3\uffff\2\42\1\uffff\2\45\1\uffff\1"+
+        "\122\1\123\1\45\13\uffff\3\45\2\uffff\4\45\1\134\5\45\1\142\13\uffff"+
         "\3\45\2\uffff\2\45\1\150\1\151\4\45\1\uffff\3\45\1\161\1\45\1\uffff"+
         "\1\45\1\164\2\45\1\167\2\uffff\1\170\1\171\1\172\1\173\2\45\1\176"+
         "\1\uffff\1\177\1\u0080\1\uffff\2\45\5\uffff\1\u0083\1\u0084\3\uffff"+
@@ -1735,41 +1735,41 @@ public class InternalCoolLexer extends Lexer {
     static final String DFA12_eofS =
         "\u0089\uffff";
     static final String DFA12_minS =
-        "\1\0\1\141\1\146\4\uffff\1\55\1\52\2\uffff\2\145\3\uffff\1\150"+
-        "\1\154\1\141\1\150\1\145\1\157\1\146\1\76\1\uffff\1\55\2\uffff\1"+
-        "\101\2\uffff\2\0\2\uffff\1\141\1\163\1\uffff\2\60\1\166\13\uffff"+
-        "\1\154\1\164\1\167\3\uffff\1\145\1\165\1\163\1\141\1\60\1\154\1"+
-        "\151\1\157\1\164\1\157\1\60\12\uffff\1\163\2\145\2\uffff\1\157\1"+
+        "\1\0\1\141\1\146\4\uffff\1\55\1\52\2\uffff\2\145\2\uffff\1\150"+
+        "\1\154\1\141\1\150\1\145\1\157\1\146\1\76\1\uffff\1\55\3\uffff\1"+
+        "\101\3\uffff\2\0\1\uffff\1\141\1\163\1\uffff\2\60\1\166\13\uffff"+
+        "\1\154\1\164\1\167\2\uffff\1\145\1\165\1\163\1\141\1\60\1\154\1"+
+        "\151\1\157\1\164\1\157\1\60\13\uffff\1\163\2\145\2\uffff\1\157\1"+
         "\146\2\60\1\156\2\145\1\143\1\uffff\1\163\1\154\1\160\1\60\1\154"+
         "\1\uffff\1\163\1\60\1\162\1\151\1\60\2\uffff\4\60\2\145\1\60\1\uffff"+
         "\2\60\1\uffff\1\151\1\144\5\uffff\2\60\3\uffff\1\164\1\60\2\uffff"+
         "\1\163\1\uffff\1\60\1\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\154\1\163\4\uffff\1\75\1\52\2\uffff\1\145\1\157\3\uffff"+
-        "\1\162\1\163\1\151\1\150\2\157\1\146\1\76\1\uffff\1\55\2\uffff\1"+
-        "\172\2\uffff\2\uffff\2\uffff\1\141\1\163\1\uffff\2\172\1\166\13"+
-        "\uffff\1\154\1\164\1\167\3\uffff\1\145\1\165\1\163\1\141\1\172\1"+
-        "\154\1\151\1\157\1\164\1\157\1\172\12\uffff\1\163\2\145\2\uffff"+
+        "\1\uffff\1\154\1\163\4\uffff\1\75\1\52\2\uffff\1\145\1\157\2\uffff"+
+        "\1\162\1\163\1\151\1\150\2\157\1\146\1\76\1\uffff\1\55\3\uffff\1"+
+        "\172\3\uffff\2\uffff\1\uffff\1\141\1\163\1\uffff\2\172\1\166\13"+
+        "\uffff\1\154\1\164\1\167\2\uffff\1\145\1\165\1\163\1\141\1\172\1"+
+        "\154\1\151\1\157\1\164\1\157\1\172\13\uffff\1\163\2\145\2\uffff"+
         "\1\157\1\146\2\172\1\156\2\145\1\143\1\uffff\1\163\1\154\1\160\1"+
         "\172\1\154\1\uffff\1\163\1\172\1\162\1\151\1\172\2\uffff\4\172\2"+
         "\145\1\172\1\uffff\2\172\1\uffff\1\151\1\144\5\uffff\2\172\3\uffff"+
         "\1\164\1\172\2\uffff\1\163\1\uffff\1\172\1\uffff";
     static final String DFA12_acceptS =
-        "\3\uffff\1\3\1\4\1\5\1\6\2\uffff\1\11\1\12\2\uffff\1\15\1\16\1"+
-        "\17\10\uffff\1\42\1\uffff\1\44\1\45\1\uffff\1\50\1\51\2\uffff\1"+
-        "\55\1\56\2\uffff\1\50\3\uffff\1\3\1\4\1\5\1\6\1\7\1\40\1\37\1\53"+
-        "\1\10\1\11\1\12\3\uffff\1\15\1\16\1\17\13\uffff\1\34\1\41\1\42\1"+
-        "\54\1\43\1\44\1\45\1\51\1\52\1\55\3\uffff\1\30\1\20\10\uffff\1\23"+
-        "\5\uffff\1\32\5\uffff\1\14\1\35\7\uffff\1\27\2\uffff\1\31\2\uffff"+
-        "\1\13\1\21\1\46\1\22\1\33\2\uffff\1\25\1\26\1\1\2\uffff\1\47\1\24"+
-        "\1\uffff\1\36\1\uffff\1\2";
+        "\3\uffff\1\3\1\4\1\5\1\6\2\uffff\1\11\1\12\2\uffff\1\15\1\17\10"+
+        "\uffff\1\41\1\uffff\1\43\1\44\1\45\1\uffff\1\50\1\51\1\54\2\uffff"+
+        "\1\55\2\uffff\1\50\3\uffff\1\3\1\4\1\5\1\6\1\7\1\37\1\36\1\52\1"+
+        "\10\1\11\1\12\3\uffff\1\15\1\17\13\uffff\1\35\1\40\1\41\1\53\1\42"+
+        "\1\43\1\44\1\45\1\51\1\54\1\56\3\uffff\1\31\1\20\10\uffff\1\23\5"+
+        "\uffff\1\33\5\uffff\1\14\1\16\7\uffff\1\30\2\uffff\1\32\2\uffff"+
+        "\1\13\1\21\1\46\1\22\1\34\2\uffff\1\25\1\26\1\1\2\uffff\1\47\1\24"+
+        "\1\uffff\1\27\1\uffff\1\2";
     static final String DFA12_specialS =
-        "\1\2\36\uffff\1\1\1\0\150\uffff}>";
+        "\1\1\37\uffff\1\2\1\0\147\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\42\2\41\2\42\1\41\22\42\1\41\1\42\1\37\4\42\1\40\1\10\1"+
-            "\12\1\32\1\30\1\11\1\31\1\17\1\33\12\36\1\6\1\5\1\7\1\27\2\42"+
-            "\1\16\32\35\3\42\1\34\1\35\1\42\2\35\1\1\1\35\1\21\1\22\2\35"+
-            "\1\2\2\35\1\24\1\35\1\14\1\26\1\25\2\35\1\13\1\20\2\35\1\23"+
+            "\11\42\2\37\2\42\1\37\22\42\1\37\1\42\1\40\4\42\1\41\1\10\1"+
+            "\12\1\31\1\27\1\11\1\30\1\16\1\32\12\36\1\6\1\5\1\7\1\26\2\42"+
+            "\1\33\32\35\3\42\1\34\1\35\1\42\2\35\1\1\1\35\1\20\1\21\2\35"+
+            "\1\2\2\35\1\23\1\35\1\14\1\25\1\24\2\35\1\13\1\17\2\35\1\22"+
             "\3\35\1\3\1\42\1\4\1\15\uff81\42",
             "\1\44\12\uffff\1\43",
             "\1\47\7\uffff\1\46\4\uffff\1\50",
@@ -1785,25 +1785,25 @@ public class InternalCoolLexer extends Lexer {
             "\1\66\11\uffff\1\65",
             "",
             "",
-            "",
-            "\1\72\11\uffff\1\73",
-            "\1\74\6\uffff\1\75",
-            "\1\77\7\uffff\1\76",
-            "\1\100",
-            "\1\102\11\uffff\1\101",
+            "\1\71\11\uffff\1\72",
+            "\1\73\6\uffff\1\74",
+            "\1\76\7\uffff\1\75",
+            "\1\77",
+            "\1\101\11\uffff\1\100",
+            "\1\102",
             "\1\103",
             "\1\104",
-            "\1\105",
             "",
-            "\1\110",
+            "\1\107",
+            "",
             "",
             "",
             "\32\45\4\uffff\1\45\1\uffff\32\45",
             "",
             "",
-            "\0\115",
-            "\0\115",
             "",
+            "\0\116",
+            "\0\116",
             "",
             "\1\117",
             "\1\120",
@@ -1827,7 +1827,6 @@ public class InternalCoolLexer extends Lexer {
             "\1\127",
             "",
             "",
-            "",
             "\1\130",
             "\1\131",
             "\1\132",
@@ -1839,6 +1838,7 @@ public class InternalCoolLexer extends Lexer {
             "\1\140",
             "\1\141",
             "\12\45\7\uffff\32\45\4\uffff\1\45\1\uffff\32\45",
+            "",
             "",
             "",
             "",
@@ -1939,33 +1939,23 @@ public class InternalCoolLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | RULE_ID | RULE_INT | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER | RULE_STRING );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA12_32 = input.LA(1);
+                        int LA12_33 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_32>='\u0000' && LA12_32<='\uFFFF')) ) {s = 77;}
+                        if ( ((LA12_33>='\u0000' && LA12_33<='\uFFFF')) ) {s = 78;}
 
                         else s = 34;
 
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA12_31 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_31>='\u0000' && LA12_31<='\uFFFF')) ) {s = 77;}
-
-                        else s = 34;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
                         int LA12_0 = input.LA(1);
 
                         s = -1;
@@ -1995,33 +1985,33 @@ public class InternalCoolLexer extends Lexer {
 
                         else if ( (LA12_0=='~') ) {s = 13;}
 
-                        else if ( (LA12_0=='@') ) {s = 14;}
+                        else if ( (LA12_0=='.') ) {s = 14;}
 
-                        else if ( (LA12_0=='.') ) {s = 15;}
+                        else if ( (LA12_0=='t') ) {s = 15;}
 
-                        else if ( (LA12_0=='t') ) {s = 16;}
+                        else if ( (LA12_0=='e') ) {s = 16;}
 
-                        else if ( (LA12_0=='e') ) {s = 17;}
+                        else if ( (LA12_0=='f') ) {s = 17;}
 
-                        else if ( (LA12_0=='f') ) {s = 18;}
+                        else if ( (LA12_0=='w') ) {s = 18;}
 
-                        else if ( (LA12_0=='w') ) {s = 19;}
+                        else if ( (LA12_0=='l') ) {s = 19;}
 
-                        else if ( (LA12_0=='l') ) {s = 20;}
+                        else if ( (LA12_0=='p') ) {s = 20;}
 
-                        else if ( (LA12_0=='p') ) {s = 21;}
+                        else if ( (LA12_0=='o') ) {s = 21;}
 
-                        else if ( (LA12_0=='o') ) {s = 22;}
+                        else if ( (LA12_0=='=') ) {s = 22;}
 
-                        else if ( (LA12_0=='=') ) {s = 23;}
+                        else if ( (LA12_0=='+') ) {s = 23;}
 
-                        else if ( (LA12_0=='+') ) {s = 24;}
+                        else if ( (LA12_0=='-') ) {s = 24;}
 
-                        else if ( (LA12_0=='-') ) {s = 25;}
+                        else if ( (LA12_0=='*') ) {s = 25;}
 
-                        else if ( (LA12_0=='*') ) {s = 26;}
+                        else if ( (LA12_0=='/') ) {s = 26;}
 
-                        else if ( (LA12_0=='/') ) {s = 27;}
+                        else if ( (LA12_0=='@') ) {s = 27;}
 
                         else if ( (LA12_0=='^') ) {s = 28;}
 
@@ -2029,13 +2019,23 @@ public class InternalCoolLexer extends Lexer {
 
                         else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 30;}
 
-                        else if ( (LA12_0=='\"') ) {s = 31;}
+                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 31;}
 
-                        else if ( (LA12_0=='\'') ) {s = 32;}
+                        else if ( (LA12_0=='\"') ) {s = 32;}
 
-                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 33;}
+                        else if ( (LA12_0=='\'') ) {s = 33;}
 
                         else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='>' && LA12_0<='?')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='\u007F' && LA12_0<='\uFFFF')) ) {s = 34;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA12_32 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_32>='\u0000' && LA12_32<='\uFFFF')) ) {s = 78;}
+
+                        else s = 34;
 
                         if ( s>=0 ) return s;
                         break;

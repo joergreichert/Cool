@@ -110,6 +110,11 @@ public class CoolAdapterFactory extends AdapterFactoryImpl
         return createExpressionAdapter();
       }
       @Override
+      public Adapter casePrimaryExpression(PrimaryExpression object)
+      {
+        return createPrimaryExpressionAdapter();
+      }
+      @Override
       public Adapter caseSelfTypeLiteral(SelfTypeLiteral object)
       {
         return createSelfTypeLiteralAdapter();
@@ -140,6 +145,41 @@ public class CoolAdapterFactory extends AdapterFactoryImpl
         return createBooleanLiteralAdapter();
       }
       @Override
+      public Adapter caseParenExpression(ParenExpression object)
+      {
+        return createParenExpressionAdapter();
+      }
+      @Override
+      public Adapter caseAssignmentExpression(AssignmentExpression object)
+      {
+        return createAssignmentExpressionAdapter();
+      }
+      @Override
+      public Adapter caseNegationExpression(NegationExpression object)
+      {
+        return createNegationExpressionAdapter();
+      }
+      @Override
+      public Adapter caseIntegerCompositeExpression(IntegerCompositeExpression object)
+      {
+        return createIntegerCompositeExpressionAdapter();
+      }
+      @Override
+      public Adapter caseNewExpression(NewExpression object)
+      {
+        return createNewExpressionAdapter();
+      }
+      @Override
+      public Adapter caseStaticDispatchExpression(StaticDispatchExpression object)
+      {
+        return createStaticDispatchExpressionAdapter();
+      }
+      @Override
+      public Adapter caseConditionalExpression(ConditionalExpression object)
+      {
+        return createConditionalExpressionAdapter();
+      }
+      @Override
       public Adapter caseLoopExpression(LoopExpression object)
       {
         return createLoopExpressionAdapter();
@@ -148,6 +188,11 @@ public class CoolAdapterFactory extends AdapterFactoryImpl
       public Adapter caseBlockExpression(BlockExpression object)
       {
         return createBlockExpressionAdapter();
+      }
+      @Override
+      public Adapter caseIsvoidExpression(IsvoidExpression object)
+      {
+        return createIsvoidExpressionAdapter();
       }
       @Override
       public Adapter caseLetExpression(LetExpression object)
@@ -170,11 +215,6 @@ public class CoolAdapterFactory extends AdapterFactoryImpl
         return createCaseAdapter();
       }
       @Override
-      public Adapter caseNewExpression(NewExpression object)
-      {
-        return createNewExpressionAdapter();
-      }
-      @Override
       public Adapter caseType(Type object)
       {
         return createTypeAdapter();
@@ -185,19 +225,14 @@ public class CoolAdapterFactory extends AdapterFactoryImpl
         return createIdentifiableElementAdapter();
       }
       @Override
-      public Adapter caseDispatchExpression(DispatchExpression object)
-      {
-        return createDispatchExpressionAdapter();
-      }
-      @Override
       public Adapter caseCompareExpression(CompareExpression object)
       {
         return createCompareExpressionAdapter();
       }
       @Override
-      public Adapter casePlus(Plus object)
+      public Adapter caseAdditionExpression(AdditionExpression object)
       {
-        return createPlusAdapter();
+        return createAdditionExpressionAdapter();
       }
       @Override
       public Adapter caseMinus(Minus object)
@@ -205,14 +240,19 @@ public class CoolAdapterFactory extends AdapterFactoryImpl
         return createMinusAdapter();
       }
       @Override
-      public Adapter caseMulti(Multi object)
+      public Adapter caseMultiplicationExpression(MultiplicationExpression object)
       {
-        return createMultiAdapter();
+        return createMultiplicationExpressionAdapter();
       }
       @Override
       public Adapter caseDiv(Div object)
       {
         return createDivAdapter();
+      }
+      @Override
+      public Adapter caseDispatchExpression(DispatchExpression object)
+      {
+        return createDispatchExpressionAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -342,6 +382,21 @@ public class CoolAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link edu.stanford.compilers.cool.PrimaryExpression <em>Primary Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see edu.stanford.compilers.cool.PrimaryExpression
+   * @generated
+   */
+  public Adapter createPrimaryExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link edu.stanford.compilers.cool.SelfTypeLiteral <em>Self Type Literal</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -432,6 +487,111 @@ public class CoolAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link edu.stanford.compilers.cool.ParenExpression <em>Paren Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see edu.stanford.compilers.cool.ParenExpression
+   * @generated
+   */
+  public Adapter createParenExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link edu.stanford.compilers.cool.AssignmentExpression <em>Assignment Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see edu.stanford.compilers.cool.AssignmentExpression
+   * @generated
+   */
+  public Adapter createAssignmentExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link edu.stanford.compilers.cool.NegationExpression <em>Negation Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see edu.stanford.compilers.cool.NegationExpression
+   * @generated
+   */
+  public Adapter createNegationExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link edu.stanford.compilers.cool.IntegerCompositeExpression <em>Integer Composite Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see edu.stanford.compilers.cool.IntegerCompositeExpression
+   * @generated
+   */
+  public Adapter createIntegerCompositeExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link edu.stanford.compilers.cool.NewExpression <em>New Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see edu.stanford.compilers.cool.NewExpression
+   * @generated
+   */
+  public Adapter createNewExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link edu.stanford.compilers.cool.StaticDispatchExpression <em>Static Dispatch Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see edu.stanford.compilers.cool.StaticDispatchExpression
+   * @generated
+   */
+  public Adapter createStaticDispatchExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link edu.stanford.compilers.cool.ConditionalExpression <em>Conditional Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see edu.stanford.compilers.cool.ConditionalExpression
+   * @generated
+   */
+  public Adapter createConditionalExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link edu.stanford.compilers.cool.LoopExpression <em>Loop Expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -457,6 +617,21 @@ public class CoolAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createBlockExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link edu.stanford.compilers.cool.IsvoidExpression <em>Isvoid Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see edu.stanford.compilers.cool.IsvoidExpression
+   * @generated
+   */
+  public Adapter createIsvoidExpressionAdapter()
   {
     return null;
   }
@@ -522,21 +697,6 @@ public class CoolAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link edu.stanford.compilers.cool.NewExpression <em>New Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see edu.stanford.compilers.cool.NewExpression
-   * @generated
-   */
-  public Adapter createNewExpressionAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link edu.stanford.compilers.cool.Type <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -567,21 +727,6 @@ public class CoolAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link edu.stanford.compilers.cool.DispatchExpression <em>Dispatch Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see edu.stanford.compilers.cool.DispatchExpression
-   * @generated
-   */
-  public Adapter createDispatchExpressionAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link edu.stanford.compilers.cool.CompareExpression <em>Compare Expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -597,16 +742,16 @@ public class CoolAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link edu.stanford.compilers.cool.Plus <em>Plus</em>}'.
+   * Creates a new adapter for an object of class '{@link edu.stanford.compilers.cool.AdditionExpression <em>Addition Expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see edu.stanford.compilers.cool.Plus
+   * @see edu.stanford.compilers.cool.AdditionExpression
    * @generated
    */
-  public Adapter createPlusAdapter()
+  public Adapter createAdditionExpressionAdapter()
   {
     return null;
   }
@@ -627,16 +772,16 @@ public class CoolAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link edu.stanford.compilers.cool.Multi <em>Multi</em>}'.
+   * Creates a new adapter for an object of class '{@link edu.stanford.compilers.cool.MultiplicationExpression <em>Multiplication Expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see edu.stanford.compilers.cool.Multi
+   * @see edu.stanford.compilers.cool.MultiplicationExpression
    * @generated
    */
-  public Adapter createMultiAdapter()
+  public Adapter createMultiplicationExpressionAdapter()
   {
     return null;
   }
@@ -652,6 +797,21 @@ public class CoolAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDivAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link edu.stanford.compilers.cool.DispatchExpression <em>Dispatch Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see edu.stanford.compilers.cool.DispatchExpression
+   * @generated
+   */
+  public Adapter createDispatchExpressionAdapter()
   {
     return null;
   }

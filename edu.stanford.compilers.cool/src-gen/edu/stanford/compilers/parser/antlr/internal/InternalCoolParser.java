@@ -22,7 +22,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalCoolParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'class'", "'inherits'", "'{'", "'}'", "';'", "':'", "'<-'", "'('", "','", "')'", "'self'", "'not'", "'~'", "'@'", "'.'", "'if'", "'then'", "'else'", "'fi'", "'while'", "'loop'", "'pool'", "'let'", "'in'", "'case'", "'of'", "'esac'", "'=>'", "'new'", "'isvoid'", "'<'", "'<='", "'='", "'+'", "'-'", "'*'", "'/'", "'true'", "'false'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'class'", "'inherits'", "'{'", "'}'", "';'", "':'", "'<-'", "'('", "','", "')'", "'self'", "'not'", "'~'", "'new'", "'.'", "'if'", "'then'", "'else'", "'fi'", "'while'", "'loop'", "'pool'", "'isvoid'", "'let'", "'in'", "'case'", "'of'", "'esac'", "'=>'", "'<'", "'<='", "'='", "'+'", "'-'", "'*'", "'/'", "'@'", "'true'", "'false'"
     };
     public static final int RULE_ID=4;
     public static final int T__29=29;
@@ -1395,32 +1395,32 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:517:1: ruleExpression returns [EObject current=null] : this_DispatchExpression_0= ruleDispatchExpression ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:517:1: ruleExpression returns [EObject current=null] : this_CompareExpression_0= ruleCompareExpression ;
     public final EObject ruleExpression() throws RecognitionException {
         EObject current = null;
 
-        EObject this_DispatchExpression_0 = null;
+        EObject this_CompareExpression_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:520:28: (this_DispatchExpression_0= ruleDispatchExpression )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:522:5: this_DispatchExpression_0= ruleDispatchExpression
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:520:28: (this_CompareExpression_0= ruleCompareExpression )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:522:5: this_CompareExpression_0= ruleCompareExpression
             {
             if ( state.backtracking==0 ) {
                
-                      newCompositeNode(grammarAccess.getExpressionAccess().getDispatchExpressionParserRuleCall()); 
+                      newCompositeNode(grammarAccess.getExpressionAccess().getCompareExpressionParserRuleCall()); 
                   
             }
-            pushFollow(FOLLOW_ruleDispatchExpression_in_ruleExpression1099);
-            this_DispatchExpression_0=ruleDispatchExpression();
+            pushFollow(FOLLOW_ruleCompareExpression_in_ruleExpression1099);
+            this_CompareExpression_0=ruleCompareExpression();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
                
-                      current = this_DispatchExpression_0; 
+                      current = this_CompareExpression_0; 
                       afterParserOrEnumRuleCall();
                   
             }
@@ -1484,7 +1484,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePrimaryExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:547:1: rulePrimaryExpression returns [EObject current=null] : (this_ConditionalExpression_0= ruleConditionalExpression | this_LoopExpression_1= ruleLoopExpression | this_BlockExpression_2= ruleBlockExpression | this_LetExpression_3= ruleLetExpression | this_CaseExpression_4= ruleCaseExpression | this_NewExpression_5= ruleNewExpression | this_IsvoidExpression_6= ruleIsvoidExpression | this_AssignmentExpression_7= ruleAssignmentExpression | this_SelfTypeLiteral_8= ruleSelfTypeLiteral | this_IdentifierRefExpression_9= ruleIdentifierRefExpression | this_Literal_10= ruleLiteral | this_ParenExpression_11= ruleParenExpression | this_NegationExpression_12= ruleNegationExpression | this_IntegerComposite_13= ruleIntegerComposite | this_StaticDispatchExpression_14= ruleStaticDispatchExpression ) ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:547:1: rulePrimaryExpression returns [EObject current=null] : (this_ConditionalExpression_0= ruleConditionalExpression | this_LoopExpression_1= ruleLoopExpression | this_BlockExpression_2= ruleBlockExpression | this_LetExpression_3= ruleLetExpression | this_CaseExpression_4= ruleCaseExpression | this_NewExpression_5= ruleNewExpression | this_IsvoidExpression_6= ruleIsvoidExpression | this_AssignmentExpression_7= ruleAssignmentExpression | this_SelfTypeLiteral_8= ruleSelfTypeLiteral | this_IdentifierRefExpression_9= ruleIdentifierRefExpression | this_Literal_10= ruleLiteral | this_ParenExpression_11= ruleParenExpression | this_NegationExpression_12= ruleNegationExpression | this_IntegerCompositeExpression_13= ruleIntegerCompositeExpression | this_StaticDispatchExpression_14= ruleStaticDispatchExpression ) ;
     public final EObject rulePrimaryExpression() throws RecognitionException {
         EObject current = null;
 
@@ -1514,7 +1514,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
         EObject this_NegationExpression_12 = null;
 
-        EObject this_IntegerComposite_13 = null;
+        EObject this_IntegerCompositeExpression_13 = null;
 
         EObject this_StaticDispatchExpression_14 = null;
 
@@ -1522,10 +1522,10 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:550:28: ( (this_ConditionalExpression_0= ruleConditionalExpression | this_LoopExpression_1= ruleLoopExpression | this_BlockExpression_2= ruleBlockExpression | this_LetExpression_3= ruleLetExpression | this_CaseExpression_4= ruleCaseExpression | this_NewExpression_5= ruleNewExpression | this_IsvoidExpression_6= ruleIsvoidExpression | this_AssignmentExpression_7= ruleAssignmentExpression | this_SelfTypeLiteral_8= ruleSelfTypeLiteral | this_IdentifierRefExpression_9= ruleIdentifierRefExpression | this_Literal_10= ruleLiteral | this_ParenExpression_11= ruleParenExpression | this_NegationExpression_12= ruleNegationExpression | this_IntegerComposite_13= ruleIntegerComposite | this_StaticDispatchExpression_14= ruleStaticDispatchExpression ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:551:1: (this_ConditionalExpression_0= ruleConditionalExpression | this_LoopExpression_1= ruleLoopExpression | this_BlockExpression_2= ruleBlockExpression | this_LetExpression_3= ruleLetExpression | this_CaseExpression_4= ruleCaseExpression | this_NewExpression_5= ruleNewExpression | this_IsvoidExpression_6= ruleIsvoidExpression | this_AssignmentExpression_7= ruleAssignmentExpression | this_SelfTypeLiteral_8= ruleSelfTypeLiteral | this_IdentifierRefExpression_9= ruleIdentifierRefExpression | this_Literal_10= ruleLiteral | this_ParenExpression_11= ruleParenExpression | this_NegationExpression_12= ruleNegationExpression | this_IntegerComposite_13= ruleIntegerComposite | this_StaticDispatchExpression_14= ruleStaticDispatchExpression )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:550:28: ( (this_ConditionalExpression_0= ruleConditionalExpression | this_LoopExpression_1= ruleLoopExpression | this_BlockExpression_2= ruleBlockExpression | this_LetExpression_3= ruleLetExpression | this_CaseExpression_4= ruleCaseExpression | this_NewExpression_5= ruleNewExpression | this_IsvoidExpression_6= ruleIsvoidExpression | this_AssignmentExpression_7= ruleAssignmentExpression | this_SelfTypeLiteral_8= ruleSelfTypeLiteral | this_IdentifierRefExpression_9= ruleIdentifierRefExpression | this_Literal_10= ruleLiteral | this_ParenExpression_11= ruleParenExpression | this_NegationExpression_12= ruleNegationExpression | this_IntegerCompositeExpression_13= ruleIntegerCompositeExpression | this_StaticDispatchExpression_14= ruleStaticDispatchExpression ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:551:1: (this_ConditionalExpression_0= ruleConditionalExpression | this_LoopExpression_1= ruleLoopExpression | this_BlockExpression_2= ruleBlockExpression | this_LetExpression_3= ruleLetExpression | this_CaseExpression_4= ruleCaseExpression | this_NewExpression_5= ruleNewExpression | this_IsvoidExpression_6= ruleIsvoidExpression | this_AssignmentExpression_7= ruleAssignmentExpression | this_SelfTypeLiteral_8= ruleSelfTypeLiteral | this_IdentifierRefExpression_9= ruleIdentifierRefExpression | this_Literal_10= ruleLiteral | this_ParenExpression_11= ruleParenExpression | this_NegationExpression_12= ruleNegationExpression | this_IntegerCompositeExpression_13= ruleIntegerCompositeExpression | this_StaticDispatchExpression_14= ruleStaticDispatchExpression )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:551:1: (this_ConditionalExpression_0= ruleConditionalExpression | this_LoopExpression_1= ruleLoopExpression | this_BlockExpression_2= ruleBlockExpression | this_LetExpression_3= ruleLetExpression | this_CaseExpression_4= ruleCaseExpression | this_NewExpression_5= ruleNewExpression | this_IsvoidExpression_6= ruleIsvoidExpression | this_AssignmentExpression_7= ruleAssignmentExpression | this_SelfTypeLiteral_8= ruleSelfTypeLiteral | this_IdentifierRefExpression_9= ruleIdentifierRefExpression | this_Literal_10= ruleLiteral | this_ParenExpression_11= ruleParenExpression | this_NegationExpression_12= ruleNegationExpression | this_IntegerComposite_13= ruleIntegerComposite | this_StaticDispatchExpression_14= ruleStaticDispatchExpression )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:551:1: (this_ConditionalExpression_0= ruleConditionalExpression | this_LoopExpression_1= ruleLoopExpression | this_BlockExpression_2= ruleBlockExpression | this_LetExpression_3= ruleLetExpression | this_CaseExpression_4= ruleCaseExpression | this_NewExpression_5= ruleNewExpression | this_IsvoidExpression_6= ruleIsvoidExpression | this_AssignmentExpression_7= ruleAssignmentExpression | this_SelfTypeLiteral_8= ruleSelfTypeLiteral | this_IdentifierRefExpression_9= ruleIdentifierRefExpression | this_Literal_10= ruleLiteral | this_ParenExpression_11= ruleParenExpression | this_NegationExpression_12= ruleNegationExpression | this_IntegerCompositeExpression_13= ruleIntegerCompositeExpression | this_StaticDispatchExpression_14= ruleStaticDispatchExpression )
             int alt8=15;
             alt8 = dfa8.predict(input);
             switch (alt8) {
@@ -1816,21 +1816,21 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 14 :
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:682:5: this_IntegerComposite_13= ruleIntegerComposite
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:682:5: this_IntegerCompositeExpression_13= ruleIntegerCompositeExpression
                     {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getPrimaryExpressionAccess().getIntegerCompositeParserRuleCall_13()); 
+                              newCompositeNode(grammarAccess.getPrimaryExpressionAccess().getIntegerCompositeExpressionParserRuleCall_13()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleIntegerComposite_in_rulePrimaryExpression1541);
-                    this_IntegerComposite_13=ruleIntegerComposite();
+                    pushFollow(FOLLOW_ruleIntegerCompositeExpression_in_rulePrimaryExpression1541);
+                    this_IntegerCompositeExpression_13=ruleIntegerCompositeExpression();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
                        
-                              current = this_IntegerComposite_13; 
+                              current = this_IntegerCompositeExpression_13; 
                               afterParserOrEnumRuleCall();
                           
                     }
@@ -2968,30 +2968,30 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleNegationExpression"
 
 
-    // $ANTLR start "entryRuleIntegerComposite"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1091:1: entryRuleIntegerComposite returns [EObject current=null] : iv_ruleIntegerComposite= ruleIntegerComposite EOF ;
-    public final EObject entryRuleIntegerComposite() throws RecognitionException {
+    // $ANTLR start "entryRuleIntegerCompositeExpression"
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1091:1: entryRuleIntegerCompositeExpression returns [EObject current=null] : iv_ruleIntegerCompositeExpression= ruleIntegerCompositeExpression EOF ;
+    public final EObject entryRuleIntegerCompositeExpression() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleIntegerComposite = null;
+        EObject iv_ruleIntegerCompositeExpression = null;
 
 
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1092:2: (iv_ruleIntegerComposite= ruleIntegerComposite EOF )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1093:2: iv_ruleIntegerComposite= ruleIntegerComposite EOF
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1092:2: (iv_ruleIntegerCompositeExpression= ruleIntegerCompositeExpression EOF )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1093:2: iv_ruleIntegerCompositeExpression= ruleIntegerCompositeExpression EOF
             {
             if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getIntegerCompositeRule()); 
+               newCompositeNode(grammarAccess.getIntegerCompositeExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleIntegerComposite_in_entryRuleIntegerComposite2547);
-            iv_ruleIntegerComposite=ruleIntegerComposite();
+            pushFollow(FOLLOW_ruleIntegerCompositeExpression_in_entryRuleIntegerCompositeExpression2547);
+            iv_ruleIntegerCompositeExpression=ruleIntegerCompositeExpression();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleIntegerComposite; 
+               current =iv_ruleIntegerCompositeExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleIntegerComposite2557); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleIntegerCompositeExpression2557); if (state.failed) return current;
 
             }
 
@@ -3005,12 +3005,12 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleIntegerComposite"
+    // $ANTLR end "entryRuleIntegerCompositeExpression"
 
 
-    // $ANTLR start "ruleIntegerComposite"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1100:1: ruleIntegerComposite returns [EObject current=null] : (otherlv_0= '~' ( (lv_expr_1_0= ruleExpression ) ) ) ;
-    public final EObject ruleIntegerComposite() throws RecognitionException {
+    // $ANTLR start "ruleIntegerCompositeExpression"
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1100:1: ruleIntegerCompositeExpression returns [EObject current=null] : (otherlv_0= '~' ( (lv_expr_1_0= ruleExpression ) ) ) ;
+    public final EObject ruleIntegerCompositeExpression() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
@@ -3026,10 +3026,10 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
             // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1104:1: (otherlv_0= '~' ( (lv_expr_1_0= ruleExpression ) ) )
             // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1104:3: otherlv_0= '~' ( (lv_expr_1_0= ruleExpression ) )
             {
-            otherlv_0=(Token)match(input,23,FOLLOW_23_in_ruleIntegerComposite2594); if (state.failed) return current;
+            otherlv_0=(Token)match(input,23,FOLLOW_23_in_ruleIntegerCompositeExpression2594); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-                  	newLeafNode(otherlv_0, grammarAccess.getIntegerCompositeAccess().getTildeKeyword_0());
+                  	newLeafNode(otherlv_0, grammarAccess.getIntegerCompositeExpressionAccess().getTildeKeyword_0());
                   
             }
             // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1108:1: ( (lv_expr_1_0= ruleExpression ) )
@@ -3040,10 +3040,10 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
             {
             if ( state.backtracking==0 ) {
                
-              	        newCompositeNode(grammarAccess.getIntegerCompositeAccess().getExprExpressionParserRuleCall_1_0()); 
+              	        newCompositeNode(grammarAccess.getIntegerCompositeExpressionAccess().getExprExpressionParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleExpression_in_ruleIntegerComposite2615);
+            pushFollow(FOLLOW_ruleExpression_in_ruleIntegerCompositeExpression2615);
             lv_expr_1_0=ruleExpression();
 
             state._fsp--;
@@ -3051,7 +3051,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
 
               	        if (current==null) {
-              	            current = createModelElementForParent(grammarAccess.getIntegerCompositeRule());
+              	            current = createModelElementForParent(grammarAccess.getIntegerCompositeExpressionRule());
               	        }
                      		set(
                      			current, 
@@ -3086,33 +3086,33 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleIntegerComposite"
+    // $ANTLR end "ruleIntegerCompositeExpression"
 
 
-    // $ANTLR start "entryRuleDispatchExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1134:1: entryRuleDispatchExpression returns [EObject current=null] : iv_ruleDispatchExpression= ruleDispatchExpression EOF ;
-    public final EObject entryRuleDispatchExpression() throws RecognitionException {
+    // $ANTLR start "entryRuleNewExpression"
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1134:1: entryRuleNewExpression returns [EObject current=null] : iv_ruleNewExpression= ruleNewExpression EOF ;
+    public final EObject entryRuleNewExpression() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleDispatchExpression = null;
+        EObject iv_ruleNewExpression = null;
 
 
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1135:2: (iv_ruleDispatchExpression= ruleDispatchExpression EOF )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1136:2: iv_ruleDispatchExpression= ruleDispatchExpression EOF
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1135:2: (iv_ruleNewExpression= ruleNewExpression EOF )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1136:2: iv_ruleNewExpression= ruleNewExpression EOF
             {
             if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getDispatchExpressionRule()); 
+               newCompositeNode(grammarAccess.getNewExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleDispatchExpression_in_entryRuleDispatchExpression2651);
-            iv_ruleDispatchExpression=ruleDispatchExpression();
+            pushFollow(FOLLOW_ruleNewExpression_in_entryRuleNewExpression2651);
+            iv_ruleNewExpression=ruleNewExpression();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleDispatchExpression; 
+               current =iv_ruleNewExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDispatchExpression2661); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNewExpression2661); if (state.failed) return current;
 
             }
 
@@ -3126,322 +3126,54 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleDispatchExpression"
+    // $ANTLR end "entryRuleNewExpression"
 
 
-    // $ANTLR start "ruleDispatchExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1143:1: ruleDispatchExpression returns [EObject current=null] : (this_CompareExpression_0= ruleCompareExpression ( ( ( ( () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) ) ) )=> ( () (otherlv_2= '@' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '.' ( (lv_ref_5_0= ruleIdentifierRefExpression ) ) ) ) otherlv_6= '(' ( ( (lv_actual_7_0= ruleExpression ) ) (otherlv_8= ',' ( (lv_actual_9_0= ruleExpression ) ) )* )? otherlv_10= ')' )? ) ;
-    public final EObject ruleDispatchExpression() throws RecognitionException {
+    // $ANTLR start "ruleNewExpression"
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1143:1: ruleNewExpression returns [EObject current=null] : (otherlv_0= 'new' ( (otherlv_1= RULE_ID ) ) ) ;
+    public final EObject ruleNewExpression() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_2=null;
-        Token otherlv_3=null;
-        Token otherlv_4=null;
-        Token otherlv_6=null;
-        Token otherlv_8=null;
-        Token otherlv_10=null;
-        EObject this_CompareExpression_0 = null;
-
-        EObject lv_ref_5_0 = null;
-
-        EObject lv_actual_7_0 = null;
-
-        EObject lv_actual_9_0 = null;
-
+        Token otherlv_0=null;
+        Token otherlv_1=null;
 
          enterRule(); 
             
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1146:28: ( (this_CompareExpression_0= ruleCompareExpression ( ( ( ( () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) ) ) )=> ( () (otherlv_2= '@' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '.' ( (lv_ref_5_0= ruleIdentifierRefExpression ) ) ) ) otherlv_6= '(' ( ( (lv_actual_7_0= ruleExpression ) ) (otherlv_8= ',' ( (lv_actual_9_0= ruleExpression ) ) )* )? otherlv_10= ')' )? ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1147:1: (this_CompareExpression_0= ruleCompareExpression ( ( ( ( () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) ) ) )=> ( () (otherlv_2= '@' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '.' ( (lv_ref_5_0= ruleIdentifierRefExpression ) ) ) ) otherlv_6= '(' ( ( (lv_actual_7_0= ruleExpression ) ) (otherlv_8= ',' ( (lv_actual_9_0= ruleExpression ) ) )* )? otherlv_10= ')' )? )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1146:28: ( (otherlv_0= 'new' ( (otherlv_1= RULE_ID ) ) ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1147:1: (otherlv_0= 'new' ( (otherlv_1= RULE_ID ) ) )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1147:1: (this_CompareExpression_0= ruleCompareExpression ( ( ( ( () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) ) ) )=> ( () (otherlv_2= '@' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '.' ( (lv_ref_5_0= ruleIdentifierRefExpression ) ) ) ) otherlv_6= '(' ( ( (lv_actual_7_0= ruleExpression ) ) (otherlv_8= ',' ( (lv_actual_9_0= ruleExpression ) ) )* )? otherlv_10= ')' )? )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1148:5: this_CompareExpression_0= ruleCompareExpression ( ( ( ( () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) ) ) )=> ( () (otherlv_2= '@' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '.' ( (lv_ref_5_0= ruleIdentifierRefExpression ) ) ) ) otherlv_6= '(' ( ( (lv_actual_7_0= ruleExpression ) ) (otherlv_8= ',' ( (lv_actual_9_0= ruleExpression ) ) )* )? otherlv_10= ')' )?
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1147:1: (otherlv_0= 'new' ( (otherlv_1= RULE_ID ) ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1147:3: otherlv_0= 'new' ( (otherlv_1= RULE_ID ) )
             {
+            otherlv_0=(Token)match(input,24,FOLLOW_24_in_ruleNewExpression2698); if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               
-                      newCompositeNode(grammarAccess.getDispatchExpressionAccess().getCompareExpressionParserRuleCall_0()); 
+
+                  	newLeafNode(otherlv_0, grammarAccess.getNewExpressionAccess().getNewKeyword_0());
                   
             }
-            pushFollow(FOLLOW_ruleCompareExpression_in_ruleDispatchExpression2708);
-            this_CompareExpression_0=ruleCompareExpression();
-
-            state._fsp--;
-            if (state.failed) return current;
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1151:1: ( (otherlv_1= RULE_ID ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1152:1: (otherlv_1= RULE_ID )
+            {
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1152:1: (otherlv_1= RULE_ID )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1153:3: otherlv_1= RULE_ID
+            {
             if ( state.backtracking==0 ) {
-               
-                      current = this_CompareExpression_0; 
-                      afterParserOrEnumRuleCall();
-                  
+
+              			if (current==null) {
+              	            current = createModelElement(grammarAccess.getNewExpressionRule());
+              	        }
+                      
             }
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1156:1: ( ( ( ( () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) ) ) )=> ( () (otherlv_2= '@' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '.' ( (lv_ref_5_0= ruleIdentifierRefExpression ) ) ) ) otherlv_6= '(' ( ( (lv_actual_7_0= ruleExpression ) ) (otherlv_8= ',' ( (lv_actual_9_0= ruleExpression ) ) )* )? otherlv_10= ')' )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNewExpression2718); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
 
-            if ( (LA13_0==24) ) {
-                int LA13_1 = input.LA(2);
-
-                if ( (synpred1_InternalCool()) ) {
-                    alt13=1;
-                }
+              		newLeafNode(otherlv_1, grammarAccess.getNewExpressionAccess().getType_nameTypeCrossReference_1_0()); 
+              	
             }
-            else if ( (LA13_0==25) ) {
-                int LA13_2 = input.LA(2);
 
-                if ( (synpred1_InternalCool()) ) {
-                    alt13=1;
-                }
             }
-            switch (alt13) {
-                case 1 :
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1156:2: ( ( ( () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) ) ) )=> ( () (otherlv_2= '@' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '.' ( (lv_ref_5_0= ruleIdentifierRefExpression ) ) ) ) otherlv_6= '(' ( ( (lv_actual_7_0= ruleExpression ) ) (otherlv_8= ',' ( (lv_actual_9_0= ruleExpression ) ) )* )? otherlv_10= ')'
-                    {
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1156:2: ( ( ( () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) ) ) )=> ( () (otherlv_2= '@' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '.' ( (lv_ref_5_0= ruleIdentifierRefExpression ) ) ) )
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1156:3: ( ( () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) ) ) )=> ( () (otherlv_2= '@' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '.' ( (lv_ref_5_0= ruleIdentifierRefExpression ) ) )
-                    {
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1168:6: ( () (otherlv_2= '@' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '.' ( (lv_ref_5_0= ruleIdentifierRefExpression ) ) )
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1168:7: () (otherlv_2= '@' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '.' ( (lv_ref_5_0= ruleIdentifierRefExpression ) )
-                    {
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1168:7: ()
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1169:5: 
-                    {
-                    if ( state.backtracking==0 ) {
 
-                              current = forceCreateModelElementAndSet(
-                                  grammarAccess.getDispatchExpressionAccess().getDispatchExpressionExprAction_1_0_0_0(),
-                                  current);
-                          
-                    }
-
-                    }
-
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1174:2: (otherlv_2= '@' ( (otherlv_3= RULE_ID ) ) )?
-                    int alt10=2;
-                    int LA10_0 = input.LA(1);
-
-                    if ( (LA10_0==24) ) {
-                        alt10=1;
-                    }
-                    switch (alt10) {
-                        case 1 :
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1174:4: otherlv_2= '@' ( (otherlv_3= RULE_ID ) )
-                            {
-                            otherlv_2=(Token)match(input,24,FOLLOW_24_in_ruleDispatchExpression2771); if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
-
-                                  	newLeafNode(otherlv_2, grammarAccess.getDispatchExpressionAccess().getCommercialAtKeyword_1_0_0_1_0());
-                                  
-                            }
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1178:1: ( (otherlv_3= RULE_ID ) )
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1179:1: (otherlv_3= RULE_ID )
-                            {
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1179:1: (otherlv_3= RULE_ID )
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1180:3: otherlv_3= RULE_ID
-                            {
-                            if ( state.backtracking==0 ) {
-
-                              			if (current==null) {
-                              	            current = createModelElement(grammarAccess.getDispatchExpressionRule());
-                              	        }
-                                      
-                            }
-                            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDispatchExpression2791); if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
-
-                              		newLeafNode(otherlv_3, grammarAccess.getDispatchExpressionAccess().getType_nameTypeCrossReference_1_0_0_1_1_0()); 
-                              	
-                            }
-
-                            }
-
-
-                            }
-
-
-                            }
-                            break;
-
-                    }
-
-                    otherlv_4=(Token)match(input,25,FOLLOW_25_in_ruleDispatchExpression2805); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                          	newLeafNode(otherlv_4, grammarAccess.getDispatchExpressionAccess().getFullStopKeyword_1_0_0_2());
-                          
-                    }
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1195:1: ( (lv_ref_5_0= ruleIdentifierRefExpression ) )
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1196:1: (lv_ref_5_0= ruleIdentifierRefExpression )
-                    {
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1196:1: (lv_ref_5_0= ruleIdentifierRefExpression )
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1197:3: lv_ref_5_0= ruleIdentifierRefExpression
-                    {
-                    if ( state.backtracking==0 ) {
-                       
-                      	        newCompositeNode(grammarAccess.getDispatchExpressionAccess().getRefIdentifierRefExpressionParserRuleCall_1_0_0_3_0()); 
-                      	    
-                    }
-                    pushFollow(FOLLOW_ruleIdentifierRefExpression_in_ruleDispatchExpression2826);
-                    lv_ref_5_0=ruleIdentifierRefExpression();
-
-                    state._fsp--;
-                    if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                      	        if (current==null) {
-                      	            current = createModelElementForParent(grammarAccess.getDispatchExpressionRule());
-                      	        }
-                             		set(
-                             			current, 
-                             			"ref",
-                              		lv_ref_5_0, 
-                              		"IdentifierRefExpression");
-                      	        afterParserOrEnumRuleCall();
-                      	    
-                    }
-
-                    }
-
-
-                    }
-
-
-                    }
-
-
-                    }
-
-                    otherlv_6=(Token)match(input,18,FOLLOW_18_in_ruleDispatchExpression2840); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                          	newLeafNode(otherlv_6, grammarAccess.getDispatchExpressionAccess().getLeftParenthesisKeyword_1_1());
-                          
-                    }
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1217:1: ( ( (lv_actual_7_0= ruleExpression ) ) (otherlv_8= ',' ( (lv_actual_9_0= ruleExpression ) ) )* )?
-                    int alt12=2;
-                    int LA12_0 = input.LA(1);
-
-                    if ( ((LA12_0>=RULE_ID && LA12_0<=RULE_STRING)||LA12_0==13||LA12_0==18||(LA12_0>=21 && LA12_0<=23)||LA12_0==26||LA12_0==30||LA12_0==33||LA12_0==35||(LA12_0>=39 && LA12_0<=40)||(LA12_0>=48 && LA12_0<=49)) ) {
-                        alt12=1;
-                    }
-                    switch (alt12) {
-                        case 1 :
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1217:2: ( (lv_actual_7_0= ruleExpression ) ) (otherlv_8= ',' ( (lv_actual_9_0= ruleExpression ) ) )*
-                            {
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1217:2: ( (lv_actual_7_0= ruleExpression ) )
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1218:1: (lv_actual_7_0= ruleExpression )
-                            {
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1218:1: (lv_actual_7_0= ruleExpression )
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1219:3: lv_actual_7_0= ruleExpression
-                            {
-                            if ( state.backtracking==0 ) {
-                               
-                              	        newCompositeNode(grammarAccess.getDispatchExpressionAccess().getActualExpressionParserRuleCall_1_2_0_0()); 
-                              	    
-                            }
-                            pushFollow(FOLLOW_ruleExpression_in_ruleDispatchExpression2862);
-                            lv_actual_7_0=ruleExpression();
-
-                            state._fsp--;
-                            if (state.failed) return current;
-                            if ( state.backtracking==0 ) {
-
-                              	        if (current==null) {
-                              	            current = createModelElementForParent(grammarAccess.getDispatchExpressionRule());
-                              	        }
-                                     		add(
-                                     			current, 
-                                     			"actual",
-                                      		lv_actual_7_0, 
-                                      		"Expression");
-                              	        afterParserOrEnumRuleCall();
-                              	    
-                            }
-
-                            }
-
-
-                            }
-
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1235:2: (otherlv_8= ',' ( (lv_actual_9_0= ruleExpression ) ) )*
-                            loop11:
-                            do {
-                                int alt11=2;
-                                int LA11_0 = input.LA(1);
-
-                                if ( (LA11_0==19) ) {
-                                    alt11=1;
-                                }
-
-
-                                switch (alt11) {
-                            	case 1 :
-                            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1235:4: otherlv_8= ',' ( (lv_actual_9_0= ruleExpression ) )
-                            	    {
-                            	    otherlv_8=(Token)match(input,19,FOLLOW_19_in_ruleDispatchExpression2875); if (state.failed) return current;
-                            	    if ( state.backtracking==0 ) {
-
-                            	          	newLeafNode(otherlv_8, grammarAccess.getDispatchExpressionAccess().getCommaKeyword_1_2_1_0());
-                            	          
-                            	    }
-                            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1239:1: ( (lv_actual_9_0= ruleExpression ) )
-                            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1240:1: (lv_actual_9_0= ruleExpression )
-                            	    {
-                            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1240:1: (lv_actual_9_0= ruleExpression )
-                            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1241:3: lv_actual_9_0= ruleExpression
-                            	    {
-                            	    if ( state.backtracking==0 ) {
-                            	       
-                            	      	        newCompositeNode(grammarAccess.getDispatchExpressionAccess().getActualExpressionParserRuleCall_1_2_1_1_0()); 
-                            	      	    
-                            	    }
-                            	    pushFollow(FOLLOW_ruleExpression_in_ruleDispatchExpression2896);
-                            	    lv_actual_9_0=ruleExpression();
-
-                            	    state._fsp--;
-                            	    if (state.failed) return current;
-                            	    if ( state.backtracking==0 ) {
-
-                            	      	        if (current==null) {
-                            	      	            current = createModelElementForParent(grammarAccess.getDispatchExpressionRule());
-                            	      	        }
-                            	             		add(
-                            	             			current, 
-                            	             			"actual",
-                            	              		lv_actual_9_0, 
-                            	              		"Expression");
-                            	      	        afterParserOrEnumRuleCall();
-                            	      	    
-                            	    }
-
-                            	    }
-
-
-                            	    }
-
-
-                            	    }
-                            	    break;
-
-                            	default :
-                            	    break loop11;
-                                }
-                            } while (true);
-
-
-                            }
-                            break;
-
-                    }
-
-                    otherlv_10=(Token)match(input,20,FOLLOW_20_in_ruleDispatchExpression2912); if (state.failed) return current;
-                    if ( state.backtracking==0 ) {
-
-                          	newLeafNode(otherlv_10, grammarAccess.getDispatchExpressionAccess().getRightParenthesisKeyword_1_3());
-                          
-                    }
-
-                    }
-                    break;
 
             }
 
@@ -3464,11 +3196,11 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleDispatchExpression"
+    // $ANTLR end "ruleNewExpression"
 
 
     // $ANTLR start "entryRuleStaticDispatchExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1269:1: entryRuleStaticDispatchExpression returns [EObject current=null] : iv_ruleStaticDispatchExpression= ruleStaticDispatchExpression EOF ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1172:1: entryRuleStaticDispatchExpression returns [EObject current=null] : iv_ruleStaticDispatchExpression= ruleStaticDispatchExpression EOF ;
     public final EObject entryRuleStaticDispatchExpression() throws RecognitionException {
         EObject current = null;
 
@@ -3476,13 +3208,13 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1270:2: (iv_ruleStaticDispatchExpression= ruleStaticDispatchExpression EOF )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1271:2: iv_ruleStaticDispatchExpression= ruleStaticDispatchExpression EOF
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1173:2: (iv_ruleStaticDispatchExpression= ruleStaticDispatchExpression EOF )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1174:2: iv_ruleStaticDispatchExpression= ruleStaticDispatchExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getStaticDispatchExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleStaticDispatchExpression_in_entryRuleStaticDispatchExpression2950);
+            pushFollow(FOLLOW_ruleStaticDispatchExpression_in_entryRuleStaticDispatchExpression2754);
             iv_ruleStaticDispatchExpression=ruleStaticDispatchExpression();
 
             state._fsp--;
@@ -3490,7 +3222,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleStaticDispatchExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStaticDispatchExpression2960); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStaticDispatchExpression2764); if (state.failed) return current;
 
             }
 
@@ -3508,41 +3240,44 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStaticDispatchExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1278:1: ruleStaticDispatchExpression returns [EObject current=null] : ( ( (lv_ref_0_0= ruleIdentifierRefExpression ) ) otherlv_1= '(' ( ( (lv_actual_2_0= ruleExpression ) ) (otherlv_3= ',' ( (lv_actual_4_0= ruleExpression ) ) )* )? otherlv_5= ')' ) ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1181:1: ruleStaticDispatchExpression returns [EObject current=null] : ( ( (lv_ref_0_0= ruleIdentifierRefExpression ) ) otherlv_1= '(' ( ( (lv_actual_2_0= ruleExpression ) ) (otherlv_3= ',' ( (lv_actual_4_0= ruleExpression ) ) )* )? otherlv_5= ')' ( ( ( '.' )=>otherlv_6= '.' ) ( (lv_chain_7_0= ruleStaticDispatchExpression ) ) )? ) ;
     public final EObject ruleStaticDispatchExpression() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
         Token otherlv_3=null;
         Token otherlv_5=null;
+        Token otherlv_6=null;
         EObject lv_ref_0_0 = null;
 
         EObject lv_actual_2_0 = null;
 
         EObject lv_actual_4_0 = null;
 
+        EObject lv_chain_7_0 = null;
+
 
          enterRule(); 
             
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1281:28: ( ( ( (lv_ref_0_0= ruleIdentifierRefExpression ) ) otherlv_1= '(' ( ( (lv_actual_2_0= ruleExpression ) ) (otherlv_3= ',' ( (lv_actual_4_0= ruleExpression ) ) )* )? otherlv_5= ')' ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1282:1: ( ( (lv_ref_0_0= ruleIdentifierRefExpression ) ) otherlv_1= '(' ( ( (lv_actual_2_0= ruleExpression ) ) (otherlv_3= ',' ( (lv_actual_4_0= ruleExpression ) ) )* )? otherlv_5= ')' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1184:28: ( ( ( (lv_ref_0_0= ruleIdentifierRefExpression ) ) otherlv_1= '(' ( ( (lv_actual_2_0= ruleExpression ) ) (otherlv_3= ',' ( (lv_actual_4_0= ruleExpression ) ) )* )? otherlv_5= ')' ( ( ( '.' )=>otherlv_6= '.' ) ( (lv_chain_7_0= ruleStaticDispatchExpression ) ) )? ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1185:1: ( ( (lv_ref_0_0= ruleIdentifierRefExpression ) ) otherlv_1= '(' ( ( (lv_actual_2_0= ruleExpression ) ) (otherlv_3= ',' ( (lv_actual_4_0= ruleExpression ) ) )* )? otherlv_5= ')' ( ( ( '.' )=>otherlv_6= '.' ) ( (lv_chain_7_0= ruleStaticDispatchExpression ) ) )? )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1282:1: ( ( (lv_ref_0_0= ruleIdentifierRefExpression ) ) otherlv_1= '(' ( ( (lv_actual_2_0= ruleExpression ) ) (otherlv_3= ',' ( (lv_actual_4_0= ruleExpression ) ) )* )? otherlv_5= ')' )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1282:2: ( (lv_ref_0_0= ruleIdentifierRefExpression ) ) otherlv_1= '(' ( ( (lv_actual_2_0= ruleExpression ) ) (otherlv_3= ',' ( (lv_actual_4_0= ruleExpression ) ) )* )? otherlv_5= ')'
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1185:1: ( ( (lv_ref_0_0= ruleIdentifierRefExpression ) ) otherlv_1= '(' ( ( (lv_actual_2_0= ruleExpression ) ) (otherlv_3= ',' ( (lv_actual_4_0= ruleExpression ) ) )* )? otherlv_5= ')' ( ( ( '.' )=>otherlv_6= '.' ) ( (lv_chain_7_0= ruleStaticDispatchExpression ) ) )? )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1185:2: ( (lv_ref_0_0= ruleIdentifierRefExpression ) ) otherlv_1= '(' ( ( (lv_actual_2_0= ruleExpression ) ) (otherlv_3= ',' ( (lv_actual_4_0= ruleExpression ) ) )* )? otherlv_5= ')' ( ( ( '.' )=>otherlv_6= '.' ) ( (lv_chain_7_0= ruleStaticDispatchExpression ) ) )?
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1282:2: ( (lv_ref_0_0= ruleIdentifierRefExpression ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1283:1: (lv_ref_0_0= ruleIdentifierRefExpression )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1185:2: ( (lv_ref_0_0= ruleIdentifierRefExpression ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1186:1: (lv_ref_0_0= ruleIdentifierRefExpression )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1283:1: (lv_ref_0_0= ruleIdentifierRefExpression )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1284:3: lv_ref_0_0= ruleIdentifierRefExpression
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1186:1: (lv_ref_0_0= ruleIdentifierRefExpression )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1187:3: lv_ref_0_0= ruleIdentifierRefExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getStaticDispatchExpressionAccess().getRefIdentifierRefExpressionParserRuleCall_0_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleIdentifierRefExpression_in_ruleStaticDispatchExpression3006);
+            pushFollow(FOLLOW_ruleIdentifierRefExpression_in_ruleStaticDispatchExpression2810);
             lv_ref_0_0=ruleIdentifierRefExpression();
 
             state._fsp--;
@@ -3566,35 +3301,35 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,18,FOLLOW_18_in_ruleStaticDispatchExpression3018); if (state.failed) return current;
+            otherlv_1=(Token)match(input,18,FOLLOW_18_in_ruleStaticDispatchExpression2822); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getStaticDispatchExpressionAccess().getLeftParenthesisKeyword_1());
                   
             }
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1304:1: ( ( (lv_actual_2_0= ruleExpression ) ) (otherlv_3= ',' ( (lv_actual_4_0= ruleExpression ) ) )* )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1207:1: ( ( (lv_actual_2_0= ruleExpression ) ) (otherlv_3= ',' ( (lv_actual_4_0= ruleExpression ) ) )* )?
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( ((LA15_0>=RULE_ID && LA15_0<=RULE_STRING)||LA15_0==13||LA15_0==18||(LA15_0>=21 && LA15_0<=23)||LA15_0==26||LA15_0==30||LA15_0==33||LA15_0==35||(LA15_0>=39 && LA15_0<=40)||(LA15_0>=48 && LA15_0<=49)) ) {
-                alt15=1;
+            if ( ((LA11_0>=RULE_ID && LA11_0<=RULE_STRING)||LA11_0==13||LA11_0==18||(LA11_0>=21 && LA11_0<=24)||LA11_0==26||LA11_0==30||(LA11_0>=33 && LA11_0<=34)||LA11_0==36||(LA11_0>=48 && LA11_0<=49)) ) {
+                alt11=1;
             }
-            switch (alt15) {
+            switch (alt11) {
                 case 1 :
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1304:2: ( (lv_actual_2_0= ruleExpression ) ) (otherlv_3= ',' ( (lv_actual_4_0= ruleExpression ) ) )*
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1207:2: ( (lv_actual_2_0= ruleExpression ) ) (otherlv_3= ',' ( (lv_actual_4_0= ruleExpression ) ) )*
                     {
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1304:2: ( (lv_actual_2_0= ruleExpression ) )
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1305:1: (lv_actual_2_0= ruleExpression )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1207:2: ( (lv_actual_2_0= ruleExpression ) )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1208:1: (lv_actual_2_0= ruleExpression )
                     {
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1305:1: (lv_actual_2_0= ruleExpression )
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1306:3: lv_actual_2_0= ruleExpression
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1208:1: (lv_actual_2_0= ruleExpression )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1209:3: lv_actual_2_0= ruleExpression
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getStaticDispatchExpressionAccess().getActualExpressionParserRuleCall_2_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleExpression_in_ruleStaticDispatchExpression3040);
+                    pushFollow(FOLLOW_ruleExpression_in_ruleStaticDispatchExpression2844);
                     lv_actual_2_0=ruleExpression();
 
                     state._fsp--;
@@ -3618,39 +3353,39 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1322:2: (otherlv_3= ',' ( (lv_actual_4_0= ruleExpression ) ) )*
-                    loop14:
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1225:2: (otherlv_3= ',' ( (lv_actual_4_0= ruleExpression ) ) )*
+                    loop10:
                     do {
-                        int alt14=2;
-                        int LA14_0 = input.LA(1);
+                        int alt10=2;
+                        int LA10_0 = input.LA(1);
 
-                        if ( (LA14_0==19) ) {
-                            alt14=1;
+                        if ( (LA10_0==19) ) {
+                            alt10=1;
                         }
 
 
-                        switch (alt14) {
+                        switch (alt10) {
                     	case 1 :
-                    	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1322:4: otherlv_3= ',' ( (lv_actual_4_0= ruleExpression ) )
+                    	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1225:4: otherlv_3= ',' ( (lv_actual_4_0= ruleExpression ) )
                     	    {
-                    	    otherlv_3=(Token)match(input,19,FOLLOW_19_in_ruleStaticDispatchExpression3053); if (state.failed) return current;
+                    	    otherlv_3=(Token)match(input,19,FOLLOW_19_in_ruleStaticDispatchExpression2857); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_3, grammarAccess.getStaticDispatchExpressionAccess().getCommaKeyword_2_1_0());
                     	          
                     	    }
-                    	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1326:1: ( (lv_actual_4_0= ruleExpression ) )
-                    	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1327:1: (lv_actual_4_0= ruleExpression )
+                    	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1229:1: ( (lv_actual_4_0= ruleExpression ) )
+                    	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1230:1: (lv_actual_4_0= ruleExpression )
                     	    {
-                    	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1327:1: (lv_actual_4_0= ruleExpression )
-                    	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1328:3: lv_actual_4_0= ruleExpression
+                    	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1230:1: (lv_actual_4_0= ruleExpression )
+                    	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1231:3: lv_actual_4_0= ruleExpression
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getStaticDispatchExpressionAccess().getActualExpressionParserRuleCall_2_1_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_ruleExpression_in_ruleStaticDispatchExpression3074);
+                    	    pushFollow(FOLLOW_ruleExpression_in_ruleStaticDispatchExpression2878);
                     	    lv_actual_4_0=ruleExpression();
 
                     	    state._fsp--;
@@ -3679,7 +3414,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop14;
+                    	    break loop10;
                         }
                     } while (true);
 
@@ -3689,12 +3424,72 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,20,FOLLOW_20_in_ruleStaticDispatchExpression3090); if (state.failed) return current;
+            otherlv_5=(Token)match(input,20,FOLLOW_20_in_ruleStaticDispatchExpression2894); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_5, grammarAccess.getStaticDispatchExpressionAccess().getRightParenthesisKeyword_3());
                   
             }
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1251:1: ( ( ( '.' )=>otherlv_6= '.' ) ( (lv_chain_7_0= ruleStaticDispatchExpression ) ) )?
+            int alt12=2;
+            alt12 = dfa12.predict(input);
+            switch (alt12) {
+                case 1 :
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1251:2: ( ( '.' )=>otherlv_6= '.' ) ( (lv_chain_7_0= ruleStaticDispatchExpression ) )
+                    {
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1251:2: ( ( '.' )=>otherlv_6= '.' )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1251:3: ( '.' )=>otherlv_6= '.'
+                    {
+                    otherlv_6=(Token)match(input,25,FOLLOW_25_in_ruleStaticDispatchExpression2915); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                          	newLeafNode(otherlv_6, grammarAccess.getStaticDispatchExpressionAccess().getFullStopKeyword_4_0());
+                          
+                    }
+
+                    }
+
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1256:2: ( (lv_chain_7_0= ruleStaticDispatchExpression ) )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1257:1: (lv_chain_7_0= ruleStaticDispatchExpression )
+                    {
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1257:1: (lv_chain_7_0= ruleStaticDispatchExpression )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1258:3: lv_chain_7_0= ruleStaticDispatchExpression
+                    {
+                    if ( state.backtracking==0 ) {
+                       
+                      	        newCompositeNode(grammarAccess.getStaticDispatchExpressionAccess().getChainStaticDispatchExpressionParserRuleCall_4_1_0()); 
+                      	    
+                    }
+                    pushFollow(FOLLOW_ruleStaticDispatchExpression_in_ruleStaticDispatchExpression2937);
+                    lv_chain_7_0=ruleStaticDispatchExpression();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getStaticDispatchExpressionRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"chain",
+                              		lv_chain_7_0, 
+                              		"StaticDispatchExpression");
+                      	        afterParserOrEnumRuleCall();
+                      	    
+                    }
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
 
             }
 
@@ -3718,7 +3513,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleConditionalExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1356:1: entryRuleConditionalExpression returns [EObject current=null] : iv_ruleConditionalExpression= ruleConditionalExpression EOF ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1282:1: entryRuleConditionalExpression returns [EObject current=null] : iv_ruleConditionalExpression= ruleConditionalExpression EOF ;
     public final EObject entryRuleConditionalExpression() throws RecognitionException {
         EObject current = null;
 
@@ -3726,13 +3521,13 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1357:2: (iv_ruleConditionalExpression= ruleConditionalExpression EOF )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1358:2: iv_ruleConditionalExpression= ruleConditionalExpression EOF
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1283:2: (iv_ruleConditionalExpression= ruleConditionalExpression EOF )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1284:2: iv_ruleConditionalExpression= ruleConditionalExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getConditionalExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleConditionalExpression_in_entryRuleConditionalExpression3126);
+            pushFollow(FOLLOW_ruleConditionalExpression_in_entryRuleConditionalExpression2975);
             iv_ruleConditionalExpression=ruleConditionalExpression();
 
             state._fsp--;
@@ -3740,7 +3535,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleConditionalExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleConditionalExpression3136); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleConditionalExpression2985); if (state.failed) return current;
 
             }
 
@@ -3758,7 +3553,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConditionalExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1365:1: ruleConditionalExpression returns [EObject current=null] : (otherlv_0= 'if' ( (lv_pred_1_0= ruleExpression ) ) otherlv_2= 'then' ( (lv_then_exp_3_0= ruleExpression ) ) ( ( ( 'else' )=>otherlv_4= 'else' ) ( (lv_else_exp_5_0= ruleExpression ) ) )? otherlv_6= 'fi' ) ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1291:1: ruleConditionalExpression returns [EObject current=null] : (otherlv_0= 'if' ( (lv_pred_1_0= ruleExpression ) ) otherlv_2= 'then' ( (lv_then_exp_3_0= ruleExpression ) ) ( ( ( 'else' )=>otherlv_4= 'else' ) ( (lv_else_exp_5_0= ruleExpression ) ) )? otherlv_6= 'fi' ) ;
     public final EObject ruleConditionalExpression() throws RecognitionException {
         EObject current = null;
 
@@ -3776,30 +3571,30 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1368:28: ( (otherlv_0= 'if' ( (lv_pred_1_0= ruleExpression ) ) otherlv_2= 'then' ( (lv_then_exp_3_0= ruleExpression ) ) ( ( ( 'else' )=>otherlv_4= 'else' ) ( (lv_else_exp_5_0= ruleExpression ) ) )? otherlv_6= 'fi' ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1369:1: (otherlv_0= 'if' ( (lv_pred_1_0= ruleExpression ) ) otherlv_2= 'then' ( (lv_then_exp_3_0= ruleExpression ) ) ( ( ( 'else' )=>otherlv_4= 'else' ) ( (lv_else_exp_5_0= ruleExpression ) ) )? otherlv_6= 'fi' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1294:28: ( (otherlv_0= 'if' ( (lv_pred_1_0= ruleExpression ) ) otherlv_2= 'then' ( (lv_then_exp_3_0= ruleExpression ) ) ( ( ( 'else' )=>otherlv_4= 'else' ) ( (lv_else_exp_5_0= ruleExpression ) ) )? otherlv_6= 'fi' ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1295:1: (otherlv_0= 'if' ( (lv_pred_1_0= ruleExpression ) ) otherlv_2= 'then' ( (lv_then_exp_3_0= ruleExpression ) ) ( ( ( 'else' )=>otherlv_4= 'else' ) ( (lv_else_exp_5_0= ruleExpression ) ) )? otherlv_6= 'fi' )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1369:1: (otherlv_0= 'if' ( (lv_pred_1_0= ruleExpression ) ) otherlv_2= 'then' ( (lv_then_exp_3_0= ruleExpression ) ) ( ( ( 'else' )=>otherlv_4= 'else' ) ( (lv_else_exp_5_0= ruleExpression ) ) )? otherlv_6= 'fi' )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1369:3: otherlv_0= 'if' ( (lv_pred_1_0= ruleExpression ) ) otherlv_2= 'then' ( (lv_then_exp_3_0= ruleExpression ) ) ( ( ( 'else' )=>otherlv_4= 'else' ) ( (lv_else_exp_5_0= ruleExpression ) ) )? otherlv_6= 'fi'
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1295:1: (otherlv_0= 'if' ( (lv_pred_1_0= ruleExpression ) ) otherlv_2= 'then' ( (lv_then_exp_3_0= ruleExpression ) ) ( ( ( 'else' )=>otherlv_4= 'else' ) ( (lv_else_exp_5_0= ruleExpression ) ) )? otherlv_6= 'fi' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1295:3: otherlv_0= 'if' ( (lv_pred_1_0= ruleExpression ) ) otherlv_2= 'then' ( (lv_then_exp_3_0= ruleExpression ) ) ( ( ( 'else' )=>otherlv_4= 'else' ) ( (lv_else_exp_5_0= ruleExpression ) ) )? otherlv_6= 'fi'
             {
-            otherlv_0=(Token)match(input,26,FOLLOW_26_in_ruleConditionalExpression3173); if (state.failed) return current;
+            otherlv_0=(Token)match(input,26,FOLLOW_26_in_ruleConditionalExpression3022); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getConditionalExpressionAccess().getIfKeyword_0());
                   
             }
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1373:1: ( (lv_pred_1_0= ruleExpression ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1374:1: (lv_pred_1_0= ruleExpression )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1299:1: ( (lv_pred_1_0= ruleExpression ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1300:1: (lv_pred_1_0= ruleExpression )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1374:1: (lv_pred_1_0= ruleExpression )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1375:3: lv_pred_1_0= ruleExpression
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1300:1: (lv_pred_1_0= ruleExpression )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1301:3: lv_pred_1_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getConditionalExpressionAccess().getPredExpressionParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleExpression_in_ruleConditionalExpression3194);
+            pushFollow(FOLLOW_ruleExpression_in_ruleConditionalExpression3043);
             lv_pred_1_0=ruleExpression();
 
             state._fsp--;
@@ -3823,24 +3618,24 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,27,FOLLOW_27_in_ruleConditionalExpression3206); if (state.failed) return current;
+            otherlv_2=(Token)match(input,27,FOLLOW_27_in_ruleConditionalExpression3055); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getConditionalExpressionAccess().getThenKeyword_2());
                   
             }
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1395:1: ( (lv_then_exp_3_0= ruleExpression ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1396:1: (lv_then_exp_3_0= ruleExpression )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1321:1: ( (lv_then_exp_3_0= ruleExpression ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1322:1: (lv_then_exp_3_0= ruleExpression )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1396:1: (lv_then_exp_3_0= ruleExpression )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1397:3: lv_then_exp_3_0= ruleExpression
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1322:1: (lv_then_exp_3_0= ruleExpression )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1323:3: lv_then_exp_3_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getConditionalExpressionAccess().getThen_expExpressionParserRuleCall_3_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleExpression_in_ruleConditionalExpression3227);
+            pushFollow(FOLLOW_ruleExpression_in_ruleConditionalExpression3076);
             lv_then_exp_3_0=ruleExpression();
 
             state._fsp--;
@@ -3864,21 +3659,21 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1413:2: ( ( ( 'else' )=>otherlv_4= 'else' ) ( (lv_else_exp_5_0= ruleExpression ) ) )?
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1339:2: ( ( ( 'else' )=>otherlv_4= 'else' ) ( (lv_else_exp_5_0= ruleExpression ) ) )?
+            int alt13=2;
+            int LA13_0 = input.LA(1);
 
-            if ( (LA16_0==28) && (synpred2_InternalCool())) {
-                alt16=1;
+            if ( (LA13_0==28) && (synpred2_InternalCool())) {
+                alt13=1;
             }
-            switch (alt16) {
+            switch (alt13) {
                 case 1 :
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1413:3: ( ( 'else' )=>otherlv_4= 'else' ) ( (lv_else_exp_5_0= ruleExpression ) )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1339:3: ( ( 'else' )=>otherlv_4= 'else' ) ( (lv_else_exp_5_0= ruleExpression ) )
                     {
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1413:3: ( ( 'else' )=>otherlv_4= 'else' )
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1413:4: ( 'else' )=>otherlv_4= 'else'
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1339:3: ( ( 'else' )=>otherlv_4= 'else' )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1339:4: ( 'else' )=>otherlv_4= 'else'
                     {
-                    otherlv_4=(Token)match(input,28,FOLLOW_28_in_ruleConditionalExpression3248); if (state.failed) return current;
+                    otherlv_4=(Token)match(input,28,FOLLOW_28_in_ruleConditionalExpression3097); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_4, grammarAccess.getConditionalExpressionAccess().getElseKeyword_4_0());
@@ -3887,18 +3682,18 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1418:2: ( (lv_else_exp_5_0= ruleExpression ) )
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1419:1: (lv_else_exp_5_0= ruleExpression )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1344:2: ( (lv_else_exp_5_0= ruleExpression ) )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1345:1: (lv_else_exp_5_0= ruleExpression )
                     {
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1419:1: (lv_else_exp_5_0= ruleExpression )
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1420:3: lv_else_exp_5_0= ruleExpression
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1345:1: (lv_else_exp_5_0= ruleExpression )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1346:3: lv_else_exp_5_0= ruleExpression
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getConditionalExpressionAccess().getElse_expExpressionParserRuleCall_4_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleExpression_in_ruleConditionalExpression3270);
+                    pushFollow(FOLLOW_ruleExpression_in_ruleConditionalExpression3119);
                     lv_else_exp_5_0=ruleExpression();
 
                     state._fsp--;
@@ -3928,7 +3723,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,29,FOLLOW_29_in_ruleConditionalExpression3284); if (state.failed) return current;
+            otherlv_6=(Token)match(input,29,FOLLOW_29_in_ruleConditionalExpression3133); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_6, grammarAccess.getConditionalExpressionAccess().getFiKeyword_5());
@@ -3957,7 +3752,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLoopExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1448:1: entryRuleLoopExpression returns [EObject current=null] : iv_ruleLoopExpression= ruleLoopExpression EOF ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1374:1: entryRuleLoopExpression returns [EObject current=null] : iv_ruleLoopExpression= ruleLoopExpression EOF ;
     public final EObject entryRuleLoopExpression() throws RecognitionException {
         EObject current = null;
 
@@ -3965,13 +3760,13 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1449:2: (iv_ruleLoopExpression= ruleLoopExpression EOF )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1450:2: iv_ruleLoopExpression= ruleLoopExpression EOF
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1375:2: (iv_ruleLoopExpression= ruleLoopExpression EOF )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1376:2: iv_ruleLoopExpression= ruleLoopExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLoopExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleLoopExpression_in_entryRuleLoopExpression3320);
+            pushFollow(FOLLOW_ruleLoopExpression_in_entryRuleLoopExpression3169);
             iv_ruleLoopExpression=ruleLoopExpression();
 
             state._fsp--;
@@ -3979,7 +3774,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleLoopExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLoopExpression3330); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLoopExpression3179); if (state.failed) return current;
 
             }
 
@@ -3997,7 +3792,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLoopExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1457:1: ruleLoopExpression returns [EObject current=null] : (otherlv_0= 'while' ( (lv_pred_1_0= ruleExpression ) ) otherlv_2= 'loop' ( (lv_body_3_0= ruleExpression ) ) otherlv_4= 'pool' ) ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1383:1: ruleLoopExpression returns [EObject current=null] : (otherlv_0= 'while' ( (lv_pred_1_0= ruleExpression ) ) otherlv_2= 'loop' ( (lv_body_3_0= ruleExpression ) ) otherlv_4= 'pool' ) ;
     public final EObject ruleLoopExpression() throws RecognitionException {
         EObject current = null;
 
@@ -4012,30 +3807,30 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1460:28: ( (otherlv_0= 'while' ( (lv_pred_1_0= ruleExpression ) ) otherlv_2= 'loop' ( (lv_body_3_0= ruleExpression ) ) otherlv_4= 'pool' ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1461:1: (otherlv_0= 'while' ( (lv_pred_1_0= ruleExpression ) ) otherlv_2= 'loop' ( (lv_body_3_0= ruleExpression ) ) otherlv_4= 'pool' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1386:28: ( (otherlv_0= 'while' ( (lv_pred_1_0= ruleExpression ) ) otherlv_2= 'loop' ( (lv_body_3_0= ruleExpression ) ) otherlv_4= 'pool' ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1387:1: (otherlv_0= 'while' ( (lv_pred_1_0= ruleExpression ) ) otherlv_2= 'loop' ( (lv_body_3_0= ruleExpression ) ) otherlv_4= 'pool' )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1461:1: (otherlv_0= 'while' ( (lv_pred_1_0= ruleExpression ) ) otherlv_2= 'loop' ( (lv_body_3_0= ruleExpression ) ) otherlv_4= 'pool' )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1461:3: otherlv_0= 'while' ( (lv_pred_1_0= ruleExpression ) ) otherlv_2= 'loop' ( (lv_body_3_0= ruleExpression ) ) otherlv_4= 'pool'
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1387:1: (otherlv_0= 'while' ( (lv_pred_1_0= ruleExpression ) ) otherlv_2= 'loop' ( (lv_body_3_0= ruleExpression ) ) otherlv_4= 'pool' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1387:3: otherlv_0= 'while' ( (lv_pred_1_0= ruleExpression ) ) otherlv_2= 'loop' ( (lv_body_3_0= ruleExpression ) ) otherlv_4= 'pool'
             {
-            otherlv_0=(Token)match(input,30,FOLLOW_30_in_ruleLoopExpression3367); if (state.failed) return current;
+            otherlv_0=(Token)match(input,30,FOLLOW_30_in_ruleLoopExpression3216); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getLoopExpressionAccess().getWhileKeyword_0());
                   
             }
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1465:1: ( (lv_pred_1_0= ruleExpression ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1466:1: (lv_pred_1_0= ruleExpression )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1391:1: ( (lv_pred_1_0= ruleExpression ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1392:1: (lv_pred_1_0= ruleExpression )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1466:1: (lv_pred_1_0= ruleExpression )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1467:3: lv_pred_1_0= ruleExpression
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1392:1: (lv_pred_1_0= ruleExpression )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1393:3: lv_pred_1_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getLoopExpressionAccess().getPredExpressionParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleExpression_in_ruleLoopExpression3388);
+            pushFollow(FOLLOW_ruleExpression_in_ruleLoopExpression3237);
             lv_pred_1_0=ruleExpression();
 
             state._fsp--;
@@ -4059,24 +3854,24 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,31,FOLLOW_31_in_ruleLoopExpression3400); if (state.failed) return current;
+            otherlv_2=(Token)match(input,31,FOLLOW_31_in_ruleLoopExpression3249); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getLoopExpressionAccess().getLoopKeyword_2());
                   
             }
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1487:1: ( (lv_body_3_0= ruleExpression ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1488:1: (lv_body_3_0= ruleExpression )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1413:1: ( (lv_body_3_0= ruleExpression ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1414:1: (lv_body_3_0= ruleExpression )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1488:1: (lv_body_3_0= ruleExpression )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1489:3: lv_body_3_0= ruleExpression
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1414:1: (lv_body_3_0= ruleExpression )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1415:3: lv_body_3_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getLoopExpressionAccess().getBodyExpressionParserRuleCall_3_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleExpression_in_ruleLoopExpression3421);
+            pushFollow(FOLLOW_ruleExpression_in_ruleLoopExpression3270);
             lv_body_3_0=ruleExpression();
 
             state._fsp--;
@@ -4100,7 +3895,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,32,FOLLOW_32_in_ruleLoopExpression3433); if (state.failed) return current;
+            otherlv_4=(Token)match(input,32,FOLLOW_32_in_ruleLoopExpression3282); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_4, grammarAccess.getLoopExpressionAccess().getPoolKeyword_4());
@@ -4129,7 +3924,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBlockExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1517:1: entryRuleBlockExpression returns [EObject current=null] : iv_ruleBlockExpression= ruleBlockExpression EOF ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1443:1: entryRuleBlockExpression returns [EObject current=null] : iv_ruleBlockExpression= ruleBlockExpression EOF ;
     public final EObject entryRuleBlockExpression() throws RecognitionException {
         EObject current = null;
 
@@ -4137,13 +3932,13 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1518:2: (iv_ruleBlockExpression= ruleBlockExpression EOF )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1519:2: iv_ruleBlockExpression= ruleBlockExpression EOF
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1444:2: (iv_ruleBlockExpression= ruleBlockExpression EOF )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1445:2: iv_ruleBlockExpression= ruleBlockExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBlockExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleBlockExpression_in_entryRuleBlockExpression3469);
+            pushFollow(FOLLOW_ruleBlockExpression_in_entryRuleBlockExpression3318);
             iv_ruleBlockExpression=ruleBlockExpression();
 
             state._fsp--;
@@ -4151,7 +3946,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleBlockExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBlockExpression3479); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBlockExpression3328); if (state.failed) return current;
 
             }
 
@@ -4169,7 +3964,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBlockExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1526:1: ruleBlockExpression returns [EObject current=null] : ( () otherlv_1= '{' ( ( (lv_body_2_0= ruleExpression ) ) otherlv_3= ';' )* otherlv_4= '}' ) ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1452:1: ruleBlockExpression returns [EObject current=null] : ( () otherlv_1= '{' ( ( (lv_body_2_0= ruleExpression ) ) otherlv_3= ';' )* otherlv_4= '}' ) ;
     public final EObject ruleBlockExpression() throws RecognitionException {
         EObject current = null;
 
@@ -4182,14 +3977,14 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1529:28: ( ( () otherlv_1= '{' ( ( (lv_body_2_0= ruleExpression ) ) otherlv_3= ';' )* otherlv_4= '}' ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1530:1: ( () otherlv_1= '{' ( ( (lv_body_2_0= ruleExpression ) ) otherlv_3= ';' )* otherlv_4= '}' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1455:28: ( ( () otherlv_1= '{' ( ( (lv_body_2_0= ruleExpression ) ) otherlv_3= ';' )* otherlv_4= '}' ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1456:1: ( () otherlv_1= '{' ( ( (lv_body_2_0= ruleExpression ) ) otherlv_3= ';' )* otherlv_4= '}' )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1530:1: ( () otherlv_1= '{' ( ( (lv_body_2_0= ruleExpression ) ) otherlv_3= ';' )* otherlv_4= '}' )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1530:2: () otherlv_1= '{' ( ( (lv_body_2_0= ruleExpression ) ) otherlv_3= ';' )* otherlv_4= '}'
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1456:1: ( () otherlv_1= '{' ( ( (lv_body_2_0= ruleExpression ) ) otherlv_3= ';' )* otherlv_4= '}' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1456:2: () otherlv_1= '{' ( ( (lv_body_2_0= ruleExpression ) ) otherlv_3= ';' )* otherlv_4= '}'
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1530:2: ()
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1531:5: 
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1456:2: ()
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1457:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -4201,39 +3996,39 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,13,FOLLOW_13_in_ruleBlockExpression3525); if (state.failed) return current;
+            otherlv_1=(Token)match(input,13,FOLLOW_13_in_ruleBlockExpression3374); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getBlockExpressionAccess().getLeftCurlyBracketKeyword_1());
                   
             }
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1540:1: ( ( (lv_body_2_0= ruleExpression ) ) otherlv_3= ';' )*
-            loop17:
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1466:1: ( ( (lv_body_2_0= ruleExpression ) ) otherlv_3= ';' )*
+            loop14:
             do {
-                int alt17=2;
-                int LA17_0 = input.LA(1);
+                int alt14=2;
+                int LA14_0 = input.LA(1);
 
-                if ( ((LA17_0>=RULE_ID && LA17_0<=RULE_STRING)||LA17_0==13||LA17_0==18||(LA17_0>=21 && LA17_0<=23)||LA17_0==26||LA17_0==30||LA17_0==33||LA17_0==35||(LA17_0>=39 && LA17_0<=40)||(LA17_0>=48 && LA17_0<=49)) ) {
-                    alt17=1;
+                if ( ((LA14_0>=RULE_ID && LA14_0<=RULE_STRING)||LA14_0==13||LA14_0==18||(LA14_0>=21 && LA14_0<=24)||LA14_0==26||LA14_0==30||(LA14_0>=33 && LA14_0<=34)||LA14_0==36||(LA14_0>=48 && LA14_0<=49)) ) {
+                    alt14=1;
                 }
 
 
-                switch (alt17) {
+                switch (alt14) {
             	case 1 :
-            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1540:2: ( (lv_body_2_0= ruleExpression ) ) otherlv_3= ';'
+            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1466:2: ( (lv_body_2_0= ruleExpression ) ) otherlv_3= ';'
             	    {
-            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1540:2: ( (lv_body_2_0= ruleExpression ) )
-            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1541:1: (lv_body_2_0= ruleExpression )
+            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1466:2: ( (lv_body_2_0= ruleExpression ) )
+            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1467:1: (lv_body_2_0= ruleExpression )
             	    {
-            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1541:1: (lv_body_2_0= ruleExpression )
-            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1542:3: lv_body_2_0= ruleExpression
+            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1467:1: (lv_body_2_0= ruleExpression )
+            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1468:3: lv_body_2_0= ruleExpression
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getBlockExpressionAccess().getBodyExpressionParserRuleCall_2_0_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleExpression_in_ruleBlockExpression3547);
+            	    pushFollow(FOLLOW_ruleExpression_in_ruleBlockExpression3396);
             	    lv_body_2_0=ruleExpression();
 
             	    state._fsp--;
@@ -4257,7 +4052,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_3=(Token)match(input,15,FOLLOW_15_in_ruleBlockExpression3559); if (state.failed) return current;
+            	    otherlv_3=(Token)match(input,15,FOLLOW_15_in_ruleBlockExpression3408); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	          	newLeafNode(otherlv_3, grammarAccess.getBlockExpressionAccess().getSemicolonKeyword_2_1());
@@ -4268,11 +4063,11 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop17;
+            	    break loop14;
                 }
             } while (true);
 
-            otherlv_4=(Token)match(input,14,FOLLOW_14_in_ruleBlockExpression3573); if (state.failed) return current;
+            otherlv_4=(Token)match(input,14,FOLLOW_14_in_ruleBlockExpression3422); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_4, grammarAccess.getBlockExpressionAccess().getRightCurlyBracketKeyword_3());
@@ -4300,8 +4095,129 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleBlockExpression"
 
 
+    // $ANTLR start "entryRuleIsvoidExpression"
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1500:1: entryRuleIsvoidExpression returns [EObject current=null] : iv_ruleIsvoidExpression= ruleIsvoidExpression EOF ;
+    public final EObject entryRuleIsvoidExpression() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleIsvoidExpression = null;
+
+
+        try {
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1501:2: (iv_ruleIsvoidExpression= ruleIsvoidExpression EOF )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1502:2: iv_ruleIsvoidExpression= ruleIsvoidExpression EOF
+            {
+            if ( state.backtracking==0 ) {
+               newCompositeNode(grammarAccess.getIsvoidExpressionRule()); 
+            }
+            pushFollow(FOLLOW_ruleIsvoidExpression_in_entryRuleIsvoidExpression3458);
+            iv_ruleIsvoidExpression=ruleIsvoidExpression();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+               current =iv_ruleIsvoidExpression; 
+            }
+            match(input,EOF,FOLLOW_EOF_in_entryRuleIsvoidExpression3468); if (state.failed) return current;
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleIsvoidExpression"
+
+
+    // $ANTLR start "ruleIsvoidExpression"
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1509:1: ruleIsvoidExpression returns [EObject current=null] : (otherlv_0= 'isvoid' ( (lv_expr_1_0= ruleExpression ) ) ) ;
+    public final EObject ruleIsvoidExpression() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        EObject lv_expr_1_0 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1512:28: ( (otherlv_0= 'isvoid' ( (lv_expr_1_0= ruleExpression ) ) ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1513:1: (otherlv_0= 'isvoid' ( (lv_expr_1_0= ruleExpression ) ) )
+            {
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1513:1: (otherlv_0= 'isvoid' ( (lv_expr_1_0= ruleExpression ) ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1513:3: otherlv_0= 'isvoid' ( (lv_expr_1_0= ruleExpression ) )
+            {
+            otherlv_0=(Token)match(input,33,FOLLOW_33_in_ruleIsvoidExpression3505); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+                  	newLeafNode(otherlv_0, grammarAccess.getIsvoidExpressionAccess().getIsvoidKeyword_0());
+                  
+            }
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1517:1: ( (lv_expr_1_0= ruleExpression ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1518:1: (lv_expr_1_0= ruleExpression )
+            {
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1518:1: (lv_expr_1_0= ruleExpression )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1519:3: lv_expr_1_0= ruleExpression
+            {
+            if ( state.backtracking==0 ) {
+               
+              	        newCompositeNode(grammarAccess.getIsvoidExpressionAccess().getExprExpressionParserRuleCall_1_0()); 
+              	    
+            }
+            pushFollow(FOLLOW_ruleExpression_in_ruleIsvoidExpression3526);
+            lv_expr_1_0=ruleExpression();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              	        if (current==null) {
+              	            current = createModelElementForParent(grammarAccess.getIsvoidExpressionRule());
+              	        }
+                     		set(
+                     			current, 
+                     			"expr",
+                      		lv_expr_1_0, 
+                      		"Expression");
+              	        afterParserOrEnumRuleCall();
+              	    
+            }
+
+            }
+
+
+            }
+
+
+            }
+
+
+            }
+
+            if ( state.backtracking==0 ) {
+               leaveRule(); 
+            }
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleIsvoidExpression"
+
+
     // $ANTLR start "entryRuleLetExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1574:1: entryRuleLetExpression returns [EObject current=null] : iv_ruleLetExpression= ruleLetExpression EOF ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1543:1: entryRuleLetExpression returns [EObject current=null] : iv_ruleLetExpression= ruleLetExpression EOF ;
     public final EObject entryRuleLetExpression() throws RecognitionException {
         EObject current = null;
 
@@ -4309,13 +4225,13 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1575:2: (iv_ruleLetExpression= ruleLetExpression EOF )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1576:2: iv_ruleLetExpression= ruleLetExpression EOF
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1544:2: (iv_ruleLetExpression= ruleLetExpression EOF )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1545:2: iv_ruleLetExpression= ruleLetExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLetExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleLetExpression_in_entryRuleLetExpression3609);
+            pushFollow(FOLLOW_ruleLetExpression_in_entryRuleLetExpression3562);
             iv_ruleLetExpression=ruleLetExpression();
 
             state._fsp--;
@@ -4323,7 +4239,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleLetExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLetExpression3619); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLetExpression3572); if (state.failed) return current;
 
             }
 
@@ -4341,7 +4257,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLetExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1583:1: ruleLetExpression returns [EObject current=null] : (otherlv_0= 'let' ( (lv_declaration_1_0= ruleLetDeclaration ) ) (otherlv_2= ',' ( (lv_declaration_3_0= ruleLetDeclaration ) ) )* otherlv_4= 'in' ( (lv_body_5_0= ruleExpression ) ) ) ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1552:1: ruleLetExpression returns [EObject current=null] : (otherlv_0= 'let' ( (lv_declaration_1_0= ruleLetDeclaration ) ) (otherlv_2= ',' ( (lv_declaration_3_0= ruleLetDeclaration ) ) )* otherlv_4= 'in' ( (lv_body_5_0= ruleExpression ) ) ) ;
     public final EObject ruleLetExpression() throws RecognitionException {
         EObject current = null;
 
@@ -4358,30 +4274,30 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1586:28: ( (otherlv_0= 'let' ( (lv_declaration_1_0= ruleLetDeclaration ) ) (otherlv_2= ',' ( (lv_declaration_3_0= ruleLetDeclaration ) ) )* otherlv_4= 'in' ( (lv_body_5_0= ruleExpression ) ) ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1587:1: (otherlv_0= 'let' ( (lv_declaration_1_0= ruleLetDeclaration ) ) (otherlv_2= ',' ( (lv_declaration_3_0= ruleLetDeclaration ) ) )* otherlv_4= 'in' ( (lv_body_5_0= ruleExpression ) ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1555:28: ( (otherlv_0= 'let' ( (lv_declaration_1_0= ruleLetDeclaration ) ) (otherlv_2= ',' ( (lv_declaration_3_0= ruleLetDeclaration ) ) )* otherlv_4= 'in' ( (lv_body_5_0= ruleExpression ) ) ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1556:1: (otherlv_0= 'let' ( (lv_declaration_1_0= ruleLetDeclaration ) ) (otherlv_2= ',' ( (lv_declaration_3_0= ruleLetDeclaration ) ) )* otherlv_4= 'in' ( (lv_body_5_0= ruleExpression ) ) )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1587:1: (otherlv_0= 'let' ( (lv_declaration_1_0= ruleLetDeclaration ) ) (otherlv_2= ',' ( (lv_declaration_3_0= ruleLetDeclaration ) ) )* otherlv_4= 'in' ( (lv_body_5_0= ruleExpression ) ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1587:3: otherlv_0= 'let' ( (lv_declaration_1_0= ruleLetDeclaration ) ) (otherlv_2= ',' ( (lv_declaration_3_0= ruleLetDeclaration ) ) )* otherlv_4= 'in' ( (lv_body_5_0= ruleExpression ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1556:1: (otherlv_0= 'let' ( (lv_declaration_1_0= ruleLetDeclaration ) ) (otherlv_2= ',' ( (lv_declaration_3_0= ruleLetDeclaration ) ) )* otherlv_4= 'in' ( (lv_body_5_0= ruleExpression ) ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1556:3: otherlv_0= 'let' ( (lv_declaration_1_0= ruleLetDeclaration ) ) (otherlv_2= ',' ( (lv_declaration_3_0= ruleLetDeclaration ) ) )* otherlv_4= 'in' ( (lv_body_5_0= ruleExpression ) )
             {
-            otherlv_0=(Token)match(input,33,FOLLOW_33_in_ruleLetExpression3656); if (state.failed) return current;
+            otherlv_0=(Token)match(input,34,FOLLOW_34_in_ruleLetExpression3609); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getLetExpressionAccess().getLetKeyword_0());
                   
             }
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1591:1: ( (lv_declaration_1_0= ruleLetDeclaration ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1592:1: (lv_declaration_1_0= ruleLetDeclaration )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1560:1: ( (lv_declaration_1_0= ruleLetDeclaration ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1561:1: (lv_declaration_1_0= ruleLetDeclaration )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1592:1: (lv_declaration_1_0= ruleLetDeclaration )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1593:3: lv_declaration_1_0= ruleLetDeclaration
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1561:1: (lv_declaration_1_0= ruleLetDeclaration )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1562:3: lv_declaration_1_0= ruleLetDeclaration
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getLetExpressionAccess().getDeclarationLetDeclarationParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleLetDeclaration_in_ruleLetExpression3677);
+            pushFollow(FOLLOW_ruleLetDeclaration_in_ruleLetExpression3630);
             lv_declaration_1_0=ruleLetDeclaration();
 
             state._fsp--;
@@ -4405,39 +4321,39 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1609:2: (otherlv_2= ',' ( (lv_declaration_3_0= ruleLetDeclaration ) ) )*
-            loop18:
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1578:2: (otherlv_2= ',' ( (lv_declaration_3_0= ruleLetDeclaration ) ) )*
+            loop15:
             do {
-                int alt18=2;
-                int LA18_0 = input.LA(1);
+                int alt15=2;
+                int LA15_0 = input.LA(1);
 
-                if ( (LA18_0==19) ) {
-                    alt18=1;
+                if ( (LA15_0==19) ) {
+                    alt15=1;
                 }
 
 
-                switch (alt18) {
+                switch (alt15) {
             	case 1 :
-            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1609:4: otherlv_2= ',' ( (lv_declaration_3_0= ruleLetDeclaration ) )
+            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1578:4: otherlv_2= ',' ( (lv_declaration_3_0= ruleLetDeclaration ) )
             	    {
-            	    otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleLetExpression3690); if (state.failed) return current;
+            	    otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleLetExpression3643); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	          	newLeafNode(otherlv_2, grammarAccess.getLetExpressionAccess().getCommaKeyword_2_0());
             	          
             	    }
-            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1613:1: ( (lv_declaration_3_0= ruleLetDeclaration ) )
-            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1614:1: (lv_declaration_3_0= ruleLetDeclaration )
+            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1582:1: ( (lv_declaration_3_0= ruleLetDeclaration ) )
+            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1583:1: (lv_declaration_3_0= ruleLetDeclaration )
             	    {
-            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1614:1: (lv_declaration_3_0= ruleLetDeclaration )
-            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1615:3: lv_declaration_3_0= ruleLetDeclaration
+            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1583:1: (lv_declaration_3_0= ruleLetDeclaration )
+            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1584:3: lv_declaration_3_0= ruleLetDeclaration
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getLetExpressionAccess().getDeclarationLetDeclarationParserRuleCall_2_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleLetDeclaration_in_ruleLetExpression3711);
+            	    pushFollow(FOLLOW_ruleLetDeclaration_in_ruleLetExpression3664);
             	    lv_declaration_3_0=ruleLetDeclaration();
 
             	    state._fsp--;
@@ -4466,28 +4382,28 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop18;
+            	    break loop15;
                 }
             } while (true);
 
-            otherlv_4=(Token)match(input,34,FOLLOW_34_in_ruleLetExpression3725); if (state.failed) return current;
+            otherlv_4=(Token)match(input,35,FOLLOW_35_in_ruleLetExpression3678); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_4, grammarAccess.getLetExpressionAccess().getInKeyword_3());
                   
             }
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1635:1: ( (lv_body_5_0= ruleExpression ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1636:1: (lv_body_5_0= ruleExpression )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1604:1: ( (lv_body_5_0= ruleExpression ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1605:1: (lv_body_5_0= ruleExpression )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1636:1: (lv_body_5_0= ruleExpression )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1637:3: lv_body_5_0= ruleExpression
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1605:1: (lv_body_5_0= ruleExpression )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1606:3: lv_body_5_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getLetExpressionAccess().getBodyExpressionParserRuleCall_4_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleExpression_in_ruleLetExpression3746);
+            pushFollow(FOLLOW_ruleExpression_in_ruleLetExpression3699);
             lv_body_5_0=ruleExpression();
 
             state._fsp--;
@@ -4534,7 +4450,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLetDeclaration"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1661:1: entryRuleLetDeclaration returns [EObject current=null] : iv_ruleLetDeclaration= ruleLetDeclaration EOF ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1630:1: entryRuleLetDeclaration returns [EObject current=null] : iv_ruleLetDeclaration= ruleLetDeclaration EOF ;
     public final EObject entryRuleLetDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -4542,13 +4458,13 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1662:2: (iv_ruleLetDeclaration= ruleLetDeclaration EOF )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1663:2: iv_ruleLetDeclaration= ruleLetDeclaration EOF
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1631:2: (iv_ruleLetDeclaration= ruleLetDeclaration EOF )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1632:2: iv_ruleLetDeclaration= ruleLetDeclaration EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLetDeclarationRule()); 
             }
-            pushFollow(FOLLOW_ruleLetDeclaration_in_entryRuleLetDeclaration3782);
+            pushFollow(FOLLOW_ruleLetDeclaration_in_entryRuleLetDeclaration3735);
             iv_ruleLetDeclaration=ruleLetDeclaration();
 
             state._fsp--;
@@ -4556,7 +4472,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleLetDeclaration; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLetDeclaration3792); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLetDeclaration3745); if (state.failed) return current;
 
             }
 
@@ -4574,7 +4490,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLetDeclaration"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1670:1: ruleLetDeclaration returns [EObject current=null] : ( ( (lv_name_0_0= ruleSYMBOL ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= '<-' ( (lv_init_4_0= ruleExpression ) ) )? ) ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1639:1: ruleLetDeclaration returns [EObject current=null] : ( ( (lv_name_0_0= ruleSYMBOL ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= '<-' ( (lv_init_4_0= ruleExpression ) ) )? ) ;
     public final EObject ruleLetDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -4589,24 +4505,24 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1673:28: ( ( ( (lv_name_0_0= ruleSYMBOL ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= '<-' ( (lv_init_4_0= ruleExpression ) ) )? ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1674:1: ( ( (lv_name_0_0= ruleSYMBOL ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= '<-' ( (lv_init_4_0= ruleExpression ) ) )? )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1642:28: ( ( ( (lv_name_0_0= ruleSYMBOL ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= '<-' ( (lv_init_4_0= ruleExpression ) ) )? ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1643:1: ( ( (lv_name_0_0= ruleSYMBOL ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= '<-' ( (lv_init_4_0= ruleExpression ) ) )? )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1674:1: ( ( (lv_name_0_0= ruleSYMBOL ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= '<-' ( (lv_init_4_0= ruleExpression ) ) )? )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1674:2: ( (lv_name_0_0= ruleSYMBOL ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= '<-' ( (lv_init_4_0= ruleExpression ) ) )?
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1643:1: ( ( (lv_name_0_0= ruleSYMBOL ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= '<-' ( (lv_init_4_0= ruleExpression ) ) )? )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1643:2: ( (lv_name_0_0= ruleSYMBOL ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= '<-' ( (lv_init_4_0= ruleExpression ) ) )?
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1674:2: ( (lv_name_0_0= ruleSYMBOL ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1675:1: (lv_name_0_0= ruleSYMBOL )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1643:2: ( (lv_name_0_0= ruleSYMBOL ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1644:1: (lv_name_0_0= ruleSYMBOL )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1675:1: (lv_name_0_0= ruleSYMBOL )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1676:3: lv_name_0_0= ruleSYMBOL
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1644:1: (lv_name_0_0= ruleSYMBOL )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1645:3: lv_name_0_0= ruleSYMBOL
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getLetDeclarationAccess().getNameSYMBOLParserRuleCall_0_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleSYMBOL_in_ruleLetDeclaration3838);
+            pushFollow(FOLLOW_ruleSYMBOL_in_ruleLetDeclaration3791);
             lv_name_0_0=ruleSYMBOL();
 
             state._fsp--;
@@ -4630,17 +4546,17 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,16,FOLLOW_16_in_ruleLetDeclaration3850); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FOLLOW_16_in_ruleLetDeclaration3803); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getLetDeclarationAccess().getColonKeyword_1());
                   
             }
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1696:1: ( (otherlv_2= RULE_ID ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1697:1: (otherlv_2= RULE_ID )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1665:1: ( (otherlv_2= RULE_ID ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1666:1: (otherlv_2= RULE_ID )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1697:1: (otherlv_2= RULE_ID )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1698:3: otherlv_2= RULE_ID
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1666:1: (otherlv_2= RULE_ID )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1667:3: otherlv_2= RULE_ID
             {
             if ( state.backtracking==0 ) {
 
@@ -4649,7 +4565,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
               	        }
                       
             }
-            otherlv_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLetDeclaration3870); if (state.failed) return current;
+            otherlv_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLetDeclaration3823); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		newLeafNode(otherlv_2, grammarAccess.getLetDeclarationAccess().getType_declTypeCrossReference_2_0()); 
@@ -4661,35 +4577,35 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1709:2: (otherlv_3= '<-' ( (lv_init_4_0= ruleExpression ) ) )?
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1678:2: (otherlv_3= '<-' ( (lv_init_4_0= ruleExpression ) ) )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA19_0==17) ) {
-                alt19=1;
+            if ( (LA16_0==17) ) {
+                alt16=1;
             }
-            switch (alt19) {
+            switch (alt16) {
                 case 1 :
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1709:4: otherlv_3= '<-' ( (lv_init_4_0= ruleExpression ) )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1678:4: otherlv_3= '<-' ( (lv_init_4_0= ruleExpression ) )
                     {
-                    otherlv_3=(Token)match(input,17,FOLLOW_17_in_ruleLetDeclaration3883); if (state.failed) return current;
+                    otherlv_3=(Token)match(input,17,FOLLOW_17_in_ruleLetDeclaration3836); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_3, grammarAccess.getLetDeclarationAccess().getLessThanSignHyphenMinusKeyword_3_0());
                           
                     }
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1713:1: ( (lv_init_4_0= ruleExpression ) )
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1714:1: (lv_init_4_0= ruleExpression )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1682:1: ( (lv_init_4_0= ruleExpression ) )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1683:1: (lv_init_4_0= ruleExpression )
                     {
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1714:1: (lv_init_4_0= ruleExpression )
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1715:3: lv_init_4_0= ruleExpression
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1683:1: (lv_init_4_0= ruleExpression )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1684:3: lv_init_4_0= ruleExpression
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getLetDeclarationAccess().getInitExpressionParserRuleCall_3_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleExpression_in_ruleLetDeclaration3904);
+                    pushFollow(FOLLOW_ruleExpression_in_ruleLetDeclaration3857);
                     lv_init_4_0=ruleExpression();
 
                     state._fsp--;
@@ -4742,7 +4658,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCaseExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1739:1: entryRuleCaseExpression returns [EObject current=null] : iv_ruleCaseExpression= ruleCaseExpression EOF ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1708:1: entryRuleCaseExpression returns [EObject current=null] : iv_ruleCaseExpression= ruleCaseExpression EOF ;
     public final EObject entryRuleCaseExpression() throws RecognitionException {
         EObject current = null;
 
@@ -4750,13 +4666,13 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1740:2: (iv_ruleCaseExpression= ruleCaseExpression EOF )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1741:2: iv_ruleCaseExpression= ruleCaseExpression EOF
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1709:2: (iv_ruleCaseExpression= ruleCaseExpression EOF )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1710:2: iv_ruleCaseExpression= ruleCaseExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCaseExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleCaseExpression_in_entryRuleCaseExpression3942);
+            pushFollow(FOLLOW_ruleCaseExpression_in_entryRuleCaseExpression3895);
             iv_ruleCaseExpression=ruleCaseExpression();
 
             state._fsp--;
@@ -4764,7 +4680,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleCaseExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCaseExpression3952); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCaseExpression3905); if (state.failed) return current;
 
             }
 
@@ -4782,7 +4698,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCaseExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1748:1: ruleCaseExpression returns [EObject current=null] : (otherlv_0= 'case' ( (lv_expr_1_0= ruleExpression ) ) otherlv_2= 'of' ( ( (lv_case_3_0= ruleCase ) ) otherlv_4= ';' )+ otherlv_5= 'esac' ) ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1717:1: ruleCaseExpression returns [EObject current=null] : (otherlv_0= 'case' ( (lv_expr_1_0= ruleExpression ) ) otherlv_2= 'of' ( ( (lv_case_3_0= ruleCase ) ) otherlv_4= ';' )+ otherlv_5= 'esac' ) ;
     public final EObject ruleCaseExpression() throws RecognitionException {
         EObject current = null;
 
@@ -4798,30 +4714,30 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1751:28: ( (otherlv_0= 'case' ( (lv_expr_1_0= ruleExpression ) ) otherlv_2= 'of' ( ( (lv_case_3_0= ruleCase ) ) otherlv_4= ';' )+ otherlv_5= 'esac' ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1752:1: (otherlv_0= 'case' ( (lv_expr_1_0= ruleExpression ) ) otherlv_2= 'of' ( ( (lv_case_3_0= ruleCase ) ) otherlv_4= ';' )+ otherlv_5= 'esac' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1720:28: ( (otherlv_0= 'case' ( (lv_expr_1_0= ruleExpression ) ) otherlv_2= 'of' ( ( (lv_case_3_0= ruleCase ) ) otherlv_4= ';' )+ otherlv_5= 'esac' ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1721:1: (otherlv_0= 'case' ( (lv_expr_1_0= ruleExpression ) ) otherlv_2= 'of' ( ( (lv_case_3_0= ruleCase ) ) otherlv_4= ';' )+ otherlv_5= 'esac' )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1752:1: (otherlv_0= 'case' ( (lv_expr_1_0= ruleExpression ) ) otherlv_2= 'of' ( ( (lv_case_3_0= ruleCase ) ) otherlv_4= ';' )+ otherlv_5= 'esac' )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1752:3: otherlv_0= 'case' ( (lv_expr_1_0= ruleExpression ) ) otherlv_2= 'of' ( ( (lv_case_3_0= ruleCase ) ) otherlv_4= ';' )+ otherlv_5= 'esac'
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1721:1: (otherlv_0= 'case' ( (lv_expr_1_0= ruleExpression ) ) otherlv_2= 'of' ( ( (lv_case_3_0= ruleCase ) ) otherlv_4= ';' )+ otherlv_5= 'esac' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1721:3: otherlv_0= 'case' ( (lv_expr_1_0= ruleExpression ) ) otherlv_2= 'of' ( ( (lv_case_3_0= ruleCase ) ) otherlv_4= ';' )+ otherlv_5= 'esac'
             {
-            otherlv_0=(Token)match(input,35,FOLLOW_35_in_ruleCaseExpression3989); if (state.failed) return current;
+            otherlv_0=(Token)match(input,36,FOLLOW_36_in_ruleCaseExpression3942); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getCaseExpressionAccess().getCaseKeyword_0());
                   
             }
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1756:1: ( (lv_expr_1_0= ruleExpression ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1757:1: (lv_expr_1_0= ruleExpression )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1725:1: ( (lv_expr_1_0= ruleExpression ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1726:1: (lv_expr_1_0= ruleExpression )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1757:1: (lv_expr_1_0= ruleExpression )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1758:3: lv_expr_1_0= ruleExpression
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1726:1: (lv_expr_1_0= ruleExpression )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1727:3: lv_expr_1_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getCaseExpressionAccess().getExprExpressionParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleExpression_in_ruleCaseExpression4010);
+            pushFollow(FOLLOW_ruleExpression_in_ruleCaseExpression3963);
             lv_expr_1_0=ruleExpression();
 
             state._fsp--;
@@ -4845,40 +4761,40 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,36,FOLLOW_36_in_ruleCaseExpression4022); if (state.failed) return current;
+            otherlv_2=(Token)match(input,37,FOLLOW_37_in_ruleCaseExpression3975); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getCaseExpressionAccess().getOfKeyword_2());
                   
             }
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1778:1: ( ( (lv_case_3_0= ruleCase ) ) otherlv_4= ';' )+
-            int cnt20=0;
-            loop20:
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1747:1: ( ( (lv_case_3_0= ruleCase ) ) otherlv_4= ';' )+
+            int cnt17=0;
+            loop17:
             do {
-                int alt20=2;
-                int LA20_0 = input.LA(1);
+                int alt17=2;
+                int LA17_0 = input.LA(1);
 
-                if ( (LA20_0==RULE_ID||LA20_0==21) ) {
-                    alt20=1;
+                if ( (LA17_0==RULE_ID||LA17_0==21) ) {
+                    alt17=1;
                 }
 
 
-                switch (alt20) {
+                switch (alt17) {
             	case 1 :
-            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1778:2: ( (lv_case_3_0= ruleCase ) ) otherlv_4= ';'
+            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1747:2: ( (lv_case_3_0= ruleCase ) ) otherlv_4= ';'
             	    {
-            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1778:2: ( (lv_case_3_0= ruleCase ) )
-            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1779:1: (lv_case_3_0= ruleCase )
+            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1747:2: ( (lv_case_3_0= ruleCase ) )
+            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1748:1: (lv_case_3_0= ruleCase )
             	    {
-            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1779:1: (lv_case_3_0= ruleCase )
-            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1780:3: lv_case_3_0= ruleCase
+            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1748:1: (lv_case_3_0= ruleCase )
+            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1749:3: lv_case_3_0= ruleCase
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getCaseExpressionAccess().getCaseCaseParserRuleCall_3_0_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleCase_in_ruleCaseExpression4044);
+            	    pushFollow(FOLLOW_ruleCase_in_ruleCaseExpression3997);
             	    lv_case_3_0=ruleCase();
 
             	    state._fsp--;
@@ -4902,7 +4818,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_4=(Token)match(input,15,FOLLOW_15_in_ruleCaseExpression4056); if (state.failed) return current;
+            	    otherlv_4=(Token)match(input,15,FOLLOW_15_in_ruleCaseExpression4009); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	          	newLeafNode(otherlv_4, grammarAccess.getCaseExpressionAccess().getSemicolonKeyword_3_1());
@@ -4913,16 +4829,16 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt20 >= 1 ) break loop20;
+            	    if ( cnt17 >= 1 ) break loop17;
             	    if (state.backtracking>0) {state.failed=true; return current;}
                         EarlyExitException eee =
-                            new EarlyExitException(20, input);
+                            new EarlyExitException(17, input);
                         throw eee;
                 }
-                cnt20++;
+                cnt17++;
             } while (true);
 
-            otherlv_5=(Token)match(input,37,FOLLOW_37_in_ruleCaseExpression4070); if (state.failed) return current;
+            otherlv_5=(Token)match(input,38,FOLLOW_38_in_ruleCaseExpression4023); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_5, grammarAccess.getCaseExpressionAccess().getEsacKeyword_4());
@@ -4951,7 +4867,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCase"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1812:1: entryRuleCase returns [EObject current=null] : iv_ruleCase= ruleCase EOF ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1781:1: entryRuleCase returns [EObject current=null] : iv_ruleCase= ruleCase EOF ;
     public final EObject entryRuleCase() throws RecognitionException {
         EObject current = null;
 
@@ -4959,13 +4875,13 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1813:2: (iv_ruleCase= ruleCase EOF )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1814:2: iv_ruleCase= ruleCase EOF
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1782:2: (iv_ruleCase= ruleCase EOF )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1783:2: iv_ruleCase= ruleCase EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCaseRule()); 
             }
-            pushFollow(FOLLOW_ruleCase_in_entryRuleCase4106);
+            pushFollow(FOLLOW_ruleCase_in_entryRuleCase4059);
             iv_ruleCase=ruleCase();
 
             state._fsp--;
@@ -4973,7 +4889,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleCase; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCase4116); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCase4069); if (state.failed) return current;
 
             }
 
@@ -4991,7 +4907,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCase"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1821:1: ruleCase returns [EObject current=null] : ( ( (lv_name_0_0= ruleSYMBOL ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) otherlv_3= '=>' ( (lv_expr_4_0= ruleExpression ) ) ) ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1790:1: ruleCase returns [EObject current=null] : ( ( (lv_name_0_0= ruleSYMBOL ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) otherlv_3= '=>' ( (lv_expr_4_0= ruleExpression ) ) ) ;
     public final EObject ruleCase() throws RecognitionException {
         EObject current = null;
 
@@ -5006,24 +4922,24 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1824:28: ( ( ( (lv_name_0_0= ruleSYMBOL ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) otherlv_3= '=>' ( (lv_expr_4_0= ruleExpression ) ) ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1825:1: ( ( (lv_name_0_0= ruleSYMBOL ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) otherlv_3= '=>' ( (lv_expr_4_0= ruleExpression ) ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1793:28: ( ( ( (lv_name_0_0= ruleSYMBOL ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) otherlv_3= '=>' ( (lv_expr_4_0= ruleExpression ) ) ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1794:1: ( ( (lv_name_0_0= ruleSYMBOL ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) otherlv_3= '=>' ( (lv_expr_4_0= ruleExpression ) ) )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1825:1: ( ( (lv_name_0_0= ruleSYMBOL ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) otherlv_3= '=>' ( (lv_expr_4_0= ruleExpression ) ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1825:2: ( (lv_name_0_0= ruleSYMBOL ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) otherlv_3= '=>' ( (lv_expr_4_0= ruleExpression ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1794:1: ( ( (lv_name_0_0= ruleSYMBOL ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) otherlv_3= '=>' ( (lv_expr_4_0= ruleExpression ) ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1794:2: ( (lv_name_0_0= ruleSYMBOL ) ) otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) otherlv_3= '=>' ( (lv_expr_4_0= ruleExpression ) )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1825:2: ( (lv_name_0_0= ruleSYMBOL ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1826:1: (lv_name_0_0= ruleSYMBOL )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1794:2: ( (lv_name_0_0= ruleSYMBOL ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1795:1: (lv_name_0_0= ruleSYMBOL )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1826:1: (lv_name_0_0= ruleSYMBOL )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1827:3: lv_name_0_0= ruleSYMBOL
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1795:1: (lv_name_0_0= ruleSYMBOL )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1796:3: lv_name_0_0= ruleSYMBOL
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getCaseAccess().getNameSYMBOLParserRuleCall_0_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleSYMBOL_in_ruleCase4162);
+            pushFollow(FOLLOW_ruleSYMBOL_in_ruleCase4115);
             lv_name_0_0=ruleSYMBOL();
 
             state._fsp--;
@@ -5047,17 +4963,17 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,16,FOLLOW_16_in_ruleCase4174); if (state.failed) return current;
+            otherlv_1=(Token)match(input,16,FOLLOW_16_in_ruleCase4127); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getCaseAccess().getColonKeyword_1());
                   
             }
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1847:1: ( (otherlv_2= RULE_ID ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1848:1: (otherlv_2= RULE_ID )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1816:1: ( (otherlv_2= RULE_ID ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1817:1: (otherlv_2= RULE_ID )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1848:1: (otherlv_2= RULE_ID )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1849:3: otherlv_2= RULE_ID
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1817:1: (otherlv_2= RULE_ID )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1818:3: otherlv_2= RULE_ID
             {
             if ( state.backtracking==0 ) {
 
@@ -5066,7 +4982,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
               	        }
                       
             }
-            otherlv_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleCase4194); if (state.failed) return current;
+            otherlv_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleCase4147); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		newLeafNode(otherlv_2, grammarAccess.getCaseAccess().getType_declTypeCrossReference_2_0()); 
@@ -5078,24 +4994,24 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,38,FOLLOW_38_in_ruleCase4206); if (state.failed) return current;
+            otherlv_3=(Token)match(input,39,FOLLOW_39_in_ruleCase4159); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getCaseAccess().getEqualsSignGreaterThanSignKeyword_3());
                   
             }
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1864:1: ( (lv_expr_4_0= ruleExpression ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1865:1: (lv_expr_4_0= ruleExpression )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1833:1: ( (lv_expr_4_0= ruleExpression ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1834:1: (lv_expr_4_0= ruleExpression )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1865:1: (lv_expr_4_0= ruleExpression )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1866:3: lv_expr_4_0= ruleExpression
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1834:1: (lv_expr_4_0= ruleExpression )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1835:3: lv_expr_4_0= ruleExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getCaseAccess().getExprExpressionParserRuleCall_4_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleExpression_in_ruleCase4227);
+            pushFollow(FOLLOW_ruleExpression_in_ruleCase4180);
             lv_expr_4_0=ruleExpression();
 
             state._fsp--;
@@ -5141,239 +5057,8 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleCase"
 
 
-    // $ANTLR start "entryRuleNewExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1890:1: entryRuleNewExpression returns [EObject current=null] : iv_ruleNewExpression= ruleNewExpression EOF ;
-    public final EObject entryRuleNewExpression() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleNewExpression = null;
-
-
-        try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1891:2: (iv_ruleNewExpression= ruleNewExpression EOF )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1892:2: iv_ruleNewExpression= ruleNewExpression EOF
-            {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getNewExpressionRule()); 
-            }
-            pushFollow(FOLLOW_ruleNewExpression_in_entryRuleNewExpression4263);
-            iv_ruleNewExpression=ruleNewExpression();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_ruleNewExpression; 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNewExpression4273); if (state.failed) return current;
-
-            }
-
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleNewExpression"
-
-
-    // $ANTLR start "ruleNewExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1899:1: ruleNewExpression returns [EObject current=null] : (otherlv_0= 'new' ( (otherlv_1= RULE_ID ) ) ) ;
-    public final EObject ruleNewExpression() throws RecognitionException {
-        EObject current = null;
-
-        Token otherlv_0=null;
-        Token otherlv_1=null;
-
-         enterRule(); 
-            
-        try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1902:28: ( (otherlv_0= 'new' ( (otherlv_1= RULE_ID ) ) ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1903:1: (otherlv_0= 'new' ( (otherlv_1= RULE_ID ) ) )
-            {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1903:1: (otherlv_0= 'new' ( (otherlv_1= RULE_ID ) ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1903:3: otherlv_0= 'new' ( (otherlv_1= RULE_ID ) )
-            {
-            otherlv_0=(Token)match(input,39,FOLLOW_39_in_ruleNewExpression4310); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-                  	newLeafNode(otherlv_0, grammarAccess.getNewExpressionAccess().getNewKeyword_0());
-                  
-            }
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1907:1: ( (otherlv_1= RULE_ID ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1908:1: (otherlv_1= RULE_ID )
-            {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1908:1: (otherlv_1= RULE_ID )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1909:3: otherlv_1= RULE_ID
-            {
-            if ( state.backtracking==0 ) {
-
-              			if (current==null) {
-              	            current = createModelElement(grammarAccess.getNewExpressionRule());
-              	        }
-                      
-            }
-            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNewExpression4330); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              		newLeafNode(otherlv_1, grammarAccess.getNewExpressionAccess().getType_nameTypeCrossReference_1_0()); 
-              	
-            }
-
-            }
-
-
-            }
-
-
-            }
-
-
-            }
-
-            if ( state.backtracking==0 ) {
-               leaveRule(); 
-            }
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleNewExpression"
-
-
-    // $ANTLR start "entryRuleIsvoidExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1928:1: entryRuleIsvoidExpression returns [EObject current=null] : iv_ruleIsvoidExpression= ruleIsvoidExpression EOF ;
-    public final EObject entryRuleIsvoidExpression() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleIsvoidExpression = null;
-
-
-        try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1929:2: (iv_ruleIsvoidExpression= ruleIsvoidExpression EOF )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1930:2: iv_ruleIsvoidExpression= ruleIsvoidExpression EOF
-            {
-            if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getIsvoidExpressionRule()); 
-            }
-            pushFollow(FOLLOW_ruleIsvoidExpression_in_entryRuleIsvoidExpression4366);
-            iv_ruleIsvoidExpression=ruleIsvoidExpression();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-               current =iv_ruleIsvoidExpression; 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleIsvoidExpression4376); if (state.failed) return current;
-
-            }
-
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleIsvoidExpression"
-
-
-    // $ANTLR start "ruleIsvoidExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1937:1: ruleIsvoidExpression returns [EObject current=null] : (otherlv_0= 'isvoid' ( (lv_expr_1_0= ruleExpression ) ) ) ;
-    public final EObject ruleIsvoidExpression() throws RecognitionException {
-        EObject current = null;
-
-        Token otherlv_0=null;
-        EObject lv_expr_1_0 = null;
-
-
-         enterRule(); 
-            
-        try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1940:28: ( (otherlv_0= 'isvoid' ( (lv_expr_1_0= ruleExpression ) ) ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1941:1: (otherlv_0= 'isvoid' ( (lv_expr_1_0= ruleExpression ) ) )
-            {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1941:1: (otherlv_0= 'isvoid' ( (lv_expr_1_0= ruleExpression ) ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1941:3: otherlv_0= 'isvoid' ( (lv_expr_1_0= ruleExpression ) )
-            {
-            otherlv_0=(Token)match(input,40,FOLLOW_40_in_ruleIsvoidExpression4413); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-                  	newLeafNode(otherlv_0, grammarAccess.getIsvoidExpressionAccess().getIsvoidKeyword_0());
-                  
-            }
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1945:1: ( (lv_expr_1_0= ruleExpression ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1946:1: (lv_expr_1_0= ruleExpression )
-            {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1946:1: (lv_expr_1_0= ruleExpression )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1947:3: lv_expr_1_0= ruleExpression
-            {
-            if ( state.backtracking==0 ) {
-               
-              	        newCompositeNode(grammarAccess.getIsvoidExpressionAccess().getExprExpressionParserRuleCall_1_0()); 
-              	    
-            }
-            pushFollow(FOLLOW_ruleExpression_in_ruleIsvoidExpression4434);
-            lv_expr_1_0=ruleExpression();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              	        if (current==null) {
-              	            current = createModelElementForParent(grammarAccess.getIsvoidExpressionRule());
-              	        }
-                     		set(
-                     			current, 
-                     			"expr",
-                      		lv_expr_1_0, 
-                      		"Expression");
-              	        afterParserOrEnumRuleCall();
-              	    
-            }
-
-            }
-
-
-            }
-
-
-            }
-
-
-            }
-
-            if ( state.backtracking==0 ) {
-               leaveRule(); 
-            }
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleIsvoidExpression"
-
-
     // $ANTLR start "entryRuleCompareExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1971:1: entryRuleCompareExpression returns [EObject current=null] : iv_ruleCompareExpression= ruleCompareExpression EOF ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1859:1: entryRuleCompareExpression returns [EObject current=null] : iv_ruleCompareExpression= ruleCompareExpression EOF ;
     public final EObject entryRuleCompareExpression() throws RecognitionException {
         EObject current = null;
 
@@ -5381,13 +5066,13 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1972:2: (iv_ruleCompareExpression= ruleCompareExpression EOF )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1973:2: iv_ruleCompareExpression= ruleCompareExpression EOF
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1860:2: (iv_ruleCompareExpression= ruleCompareExpression EOF )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1861:2: iv_ruleCompareExpression= ruleCompareExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCompareExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleCompareExpression_in_entryRuleCompareExpression4470);
+            pushFollow(FOLLOW_ruleCompareExpression_in_entryRuleCompareExpression4216);
             iv_ruleCompareExpression=ruleCompareExpression();
 
             state._fsp--;
@@ -5395,7 +5080,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleCompareExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCompareExpression4480); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCompareExpression4226); if (state.failed) return current;
 
             }
 
@@ -5413,7 +5098,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCompareExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1980:1: ruleCompareExpression returns [EObject current=null] : (this_AdditionExpression_0= ruleAdditionExpression ( ( ( ( () ( ( ruleCompareOperator ) ) ) )=> ( () ( (lv_op_2_0= ruleCompareOperator ) ) ) ) ( (lv_right_3_0= ruleExpression ) ) )? ) ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1868:1: ruleCompareExpression returns [EObject current=null] : (this_AdditionExpression_0= ruleAdditionExpression ( ( ( ( () ( ( ruleCompareOperator ) ) ) )=> ( () ( (lv_op_2_0= ruleCompareOperator ) ) ) ) ( (lv_right_3_0= ruleExpression ) ) )? ) ;
     public final EObject ruleCompareExpression() throws RecognitionException {
         EObject current = null;
 
@@ -5427,18 +5112,18 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1983:28: ( (this_AdditionExpression_0= ruleAdditionExpression ( ( ( ( () ( ( ruleCompareOperator ) ) ) )=> ( () ( (lv_op_2_0= ruleCompareOperator ) ) ) ) ( (lv_right_3_0= ruleExpression ) ) )? ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1984:1: (this_AdditionExpression_0= ruleAdditionExpression ( ( ( ( () ( ( ruleCompareOperator ) ) ) )=> ( () ( (lv_op_2_0= ruleCompareOperator ) ) ) ) ( (lv_right_3_0= ruleExpression ) ) )? )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1871:28: ( (this_AdditionExpression_0= ruleAdditionExpression ( ( ( ( () ( ( ruleCompareOperator ) ) ) )=> ( () ( (lv_op_2_0= ruleCompareOperator ) ) ) ) ( (lv_right_3_0= ruleExpression ) ) )? ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1872:1: (this_AdditionExpression_0= ruleAdditionExpression ( ( ( ( () ( ( ruleCompareOperator ) ) ) )=> ( () ( (lv_op_2_0= ruleCompareOperator ) ) ) ) ( (lv_right_3_0= ruleExpression ) ) )? )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1984:1: (this_AdditionExpression_0= ruleAdditionExpression ( ( ( ( () ( ( ruleCompareOperator ) ) ) )=> ( () ( (lv_op_2_0= ruleCompareOperator ) ) ) ) ( (lv_right_3_0= ruleExpression ) ) )? )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1985:5: this_AdditionExpression_0= ruleAdditionExpression ( ( ( ( () ( ( ruleCompareOperator ) ) ) )=> ( () ( (lv_op_2_0= ruleCompareOperator ) ) ) ) ( (lv_right_3_0= ruleExpression ) ) )?
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1872:1: (this_AdditionExpression_0= ruleAdditionExpression ( ( ( ( () ( ( ruleCompareOperator ) ) ) )=> ( () ( (lv_op_2_0= ruleCompareOperator ) ) ) ) ( (lv_right_3_0= ruleExpression ) ) )? )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1873:5: this_AdditionExpression_0= ruleAdditionExpression ( ( ( ( () ( ( ruleCompareOperator ) ) ) )=> ( () ( (lv_op_2_0= ruleCompareOperator ) ) ) ) ( (lv_right_3_0= ruleExpression ) ) )?
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getCompareExpressionAccess().getAdditionExpressionParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_ruleAdditionExpression_in_ruleCompareExpression4527);
+            pushFollow(FOLLOW_ruleAdditionExpression_in_ruleCompareExpression4273);
             this_AdditionExpression_0=ruleAdditionExpression();
 
             state._fsp--;
@@ -5449,50 +5134,50 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1993:1: ( ( ( ( () ( ( ruleCompareOperator ) ) ) )=> ( () ( (lv_op_2_0= ruleCompareOperator ) ) ) ) ( (lv_right_3_0= ruleExpression ) ) )?
-            int alt21=2;
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1881:1: ( ( ( ( () ( ( ruleCompareOperator ) ) ) )=> ( () ( (lv_op_2_0= ruleCompareOperator ) ) ) ) ( (lv_right_3_0= ruleExpression ) ) )?
+            int alt18=2;
             switch ( input.LA(1) ) {
-                case 41:
+                case 40:
                     {
-                    int LA21_1 = input.LA(2);
+                    int LA18_1 = input.LA(2);
 
                     if ( (synpred3_InternalCool()) ) {
-                        alt21=1;
+                        alt18=1;
+                    }
+                    }
+                    break;
+                case 41:
+                    {
+                    int LA18_2 = input.LA(2);
+
+                    if ( (synpred3_InternalCool()) ) {
+                        alt18=1;
                     }
                     }
                     break;
                 case 42:
                     {
-                    int LA21_2 = input.LA(2);
+                    int LA18_3 = input.LA(2);
 
                     if ( (synpred3_InternalCool()) ) {
-                        alt21=1;
-                    }
-                    }
-                    break;
-                case 43:
-                    {
-                    int LA21_3 = input.LA(2);
-
-                    if ( (synpred3_InternalCool()) ) {
-                        alt21=1;
+                        alt18=1;
                     }
                     }
                     break;
             }
 
-            switch (alt21) {
+            switch (alt18) {
                 case 1 :
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1993:2: ( ( ( () ( ( ruleCompareOperator ) ) ) )=> ( () ( (lv_op_2_0= ruleCompareOperator ) ) ) ) ( (lv_right_3_0= ruleExpression ) )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1881:2: ( ( ( () ( ( ruleCompareOperator ) ) ) )=> ( () ( (lv_op_2_0= ruleCompareOperator ) ) ) ) ( (lv_right_3_0= ruleExpression ) )
                     {
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1993:2: ( ( ( () ( ( ruleCompareOperator ) ) ) )=> ( () ( (lv_op_2_0= ruleCompareOperator ) ) ) )
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1993:3: ( ( () ( ( ruleCompareOperator ) ) ) )=> ( () ( (lv_op_2_0= ruleCompareOperator ) ) )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1881:2: ( ( ( () ( ( ruleCompareOperator ) ) ) )=> ( () ( (lv_op_2_0= ruleCompareOperator ) ) ) )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1881:3: ( ( () ( ( ruleCompareOperator ) ) ) )=> ( () ( (lv_op_2_0= ruleCompareOperator ) ) )
                     {
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1998:6: ( () ( (lv_op_2_0= ruleCompareOperator ) ) )
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1998:7: () ( (lv_op_2_0= ruleCompareOperator ) )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1886:6: ( () ( (lv_op_2_0= ruleCompareOperator ) ) )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1886:7: () ( (lv_op_2_0= ruleCompareOperator ) )
                     {
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1998:7: ()
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1999:5: 
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1886:7: ()
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1887:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -5504,18 +5189,18 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2004:2: ( (lv_op_2_0= ruleCompareOperator ) )
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2005:1: (lv_op_2_0= ruleCompareOperator )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1892:2: ( (lv_op_2_0= ruleCompareOperator ) )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1893:1: (lv_op_2_0= ruleCompareOperator )
                     {
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2005:1: (lv_op_2_0= ruleCompareOperator )
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2006:3: lv_op_2_0= ruleCompareOperator
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1893:1: (lv_op_2_0= ruleCompareOperator )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1894:3: lv_op_2_0= ruleCompareOperator
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getCompareExpressionAccess().getOpCompareOperatorParserRuleCall_1_0_0_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleCompareOperator_in_ruleCompareExpression4576);
+                    pushFollow(FOLLOW_ruleCompareOperator_in_ruleCompareExpression4322);
                     lv_op_2_0=ruleCompareOperator();
 
                     state._fsp--;
@@ -5545,18 +5230,18 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2022:4: ( (lv_right_3_0= ruleExpression ) )
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2023:1: (lv_right_3_0= ruleExpression )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1910:4: ( (lv_right_3_0= ruleExpression ) )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1911:1: (lv_right_3_0= ruleExpression )
                     {
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2023:1: (lv_right_3_0= ruleExpression )
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2024:3: lv_right_3_0= ruleExpression
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1911:1: (lv_right_3_0= ruleExpression )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1912:3: lv_right_3_0= ruleExpression
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getCompareExpressionAccess().getRightExpressionParserRuleCall_1_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleExpression_in_ruleCompareExpression4599);
+                    pushFollow(FOLLOW_ruleExpression_in_ruleCompareExpression4345);
                     lv_right_3_0=ruleExpression();
 
                     state._fsp--;
@@ -5609,7 +5294,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCompareOperator"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2048:1: entryRuleCompareOperator returns [String current=null] : iv_ruleCompareOperator= ruleCompareOperator EOF ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1936:1: entryRuleCompareOperator returns [String current=null] : iv_ruleCompareOperator= ruleCompareOperator EOF ;
     public final String entryRuleCompareOperator() throws RecognitionException {
         String current = null;
 
@@ -5617,13 +5302,13 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2049:2: (iv_ruleCompareOperator= ruleCompareOperator EOF )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2050:2: iv_ruleCompareOperator= ruleCompareOperator EOF
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1937:2: (iv_ruleCompareOperator= ruleCompareOperator EOF )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1938:2: iv_ruleCompareOperator= ruleCompareOperator EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCompareOperatorRule()); 
             }
-            pushFollow(FOLLOW_ruleCompareOperator_in_entryRuleCompareOperator4638);
+            pushFollow(FOLLOW_ruleCompareOperator_in_entryRuleCompareOperator4384);
             iv_ruleCompareOperator=ruleCompareOperator();
 
             state._fsp--;
@@ -5631,7 +5316,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleCompareOperator.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCompareOperator4649); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCompareOperator4395); if (state.failed) return current;
 
             }
 
@@ -5649,7 +5334,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCompareOperator"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2057:1: ruleCompareOperator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '<' | kw= '<=' | kw= '=' ) ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1945:1: ruleCompareOperator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '<' | kw= '<=' | kw= '=' ) ;
     public final AntlrDatatypeRuleToken ruleCompareOperator() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5658,40 +5343,40 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2060:28: ( (kw= '<' | kw= '<=' | kw= '=' ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2061:1: (kw= '<' | kw= '<=' | kw= '=' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1948:28: ( (kw= '<' | kw= '<=' | kw= '=' ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1949:1: (kw= '<' | kw= '<=' | kw= '=' )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2061:1: (kw= '<' | kw= '<=' | kw= '=' )
-            int alt22=3;
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1949:1: (kw= '<' | kw= '<=' | kw= '=' )
+            int alt19=3;
             switch ( input.LA(1) ) {
+            case 40:
+                {
+                alt19=1;
+                }
+                break;
             case 41:
                 {
-                alt22=1;
+                alt19=2;
                 }
                 break;
             case 42:
                 {
-                alt22=2;
-                }
-                break;
-            case 43:
-                {
-                alt22=3;
+                alt19=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 22, 0, input);
+                    new NoViableAltException("", 19, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt22) {
+            switch (alt19) {
                 case 1 :
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2062:2: kw= '<'
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1950:2: kw= '<'
                     {
-                    kw=(Token)match(input,41,FOLLOW_41_in_ruleCompareOperator4687); if (state.failed) return current;
+                    kw=(Token)match(input,40,FOLLOW_40_in_ruleCompareOperator4433); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -5702,9 +5387,9 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2069:2: kw= '<='
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1957:2: kw= '<='
                     {
-                    kw=(Token)match(input,42,FOLLOW_42_in_ruleCompareOperator4706); if (state.failed) return current;
+                    kw=(Token)match(input,41,FOLLOW_41_in_ruleCompareOperator4452); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -5715,9 +5400,9 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2076:2: kw= '='
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1964:2: kw= '='
                     {
-                    kw=(Token)match(input,43,FOLLOW_43_in_ruleCompareOperator4725); if (state.failed) return current;
+                    kw=(Token)match(input,42,FOLLOW_42_in_ruleCompareOperator4471); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -5750,7 +5435,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAdditionExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2089:1: entryRuleAdditionExpression returns [EObject current=null] : iv_ruleAdditionExpression= ruleAdditionExpression EOF ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1977:1: entryRuleAdditionExpression returns [EObject current=null] : iv_ruleAdditionExpression= ruleAdditionExpression EOF ;
     public final EObject entryRuleAdditionExpression() throws RecognitionException {
         EObject current = null;
 
@@ -5758,13 +5443,13 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2090:2: (iv_ruleAdditionExpression= ruleAdditionExpression EOF )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2091:2: iv_ruleAdditionExpression= ruleAdditionExpression EOF
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1978:2: (iv_ruleAdditionExpression= ruleAdditionExpression EOF )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1979:2: iv_ruleAdditionExpression= ruleAdditionExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAdditionExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleAdditionExpression_in_entryRuleAdditionExpression4765);
+            pushFollow(FOLLOW_ruleAdditionExpression_in_entryRuleAdditionExpression4511);
             iv_ruleAdditionExpression=ruleAdditionExpression();
 
             state._fsp--;
@@ -5772,7 +5457,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleAdditionExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAdditionExpression4775); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAdditionExpression4521); if (state.failed) return current;
 
             }
 
@@ -5790,7 +5475,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAdditionExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2098:1: ruleAdditionExpression returns [EObject current=null] : (this_MultiplicationExpression_0= ruleMultiplicationExpression ( ( ( ( ( () '+' ) | ( () '-' ) ) )=> ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ) ( (lv_right_5_0= ruleExpression ) ) )? ) ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1986:1: ruleAdditionExpression returns [EObject current=null] : (this_MultiplicationExpression_0= ruleMultiplicationExpression ( ( ( ( ( () '+' ) | ( () '-' ) ) )=> ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ) ( (lv_right_5_0= ruleExpression ) ) )? ) ;
     public final EObject ruleAdditionExpression() throws RecognitionException {
         EObject current = null;
 
@@ -5804,18 +5489,18 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2101:28: ( (this_MultiplicationExpression_0= ruleMultiplicationExpression ( ( ( ( ( () '+' ) | ( () '-' ) ) )=> ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ) ( (lv_right_5_0= ruleExpression ) ) )? ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2102:1: (this_MultiplicationExpression_0= ruleMultiplicationExpression ( ( ( ( ( () '+' ) | ( () '-' ) ) )=> ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ) ( (lv_right_5_0= ruleExpression ) ) )? )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1989:28: ( (this_MultiplicationExpression_0= ruleMultiplicationExpression ( ( ( ( ( () '+' ) | ( () '-' ) ) )=> ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ) ( (lv_right_5_0= ruleExpression ) ) )? ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1990:1: (this_MultiplicationExpression_0= ruleMultiplicationExpression ( ( ( ( ( () '+' ) | ( () '-' ) ) )=> ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ) ( (lv_right_5_0= ruleExpression ) ) )? )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2102:1: (this_MultiplicationExpression_0= ruleMultiplicationExpression ( ( ( ( ( () '+' ) | ( () '-' ) ) )=> ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ) ( (lv_right_5_0= ruleExpression ) ) )? )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2103:5: this_MultiplicationExpression_0= ruleMultiplicationExpression ( ( ( ( ( () '+' ) | ( () '-' ) ) )=> ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ) ( (lv_right_5_0= ruleExpression ) ) )?
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1990:1: (this_MultiplicationExpression_0= ruleMultiplicationExpression ( ( ( ( ( () '+' ) | ( () '-' ) ) )=> ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ) ( (lv_right_5_0= ruleExpression ) ) )? )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1991:5: this_MultiplicationExpression_0= ruleMultiplicationExpression ( ( ( ( ( () '+' ) | ( () '-' ) ) )=> ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ) ( (lv_right_5_0= ruleExpression ) ) )?
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getAdditionExpressionAccess().getMultiplicationExpressionParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_ruleMultiplicationExpression_in_ruleAdditionExpression4822);
+            pushFollow(FOLLOW_ruleMultiplicationExpression_in_ruleAdditionExpression4568);
             this_MultiplicationExpression_0=ruleMultiplicationExpression();
 
             state._fsp--;
@@ -5826,69 +5511,69 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2111:1: ( ( ( ( ( () '+' ) | ( () '-' ) ) )=> ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ) ( (lv_right_5_0= ruleExpression ) ) )?
-            int alt24=2;
-            int LA24_0 = input.LA(1);
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1999:1: ( ( ( ( ( () '+' ) | ( () '-' ) ) )=> ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ) ( (lv_right_5_0= ruleExpression ) ) )?
+            int alt21=2;
+            int LA21_0 = input.LA(1);
 
-            if ( (LA24_0==44) ) {
-                int LA24_1 = input.LA(2);
-
-                if ( (synpred4_InternalCool()) ) {
-                    alt24=1;
-                }
-            }
-            else if ( (LA24_0==45) ) {
-                int LA24_2 = input.LA(2);
+            if ( (LA21_0==43) ) {
+                int LA21_1 = input.LA(2);
 
                 if ( (synpred4_InternalCool()) ) {
-                    alt24=1;
+                    alt21=1;
                 }
             }
-            switch (alt24) {
+            else if ( (LA21_0==44) ) {
+                int LA21_2 = input.LA(2);
+
+                if ( (synpred4_InternalCool()) ) {
+                    alt21=1;
+                }
+            }
+            switch (alt21) {
                 case 1 :
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2111:2: ( ( ( ( () '+' ) | ( () '-' ) ) )=> ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ) ( (lv_right_5_0= ruleExpression ) )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1999:2: ( ( ( ( () '+' ) | ( () '-' ) ) )=> ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) ) ( (lv_right_5_0= ruleExpression ) )
                     {
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2111:2: ( ( ( ( () '+' ) | ( () '-' ) ) )=> ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) )
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2111:3: ( ( ( () '+' ) | ( () '-' ) ) )=> ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1999:2: ( ( ( ( () '+' ) | ( () '-' ) ) )=> ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) ) )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1999:3: ( ( ( () '+' ) | ( () '-' ) ) )=> ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) )
                     {
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2116:6: ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) )
-                    int alt23=2;
-                    int LA23_0 = input.LA(1);
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2004:6: ( ( () otherlv_2= '+' ) | ( () otherlv_4= '-' ) )
+                    int alt20=2;
+                    int LA20_0 = input.LA(1);
 
-                    if ( (LA23_0==44) ) {
-                        alt23=1;
+                    if ( (LA20_0==43) ) {
+                        alt20=1;
                     }
-                    else if ( (LA23_0==45) ) {
-                        alt23=2;
+                    else if ( (LA20_0==44) ) {
+                        alt20=2;
                     }
                     else {
                         if (state.backtracking>0) {state.failed=true; return current;}
                         NoViableAltException nvae =
-                            new NoViableAltException("", 23, 0, input);
+                            new NoViableAltException("", 20, 0, input);
 
                         throw nvae;
                     }
-                    switch (alt23) {
+                    switch (alt20) {
                         case 1 :
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2116:7: ( () otherlv_2= '+' )
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2004:7: ( () otherlv_2= '+' )
                             {
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2116:7: ( () otherlv_2= '+' )
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2116:8: () otherlv_2= '+'
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2004:7: ( () otherlv_2= '+' )
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2004:8: () otherlv_2= '+'
                             {
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2116:8: ()
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2117:5: 
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2004:8: ()
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2005:5: 
                             {
                             if ( state.backtracking==0 ) {
 
                                       current = forceCreateModelElementAndSet(
-                                          grammarAccess.getAdditionExpressionAccess().getPlusOpAction_1_0_0_0_0(),
+                                          grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0(),
                                           current);
                                   
                             }
 
                             }
 
-                            otherlv_2=(Token)match(input,44,FOLLOW_44_in_ruleAdditionExpression4875); if (state.failed) return current;
+                            otherlv_2=(Token)match(input,43,FOLLOW_43_in_ruleAdditionExpression4621); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_2, grammarAccess.getAdditionExpressionAccess().getPlusSignKeyword_1_0_0_0_1());
@@ -5901,13 +5586,13 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2127:6: ( () otherlv_4= '-' )
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2015:6: ( () otherlv_4= '-' )
                             {
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2127:6: ( () otherlv_4= '-' )
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2127:7: () otherlv_4= '-'
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2015:6: ( () otherlv_4= '-' )
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2015:7: () otherlv_4= '-'
                             {
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2127:7: ()
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2128:5: 
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2015:7: ()
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2016:5: 
                             {
                             if ( state.backtracking==0 ) {
 
@@ -5919,7 +5604,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            otherlv_4=(Token)match(input,45,FOLLOW_45_in_ruleAdditionExpression4904); if (state.failed) return current;
+                            otherlv_4=(Token)match(input,44,FOLLOW_44_in_ruleAdditionExpression4650); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_4, grammarAccess.getAdditionExpressionAccess().getHyphenMinusKeyword_1_0_0_1_1());
@@ -5937,18 +5622,18 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2137:4: ( (lv_right_5_0= ruleExpression ) )
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2138:1: (lv_right_5_0= ruleExpression )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2025:4: ( (lv_right_5_0= ruleExpression ) )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2026:1: (lv_right_5_0= ruleExpression )
                     {
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2138:1: (lv_right_5_0= ruleExpression )
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2139:3: lv_right_5_0= ruleExpression
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2026:1: (lv_right_5_0= ruleExpression )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2027:3: lv_right_5_0= ruleExpression
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getAdditionExpressionAccess().getRightExpressionParserRuleCall_1_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleExpression_in_ruleAdditionExpression4928);
+                    pushFollow(FOLLOW_ruleExpression_in_ruleAdditionExpression4674);
                     lv_right_5_0=ruleExpression();
 
                     state._fsp--;
@@ -6001,7 +5686,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMultiplicationExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2163:1: entryRuleMultiplicationExpression returns [EObject current=null] : iv_ruleMultiplicationExpression= ruleMultiplicationExpression EOF ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2051:1: entryRuleMultiplicationExpression returns [EObject current=null] : iv_ruleMultiplicationExpression= ruleMultiplicationExpression EOF ;
     public final EObject entryRuleMultiplicationExpression() throws RecognitionException {
         EObject current = null;
 
@@ -6009,13 +5694,13 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2164:2: (iv_ruleMultiplicationExpression= ruleMultiplicationExpression EOF )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2165:2: iv_ruleMultiplicationExpression= ruleMultiplicationExpression EOF
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2052:2: (iv_ruleMultiplicationExpression= ruleMultiplicationExpression EOF )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2053:2: iv_ruleMultiplicationExpression= ruleMultiplicationExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMultiplicationExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleMultiplicationExpression_in_entryRuleMultiplicationExpression4966);
+            pushFollow(FOLLOW_ruleMultiplicationExpression_in_entryRuleMultiplicationExpression4712);
             iv_ruleMultiplicationExpression=ruleMultiplicationExpression();
 
             state._fsp--;
@@ -6023,7 +5708,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleMultiplicationExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMultiplicationExpression4976); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMultiplicationExpression4722); if (state.failed) return current;
 
             }
 
@@ -6041,13 +5726,13 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMultiplicationExpression"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2172:1: ruleMultiplicationExpression returns [EObject current=null] : (this_PrimaryExpression_0= rulePrimaryExpression ( ( ( ( ( () '*' ) | ( () '/' ) ) )=> ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) ) ) ( (lv_right_5_0= ruleExpression ) ) )? ) ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2060:1: ruleMultiplicationExpression returns [EObject current=null] : (this_DispatchExpression_0= ruleDispatchExpression ( ( ( ( ( () '*' ) | ( () '/' ) ) )=> ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) ) ) ( (lv_right_5_0= ruleExpression ) ) )? ) ;
     public final EObject ruleMultiplicationExpression() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_2=null;
         Token otherlv_4=null;
-        EObject this_PrimaryExpression_0 = null;
+        EObject this_DispatchExpression_0 = null;
 
         EObject lv_right_5_0 = null;
 
@@ -6055,91 +5740,91 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2175:28: ( (this_PrimaryExpression_0= rulePrimaryExpression ( ( ( ( ( () '*' ) | ( () '/' ) ) )=> ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) ) ) ( (lv_right_5_0= ruleExpression ) ) )? ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2176:1: (this_PrimaryExpression_0= rulePrimaryExpression ( ( ( ( ( () '*' ) | ( () '/' ) ) )=> ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) ) ) ( (lv_right_5_0= ruleExpression ) ) )? )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2063:28: ( (this_DispatchExpression_0= ruleDispatchExpression ( ( ( ( ( () '*' ) | ( () '/' ) ) )=> ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) ) ) ( (lv_right_5_0= ruleExpression ) ) )? ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2064:1: (this_DispatchExpression_0= ruleDispatchExpression ( ( ( ( ( () '*' ) | ( () '/' ) ) )=> ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) ) ) ( (lv_right_5_0= ruleExpression ) ) )? )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2176:1: (this_PrimaryExpression_0= rulePrimaryExpression ( ( ( ( ( () '*' ) | ( () '/' ) ) )=> ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) ) ) ( (lv_right_5_0= ruleExpression ) ) )? )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2177:5: this_PrimaryExpression_0= rulePrimaryExpression ( ( ( ( ( () '*' ) | ( () '/' ) ) )=> ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) ) ) ( (lv_right_5_0= ruleExpression ) ) )?
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2064:1: (this_DispatchExpression_0= ruleDispatchExpression ( ( ( ( ( () '*' ) | ( () '/' ) ) )=> ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) ) ) ( (lv_right_5_0= ruleExpression ) ) )? )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2065:5: this_DispatchExpression_0= ruleDispatchExpression ( ( ( ( ( () '*' ) | ( () '/' ) ) )=> ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) ) ) ( (lv_right_5_0= ruleExpression ) ) )?
             {
             if ( state.backtracking==0 ) {
                
-                      newCompositeNode(grammarAccess.getMultiplicationExpressionAccess().getPrimaryExpressionParserRuleCall_0()); 
+                      newCompositeNode(grammarAccess.getMultiplicationExpressionAccess().getDispatchExpressionParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_rulePrimaryExpression_in_ruleMultiplicationExpression5023);
-            this_PrimaryExpression_0=rulePrimaryExpression();
+            pushFollow(FOLLOW_ruleDispatchExpression_in_ruleMultiplicationExpression4769);
+            this_DispatchExpression_0=ruleDispatchExpression();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
                
-                      current = this_PrimaryExpression_0; 
+                      current = this_DispatchExpression_0; 
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2185:1: ( ( ( ( ( () '*' ) | ( () '/' ) ) )=> ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) ) ) ( (lv_right_5_0= ruleExpression ) ) )?
-            int alt26=2;
-            int LA26_0 = input.LA(1);
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2073:1: ( ( ( ( ( () '*' ) | ( () '/' ) ) )=> ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) ) ) ( (lv_right_5_0= ruleExpression ) ) )?
+            int alt23=2;
+            int LA23_0 = input.LA(1);
 
-            if ( (LA26_0==46) ) {
-                int LA26_1 = input.LA(2);
-
-                if ( (synpred5_InternalCool()) ) {
-                    alt26=1;
-                }
-            }
-            else if ( (LA26_0==47) ) {
-                int LA26_2 = input.LA(2);
+            if ( (LA23_0==45) ) {
+                int LA23_1 = input.LA(2);
 
                 if ( (synpred5_InternalCool()) ) {
-                    alt26=1;
+                    alt23=1;
                 }
             }
-            switch (alt26) {
+            else if ( (LA23_0==46) ) {
+                int LA23_2 = input.LA(2);
+
+                if ( (synpred5_InternalCool()) ) {
+                    alt23=1;
+                }
+            }
+            switch (alt23) {
                 case 1 :
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2185:2: ( ( ( ( () '*' ) | ( () '/' ) ) )=> ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) ) ) ( (lv_right_5_0= ruleExpression ) )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2073:2: ( ( ( ( () '*' ) | ( () '/' ) ) )=> ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) ) ) ( (lv_right_5_0= ruleExpression ) )
                     {
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2185:2: ( ( ( ( () '*' ) | ( () '/' ) ) )=> ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) ) )
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2185:3: ( ( ( () '*' ) | ( () '/' ) ) )=> ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2073:2: ( ( ( ( () '*' ) | ( () '/' ) ) )=> ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) ) )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2073:3: ( ( ( () '*' ) | ( () '/' ) ) )=> ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) )
                     {
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2190:6: ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) )
-                    int alt25=2;
-                    int LA25_0 = input.LA(1);
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2078:6: ( ( () otherlv_2= '*' ) | ( () otherlv_4= '/' ) )
+                    int alt22=2;
+                    int LA22_0 = input.LA(1);
 
-                    if ( (LA25_0==46) ) {
-                        alt25=1;
+                    if ( (LA22_0==45) ) {
+                        alt22=1;
                     }
-                    else if ( (LA25_0==47) ) {
-                        alt25=2;
+                    else if ( (LA22_0==46) ) {
+                        alt22=2;
                     }
                     else {
                         if (state.backtracking>0) {state.failed=true; return current;}
                         NoViableAltException nvae =
-                            new NoViableAltException("", 25, 0, input);
+                            new NoViableAltException("", 22, 0, input);
 
                         throw nvae;
                     }
-                    switch (alt25) {
+                    switch (alt22) {
                         case 1 :
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2190:7: ( () otherlv_2= '*' )
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2078:7: ( () otherlv_2= '*' )
                             {
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2190:7: ( () otherlv_2= '*' )
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2190:8: () otherlv_2= '*'
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2078:7: ( () otherlv_2= '*' )
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2078:8: () otherlv_2= '*'
                             {
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2190:8: ()
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2191:5: 
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2078:8: ()
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2079:5: 
                             {
                             if ( state.backtracking==0 ) {
 
                                       current = forceCreateModelElementAndSet(
-                                          grammarAccess.getMultiplicationExpressionAccess().getMultiOpAction_1_0_0_0_0(),
+                                          grammarAccess.getMultiplicationExpressionAccess().getMultiplicationExpressionLeftAction_1_0_0_0_0(),
                                           current);
                                   
                             }
 
                             }
 
-                            otherlv_2=(Token)match(input,46,FOLLOW_46_in_ruleMultiplicationExpression5076); if (state.failed) return current;
+                            otherlv_2=(Token)match(input,45,FOLLOW_45_in_ruleMultiplicationExpression4822); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_2, grammarAccess.getMultiplicationExpressionAccess().getAsteriskKeyword_1_0_0_0_1());
@@ -6152,13 +5837,13 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2201:6: ( () otherlv_4= '/' )
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2089:6: ( () otherlv_4= '/' )
                             {
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2201:6: ( () otherlv_4= '/' )
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2201:7: () otherlv_4= '/'
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2089:6: ( () otherlv_4= '/' )
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2089:7: () otherlv_4= '/'
                             {
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2201:7: ()
-                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2202:5: 
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2089:7: ()
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2090:5: 
                             {
                             if ( state.backtracking==0 ) {
 
@@ -6170,7 +5855,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            otherlv_4=(Token)match(input,47,FOLLOW_47_in_ruleMultiplicationExpression5105); if (state.failed) return current;
+                            otherlv_4=(Token)match(input,46,FOLLOW_46_in_ruleMultiplicationExpression4851); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_4, grammarAccess.getMultiplicationExpressionAccess().getSolidusKeyword_1_0_0_1_1());
@@ -6188,18 +5873,18 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2211:4: ( (lv_right_5_0= ruleExpression ) )
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2212:1: (lv_right_5_0= ruleExpression )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2099:4: ( (lv_right_5_0= ruleExpression ) )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2100:1: (lv_right_5_0= ruleExpression )
                     {
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2212:1: (lv_right_5_0= ruleExpression )
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2213:3: lv_right_5_0= ruleExpression
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2100:1: (lv_right_5_0= ruleExpression )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2101:3: lv_right_5_0= ruleExpression
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getMultiplicationExpressionAccess().getRightExpressionParserRuleCall_1_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleExpression_in_ruleMultiplicationExpression5129);
+                    pushFollow(FOLLOW_ruleExpression_in_ruleMultiplicationExpression4875);
                     lv_right_5_0=ruleExpression();
 
                     state._fsp--;
@@ -6251,8 +5936,449 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleMultiplicationExpression"
 
 
+    // $ANTLR start "entryRuleDispatchExpression"
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2125:1: entryRuleDispatchExpression returns [EObject current=null] : iv_ruleDispatchExpression= ruleDispatchExpression EOF ;
+    public final EObject entryRuleDispatchExpression() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleDispatchExpression = null;
+
+
+        try {
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2126:2: (iv_ruleDispatchExpression= ruleDispatchExpression EOF )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2127:2: iv_ruleDispatchExpression= ruleDispatchExpression EOF
+            {
+            if ( state.backtracking==0 ) {
+               newCompositeNode(grammarAccess.getDispatchExpressionRule()); 
+            }
+            pushFollow(FOLLOW_ruleDispatchExpression_in_entryRuleDispatchExpression4913);
+            iv_ruleDispatchExpression=ruleDispatchExpression();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+               current =iv_ruleDispatchExpression; 
+            }
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDispatchExpression4923); if (state.failed) return current;
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleDispatchExpression"
+
+
+    // $ANTLR start "ruleDispatchExpression"
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2134:1: ruleDispatchExpression returns [EObject current=null] : (this_PrimaryExpression_0= rulePrimaryExpression ( ( ( ( () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) ) ) )=> ( () (otherlv_2= '@' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '.' ( (lv_ref_5_0= ruleIdentifierRefExpression ) ) ) ) otherlv_6= '(' ( ( (lv_actual_7_0= ruleExpression ) ) (otherlv_8= ',' ( (lv_actual_9_0= ruleExpression ) ) )* )? otherlv_10= ')' ( ( ( '.' )=>otherlv_11= '.' ) ( (lv_chain_12_0= ruleStaticDispatchExpression ) ) )? )? ) ;
+    public final EObject ruleDispatchExpression() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_2=null;
+        Token otherlv_3=null;
+        Token otherlv_4=null;
+        Token otherlv_6=null;
+        Token otherlv_8=null;
+        Token otherlv_10=null;
+        Token otherlv_11=null;
+        EObject this_PrimaryExpression_0 = null;
+
+        EObject lv_ref_5_0 = null;
+
+        EObject lv_actual_7_0 = null;
+
+        EObject lv_actual_9_0 = null;
+
+        EObject lv_chain_12_0 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2137:28: ( (this_PrimaryExpression_0= rulePrimaryExpression ( ( ( ( () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) ) ) )=> ( () (otherlv_2= '@' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '.' ( (lv_ref_5_0= ruleIdentifierRefExpression ) ) ) ) otherlv_6= '(' ( ( (lv_actual_7_0= ruleExpression ) ) (otherlv_8= ',' ( (lv_actual_9_0= ruleExpression ) ) )* )? otherlv_10= ')' ( ( ( '.' )=>otherlv_11= '.' ) ( (lv_chain_12_0= ruleStaticDispatchExpression ) ) )? )? ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2138:1: (this_PrimaryExpression_0= rulePrimaryExpression ( ( ( ( () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) ) ) )=> ( () (otherlv_2= '@' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '.' ( (lv_ref_5_0= ruleIdentifierRefExpression ) ) ) ) otherlv_6= '(' ( ( (lv_actual_7_0= ruleExpression ) ) (otherlv_8= ',' ( (lv_actual_9_0= ruleExpression ) ) )* )? otherlv_10= ')' ( ( ( '.' )=>otherlv_11= '.' ) ( (lv_chain_12_0= ruleStaticDispatchExpression ) ) )? )? )
+            {
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2138:1: (this_PrimaryExpression_0= rulePrimaryExpression ( ( ( ( () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) ) ) )=> ( () (otherlv_2= '@' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '.' ( (lv_ref_5_0= ruleIdentifierRefExpression ) ) ) ) otherlv_6= '(' ( ( (lv_actual_7_0= ruleExpression ) ) (otherlv_8= ',' ( (lv_actual_9_0= ruleExpression ) ) )* )? otherlv_10= ')' ( ( ( '.' )=>otherlv_11= '.' ) ( (lv_chain_12_0= ruleStaticDispatchExpression ) ) )? )? )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2139:5: this_PrimaryExpression_0= rulePrimaryExpression ( ( ( ( () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) ) ) )=> ( () (otherlv_2= '@' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '.' ( (lv_ref_5_0= ruleIdentifierRefExpression ) ) ) ) otherlv_6= '(' ( ( (lv_actual_7_0= ruleExpression ) ) (otherlv_8= ',' ( (lv_actual_9_0= ruleExpression ) ) )* )? otherlv_10= ')' ( ( ( '.' )=>otherlv_11= '.' ) ( (lv_chain_12_0= ruleStaticDispatchExpression ) ) )? )?
+            {
+            if ( state.backtracking==0 ) {
+               
+                      newCompositeNode(grammarAccess.getDispatchExpressionAccess().getPrimaryExpressionParserRuleCall_0()); 
+                  
+            }
+            pushFollow(FOLLOW_rulePrimaryExpression_in_ruleDispatchExpression4970);
+            this_PrimaryExpression_0=rulePrimaryExpression();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+               
+                      current = this_PrimaryExpression_0; 
+                      afterParserOrEnumRuleCall();
+                  
+            }
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2147:1: ( ( ( ( () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) ) ) )=> ( () (otherlv_2= '@' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '.' ( (lv_ref_5_0= ruleIdentifierRefExpression ) ) ) ) otherlv_6= '(' ( ( (lv_actual_7_0= ruleExpression ) ) (otherlv_8= ',' ( (lv_actual_9_0= ruleExpression ) ) )* )? otherlv_10= ')' ( ( ( '.' )=>otherlv_11= '.' ) ( (lv_chain_12_0= ruleStaticDispatchExpression ) ) )? )?
+            int alt28=2;
+            int LA28_0 = input.LA(1);
+
+            if ( (LA28_0==47) ) {
+                int LA28_1 = input.LA(2);
+
+                if ( (synpred6_InternalCool()) ) {
+                    alt28=1;
+                }
+            }
+            else if ( (LA28_0==25) ) {
+                int LA28_2 = input.LA(2);
+
+                if ( (synpred6_InternalCool()) ) {
+                    alt28=1;
+                }
+            }
+            switch (alt28) {
+                case 1 :
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2147:2: ( ( ( () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) ) ) )=> ( () (otherlv_2= '@' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '.' ( (lv_ref_5_0= ruleIdentifierRefExpression ) ) ) ) otherlv_6= '(' ( ( (lv_actual_7_0= ruleExpression ) ) (otherlv_8= ',' ( (lv_actual_9_0= ruleExpression ) ) )* )? otherlv_10= ')' ( ( ( '.' )=>otherlv_11= '.' ) ( (lv_chain_12_0= ruleStaticDispatchExpression ) ) )?
+                    {
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2147:2: ( ( ( () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) ) ) )=> ( () (otherlv_2= '@' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '.' ( (lv_ref_5_0= ruleIdentifierRefExpression ) ) ) )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2147:3: ( ( () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) ) ) )=> ( () (otherlv_2= '@' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '.' ( (lv_ref_5_0= ruleIdentifierRefExpression ) ) )
+                    {
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2159:6: ( () (otherlv_2= '@' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '.' ( (lv_ref_5_0= ruleIdentifierRefExpression ) ) )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2159:7: () (otherlv_2= '@' ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '.' ( (lv_ref_5_0= ruleIdentifierRefExpression ) )
+                    {
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2159:7: ()
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2160:5: 
+                    {
+                    if ( state.backtracking==0 ) {
+
+                              current = forceCreateModelElementAndSet(
+                                  grammarAccess.getDispatchExpressionAccess().getDispatchExpressionLeftAction_1_0_0_0(),
+                                  current);
+                          
+                    }
+
+                    }
+
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2165:2: (otherlv_2= '@' ( (otherlv_3= RULE_ID ) ) )?
+                    int alt24=2;
+                    int LA24_0 = input.LA(1);
+
+                    if ( (LA24_0==47) ) {
+                        alt24=1;
+                    }
+                    switch (alt24) {
+                        case 1 :
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2165:4: otherlv_2= '@' ( (otherlv_3= RULE_ID ) )
+                            {
+                            otherlv_2=(Token)match(input,47,FOLLOW_47_in_ruleDispatchExpression5033); if (state.failed) return current;
+                            if ( state.backtracking==0 ) {
+
+                                  	newLeafNode(otherlv_2, grammarAccess.getDispatchExpressionAccess().getCommercialAtKeyword_1_0_0_1_0());
+                                  
+                            }
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2169:1: ( (otherlv_3= RULE_ID ) )
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2170:1: (otherlv_3= RULE_ID )
+                            {
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2170:1: (otherlv_3= RULE_ID )
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2171:3: otherlv_3= RULE_ID
+                            {
+                            if ( state.backtracking==0 ) {
+
+                              			if (current==null) {
+                              	            current = createModelElement(grammarAccess.getDispatchExpressionRule());
+                              	        }
+                                      
+                            }
+                            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDispatchExpression5053); if (state.failed) return current;
+                            if ( state.backtracking==0 ) {
+
+                              		newLeafNode(otherlv_3, grammarAccess.getDispatchExpressionAccess().getType_nameTypeCrossReference_1_0_0_1_1_0()); 
+                              	
+                            }
+
+                            }
+
+
+                            }
+
+
+                            }
+                            break;
+
+                    }
+
+                    otherlv_4=(Token)match(input,25,FOLLOW_25_in_ruleDispatchExpression5067); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                          	newLeafNode(otherlv_4, grammarAccess.getDispatchExpressionAccess().getFullStopKeyword_1_0_0_2());
+                          
+                    }
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2186:1: ( (lv_ref_5_0= ruleIdentifierRefExpression ) )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2187:1: (lv_ref_5_0= ruleIdentifierRefExpression )
+                    {
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2187:1: (lv_ref_5_0= ruleIdentifierRefExpression )
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2188:3: lv_ref_5_0= ruleIdentifierRefExpression
+                    {
+                    if ( state.backtracking==0 ) {
+                       
+                      	        newCompositeNode(grammarAccess.getDispatchExpressionAccess().getRefIdentifierRefExpressionParserRuleCall_1_0_0_3_0()); 
+                      	    
+                    }
+                    pushFollow(FOLLOW_ruleIdentifierRefExpression_in_ruleDispatchExpression5088);
+                    lv_ref_5_0=ruleIdentifierRefExpression();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      	        if (current==null) {
+                      	            current = createModelElementForParent(grammarAccess.getDispatchExpressionRule());
+                      	        }
+                             		set(
+                             			current, 
+                             			"ref",
+                              		lv_ref_5_0, 
+                              		"IdentifierRefExpression");
+                      	        afterParserOrEnumRuleCall();
+                      	    
+                    }
+
+                    }
+
+
+                    }
+
+
+                    }
+
+
+                    }
+
+                    otherlv_6=(Token)match(input,18,FOLLOW_18_in_ruleDispatchExpression5102); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                          	newLeafNode(otherlv_6, grammarAccess.getDispatchExpressionAccess().getLeftParenthesisKeyword_1_1());
+                          
+                    }
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2208:1: ( ( (lv_actual_7_0= ruleExpression ) ) (otherlv_8= ',' ( (lv_actual_9_0= ruleExpression ) ) )* )?
+                    int alt26=2;
+                    int LA26_0 = input.LA(1);
+
+                    if ( ((LA26_0>=RULE_ID && LA26_0<=RULE_STRING)||LA26_0==13||LA26_0==18||(LA26_0>=21 && LA26_0<=24)||LA26_0==26||LA26_0==30||(LA26_0>=33 && LA26_0<=34)||LA26_0==36||(LA26_0>=48 && LA26_0<=49)) ) {
+                        alt26=1;
+                    }
+                    switch (alt26) {
+                        case 1 :
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2208:2: ( (lv_actual_7_0= ruleExpression ) ) (otherlv_8= ',' ( (lv_actual_9_0= ruleExpression ) ) )*
+                            {
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2208:2: ( (lv_actual_7_0= ruleExpression ) )
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2209:1: (lv_actual_7_0= ruleExpression )
+                            {
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2209:1: (lv_actual_7_0= ruleExpression )
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2210:3: lv_actual_7_0= ruleExpression
+                            {
+                            if ( state.backtracking==0 ) {
+                               
+                              	        newCompositeNode(grammarAccess.getDispatchExpressionAccess().getActualExpressionParserRuleCall_1_2_0_0()); 
+                              	    
+                            }
+                            pushFollow(FOLLOW_ruleExpression_in_ruleDispatchExpression5124);
+                            lv_actual_7_0=ruleExpression();
+
+                            state._fsp--;
+                            if (state.failed) return current;
+                            if ( state.backtracking==0 ) {
+
+                              	        if (current==null) {
+                              	            current = createModelElementForParent(grammarAccess.getDispatchExpressionRule());
+                              	        }
+                                     		add(
+                                     			current, 
+                                     			"actual",
+                                      		lv_actual_7_0, 
+                                      		"Expression");
+                              	        afterParserOrEnumRuleCall();
+                              	    
+                            }
+
+                            }
+
+
+                            }
+
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2226:2: (otherlv_8= ',' ( (lv_actual_9_0= ruleExpression ) ) )*
+                            loop25:
+                            do {
+                                int alt25=2;
+                                int LA25_0 = input.LA(1);
+
+                                if ( (LA25_0==19) ) {
+                                    alt25=1;
+                                }
+
+
+                                switch (alt25) {
+                            	case 1 :
+                            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2226:4: otherlv_8= ',' ( (lv_actual_9_0= ruleExpression ) )
+                            	    {
+                            	    otherlv_8=(Token)match(input,19,FOLLOW_19_in_ruleDispatchExpression5137); if (state.failed) return current;
+                            	    if ( state.backtracking==0 ) {
+
+                            	          	newLeafNode(otherlv_8, grammarAccess.getDispatchExpressionAccess().getCommaKeyword_1_2_1_0());
+                            	          
+                            	    }
+                            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2230:1: ( (lv_actual_9_0= ruleExpression ) )
+                            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2231:1: (lv_actual_9_0= ruleExpression )
+                            	    {
+                            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2231:1: (lv_actual_9_0= ruleExpression )
+                            	    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2232:3: lv_actual_9_0= ruleExpression
+                            	    {
+                            	    if ( state.backtracking==0 ) {
+                            	       
+                            	      	        newCompositeNode(grammarAccess.getDispatchExpressionAccess().getActualExpressionParserRuleCall_1_2_1_1_0()); 
+                            	      	    
+                            	    }
+                            	    pushFollow(FOLLOW_ruleExpression_in_ruleDispatchExpression5158);
+                            	    lv_actual_9_0=ruleExpression();
+
+                            	    state._fsp--;
+                            	    if (state.failed) return current;
+                            	    if ( state.backtracking==0 ) {
+
+                            	      	        if (current==null) {
+                            	      	            current = createModelElementForParent(grammarAccess.getDispatchExpressionRule());
+                            	      	        }
+                            	             		add(
+                            	             			current, 
+                            	             			"actual",
+                            	              		lv_actual_9_0, 
+                            	              		"Expression");
+                            	      	        afterParserOrEnumRuleCall();
+                            	      	    
+                            	    }
+
+                            	    }
+
+
+                            	    }
+
+
+                            	    }
+                            	    break;
+
+                            	default :
+                            	    break loop25;
+                                }
+                            } while (true);
+
+
+                            }
+                            break;
+
+                    }
+
+                    otherlv_10=(Token)match(input,20,FOLLOW_20_in_ruleDispatchExpression5174); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                          	newLeafNode(otherlv_10, grammarAccess.getDispatchExpressionAccess().getRightParenthesisKeyword_1_3());
+                          
+                    }
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2252:1: ( ( ( '.' )=>otherlv_11= '.' ) ( (lv_chain_12_0= ruleStaticDispatchExpression ) ) )?
+                    int alt27=2;
+                    alt27 = dfa27.predict(input);
+                    switch (alt27) {
+                        case 1 :
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2252:2: ( ( '.' )=>otherlv_11= '.' ) ( (lv_chain_12_0= ruleStaticDispatchExpression ) )
+                            {
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2252:2: ( ( '.' )=>otherlv_11= '.' )
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2252:3: ( '.' )=>otherlv_11= '.'
+                            {
+                            otherlv_11=(Token)match(input,25,FOLLOW_25_in_ruleDispatchExpression5195); if (state.failed) return current;
+                            if ( state.backtracking==0 ) {
+
+                                  	newLeafNode(otherlv_11, grammarAccess.getDispatchExpressionAccess().getFullStopKeyword_1_4_0());
+                                  
+                            }
+
+                            }
+
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2257:2: ( (lv_chain_12_0= ruleStaticDispatchExpression ) )
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2258:1: (lv_chain_12_0= ruleStaticDispatchExpression )
+                            {
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2258:1: (lv_chain_12_0= ruleStaticDispatchExpression )
+                            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2259:3: lv_chain_12_0= ruleStaticDispatchExpression
+                            {
+                            if ( state.backtracking==0 ) {
+                               
+                              	        newCompositeNode(grammarAccess.getDispatchExpressionAccess().getChainStaticDispatchExpressionParserRuleCall_1_4_1_0()); 
+                              	    
+                            }
+                            pushFollow(FOLLOW_ruleStaticDispatchExpression_in_ruleDispatchExpression5217);
+                            lv_chain_12_0=ruleStaticDispatchExpression();
+
+                            state._fsp--;
+                            if (state.failed) return current;
+                            if ( state.backtracking==0 ) {
+
+                              	        if (current==null) {
+                              	            current = createModelElementForParent(grammarAccess.getDispatchExpressionRule());
+                              	        }
+                                     		set(
+                                     			current, 
+                                     			"chain",
+                                      		lv_chain_12_0, 
+                                      		"StaticDispatchExpression");
+                              	        afterParserOrEnumRuleCall();
+                              	    
+                            }
+
+                            }
+
+
+                            }
+
+
+                            }
+                            break;
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+
+            }
+
+            if ( state.backtracking==0 ) {
+               leaveRule(); 
+            }
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleDispatchExpression"
+
+
     // $ANTLR start "entryRuleBOOLEAN"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2241:1: entryRuleBOOLEAN returns [String current=null] : iv_ruleBOOLEAN= ruleBOOLEAN EOF ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2287:1: entryRuleBOOLEAN returns [String current=null] : iv_ruleBOOLEAN= ruleBOOLEAN EOF ;
     public final String entryRuleBOOLEAN() throws RecognitionException {
         String current = null;
 
@@ -6260,13 +6386,13 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2242:2: (iv_ruleBOOLEAN= ruleBOOLEAN EOF )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2243:2: iv_ruleBOOLEAN= ruleBOOLEAN EOF
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2288:2: (iv_ruleBOOLEAN= ruleBOOLEAN EOF )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2289:2: iv_ruleBOOLEAN= ruleBOOLEAN EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBOOLEANRule()); 
             }
-            pushFollow(FOLLOW_ruleBOOLEAN_in_entryRuleBOOLEAN5172);
+            pushFollow(FOLLOW_ruleBOOLEAN_in_entryRuleBOOLEAN5262);
             iv_ruleBOOLEAN=ruleBOOLEAN();
 
             state._fsp--;
@@ -6274,7 +6400,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleBOOLEAN.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBOOLEAN5183); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBOOLEAN5273); if (state.failed) return current;
 
             }
 
@@ -6292,7 +6418,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBOOLEAN"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2250:1: ruleBOOLEAN returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'true' | kw= 'false' ) ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2296:1: ruleBOOLEAN returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'true' | kw= 'false' ) ;
     public final AntlrDatatypeRuleToken ruleBOOLEAN() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -6301,31 +6427,31 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2253:28: ( (kw= 'true' | kw= 'false' ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2254:1: (kw= 'true' | kw= 'false' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2299:28: ( (kw= 'true' | kw= 'false' ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2300:1: (kw= 'true' | kw= 'false' )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2254:1: (kw= 'true' | kw= 'false' )
-            int alt27=2;
-            int LA27_0 = input.LA(1);
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2300:1: (kw= 'true' | kw= 'false' )
+            int alt29=2;
+            int LA29_0 = input.LA(1);
 
-            if ( (LA27_0==48) ) {
-                alt27=1;
+            if ( (LA29_0==48) ) {
+                alt29=1;
             }
-            else if ( (LA27_0==49) ) {
-                alt27=2;
+            else if ( (LA29_0==49) ) {
+                alt29=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 27, 0, input);
+                    new NoViableAltException("", 29, 0, input);
 
                 throw nvae;
             }
-            switch (alt27) {
+            switch (alt29) {
                 case 1 :
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2255:2: kw= 'true'
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2301:2: kw= 'true'
                     {
-                    kw=(Token)match(input,48,FOLLOW_48_in_ruleBOOLEAN5221); if (state.failed) return current;
+                    kw=(Token)match(input,48,FOLLOW_48_in_ruleBOOLEAN5311); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -6336,9 +6462,9 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2262:2: kw= 'false'
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2308:2: kw= 'false'
                     {
-                    kw=(Token)match(input,49,FOLLOW_49_in_ruleBOOLEAN5240); if (state.failed) return current;
+                    kw=(Token)match(input,49,FOLLOW_49_in_ruleBOOLEAN5330); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -6371,7 +6497,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSYMBOL"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2275:1: entryRuleSYMBOL returns [String current=null] : iv_ruleSYMBOL= ruleSYMBOL EOF ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2321:1: entryRuleSYMBOL returns [String current=null] : iv_ruleSYMBOL= ruleSYMBOL EOF ;
     public final String entryRuleSYMBOL() throws RecognitionException {
         String current = null;
 
@@ -6379,13 +6505,13 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2276:2: (iv_ruleSYMBOL= ruleSYMBOL EOF )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2277:2: iv_ruleSYMBOL= ruleSYMBOL EOF
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2322:2: (iv_ruleSYMBOL= ruleSYMBOL EOF )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2323:2: iv_ruleSYMBOL= ruleSYMBOL EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSYMBOLRule()); 
             }
-            pushFollow(FOLLOW_ruleSYMBOL_in_entryRuleSYMBOL5281);
+            pushFollow(FOLLOW_ruleSYMBOL_in_entryRuleSYMBOL5371);
             iv_ruleSYMBOL=ruleSYMBOL();
 
             state._fsp--;
@@ -6393,7 +6519,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleSYMBOL.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSYMBOL5292); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSYMBOL5382); if (state.failed) return current;
 
             }
 
@@ -6411,7 +6537,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSYMBOL"
-    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2284:1: ruleSYMBOL returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID | kw= 'self' ) ;
+    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2330:1: ruleSYMBOL returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID | kw= 'self' ) ;
     public final AntlrDatatypeRuleToken ruleSYMBOL() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -6421,31 +6547,31 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2287:28: ( (this_ID_0= RULE_ID | kw= 'self' ) )
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2288:1: (this_ID_0= RULE_ID | kw= 'self' )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2333:28: ( (this_ID_0= RULE_ID | kw= 'self' ) )
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2334:1: (this_ID_0= RULE_ID | kw= 'self' )
             {
-            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2288:1: (this_ID_0= RULE_ID | kw= 'self' )
-            int alt28=2;
-            int LA28_0 = input.LA(1);
+            // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2334:1: (this_ID_0= RULE_ID | kw= 'self' )
+            int alt30=2;
+            int LA30_0 = input.LA(1);
 
-            if ( (LA28_0==RULE_ID) ) {
-                alt28=1;
+            if ( (LA30_0==RULE_ID) ) {
+                alt30=1;
             }
-            else if ( (LA28_0==21) ) {
-                alt28=2;
+            else if ( (LA30_0==21) ) {
+                alt30=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 28, 0, input);
+                    new NoViableAltException("", 30, 0, input);
 
                 throw nvae;
             }
-            switch (alt28) {
+            switch (alt30) {
                 case 1 :
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2288:6: this_ID_0= RULE_ID
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2334:6: this_ID_0= RULE_ID
                     {
-                    this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSYMBOL5332); if (state.failed) return current;
+                    this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSYMBOL5422); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       		current.merge(this_ID_0);
@@ -6460,9 +6586,9 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2297:2: kw= 'self'
+                    // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2343:2: kw= 'self'
                     {
-                    kw=(Token)match(input,21,FOLLOW_21_in_ruleSYMBOL5356); if (state.failed) return current;
+                    kw=(Token)match(input,21,FOLLOW_21_in_ruleSYMBOL5446); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -6495,69 +6621,10 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred1_InternalCool
     public final void synpred1_InternalCool_fragment() throws RecognitionException {   
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1156:3: ( ( () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) ) ) )
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1156:4: ( () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) ) )
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1251:3: ( '.' )
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1251:5: '.'
         {
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1156:4: ( () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) ) )
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1156:5: () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) )
-        {
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1156:5: ()
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1157:1: 
-        {
-        }
-
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1157:2: ( '@' ( ( RULE_ID ) ) )?
-        int alt29=2;
-        int LA29_0 = input.LA(1);
-
-        if ( (LA29_0==24) ) {
-            alt29=1;
-        }
-        switch (alt29) {
-            case 1 :
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1157:4: '@' ( ( RULE_ID ) )
-                {
-                match(input,24,FOLLOW_24_in_synpred1_InternalCool2725); if (state.failed) return ;
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1158:1: ( ( RULE_ID ) )
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1159:1: ( RULE_ID )
-                {
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1159:1: ( RULE_ID )
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1160:2: RULE_ID
-                {
-                match(input,RULE_ID,FOLLOW_RULE_ID_in_synpred1_InternalCool2733); if (state.failed) return ;
-
-                }
-
-
-                }
-
-
-                }
-                break;
-
-        }
-
-        match(input,25,FOLLOW_25_in_synpred1_InternalCool2742); if (state.failed) return ;
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1164:1: ( ( ruleIdentifierRefExpression ) )
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1165:1: ( ruleIdentifierRefExpression )
-        {
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1165:1: ( ruleIdentifierRefExpression )
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1166:1: ruleIdentifierRefExpression
-        {
-        pushFollow(FOLLOW_ruleIdentifierRefExpression_in_synpred1_InternalCool2749);
-        ruleIdentifierRefExpression();
-
-        state._fsp--;
-        if (state.failed) return ;
-
-        }
-
-
-        }
-
-
-        }
-
+        match(input,25,FOLLOW_25_in_synpred1_InternalCool2907); if (state.failed) return ;
 
         }
     }
@@ -6565,10 +6632,10 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred2_InternalCool
     public final void synpred2_InternalCool_fragment() throws RecognitionException {   
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1413:4: ( 'else' )
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1413:6: 'else'
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1339:4: ( 'else' )
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1339:6: 'else'
         {
-        match(input,28,FOLLOW_28_in_synpred2_InternalCool3240); if (state.failed) return ;
+        match(input,28,FOLLOW_28_in_synpred2_InternalCool3089); if (state.failed) return ;
 
         }
     }
@@ -6576,24 +6643,24 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred3_InternalCool
     public final void synpred3_InternalCool_fragment() throws RecognitionException {   
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1993:3: ( ( () ( ( ruleCompareOperator ) ) ) )
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1993:4: ( () ( ( ruleCompareOperator ) ) )
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1881:3: ( ( () ( ( ruleCompareOperator ) ) ) )
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1881:4: ( () ( ( ruleCompareOperator ) ) )
         {
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1993:4: ( () ( ( ruleCompareOperator ) ) )
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1993:5: () ( ( ruleCompareOperator ) )
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1881:4: ( () ( ( ruleCompareOperator ) ) )
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1881:5: () ( ( ruleCompareOperator ) )
         {
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1993:5: ()
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1994:1: 
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1881:5: ()
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1882:1: 
         {
         }
 
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1994:2: ( ( ruleCompareOperator ) )
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1995:1: ( ruleCompareOperator )
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1882:2: ( ( ruleCompareOperator ) )
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1883:1: ( ruleCompareOperator )
         {
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1995:1: ( ruleCompareOperator )
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1996:1: ruleCompareOperator
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1883:1: ( ruleCompareOperator )
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1884:1: ruleCompareOperator
         {
-        pushFollow(FOLLOW_ruleCompareOperator_in_synpred3_InternalCool4546);
+        pushFollow(FOLLOW_ruleCompareOperator_in_synpred3_InternalCool4292);
         ruleCompareOperator();
 
         state._fsp--;
@@ -6614,39 +6681,39 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred4_InternalCool
     public final void synpred4_InternalCool_fragment() throws RecognitionException {   
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2111:3: ( ( ( () '+' ) | ( () '-' ) ) )
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2111:4: ( ( () '+' ) | ( () '-' ) )
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1999:3: ( ( ( () '+' ) | ( () '-' ) ) )
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1999:4: ( ( () '+' ) | ( () '-' ) )
         {
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2111:4: ( ( () '+' ) | ( () '-' ) )
-        int alt30=2;
-        int LA30_0 = input.LA(1);
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1999:4: ( ( () '+' ) | ( () '-' ) )
+        int alt31=2;
+        int LA31_0 = input.LA(1);
 
-        if ( (LA30_0==44) ) {
-            alt30=1;
+        if ( (LA31_0==43) ) {
+            alt31=1;
         }
-        else if ( (LA30_0==45) ) {
-            alt30=2;
+        else if ( (LA31_0==44) ) {
+            alt31=2;
         }
         else {
             if (state.backtracking>0) {state.failed=true; return ;}
             NoViableAltException nvae =
-                new NoViableAltException("", 30, 0, input);
+                new NoViableAltException("", 31, 0, input);
 
             throw nvae;
         }
-        switch (alt30) {
+        switch (alt31) {
             case 1 :
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2111:5: ( () '+' )
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1999:5: ( () '+' )
                 {
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2111:5: ( () '+' )
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2111:6: () '+'
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1999:5: ( () '+' )
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1999:6: () '+'
                 {
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2111:6: ()
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2112:1: 
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:1999:6: ()
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2000:1: 
                 {
                 }
 
-                match(input,44,FOLLOW_44_in_synpred4_InternalCool4839); if (state.failed) return ;
+                match(input,43,FOLLOW_43_in_synpred4_InternalCool4585); if (state.failed) return ;
 
                 }
 
@@ -6654,17 +6721,17 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
                 }
                 break;
             case 2 :
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2114:6: ( () '-' )
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2002:6: ( () '-' )
                 {
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2114:6: ( () '-' )
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2114:7: () '-'
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2002:6: ( () '-' )
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2002:7: () '-'
                 {
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2114:7: ()
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2115:1: 
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2002:7: ()
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2003:1: 
                 {
                 }
 
-                match(input,45,FOLLOW_45_in_synpred4_InternalCool4854); if (state.failed) return ;
+                match(input,44,FOLLOW_44_in_synpred4_InternalCool4600); if (state.failed) return ;
 
                 }
 
@@ -6681,39 +6748,39 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred5_InternalCool
     public final void synpred5_InternalCool_fragment() throws RecognitionException {   
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2185:3: ( ( ( () '*' ) | ( () '/' ) ) )
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2185:4: ( ( () '*' ) | ( () '/' ) )
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2073:3: ( ( ( () '*' ) | ( () '/' ) ) )
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2073:4: ( ( () '*' ) | ( () '/' ) )
         {
-        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2185:4: ( ( () '*' ) | ( () '/' ) )
-        int alt31=2;
-        int LA31_0 = input.LA(1);
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2073:4: ( ( () '*' ) | ( () '/' ) )
+        int alt32=2;
+        int LA32_0 = input.LA(1);
 
-        if ( (LA31_0==46) ) {
-            alt31=1;
+        if ( (LA32_0==45) ) {
+            alt32=1;
         }
-        else if ( (LA31_0==47) ) {
-            alt31=2;
+        else if ( (LA32_0==46) ) {
+            alt32=2;
         }
         else {
             if (state.backtracking>0) {state.failed=true; return ;}
             NoViableAltException nvae =
-                new NoViableAltException("", 31, 0, input);
+                new NoViableAltException("", 32, 0, input);
 
             throw nvae;
         }
-        switch (alt31) {
+        switch (alt32) {
             case 1 :
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2185:5: ( () '*' )
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2073:5: ( () '*' )
                 {
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2185:5: ( () '*' )
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2185:6: () '*'
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2073:5: ( () '*' )
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2073:6: () '*'
                 {
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2185:6: ()
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2186:1: 
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2073:6: ()
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2074:1: 
                 {
                 }
 
-                match(input,46,FOLLOW_46_in_synpred5_InternalCool5040); if (state.failed) return ;
+                match(input,45,FOLLOW_45_in_synpred5_InternalCool4786); if (state.failed) return ;
 
                 }
 
@@ -6721,17 +6788,17 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
                 }
                 break;
             case 2 :
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2188:6: ( () '/' )
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2076:6: ( () '/' )
                 {
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2188:6: ( () '/' )
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2188:7: () '/'
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2076:6: ( () '/' )
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2076:7: () '/'
                 {
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2188:7: ()
-                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2189:1: 
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2076:7: ()
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2077:1: 
                 {
                 }
 
-                match(input,47,FOLLOW_47_in_synpred5_InternalCool5055); if (state.failed) return ;
+                match(input,46,FOLLOW_46_in_synpred5_InternalCool4801); if (state.failed) return ;
 
                 }
 
@@ -6745,6 +6812,87 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
         }
     }
     // $ANTLR end synpred5_InternalCool
+
+    // $ANTLR start synpred6_InternalCool
+    public final void synpred6_InternalCool_fragment() throws RecognitionException {   
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2147:3: ( ( () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) ) ) )
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2147:4: ( () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) ) )
+        {
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2147:4: ( () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) ) )
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2147:5: () ( '@' ( ( RULE_ID ) ) )? '.' ( ( ruleIdentifierRefExpression ) )
+        {
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2147:5: ()
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2148:1: 
+        {
+        }
+
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2148:2: ( '@' ( ( RULE_ID ) ) )?
+        int alt33=2;
+        int LA33_0 = input.LA(1);
+
+        if ( (LA33_0==47) ) {
+            alt33=1;
+        }
+        switch (alt33) {
+            case 1 :
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2148:4: '@' ( ( RULE_ID ) )
+                {
+                match(input,47,FOLLOW_47_in_synpred6_InternalCool4987); if (state.failed) return ;
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2149:1: ( ( RULE_ID ) )
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2150:1: ( RULE_ID )
+                {
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2150:1: ( RULE_ID )
+                // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2151:2: RULE_ID
+                {
+                match(input,RULE_ID,FOLLOW_RULE_ID_in_synpred6_InternalCool4995); if (state.failed) return ;
+
+                }
+
+
+                }
+
+
+                }
+                break;
+
+        }
+
+        match(input,25,FOLLOW_25_in_synpred6_InternalCool5004); if (state.failed) return ;
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2155:1: ( ( ruleIdentifierRefExpression ) )
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2156:1: ( ruleIdentifierRefExpression )
+        {
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2156:1: ( ruleIdentifierRefExpression )
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2157:1: ruleIdentifierRefExpression
+        {
+        pushFollow(FOLLOW_ruleIdentifierRefExpression_in_synpred6_InternalCool5011);
+        ruleIdentifierRefExpression();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+
+
+        }
+
+
+        }
+
+
+        }
+    }
+    // $ANTLR end synpred6_InternalCool
+
+    // $ANTLR start synpred7_InternalCool
+    public final void synpred7_InternalCool_fragment() throws RecognitionException {   
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2252:3: ( '.' )
+        // ../edu.stanford.compilers.cool/src-gen/edu/stanford/compilers/parser/antlr/internal/InternalCool.g:2252:5: '.'
+        {
+        match(input,25,FOLLOW_25_in_synpred7_InternalCool5187); if (state.failed) return ;
+
+        }
+    }
+    // $ANTLR end synpred7_InternalCool
 
     // Delegated rules
 
@@ -6762,11 +6910,39 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
         state.failed=false;
         return success;
     }
+    public final boolean synpred6_InternalCool() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred6_InternalCool_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
     public final boolean synpred2_InternalCool() {
         state.backtracking++;
         int start = input.mark();
         try {
             synpred2_InternalCool_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred7_InternalCool() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred7_InternalCool_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -6821,23 +6997,25 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
 
 
     protected DFA8 dfa8 = new DFA8(this);
+    protected DFA12 dfa12 = new DFA12(this);
+    protected DFA27 dfa27 = new DFA27(this);
     static final String DFA8_eotS =
         "\22\uffff";
     static final String DFA8_eofS =
-        "\10\uffff\1\17\1\21\10\uffff";
+        "\10\uffff\1\16\1\21\10\uffff";
     static final String DFA8_minS =
         "\1\4\7\uffff\2\16\10\uffff";
     static final String DFA8_maxS =
         "\1\61\7\uffff\2\57\10\uffff";
     static final String DFA8_acceptS =
         "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\2\uffff\1\13\1\14\1\15\1\16"+
-        "\1\17\1\12\1\10\1\11";
+        "\1\12\1\10\1\17\1\11";
     static final String DFA8_specialS =
         "\22\uffff}>";
     static final String[] DFA8_transitionS = {
             "\1\10\2\12\6\uffff\1\3\4\uffff\1\13\2\uffff\1\11\1\14\1\15"+
-            "\2\uffff\1\1\3\uffff\1\2\2\uffff\1\4\1\uffff\1\5\3\uffff\1\6"+
-            "\1\7\7\uffff\2\12",
+            "\1\6\1\uffff\1\1\3\uffff\1\2\2\uffff\1\7\1\4\1\uffff\1\5\13"+
+            "\uffff\2\12",
             "",
             "",
             "",
@@ -6845,10 +7023,10 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
             "",
             "",
             "",
-            "\2\17\1\uffff\1\20\1\16\2\17\3\uffff\2\17\1\uffff\3\17\1\uffff"+
-            "\2\17\1\uffff\1\17\1\uffff\1\17\4\uffff\7\17",
-            "\2\21\1\uffff\1\20\1\uffff\2\21\3\uffff\2\21\1\uffff\3\21"+
-            "\1\uffff\2\21\1\uffff\1\21\1\uffff\1\21\4\uffff\7\21",
+            "\2\16\1\uffff\1\17\1\20\2\16\4\uffff\1\16\1\uffff\3\16\1\uffff"+
+            "\2\16\2\uffff\1\16\1\uffff\1\16\2\uffff\10\16",
+            "\2\21\1\uffff\1\17\1\uffff\2\21\4\uffff\1\21\1\uffff\3\21"+
+            "\1\uffff\2\21\2\uffff\1\21\1\uffff\1\21\2\uffff\10\21",
             "",
             "",
             "",
@@ -6889,7 +7067,203 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
             this.transition = DFA8_transition;
         }
         public String getDescription() {
-            return "551:1: (this_ConditionalExpression_0= ruleConditionalExpression | this_LoopExpression_1= ruleLoopExpression | this_BlockExpression_2= ruleBlockExpression | this_LetExpression_3= ruleLetExpression | this_CaseExpression_4= ruleCaseExpression | this_NewExpression_5= ruleNewExpression | this_IsvoidExpression_6= ruleIsvoidExpression | this_AssignmentExpression_7= ruleAssignmentExpression | this_SelfTypeLiteral_8= ruleSelfTypeLiteral | this_IdentifierRefExpression_9= ruleIdentifierRefExpression | this_Literal_10= ruleLiteral | this_ParenExpression_11= ruleParenExpression | this_NegationExpression_12= ruleNegationExpression | this_IntegerComposite_13= ruleIntegerComposite | this_StaticDispatchExpression_14= ruleStaticDispatchExpression )";
+            return "551:1: (this_ConditionalExpression_0= ruleConditionalExpression | this_LoopExpression_1= ruleLoopExpression | this_BlockExpression_2= ruleBlockExpression | this_LetExpression_3= ruleLetExpression | this_CaseExpression_4= ruleCaseExpression | this_NewExpression_5= ruleNewExpression | this_IsvoidExpression_6= ruleIsvoidExpression | this_AssignmentExpression_7= ruleAssignmentExpression | this_SelfTypeLiteral_8= ruleSelfTypeLiteral | this_IdentifierRefExpression_9= ruleIdentifierRefExpression | this_Literal_10= ruleLiteral | this_ParenExpression_11= ruleParenExpression | this_NegationExpression_12= ruleNegationExpression | this_IntegerCompositeExpression_13= ruleIntegerCompositeExpression | this_StaticDispatchExpression_14= ruleStaticDispatchExpression )";
+        }
+    }
+    static final String DFA12_eotS =
+        "\27\uffff";
+    static final String DFA12_eofS =
+        "\1\2\26\uffff";
+    static final String DFA12_minS =
+        "\1\16\1\0\25\uffff";
+    static final String DFA12_maxS =
+        "\1\57\1\0\25\uffff";
+    static final String DFA12_acceptS =
+        "\2\uffff\1\2\23\uffff\1\1";
+    static final String DFA12_specialS =
+        "\1\uffff\1\0\25\uffff}>";
+    static final String[] DFA12_transitionS = {
+            "\2\2\3\uffff\2\2\4\uffff\1\1\1\uffff\3\2\1\uffff\2\2\2\uffff"+
+            "\1\2\1\uffff\1\2\2\uffff\10\2",
+            "\1\uffff",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] DFA12_eot = DFA.unpackEncodedString(DFA12_eotS);
+    static final short[] DFA12_eof = DFA.unpackEncodedString(DFA12_eofS);
+    static final char[] DFA12_min = DFA.unpackEncodedStringToUnsignedChars(DFA12_minS);
+    static final char[] DFA12_max = DFA.unpackEncodedStringToUnsignedChars(DFA12_maxS);
+    static final short[] DFA12_accept = DFA.unpackEncodedString(DFA12_acceptS);
+    static final short[] DFA12_special = DFA.unpackEncodedString(DFA12_specialS);
+    static final short[][] DFA12_transition;
+
+    static {
+        int numStates = DFA12_transitionS.length;
+        DFA12_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA12_transition[i] = DFA.unpackEncodedString(DFA12_transitionS[i]);
+        }
+    }
+
+    class DFA12 extends DFA {
+
+        public DFA12(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 12;
+            this.eot = DFA12_eot;
+            this.eof = DFA12_eof;
+            this.min = DFA12_min;
+            this.max = DFA12_max;
+            this.accept = DFA12_accept;
+            this.special = DFA12_special;
+            this.transition = DFA12_transition;
+        }
+        public String getDescription() {
+            return "1251:1: ( ( ( '.' )=>otherlv_6= '.' ) ( (lv_chain_7_0= ruleStaticDispatchExpression ) ) )?";
+        }
+        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
+            TokenStream input = (TokenStream)_input;
+        	int _s = s;
+            switch ( s ) {
+                    case 0 : 
+                        int LA12_1 = input.LA(1);
+
+                         
+                        int index12_1 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred1_InternalCool()) ) {s = 22;}
+
+                        else if ( (true) ) {s = 2;}
+
+                         
+                        input.seek(index12_1);
+                        if ( s>=0 ) return s;
+                        break;
+            }
+            if (state.backtracking>0) {state.failed=true; return -1;}
+            NoViableAltException nvae =
+                new NoViableAltException(getDescription(), 12, _s, input);
+            error(nvae);
+            throw nvae;
+        }
+    }
+    static final String DFA27_eotS =
+        "\27\uffff";
+    static final String DFA27_eofS =
+        "\1\2\26\uffff";
+    static final String DFA27_minS =
+        "\1\16\1\0\25\uffff";
+    static final String DFA27_maxS =
+        "\1\57\1\0\25\uffff";
+    static final String DFA27_acceptS =
+        "\2\uffff\1\2\23\uffff\1\1";
+    static final String DFA27_specialS =
+        "\1\uffff\1\0\25\uffff}>";
+    static final String[] DFA27_transitionS = {
+            "\2\2\3\uffff\2\2\4\uffff\1\1\1\uffff\3\2\1\uffff\2\2\2\uffff"+
+            "\1\2\1\uffff\1\2\2\uffff\10\2",
+            "\1\uffff",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] DFA27_eot = DFA.unpackEncodedString(DFA27_eotS);
+    static final short[] DFA27_eof = DFA.unpackEncodedString(DFA27_eofS);
+    static final char[] DFA27_min = DFA.unpackEncodedStringToUnsignedChars(DFA27_minS);
+    static final char[] DFA27_max = DFA.unpackEncodedStringToUnsignedChars(DFA27_maxS);
+    static final short[] DFA27_accept = DFA.unpackEncodedString(DFA27_acceptS);
+    static final short[] DFA27_special = DFA.unpackEncodedString(DFA27_specialS);
+    static final short[][] DFA27_transition;
+
+    static {
+        int numStates = DFA27_transitionS.length;
+        DFA27_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA27_transition[i] = DFA.unpackEncodedString(DFA27_transitionS[i]);
+        }
+    }
+
+    class DFA27 extends DFA {
+
+        public DFA27(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 27;
+            this.eot = DFA27_eot;
+            this.eof = DFA27_eof;
+            this.min = DFA27_min;
+            this.max = DFA27_max;
+            this.accept = DFA27_accept;
+            this.special = DFA27_special;
+            this.transition = DFA27_transition;
+        }
+        public String getDescription() {
+            return "2252:1: ( ( ( '.' )=>otherlv_11= '.' ) ( (lv_chain_12_0= ruleStaticDispatchExpression ) ) )?";
+        }
+        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
+            TokenStream input = (TokenStream)_input;
+        	int _s = s;
+            switch ( s ) {
+                    case 0 : 
+                        int LA27_1 = input.LA(1);
+
+                         
+                        int index27_1 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred7_InternalCool()) ) {s = 22;}
+
+                        else if ( (true) ) {s = 2;}
+
+                         
+                        input.seek(index27_1);
+                        if ( s>=0 ) return s;
+                        break;
+            }
+            if (state.backtracking>0) {state.failed=true; return -1;}
+            NoViableAltException nvae =
+                new NoViableAltException(getDescription(), 27, _s, input);
+            error(nvae);
+            throw nvae;
         }
     }
  
@@ -6916,7 +7290,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleSYMBOL_in_ruleAttr538 = new BitSet(new long[]{0x0000000000010000L});
     public static final BitSet FOLLOW_16_in_ruleAttr550 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleAttr570 = new BitSet(new long[]{0x0000000000028000L});
-    public static final BitSet FOLLOW_17_in_ruleAttr583 = new BitSet(new long[]{0x0003018A44E42070L});
+    public static final BitSet FOLLOW_17_in_ruleAttr583 = new BitSet(new long[]{0x0003001645E42070L});
     public static final BitSet FOLLOW_ruleExpression_in_ruleAttr604 = new BitSet(new long[]{0x0000000000008000L});
     public static final BitSet FOLLOW_15_in_ruleAttr618 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleMethod_in_entryRuleMethod654 = new BitSet(new long[]{0x0000000000000000L});
@@ -6929,7 +7303,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_20_in_ruleMethod794 = new BitSet(new long[]{0x0000000000010000L});
     public static final BitSet FOLLOW_16_in_ruleMethod806 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleMethod826 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_ruleMethod838 = new BitSet(new long[]{0x0003018A44E42070L});
+    public static final BitSet FOLLOW_13_in_ruleMethod838 = new BitSet(new long[]{0x0003001645E42070L});
     public static final BitSet FOLLOW_ruleExpression_in_ruleMethod859 = new BitSet(new long[]{0x0000000000004000L});
     public static final BitSet FOLLOW_14_in_ruleMethod871 = new BitSet(new long[]{0x0000000000008000L});
     public static final BitSet FOLLOW_15_in_ruleMethod883 = new BitSet(new long[]{0x0000000000000002L});
@@ -6940,7 +7314,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_RULE_ID_in_ruleFormal1007 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExpression_in_entryRuleExpression1043 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleExpression1053 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDispatchExpression_in_ruleExpression1099 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCompareExpression_in_ruleExpression1099 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulePrimaryExpression_in_entryRulePrimaryExpression1133 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulePrimaryExpression1143 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleConditionalExpression_in_rulePrimaryExpression1190 = new BitSet(new long[]{0x0000000000000002L});
@@ -6956,7 +7330,7 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleLiteral_in_rulePrimaryExpression1460 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleParenExpression_in_rulePrimaryExpression1487 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleNegationExpression_in_rulePrimaryExpression1514 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIntegerComposite_in_rulePrimaryExpression1541 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIntegerCompositeExpression_in_rulePrimaryExpression1541 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleStaticDispatchExpression_in_rulePrimaryExpression1568 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSelfTypeLiteral_in_entryRuleSelfTypeLiteral1603 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSelfTypeLiteral1613 = new BitSet(new long[]{0x0000000000000002L});
@@ -6980,141 +7354,147 @@ public class InternalCoolParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleBOOLEAN_in_ruleBooleanLiteral2167 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleParenExpression_in_entryRuleParenExpression2202 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleParenExpression2212 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_ruleParenExpression2249 = new BitSet(new long[]{0x0003018A44E42070L});
+    public static final BitSet FOLLOW_18_in_ruleParenExpression2249 = new BitSet(new long[]{0x0003001645E42070L});
     public static final BitSet FOLLOW_ruleExpression_in_ruleParenExpression2270 = new BitSet(new long[]{0x0000000000100000L});
     public static final BitSet FOLLOW_20_in_ruleParenExpression2282 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAssignmentExpression_in_entryRuleAssignmentExpression2318 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleAssignmentExpression2328 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSYMBOL_in_ruleAssignmentExpression2374 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleAssignmentExpression2386 = new BitSet(new long[]{0x0003018A44E42070L});
+    public static final BitSet FOLLOW_17_in_ruleAssignmentExpression2386 = new BitSet(new long[]{0x0003001645E42070L});
     public static final BitSet FOLLOW_ruleExpression_in_ruleAssignmentExpression2407 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleNegationExpression_in_entryRuleNegationExpression2443 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleNegationExpression2453 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_ruleNegationExpression2490 = new BitSet(new long[]{0x0003018A44E42070L});
+    public static final BitSet FOLLOW_22_in_ruleNegationExpression2490 = new BitSet(new long[]{0x0003001645E42070L});
     public static final BitSet FOLLOW_ruleExpression_in_ruleNegationExpression2511 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIntegerComposite_in_entryRuleIntegerComposite2547 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleIntegerComposite2557 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_ruleIntegerComposite2594 = new BitSet(new long[]{0x0003018A44E42070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleIntegerComposite2615 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDispatchExpression_in_entryRuleDispatchExpression2651 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDispatchExpression2661 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompareExpression_in_ruleDispatchExpression2708 = new BitSet(new long[]{0x0000000003000002L});
-    public static final BitSet FOLLOW_24_in_ruleDispatchExpression2771 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDispatchExpression2791 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleDispatchExpression2805 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleIdentifierRefExpression_in_ruleDispatchExpression2826 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleDispatchExpression2840 = new BitSet(new long[]{0x0003018A44F42070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleDispatchExpression2862 = new BitSet(new long[]{0x0000000000180000L});
-    public static final BitSet FOLLOW_19_in_ruleDispatchExpression2875 = new BitSet(new long[]{0x0003018A44E42070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleDispatchExpression2896 = new BitSet(new long[]{0x0000000000180000L});
-    public static final BitSet FOLLOW_20_in_ruleDispatchExpression2912 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStaticDispatchExpression_in_entryRuleStaticDispatchExpression2950 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStaticDispatchExpression2960 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdentifierRefExpression_in_ruleStaticDispatchExpression3006 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleStaticDispatchExpression3018 = new BitSet(new long[]{0x0003018A44F42070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleStaticDispatchExpression3040 = new BitSet(new long[]{0x0000000000180000L});
-    public static final BitSet FOLLOW_19_in_ruleStaticDispatchExpression3053 = new BitSet(new long[]{0x0003018A44E42070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleStaticDispatchExpression3074 = new BitSet(new long[]{0x0000000000180000L});
-    public static final BitSet FOLLOW_20_in_ruleStaticDispatchExpression3090 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConditionalExpression_in_entryRuleConditionalExpression3126 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleConditionalExpression3136 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_ruleConditionalExpression3173 = new BitSet(new long[]{0x0003018A44E42070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleConditionalExpression3194 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleConditionalExpression3206 = new BitSet(new long[]{0x0003018A44E42070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleConditionalExpression3227 = new BitSet(new long[]{0x0000000030000000L});
-    public static final BitSet FOLLOW_28_in_ruleConditionalExpression3248 = new BitSet(new long[]{0x0003018A44E42070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleConditionalExpression3270 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_ruleConditionalExpression3284 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLoopExpression_in_entryRuleLoopExpression3320 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLoopExpression3330 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_ruleLoopExpression3367 = new BitSet(new long[]{0x0003018A44E42070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleLoopExpression3388 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_31_in_ruleLoopExpression3400 = new BitSet(new long[]{0x0003018A44E42070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleLoopExpression3421 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleLoopExpression3433 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBlockExpression_in_entryRuleBlockExpression3469 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBlockExpression3479 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_ruleBlockExpression3525 = new BitSet(new long[]{0x0003018A44E46070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleBlockExpression3547 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleBlockExpression3559 = new BitSet(new long[]{0x0003018A44E46070L});
-    public static final BitSet FOLLOW_14_in_ruleBlockExpression3573 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLetExpression_in_entryRuleLetExpression3609 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLetExpression3619 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_ruleLetExpression3656 = new BitSet(new long[]{0x0000000000200010L});
-    public static final BitSet FOLLOW_ruleLetDeclaration_in_ruleLetExpression3677 = new BitSet(new long[]{0x0000000400080000L});
-    public static final BitSet FOLLOW_19_in_ruleLetExpression3690 = new BitSet(new long[]{0x0000000000200010L});
-    public static final BitSet FOLLOW_ruleLetDeclaration_in_ruleLetExpression3711 = new BitSet(new long[]{0x0000000400080000L});
-    public static final BitSet FOLLOW_34_in_ruleLetExpression3725 = new BitSet(new long[]{0x0003018A44E42070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleLetExpression3746 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLetDeclaration_in_entryRuleLetDeclaration3782 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLetDeclaration3792 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSYMBOL_in_ruleLetDeclaration3838 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_ruleLetDeclaration3850 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleLetDeclaration3870 = new BitSet(new long[]{0x0000000000020002L});
-    public static final BitSet FOLLOW_17_in_ruleLetDeclaration3883 = new BitSet(new long[]{0x0003018A44E42070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleLetDeclaration3904 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCaseExpression_in_entryRuleCaseExpression3942 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCaseExpression3952 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_ruleCaseExpression3989 = new BitSet(new long[]{0x0003018A44E42070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleCaseExpression4010 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_ruleCaseExpression4022 = new BitSet(new long[]{0x0000000000200010L});
-    public static final BitSet FOLLOW_ruleCase_in_ruleCaseExpression4044 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleCaseExpression4056 = new BitSet(new long[]{0x0000002000200010L});
-    public static final BitSet FOLLOW_37_in_ruleCaseExpression4070 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCase_in_entryRuleCase4106 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCase4116 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSYMBOL_in_ruleCase4162 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_ruleCase4174 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleCase4194 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_ruleCase4206 = new BitSet(new long[]{0x0003018A44E42070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleCase4227 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNewExpression_in_entryRuleNewExpression4263 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNewExpression4273 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_ruleNewExpression4310 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleNewExpression4330 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIsvoidExpression_in_entryRuleIsvoidExpression4366 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleIsvoidExpression4376 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_ruleIsvoidExpression4413 = new BitSet(new long[]{0x0003018A44E42070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleIsvoidExpression4434 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompareExpression_in_entryRuleCompareExpression4470 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCompareExpression4480 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAdditionExpression_in_ruleCompareExpression4527 = new BitSet(new long[]{0x00000E0000000002L});
-    public static final BitSet FOLLOW_ruleCompareOperator_in_ruleCompareExpression4576 = new BitSet(new long[]{0x0003018A44E42070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleCompareExpression4599 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompareOperator_in_entryRuleCompareOperator4638 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCompareOperator4649 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_ruleCompareOperator4687 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_ruleCompareOperator4706 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_ruleCompareOperator4725 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAdditionExpression_in_entryRuleAdditionExpression4765 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAdditionExpression4775 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultiplicationExpression_in_ruleAdditionExpression4822 = new BitSet(new long[]{0x0000300000000002L});
-    public static final BitSet FOLLOW_44_in_ruleAdditionExpression4875 = new BitSet(new long[]{0x0003018A44E42070L});
-    public static final BitSet FOLLOW_45_in_ruleAdditionExpression4904 = new BitSet(new long[]{0x0003018A44E42070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleAdditionExpression4928 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultiplicationExpression_in_entryRuleMultiplicationExpression4966 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMultiplicationExpression4976 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrimaryExpression_in_ruleMultiplicationExpression5023 = new BitSet(new long[]{0x0000C00000000002L});
-    public static final BitSet FOLLOW_46_in_ruleMultiplicationExpression5076 = new BitSet(new long[]{0x0003018A44E42070L});
-    public static final BitSet FOLLOW_47_in_ruleMultiplicationExpression5105 = new BitSet(new long[]{0x0003018A44E42070L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleMultiplicationExpression5129 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBOOLEAN_in_entryRuleBOOLEAN5172 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBOOLEAN5183 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_ruleBOOLEAN5221 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_ruleBOOLEAN5240 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSYMBOL_in_entryRuleSYMBOL5281 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSYMBOL5292 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSYMBOL5332 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_ruleSYMBOL5356 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_synpred1_InternalCool2725 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_synpred1_InternalCool2733 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_synpred1_InternalCool2742 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleIdentifierRefExpression_in_synpred1_InternalCool2749 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_synpred2_InternalCool3240 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompareOperator_in_synpred3_InternalCool4546 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_synpred4_InternalCool4839 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_synpred4_InternalCool4854 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_synpred5_InternalCool5040 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_synpred5_InternalCool5055 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIntegerCompositeExpression_in_entryRuleIntegerCompositeExpression2547 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleIntegerCompositeExpression2557 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_ruleIntegerCompositeExpression2594 = new BitSet(new long[]{0x0003001645E42070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleIntegerCompositeExpression2615 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNewExpression_in_entryRuleNewExpression2651 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNewExpression2661 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_ruleNewExpression2698 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleNewExpression2718 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStaticDispatchExpression_in_entryRuleStaticDispatchExpression2754 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStaticDispatchExpression2764 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIdentifierRefExpression_in_ruleStaticDispatchExpression2810 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_ruleStaticDispatchExpression2822 = new BitSet(new long[]{0x0003001645F42070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleStaticDispatchExpression2844 = new BitSet(new long[]{0x0000000000180000L});
+    public static final BitSet FOLLOW_19_in_ruleStaticDispatchExpression2857 = new BitSet(new long[]{0x0003001645E42070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleStaticDispatchExpression2878 = new BitSet(new long[]{0x0000000000180000L});
+    public static final BitSet FOLLOW_20_in_ruleStaticDispatchExpression2894 = new BitSet(new long[]{0x0000000002000002L});
+    public static final BitSet FOLLOW_25_in_ruleStaticDispatchExpression2915 = new BitSet(new long[]{0x0003001645E42070L});
+    public static final BitSet FOLLOW_ruleStaticDispatchExpression_in_ruleStaticDispatchExpression2937 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConditionalExpression_in_entryRuleConditionalExpression2975 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleConditionalExpression2985 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_ruleConditionalExpression3022 = new BitSet(new long[]{0x0003001645E42070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleConditionalExpression3043 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_27_in_ruleConditionalExpression3055 = new BitSet(new long[]{0x0003001645E42070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleConditionalExpression3076 = new BitSet(new long[]{0x0000000030000000L});
+    public static final BitSet FOLLOW_28_in_ruleConditionalExpression3097 = new BitSet(new long[]{0x0003001645E42070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleConditionalExpression3119 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_ruleConditionalExpression3133 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLoopExpression_in_entryRuleLoopExpression3169 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLoopExpression3179 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_ruleLoopExpression3216 = new BitSet(new long[]{0x0003001645E42070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleLoopExpression3237 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleLoopExpression3249 = new BitSet(new long[]{0x0003001645E42070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleLoopExpression3270 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_ruleLoopExpression3282 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBlockExpression_in_entryRuleBlockExpression3318 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBlockExpression3328 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_ruleBlockExpression3374 = new BitSet(new long[]{0x0003001645E46070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleBlockExpression3396 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleBlockExpression3408 = new BitSet(new long[]{0x0003001645E46070L});
+    public static final BitSet FOLLOW_14_in_ruleBlockExpression3422 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIsvoidExpression_in_entryRuleIsvoidExpression3458 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleIsvoidExpression3468 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_ruleIsvoidExpression3505 = new BitSet(new long[]{0x0003001645E42070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleIsvoidExpression3526 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLetExpression_in_entryRuleLetExpression3562 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLetExpression3572 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_ruleLetExpression3609 = new BitSet(new long[]{0x0000000000200010L});
+    public static final BitSet FOLLOW_ruleLetDeclaration_in_ruleLetExpression3630 = new BitSet(new long[]{0x0000000800080000L});
+    public static final BitSet FOLLOW_19_in_ruleLetExpression3643 = new BitSet(new long[]{0x0000000000200010L});
+    public static final BitSet FOLLOW_ruleLetDeclaration_in_ruleLetExpression3664 = new BitSet(new long[]{0x0000000800080000L});
+    public static final BitSet FOLLOW_35_in_ruleLetExpression3678 = new BitSet(new long[]{0x0003001645E42070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleLetExpression3699 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLetDeclaration_in_entryRuleLetDeclaration3735 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLetDeclaration3745 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSYMBOL_in_ruleLetDeclaration3791 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleLetDeclaration3803 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleLetDeclaration3823 = new BitSet(new long[]{0x0000000000020002L});
+    public static final BitSet FOLLOW_17_in_ruleLetDeclaration3836 = new BitSet(new long[]{0x0003001645E42070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleLetDeclaration3857 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCaseExpression_in_entryRuleCaseExpression3895 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCaseExpression3905 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_ruleCaseExpression3942 = new BitSet(new long[]{0x0003001645E42070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleCaseExpression3963 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_37_in_ruleCaseExpression3975 = new BitSet(new long[]{0x0000000000200010L});
+    public static final BitSet FOLLOW_ruleCase_in_ruleCaseExpression3997 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleCaseExpression4009 = new BitSet(new long[]{0x0000004000200010L});
+    public static final BitSet FOLLOW_38_in_ruleCaseExpression4023 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCase_in_entryRuleCase4059 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCase4069 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSYMBOL_in_ruleCase4115 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleCase4127 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleCase4147 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_ruleCase4159 = new BitSet(new long[]{0x0003001645E42070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleCase4180 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCompareExpression_in_entryRuleCompareExpression4216 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCompareExpression4226 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAdditionExpression_in_ruleCompareExpression4273 = new BitSet(new long[]{0x0000070000000002L});
+    public static final BitSet FOLLOW_ruleCompareOperator_in_ruleCompareExpression4322 = new BitSet(new long[]{0x0003001645E42070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleCompareExpression4345 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCompareOperator_in_entryRuleCompareOperator4384 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCompareOperator4395 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_ruleCompareOperator4433 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_ruleCompareOperator4452 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_ruleCompareOperator4471 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAdditionExpression_in_entryRuleAdditionExpression4511 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAdditionExpression4521 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultiplicationExpression_in_ruleAdditionExpression4568 = new BitSet(new long[]{0x0000180000000002L});
+    public static final BitSet FOLLOW_43_in_ruleAdditionExpression4621 = new BitSet(new long[]{0x0003001645E42070L});
+    public static final BitSet FOLLOW_44_in_ruleAdditionExpression4650 = new BitSet(new long[]{0x0003001645E42070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleAdditionExpression4674 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultiplicationExpression_in_entryRuleMultiplicationExpression4712 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMultiplicationExpression4722 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDispatchExpression_in_ruleMultiplicationExpression4769 = new BitSet(new long[]{0x0000600000000002L});
+    public static final BitSet FOLLOW_45_in_ruleMultiplicationExpression4822 = new BitSet(new long[]{0x0003001645E42070L});
+    public static final BitSet FOLLOW_46_in_ruleMultiplicationExpression4851 = new BitSet(new long[]{0x0003001645E42070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleMultiplicationExpression4875 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDispatchExpression_in_entryRuleDispatchExpression4913 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDispatchExpression4923 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrimaryExpression_in_ruleDispatchExpression4970 = new BitSet(new long[]{0x0000800002000002L});
+    public static final BitSet FOLLOW_47_in_ruleDispatchExpression5033 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDispatchExpression5053 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_ruleDispatchExpression5067 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleIdentifierRefExpression_in_ruleDispatchExpression5088 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_ruleDispatchExpression5102 = new BitSet(new long[]{0x0003001645F42070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleDispatchExpression5124 = new BitSet(new long[]{0x0000000000180000L});
+    public static final BitSet FOLLOW_19_in_ruleDispatchExpression5137 = new BitSet(new long[]{0x0003001645E42070L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleDispatchExpression5158 = new BitSet(new long[]{0x0000000000180000L});
+    public static final BitSet FOLLOW_20_in_ruleDispatchExpression5174 = new BitSet(new long[]{0x0000000002000002L});
+    public static final BitSet FOLLOW_25_in_ruleDispatchExpression5195 = new BitSet(new long[]{0x0003001645E42070L});
+    public static final BitSet FOLLOW_ruleStaticDispatchExpression_in_ruleDispatchExpression5217 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBOOLEAN_in_entryRuleBOOLEAN5262 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBOOLEAN5273 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_ruleBOOLEAN5311 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_ruleBOOLEAN5330 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSYMBOL_in_entryRuleSYMBOL5371 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSYMBOL5382 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSYMBOL5422 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_ruleSYMBOL5446 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_synpred1_InternalCool2907 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_synpred2_InternalCool3089 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCompareOperator_in_synpred3_InternalCool4292 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_synpred4_InternalCool4585 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_synpred4_InternalCool4600 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_synpred5_InternalCool4786 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_46_in_synpred5_InternalCool4801 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_synpred6_InternalCool4987 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_synpred6_InternalCool4995 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_synpred6_InternalCool5004 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleIdentifierRefExpression_in_synpred6_InternalCool5011 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_synpred7_InternalCool5187 = new BitSet(new long[]{0x0000000000000002L});
 
 }

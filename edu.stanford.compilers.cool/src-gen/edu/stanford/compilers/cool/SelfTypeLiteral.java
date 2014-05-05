@@ -13,6 +13,6 @@ package edu.stanford.compilers.cool;
  * @model
  * @generated
  */
-public interface SelfTypeLiteral extends Expression
+public interface SelfTypeLiteral extends PrimaryExpression
 {
 } // SelfTypeLiteral

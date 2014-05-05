@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +22,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link edu.stanford.compilers.cool.impl.CaseImpl#getName <em>Name</em>}</li>
  *   <li>{@link edu.stanford.compilers.cool.impl.CaseImpl#getType_decl <em>Type decl</em>}</li>
  *   <li>{@link edu.stanford.compilers.cool.impl.CaseImpl#getExpr <em>Expr</em>}</li>
  * </ul>
@@ -31,28 +29,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class CaseImpl extends MinimalEObjectImpl.Container implements Case
+public class CaseImpl extends IdentifiableElementImpl implements Case
 {
-  /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
-
   /**
    * The cached value of the '{@link #getType_decl() <em>Type decl</em>}' reference.
    * <!-- begin-user-doc -->
@@ -92,29 +70,6 @@ public class CaseImpl extends MinimalEObjectImpl.Container implements Case
   protected EClass eStaticClass()
   {
     return CoolPackage.Literals.CASE;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CoolPackage.CASE__NAME, oldName, name));
   }
 
   /**
@@ -234,8 +189,6 @@ public class CaseImpl extends MinimalEObjectImpl.Container implements Case
   {
     switch (featureID)
     {
-      case CoolPackage.CASE__NAME:
-        return getName();
       case CoolPackage.CASE__TYPE_DECL:
         if (resolve) return getType_decl();
         return basicGetType_decl();
@@ -255,9 +208,6 @@ public class CaseImpl extends MinimalEObjectImpl.Container implements Case
   {
     switch (featureID)
     {
-      case CoolPackage.CASE__NAME:
-        setName((String)newValue);
-        return;
       case CoolPackage.CASE__TYPE_DECL:
         setType_decl((Type)newValue);
         return;
@@ -278,9 +228,6 @@ public class CaseImpl extends MinimalEObjectImpl.Container implements Case
   {
     switch (featureID)
     {
-      case CoolPackage.CASE__NAME:
-        setName(NAME_EDEFAULT);
-        return;
       case CoolPackage.CASE__TYPE_DECL:
         setType_decl((Type)null);
         return;
@@ -301,31 +248,12 @@ public class CaseImpl extends MinimalEObjectImpl.Container implements Case
   {
     switch (featureID)
     {
-      case CoolPackage.CASE__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case CoolPackage.CASE__TYPE_DECL:
         return type_decl != null;
       case CoolPackage.CASE__EXPR:
         return expr != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
   }
 
 } //CaseImpl

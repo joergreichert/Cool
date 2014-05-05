@@ -11,6 +11,7 @@ package edu.stanford.compilers.cool;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link edu.stanford.compilers.cool.LoopExpression#getPred <em>Pred</em>}</li>
  *   <li>{@link edu.stanford.compilers.cool.LoopExpression#getBody <em>Body</em>}</li>
  * </ul>
  * </p>
@@ -19,8 +20,34 @@ package edu.stanford.compilers.cool;
  * @model
  * @generated
  */
-public interface LoopExpression extends Expression
+public interface LoopExpression extends PrimaryExpression
 {
+  /**
+   * Returns the value of the '<em><b>Pred</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Pred</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Pred</em>' containment reference.
+   * @see #setPred(Expression)
+   * @see edu.stanford.compilers.cool.CoolPackage#getLoopExpression_Pred()
+   * @model containment="true"
+   * @generated
+   */
+  Expression getPred();
+
+  /**
+   * Sets the value of the '{@link edu.stanford.compilers.cool.LoopExpression#getPred <em>Pred</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Pred</em>' containment reference.
+   * @see #getPred()
+   * @generated
+   */
+  void setPred(Expression value);
+
   /**
    * Returns the value of the '<em><b>Body</b></em>' containment reference.
    * <!-- begin-user-doc -->

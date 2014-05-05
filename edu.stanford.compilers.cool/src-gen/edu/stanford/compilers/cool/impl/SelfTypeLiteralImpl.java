@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class SelfTypeLiteralImpl extends ExpressionImpl implements SelfTypeLiteral
+public class SelfTypeLiteralImpl extends PrimaryExpressionImpl implements SelfTypeLiteral
 {
   /**
    * <!-- begin-user-doc -->

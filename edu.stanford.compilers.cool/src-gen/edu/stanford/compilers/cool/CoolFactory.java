@@ -86,6 +86,15 @@ public interface CoolFactory extends EFactory
   Expression createExpression();
 
   /**
+   * Returns a new object of class '<em>Primary Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Primary Expression</em>'.
+   * @generated
+   */
+  PrimaryExpression createPrimaryExpression();
+
+  /**
    * Returns a new object of class '<em>Self Type Literal</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -140,6 +149,69 @@ public interface CoolFactory extends EFactory
   BooleanLiteral createBooleanLiteral();
 
   /**
+   * Returns a new object of class '<em>Paren Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Paren Expression</em>'.
+   * @generated
+   */
+  ParenExpression createParenExpression();
+
+  /**
+   * Returns a new object of class '<em>Assignment Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Assignment Expression</em>'.
+   * @generated
+   */
+  AssignmentExpression createAssignmentExpression();
+
+  /**
+   * Returns a new object of class '<em>Negation Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Negation Expression</em>'.
+   * @generated
+   */
+  NegationExpression createNegationExpression();
+
+  /**
+   * Returns a new object of class '<em>Integer Composite Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Integer Composite Expression</em>'.
+   * @generated
+   */
+  IntegerCompositeExpression createIntegerCompositeExpression();
+
+  /**
+   * Returns a new object of class '<em>New Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>New Expression</em>'.
+   * @generated
+   */
+  NewExpression createNewExpression();
+
+  /**
+   * Returns a new object of class '<em>Static Dispatch Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Static Dispatch Expression</em>'.
+   * @generated
+   */
+  StaticDispatchExpression createStaticDispatchExpression();
+
+  /**
+   * Returns a new object of class '<em>Conditional Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Conditional Expression</em>'.
+   * @generated
+   */
+  ConditionalExpression createConditionalExpression();
+
+  /**
    * Returns a new object of class '<em>Loop Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -156,6 +228,15 @@ public interface CoolFactory extends EFactory
    * @generated
    */
   BlockExpression createBlockExpression();
+
+  /**
+   * Returns a new object of class '<em>Isvoid Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Isvoid Expression</em>'.
+   * @generated
+   */
+  IsvoidExpression createIsvoidExpression();
 
   /**
    * Returns a new object of class '<em>Let Expression</em>'.
@@ -194,15 +275,6 @@ public interface CoolFactory extends EFactory
   Case createCase();
 
   /**
-   * Returns a new object of class '<em>New Expression</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>New Expression</em>'.
-   * @generated
-   */
-  NewExpression createNewExpression();
-
-  /**
    * Returns a new object of class '<em>Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -221,15 +293,6 @@ public interface CoolFactory extends EFactory
   IdentifiableElement createIdentifiableElement();
 
   /**
-   * Returns a new object of class '<em>Dispatch Expression</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Dispatch Expression</em>'.
-   * @generated
-   */
-  DispatchExpression createDispatchExpression();
-
-  /**
    * Returns a new object of class '<em>Compare Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -239,13 +302,13 @@ public interface CoolFactory extends EFactory
   CompareExpression createCompareExpression();
 
   /**
-   * Returns a new object of class '<em>Plus</em>'.
+   * Returns a new object of class '<em>Addition Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Plus</em>'.
+   * @return a new object of class '<em>Addition Expression</em>'.
    * @generated
    */
-  Plus createPlus();
+  AdditionExpression createAdditionExpression();
 
   /**
    * Returns a new object of class '<em>Minus</em>'.
@@ -257,13 +320,13 @@ public interface CoolFactory extends EFactory
   Minus createMinus();
 
   /**
-   * Returns a new object of class '<em>Multi</em>'.
+   * Returns a new object of class '<em>Multiplication Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Multi</em>'.
+   * @return a new object of class '<em>Multiplication Expression</em>'.
    * @generated
    */
-  Multi createMulti();
+  MultiplicationExpression createMultiplicationExpression();
 
   /**
    * Returns a new object of class '<em>Div</em>'.
@@ -273,6 +336,15 @@ public interface CoolFactory extends EFactory
    * @generated
    */
   Div createDiv();
+
+  /**
+   * Returns a new object of class '<em>Dispatch Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Dispatch Expression</em>'.
+   * @generated
+   */
+  DispatchExpression createDispatchExpression();
 
   /**
    * Returns the package supported by this factory.

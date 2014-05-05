@@ -71,27 +71,35 @@ public class CoolFactoryImpl extends EFactoryImpl implements CoolFactory
       case CoolPackage.METHOD: return createMethod();
       case CoolPackage.FORMAL: return createFormal();
       case CoolPackage.EXPRESSION: return createExpression();
+      case CoolPackage.PRIMARY_EXPRESSION: return createPrimaryExpression();
       case CoolPackage.SELF_TYPE_LITERAL: return createSelfTypeLiteral();
       case CoolPackage.IDENTIFIER_REF_EXPRESSION: return createIdentifierRefExpression();
       case CoolPackage.LITERAL: return createLiteral();
       case CoolPackage.NUMBER_LITERAL: return createNumberLiteral();
       case CoolPackage.STRING_LITERAL: return createStringLiteral();
       case CoolPackage.BOOLEAN_LITERAL: return createBooleanLiteral();
+      case CoolPackage.PAREN_EXPRESSION: return createParenExpression();
+      case CoolPackage.ASSIGNMENT_EXPRESSION: return createAssignmentExpression();
+      case CoolPackage.NEGATION_EXPRESSION: return createNegationExpression();
+      case CoolPackage.INTEGER_COMPOSITE_EXPRESSION: return createIntegerCompositeExpression();
+      case CoolPackage.NEW_EXPRESSION: return createNewExpression();
+      case CoolPackage.STATIC_DISPATCH_EXPRESSION: return createStaticDispatchExpression();
+      case CoolPackage.CONDITIONAL_EXPRESSION: return createConditionalExpression();
       case CoolPackage.LOOP_EXPRESSION: return createLoopExpression();
       case CoolPackage.BLOCK_EXPRESSION: return createBlockExpression();
+      case CoolPackage.ISVOID_EXPRESSION: return createIsvoidExpression();
       case CoolPackage.LET_EXPRESSION: return createLetExpression();
       case CoolPackage.LET_DECLARATION: return createLetDeclaration();
       case CoolPackage.CASE_EXPRESSION: return createCaseExpression();
       case CoolPackage.CASE: return createCase();
-      case CoolPackage.NEW_EXPRESSION: return createNewExpression();
       case CoolPackage.TYPE: return createType();
       case CoolPackage.IDENTIFIABLE_ELEMENT: return createIdentifiableElement();
-      case CoolPackage.DISPATCH_EXPRESSION: return createDispatchExpression();
       case CoolPackage.COMPARE_EXPRESSION: return createCompareExpression();
-      case CoolPackage.PLUS: return createPlus();
+      case CoolPackage.ADDITION_EXPRESSION: return createAdditionExpression();
       case CoolPackage.MINUS: return createMinus();
-      case CoolPackage.MULTI: return createMulti();
+      case CoolPackage.MULTIPLICATION_EXPRESSION: return createMultiplicationExpression();
       case CoolPackage.DIV: return createDiv();
+      case CoolPackage.DISPATCH_EXPRESSION: return createDispatchExpression();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -179,6 +187,17 @@ public class CoolFactoryImpl extends EFactoryImpl implements CoolFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public PrimaryExpression createPrimaryExpression()
+  {
+    PrimaryExpressionImpl primaryExpression = new PrimaryExpressionImpl();
+    return primaryExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public SelfTypeLiteral createSelfTypeLiteral()
   {
     SelfTypeLiteralImpl selfTypeLiteral = new SelfTypeLiteralImpl();
@@ -245,6 +264,83 @@ public class CoolFactoryImpl extends EFactoryImpl implements CoolFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public ParenExpression createParenExpression()
+  {
+    ParenExpressionImpl parenExpression = new ParenExpressionImpl();
+    return parenExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AssignmentExpression createAssignmentExpression()
+  {
+    AssignmentExpressionImpl assignmentExpression = new AssignmentExpressionImpl();
+    return assignmentExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NegationExpression createNegationExpression()
+  {
+    NegationExpressionImpl negationExpression = new NegationExpressionImpl();
+    return negationExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IntegerCompositeExpression createIntegerCompositeExpression()
+  {
+    IntegerCompositeExpressionImpl integerCompositeExpression = new IntegerCompositeExpressionImpl();
+    return integerCompositeExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NewExpression createNewExpression()
+  {
+    NewExpressionImpl newExpression = new NewExpressionImpl();
+    return newExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public StaticDispatchExpression createStaticDispatchExpression()
+  {
+    StaticDispatchExpressionImpl staticDispatchExpression = new StaticDispatchExpressionImpl();
+    return staticDispatchExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ConditionalExpression createConditionalExpression()
+  {
+    ConditionalExpressionImpl conditionalExpression = new ConditionalExpressionImpl();
+    return conditionalExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public LoopExpression createLoopExpression()
   {
     LoopExpressionImpl loopExpression = new LoopExpressionImpl();
@@ -260,6 +356,17 @@ public class CoolFactoryImpl extends EFactoryImpl implements CoolFactory
   {
     BlockExpressionImpl blockExpression = new BlockExpressionImpl();
     return blockExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IsvoidExpression createIsvoidExpression()
+  {
+    IsvoidExpressionImpl isvoidExpression = new IsvoidExpressionImpl();
+    return isvoidExpression;
   }
 
   /**
@@ -311,17 +418,6 @@ public class CoolFactoryImpl extends EFactoryImpl implements CoolFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public NewExpression createNewExpression()
-  {
-    NewExpressionImpl newExpression = new NewExpressionImpl();
-    return newExpression;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public Type createType()
   {
     TypeImpl type = new TypeImpl();
@@ -344,17 +440,6 @@ public class CoolFactoryImpl extends EFactoryImpl implements CoolFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public DispatchExpression createDispatchExpression()
-  {
-    DispatchExpressionImpl dispatchExpression = new DispatchExpressionImpl();
-    return dispatchExpression;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public CompareExpression createCompareExpression()
   {
     CompareExpressionImpl compareExpression = new CompareExpressionImpl();
@@ -366,10 +451,10 @@ public class CoolFactoryImpl extends EFactoryImpl implements CoolFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Plus createPlus()
+  public AdditionExpression createAdditionExpression()
   {
-    PlusImpl plus = new PlusImpl();
-    return plus;
+    AdditionExpressionImpl additionExpression = new AdditionExpressionImpl();
+    return additionExpression;
   }
 
   /**
@@ -388,10 +473,10 @@ public class CoolFactoryImpl extends EFactoryImpl implements CoolFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Multi createMulti()
+  public MultiplicationExpression createMultiplicationExpression()
   {
-    MultiImpl multi = new MultiImpl();
-    return multi;
+    MultiplicationExpressionImpl multiplicationExpression = new MultiplicationExpressionImpl();
+    return multiplicationExpression;
   }
 
   /**
@@ -403,6 +488,17 @@ public class CoolFactoryImpl extends EFactoryImpl implements CoolFactory
   {
     DivImpl div = new DivImpl();
     return div;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DispatchExpression createDispatchExpression()
+  {
+    DispatchExpressionImpl dispatchExpression = new DispatchExpressionImpl();
+    return dispatchExpression;
   }
 
   /**

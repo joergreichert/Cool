@@ -75,7 +75,7 @@ class BuiltInTypes {
 					expr = CoolFactory.eINSTANCE.createStringLiteral => [ value = "" ]
 				]
 				features += CoolFactory.eINSTANCE.createMethod => [
-					name = "copy"
+					name = "substr"
 					formals += CoolFactory.eINSTANCE.createFormal => [
 						name = "i"
 						type_decl = getInt
