@@ -59,10 +59,12 @@
     <genClasses ecoreClass="Cool.ecore#//NewExpression">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Cool.ecore#//NewExpression/type_name"/>
     </genClasses>
-    <genClasses ecoreClass="Cool.ecore#//StaticDispatchExpression">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//StaticDispatchExpression/ref"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//StaticDispatchExpression/actual"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//StaticDispatchExpression/chain"/>
+    <genClasses ecoreClass="Cool.ecore#//DispatchExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//DispatchExpression/ref"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//DispatchExpression/actual"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//DispatchExpression/chain"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//DispatchExpression/left"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Cool.ecore#//DispatchExpression/type_name"/>
     </genClasses>
     <genClasses ecoreClass="Cool.ecore#//ConditionalExpression">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//ConditionalExpression/pred"/>
@@ -119,13 +121,6 @@
     <genClasses ecoreClass="Cool.ecore#//Div">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//Div/op"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//Div/right"/>
-    </genClasses>
-    <genClasses ecoreClass="Cool.ecore#//DispatchExpression">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//DispatchExpression/left"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Cool.ecore#//DispatchExpression/type_name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//DispatchExpression/ref"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//DispatchExpression/actual"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cool.ecore#//DispatchExpression/chain"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

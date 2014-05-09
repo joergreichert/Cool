@@ -194,13 +194,13 @@ public interface CoolFactory extends EFactory
   NewExpression createNewExpression();
 
   /**
-   * Returns a new object of class '<em>Static Dispatch Expression</em>'.
+   * Returns a new object of class '<em>Dispatch Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Static Dispatch Expression</em>'.
+   * @return a new object of class '<em>Dispatch Expression</em>'.
    * @generated
    */
-  StaticDispatchExpression createStaticDispatchExpression();
+  DispatchExpression createDispatchExpression();
 
   /**
    * Returns a new object of class '<em>Conditional Expression</em>'.
@@ -336,15 +336,6 @@ public interface CoolFactory extends EFactory
    * @generated
    */
   Div createDiv();
-
-  /**
-   * Returns a new object of class '<em>Dispatch Expression</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Dispatch Expression</em>'.
-   * @generated
-   */
-  DispatchExpression createDispatchExpression();
 
   /**
    * Returns the package supported by this factory.

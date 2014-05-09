@@ -7,7 +7,6 @@ import edu.stanford.compilers.cool.DispatchExpression;
 import edu.stanford.compilers.cool.Expression;
 import edu.stanford.compilers.cool.IdentifierRefExpression;
 import edu.stanford.compilers.cool.PrimaryExpression;
-import edu.stanford.compilers.cool.StaticDispatchExpression;
 import edu.stanford.compilers.cool.Type;
 
 import java.util.Collection;
@@ -32,38 +31,18 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link edu.stanford.compilers.cool.impl.DispatchExpressionImpl#getLeft <em>Left</em>}</li>
- *   <li>{@link edu.stanford.compilers.cool.impl.DispatchExpressionImpl#getType_name <em>Type name</em>}</li>
  *   <li>{@link edu.stanford.compilers.cool.impl.DispatchExpressionImpl#getRef <em>Ref</em>}</li>
  *   <li>{@link edu.stanford.compilers.cool.impl.DispatchExpressionImpl#getActual <em>Actual</em>}</li>
  *   <li>{@link edu.stanford.compilers.cool.impl.DispatchExpressionImpl#getChain <em>Chain</em>}</li>
+ *   <li>{@link edu.stanford.compilers.cool.impl.DispatchExpressionImpl#getLeft <em>Left</em>}</li>
+ *   <li>{@link edu.stanford.compilers.cool.impl.DispatchExpressionImpl#getType_name <em>Type name</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class DispatchExpressionImpl extends ExpressionImpl implements DispatchExpression
+public class DispatchExpressionImpl extends PrimaryExpressionImpl implements DispatchExpression
 {
-  /**
-   * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLeft()
-   * @generated
-   * @ordered
-   */
-  protected PrimaryExpression left;
-
-  /**
-   * The cached value of the '{@link #getType_name() <em>Type name</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getType_name()
-   * @generated
-   * @ordered
-   */
-  protected Type type_name;
-
   /**
    * The cached value of the '{@link #getRef() <em>Ref</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -92,7 +71,27 @@ public class DispatchExpressionImpl extends ExpressionImpl implements DispatchEx
    * @generated
    * @ordered
    */
-  protected StaticDispatchExpression chain;
+  protected DispatchExpression chain;
+
+  /**
+   * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLeft()
+   * @generated
+   * @ordered
+   */
+  protected PrimaryExpression left;
+
+  /**
+   * The cached value of the '{@link #getType_name() <em>Type name</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType_name()
+   * @generated
+   * @ordered
+   */
+  protected Type type_name;
 
   /**
    * <!-- begin-user-doc -->
@@ -113,6 +112,116 @@ public class DispatchExpressionImpl extends ExpressionImpl implements DispatchEx
   protected EClass eStaticClass()
   {
     return CoolPackage.Literals.DISPATCH_EXPRESSION;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IdentifierRefExpression getRef()
+  {
+    return ref;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetRef(IdentifierRefExpression newRef, NotificationChain msgs)
+  {
+    IdentifierRefExpression oldRef = ref;
+    ref = newRef;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CoolPackage.DISPATCH_EXPRESSION__REF, oldRef, newRef);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRef(IdentifierRefExpression newRef)
+  {
+    if (newRef != ref)
+    {
+      NotificationChain msgs = null;
+      if (ref != null)
+        msgs = ((InternalEObject)ref).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CoolPackage.DISPATCH_EXPRESSION__REF, null, msgs);
+      if (newRef != null)
+        msgs = ((InternalEObject)newRef).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CoolPackage.DISPATCH_EXPRESSION__REF, null, msgs);
+      msgs = basicSetRef(newRef, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CoolPackage.DISPATCH_EXPRESSION__REF, newRef, newRef));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<Expression> getActual()
+  {
+    if (actual == null)
+    {
+      actual = new EObjectContainmentEList<Expression>(Expression.class, this, CoolPackage.DISPATCH_EXPRESSION__ACTUAL);
+    }
+    return actual;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DispatchExpression getChain()
+  {
+    return chain;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetChain(DispatchExpression newChain, NotificationChain msgs)
+  {
+    DispatchExpression oldChain = chain;
+    chain = newChain;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CoolPackage.DISPATCH_EXPRESSION__CHAIN, oldChain, newChain);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setChain(DispatchExpression newChain)
+  {
+    if (newChain != chain)
+    {
+      NotificationChain msgs = null;
+      if (chain != null)
+        msgs = ((InternalEObject)chain).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CoolPackage.DISPATCH_EXPRESSION__CHAIN, null, msgs);
+      if (newChain != null)
+        msgs = ((InternalEObject)newChain).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CoolPackage.DISPATCH_EXPRESSION__CHAIN, null, msgs);
+      msgs = basicSetChain(newChain, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CoolPackage.DISPATCH_EXPRESSION__CHAIN, newChain, newChain));
   }
 
   /**
@@ -211,129 +320,19 @@ public class DispatchExpressionImpl extends ExpressionImpl implements DispatchEx
    * <!-- end-user-doc -->
    * @generated
    */
-  public IdentifierRefExpression getRef()
-  {
-    return ref;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetRef(IdentifierRefExpression newRef, NotificationChain msgs)
-  {
-    IdentifierRefExpression oldRef = ref;
-    ref = newRef;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CoolPackage.DISPATCH_EXPRESSION__REF, oldRef, newRef);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setRef(IdentifierRefExpression newRef)
-  {
-    if (newRef != ref)
-    {
-      NotificationChain msgs = null;
-      if (ref != null)
-        msgs = ((InternalEObject)ref).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CoolPackage.DISPATCH_EXPRESSION__REF, null, msgs);
-      if (newRef != null)
-        msgs = ((InternalEObject)newRef).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CoolPackage.DISPATCH_EXPRESSION__REF, null, msgs);
-      msgs = basicSetRef(newRef, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CoolPackage.DISPATCH_EXPRESSION__REF, newRef, newRef));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<Expression> getActual()
-  {
-    if (actual == null)
-    {
-      actual = new EObjectContainmentEList<Expression>(Expression.class, this, CoolPackage.DISPATCH_EXPRESSION__ACTUAL);
-    }
-    return actual;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public StaticDispatchExpression getChain()
-  {
-    return chain;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetChain(StaticDispatchExpression newChain, NotificationChain msgs)
-  {
-    StaticDispatchExpression oldChain = chain;
-    chain = newChain;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CoolPackage.DISPATCH_EXPRESSION__CHAIN, oldChain, newChain);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setChain(StaticDispatchExpression newChain)
-  {
-    if (newChain != chain)
-    {
-      NotificationChain msgs = null;
-      if (chain != null)
-        msgs = ((InternalEObject)chain).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CoolPackage.DISPATCH_EXPRESSION__CHAIN, null, msgs);
-      if (newChain != null)
-        msgs = ((InternalEObject)newChain).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CoolPackage.DISPATCH_EXPRESSION__CHAIN, null, msgs);
-      msgs = basicSetChain(newChain, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CoolPackage.DISPATCH_EXPRESSION__CHAIN, newChain, newChain));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
     {
-      case CoolPackage.DISPATCH_EXPRESSION__LEFT:
-        return basicSetLeft(null, msgs);
       case CoolPackage.DISPATCH_EXPRESSION__REF:
         return basicSetRef(null, msgs);
       case CoolPackage.DISPATCH_EXPRESSION__ACTUAL:
         return ((InternalEList<?>)getActual()).basicRemove(otherEnd, msgs);
       case CoolPackage.DISPATCH_EXPRESSION__CHAIN:
         return basicSetChain(null, msgs);
+      case CoolPackage.DISPATCH_EXPRESSION__LEFT:
+        return basicSetLeft(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -348,17 +347,17 @@ public class DispatchExpressionImpl extends ExpressionImpl implements DispatchEx
   {
     switch (featureID)
     {
-      case CoolPackage.DISPATCH_EXPRESSION__LEFT:
-        return getLeft();
-      case CoolPackage.DISPATCH_EXPRESSION__TYPE_NAME:
-        if (resolve) return getType_name();
-        return basicGetType_name();
       case CoolPackage.DISPATCH_EXPRESSION__REF:
         return getRef();
       case CoolPackage.DISPATCH_EXPRESSION__ACTUAL:
         return getActual();
       case CoolPackage.DISPATCH_EXPRESSION__CHAIN:
         return getChain();
+      case CoolPackage.DISPATCH_EXPRESSION__LEFT:
+        return getLeft();
+      case CoolPackage.DISPATCH_EXPRESSION__TYPE_NAME:
+        if (resolve) return getType_name();
+        return basicGetType_name();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -374,12 +373,6 @@ public class DispatchExpressionImpl extends ExpressionImpl implements DispatchEx
   {
     switch (featureID)
     {
-      case CoolPackage.DISPATCH_EXPRESSION__LEFT:
-        setLeft((PrimaryExpression)newValue);
-        return;
-      case CoolPackage.DISPATCH_EXPRESSION__TYPE_NAME:
-        setType_name((Type)newValue);
-        return;
       case CoolPackage.DISPATCH_EXPRESSION__REF:
         setRef((IdentifierRefExpression)newValue);
         return;
@@ -388,7 +381,13 @@ public class DispatchExpressionImpl extends ExpressionImpl implements DispatchEx
         getActual().addAll((Collection<? extends Expression>)newValue);
         return;
       case CoolPackage.DISPATCH_EXPRESSION__CHAIN:
-        setChain((StaticDispatchExpression)newValue);
+        setChain((DispatchExpression)newValue);
+        return;
+      case CoolPackage.DISPATCH_EXPRESSION__LEFT:
+        setLeft((PrimaryExpression)newValue);
+        return;
+      case CoolPackage.DISPATCH_EXPRESSION__TYPE_NAME:
+        setType_name((Type)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -404,12 +403,6 @@ public class DispatchExpressionImpl extends ExpressionImpl implements DispatchEx
   {
     switch (featureID)
     {
-      case CoolPackage.DISPATCH_EXPRESSION__LEFT:
-        setLeft((PrimaryExpression)null);
-        return;
-      case CoolPackage.DISPATCH_EXPRESSION__TYPE_NAME:
-        setType_name((Type)null);
-        return;
       case CoolPackage.DISPATCH_EXPRESSION__REF:
         setRef((IdentifierRefExpression)null);
         return;
@@ -417,7 +410,13 @@ public class DispatchExpressionImpl extends ExpressionImpl implements DispatchEx
         getActual().clear();
         return;
       case CoolPackage.DISPATCH_EXPRESSION__CHAIN:
-        setChain((StaticDispatchExpression)null);
+        setChain((DispatchExpression)null);
+        return;
+      case CoolPackage.DISPATCH_EXPRESSION__LEFT:
+        setLeft((PrimaryExpression)null);
+        return;
+      case CoolPackage.DISPATCH_EXPRESSION__TYPE_NAME:
+        setType_name((Type)null);
         return;
     }
     super.eUnset(featureID);
@@ -433,16 +432,16 @@ public class DispatchExpressionImpl extends ExpressionImpl implements DispatchEx
   {
     switch (featureID)
     {
-      case CoolPackage.DISPATCH_EXPRESSION__LEFT:
-        return left != null;
-      case CoolPackage.DISPATCH_EXPRESSION__TYPE_NAME:
-        return type_name != null;
       case CoolPackage.DISPATCH_EXPRESSION__REF:
         return ref != null;
       case CoolPackage.DISPATCH_EXPRESSION__ACTUAL:
         return actual != null && !actual.isEmpty();
       case CoolPackage.DISPATCH_EXPRESSION__CHAIN:
         return chain != null;
+      case CoolPackage.DISPATCH_EXPRESSION__LEFT:
+        return left != null;
+      case CoolPackage.DISPATCH_EXPRESSION__TYPE_NAME:
+        return type_name != null;
     }
     return super.eIsSet(featureID);
   }

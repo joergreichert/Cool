@@ -170,9 +170,9 @@ public class CoolAdapterFactory extends AdapterFactoryImpl
         return createNewExpressionAdapter();
       }
       @Override
-      public Adapter caseStaticDispatchExpression(StaticDispatchExpression object)
+      public Adapter caseDispatchExpression(DispatchExpression object)
       {
-        return createStaticDispatchExpressionAdapter();
+        return createDispatchExpressionAdapter();
       }
       @Override
       public Adapter caseConditionalExpression(ConditionalExpression object)
@@ -248,11 +248,6 @@ public class CoolAdapterFactory extends AdapterFactoryImpl
       public Adapter caseDiv(Div object)
       {
         return createDivAdapter();
-      }
-      @Override
-      public Adapter caseDispatchExpression(DispatchExpression object)
-      {
-        return createDispatchExpressionAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -562,16 +557,16 @@ public class CoolAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link edu.stanford.compilers.cool.StaticDispatchExpression <em>Static Dispatch Expression</em>}'.
+   * Creates a new adapter for an object of class '{@link edu.stanford.compilers.cool.DispatchExpression <em>Dispatch Expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see edu.stanford.compilers.cool.StaticDispatchExpression
+   * @see edu.stanford.compilers.cool.DispatchExpression
    * @generated
    */
-  public Adapter createStaticDispatchExpressionAdapter()
+  public Adapter createDispatchExpressionAdapter()
   {
     return null;
   }
@@ -797,21 +792,6 @@ public class CoolAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDivAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link edu.stanford.compilers.cool.DispatchExpression <em>Dispatch Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see edu.stanford.compilers.cool.DispatchExpression
-   * @generated
-   */
-  public Adapter createDispatchExpressionAdapter()
   {
     return null;
   }

@@ -681,14 +681,14 @@ public interface CoolPackage extends EPackage
   int NEW_EXPRESSION_FEATURE_COUNT = PRIMARY_EXPRESSION_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link edu.stanford.compilers.cool.impl.StaticDispatchExpressionImpl <em>Static Dispatch Expression</em>}' class.
+   * The meta object id for the '{@link edu.stanford.compilers.cool.impl.DispatchExpressionImpl <em>Dispatch Expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see edu.stanford.compilers.cool.impl.StaticDispatchExpressionImpl
-   * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getStaticDispatchExpression()
+   * @see edu.stanford.compilers.cool.impl.DispatchExpressionImpl
+   * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getDispatchExpression()
    * @generated
    */
-  int STATIC_DISPATCH_EXPRESSION = 19;
+  int DISPATCH_EXPRESSION = 19;
 
   /**
    * The feature id for the '<em><b>Ref</b></em>' containment reference.
@@ -697,7 +697,7 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATIC_DISPATCH_EXPRESSION__REF = PRIMARY_EXPRESSION_FEATURE_COUNT + 0;
+  int DISPATCH_EXPRESSION__REF = PRIMARY_EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Actual</b></em>' containment reference list.
@@ -706,7 +706,7 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATIC_DISPATCH_EXPRESSION__ACTUAL = PRIMARY_EXPRESSION_FEATURE_COUNT + 1;
+  int DISPATCH_EXPRESSION__ACTUAL = PRIMARY_EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Chain</b></em>' containment reference.
@@ -715,16 +715,34 @@ public interface CoolPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATIC_DISPATCH_EXPRESSION__CHAIN = PRIMARY_EXPRESSION_FEATURE_COUNT + 2;
+  int DISPATCH_EXPRESSION__CHAIN = PRIMARY_EXPRESSION_FEATURE_COUNT + 2;
 
   /**
-   * The number of structural features of the '<em>Static Dispatch Expression</em>' class.
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STATIC_DISPATCH_EXPRESSION_FEATURE_COUNT = PRIMARY_EXPRESSION_FEATURE_COUNT + 3;
+  int DISPATCH_EXPRESSION__LEFT = PRIMARY_EXPRESSION_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Type name</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DISPATCH_EXPRESSION__TYPE_NAME = PRIMARY_EXPRESSION_FEATURE_COUNT + 4;
+
+  /**
+   * The number of structural features of the '<em>Dispatch Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DISPATCH_EXPRESSION_FEATURE_COUNT = PRIMARY_EXPRESSION_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link edu.stanford.compilers.cool.impl.ConditionalExpressionImpl <em>Conditional Expression</em>}' class.
@@ -1225,70 +1243,6 @@ public interface CoolPackage extends EPackage
    */
   int DIV_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
-  /**
-   * The meta object id for the '{@link edu.stanford.compilers.cool.impl.DispatchExpressionImpl <em>Dispatch Expression</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see edu.stanford.compilers.cool.impl.DispatchExpressionImpl
-   * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getDispatchExpression()
-   * @generated
-   */
-  int DISPATCH_EXPRESSION = 35;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DISPATCH_EXPRESSION__LEFT = EXPRESSION_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Type name</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DISPATCH_EXPRESSION__TYPE_NAME = EXPRESSION_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Ref</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DISPATCH_EXPRESSION__REF = EXPRESSION_FEATURE_COUNT + 2;
-
-  /**
-   * The feature id for the '<em><b>Actual</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DISPATCH_EXPRESSION__ACTUAL = EXPRESSION_FEATURE_COUNT + 3;
-
-  /**
-   * The feature id for the '<em><b>Chain</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DISPATCH_EXPRESSION__CHAIN = EXPRESSION_FEATURE_COUNT + 4;
-
-  /**
-   * The number of structural features of the '<em>Dispatch Expression</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DISPATCH_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 5;
-
 
   /**
    * Returns the meta object for class '{@link edu.stanford.compilers.cool.Program <em>Program</em>}'.
@@ -1690,47 +1644,69 @@ public interface CoolPackage extends EPackage
   EReference getNewExpression_Type_name();
 
   /**
-   * Returns the meta object for class '{@link edu.stanford.compilers.cool.StaticDispatchExpression <em>Static Dispatch Expression</em>}'.
+   * Returns the meta object for class '{@link edu.stanford.compilers.cool.DispatchExpression <em>Dispatch Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Static Dispatch Expression</em>'.
-   * @see edu.stanford.compilers.cool.StaticDispatchExpression
+   * @return the meta object for class '<em>Dispatch Expression</em>'.
+   * @see edu.stanford.compilers.cool.DispatchExpression
    * @generated
    */
-  EClass getStaticDispatchExpression();
+  EClass getDispatchExpression();
 
   /**
-   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.StaticDispatchExpression#getRef <em>Ref</em>}'.
+   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.DispatchExpression#getRef <em>Ref</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Ref</em>'.
-   * @see edu.stanford.compilers.cool.StaticDispatchExpression#getRef()
-   * @see #getStaticDispatchExpression()
+   * @see edu.stanford.compilers.cool.DispatchExpression#getRef()
+   * @see #getDispatchExpression()
    * @generated
    */
-  EReference getStaticDispatchExpression_Ref();
+  EReference getDispatchExpression_Ref();
 
   /**
-   * Returns the meta object for the containment reference list '{@link edu.stanford.compilers.cool.StaticDispatchExpression#getActual <em>Actual</em>}'.
+   * Returns the meta object for the containment reference list '{@link edu.stanford.compilers.cool.DispatchExpression#getActual <em>Actual</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Actual</em>'.
-   * @see edu.stanford.compilers.cool.StaticDispatchExpression#getActual()
-   * @see #getStaticDispatchExpression()
+   * @see edu.stanford.compilers.cool.DispatchExpression#getActual()
+   * @see #getDispatchExpression()
    * @generated
    */
-  EReference getStaticDispatchExpression_Actual();
+  EReference getDispatchExpression_Actual();
 
   /**
-   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.StaticDispatchExpression#getChain <em>Chain</em>}'.
+   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.DispatchExpression#getChain <em>Chain</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Chain</em>'.
-   * @see edu.stanford.compilers.cool.StaticDispatchExpression#getChain()
-   * @see #getStaticDispatchExpression()
+   * @see edu.stanford.compilers.cool.DispatchExpression#getChain()
+   * @see #getDispatchExpression()
    * @generated
    */
-  EReference getStaticDispatchExpression_Chain();
+  EReference getDispatchExpression_Chain();
+
+  /**
+   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.DispatchExpression#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see edu.stanford.compilers.cool.DispatchExpression#getLeft()
+   * @see #getDispatchExpression()
+   * @generated
+   */
+  EReference getDispatchExpression_Left();
+
+  /**
+   * Returns the meta object for the reference '{@link edu.stanford.compilers.cool.DispatchExpression#getType_name <em>Type name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Type name</em>'.
+   * @see edu.stanford.compilers.cool.DispatchExpression#getType_name()
+   * @see #getDispatchExpression()
+   * @generated
+   */
+  EReference getDispatchExpression_Type_name();
 
   /**
    * Returns the meta object for class '{@link edu.stanford.compilers.cool.ConditionalExpression <em>Conditional Expression</em>}'.
@@ -2180,71 +2156,6 @@ public interface CoolPackage extends EPackage
   EReference getDiv_Right();
 
   /**
-   * Returns the meta object for class '{@link edu.stanford.compilers.cool.DispatchExpression <em>Dispatch Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Dispatch Expression</em>'.
-   * @see edu.stanford.compilers.cool.DispatchExpression
-   * @generated
-   */
-  EClass getDispatchExpression();
-
-  /**
-   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.DispatchExpression#getLeft <em>Left</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see edu.stanford.compilers.cool.DispatchExpression#getLeft()
-   * @see #getDispatchExpression()
-   * @generated
-   */
-  EReference getDispatchExpression_Left();
-
-  /**
-   * Returns the meta object for the reference '{@link edu.stanford.compilers.cool.DispatchExpression#getType_name <em>Type name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Type name</em>'.
-   * @see edu.stanford.compilers.cool.DispatchExpression#getType_name()
-   * @see #getDispatchExpression()
-   * @generated
-   */
-  EReference getDispatchExpression_Type_name();
-
-  /**
-   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.DispatchExpression#getRef <em>Ref</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Ref</em>'.
-   * @see edu.stanford.compilers.cool.DispatchExpression#getRef()
-   * @see #getDispatchExpression()
-   * @generated
-   */
-  EReference getDispatchExpression_Ref();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link edu.stanford.compilers.cool.DispatchExpression#getActual <em>Actual</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Actual</em>'.
-   * @see edu.stanford.compilers.cool.DispatchExpression#getActual()
-   * @see #getDispatchExpression()
-   * @generated
-   */
-  EReference getDispatchExpression_Actual();
-
-  /**
-   * Returns the meta object for the containment reference '{@link edu.stanford.compilers.cool.DispatchExpression#getChain <em>Chain</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Chain</em>'.
-   * @see edu.stanford.compilers.cool.DispatchExpression#getChain()
-   * @see #getDispatchExpression()
-   * @generated
-   */
-  EReference getDispatchExpression_Chain();
-
-  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2610,14 +2521,14 @@ public interface CoolPackage extends EPackage
     EReference NEW_EXPRESSION__TYPE_NAME = eINSTANCE.getNewExpression_Type_name();
 
     /**
-     * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.StaticDispatchExpressionImpl <em>Static Dispatch Expression</em>}' class.
+     * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.DispatchExpressionImpl <em>Dispatch Expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see edu.stanford.compilers.cool.impl.StaticDispatchExpressionImpl
-     * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getStaticDispatchExpression()
+     * @see edu.stanford.compilers.cool.impl.DispatchExpressionImpl
+     * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getDispatchExpression()
      * @generated
      */
-    EClass STATIC_DISPATCH_EXPRESSION = eINSTANCE.getStaticDispatchExpression();
+    EClass DISPATCH_EXPRESSION = eINSTANCE.getDispatchExpression();
 
     /**
      * The meta object literal for the '<em><b>Ref</b></em>' containment reference feature.
@@ -2625,7 +2536,7 @@ public interface CoolPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference STATIC_DISPATCH_EXPRESSION__REF = eINSTANCE.getStaticDispatchExpression_Ref();
+    EReference DISPATCH_EXPRESSION__REF = eINSTANCE.getDispatchExpression_Ref();
 
     /**
      * The meta object literal for the '<em><b>Actual</b></em>' containment reference list feature.
@@ -2633,7 +2544,7 @@ public interface CoolPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference STATIC_DISPATCH_EXPRESSION__ACTUAL = eINSTANCE.getStaticDispatchExpression_Actual();
+    EReference DISPATCH_EXPRESSION__ACTUAL = eINSTANCE.getDispatchExpression_Actual();
 
     /**
      * The meta object literal for the '<em><b>Chain</b></em>' containment reference feature.
@@ -2641,7 +2552,23 @@ public interface CoolPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference STATIC_DISPATCH_EXPRESSION__CHAIN = eINSTANCE.getStaticDispatchExpression_Chain();
+    EReference DISPATCH_EXPRESSION__CHAIN = eINSTANCE.getDispatchExpression_Chain();
+
+    /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DISPATCH_EXPRESSION__LEFT = eINSTANCE.getDispatchExpression_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Type name</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DISPATCH_EXPRESSION__TYPE_NAME = eINSTANCE.getDispatchExpression_Type_name();
 
     /**
      * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.ConditionalExpressionImpl <em>Conditional Expression</em>}' class.
@@ -3008,56 +2935,6 @@ public interface CoolPackage extends EPackage
      * @generated
      */
     EReference DIV__RIGHT = eINSTANCE.getDiv_Right();
-
-    /**
-     * The meta object literal for the '{@link edu.stanford.compilers.cool.impl.DispatchExpressionImpl <em>Dispatch Expression</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see edu.stanford.compilers.cool.impl.DispatchExpressionImpl
-     * @see edu.stanford.compilers.cool.impl.CoolPackageImpl#getDispatchExpression()
-     * @generated
-     */
-    EClass DISPATCH_EXPRESSION = eINSTANCE.getDispatchExpression();
-
-    /**
-     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference DISPATCH_EXPRESSION__LEFT = eINSTANCE.getDispatchExpression_Left();
-
-    /**
-     * The meta object literal for the '<em><b>Type name</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference DISPATCH_EXPRESSION__TYPE_NAME = eINSTANCE.getDispatchExpression_Type_name();
-
-    /**
-     * The meta object literal for the '<em><b>Ref</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference DISPATCH_EXPRESSION__REF = eINSTANCE.getDispatchExpression_Ref();
-
-    /**
-     * The meta object literal for the '<em><b>Actual</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference DISPATCH_EXPRESSION__ACTUAL = eINSTANCE.getDispatchExpression_Actual();
-
-    /**
-     * The meta object literal for the '<em><b>Chain</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference DISPATCH_EXPRESSION__CHAIN = eINSTANCE.getDispatchExpression_Chain();
 
   }
 

@@ -4,21 +4,27 @@
 package edu.stanford.compilers.scoping
 
 import com.google.inject.Inject
+import edu.stanford.compilers.cool.AssignmentExpression
 import edu.stanford.compilers.cool.Attr
 import edu.stanford.compilers.cool.BooleanLiteral
+import edu.stanford.compilers.cool.Case
 import edu.stanford.compilers.cool.Class_
 import edu.stanford.compilers.cool.CoolFactory
 import edu.stanford.compilers.cool.CoolPackage
 import edu.stanford.compilers.cool.DispatchExpression
 import edu.stanford.compilers.cool.Expression
+import edu.stanford.compilers.cool.Feature_
 import edu.stanford.compilers.cool.Formal
 import edu.stanford.compilers.cool.IdentifiableElement
 import edu.stanford.compilers.cool.IdentifierRefExpression
+import edu.stanford.compilers.cool.IntegerCompositeExpression
 import edu.stanford.compilers.cool.LetDeclaration
 import edu.stanford.compilers.cool.LetExpression
 import edu.stanford.compilers.cool.Method
+import edu.stanford.compilers.cool.NegationExpression
 import edu.stanford.compilers.cool.NewExpression
 import edu.stanford.compilers.cool.NumberLiteral
+import edu.stanford.compilers.cool.ParenExpression
 import edu.stanford.compilers.cool.SelfTypeLiteral
 import edu.stanford.compilers.cool.StringLiteral
 import edu.stanford.compilers.cool.Type
@@ -31,13 +37,6 @@ import org.eclipse.xtext.scoping.IScope
 import org.eclipse.xtext.scoping.Scopes
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider
 import org.eclipse.xtext.util.IResourceScopeCache
-import edu.stanford.compilers.cool.Feature_
-import edu.stanford.compilers.cool.AssignmentExpression
-import edu.stanford.compilers.cool.ParenExpression
-import edu.stanford.compilers.cool.NegationExpression
-import edu.stanford.compilers.cool.IntegerCompositeExpression
-import edu.stanford.compilers.cool.StaticDispatchExpression
-import edu.stanford.compilers.cool.Case
 
 /**
  * This class contains custom scoping description.
@@ -69,7 +68,18 @@ class CoolScopeProvider extends AbstractDeclarativeScopeProvider {
 				parent
 			} else if(respectType) {
 				if(context.eContainingFeature === CoolPackage.Literals.DISPATCH_EXPRESSION__REF) {
-					getType(dispatchExpression.left, CoolPackage.Literals.IDENTIFIER_REF_EXPRESSION__ID)
+					val expr = if(dispatchExpression.eContainer instanceof DispatchExpression) {
+						 dispatchExpression.eContainer as DispatchExpression
+					} else if(dispatchExpression.left === null) {
+						val selfType = CoolFactory.eINSTANCE.createSelfTypeLiteral
+						dispatchExpression.setLeft(selfType)
+						dispatchExpression.left
+					} else {
+						dispatchExpression.left
+					}
+					getType(expr, CoolPackage.Literals.IDENTIFIER_REF_EXPRESSION__ID)
+				} else if(context.eContainingFeature === CoolPackage.Literals.DISPATCH_EXPRESSION__CHAIN) {
+					getType(dispatchExpression.chain, CoolPackage.Literals.IDENTIFIER_REF_EXPRESSION__ID)
 				} else {
 					parent
 				}
@@ -206,15 +216,12 @@ class CoolScopeProvider extends AbstractDeclarativeScopeProvider {
 				return expr.type_name
 			}
 		}
-		if(expr instanceof StaticDispatchExpression) {
+		if(expr instanceof DispatchExpression) {
 			if(expr.ref !== null) {
 				return expr.ref.getType(reference)
 			} else {
 				return expr.getContainingClassAsType
 			}
-		}
-		if(expr instanceof DispatchExpression) {
-			return expr.ref.getType(reference)
 		}
 		//	IdentifierRefExpression
 		if(expr instanceof IdentifierRefExpression) {

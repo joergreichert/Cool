@@ -669,7 +669,7 @@ public class CoolGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cChainAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
 		private final RuleCall cChainStaticDispatchExpressionParserRuleCall_4_1_0 = (RuleCall)cChainAssignment_4_1.eContents().get(0);
 		
-		//StaticDispatchExpression:
+		//StaticDispatchExpression returns DispatchExpression:
 		//	ref=IdentifierRefExpression "(" (actual+=Expression ("," actual+=Expression)*)? ")" ("."
 		//	chain=StaticDispatchExpression)?;
 		public ParserRule getRule() { return rule; }
@@ -1758,7 +1758,7 @@ public class CoolGrammarAccess extends AbstractGrammarElementFinder {
 		return getNewExpressionAccess().getRule();
 	}
 
-	//StaticDispatchExpression:
+	//StaticDispatchExpression returns DispatchExpression:
 	//	ref=IdentifierRefExpression "(" (actual+=Expression ("," actual+=Expression)*)? ")" ("."
 	//	chain=StaticDispatchExpression)?;
 	public StaticDispatchExpressionElements getStaticDispatchExpressionAccess() {

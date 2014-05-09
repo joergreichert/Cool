@@ -31,7 +31,6 @@ import edu.stanford.compilers.cool.NumberLiteral;
 import edu.stanford.compilers.cool.ParenExpression;
 import edu.stanford.compilers.cool.Program;
 import edu.stanford.compilers.cool.SelfTypeLiteral;
-import edu.stanford.compilers.cool.StaticDispatchExpression;
 import edu.stanford.compilers.cool.StringLiteral;
 import edu.stanford.compilers.services.CoolGrammarAccess;
 import org.eclipse.emf.ecore.EObject;
@@ -195,7 +194,13 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				   context == grammarAccess.getMultiplicationExpressionRule() ||
 				   context == grammarAccess.getMultiplicationExpressionAccess().getDivOpAction_1_0_0_1_0() ||
 				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiplicationExpressionLeftAction_1_0_0_0_0()) {
-					sequence_DispatchExpression(context, (DispatchExpression) semanticObject); 
+					sequence_DispatchExpression_StaticDispatchExpression(context, (DispatchExpression) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getPrimaryExpressionRule() ||
+				   context == grammarAccess.getStaticDispatchExpressionRule()) {
+					sequence_StaticDispatchExpression(context, (DispatchExpression) semanticObject); 
 					return; 
 				}
 				else break;
@@ -441,24 +446,6 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
-			case CoolPackage.STATIC_DISPATCH_EXPRESSION:
-				if(context == grammarAccess.getAdditionExpressionRule() ||
-				   context == grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0() ||
-				   context == grammarAccess.getAdditionExpressionAccess().getMinusOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getCompareExpressionRule() ||
-				   context == grammarAccess.getCompareExpressionAccess().getCompareExpressionLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getDispatchExpressionRule() ||
-				   context == grammarAccess.getDispatchExpressionAccess().getDispatchExpressionLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getExpressionRule() ||
-				   context == grammarAccess.getMultiplicationExpressionRule() ||
-				   context == grammarAccess.getMultiplicationExpressionAccess().getDivOpAction_1_0_0_1_0() ||
-				   context == grammarAccess.getMultiplicationExpressionAccess().getMultiplicationExpressionLeftAction_1_0_0_0_0() ||
-				   context == grammarAccess.getPrimaryExpressionRule() ||
-				   context == grammarAccess.getStaticDispatchExpressionRule()) {
-					sequence_StaticDispatchExpression(context, (StaticDispatchExpression) semanticObject); 
-					return; 
-				}
-				else break;
 			case CoolPackage.STRING_LITERAL:
 				if(context == grammarAccess.getAdditionExpressionRule() ||
 				   context == grammarAccess.getAdditionExpressionAccess().getAdditionExpressionLeftAction_1_0_0_0_0() ||
@@ -648,14 +635,17 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         (
-	 *             (left=DispatchExpression_DispatchExpression_1_0_0_0 type_name=[Type|ID]? ref=IdentifierRefExpression) | 
-	 *             (left=DispatchExpression_DispatchExpression_1_0_0_0 ref=IdentifierRefExpression)
-	 *         ) 
-	 *         (actual+=Expression actual+=Expression*)? 
-	 *         chain=StaticDispatchExpression?
+	 *             (
+	 *                 (left=DispatchExpression_DispatchExpression_1_0_0_0 type_name=[Type|ID]? ref=IdentifierRefExpression) | 
+	 *                 (left=DispatchExpression_DispatchExpression_1_0_0_0 ref=IdentifierRefExpression)
+	 *             ) 
+	 *             (actual+=Expression actual+=Expression*)? 
+	 *             chain=StaticDispatchExpression?
+	 *         ) | 
+	 *         (ref=IdentifierRefExpression (actual+=Expression actual+=Expression*)? chain=StaticDispatchExpression?)
 	 *     )
 	 */
-	protected void sequence_DispatchExpression(EObject context, DispatchExpression semanticObject) {
+	protected void sequence_DispatchExpression_StaticDispatchExpression(EObject context, DispatchExpression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -897,7 +887,7 @@ public class CoolSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (ref=IdentifierRefExpression (actual+=Expression actual+=Expression*)? chain=StaticDispatchExpression?)
 	 */
-	protected void sequence_StaticDispatchExpression(EObject context, StaticDispatchExpression semanticObject) {
+	protected void sequence_StaticDispatchExpression(EObject context, DispatchExpression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

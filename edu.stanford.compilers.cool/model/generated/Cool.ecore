@@ -62,13 +62,16 @@
   <eClassifiers xsi:type="ecore:EClass" name="NewExpression" eSuperTypes="#//PrimaryExpression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type_name" eType="#//Type"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StaticDispatchExpression" eSuperTypes="#//PrimaryExpression">
+  <eClassifiers xsi:type="ecore:EClass" name="DispatchExpression" eSuperTypes="#//PrimaryExpression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ref" eType="#//IdentifierRefExpression"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="actual" upperBound="-1"
         eType="#//Expression" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="chain" eType="#//StaticDispatchExpression"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="chain" eType="#//DispatchExpression"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//PrimaryExpression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type_name" eType="#//Type"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ConditionalExpression" eSuperTypes="#//PrimaryExpression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="pred" eType="#//Expression"
@@ -147,17 +150,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="op" eType="#//Expression"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="right" eType="#//Expression"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DispatchExpression" eSuperTypes="#//Expression">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//PrimaryExpression"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type_name" eType="#//Type"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ref" eType="#//IdentifierRefExpression"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="actual" upperBound="-1"
-        eType="#//Expression" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="chain" eType="#//StaticDispatchExpression"
         containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

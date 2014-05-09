@@ -239,12 +239,12 @@ public class CoolSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case CoolPackage.STATIC_DISPATCH_EXPRESSION:
+      case CoolPackage.DISPATCH_EXPRESSION:
       {
-        StaticDispatchExpression staticDispatchExpression = (StaticDispatchExpression)theEObject;
-        T result = caseStaticDispatchExpression(staticDispatchExpression);
-        if (result == null) result = casePrimaryExpression(staticDispatchExpression);
-        if (result == null) result = caseExpression(staticDispatchExpression);
+        DispatchExpression dispatchExpression = (DispatchExpression)theEObject;
+        T result = caseDispatchExpression(dispatchExpression);
+        if (result == null) result = casePrimaryExpression(dispatchExpression);
+        if (result == null) result = caseExpression(dispatchExpression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -369,14 +369,6 @@ public class CoolSwitch<T> extends Switch<T>
         Div div = (Div)theEObject;
         T result = caseDiv(div);
         if (result == null) result = caseExpression(div);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case CoolPackage.DISPATCH_EXPRESSION:
-      {
-        DispatchExpression dispatchExpression = (DispatchExpression)theEObject;
-        T result = caseDispatchExpression(dispatchExpression);
-        if (result == null) result = caseExpression(dispatchExpression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -689,17 +681,17 @@ public class CoolSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Static Dispatch Expression</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Dispatch Expression</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Static Dispatch Expression</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Dispatch Expression</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseStaticDispatchExpression(StaticDispatchExpression object)
+  public T caseDispatchExpression(DispatchExpression object)
   {
     return null;
   }
@@ -940,22 +932,6 @@ public class CoolSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseDiv(Div object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Dispatch Expression</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Dispatch Expression</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseDispatchExpression(DispatchExpression object)
   {
     return null;
   }

@@ -51,19 +51,9 @@ PrimaryExpression:
 	StaticDispatchExpression
 ;
 
-SelfTypeLiteral:
-	{SelfTypeLiteral} 'self'
-;
-
-IdentifierRefExpression:
-	id=[IdentifiableElement]
-;
-
-Literal:
-	NumberLiteral | 
-	StringLiteral |
-	BooleanLiteral
-;
+SelfTypeLiteral:  			{SelfTypeLiteral} 'self';
+IdentifierRefExpression:  	id=[IdentifiableElement];
+Literal:  					NumberLiteral | StringLiteral | BooleanLiteral;
 
 NumberLiteral:  value=INT;
 StringLiteral:  value=STRING;
@@ -74,7 +64,11 @@ AssignmentExpression: 		name=SYMBOL '<-' expr=Expression;
 NegationExpression:			'not' expr=Expression;
 IntegerCompositeExpression:	'~' expr=Expression;
 NewExpression: 				'new' type_name=[Type];
-StaticDispatchExpression:	ref=IdentifierRefExpression '(' (actual+=Expression (',' actual+=Expression)*)? ')' (=> '.' chain=StaticDispatchExpression)?;
+
+StaticDispatchExpression 	returns DispatchExpression:	
+	ref=IdentifierRefExpression '(' (actual+=Expression (',' actual+=Expression)*)? ')' 
+		(=> '.' chain=StaticDispatchExpression)?
+;
 
 ConditionalExpression:		'if' pred=Expression 'then' then_exp=Expression (=> 'else' else_exp=Expression)? 'fi';
 LoopExpression:				'while' pred=Expression 'loop' body=Expression 'pool';
@@ -115,13 +109,8 @@ DispatchExpression returns Expression:
 	 '(' (actual+=Expression (',' actual+=Expression)*)? ')' (=> '.' chain=StaticDispatchExpression)?)?
 ;
 
-Type:
-	Class_
-;
-
-IdentifiableElement:
-	Class_ | Feature_ | Formal | LetDeclaration | Case
-;
+Type:  					Class_;
+IdentifiableElement: 	Class_ | Feature_ | Formal | LetDeclaration | Case;
 	
 BOOLEAN:	'true' | 'false';
 SYMBOL:		ID | 'self';

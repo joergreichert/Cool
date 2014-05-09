@@ -83,7 +83,7 @@ public class CoolFactoryImpl extends EFactoryImpl implements CoolFactory
       case CoolPackage.NEGATION_EXPRESSION: return createNegationExpression();
       case CoolPackage.INTEGER_COMPOSITE_EXPRESSION: return createIntegerCompositeExpression();
       case CoolPackage.NEW_EXPRESSION: return createNewExpression();
-      case CoolPackage.STATIC_DISPATCH_EXPRESSION: return createStaticDispatchExpression();
+      case CoolPackage.DISPATCH_EXPRESSION: return createDispatchExpression();
       case CoolPackage.CONDITIONAL_EXPRESSION: return createConditionalExpression();
       case CoolPackage.LOOP_EXPRESSION: return createLoopExpression();
       case CoolPackage.BLOCK_EXPRESSION: return createBlockExpression();
@@ -99,7 +99,6 @@ public class CoolFactoryImpl extends EFactoryImpl implements CoolFactory
       case CoolPackage.MINUS: return createMinus();
       case CoolPackage.MULTIPLICATION_EXPRESSION: return createMultiplicationExpression();
       case CoolPackage.DIV: return createDiv();
-      case CoolPackage.DISPATCH_EXPRESSION: return createDispatchExpression();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -319,10 +318,10 @@ public class CoolFactoryImpl extends EFactoryImpl implements CoolFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public StaticDispatchExpression createStaticDispatchExpression()
+  public DispatchExpression createDispatchExpression()
   {
-    StaticDispatchExpressionImpl staticDispatchExpression = new StaticDispatchExpressionImpl();
-    return staticDispatchExpression;
+    DispatchExpressionImpl dispatchExpression = new DispatchExpressionImpl();
+    return dispatchExpression;
   }
 
   /**
@@ -488,17 +487,6 @@ public class CoolFactoryImpl extends EFactoryImpl implements CoolFactory
   {
     DivImpl div = new DivImpl();
     return div;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public DispatchExpression createDispatchExpression()
-  {
-    DispatchExpressionImpl dispatchExpression = new DispatchExpressionImpl();
-    return dispatchExpression;
   }
 
   /**

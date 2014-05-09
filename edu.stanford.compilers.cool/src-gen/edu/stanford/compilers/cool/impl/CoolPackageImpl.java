@@ -37,7 +37,6 @@ import edu.stanford.compilers.cool.ParenExpression;
 import edu.stanford.compilers.cool.PrimaryExpression;
 import edu.stanford.compilers.cool.Program;
 import edu.stanford.compilers.cool.SelfTypeLiteral;
-import edu.stanford.compilers.cool.StaticDispatchExpression;
 import edu.stanford.compilers.cool.StringLiteral;
 import edu.stanford.compilers.cool.Type;
 
@@ -194,7 +193,7 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass staticDispatchExpressionEClass = null;
+  private EClass dispatchExpressionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -300,13 +299,6 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * @generated
    */
   private EClass divEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass dispatchExpressionEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -756,9 +748,9 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getStaticDispatchExpression()
+  public EClass getDispatchExpression()
   {
-    return staticDispatchExpressionEClass;
+    return dispatchExpressionEClass;
   }
 
   /**
@@ -766,9 +758,9 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getStaticDispatchExpression_Ref()
+  public EReference getDispatchExpression_Ref()
   {
-    return (EReference)staticDispatchExpressionEClass.getEStructuralFeatures().get(0);
+    return (EReference)dispatchExpressionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -776,9 +768,9 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getStaticDispatchExpression_Actual()
+  public EReference getDispatchExpression_Actual()
   {
-    return (EReference)staticDispatchExpressionEClass.getEStructuralFeatures().get(1);
+    return (EReference)dispatchExpressionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -786,9 +778,29 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getStaticDispatchExpression_Chain()
+  public EReference getDispatchExpression_Chain()
   {
-    return (EReference)staticDispatchExpressionEClass.getEStructuralFeatures().get(2);
+    return (EReference)dispatchExpressionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDispatchExpression_Left()
+  {
+    return (EReference)dispatchExpressionEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDispatchExpression_Type_name()
+  {
+    return (EReference)dispatchExpressionEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1216,66 +1228,6 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getDispatchExpression()
-  {
-    return dispatchExpressionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getDispatchExpression_Left()
-  {
-    return (EReference)dispatchExpressionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getDispatchExpression_Type_name()
-  {
-    return (EReference)dispatchExpressionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getDispatchExpression_Ref()
-  {
-    return (EReference)dispatchExpressionEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getDispatchExpression_Actual()
-  {
-    return (EReference)dispatchExpressionEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getDispatchExpression_Chain()
-  {
-    return (EReference)dispatchExpressionEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public CoolFactory getCoolFactory()
   {
     return (CoolFactory)getEFactoryInstance();
@@ -1358,10 +1310,12 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
     newExpressionEClass = createEClass(NEW_EXPRESSION);
     createEReference(newExpressionEClass, NEW_EXPRESSION__TYPE_NAME);
 
-    staticDispatchExpressionEClass = createEClass(STATIC_DISPATCH_EXPRESSION);
-    createEReference(staticDispatchExpressionEClass, STATIC_DISPATCH_EXPRESSION__REF);
-    createEReference(staticDispatchExpressionEClass, STATIC_DISPATCH_EXPRESSION__ACTUAL);
-    createEReference(staticDispatchExpressionEClass, STATIC_DISPATCH_EXPRESSION__CHAIN);
+    dispatchExpressionEClass = createEClass(DISPATCH_EXPRESSION);
+    createEReference(dispatchExpressionEClass, DISPATCH_EXPRESSION__REF);
+    createEReference(dispatchExpressionEClass, DISPATCH_EXPRESSION__ACTUAL);
+    createEReference(dispatchExpressionEClass, DISPATCH_EXPRESSION__CHAIN);
+    createEReference(dispatchExpressionEClass, DISPATCH_EXPRESSION__LEFT);
+    createEReference(dispatchExpressionEClass, DISPATCH_EXPRESSION__TYPE_NAME);
 
     conditionalExpressionEClass = createEClass(CONDITIONAL_EXPRESSION);
     createEReference(conditionalExpressionEClass, CONDITIONAL_EXPRESSION__PRED);
@@ -1419,13 +1373,6 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
     divEClass = createEClass(DIV);
     createEReference(divEClass, DIV__OP);
     createEReference(divEClass, DIV__RIGHT);
-
-    dispatchExpressionEClass = createEClass(DISPATCH_EXPRESSION);
-    createEReference(dispatchExpressionEClass, DISPATCH_EXPRESSION__LEFT);
-    createEReference(dispatchExpressionEClass, DISPATCH_EXPRESSION__TYPE_NAME);
-    createEReference(dispatchExpressionEClass, DISPATCH_EXPRESSION__REF);
-    createEReference(dispatchExpressionEClass, DISPATCH_EXPRESSION__ACTUAL);
-    createEReference(dispatchExpressionEClass, DISPATCH_EXPRESSION__CHAIN);
   }
 
   /**
@@ -1475,7 +1422,7 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
     negationExpressionEClass.getESuperTypes().add(this.getPrimaryExpression());
     integerCompositeExpressionEClass.getESuperTypes().add(this.getPrimaryExpression());
     newExpressionEClass.getESuperTypes().add(this.getPrimaryExpression());
-    staticDispatchExpressionEClass.getESuperTypes().add(this.getPrimaryExpression());
+    dispatchExpressionEClass.getESuperTypes().add(this.getPrimaryExpression());
     conditionalExpressionEClass.getESuperTypes().add(this.getPrimaryExpression());
     loopExpressionEClass.getESuperTypes().add(this.getPrimaryExpression());
     blockExpressionEClass.getESuperTypes().add(this.getPrimaryExpression());
@@ -1489,7 +1436,6 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
     minusEClass.getESuperTypes().add(this.getExpression());
     multiplicationExpressionEClass.getESuperTypes().add(this.getExpression());
     divEClass.getESuperTypes().add(this.getExpression());
-    dispatchExpressionEClass.getESuperTypes().add(this.getExpression());
 
     // Initialize classes and features; add operations and parameters
     initEClass(programEClass, Program.class, "Program", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1549,10 +1495,12 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
     initEClass(newExpressionEClass, NewExpression.class, "NewExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getNewExpression_Type_name(), this.getType(), null, "type_name", null, 0, 1, NewExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(staticDispatchExpressionEClass, StaticDispatchExpression.class, "StaticDispatchExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getStaticDispatchExpression_Ref(), this.getIdentifierRefExpression(), null, "ref", null, 0, 1, StaticDispatchExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getStaticDispatchExpression_Actual(), this.getExpression(), null, "actual", null, 0, -1, StaticDispatchExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getStaticDispatchExpression_Chain(), this.getStaticDispatchExpression(), null, "chain", null, 0, 1, StaticDispatchExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(dispatchExpressionEClass, DispatchExpression.class, "DispatchExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDispatchExpression_Ref(), this.getIdentifierRefExpression(), null, "ref", null, 0, 1, DispatchExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDispatchExpression_Actual(), this.getExpression(), null, "actual", null, 0, -1, DispatchExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDispatchExpression_Chain(), this.getDispatchExpression(), null, "chain", null, 0, 1, DispatchExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDispatchExpression_Left(), this.getPrimaryExpression(), null, "left", null, 0, 1, DispatchExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDispatchExpression_Type_name(), this.getType(), null, "type_name", null, 0, 1, DispatchExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(conditionalExpressionEClass, ConditionalExpression.class, "ConditionalExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getConditionalExpression_Pred(), this.getExpression(), null, "pred", null, 0, 1, ConditionalExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1610,13 +1558,6 @@ public class CoolPackageImpl extends EPackageImpl implements CoolPackage
     initEClass(divEClass, Div.class, "Div", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getDiv_Op(), this.getExpression(), null, "op", null, 0, 1, Div.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDiv_Right(), this.getExpression(), null, "right", null, 0, 1, Div.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(dispatchExpressionEClass, DispatchExpression.class, "DispatchExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getDispatchExpression_Left(), this.getPrimaryExpression(), null, "left", null, 0, 1, DispatchExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDispatchExpression_Type_name(), this.getType(), null, "type_name", null, 0, 1, DispatchExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDispatchExpression_Ref(), this.getIdentifierRefExpression(), null, "ref", null, 0, 1, DispatchExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDispatchExpression_Actual(), this.getExpression(), null, "actual", null, 0, -1, DispatchExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDispatchExpression_Chain(), this.getStaticDispatchExpression(), null, "chain", null, 0, 1, DispatchExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);
