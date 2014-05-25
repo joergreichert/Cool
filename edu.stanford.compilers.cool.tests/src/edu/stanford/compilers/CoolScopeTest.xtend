@@ -13,6 +13,7 @@ import org.eclipse.xtext.scoping.IScopeProvider
 import org.junit.Assert
 import org.junit.Test
 import org.junit.runner.RunWith
+import edu.stanford.compilers.cool.BlockExpression
 
 @InjectWith(CoolInjectorProvider)
 @RunWith(XtextRunner)
@@ -116,6 +117,29 @@ class CoolScopeTest {
 			
 			a() : String {
 				a().concat("")
+		    };
+		};
+	'''
+
+	@Test
+	def void testScopeField() {
+		val result = testdataField.parse
+		val chainRef = (((result.classes.head.features.filter(Method).filter[name == "a"]
+			.head.expr as BlockExpression).body.head as DispatchExpression).actual
+			.head as DispatchExpression).ref
+		val scope = scopeProvider.getScope(chainRef, CoolPackage.Literals.IDENTIFIER_REF_EXPRESSION__ID).allElements.map[name].sort.join(", ")
+		Assert.assertEquals("abort, concat, copy, length, substr, type_name", scope.toString)
+	}	
+
+	def private testdataField() '''
+		class Test  inherits IO {
+			field : String;
+			
+			a() : String {
+				{
+					out_string(field.concat(""))
+					""
+				}
 		    };
 		};
 	'''
