@@ -5,16 +5,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:git="http://www.eclipse.org/oomph/setup/git/1.0"
     xmlns:jdt="http://www.eclipse.org/oomph/setup/jdt/1.0"
-    xmlns:launching="http://www.eclipse.org/oomph/setup/launching/1.0"
-    xmlns:maven="http://www.eclipse.org/oomph/setup/maven/1.0"
     xmlns:mylyn="http://www.eclipse.org/oomph/setup/mylyn/1.0"
     xmlns:predicates="http://www.eclipse.org/oomph/predicates/1.0"
     xmlns:projects="http://www.eclipse.org/oomph/setup/projects/1.0"
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
     xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
     xmlns:setup.targlets="http://www.eclipse.org/oomph/setup/targlets/1.0"
-    xmlns:setup.workingsets="http://www.eclipse.org/oomph/setup/workingsets/1.0"
-    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/JDT.ecore http://www.eclipse.org/oomph/setup/launching/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Launching.ecore http://www.eclipse.org/oomph/setup/maven/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Maven.ecore http://www.eclipse.org/oomph/setup/mylyn/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Mylyn.ecore http://www.eclipse.org/oomph/predicates/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Predicates.ecore http://www.eclipse.org/oomph/setup/projects/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Projects.ecore http://www.eclipse.org/oomph/setup/targlets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupTarglets.ecore http://www.eclipse.org/oomph/setup/workingsets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupWorkingSets.ecore"
+    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/JDT.ecore http://www.eclipse.org/oomph/setup/mylyn/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Mylyn.ecore http://www.eclipse.org/oomph/predicates/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Predicates.ecore http://www.eclipse.org/oomph/setup/projects/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Projects.ecore http://www.eclipse.org/oomph/setup/targlets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupTarglets.ecore"
     name="cool"
     label="Cool">
   <setupTask
@@ -48,8 +45,8 @@
       name="Compile configuration">
     <setupTask
         xsi:type="jdt:JRETask"
-        version="JavaSE-1.6"
-        location="${jre.location-1.6}">
+        version="JavaSE-1.8"
+        location="${jre.location-1.8}">
       <description>Define the JRE needed to compile and run the Java projects of ${scope.project.label}</description>
     </setupTask>
     <setupTask
@@ -70,9 +67,9 @@
       <requirement
           name="org.eclipse.sdk"/>
       <repository
-          url="http://download.eclipse.org/releases/kepler"/>
+          url="http://download.eclipse.org/releases/luna"/>
       <repository
-          url="http://download.eclipse.org/eclipse/updates/4.3"/>
+          url="http://download.eclipse.org/eclipse/updates/4.4"/>
       <description>Eclipse Core</description>
     </setupTask>
     <setupTask
@@ -83,17 +80,13 @@
       <requirement
           name="org.eclipse.emf.sdk.feature.group"/>
       <requirement
-          name="org.eclipse.xtext.sdk.feature.group"
-          versionRange="[2.5.0,2.6.0)"/>
+          name="org.eclipse.xtext.sdk.feature.group"/>
       <requirement
-          name="org.eclipse.xtend.sdk.feature.group"
-          versionRange="[2.5.0,2.6.0)"/>
+          name="org.eclipse.xtend.sdk.feature.group"/>
       <requirement
-          name="org.eclipse.emf.mwe2.language.sdk.feature.group"
-          versionRange="[2.5.0,2.6.0)"/>
+          name="org.eclipse.emf.mwe2.language.sdk.feature.group"/>
       <requirement
-          name="org.eclipse.emf.mwe2.runtime.sdk.feature.group"
-          versionRange="[2.5.0,2.6.0)"/>
+          name="org.eclipse.emf.mwe2.runtime.sdk.feature.group"/>
       <repository
           url="http://download.eclipse.org/modeling/emf/emf/updates/releases/"/>
       <repository
@@ -123,27 +116,10 @@
       <requirement
           name="org.eclipse.mylyn.github.feature.feature.group"/>
       <repository
-          url="http://download.eclipse.org/releases/kepler"/>
+          url="http://download.eclipse.org/releases/luna"/>
       <repository
           url="http://download.eclipse.org/egit/github/updates-nightly"/>
       <description>Task and build connector</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup.p2:P2Task"
-        id="p2.m2e"
-        label="M2E"
-        licenseConfirmationDisabled="true">
-      <requirement
-          name="org.sonatype.tycho.m2e.feature.feature.group"/>
-      <requirement
-          name="org.eclipse.m2e.logback.feature.feature.group"/>
-      <requirement
-          name="org.eclipse.m2e.feature.feature.group"/>
-      <repository
-          url="http://download.eclipse.org/releases/kepler"/>
-      <repository
-          url="http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.7.0/N/0.7.0.201309291400/"/>
-      <description>Maven connector</description>
     </setupTask>
     <setupTask
         xsi:type="setup.p2:P2Task"
@@ -151,8 +127,7 @@
         label="Xpect"
         licenseConfirmationDisabled="true">
       <requirement
-          name="org.xpect.sdk.feature.group"
-          versionRange="0.1.0.201401101421"/>
+          name="org.xpect.sdk.feature.group"/>
       <requirement
           name="org.eclipse.jdt.junit.runners.feature.feature.group"/>
       <repository
@@ -161,14 +136,11 @@
     </setupTask>
     <setupTask
         xsi:type="setup.p2:P2Task"
-        id="p2.swtbot"
-        label="SWTBot"
-        licenseConfirmationDisabled="true">
-      <requirement
-          name="org.eclipse.swtbot.eclipse.feature.group"/>
+        id="p2.xsemantics"
+        label="Xsemantics">
       <repository
-          url="http://download.eclipse.org/technology/swtbot/releases/latest/"/>
-      <description>UI testing framework</description>
+          url="http://sourceforge.net/projects/xsemantics/files/updates/releases/1.7"/>
+      <description>Typesystem Framework for Xtext</description>
     </setupTask>
     <description>Features and plug-ins to be installed in IDE</description>
   </setupTask>
@@ -1520,34 +1492,6 @@
     </setupTask>
   </setupTask>
   <setupTask
-      xsi:type="setup.workingsets:WorkingSetTask">
-    <workingSet
-        name="Release Engineering">
-      <predicate
-          xsi:type="predicates:LocationPredicate"
-          pattern=".*/releng/.*"/>
-    </workingSet>
-    <workingSet
-        name="Plug-ins">
-      <predicate
-          xsi:type="predicates:LocationPredicate"
-          pattern=".*/plugins/.*"/>
-    </workingSet>
-    <workingSet
-        name="Tests">
-      <predicate
-          xsi:type="predicates:LocationPredicate"
-          pattern=".*/tests/.*"/>
-    </workingSet>
-    <workingSet
-        name="Update Site"
-        id="">
-      <predicate
-          xsi:type="predicates:LocationPredicate"
-          pattern=".*/features/.*"/>
-    </workingSet>
-  </setupTask>
-  <setupTask
       xsi:type="setup:CompoundTask"
       name="Projects">
     <setupTask
@@ -1579,25 +1523,6 @@
       <description>${scope.project.label}</description>
     </setupTask>
     <setupTask
-        xsi:type="maven:MavenImportTask"
-        projectNameTemplate="">
-      <sourceLocator
-          rootFolder="${git.clone.todo.location}">
-        <predicate
-            xsi:type="predicates:LocationPredicate"
-            pattern=".*/plugins/.*"/>
-        <predicate
-            xsi:type="predicates:LocationPredicate"
-            pattern=".*/features/.*"/>
-        <predicate
-            xsi:type="predicates:LocationPredicate"
-            pattern=".*/tests/.*"/>
-        <predicate
-            xsi:type="predicates:LocationPredicate"
-            pattern=".*/releng/.*"/>
-      </sourceLocator>
-    </setupTask>
-    <setupTask
         xsi:type="projects:ProjectsImportTask">
       <sourceLocator
           rootFolder="${git.clone.todo.location}">
@@ -1615,12 +1540,6 @@
             pattern=".*/releng/.*"/>
       </sourceLocator>
     </setupTask>
-  </setupTask>
-  <setupTask
-      xsi:type="launching:LaunchTask"
-      id="de.abg.jreichert.repositorytarget.dsl.mwe2"
-      launcher="Generate Language Infrastructure (org.xtext.example.mydsl)">
-    <description>Repository Target DSL Grammar Workflow</description>
   </setupTask>
   <setupTask
       xsi:type="setup.targlets:TargletTask">
@@ -1667,8 +1586,8 @@
       <sourceLocator
           rootFolder="${git.clone.todo.location}"/>
       <repositoryList
-          name="Kepler">
- 	    <repository
+          name="Luna">
+        <repository
             url="http://download.eclipse.org/releases/luna"/>
         <repository
             url="http://download.eclipse.org/eclipse/updates/4.4"/>
@@ -1680,8 +1599,6 @@
             url="http://download.itemis.com/updates/releases/2.1.1/"/>
         <repository
             url="http://www.xpect-tests.org/updatesite/nightly/"/>
-        <repository
-            url="http://download.eclipse.org/technology/swtbot/releases/latest/"/>
       </repositoryList>
     </targlet>
   </setupTask>
