@@ -4,9 +4,9 @@ import org.eclipse.emf.mwe.utils.*
 import org.eclipse.xtext.generator.*
 import org.eclipse.xtext.ui.generator.*
 
-var grammarURI = "classpath:/edu/stanford/compilers/Cool.xtext"
-var fileExtensions = "cl"
 var projectName = "edu.stanford.compilers.cool"
+var grammarURI = "platform:/resource/${projectName}/src//edu/stanford/compilers/Cool.xtext"
+var fileExtensions = "cl"
 var runtimeProject = "../${projectName}"
 var generateXtendStub = true
 var encoding = "UTF-8"

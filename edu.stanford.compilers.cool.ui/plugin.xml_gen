@@ -250,7 +250,9 @@
    <extension
          point="org.eclipse.xtext.builder.participant">
       <participant
-            class="edu.stanford.compilers.ui.CoolExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant">
+            class="edu.stanford.compilers.ui.CoolExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
+            fileExtensions="cl"
+            >
       </participant>
    </extension>
    <extension

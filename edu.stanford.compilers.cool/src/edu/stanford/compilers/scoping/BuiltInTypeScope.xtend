@@ -45,10 +45,10 @@ class BuiltInTypeEObjectDescriptionMap extends ForwardingMap<QualifiedName, IEOb
 				result.put(description.getName(), description);
 			}
 		}
-		for (type : resource.contents) {
-			val description = EObjectDescription.create((type as IdentifiableElement).getName(), type);
-			result.put(description.getName(), description);
-		}
+      for (type : resource.contents) {
+         val description = EObjectDescription.create((type as IdentifiableElement).getName(), type);
+         result.put(description.getName(), description);
+      }
 		return result;
 	}
 }
