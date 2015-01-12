@@ -7,12 +7,11 @@
     xmlns:jdt="http://www.eclipse.org/oomph/setup/jdt/1.0"
     xmlns:launching="http://www.eclipse.org/oomph/setup/launching/1.0"
     xmlns:mylyn="http://www.eclipse.org/oomph/setup/mylyn/1.0"
-    xmlns:predicates="http://www.eclipse.org/oomph/predicates/1.0"
     xmlns:projects="http://www.eclipse.org/oomph/setup/projects/1.0"
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
     xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
     xmlns:setup.targlets="http://www.eclipse.org/oomph/setup/targlets/1.0"
-    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/JDT.ecore http://www.eclipse.org/oomph/setup/launching/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Launching.ecore http://www.eclipse.org/oomph/setup/mylyn/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Mylyn.ecore http://www.eclipse.org/oomph/predicates/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Predicates.ecore http://www.eclipse.org/oomph/setup/projects/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Projects.ecore http://www.eclipse.org/oomph/setup/targlets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupTarglets.ecore"
+    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/JDT.ecore http://www.eclipse.org/oomph/setup/launching/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Launching.ecore http://www.eclipse.org/oomph/setup/mylyn/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Mylyn.ecore http://www.eclipse.org/oomph/setup/projects/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Projects.ecore http://www.eclipse.org/oomph/setup/targlets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupTarglets.ecore"
     name="cool"
     label="Cool">
   <setupTask
@@ -138,7 +137,8 @@
     <setupTask
         xsi:type="setup.p2:P2Task"
         id="p2.xsemantics"
-        label="Xsemantics">
+        label="Xsemantics"
+        licenseConfirmationDisabled="true">
       <requirement
           name="it.xsemantics.sdk.feature.group"/>
       <repository
@@ -1500,20 +1500,7 @@
     <setupTask
         xsi:type="projects:ProjectsImportTask">
       <sourceLocator
-          rootFolder="${git.clone.todo.location}">
-        <predicate
-            xsi:type="predicates:LocationPredicate"
-            pattern=".*/plugins/.*"/>
-        <predicate
-            xsi:type="predicates:LocationPredicate"
-            pattern=".*/features/.*"/>
-        <predicate
-            xsi:type="predicates:LocationPredicate"
-            pattern=".*/tests/.*"/>
-        <predicate
-            xsi:type="predicates:LocationPredicate"
-            pattern=".*/releng/.*"/>
-      </sourceLocator>
+          rootFolder="${git.clone.todo.location}"/>
     </setupTask>
   </setupTask>
   <setupTask
