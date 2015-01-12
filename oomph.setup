@@ -5,13 +5,14 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:git="http://www.eclipse.org/oomph/setup/git/1.0"
     xmlns:jdt="http://www.eclipse.org/oomph/setup/jdt/1.0"
+    xmlns:launching="http://www.eclipse.org/oomph/setup/launching/1.0"
     xmlns:mylyn="http://www.eclipse.org/oomph/setup/mylyn/1.0"
     xmlns:predicates="http://www.eclipse.org/oomph/predicates/1.0"
     xmlns:projects="http://www.eclipse.org/oomph/setup/projects/1.0"
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
     xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
     xmlns:setup.targlets="http://www.eclipse.org/oomph/setup/targlets/1.0"
-    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/JDT.ecore http://www.eclipse.org/oomph/setup/mylyn/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Mylyn.ecore http://www.eclipse.org/oomph/predicates/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Predicates.ecore http://www.eclipse.org/oomph/setup/projects/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Projects.ecore http://www.eclipse.org/oomph/setup/targlets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupTarglets.ecore"
+    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/JDT.ecore http://www.eclipse.org/oomph/setup/launching/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Launching.ecore http://www.eclipse.org/oomph/setup/mylyn/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Mylyn.ecore http://www.eclipse.org/oomph/predicates/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Predicates.ecore http://www.eclipse.org/oomph/setup/projects/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Projects.ecore http://www.eclipse.org/oomph/setup/targlets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupTarglets.ecore"
     name="cool"
     label="Cool">
   <setupTask
@@ -138,6 +139,8 @@
         xsi:type="setup.p2:P2Task"
         id="p2.xsemantics"
         label="Xsemantics">
+      <requirement
+          name="it.xsemantics.sdk.feature.group"/>
       <repository
           url="http://sourceforge.net/projects/xsemantics/files/updates/releases/1.7"/>
       <description>Typesystem Framework for Xtext</description>
@@ -1433,34 +1436,6 @@
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
-        name="org.eclipse.m2e.core">
-      <setupTask
-          xsi:type="setup:VariableTask"
-          type="FOLDER"
-          name="maven3.installation"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.m2e.core/eclipse.m2.defaultRuntime"
-          value="Maven3"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.m2e.core/eclipse.m2.runtimes"
-          value="Maven3"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.m2e.core/eclipse.m2.runtimesNodes/Maven3/location"
-          value="${maven3.installation}"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.m2e.core/eclipse.m2.runtimesNodes/Maven3/type"
-          value="EXTERNAL"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.m2e.core/eclipse.m2.WorkspacelifecycleMappingsLocation"
-          value="{workspace.location}/.metadata/.plugins/org.eclipse.m2e.core/lifecycle-mapping-metadata.xml"/>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
         name="org.eclipse.pde.ui">
       <setupTask
           xsi:type="setup:PreferenceTask"
@@ -1542,6 +1517,12 @@
     </setupTask>
   </setupTask>
   <setupTask
+      xsi:type="launching:LaunchTask"
+      id="edu.stanford.compilers.cool.mwe2"
+      launcher="Generate Language Infrastructure (edu.stanford.compilers.cool)">
+    <description>Cool DSL Grammar Workflow</description>
+  </setupTask>
+  <setupTask
       xsi:type="setup.targlets:TargletTask">
     <targlet
         name="${scope.project.label}"
@@ -1582,7 +1563,7 @@
       <requirement
           name="org.eclipse.jdt.junit.runners.feature.feature.group"/>
       <requirement
-          name="org.eclipse.swtbot.eclipse.feature.group"/>
+          name="it.xsemantics.sdk.feature.group"/>
       <sourceLocator
           rootFolder="${git.clone.todo.location}"/>
       <repositoryList
@@ -1599,6 +1580,8 @@
             url="http://download.itemis.com/updates/releases/2.1.1/"/>
         <repository
             url="http://www.xpect-tests.org/updatesite/nightly/"/>
+        <repository
+            url="http://sourceforge.net/projects/xsemantics/files/updates/releases/1.7"/>
       </repositoryList>
     </targlet>
   </setupTask>
