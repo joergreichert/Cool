@@ -75,13 +75,17 @@
       <requirement
           name="org.eclipse.emf.sdk.feature.group"/>
       <requirement
-          name="org.eclipse.xtext.sdk.feature.group"/>
+          name="org.eclipse.xtext.sdk.feature.group"
+          versionRange="${xtext.version.range}"/>
       <requirement
-          name="org.eclipse.xtend.sdk.feature.group"/>
+          name="org.eclipse.xtend.sdk.feature.group"
+          versionRange="${xtext.version.range}"/>
       <requirement
-          name="org.eclipse.emf.mwe2.language.sdk.feature.group"/>
+          name="org.eclipse.emf.mwe2.language.sdk.feature.group"
+          versionRange="${xtext.version.range}"/>
       <requirement
-          name="org.eclipse.emf.mwe2.runtime.sdk.feature.group"/>
+          name="org.eclipse.emf.mwe2.runtime.sdk.feature.group"
+          versionRange="${xtext.version.range}"/>
       <repository
           url="${emf.p2.url}"/>
       <repository
@@ -1514,13 +1518,17 @@
       <requirement
           name="org.eclipse.emf.sdk.feature.group"/>
       <requirement
-          name="org.eclipse.xtext.sdk.feature.group"/>
+          name="org.eclipse.xtext.sdk.feature.group"
+          versionRange="${xtext.version.range}"/>
       <requirement
-          name="org.eclipse.xtend.sdk.feature.group"/>
+          name="org.eclipse.xtend.sdk.feature.group"
+          versionRange="${xtext.version.range}"/>
       <requirement
-          name="org.eclipse.emf.mwe2.language.sdk.feature.group"/>
+          name="org.eclipse.emf.mwe2.language.sdk.feature.group"
+          versionRange="${xtext.version.range}"/>
       <requirement
-          name="org.eclipse.emf.mwe2.runtime.sdk.feature.group"/>
+          name="org.eclipse.emf.mwe2.runtime.sdk.feature.group"
+          versionRange="${xtext.version.range}"/>
       <requirement
           name="org.xpect.sdk.feature.group"/>
       <requirement
@@ -1630,6 +1638,10 @@
         type="URI"
         name="xsemantics.p2.url"
         value="http://sourceforge.net/projects/xsemantics/files/updates/releases/1.7"/>
+    <setupTask
+        xsi:type="setup:VariableTask"
+        name="xtext.version.range"
+        value="[2.7.0,2.8.0)"/>
   </stream>
   <stream name="xtext28">
     <setupTask
@@ -1647,6 +1659,10 @@
         type="URI"
         name="xsemantics.p2.url"
         value="http://sourceforge.net/projects/xsemantics/files/updates/releases/1.7"/>
+    <setupTask
+        xsi:type="setup:VariableTask"
+        name="xtext.version.range"
+        value="[2.8.0,2.9.0)"/>
   </stream>
   <logicalProjectContainer
       xsi:type="setup:Project"
