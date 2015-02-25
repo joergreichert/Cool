@@ -75,17 +75,13 @@
       <requirement
           name="org.eclipse.emf.sdk.feature.group"/>
       <requirement
-          name="org.eclipse.xtext.sdk.feature.group"
-          versionRange="${xtext.version.range}"/>
+          name="org.eclipse.xtext.sdk.feature.group"/>
       <requirement
-          name="org.eclipse.xtend.sdk.feature.group"
-          versionRange="${xtext.version.range}"/>
+          name="org.eclipse.xtend.sdk.feature.group"/>
       <requirement
-          name="org.eclipse.emf.mwe2.language.sdk.feature.group"
-          versionRange="${xtext.version.range}"/>
+          name="org.eclipse.emf.mwe2.language.sdk.feature.group"/>
       <requirement
-          name="org.eclipse.emf.mwe2.runtime.sdk.feature.group"
-          versionRange="${xtext.version.range}"/>
+          name="org.eclipse.emf.mwe2.runtime.sdk.feature.group"/>
       <repository
           url="${emf.p2.url}"/>
       <repository
@@ -132,17 +128,6 @@
       <repository
           url="http://www.xpect-tests.org/updatesite/nightly/"/>
       <description>Xtext testing framework</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup.p2:P2Task"
-        id="p2.xsemantics"
-        label="Xsemantics"
-        licenseConfirmationDisabled="true">
-      <requirement
-          name="it.xsemantics.sdk.feature.group"/>
-      <repository
-          url="${xsemantics.p2.url}"/>
-      <description>Typesystem Framework for Xtext</description>
     </setupTask>
     <description>Features and plug-ins to be installed in IDE</description>
   </setupTask>
@@ -1518,23 +1503,17 @@
       <requirement
           name="org.eclipse.emf.sdk.feature.group"/>
       <requirement
-          name="org.eclipse.xtext.sdk.feature.group"
-          versionRange="${xtext.version.range}"/>
+          name="org.eclipse.xtext.sdk.feature.group"/>
       <requirement
-          name="org.eclipse.xtend.sdk.feature.group"
-          versionRange="${xtext.version.range}"/>
+          name="org.eclipse.xtend.sdk.feature.group"/>
       <requirement
-          name="org.eclipse.emf.mwe2.language.sdk.feature.group"
-          versionRange="${xtext.version.range}"/>
+          name="org.eclipse.emf.mwe2.language.sdk.feature.group"/>
       <requirement
-          name="org.eclipse.emf.mwe2.runtime.sdk.feature.group"
-          versionRange="${xtext.version.range}"/>
+          name="org.eclipse.emf.mwe2.runtime.sdk.feature.group"/>
       <requirement
           name="org.xpect.sdk.feature.group"/>
       <requirement
           name="org.eclipse.jdt.junit.runners.feature.feature.group"/>
-      <requirement
-          name="it.xsemantics.sdk.feature.group"/>
       <sourceLocator
           rootFolder="${git.clone.todo.location}"/>
       <repositoryList
@@ -1551,8 +1530,6 @@
             url="http://download.itemis.com/updates/releases/2.1.1/"/>
         <repository
             url="http://www.xpect-tests.org/updatesite/nightly/"/>
-        <repository
-            url="${xsemantics.p2.url}"/>
       </repositoryList>
       <repositoryList
           name="Mars">
@@ -1642,6 +1619,38 @@
         xsi:type="setup:VariableTask"
         name="xtext.version.range"
         value="[2.7.0,2.8.0)"/>
+    <setupTask
+        xsi:type="setup.p2:P2Task"
+        id="p2.xsemantics"
+        label="Xsemantics"
+        licenseConfirmationDisabled="true">
+      <requirement
+          name="it.xsemantics.sdk.feature.group"/>
+      <repository
+          url="${xsemantics.p2.url}"/>
+      <description>Typesystem Framework for Xtext</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup.targlets:TargletTask">
+      <targlet
+          name="XsemanticsTarget"
+          activeRepositoryList="${eclipse.target.platform}">
+        <requirement
+            name="it.xsemantics.sdk.feature.group"/>
+        <sourceLocator
+            rootFolder="${git.clone.todo.location}"/>
+        <repositoryList
+            name="Luna">
+          <repository
+              url="${xsemantics.p2.url}"/>
+        </repositoryList>
+        <repositoryList
+            name="Mars">
+          <repository
+              url="${xsemantics.p2.url}"/>
+        </repositoryList>
+      </targlet>
+    </setupTask>
   </stream>
   <stream name="xtext28">
     <setupTask
@@ -1654,11 +1663,6 @@
         type="URI"
         name="emf.p2.url"
         value="http://download.eclipse.org/modeling/emf/emf/updates/interim/"/>
-    <setupTask
-        xsi:type="setup:VariableTask"
-        type="URI"
-        name="xsemantics.p2.url"
-        value="http://sourceforge.net/projects/xsemantics/files/updates/releases/1.7"/>
     <setupTask
         xsi:type="setup:VariableTask"
         name="xtext.version.range"
